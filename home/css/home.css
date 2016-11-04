@@ -1,0 +1,676 @@
+
+
+.ui-helper-clearfix::before, .ui-helper-clearfix::after { content: ""; display: table; border-collapse: collapse; }
+.ui-helper-clearfix::after { clear: both; }
+.ui-widget-overlay { position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; }
+input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 0px none; padding: 0px; }
+.ui-widget-overlay { background: rgb(170, 170, 170) none repeat scroll 0% 0%; opacity: 0.6; }
+* { padding: 0px; margin: 0px; outline: 0px none; }
+.PL_field-holder { margin-right: -13px; }
+.lang-zh-CN input, .lang-zh-CN textarea, .lang-zh-CN select, .lang-zh-CN keygen, .lang-zh-CN button { font-family: "Microsoft YaHei",serif; }
+input, textarea, select, keygen, button { font-family: Arial,serif; font-size: 12px; }
+body { font-family: Arial,serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; font-size: 12px; line-height: 18px; color: rgb(0, 0, 0); border: 0px none; }
+body.lang-zh-CN { font-family: "Microsoft YaHei",serif; }
+html { border: 0px none; }
+select { -moz-appearance: none; border: 1px solid; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); border-radius: 3px; color: rgb(108, 108, 108); background-attachment: fixed; background-position: center center; cursor: pointer; }
+.lang { display: inline; float: right; position: relative; top: 8px; width: 114px; }
+#arrow { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; vertical-align: middle; width: 0px; top: 13px; float: right; right: 4px; position: absolute; cursor: pointer; }
+#arrow2 { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; position: relative; vertical-align: middle; width: 0px; margin-left: 2px; cursor: pointer; top: 2px; }
+.blackArrow_right { background: transparent url('../images/arrow_allicons.png') no-repeat scroll -107px -23px; width: 26px; height: 31px; display: block; float: right; }
+#target a { width: 113px; height: 34px; margin-top: 2px; }
+.field, .password { padding: 4px 5px; border: 1px solid rgb(183, 183, 183); color: rgb(150, 150, 150); height: 18px; }
+input.button { padding: 4px 5px; cursor: pointer; }
+a { color: rgb(78, 80, 80); text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: none; }
+p { padding-bottom: 18px; }
+.cl { font-size: 0px; line-height: 0; clear: both; display: block; height: 0px; }
+#page { width: 960px; margin: 0px auto; vertical-align: top; }
+.msg_bold { font-weight: bold; }
+.nav_tit { background-color: rgb(37, 170, 225); background-repeat: no-repeat; height: 34px; width: 136px; float: left; font-size: 15px; color: rgb(255, 255, 255); text-align: center; line-height: 37px; }
+
+#help a:link, a:hover { text-decoration: none; }
+#help_lang a:link, a:hover { text-decoration: none; }
+#top_header { position:fixed;top:0;border-left: 1px solid rgb(221, 221, 221); height: 33px; width: 960px; }
+#top_nav_left ul { margin: 0px; padding: 0px; z-index: 99; position: relative; }
+#top_nav_left ul #dropdown { position: relative; float: left; }
+#top_nav_left ul #dropdown:hover { height: 33px; display: block; }
+#top_nav_left ul ul { display: none; padding: 0px; }
+#top_nav_left ul ul li { float: none; }
+#top_nav_left ul #dropdown:hover > ul { display: block; background-color: rgb(37, 170, 225); }
+#top_nav_left li { float: left; display: block; }
+#top_nav_left li a { font-size: 11px; color: rgb(255, 255, 255); display: block; }
+
+.leftBorder {border-right:1px solid rgb(221, 221, 221);border-left: 1px solid rgb(221, 221, 221); height: 32px;}
+
+.livechat_zh-CN, .livechat_zh-CN:hover { width: 99px; }
+#top_nav_right { height: 25px; }
+#top_nav_right li { float: right;list-style: none;}
+
+#top_nav_right li a {left:3px; display: block; font-size: 12px; color: rgb(255, 255, 255); }
+#top_nav_right ul #languageSelect:hover { height: 33px; }
+#BaseMainContent_HeaderContent_divForgotPwd a { height: 33px; position: relative;top:-16px; }
+.top_nav_text { font-size: 11px; padding: 8px 10px 0px 28px; color: rgb(97, 95, 95); height: 26px; }
+.tooltip {  }
+div#fixed_header { background-color: rgb(37, 170, 225); width: 100%; position: fixed; height: 33px; top: 0px; z-index: 4998; left: 0px; }
+div#outer_top_header { margin:0 atuo;top: 0px; position: absolute; background-color: rgb(37, 170, 225); height: 33px; z-index: 4999; }
+#top_nav_left #topBannerLogo.CN { background: transparent url('../images/fun88_logo_cn.png') no-repeat scroll 0px 6px; }
+#top_nav_left #topBannerLogo { height: 28px; width: 56px; cursor: pointer; display: none; }
+#top_nav_left #topBannerLogoContainer { display: none; }
+#hbtn1 { background: transparent url('../images/allicons.png') no-repeat scroll -2px 2px; width: 28px; height: 33px; }
+#hbtn1:hover { background: transparent url('../images/allicons.png') no-repeat scroll -2px -28px; }
+#hbtn2 {border-left: 1px solid rgb(221, 221, 221);border-right: 1px solid rgb(221, 221, 221); background: transparent url('../images/allicons.png') no-repeat scroll -31px 2px; width: 27px; height: 33px; }
+#hbtn2:hover { background: transparent url('../images/allicons.png') no-repeat scroll -31px -28px; }
+#hbtn3{border-right: 1px solid rgb(221, 221, 221);}
+#hbtn3 div { background: transparent url('../images/allicons.png') no-repeat scroll -96px 0px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn3:hover div { background: transparent url('../images/allicons.png') no-repeat scroll -96px -30px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn4 {border-right: 1px solid rgb(221, 221, 221); background-color: rgb(37, 170, 225); height: 25px; }
+#hbtn4:hover { background-color: rgb(17, 145, 191); height: 25px; }
+#hbtn4 div { background: transparent url('../images/allicons.png') no-repeat scroll -246px 0px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn4:hover div { background: transparent url('../images/allicons.png') no-repeat scroll -246px -30px ! important; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn5 { background: transparent url('../images/allicons.png') no-repeat scroll -393px 2px; width: 25px; height: 33px; }
+#hbtn5:hover { background: transparent url('../images/allicons.png') no-repeat scroll -393px -28px; }
+#hbtn7 div { background: transparent url('../images/allicons.png') no-repeat scroll -157px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn8 div { background: transparent url('../images/allicons.png') no-repeat scroll -125px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#btnRegisterCN { width: 185px ! important; font-size: 17px ! important; background: transparent url('../images/button_pop_up.png') no-repeat scroll 0px 0px; border: 0px none; }
+#btnDepositCN, #btnRegisterCN, #btnRegisterID, #btnRegisterTH, #btnRegisterVN { width: 205px; height: 27px; cursor: pointer; color: rgb(255, 255, 255); font-weight: bold; text-align: center; padding: 8px 0px 0px; z-index: 1001; }
+#btnRegisterCN:hover, #btnRegisterID:hover, #btnRegisterTH:hover, #btnRegisterVN:hover { height: 163px; }
+.btnRegisterAlignmentCN, .btnRegisterAlignmentVN, .btnRegisterAlignmentTH { width: 175px; height: 1px; }
+.cl { font-size: 0px; line-height: 0; clear: both; display: block; height: 0px; }
+#login { float: right; display: inline; padding-top: 2px; width: 375px; margin-right: 3px; }
+#login .field-holder { float: left; display: inline; width: 130px; height: 40px; padding: 1px; }
+#login .field, #login .password { width: 118px; background: rgb(255, 255, 255) none repeat scroll 0px 0px; color: rgb(50, 51, 51); }
+#login .field:focus, #login .password:focus { border-color: rgb(37, 170, 226); }
+#login .button { float: right; display: inline; width: 107px; height: 36px; font-size: 9pt; font-weight: bold; color: rgb(37, 170, 225); text-indent: 8px; padding-top: 0px; margin-top: -2px; }
+#login .button { background: transparent url('../images/btn_login_.gif') no-repeat scroll 0px 3px; border: 0px none; }
+#login .button:hover { background: transparent url('../images/btn_login_.gif') no-repeat scroll 0px -33px; }
+#logofun88InZh { float: left; display: inline; font-size: 0px; line-height: 0; }
+#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; background-image: url('../images/logo-cn.png'); background-repeat: no-repeat; margin-left: 15px; }
+#header_right { float: right; display: inline; margin-right: 15px; padding: 10px 0px 0px; }
+#header_right > div { display: block; float: left; }
+#header_right a { display: block; font-size: 15px; }
+#dvMedia01 { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -13px 3px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia01:hover { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -14px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia03 { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -142px 3px; width: 29px; height: 38px; margin-top: 0px; }
+#dvMedia03:hover { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -142px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia04 { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -201px 3px; width: 26px; height: 38px; margin-top: 0px; }
+#dvMedia04:hover { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -201px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia08 { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -420px -1px; width: 37px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia08:hover { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -420px -47px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+.media02 { width: 25px; height: 19px; margin-top: -2px; margin-right: 2px; display: block; }
+#footer { float: left; position: relative; z-index: -1; margin-top: 30px; width: 960px; }
+.footer_middle { margin: 0px auto; text-align: center; font-size: 15px; font-weight: bold; color: rgb(37, 170, 225); }
+.footer_middle1 { text-align: center; font-size: 11px; color: rgb(78, 78, 78); margin: 0px auto; padding-top: 10px; padding-bottom: 10px; }
+.footer_middle1 a { color: rgb(78, 78, 78); }
+.footer_middle2 { text-align: center; font-size: 10px; color: rgb(78, 78, 78); padding-top: 10px; padding-bottom: 10px; line-height: 14px; }
+.padding_space { color: rgb(37, 170, 225) ! important; padding-left: 13px; padding-right: 13px; }
+.padding_space2 { padding-left: 6px; padding-right: 6px; }
+.clickable:hover { text-decoration: underline; cursor: pointer; }
+div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); background-repeat: no-repeat; height: 31px; width: 693px; float: left; font-size: 14px; text-align: center; line-height: 34px; color: rgb(120, 120, 120); }
+.logoLoc { float: left; width: 185px; }
+.mediaicon { display: block; height: 38px; }
+#footericon2 { display: block; width: 40px; height: 40px; float: left; margin-left: 10px; }
+#footericon4CN { display: block; width: 45px; height: 40px; float: left; margin-right: 8px; }
+#footericon5CN { display: block; width: 55px; height: 40px; float: left; margin-right: 8px; }
+#footericon6 { display: block; width: 77px; height: 40px; float: left; }
+#footericon7CN { display: block; width: 61px; height: 40px; float: left; }
+#footericon8 { display: block; width: 67px; height: 40px; float: left; }
+#footericon9CN, #footericon10CN { display: block; width: 64px; height: 40px; float: left; }
+#footericon10 { display: block; width: 90px; height: 40px; float: left; }
+#footericon12 { display: block; width: 30px; height: 40px; float: left; }
+#footericon13 { display: block; width: 34px; height: 40px; float: left; }
+#footericon14, #footericon15, #footericon16, #footericon17, #footericon18, #footericon19, #footericon20, #footericon21, #footericon22 { display: block; width: 43px; height: 38px; float: left; }
+#wechat-dialog { display: none; padding: 0px; cursor: pointer; }
+#wechat-dialog:hover { cursor: pointer; }
+#line-dialog { display: none; padding: 1px 0px; cursor: pointer; text-align: center; }
+#line-dialog:hover { cursor: pointer; }
+.close-message { display: none; font-size: 8pt; color: gray; text-align: right; margin-right: 3px; }
+.cboxClose { background: transparent url('../images/allicons.png') no-repeat scroll -599px 10px; width: 30px; height: 35px; display: block; }
+.nav_tit_right.msg_bold > a, .nav_tit.msg_bold > a { color: rgb(255, 255, 255); padding: 0px 5px 5px 17px; }
+
+.nav_tit_right.msg_bold > a, .nav_tit.msg_bold > a { color: rgb(78, 80, 80) ! important; }
+#cboxClose { z-index: 10; margin-right: 9px; margin-top: 24px; }
+#marquee1 { color: rgb(24, 24, 24); float: right; font-size: 12px; height: 34px; text-align: center; width: 680px; margin-top: -29px; margin-left: 350px; margin-bottom: -10px; }
+#SA_Setting { margin-top: -13px; }
+.nav_tit_right { color: rgb(0, 0, 0); float: left; font-size: 15px; height: 31px; line-height: 34px; text-align: center; width: 104px; border: 1px solid rgb(208, 206, 206); }
+#japan_email { display: block; margin-top: -134px; margin-left: 115px; width: 134px; height: 22px; position: absolute; cursor: pointer; }
+#navigation { width: 100%; height: 40px; margin-bottom: 20px; margin-top: 10px; }
+#navMain { width: 960px; z-index: 99; height: 43px; font-size: 16px; text-align: justify; padding: 0px; }
+#navMain td.on ul, #navMain td.off ul { margin: 0px; padding: 0px; }
+#navMain a { text-decoration: none; text-transform: uppercase; float: left; }
+#navMain td { white-space: nowrap; z-index: 999; text-align: center; margin: 0px auto; position: relative; width: auto; }
+#navMain td ul { display: none; position: absolute; left: 0px; min-width: 180px; width: 110%; }
+#navMain td a { color: rgb(37, 170, 225); display: block; z-index: 1999; position: relative; text-align: center; padding: 7px; }
+#navMain td div > a { width: 90%; height: 32px; line-height: 32px; padding: 0px; }
+#navMain td div { position: relative; }
+#MenuSeparatorLast { visibility: hidden; }
+#navMain .menuStatic { width: 36px; }
+#navMain .mobile { width: 35px; }
+#navMain td ul li { clear: both; width: 100%; min-width: 150px; }
+#navMain td ul.kenSubMenu li {  }
+#navMain td.off ul, #navMain td.on ul { position: absolute; top: 32px; padding-top: 5px; font-weight: 400; border: 1px solid rgb(229, 228, 228); padding-bottom: 5px; font-size: 12px; color: gray; z-index: 9; background-color: rgb(255, 255, 255); margin-left: -1px; }
+#navMain td.on ul li a:hover, #navMain td.off ul li a:hover { color: rgb(37, 170, 225); text-decoration: underline; }
+#navMain td.on ul li, #navMain td.off ul li { display: block; margin-top: -5px; }
+#navMain .menuSeperator { float: right; vertical-align: middle; margin-top: 4px; height: 25px; width: 2px; border-right: 2px solid rgb(221, 221, 221); }
+#navMain td.on ul a, #navMain td.off ul a { float: left; border: 0px none; color: grey; margin: 1px; }
+#navMain td.hovered ul, #navMain td:hover ul, #navMain td.on:hover ul { display: block; }
+#navMain td#Rewards a:hover, #navMain td#LifeStyle a:hover, #navMain td#P2P a:hover, #navMain td#StarCasino a:hover { background: transparent none repeat scroll 0% 0%; border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin-top: -3px; margin-right: auto; margin-left: auto; }
+#navMain td a.cssSelectedHomeMenu { border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin-top: -3px; }
+#navMain td a.MenuImageHome { background: transparent url('../images/allicons.png') no-repeat scroll -456px -29px; margin-left: auto; margin-right: auto; width: 28px; height: 32px; }
+#navMain td a.MenuImageHome:hover { border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin: -3px 0px 1px; }
+#navMain td a.MenuImageMobile { background: transparent url('../images/allicons.png') no-repeat scroll -486px -27px; margin-left: auto; margin-right: auto; width: 28px; height: 30px; }
+#navMain td a.cssSelectedHomeMenu:hover, #navMain td a:hover, #navMain td:hover a { background-color: rgb(255, 255, 255); border-width: 3px 1px 1px; border-style: solid; border-color: rgb(37, 170, 225) rgb(229, 228, 228) rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin: -3px -1px -1px; }
+.dropdown dd { position: relative; z-index: 99999; }
+.dropdown a { text-decoration: none; outline: 0px none; display: block; width: 92px; height: 18px; overflow: hidden; z-index: 9999; float: right; top: -10px; }
+.dropdown dt { margin: -10px 0px 0px; }
+.dropdown dt a { background: transparent none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 92px; height: 18px; padding: 0px; }
+.dropdown dd ul { width:114px;left:-1px;background-color: rgb(17, 145, 191); color: rgb(255, 255, 255); display: none; list-style: outside none none; position: absolute; z-index: 99999; border-left: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); margin: 32px 17px 0px 0px; padding: 0px; }
+.dropdown dd ul li a { width: 92px; height: 18px;}
+.dropdown dd ul li a span, .dropdown dt a span { float: left; width: 92px; height: 18px; background-image: url('../images/flagcombine_.png'); background-repeat: no-repeat; cursor: pointer; margin: 8px 0px 0px 10px; }
+#dd1 ul li:hover { background: rgb(17, 145, 191) none repeat scroll 0% 0%; height: 29px; }
+.dropdown dd ul li { padding-top: 7px; }
+
+.dropdown dd ul li a:hover { background-color: rgb(37, 170, 225); }
+#divFooterLogo { border-width: 1px 0px; border-style: solid dashed; border-color: rgb(201, 202, 203) red; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; width: 960px; height: 105px; text-align: center; vertical-align: top; }
+.FooterDiv { border: 0px solid green; float: left; vertical-align: top; text-align: center; margin: 0px; padding: 0px; width: 100px; height: 100%; }
+.spnTitle { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); }
+.spnTitleSecurity { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); }
+.divSprite { border: 0px dotted red; text-align: center; width: 100%; height: 83%; margin-right: 20%; margin-left: 13%; }
+.FooterSprite { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 64px; height: 40px; background: transparent url('../images/footerlogo-list.jpg') no-repeat scroll 0% 0%; }
+.FooterSprite:hover { cursor: default; }
+#divLicense { position: relative; left: 7px; }
+#imgLicenses1 { width: 40px; background-position: -116px -2px; }
+#imgLicenses1:hover { background-position: -116px -48px; cursor: pointer; }
+#divsponsor { position: relative; left: 4px; }
+#imgsponsorship { background-position: -38px -2px; }
+#imgsponsorship:hover { background-position: -38px -48px; cursor: pointer; }
+#divPaymentOption { position: relative; margin-left: 8%; }
+#imgPaymentOption1CN { width: 55px; background-position: -266px -2px; }
+#imgPaymentOption1CN:hover { background-position: -266px -48px; }
+#imgPaymentOption2CN { width: 55px; background-position: -348px -2px; }
+#imgPaymentOption2CN:hover { background-position: -348px -48px; }
+#imgPaymentOption3 { width: 77px; background-position: -422px -2px; }
+#imgPaymentOption3:hover { background-position: -422px -48px; }
+#imgPaymentOption4 { width: 67px; background-position: -602px -2px; }
+#imgPaymentOption4:hover { background-position: -602px -48px; }
+#imgPaymentOption5 { width: 67px; background-position: -682px -2px; }
+#imgPaymentOption5:hover { background-position: -682px -48px; }
+#imgPaymentOptionAP { width: 67px; background-position: -770px -2px; }
+#imgPaymentOptionAP:hover { width: 67px; background-position: -770px -48px; }
+#imgPaymentOptionWC { width: 67px; background-position: -514px -2px; }
+#imgPaymentOptionWC:hover { width: 67px; background-position: -514px -48px; }
+#divSecurity { position: relative; left: 11px; }
+#imgSecurity1 { width: 90px; background-position: -920px -2px; }
+#imgSecurity1:hover { background-position: -920px -48px; }
+#divResponsibility { position: relative; left: 30px; width: 80%; }
+#imgResponsibility2 { width: 30px; background-position: -1045px -2px; }
+#imgResponsibility2:hover { background-position: -1045px -48px; cursor: pointer; }
+#imgResponsibility3 { width: 34px; background-position: -1119px -2px; }
+#imgResponsibility3:hover { background-position: -1119px -48px; cursor: pointer; }
+.wrapper-dropdown-5.active::after { border-color: rgb(255, 255, 255) transparent; }
+#colorbox, #cboxOverlay, #cboxWrapper { position: absolute; top: 0px; left: 0px; z-index: 9999; overflow: hidden; }
+#cboxOverlay { width: 100%; height: 100%; }
+#cboxMiddleLeft, #cboxBottomLeft { clear: left; }
+#cboxContent { position: relative; }
+#cboxTitle { margin: 0px; }
+#cboxLoadingOverlay, #cboxLoadingGraphic { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; }
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow { cursor: pointer; }
+#cboxOverlay { background: rgb(170, 170, 170) none repeat scroll 0% 0%; position: fixed; opacity: 0.6; }
+#colorbox {  }
+#cboxContent { background: transparent none repeat scroll 0% 0%; overflow: hidden; }
+#cboxTitle { position: absolute; bottom: 4px; left: 0px; text-align: center; width: 100%; color: rgb(148, 148, 148); }
+#cboxCurrent { position: absolute; bottom: 4px; left: 58px; color: rgb(148, 148, 148); }
+#cboxSlideshow { position: absolute; bottom: 4px; right: 30px; color: rgb(0, 146, 239); }
+#cboxPrevious { position: absolute; bottom: 0px; left: 0px; background: transparent url('../images/controls.png') no-repeat scroll -75px 0px; width: 25px; height: 25px; text-indent: -9999px; }
+#cboxPrevious:hover { background-position: -75px -25px; }
+#cboxNext { position: absolute; bottom: 0px; left: 27px; background: transparent url('../images/controls.png') no-repeat scroll -50px 0px; width: 25px; height: 25px; text-indent: -9999px; }
+#cboxNext:hover { background-position: -50px -25px; }
+#cboxLoadingGraphic { background: transparent url('../images/loading_001.gif') no-repeat scroll center center; }
+#cboxClose { position: absolute; top: 9px; bottom: 0px; border: 0px none; right: 18px; background: transparent url('../images/controls.png') no-repeat scroll -25px 0px; width: 25px; height: 25px; text-indent: -9999px; display: block; filter: none; text-decoration: none; }
+#cboxClose:hover { background-position: -25px -25px; }
+#PL_notification_box { width: 364px; height: 211px; background-image: url('../images/bg_dialogbox.png'); margin: 0px auto; padding-top: 5px; background-repeat: no-repeat; border-radius: 4px; }
+#PL_loginSuccess_box { width: 364px; height: 211px; background-image: url('../images/bg_dialogbox.png'); margin: 0px auto; padding-top: 5px; background-repeat: no-repeat; }
+.PL_header { width: 355px; height: 49px; background-color: rgb(37, 170, 225); margin: 0px auto; padding: 0px; font-size: 17pt; color: rgb(255, 255, 255); }
+.PL_header_text { font-size: 13pt; color: rgb(255, 255, 255); margin-top: 16px; margin-left: 11px; float: left; }
+.PL_exit_btn { float: right; margin-right: 10px; background-repeat: no-repeat; }
+.PL_content { width: 249px; height: auto; margin: 0px auto; padding: 16px 0px 12px; font-size: 12px; text-align: center; color: rgb(43, 44, 44); }
+.PL_cl { font-size: 0px; line-height: 0; clear: both; display: block; height: 0px; }
+.PL_login_info { width: 255px; height: 30px; margin: 0px auto; }
+.PL_login_btn { width: 255px; height: 35px; margin: 5px auto 0px; }
+.PL_login_text { float: left; margin: 5px 0px 6px 8px; text-align: left; font-size: 12px; color: rgb(43, 44, 44); width: 95px; }
+.PL_login_button { display: inline; width: 255px; }
+.PL_login_button .PL_button { float: left; display: inline; width: 123px; height: 35px; font-size: 12px; font-weight: bold; margin-left: 3px; }
+.PL_login_button .PL_button { background: transparent url('../images/button-animation.gif') no-repeat scroll -202px 0px; border: 0px none; color: rgb(255, 255, 255); }
+.PL_login_button:hover .PL_button:hover { background: transparent url('../images/button-animation.gif') no-repeat scroll -202px -38px; border: 0px none; cursor: pointer; }
+.PL_login_button .PL_signup { float: left; display: inline; width: 126px; height: 35px; font-size: 12px; font-weight: bold; margin-right: 2px; }
+.PL_login_button .PL_signup, .PL_signupen, .PL_signupth, .PL_signupid { background: transparent url('../images/button-anmation-green-short.gif') no-repeat scroll 0px 0px; border: 0px none; color: rgb(255, 255, 255); padding: 0px 0px 0px 20px; }
+.PL_login_button:hover .PL_signup:hover, .PL_signupen:hover, .PL_signupth:hover, .PL_signupid:hover { background: transparent url('../images/button-anmation-green-short.gif') no-repeat scroll 0px -38px; border: 0px none; cursor: pointer; }
+.PL_field-holder .PL_field { margin-top: 5px; }
+#ContButton { background: transparent url('../images/button-animation_001.gif') no-repeat scroll -630px -2px; border: 0px none; color: rgb(37, 170, 226); display: block; margin: 0px auto; padding: 8px; text-align: center; width: 150px; }
+#ContButton:hover { background: transparent url('../images/button-animation_001.gif') no-repeat scroll -630px -40px; border: 0px none; color: rgb(37, 170, 226); display: block; margin: 0px auto; padding: 8px; width: 150px; text-align: center; cursor: pointer; }
+.tdLatestWinnerName > div:nth-child(1) { padding-top: 2px; }
+.tdLatestWinnerName > div:nth-child(2) { padding-bottom: 5px; border-bottom: 1px solid rgb(204, 204, 204); }
+.username-error, .password-error { background: rgba(255, 255, 255, 0.8) none repeat scroll 0px 0px; border: 1px solid rgb(255, 136, 136); display: block; margin-top: 4px; padding: 2px 4px; width: 120px; }
+.login_message { display: none; font-weight: bold; color: red; height: 0px; }
+#slotLeaderboard { position: absolute; z-index: 9999; margin-left: 85px; }
+#slotLeaderboard_body { background-color: white; border: 1px solid rgb(69, 170, 226); border-radius: 10px; height: 600px; width: 800px; z-index: 9999; }
+#slotLeaderboard_html { margin: 75px 50px 15px; }
+#slotLeaderboard_nav { position: absolute; height: 75px; margin-left: 50px; z-index: 9999; max-width: 800px; }
+#slotLeaderboard_close { width: 25px; height: 25px; top: 18px; right: 18px; position: absolute; cursor: pointer; background: transparent url('../images/allicons.png') no-repeat scroll -641px -5px; }
+#slotLeaderboard_nav_weekly { border: 1px solid rgb(69, 170, 226); float: left; color: rgb(69, 170, 226); }
+#slotLeaderboard_nav_weekly select { color: rgb(69, 170, 226); }
+#slotLeaderboard_nav_monthly { border: 1px solid grey; margin-left: 15px; float: right; }
+#slotLeaderboard_nav_monthly select { color: grey; }
+#slotLeaderboard_nav_monthly, #slotLeaderboard_nav_weekly { padding: 5px; margin-top: 10px; border-radius: 5px; }
+#slotLeaderboard_nav_weekly > p, #slotLeaderboard_nav_monthly > p { padding: 0px; margin-bottom: 0px; }
+#top_container { height: 100px; width: 700px; }
+#btm_container { height: 400px; width: 700px; padding-top: 15px; }
+#banner_body { background-color: rgb(37, 170, 226); border: 1px solid rgb(71, 142, 170); border-radius: 5px; display: inline-block; height: 85px; margin-top: 11px; width: 697px; }
+#banner_title { padding-bottom: 0px ! important; margin-top: 10px; color: white; font-size: 18px; line-height: 20px; margin-bottom: 0px ! important; }
+#banner_subtitle { color: white; font-size: 14px; padding: 0px; margin-top: 5px; font-weight: bold; margin-bottom: 0px ! important; }
+#leaderboard_msg { margin-top: 15px; display: inline-block; width: 700px; font-size: 16px; text-align: center; color: rgb(69, 170, 226); font-weight: bold; }
+.comingSoon { text-align: center; font-size: 26px; line-height: 250px; color: rgb(69, 170, 226); }
+#banner_img { float: right; height: 85px; width: 310px; background-image: url('../images/fun88-leaderboard-banner-img.png'); }
+.quickcontactbtn1 { background: transparent url('../images/button-chat.png') no-repeat scroll 0% 0%; }
+.quickcontactbtn1:hover { background: transparent url('../images/button-chat-r.png') no-repeat scroll 0% 0%; }
+.quickcontactbtn2 { background: transparent url('../images/button-download.png') no-repeat scroll 0% 0%; }
+.quickcontactbtn2:hover { background: transparent url('../images/button-download-r.png') no-repeat scroll 0% 0%; }
+.quickcontactbtn { width: 135px; height: 32px; margin: auto; padding-bottom: 4px; }
+.quickcontacttext { font-size: 12px; text-align: center; }
+.quickcontactemailtext { font-size: 12px; text-align: center; }
+.quickcontactemailtext:hover { color: rgb(37, 170, 225); }
+#fun88APK_Container { display: none; height: 403px; background: transparent url('../images/fun88-apk-main.png') no-repeat scroll 0% 0%; }
+ 
+.fun88APK_OpenMenu_zh { background: transparent url('../images/fun88-apk-sprite.png') no-repeat scroll 0px 0px; }
+.button_layout { height: 41px; width: 145px; display: block; }
+.button_layout_WC_ALI { height: 41px; width: 135px; display: block; }
+#quickMenu { position: fixed; bottom: 0%; z-index: 9999999999999; right: 8%; }
+#quickContact_OpenMenu { background-image: url('../images/button-a.png'); float: right; }
+#quickContactContainer { height: 405px; background: transparent url('../images/button-b.png') no-repeat scroll 0% 0%; }
+    #PTButton {
+        background-image: url("../images/DL1.png");
+    }
+
+    #PTButton:hover {
+        background-image: url("../images/DL2.png");
+    }
+
+
+.WCP_OpenMenu { display: block; height: 41px; background: transparent url('../images/wcali_off.png') no-repeat scroll 0% 0%; }
+#WCP_Container { display: none; height: 95px; background: transparent url('../images/wcali_on.png') no-repeat scroll 0% 0%; }
+#WC_Container { display: none; height: 108px; background: transparent url('../images/wechatpay_on.png') no-repeat scroll 0% 0%; }
+#BtnWCOpen { background: transparent url('../images/wechatpay.png') no-repeat scroll 0% 0%; }
+#BtnWCOpen:hover { background: transparent url('../images/wechatpay_hover.png') no-repeat scroll 0% 0%; }
+#BtnWCSubmit { background: transparent url('../images/wechat_button.png') no-repeat scroll 0% 0%; }
+#Ali_Container { display: none; height: 106px; background: transparent url('../images/alipay_on.png') no-repeat scroll 0% 0%; }
+#BtnAliOpen { background: transparent url('../images/alipay.png') no-repeat scroll 0% 0%; }
+#BtnAliOpen:hover { background: transparent url('../images/alipay_hover.png') no-repeat scroll 0% 0%; }
+#BtnAliSubmit { background: transparent url('../images/ali_button.png') no-repeat scroll 0% 0%; }
+.hidVal, .hidBankCode { display: none; }
+.RewardLvlTooltip::after, .RewardLvlTooltip::before { bottom: 100%; left: 50%; border: 1px solid rgb(0, 0, 0); content: " "; height: 0px; width: 0px; position: absolute; pointer-events: none; }
+.RewardLvlTooltip::after { border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgb(255, 255, 255); border-width: 6px; margin-left: -6px; }
+.RewardLvlTooltip::before { border-color: transparent transparent rgb(0, 0, 0); border-width: 7px; margin-left: -7px; }
+
+
+#slides { width: 960px; position: relative; float: left; z-index: 10; height: 400px; cursor: pointer; background-color: white; opacity: 0.01; }
+.cols .col { float: left; margin-right: 25px; margin-left: 11px; }
+.cols .middle { float: left; }
+.cols .last { float: right; margin-right: 14px; }
+.three-cols .imgHomeSprites { width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.three-cols .imgHomeSprites:hover { background-position: 0px -265px; }
+
+#contentContainer { width: 934px; margin: 0px auto; position: relative; z-index: 99; }
+#maximage { display: none; z-index: -10; position: absolute; top: 0px; height: 100%; }
+#maximage * { background-repeat: no-repeat; background-position: center top; }
+#navTable, .lang-ja-JP #navTable { z-index: 99; border-spacing: 0px; }
+#navTable td.activeSlide, #navTable td.activeSlide:hover, .lang-ja-JP #navTable td.activeSlide, .lang-ja-JP #navTable td.activeSlide:hover { background-color: rgb(37, 170, 225); background-size: 100% 100%; z-index: 99; opacity: 1; }
+#navTable td:hover, .lang-ja-JP #navTable td:hover { background-color: rgb(171, 170, 170); background-size: 100% 100%; z-index: 99; opacity: 1; }
+#navTable td a, .lang-ja-JP #navTable td a { color: white; line-height: 30px; opacity: 1; }
+#navTable td, .lang-ja-JP #navTable td { margin: 0px auto; text-align: center; z-index: 99; width: 933px; max-width: 933px; cursor: pointer; overflow: hidden; border-left: 2px solid gray; }
+#navTable tr, .lang-ja-JP #navTable tr { display: block; margin-left: -4px; width: 937px; background-color: rgba(100, 95, 95, 0.7); }
+#cycle-nav { display: block; height: 40px; margin-top: -294px; position: absolute; }
+p { margin-bottom: 20px; }
+#newnavDiv { margin: 0px auto; width: 1067px; position: relative; }
+#cursorDiv { margin-top: -505px; position: absolute; }
+#cursorDiv .prev, #cursorDiv .next { z-index: 99; cursor: pointer; }
+#cursorDiv .prev { background: transparent url('../images/arrow_allicons.png') no-repeat scroll -4px -2px; width: 54px; height: 75px; display: block; float: left; }
+#cursorDiv .next { margin-left: 1017px; background: transparent url('../images/arrow_allicons.png') no-repeat scroll -4px -86px; width: 54px; height: 75px; display: block; }
+.topBigBanner { background-position: 0px 83px; }
+.topBigBanner:hover { background-position: 0px 0px ! important; height: 305px ! important; margin-top: -226px; z-index: 5000; }
+.miniBanner1:hover { background-position: 0px -181px ! important; }
+.miniBanner2:hover { background-position: 0px -265px ! important; }
+.miniBanner3:hover { background-position: 0px -265px ! important; }
+#topDiv { height: 83px; }
+#topDiv, #firstDiv, #middleDiv, #lastDiv, #firstBannerJP, #secondBannerJP, #thirdBannerJP, #japan_email { display: none; }
+.hidVal, .hidBankCode{display: none;}
+
+
+/* 轮播图样式 */
+html, body {
+	position: relative;
+	height: 100%;
+	width:100%;
+}
+.pagination{
+    z-index: 9999;
+    position: relative;
+    text-align: center;
+    top:146px;
+}
+.swiper-container img{
+	max-width: 100%;
+}
+.swiper-slide {
+        text-align: center;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+}
+
+/* 顶部滚动广告 */
+	#marquee1{ width: 680px; height: 34px; position: relative; margin:2px auto;overflow: hidden;z-index: 1}
+	#marquee1 ul { width: 680px; height: 34px; position: relative; }
+	#marquee1 ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
+	#marquee1 ul li a { text-decoration:none; height: 34px;}
+/* 底部滚动广告 */
+	#marquee2 { float: left;width: 688px; height: 34px; position: relative;overflow: hidden }
+	#marquee2 ul { width: 1000px; height: 34px; position: relative; }
+	#marquee2 ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
+	#marquee2 ul li a {line-height:34px;font-size:14px;text-decoration:none;  height: 34px;}
+
+/* 点击下载按钮 */
+#fun88apk_dl_zh{background: transparent url('../images/fun88-apk-sprite.png') no-repeat scroll -146px 0px;}
+#fun88apk_dl_zh:hover{ background: transparent url('../images/fun88-apk-sprite.png') no-repeat scroll -282px 0px;}
+
+
+.float-right { float: right;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.fa { font-size: .8em; line-height: 22px !important;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select { display: inline-block;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label, #lang-Select ul li { display: block; width: 80px;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label:hover, #lang-Select ul li:hover { cursor: pointer;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label { display: block; color: #fff; height: 34px
+; margin: 0; padding-left: 5px;position: relative; z-index: 9999;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input { display: none;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input ~ ul { position: relative; left: 20px; visibility: hidden; opacity: 0; top: -20px; z-index: 1;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked + label { color: white;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked ~ ul { visibility: visible; opacity: 1; top: 0;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.animate { font-size: 16px; width: 95px; -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; transition: all .3s; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.fa { font-size: .8em; line-height: 22px !important;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select { display: inline-block;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label, #lang-Select ul li { display: block; width: 95px;  padding: 15px 20px;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label:hover, #lang-Select ul li:hover { cursor: pointer;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label { display: block; color: #fff; height: 34px
+; margin: 0; padding: 0; position: relative; z-index: 9999;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input { display: none;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input ~ ul { visibility: hidden; opacity: 0; top: -20px; z-index: 1;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked + label { color: white; background: #1ABC9C;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked ~ ul { visibility: visible; opacity: 1; top: 0;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+
+.animate { font-size: 16px; -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; transition: all .3s; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.fa { font-size: .8em; line-height: 22px !important;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select { display: inline-block;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label, #lang-Select ul li { display: block; width: 95px;  padding: 15px 20px;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label:hover, #lang-Select ul li:hover { cursor: pointer;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label { display: block; color: #fff; height: 34px
+; margin: 0; padding: 0; position: relative; z-index: 9999;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input { display: none;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input ~ ul { position: relative; visibility: hidden; opacity: 0; top: -20px; z-index: 1;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked + label { background: #0072b5; color: white;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked ~ ul { visibility: visible; opacity: 1; top: 0;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+
+.animate { font-size: 16px; -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; transition: all .3s; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.fa { font-size: .8em; line-height: 22px !important;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select { display: inline-block;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label, #lang-Select ul li { display: block; width: 95px;  padding: 15px 20px;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label:hover, #lang-Select ul li:hover { cursor: pointer;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label { display: block; color: #fff; height: 34px
+; margin: 0; padding: 0; position: relative; z-index: 9999;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input { display: none;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input ~ ul {visibility: hidden; opacity: 0; top: -20px; z-index: 1;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked + label {  color: white;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked ~ ul { visibility: visible; opacity: 1; top: 0;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+
+.animate { font-size: 16px; -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; transition: all .3s; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.fa { font-size: .8em; line-height: 22px !important;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select { display: inline-block;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label, #lang-Select ul li { display: block; width: 95px;  padding: 15px 20px;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label:hover, #lang-Select ul li:hover { cursor: pointer;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label { display: block; color: #fff; height: 34px
+; margin: 0; padding: 0; position: relative; z-index: 9999;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input { display: none;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input ~ ul {visibility: hidden; opacity: 0; top: -20px; z-index: 1;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked + label { color: white; background: #1ABC9C;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked ~ ul { visibility: visible; opacity: 1; top: 0;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+
+
+.animate { font-size: 16px; -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; transition: all .3s; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.fa { font-size: .8em; line-height: 22px !important;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select { display: inline-block;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label, #lang-Select ul li { display: block; width: 95px;  padding: 15px 20px;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label:hover, #lang-Select ul li:hover { cursor: pointer;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label { display: block; color: #fff; height: 34px
+; margin: 0; padding: 0; position: relative; z-index: 9999;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input { display: none;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input ~ ul {visibility: hidden; opacity: 0; top: -20px; z-index: 1;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked + label { background: #1ABC9C; color: white;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked ~ ul { visibility: visible; opacity: 1; top: 0;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+
+
+.animate { font-size: 16px; -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; transition: all .3s; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.fa { font-size: .8em; line-height: 22px !important;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select { display: inline-block;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label, #lang-Select ul li { display: block; width: 95px;  padding: 15px 20px;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label:hover, #lang-Select ul li:hover { cursor: pointer;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label { display: block; color: #fff; width:85px;height: 20px; padding: 0; position: relative; z-index: 9999;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input { display: none;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input ~ ul { visibility: hidden; opacity: 0; top: -20px; z-index: 1;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked + label { color: white; background: #25aae1;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked ~ ul { visibility: visible; opacity: 1; top: 0;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+
+.animate { font-size: 16px; -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; transition: all .3s; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.fa { font-size: .8em; line-height: 22px !important;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select { display: inline-block;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select ul li { display: block; width: 105px; padding: 5px 5px;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label:hover, #lang-Select ul li:hover { cursor: pointer;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select label { display: block; color: #fff; height: 25px
+; margin: 0 0 0 8px; padding: 0; position: relative; z-index: 9999;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input { display: none;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input ~ ul { visibility: hidden; opacity: 0; top: -20px; z-index: 1;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked + label {color: white;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+#lang-Select input:checked ~ ul { visibility: visible; opacity: 1; top: 0;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+
+
+.animate { font-size: 16px; -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; transition: all .3s; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.float-right { float: right;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.float-right { float: right;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.float-right { float: right;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.float-right { float: right;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.float-right { float: right;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.float-right { float: right;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.float-right { float: right;  }
+/* ::::: http://www.10010388.com/css/BankStatus.css ::::: */
+
+.swiper-slide { position: relative; text-align: center; display: flex; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; -webkit-box-pack: center;  }
