@@ -1,0 +1,49 @@
+﻿    ul#settingddl,ul#settingddl ul{
+	margin:0;list-style:none;padding:0;background-color:#dedede;border-width: 0 1px 1px 0;
+	border-style:solid;
+	border-color:#d4d4d4;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+ul#settingddl ul{
+	display:none;position:absolute;left:0;top:100%;-moz-box-shadow:3.5px 3.5px 5px #000000;
+	-webkit-box-shadow:3.5px 3.5px 5px #000000;box-shadow:3.5px 3.5px 5px #000000;
+	border-color:#d4d4d4;
+	background-color:#FFFFFF;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;
+	padding:0 0 0 0;}
+ul#settingddl li:hover>*{
+	display:block;}
+ul#settingddl li{
+	position:relative;display:block;white-space:nowrap;font-size:0;float:left;}
+ul#settingddl li:hover{
+	z-index:1;}
+ul#settingddl{
+	font-size:0;z-index:999;position:relative;display:inline-block;zoom:1;padding:0;
+	*display:inline;}
+* html ul#settingddl li a{
+	display:inline-block;}
+ul#settingddl>li{
+	margin:0;}
+ul#settingddl a:active, ul#settingddl a:focus{
+	outline-style:none;}
+ul#settingddl a{
+	display:block;vertical-align:middle;text-align:left;text-decoration:none;
+	font:bold 14px Trebuchet MS;color:#000000;text-shadow:#FFF 0 0 1px;
+	cursor:pointer;padding:0;background-color:#ffffff;
+	background-image:url("images/mainbk.png");background-repeat:repeat;background-position:0 0;border-width:0 0 0 1px;
+	border-style:solid;border-color:#C0C0C0;}
+ul#settingddl ul li{
+	float:none;margin:10px 0 0;}
+ul#settingddl ul a{
+	text-align:left;padding:4px;background-color:#FFFFFF;background-image:none;
+	border-width:0;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;font:14px Tahoma;color:#000;text-decoration:none;}
+ul#settingddl li:hover>a,ul#settingddl li a.pressed{
+	background-color:#55aaff;border-color:#C0C0C0;border-style:solid;color:#000000;
+	text-shadow:#FFF 0 0 1px;background-image:url("images/mainbk.png");background-position:0 100px;text-decoration:none;}
+ul#settingddl img{
+	border:none;vertical-align:middle;margin-right:10px;}
+ul#settingddl span{
+	display:block;overflow:visible;background-position:right center;background-repeat:no-repeat;padding-right:0px;}
+ul#settingddl ul li:hover>a,ul#settingddl ul li a.pressed{
+	background-color:#55aaff;background-image:none;color:#ffffff;text-decoration:none;}
+ul#settingddl li.toplast>a{
+	border-radius:0 5px 5px 0;-moz-border-radius:0 5px 5px 0;
+	-webkit-border-radius:0;-webkit-border-top-right-radius:5px;-webkit-border-bottom-right-radius:5px;}
+

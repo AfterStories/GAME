@@ -1,0 +1,133 @@
+/* Code tidied up by ScrapBook */
+.HalfTime, .LiveTime, .IsLive, .text_time font[color="red"] { color: rgb(255, 92, 92); font-size: 10px; }
+.text_time, .text_time a { color: rgb(42, 49, 72); font-size: 11px; text-align: center; }
+.text_time a:hover { font-weight: normal ! important; }
+.text_timeR { color: rgb(255, 0, 0); font-size: 11px; text-align: center; }
+.BetprocessMinBet { color: rgb(0, 51, 153); height: 20px; font-size: 11px; }
+.BetprocessMaxBet { color: rgb(13, 96, 158); height: 20px; font-size: 11px; }
+.pop_title { color: rgb(255, 255, 255); float: left; width: auto; font-size: 12px; font-weight: bold; height: 20px; line-height: 20px; padding: 0px 10px; margin-top: 10px; border-radius: 4px 4px 0px 0px; background-color: rgb(30, 110, 171); background-image: url("mask1.png"); background-repeat: repeat-x; background-position: 0px 0px; }
+.pop_border { background-color: rgb(255, 255, 255); display: block; padding: 5px; }
+.poptitle, th.Second { color: rgb(10, 34, 80); font-size: 11px ! important; }
+.poptitle th, th.Second { background-color: rgb(242, 242, 243); border-top: 1px solid rgb(219, 218, 218); border-right: 1px solid rgb(219, 218, 218); border-bottom: 1px solid rgb(219, 218, 218); font-size: 11px; padding: 2px; }
+th.Second { background-image: url("Alpha.png"); background-repeat: repeat; }
+.popodds { font-size: 11px ! important; background-color: rgb(223, 223, 223); }
+.popodds td { height: 22px; padding: 0px 2px; font-weight: normal; border-right: 1px solid; border-bottom: 1px solid; }
+.popodds td, .selectType .eventArea .line { border-color: rgb(218, 218, 218); }
+.popoddsNote td { border-top: 1px solid rgb(218, 218, 218); }
+.popLegname, .popContents { color: rgb(49, 48, 49) ! important; font-weight: normal; font-size: 11px; }
+.popodds, .popodds a { color: rgb(49, 48, 49) ! important; font-weight: normal; font-size: 11px; }
+.ValueClass, .ValueClass a { color: rgb(30, 110, 171); font-size: 11px ! important; }
+.ValueClass span { color: rgb(25, 97, 171); font-size: 11px ! important; }
+.OUGoalClass, .OUGoalClass a { color: rgb(135, 135, 135); font-weight: bold; font-size: 11px ! important; }
+.OUGoalClass span { color: rgb(135, 135, 135); font-weight: bold; font-size: 11px ! important; }
+.FavOddsClass, .FavOddsClass a, a.FavOddsClass, .text_time a:hover, .score_box .box02, .tabcontbk a:hover { color: rgb(255, 0, 0) ! important; font-weight: bold; }
+.FavOddsClass span { color: rgb(235, 99, 7); font-weight: bold; }
+.FavTeamClass, .FavTeamClass a { color: rgb(255, 0, 0); font-size: 12px ! important; }
+.FavTeamClass span { color: rgb(235, 99, 7); font-weight: bold; }
+.UdrDogOddsClass, .UdrDogOddsClass a, a.UdrDogOddsClass { color: rgb(49, 48, 49) ! important; }
+.UdrDogOddsClass span { color: rgb(102, 102, 102); font-weight: bold; }
+.UdrDogTeamClass, .UdrDogTeamClass a, .tabstyle02, .moreBetType.tag .oddsTable tr > td:first-child > b { color: rgb(33, 32, 33); }
+.UdrDogTeamClass span { color: rgb(102, 102, 102); font-weight: bold; }
+.HdpGoalClass, .HdpGoalClass a { color: rgb(115, 113, 115); font-size: 12px ! important; font-weight: bold; }
+.HdpGoalClass span { color: rgb(235, 99, 7); font-size: 10px ! important; font-weight: bolder; }
+.FavOddsClassBetProcess, .FavOddsClassBetProcess a { color: rgb(204, 0, 0); }
+.FavOddsClaFssBetProcess span { color: rgb(204, 0, 0); }
+.FavTeamClassBetProcess, .FavTeamClassBetProcess a { color: rgb(204, 0, 0); }
+.FavTeamClassBetProcess span { color: rgb(204, 0, 0); }
+.UdrDogOddsClassBetProcess, .UdrDogOddsClassBetProcess a { color: rgb(11, 93, 175); }
+.UdrDogOddsClassBetProcess span { color: rgb(11, 93, 175); }
+.UdrDogTeamClassBetProcess, .UdrDogTeamClassBetProcess a { color: rgb(77, 77, 77); }
+.UdrDogTeamClassBetProcess span { color: rgb(11, 93, 175); }
+.ScoreClass { color: rgb(50, 130, 190); font-weight: bold; }
+.styleblack { font-size: 12px; padding-left: 10px; }
+.tv_gicon { height: 15px; width: 15px; background-image: url("all_menu.gif"); background-position: -8px -78px; }
+.plusicon { height: 15px; width: 15px; background-image: url("all_menu.gif"); background-position: -31px -51px; }
+.graphicon { height: 15px; width: 15px; background-image: url("all_menu.gif"); background-position: -52px -51px; }
+.redcard { height: 15px; width: 13px; background-image: url("all_menu.gif"); background-position: -31px -34px; }
+.L_icon { height: 15px; width: 13px; background-image: url("all_menu.gif"); background-position: -31px -71px; }
+.F_icon { height: 15px; width: 13px; background-image: url("all_menu.gif"); background-position: -53px -71px; }
+.calendar_icon { height: 18px; width: 15px; background-image: url("all_menu.gif"); background-position: -33px -90px; }
+.arrowR_icon { height: 13px; width: 13px; background-image: url("all_menu.gif"); background-position: -7px -34px; }
+.arrowL_icon { height: 13px; width: 13px; background-image: url("all_menu.gif"); background-position: -7px -45px; }
+.arrowRB_icon { height: 20px; width: 20px; background-image: url("all_menu.gif"); background-position: -10px -123px; }
+.close_icon { height: 15px; width: 15px; background-image: url("all_menu.gif"); background-position: -10px -147px; }
+.linethrough { text-decoration: line-through; color: rgb(102, 102, 102); }
+.Odds_Upd, tr.Odds_Upd td { background-image: url("red.png") ! important; }
+.bgwhite { background-color: rgb(255, 255, 255); }
+.void { background-color: rgb(171, 171, 171); }
+.bgcpe { background-color: rgb(255, 255, 255); }
+.bgcpelight { background-color: rgb(235, 235, 235); }
+.live, .score_box .box02 .border { background-color: rgb(236, 241, 246); }
+.liveligh { background-color: rgb(194, 229, 255); }
+.trbgov { background-color: rgb(255, 255, 198) ! important; }
+.icon_loading { background-image: url("../images/blue.gif") ! important; background-repeat: no-repeat; width: 25px; height: 25px; }
+.w1 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -20px 0px; display: block; }
+.w2 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -40px 0px; display: block; }
+.w3 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -60px 0px; display: block; }
+.w4 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -80px 0px; display: block; }
+.w5 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: 0px -20px; display: block; }
+.w6 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -20px -20px; display: block; }
+.w7 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -40px -20px; display: block; }
+.w8 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -60px -20px; display: block; }
+.w9 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -80px -20px; display: block; }
+.w10 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: 0px -40px; display: block; }
+.w11 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -20px -40px; display: block; }
+.w12 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -40px -40px; display: block; }
+.w13 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -60px -40px; display: block; }
+.w14 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -80px -40px; display: block; }
+.w15 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: 0px -60px; display: block; }
+.w16 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -20px -60px; display: block; }
+.w17 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -40px -60px; display: block; }
+.w18 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -60px -60px; display: block; }
+.w19 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -80px -60px; display: block; }
+.w20 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: 0px -80px; display: block; }
+.w21 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -20px -80px; display: block; }
+.w22 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -40px -80px; display: block; }
+.w23 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -60px -80px; display: block; }
+.w24 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: -80px -80px; display: block; }
+.w99 { height: 15px; width: 15px; float: left; background-image: url("sport_icon.gif"); background-position: 0px -100px; display: block; }
+.numberGroup { background-color: rgb(239, 239, 239); }
+.numberGroup.inlive { background-color: rgb(255, 255, 255); }
+.numberGroup .tab_bg { border-width: 0px; padding: 10px; }
+.numberGroup .tab_bg > table { border-collapse: separate; }
+.numberGroup .tab_bg td { border-color: rgb(223, 223, 223) ! important; }
+.numberGroup.inlive .tab_bg td { border-color: rgb(17, 48, 108) ! important; }
+.numberGroup td { text-align: center; }
+.numberGroup .tabt_L { border-left-style: solid; border-left-width: 5px ! important; }
+.numberGroup .tabt_R { border-right-style: solid; border-right-width: 5px ! important; }
+.numberGroup .tabt_T { border-top-style: solid; border-top-width: 5px ! important; }
+.numberGroup .tabt_B { border-bottom-style: solid; border-bottom-width: 5px ! important; }
+.numberGroup .tabt_unT { border-top-width: 0px ! important; }
+.numberGroup .tabt_unL { border-left-width: 0px ! important; }
+.numberGroup .tabt_unR { border-right-width: 0px ! important; }
+.numberGroup .liveligh, .numberGroup .live, .numberGroup .bgcpelight, .numberGroup .bgcpe { border-top-width: 0px; border-bottom-width: 0px; border-style: solid; border-left-width: 1px; }
+.numberGroup .trbg .liveligh, .numberGroup .trbg .live, .numberGroup .trbg .bgcpelight, .numberGroup .trbg .bgcpe { border-top-width: 1px; border-left-width: 0px; }
+.numberGroup .live { background-color: rgb(223, 233, 255); }
+.numberGroup .liveligh { background-color: rgb(192, 203, 231); }
+.numberGroup .bgcpe { background-color: rgb(255, 255, 255); }
+.numberGroup .bgcpelight { background-color: rgb(245, 245, 245); }
+.liveligh.tabt_B, .live.tabt_B, .bgcpelight.tabt_B, .bgcpe.tabt_B { border-bottom-width: 1px ! important; }
+.numberGroup td.ball { background-color: rgb(255, 255, 255); border-left-width: 0px; border-right-width: 1px; white-space: nowrap; }
+.numberGroup td.ball.even { background-color: rgb(239, 239, 239); }
+.numberGroup .num { font-family: Arial,Helvetica,sans-serif,Tahoma; font-weight: bold; font-size: 12px; color: rgb(255, 255, 255); text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5); display: inline-block; width: 30px; height: 30px; line-height: 26px; background-image: url("numbergroup_ball.png"); background-position: 0px 0px; background-repeat: no-repeat; }
+.numberGroup .trbgov .num { background-position: 0px -30px; }
+.numberGroup .num.on { background-position: 0px -60px; }
+.numberGroup .ball .UdrDogOddsClass { float: right; margin-right: 4px; line-height: 27px; text-align: right; }
+.numberGroup .ball .UdrDogOddsClass + .num { float: left; margin-left: 4px; text-align: center; }
+#PopDiv .numberGroup .ball .UdrDogOddsClass { margin-right: 2px; }
+#PopDiv .numberGroup .ball .UdrDogOddsClass + .num { margin-left: 0px; }
+.numberGroup_Head { height: 44px; margin: -2px -2px 0px; padding-bottom: 5px; border-bottom: 1px solid white; overflow: hidden; }
+.Rbox { float: right; border-left: 1px dotted rgb(153, 153, 153); font-size: 11px; line-height: 20px; font-weight: bold; margin: 5px 15px 0px 10px; white-space: nowrap; }
+.Rbox a { color: inherit; text-decoration: none; }
+.Rbox span { float: left; margin-top: 20px; margin-left: -160px; width: 140px; text-align: right; background-image: none; }
+.Rbox img { margin-bottom: 2px; }
+.Rbox .IsLive, .Races .IsLive { font-size: 11px; }
+.Lbox { float: left; }
+.numberGroup_Head .Rbox { width: auto; }
+.numberGroup_Head .Lbox { width: auto; }
+.even.trbgov { background-color: rgb(249, 249, 187) ! important; }
+.tabbox_F .tabbox { margin: -2px; }
+.Lbox span { font-weight: normal; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 290px; }
+.padtop { padding-top: 4px; }
+.Reset { border-left-width: 0px; margin: 5px 0px 5px 10px; }
+.text-ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

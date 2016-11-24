@@ -1,0 +1,231 @@
+/* Code tidied up by ScrapBook */
+.switch-view-tabs ul { display: table; width: 100%; }
+.switch-view-tabs ul > * { display: table-cell; vertical-align: middle; }
+.betslip-tabs a, .side-menu h3, .bulletin h3, .promotion h3 { box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5) inset; }
+.float-box.right i::before, .account-money .icon-refresh::before, .match-toolbar .icon-refresh::before { color: rgb(255, 255, 255); background: transparent linear-gradient(to bottom, rgb(134, 203, 50) 0%, rgb(93, 142, 35) 100%) repeat scroll 0% 0%; }
+.accent { color: red; }
+input[type="text"] { border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204); }
+.last-child-right > :last-child { float: right; }
+.col-1 > * { width: 100% ! important; }
+.col-2 > * { width: 50% ! important; }
+.col-3 > * { width: 33.3333% ! important; }
+.col-4 > * { width: 25% ! important; }
+.col-5 > * { width: 20% ! important; }
+.col-6 > * { width: 16.6667% ! important; }
+.col-7 > * { width: 14.2587% ! important; }
+.col-8 > * { width: 12.5% ! important; }
+.col-9 > * { width: 11.1111% ! important; }
+.col-10 > * { width: 10% ! important; }
+.col-11 > * { width: 9.90909% ! important; }
+.col-12 > * { width: 8.33333% ! important; }
+.col-16 > * { width: 6.25% ! important; }
+.col-15 > * { width: 6.66667% ! important; }
+.icon-grid { border-color: rgb(153, 153, 153); }
+.icon-group .icon-favorite { color: rgb(153, 153, 153); }
+.icon-group .icon-favorite:hover, .icon-group .icon-favorite.selected { color: rgb(255, 152, 0); }
+.icon-group .icon-streming { color: rgb(255, 87, 114); }
+.icon-group .icon-streming:hover::before, .icon-group .icon-streming.selected::before { color: rgb(255, 11, 50); }
+.btn.highlight .icon-favorite::before { color: rgb(255, 235, 59); }
+.icon-money { color: rgb(255, 255, 255); background-color: rgb(97, 175, 234); }
+.icon-success { color: rgb(107, 162, 40); }
+.icon-success + span { color: rgb(107, 162, 40); }
+.icon-warning { color: red; }
+.icon-warning + span { color: red; }
+.icon-help { color: rgb(50, 130, 190); }
+[class*="icon-result"]::before { color: rgb(255, 255, 255); }
+.btn { background: transparent linear-gradient(to bottom, rgb(38, 38, 38) 0%, rgb(38, 38, 38) 50%, rgb(13, 13, 13) 51%, rgb(13, 13, 13) 100%) repeat scroll 0% 0%; color: rgb(255, 255, 255); box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset; border-color: rgb(38, 38, 38); }
+.btn:hover { background: transparent linear-gradient(to bottom, rgb(64, 64, 64) 0%, rgb(64, 64, 64) 50%, rgb(38, 38, 38) 51%, rgb(38, 38, 38) 100%) repeat scroll 0% 0%; }
+.highlight.btn { color: rgb(255, 235, 59); background: transparent linear-gradient(to bottom, rgb(38, 38, 38) 0%, rgb(38, 38, 38) 50%, rgb(13, 13, 13) 51%, rgb(13, 13, 13) 100%) repeat scroll 0% 0%; }
+.highlight.btn:hover { background: transparent linear-gradient(to bottom, rgb(64, 64, 64) 0%, rgb(64, 64, 64) 50%, rgb(38, 38, 38) 51%, rgb(38, 38, 38) 100%) repeat scroll 0% 0%; }
+.selected.btn { background: transparent linear-gradient(to bottom, rgb(102, 166, 215) 0%, rgb(102, 166, 215) 50%, rgb(50, 130, 190) 51%, rgb(50, 130, 190) 100%) repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.selected.btn:hover { background: transparent linear-gradient(to bottom, rgb(102, 166, 215) 0%, rgb(102, 166, 215) 50%, rgb(50, 130, 190) 51%, rgb(50, 130, 190) 100%) repeat scroll 0% 0%; }
+.dropdown-toggle.btn { background: transparent linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(204, 204, 204) 100%) repeat scroll 0% 0%; color: rgb(51, 51, 51); border-color: rgb(119, 119, 119); }
+.dropdown-toggle.btn:hover { background: transparent linear-gradient(to bottom, rgb(230, 230, 230) 0%, rgb(179, 179, 179) 100%) repeat scroll 0% 0%; }
+.btn .tip { background: transparent linear-gradient(to bottom, rgb(255, 245, 161) 0%, rgb(255, 235, 59) 100%) repeat scroll 0% 0%; color: rgb(0, 0, 0); }
+.btn.accent { color: rgb(255, 235, 59); }
+.button-wrap > span { color: rgb(255, 255, 255); }
+.dropdown-menu { background-color: rgb(242, 242, 242); border-color: rgb(119, 119, 119); }
+.dropdown-menu li { border-color: transparent; }
+.dropdown-menu li.selected { background-color: rgb(102, 166, 215); }
+.dropdown-menu li.selected a { color: rgb(255, 255, 255); }
+.dropdown-menu a { color: rgb(51, 51, 51); }
+.btn.disable { background: transparent linear-gradient(to bottom, gray 0%, gray 50%, rgb(102, 102, 102) 51%, rgb(102, 102, 102) 100%) repeat scroll 0% 0%; color: rgb(51, 51, 51) ! important; cursor: default; }
+.btn.disable:hover { background: transparent linear-gradient(to bottom, gray 0%, gray 50%, rgb(102, 102, 102) 51%, rgb(102, 102, 102) 100%) repeat scroll 0% 0%; }
+.float-box.right .btn.disable i::before { color: gray; background: rgb(51, 51, 51) none repeat scroll 0% 0%; }
+.match-toolbar .btn.disable .icon-refresh::before { color: gray; background: rgb(51, 51, 51) none repeat scroll 0% 0%; }
+@keyframes myfirst {
+0% { background-color: rgba(255, 147, 159, 0.5); }
+50% { background-color: rgba(255, 147, 159, 0.5); }
+100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+@keyframes myfirst {
+0% { background-color: rgba(255, 147, 159, 0.5); }
+50% { background-color: rgba(255, 147, 159, 0.5); }
+100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+@keyframes my {
+0% { background-color: rgba(255, 147, 159, 0.5); }
+50% { background-color: rgba(255, 147, 159, 0.5); }
+100% { background-color: rgba(255, 147, 159, 0); }
+}
+@keyframes my {
+0% { background-color: rgba(255, 147, 159, 0.5); }
+50% { background-color: rgba(255, 147, 159, 0.5); }
+100% { background-color: rgba(255, 147, 159, 0); }
+}
+.betslip-tabs a { background: transparent linear-gradient(to bottom, rgb(82, 155, 209) 0%, rgb(45, 116, 170) 100%) repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.betslip-tabs a:hover { background: transparent linear-gradient(to bottom, rgb(102, 166, 215) 0%, rgb(50, 130, 190) 100%) repeat scroll 0% 0%; }
+.betslip-tabs a.selected, .betslip-tabs a.selected:hover { color: rgb(0, 0, 0); background: transparent linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(230, 230, 230) 100%) repeat scroll 0% 0%; }
+.betslip-betting.info, .betslip-betting.info dd.current, .betslip-betting { border-color: rgb(179, 179, 179); }
+.betslip-betting.info dt { background-color: rgb(216, 216, 216); }
+.betslip-betting.info dd, .betslip-betting.success dd { border-color: rgb(179, 179, 179); }
+.betslip-container, .account-money, .side-menu ul, .bulletin > div, .promotion div { background-color: rgb(240, 240, 240); }
+.side-menu h3, .bulletin h3, .promotion h3 { background: transparent linear-gradient(to bottom, rgb(102, 166, 215) 0%, rgb(50, 130, 190) 100%) repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.side-menu li { background: transparent linear-gradient(to bottom, rgb(13, 13, 13) 0%, rgb(26, 26, 26) 100%) repeat scroll 0% 0%; }
+.side-menu li:hover { background: transparent linear-gradient(to bottom, rgb(38, 38, 38) 0%, rgb(13, 13, 13) 100%) repeat scroll 0% 0%; }
+.table-list.result .col.time { border-color: rgb(204, 204, 204); background-color: rgb(245, 245, 245); }
+.table-list.result + .table-list { border-color: rgb(204, 204, 204); }
+.table-list.result-detail .tr-header td { color: rgb(51, 51, 51); background-color: rgb(223, 223, 223); }
+.table { border-color: rgb(204, 204, 204); color: inherit; }
+.table tr { background-color: rgb(239, 239, 239); }
+.table th, .table td { border-color: rgb(204, 204, 204); }
+.table thead tr { color: rgb(255, 255, 255); background-color: rgb(95, 95, 95); border-color: rgb(255, 255, 255); }
+.table tfoot tr { background-color: rgb(250, 250, 250); }
+.table .win { color: rgb(107, 162, 40); }
+.table .lose { color: red; }
+.table .td-group { border-color: rgb(204, 204, 204); }
+.table .text-link { color: rgb(50, 130, 190); }
+.table .text-link:hover { color: rgb(102, 166, 215); }
+.table .underdog { color: rgb(204, 0, 0); }
+.table-result .tr-header { background-color: rgb(245, 245, 245); }
+.table-result .tr-footer { color: rgb(107, 162, 40); }
+.table-result .tr-lowlight { color: rgb(153, 153, 153); background-color: rgb(224, 224, 224); }
+.table-result .td-event .vs { color: inherit; }
+.table-striped tr:nth-child(2n) { background-color: rgb(245, 245, 245); }
+.tbody-striped tr:nth-child(2n) { background-color: rgb(245, 245, 245); }
+.modal-dialog { background: rgb(254, 254, 254) none repeat scroll 0% 0%; }
+.modal-header { color: rgb(255, 255, 255); background-color: rgb(50, 130, 190); }
+.modal-footer { border-color: rgb(204, 204, 204); }
+.header { color: rgb(255, 255, 255); background-color: rgb(70, 70, 70); }
+.header-tab a { background: transparent linear-gradient(to bottom, rgb(82, 155, 209) 0%, rgb(45, 116, 170) 100%) repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.header-tab a:hover { background: transparent linear-gradient(to bottom, rgb(102, 166, 215) 0%, rgb(50, 130, 190) 100%) repeat scroll 0% 0%; }
+.header-tab a.selected { color: rgb(255, 255, 255); background: transparent linear-gradient(to bottom, rgb(142, 198, 240) 0%, rgb(74, 164, 231) 100%) repeat scroll 0% 0%; }
+.header-tab .svg-wrap { fill: rgb(102, 166, 215); }
+.header-tab .svg-border { fill: rgb(102, 166, 215); }
+.header-tab .svg-inner { fill: rgb(255, 255, 255); }
+.header-tab .svg-linear-gradient.top { stop-color: rgb(102, 166, 215); }
+.header-tab .svg-linear-gradient.bottom { stop-color: rgba(102, 166, 215, 0.1); }
+.side { background-color: rgb(241, 241, 241); border-color: rgba(255, 255, 255, 0.5); }
+.article { border-color: rgb(122, 178, 220); background-color: rgb(241, 241, 241); }
+.category-sports, .category-bettype { color: rgb(255, 255, 255); background-color: rgb(29, 75, 109); }
+.category-sports a:hover, .category-sports a.selected, .category-bettype a:hover, .category-bettype a.selected { color: rgb(255, 235, 59); }
+.category-sports { background: transparent linear-gradient(to bottom, rgb(50, 130, 190) 0%, rgb(50, 130, 190) 50%, rgb(47, 122, 178) 51%, rgb(47, 122, 178) 100%) repeat scroll 0% 0%; color: rgb(255, 255, 255); border-color: rgb(23, 61, 89); }
+.category-sports a:hover, .category-sports a.selected { color: rgb(255, 235, 59); }
+.filter { color: rgb(0, 0, 0); }
+.filter a:hover, .filter a.selected { color: rgb(50, 130, 190); }
+.float-box.right a { color: rgb(255, 235, 59); }
+.footer { color: rgb(255, 255, 255); background-color: rgb(70, 70, 70); }
+.side { background-color: rgb(241, 241, 241); }
+.betslip-tabs .selected { border-width: 1px; border-color: rgb(153, 153, 153); }
+.betslip-container { border-width: 1px; border-color: rgb(153, 153, 153); }
+.betslip-container > [class*="-title"] { color: rgb(0, 0, 0); background: transparent linear-gradient(to bottom, rgb(230, 230, 230) 0%, rgb(191, 191, 191) 100%) repeat scroll 0% 0%; }
+.betslip-betting.info dt .icon { color: rgb(153, 153, 153); }
+.betslip-betting.info dt .icon:hover { color: rgb(51, 51, 51); }
+.betslip .underdog { color: rgb(204, 0, 0); }
+.betslip .current { background-color: rgb(255, 255, 255); }
+.betslip .highlight { background-color: rgb(255, 250, 199); }
+.betslip-betting.success { background-color: rgb(232, 255, 199); }
+.betslip-betting.warning { background-color: rgb(255, 250, 199); }
+.betslip .betting-close .betting-close-overlay ~ dl, .betslip .betting-close .betting-close-overlay ~ dl * { color: rgb(153, 153, 153) ! important; background-color: rgb(255, 255, 255) ! important; border-color: rgb(153, 153, 153) ! important; }
+.betslip .betting-close .betting-close-overlay { color: rgb(255, 255, 255); background-color: rgb(153, 153, 153); }
+.betslip .betting-close .betting-close-overlay .icon-close { color: rgb(204, 204, 204); }
+.betslip .betting-close .betting-close-overlay .icon-close:hover { color: currentcolor; }
+.betslip .betting-close .betting-close-overlay::before { border-color: rgb(153, 153, 153); background-color: rgba(0, 0, 0, 0.15); }
+.account-money { color: rgb(0, 0, 0); background-color: transparent; }
+.side-menu ul { border-width: 1px; border-color: rgb(153, 153, 153); }
+.side-menu li { color: rgb(0, 0, 0); border-color: rgb(153, 153, 153); background: transparent none repeat scroll 0% 0%; }
+.side-menu li:hover { color: rgb(0, 0, 0); background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.side-menu strong { font-weight: normal; }
+.side-menu i { margin-right: 8px; }
+.bulletin h3 + div { border-width: 1px; border-color: rgb(153, 153, 153); }
+.bulletin a { color: rgb(255, 235, 59); }
+.bulletin a:hover { color: currentcolor; }
+.match, .all-bets-layout { background-color: rgb(235, 235, 235); border-color: rgb(183, 213, 236); }
+.match-title, .all-bets-layout h1 { background: transparent linear-gradient(to bottom, rgb(102, 166, 215) 0%, rgb(102, 166, 215) 50%, rgb(50, 130, 190) 51%, rgb(50, 130, 190) 100%) repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.match-toolbar { color: rgb(255, 255, 255); border-style: solid; border-width: 2px; border-color: rgb(241, 241, 241); background-color: rgba(45, 116, 170, 0.8); }
+.match-odds-title { background-color: rgb(255, 255, 255); border-color: rgb(222, 222, 222); }
+.match-odds-title .col { color: rgb(255, 255, 255); background-color: rgb(50, 130, 190); border-color: rgb(255, 255, 255); }
+.match-odds-title .cell { border-color: rgb(255, 255, 255); }
+.match-league { background-color: rgb(255, 255, 255); border-color: rgb(222, 222, 222); }
+.match-league h2 { color: rgb(51, 51, 51); background-color: rgb(223, 223, 223); }
+.match-league h2 .icon::before { color: rgb(255, 255, 255); background-color: rgb(153, 153, 153); }
+.match-league h2:hover { background-color: rgb(210, 210, 210); }
+.match-odds-list { background-color: rgb(236, 241, 246); }
+.match-odds-list + .match-odds-list { border-color: rgb(204, 204, 204); }
+.match-odds-list .row { border-color: rgb(204, 204, 204); }
+.match-odds-list .col { border-color: rgb(255, 255, 255); }
+.match-odds-list em { color: rgb(51, 51, 51); }
+.match-odds-list b { color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0.5); border-color: rgb(204, 204, 204); }
+.match-odds-list b:hover, .match-odds-list b.selected { background-color: rgba(255, 255, 0, 0.5); }
+.match-odds-list b.underdog { color: rgb(204, 0, 0); }
+.match-odds-list b.odds-disable { color: rgb(136, 136, 136); }
+.match-odds-list b.odds-disable:hover { background-color: rgba(255, 255, 255, 0.5); }
+.match-odds-list .all-bets b { color: rgb(51, 51, 51); }
+.col.time .live { color: red; }
+.row .col.bettype + .col.bettype { background-color: rgb(194, 229, 255); }
+.match-soccer.in-play .col.time { width: 4.5em; }
+.col.time .scoreboard { border-color: rgb(195, 33, 33); }
+.col.time .scoreboard-title { color: rgb(195, 33, 33); background-color: rgb(255, 255, 255); }
+.col.time .scoreboard-title span { border-color: rgb(195, 33, 33); }
+.col.time .scoreboard-detail { background-color: rgb(255, 254, 254); }
+.match-tennis .col.time .scoreboard { border-color: rgb(195, 33, 33); }
+.match-tennis .col.time .scoreboard-title { color: rgb(195, 33, 33); background-color: rgb(255, 255, 255); }
+.match-tennis .col.time .scoreboard-detail { background-color: rgb(255, 254, 254); }
+.match-tennis .col.time .scoreboard .socre::before { background-color: rgb(204, 204, 204); }
+.match-tennis .col.time .scoreboard .socre.goal::before { background-color: rgb(195, 33, 33); }
+.match-odds-list.match-outright2 { border-color: rgb(204, 204, 204); }
+.match-odds-list.match-outright2 .col:first-child { border-color: rgb(204, 204, 204); }
+.match-odds-list.match-outright2:nth-child(2n) .col { border-color: rgb(204, 204, 204); }
+.all-bets-layout > * { padding: 0px 10px; }
+.all-bets-layout h1 .icon-grid a { border-color: rgba(255, 255, 255, 0.6); }
+.all-bets-layout h1 .icon-grid a:hover { background-color: rgba(0, 0, 0, 0.5); color: rgb(255, 193, 7); }
+.all-bets-layout h1 .icon-grid .icon { color: inherit; }
+.all-bets-layout h1 .icon-grid .icon::before { color: inherit; }
+.all-bets-bettype h3 { color: rgb(255, 255, 255); background: transparent linear-gradient(to bottom, rgb(34, 89, 129) 0%, rgb(23, 61, 89) 100%) repeat scroll 0% 0%; }
+.all-bets-bettype h3 .icon-grid i { color: rgb(153, 153, 153); }
+.all-bets-bettype h3 .icon-grid i:hover, .all-bets-bettype h3 .icon-grid i.selected { color: rgb(255, 235, 59); }
+.all-bets-bettype b { color: rgb(0, 0, 0); }
+.all-bets-bettype b.underdog { color: rgb(204, 0, 0); }
+.all-bets-bettype .list-row .row .cell { border-color: rgb(179, 179, 179); }
+.all-bets-bettype .list-row .row:nth-child(2n) { background-color: rgb(230, 230, 230); }
+.all-bets-bettype .list-col .cell { border-color: rgb(179, 179, 179); }
+.all-bets-bettype .list-col .col:first-child .cell { border-color: rgb(179, 179, 179); }
+.all-bets-bettype .cell:hover, .all-bets-bettype .cell.selected { background-color: rgba(255, 255, 0, 0.5); }
+.all-bets-bettype .cell.title { color: rgb(51, 51, 51); background-color: rgb(179, 179, 179); border-bottom-color: rgb(179, 179, 179) ! important; }
+.all-bets-bettype .cell.title:first-child { border-left-color: rgb(179, 179, 179) ! important; }
+.all-bets-bettype .cell.title:last-child { border-right-color: rgb(179, 179, 179) ! important; }
+.all-bets-bettype .cell.odds-disable > * { color: rgb(136, 136, 136); }
+.all-bets-collection .icon-grid { border-color: rgba(255, 255, 255, 0.5); }
+.all-bets-collection h2 { color: rgb(255, 255, 255); background: transparent linear-gradient(to bottom, rgb(50, 130, 190) 0%, rgb(50, 130, 190) 50%, rgb(45, 116, 170) 51%, rgb(45, 116, 170) 100%) repeat scroll 0% 0%; }
+.all-bets-collection h2 > :last-child { border-right-color: transparent; }
+.all-bets-collection.favorite h2 { color: rgb(255, 255, 255); background: transparent linear-gradient(to bottom, rgb(97, 175, 234) 0%, rgb(97, 175, 234) 50%, rgb(74, 164, 231) 51%, rgb(74, 164, 231) 100%) repeat scroll 0% 0%; }
+.all-bets-collection .no-data { border-color: rgb(204, 204, 204); }
+.all-bets-socreboard .accent { color: rgb(255, 152, 0); }
+.all-bets-socreboard-status ul { color: rgb(238, 238, 238); background: rgb(48, 48, 48) none repeat scroll 0% 0%; }
+.all-bets-socreboard-status .event-time { background: rgb(21, 21, 21) none repeat scroll 0% 0%; }
+.all-bets-socreboard-status .event-time li { color: rgb(153, 153, 153); }
+.all-bets-socreboard-status .socre { color: rgb(255, 152, 0); }
+.all-bets-socreboard-status .red-card { background: rgb(162, 0, 0) none repeat scroll 0% 0%; }
+.all-bets-socreboard-detail ul { color: rgb(153, 153, 153); background: rgb(21, 21, 21) none repeat scroll 0% 0%; }
+.all-bets-socreboard-detail ul + ul { background: rgb(48, 48, 48) none repeat scroll 0% 0%; }
+.all-bets-socreboard-detail li.event { color: rgb(255, 255, 255); }
+.all-bets-socreboard-detail span em { color: rgb(153, 153, 153); }
+.all-bets-socreboard-detail span.score::before { background: rgb(153, 153, 153) none repeat scroll 0% 0%; }
+.all-bets-socreboard-detail span.score.goal::before { background: rgb(255, 152, 0) none repeat scroll 0% 0%; }
+.all-bets-layout [class*="all-bets-sport"] { background-color: rgb(31, 41, 41); }
+.switch-view-tabs li:first-child a { border-top-right-radius: 0px; border-bottom-right-radius: 0px; }
+.switch-view-tabs li + * a { border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-left-width: 1px; }
+.switch-view-tabs li:not(:first-child):not(:last-child) a { border-radius: 0px; border-left-width: 1px; }
+.switch-view-tabs a { display: block; padding: 0px; line-height: 40px; text-align: center; color: rgb(255, 255, 255); font-size: 13px; background-color: rgb(37, 170, 225); border-color: rgb(255, 255, 255); border-width: 0px; border-style: solid; border-radius: 4px; }
+.switch-view-tabs a:hover { background-color: rgb(17, 145, 191); }
+.switch-view-tabs a.selected, .switch-view-tabs a.selected:hover { background-color: rgb(17, 145, 191); cursor: default; }

@@ -1,0 +1,855 @@
+/* Code tidied up by ScrapBook */
+body, div, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section { margin: 0px; padding: 0px; border: 0px none; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, audio, canvas, video, ul, ol, li { display: block; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+pre { white-space: pre-wrap; overflow-wrap: break-word; }
+b, strong { font-weight: bold; }
+abbr[title] { border-bottom: 1px dotted; }
+input, textarea, button, select { margin: 0px; font-size: 100%; line-height: normal; vertical-align: baseline; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+textarea { overflow: auto; }
+table { border-collapse: collapse; border-spacing: 0px; }
+a { text-decoration: none; }
+li { list-style: outside none none; }
+html, body { height: 100%; }
+body { font-size: 75%; line-height: 1.5em; font-family: Arial,Helvetica,PMingLiU,SimSun,sans-serif; background-color: rgb(241, 241, 241); }
+* { box-sizing: border-box; }
+h1 { font-size: 1em; }
+h2 { font-size: 1em; }
+h3 { font-size: 1em; }
+a { color: inherit; }
+@media print {
+  body { visibility: hidden; }
+  .betslip { visibility: visible; }
+}
+.side .btn-toolbar::after, .btn-group::after, .time-range-grid ul::after, .container::after, .betslip-title::after, .betslip-betting.info dt::after, .betslip-betting.simple-money dd::after, .betslip-betting.warning li::after, .match-odds-title .col::after, .match-odds-list .col::after, .match-odds-list .cell-inline::after, .match-league::after, .all-bets-bettype h3::after, .all-bets-bettype .list-col::after, .all-bets-bettype .cell::after, .all-bets-collection h2::after, .all-bets-category ul::after, .number-wheel::after, .number-wheel-system__list::after, .number-wheel__odds-group::after, .number-wheel__header::after, .number-wheel__side::after { content: ""; display: table; clear: both; }
+.betslip-tabs ul, .table-list.result, .table-result .td-event ul, .modal-header, .float-box.right a, .header, .betslip-betting.success dt, .bulletin h3, .match-title, .all-bets-layout h1, .match-toolbar, .match-odds-title, .match-odds-list .row, .match-odds-list .cell li, .all-bets-bettype .list-row .row, .all-bets-socreboard, .all-bets-socreboard-status ul, .all-bets-socreboard-detail div { display: table; width: 100%; }
+.betslip-tabs ul > *, .table-list.result > *, .table-result .td-event ul > *, .modal-header > *, .float-box.right a > *, .header > *, .betslip-betting.success dt > *, .bulletin h3 > *, .match-title > *, .all-bets-layout h1 > *, .match-toolbar > *, .match-odds-title > *, .match-odds-list .row > *, .match-odds-list .cell li > *, .all-bets-bettype .list-row .row > *, .all-bets-socreboard > *, .all-bets-socreboard-status ul > * { display: table-cell; vertical-align: middle; }
+.match-odds-title .cell span, .col.event span { width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.betslip-tabs a, .header-tab a { box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5) inset; }
+.main, .article, .container { display: block; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; }
+[class*="icon-result"], .float-box.right i::before, .account-money .icon-refresh::before, .match-toolbar .icon-refresh::before { color: rgb(255, 255, 255); background: transparent linear-gradient(to bottom, rgb(134, 203, 50) 0%, rgb(93, 142, 35) 100%) repeat scroll 0% 0%; }
+.float-box.right i::before, .account-money .icon-refresh::before, .match-toolbar .icon-refresh::before { border-radius: 100%; }
+.accent { color: red; }
+.is-none { display: none; }
+input[type="text"] { border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204); }
+.last-child-right > :last-child { float: right; }
+.col-1 > * { width: 100% ! important; }
+.col-2 > * { width: 50% ! important; }
+.col-3 > * { width: 33.3333% ! important; }
+.col-4 > * { width: 25% ! important; }
+.col-5 > * { width: 20% ! important; }
+.col-6 > * { width: 16.6667% ! important; }
+.col-7 > * { width: 14.2587% ! important; }
+.col-8 > * { width: 12.5% ! important; }
+.col-9 > * { width: 11.1111% ! important; }
+.col-10 > * { width: 10% ! important; }
+.col-11 > * { width: 9.90909% ! important; }
+.col-12 > * { width: 8.33333% ! important; }
+.col-16 > * { width: 6.25% ! important; }
+.col-15 > * { width: 6.66667% ! important; }
+@font-face {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  src: url("icomoon.eot") format("embedded-opentype"), url("icomoon.ttf") format("truetype"), url("icomoon.woff") format("woff"), url("icomoon.svg") format("svg");
+}
+i, .breadcrumb__item::before { font-family: "icomoon" ! important; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; }
+.icon-group { text-align: right; }
+.icon-group .icon { margin: 1px 2px; cursor: pointer; }
+.icon-grid { display: inline-block; padding: 0px 6px; border-style: solid; border-right-width: 1px; border-left-width: 1px; }
+.icon-grid + .icon-grid { border-left: medium none; }
+.icon-grid .icon { vertical-align: -3px ! important; }
+.icon { display: inline-block; vertical-align: bottom; text-align: center; padding: 1px; font-size: 1rem; line-height: 1; border-radius: 4px; }
+.icon::before { display: inline-block; width: 100%; font-size: inherit; line-height: inherit; }
+.icon + span { display: inline-block; margin-left: 4px; }
+span + .icon { margin-left: 6px; }
+.side-menu .icon { display: inline-block; width: 16px; height: 16px; margin: 0px 6px 0px 2px; vertical-align: top; background-color: transparent; }
+i[class*="icon-sport"]::before { content: ""; display: inline-block; background-image: url("icon-sports.png"); background-size: cover; width: inherit; height: inherit; padding: 0px; }
+.icon-sport1::before { background-position: 0px 0px; }
+.icon-sport2::before { background-position: 0px -20px; }
+.icon-sport5::before { background-position: 0px -40px; }
+.icon-sport6::before { background-position: 0px -60px; }
+.icon-sport8::before { background-position: 0px -80px; }
+.icon-sport9::before { background-position: 0px -100px; }
+.icon-sport18::before { background-position: 0px -120px; }
+.icon-sport99::before { background-position: 0px -140px; }
+.icon-group .icon-favorite { transition: all 0.2s ease 0s; }
+.icon-group .icon-favorite:hover::before, .icon-group .icon-favorite.selected::before { content: ""; }
+.icon-group .icon-favorite:hover { transform: scale(1.4); }
+.icon-group .icon-favorite:active { transform: scale(1); }
+.icon-group .icon-streming { transition: all 0.2s ease 0s; }
+.icon-group .icon-streming:hover { transform: scale(1.4); }
+.icon-group .icon-streming:active { transform: scale(1); }
+.icon-favorite::before { content: ""; }
+.icon-streming::before { content: ""; }
+.icon-money { font-size: 1.5em; vertical-align: -4px; border-radius: 4px; padding: 4px; }
+.icon-money::before { content: ""; }
+.icon-refresh::before { content: ""; }
+.icon-success::before { content: ""; }
+.icon-warning::before { content: ""; }
+.icon-close::before { content: ""; }
+.icon-collapsible-open::before { content: ""; }
+.icon-collapsible-close::before { content: ""; }
+.icon-collapsible-close-up::before { content: ""; }
+.icon-collapsible-show::before { content: ""; }
+.icon-collapsible-hide::before { content: ""; }
+.icon-back::before { content: ""; }
+.icon-gotop::before { content: ""; }
+.icon-caret-down { margin-left: 4px; margin-right: -4px; }
+.icon-caret-down::before { content: ""; }
+.icon-arrow-left::before { content: ""; }
+.icon-arrow-right::before { content: ""; }
+.icon-search::before { content: ""; }
+.icon-popup::before { content: ""; }
+.icon-more-h::before { content: ""; }
+.icon-switch::before { content: ""; }
+.icon-block::before { content: ""; }
+.icon-help::before { content: ""; }
+[class*="icon-result"] { border-radius: 2px; margin: 0px 1px; }
+[class*="icon-result"]::before { content: ""; }
+[class*="icon-result"][class*="first"] { color: rgb(39, 118, 178); }
+[class*="icon-result"][class*="last"] { color: red; }
+[class*="icon-result"][class*="corner"]::before { font-size: 1.1rem; }
+.icon-result_first-goal::before { content: ""; }
+.icon-result_first-goal-1::before { content: ""; }
+.icon-result_first-goal-2::before { content: ""; }
+.icon-result_last-goal::before { content: ""; }
+.icon-result_last-goal-1::before { content: ""; }
+.icon-result_last-goal-2::before { content: ""; }
+.icon-result_first-corner::before { content: ""; }
+.icon-result_first-corner-1::before { content: ""; }
+.icon-result_last-corner::before { content: ""; }
+.icon-result_last-corner-1::before { content: ""; }
+.header-tab li:last-child a { padding: 0px ! important; background: transparent none repeat scroll 0% 0% ! important; border: medium none ! important; line-height: inherit ! important; box-shadow: none ! important; color: inherit ! important; }
+.btn, .betslip-tabs a { display: inline-block; padding: 4px 8px; text-align: center; border-width: 1px; border-style: solid; cursor: pointer; }
+.selected.btn, .betslip-tabs a.selected { cursor: default; }
+.dropdown-toggle.btn, .betslip-tabs a.dropdown-toggle { border-width: 1px; border-style: solid; }
+.btn-toolbar > * .btn.selected, .float-box.right i::before { box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) inset; }
+.btn { position: relative; }
+.btn .tip { position: absolute; right: -12px; top: -12px; z-index: 10; width: 20px; height: 20px; line-height: 18px; padding: 2px; border-radius: 100%; }
+.side .btn-toolbar { display: block; }
+.side .btn-toolbar > * { display: block; float: left; }
+.button-wrap > * { display: inline-block; vertical-align: middle; }
+.button-wrap > span { margin: 0px 4px; }
+.button-wrap .btn-toolbar { width: auto; margin-left: 2px; }
+.button-wrap .btn-toolbar > * { vertical-align: bottom; }
+.button-wrap .btn-toolbar + a { margin-left: 4px; }
+.btn-toolbar { width: 100%; display: inline-table; }
+.btn-toolbar > * { display: table-cell; }
+.btn-toolbar > * .btn { width: 100%; }
+.btn-toolbar > :first-child .btn { border-top-right-radius: 0px; border-bottom-right-radius: 0px; }
+.btn-toolbar > * + * .btn { border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-left-width: 0px; }
+.btn-toolbar > :not(:first-child):not(:last-child) .btn { border-radius: 0px; border-left-width: 0px; }
+.btn-group .btn { width: 100%; }
+.btn-group > * { float: left; }
+.btn-group > * + * { padding-left: 4px; }
+.btn-slim { padding-left: 2px; padding-right: 2px; }
+.btn-full { width: 100%; }
+.btn-small { padding: 4px; }
+.dropdown { display: inline-block; position: relative; }
+.dropdown-menu.show { visibility: visible; opacity: 1; }
+.dropdown-menu { transition: all 0.2s ease 0s; opacity: 0; visibility: hidden; position: absolute; z-index: 99; min-width: 100%; margin-top: -1px; padding: 6px 0px; text-align: left; border-width: 1px; border-style: solid; }
+.dropdown-menu li { display: block; padding: 2px 10px; white-space: nowrap; border-width: 1px; border-style: solid; }
+.dropdown-menu li:hover { cursor: pointer; }
+.time-range-grid ul { margin-top: -1px; background: rgb(217, 217, 217) none repeat scroll 0% 0%; }
+.time-range-grid li { float: left; display: block; position: relative; margin-top: 1px; padding: 4px; text-align: center; background: rgb(242, 242, 242) none repeat scroll 0% 0%; cursor: pointer; }
+.time-range-grid a { display: block; width: 100%; height: 100%; font-weight: normal; }
+.time-range-grid li.selected { background-color: rgb(77, 156, 216); }
+.time-range-grid li.selected a { color: rgb(255, 255, 255); }
+.time-range-grid li::after { content: ""; display: none; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; border-width: 0px; border-style: solid; border-color: rgb(242, 75, 0); }
+.time-range-grid.group-1 li:hover::after { display: block; border-width: 2px; }
+.time-range-grid.group-5 li:hover::after, .time-range-grid.group-5 li:hover + li::after, .time-range-grid.group-5 li:hover + li + li::after, .time-range-grid.group-5 li:hover + li + li + li::after, .time-range-grid.group-5 li:hover + li + li + li + li::after { display: block; border-top-width: 2px; border-bottom-width: 2px; }
+.time-range-grid.group-5 li:hover::after { border-left-width: 2px; }
+.time-range-grid.group-5 li:hover + li + li + li + li::after { border-right-width: 2px; }
+.time-range-grid li.disable a { color: rgb(179, 179, 179); }
+.time-range-grid li.disable:hover, .time-range-grid li.disable:hover a { cursor: default; }
+.time-range-grid.group-5 li.disable:hover::after, .time-range-grid.group-5 li.disable:hover + li::after, .time-range-grid.group-5 li.disable:hover + li + li::after, .time-range-grid.group-5 li.disable:hover + li + li + li::after, .time-range-grid.group-5 li.disable:hover + li + li + li + li::after { display: none; }
+.match-odds-list .cell em.disable, .match-odds-list .cell b.disable, .col.event span.disable, .all-bets-bettype .cell.disable { background: transparent none repeat scroll 0% 0%; border-color: transparent; }
+.match-odds-list .cell em.disable:hover, .match-odds-list .cell b.disable:hover, .col.event span.disable:hover, .all-bets-bettype .cell.disable:hover, .match-odds-list .cell em.disable > :hover, .match-odds-list .cell b.disable > :hover, .col.event span.disable > :hover, .all-bets-bettype .cell.disable > :hover { cursor: default; background: inherit; color: inherit ! important; }
+.match-odds-list .cell em.disable::before, .match-odds-list .cell b.disable::before, .col.event span.disable::before, .all-bets-bettype .cell.disable::before { content: " "; display: inline-block; }
+.btn.disable { background: transparent linear-gradient(to bottom, gray 0%, gray 50%, rgb(102, 102, 102) 51%, rgb(102, 102, 102) 100%) repeat scroll 0% 0%; color: rgb(51, 51, 51) ! important; cursor: default; }
+.btn.disable:hover { background: transparent linear-gradient(to bottom, gray 0%, gray 50%, rgb(102, 102, 102) 51%, rgb(102, 102, 102) 100%) repeat scroll 0% 0%; }
+.float-box.right .btn.disable i::before { color: gray; background: rgb(51, 51, 51) none repeat scroll 0% 0%; }
+.match-toolbar .btn.disable .icon-refresh::before { color: gray; background: rgb(51, 51, 51) none repeat scroll 0% 0%; }
+.match-odds-list .cell b.changed, .all-bets-bettype b.changed { background-color: rgba(255, 147, 159, 0.5); animation: 1s ease 0s alternate none infinite running myfirst; }
+@keyframes myfirst {
+0% { background-color: rgba(255, 147, 159, 0.5); }
+50% { background-color: rgba(255, 147, 159, 0.5); }
+100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+@keyframes myfirst {
+0% { background-color: rgba(255, 147, 159, 0.5); }
+50% { background-color: rgba(255, 147, 159, 0.5); }
+100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+.match-odds-list .cell em.changed, .all-bets-bettype em.changed { background-color: rgba(255, 147, 159, 0.5); animation: 1s ease 0s alternate none infinite running my; }
+@keyframes my {
+0% { background-color: rgba(255, 147, 159, 0.5); }
+50% { background-color: rgba(255, 147, 159, 0.5); }
+100% { background-color: rgba(255, 147, 159, 0); }
+}
+@keyframes my {
+0% { background-color: rgba(255, 147, 159, 0.5); }
+50% { background-color: rgba(255, 147, 159, 0.5); }
+100% { background-color: rgba(255, 147, 159, 0); }
+}
+.betslip-tabs li { width: 50%; vertical-align: bottom; }
+.betslip-tabs li:first-child a { border-top-right-radius: 0px; }
+.betslip-tabs li:last-child a { border-top-left-radius: 0px; }
+.betslip-tabs li a.selected { border-top-left-radius: 4px; border-top-right-radius: 4px; }
+.betslip-tabs li a.selected::before { content: ""; display: block; height: 0.5em; }
+.betslip-tabs a { display: block; padding: 6px 2px; font-weight: bold; border: medium none; border-radius: 2px 2px 0px 0px; }
+.pagination .page { display: inline-block; margin-right: 4px; }
+.pagination .page * { margin: 0px 1px; }
+.category-sports li, .category-bettype li, .filter li { display: inline-block; position: relative; margin-left: 24px; margin-right: -4px; }
+.category-sports li::before, .category-bettype li::before, .filter li::before { content: "|"; position: absolute; left: -24px; width: 24px; text-align: center; }
+.category-sports li:first-child, .category-bettype li:first-child, .filter li:first-child { margin-left: 0px; }
+.category-sports li:first-child::before, .category-bettype li:first-child::before, .filter li:first-child::before { display: none; }
+.category-sports span + span::before, .category-bettype span + span::before, .filter span + span::before { content: "/ "; }
+.category-sports strong, .category-bettype strong, .filter strong { padding-left: 2px; font-weight: normal; }
+.category-sports strong::before, .category-bettype strong::before, .filter strong::before { content: "("; }
+.category-sports strong::after, .category-bettype strong::after, .filter strong::after { content: ")"; }
+.betslip-betting.info, .betslip-betting.info dd.current, .betslip-betting { border-width: 1px; border-style: solid; padding: 4px 6px; }
+.betslip-betting.info dt { background-color: rgb(216, 216, 216); margin: -4px -6px 0px; padding: 0px 4px; }
+.betslip-betting.info dd, .betslip-betting.success dd { padding: 0px; }
+.betslip-container, .account-money, .side-menu ul, .bulletin > div, .promotion div { padding: 3px; }
+.side-menu h3, .bulletin h3, .promotion h3 { padding: 5px 10px; border-top-left-radius: 4px; border-top-right-radius: 4px; }
+.side-menu h3 + .betslip-container, .bulletin h3 + .betslip-container, .promotion h3 + .betslip-container, .side-menu h3 + .account-money, .bulletin h3 + .account-money, .promotion h3 + .account-money, .side-menu h3 + ul, .side-menu .bulletin h3 + ul, .side-menu .promotion h3 + ul, .side-menu .bulletin > h3 + div, .bulletin > h3 + div, .promotion .side-menu h3 + div, .promotion .bulletin h3 + div, .promotion h3 + div { border-top-left-radius: 0px; border-top-right-radius: 0px; }
+.side-menu li { padding: 4px; }
+.table-list.result .col.time { text-align: center; border-style: solid; border-width: 1px 0px 1px 1px; }
+.table-list.result .col.event .td-event span { white-space: normal; }
+.table-list.result + .table-list { border-style: solid; border-top-width: 2px; }
+.table-list.result-detail { min-width: 720px; max-height: 640px; }
+.table-list.result-detail .table + .table { margin-top: 10px; }
+.table-list.result-detail .tr-header td { font-weight: bold; }
+.table-list.result-detail td:first-child, .table-list.result-detail th:first-child { width: auto; text-align: left; white-space: normal; }
+.table-list.result-detail td { width: 8em; white-space: nowrap; }
+.table { width: 100%; border-spacing: 0px; border-collapse: collapse; border-style: solid; border-width: 0px 1px 1px 0px; }
+.table th { padding: 2px 6px; }
+.table td { padding: 4px 6px; }
+.table th, .table td { text-align: center; font-weight: normal; border-style: solid; border-width: 1px 0px 0px 1px; }
+.table thead tr { border-style: solid; border-width: 1px 0px 0px 1px; }
+.table .bold { font-weight: bold; }
+.table .td-group { border-style: solid; border-width: 1px 0px 0px; padding: 6px 0px; }
+.table .td-group:first-child { border-width: 0px; padding-top: 0px; }
+.table .td-group:last-child { padding-bottom: 0px; }
+.table .text-link { font-weight: bold; text-decoration: underline; }
+.table-result th, .table-result td { padding: 6px; }
+.table-result .tr-footer .td-score { font-weight: bold; }
+.table-result .tr-lowlight .td-score { font-weight: normal; }
+.table-result .td-event li { width: 50%; padding: 4px 8px; text-align: center; }
+.table-result .td-event .vs { width: 1em; }
+.table-result .td-bettype { width: 8em; white-space: nowrap; }
+.table-result .td-score { width: 50%; }
+.table-striped tbody + tbody tr:first-child td { border-top-width: 0px; }
+.table-striped th + td, .table-striped td + td { border-left: medium none; }
+.table-list.statement td, .table-list.statement th { text-align: right; }
+.table-list.statement td:first-child, .table-list.statement th:first-child { text-align: left; }
+.table-list.statement tfoot td { font-weight: bold; border-left-width: 0px; }
+.table-list.statement tfoot td:first-child { font-weight: normal; border-left-width: 1px; }
+.table-list.statement .btn { float: right; }
+.table-list.statement .btn + span { float: left; padding: 4px 4px 4px 0px; }
+.table-list.betlist span, .table-list.betlist strong { margin: 0px 2px; }
+.table-list.betlist span { display: block; }
+.table-list.betlist div span { display: inline-block; }
+.table-list.betlist td:first-child, .table-list.betlist th:first-child { width: 4em; }
+.table-list.betlist tfoot td { font-weight: bold; border-left-width: 0px; }
+.table-list.betlist tfoot td:first-child { font-weight: normal; border-left-width: 1px; text-align: right; }
+.table-list.betlist .td-money { width: 8em; }
+.table-list.betlist tbody .td-event { text-align: left; }
+.table-list.betlist tbody .td-date { text-align: left; }
+.table-slim th, .table-slim td { padding-left: 3px; padding-right: 3px; }
+.modal { display: none; position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; width: 100%; height: 100%; padding: 1em; text-align: center; overflow: auto; z-index: 9999; }
+.modal::before { content: ""; display: inline-block; height: 100%; vertical-align: middle; }
+.modal.show { display: block; }
+.modal .overlay { display: block; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; background-color: rgba(0, 0, 0, 0.5); cursor: default; }
+.modal-dialog { display: inline-block; position: relative; min-width: 360px; text-align: left; vertical-align: middle; border-radius: 6px; }
+.modal-body > * { max-height: 400px; margin: 6px; padding: 0px 10px; overflow: auto; }
+.modal-body .message-box { max-width: 360px; padding: 20px; }
+.modal-body .img-box { max-height: none; margin: 0px; padding: 0px; overflow: hidden; line-height: 0; border-radius: 6px; }
+.modal-header, .modal-footer { padding: 10px; width: 100%; }
+.modal-header { border-top-left-radius: inherit; border-top-right-radius: inherit; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; }
+.modal-header h2 { font-size: 1.5em; }
+.modal-header div { text-align: right; }
+.modal-header div:last-child { width: 1px; padding-left: 1em; }
+.modal-header .btn { padding: 2px; border-radius: 100%; }
+.modal-header.inner-center h2 { text-align: center; padding-left: 36px; }
+.modal-footer { border-style: solid; border-top-width: 1px; text-align: center; bottom: 0px; }
+.modal-footer .btn-group { padding-left: 20%; padding-right: 20%; }
+.modal .league-list input { margin-right: 6px; vertical-align: middle; }
+.modal .league-list > div { padding: 6px 6px 6px 0px; }
+.modal .league-list td { vertical-align: top; text-align: left ! important; }
+.side { width: 20em; min-width: 20em; border-style: solid; vertical-align: top; padding: 6px 8px; }
+.side > * { margin-bottom: 10px; }
+.article { width: auto; vertical-align: top; border-style: solid; border-top-width: 1px; }
+.category { min-width: 750px; }
+.category-sports, .category-bettype { padding: 6px 10px; }
+.category-sports:empty::before, .category-bettype:empty::before { content: " "; }
+.category-sports { padding-right: 10px; white-space: nowrap; overflow: hidden; border-style: solid; border-bottom-width: 1px; }
+.category-bettype ul { min-width: 890px; }
+.category-bettype li:last-child { float: right; padding-right: 160px; }
+.category-bettype li:last-child::before { content: ""; }
+.category-bettype span + span::before { content: "& "; }
+.container { padding: 10px; }
+.filter { min-width: 750px; margin-bottom: 10px; }
+.filter li::before { content: ">"; }
+.filter li:first-child { margin-left: 24px; }
+.filter li:first-child::before { display: block; }
+.float-box.right { margin-top: 25px; transition: all 0.3s ease 0s; position: fixed; z-index: 999; right: 20px; }
+.float-box.right li { margin: 8px 0px; }
+.float-box.right li:first-child { margin-top: 0px; }
+.float-box.right a { transition: all 0.3s ease 0s; width: 110px; padding: 4px; text-align: left; }
+.float-box.right i { width: 24px; }
+.float-box.right i::before { display: block; padding: 4px; width: 24px; height: 24px; line-height: 24px; font-size: 24px; text-align: center; }
+.float-box.right span { padding-left: 6px; }
+.float-box + .match, .float-box + .all-bets-layout { margin-right: 130px; }
+html { overflow: hidden; }
+.main { top: 4em; }
+.side { position: absolute; left: 0px; top: 0px; bottom: 0px; overflow: auto; }
+.article { left: 20em; }
+.container { overflow: auto ! important; top: 62px; }
+.footer { position: absolute; bottom: 0px; width: 100%; height: 4em; text-align: center; }
+.side.left { position: absolute; left: auto; right: 0px; }
+.loading { text-align: center; }
+.match-toolbar + .loading { padding-top: 10px; }
+.header { overflow: hidden; position: relative; height: 4em; }
+.header-info { width: 20em; min-width: 20em; }
+.header-info ul { text-align: center; }
+.header-tab { width: auto; vertical-align: bottom; }
+.header-tab ul { width: 85%; min-width: 40em; }
+.header-tab li { float: left; width: 22%; margin-bottom: -3px; padding: 0px 2px; }
+.header-tab li:last-child { width: 12%; padding-left: 10px; }
+.header-tab li:last-child a { display: inline-block; text-align: left; }
+.header-tab li:last-child span { position: relative; top: -1px; }
+.header-tab a { display: block; font-weight: bold; font-size: 1.25em; line-height: 2em; text-align: center; border-top-left-radius: 2px; border-top-right-radius: 2px; }
+.header-tab a.selected { cursor: default; }
+.header-tab .icon-tv { width: 28px; height: 28px; display: inline-block; }
+.header-tab .svg-size { width: 100%; height: 100%; }
+.betslip { border-radius: 4px; }
+.betslip-tabs .selected { border-style: solid; border-bottom-width: 0px ! important; }
+.betslip-container { border-style: solid; border-top-width: 0px ! important; border-top-left-radius: 0px; border-top-right-radius: 0px; }
+.betslip-container span { padding-right: 4px; }
+.betslip-container span:last-child { padding: 0px; }
+.betslip-container span + i { margin-left: 0px; }
+.betslip-container input[type="checkbox"] + span { padding-left: 4px; }
+.betslip-container > [class*="-title"] { padding: 6px 10px; margin: -3px -3px 3px; }
+.betslip-title input[type="checkbox"] { vertical-align: middle; }
+.betslip-title div { float: right; }
+.betslip-title .icon { cursor: pointer; }
+.betslip-title ~ * { margin-top: 4px; }
+.betslip-betting.info dt { position: relative; }
+.betslip-betting.info dt span { display: inline-block; padding-right: 1.5em; }
+.betslip-betting.info dt .icon { position: absolute; right: 4px; margin: 0px; font-size: 1.3em; font-style: normal; line-height: normal; text-align: center; }
+.betslip-betting.info dt .icon:hover { cursor: pointer; }
+.betslip-betting.info dd.current { margin: 4px 0px 0px; border-width: 2px; }
+.betslip .btn { font-weight: bold; }
+.betslip .current { border-width: 2px; }
+.betslip-betting.money input[type="text"] { width: 50%; padding: 2px; margin-bottom: 8px; }
+.betslip-betting.money .is-fold { padding-bottom: 4px; margin-bottom: 4px; border-bottom: 1px solid rgb(204, 204, 204); }
+.betslip-betting.money .is-fold > div { margin-bottom: 4px; margin-top: 4px; }
+.betslip-betting.money .is-fold input[type="text"] { width: 100%; margin-bottom: 0px; }
+.betslip-betting.money .is-fold .icon { float: right; cursor: pointer; }
+.betslip-betting.simple-money input[type="text"] { width: 35%; float: right; padding: 2px; }
+.betslip-betting.success dt { font-weight: bold; }
+.betslip-betting.success dt i { vertical-align: top; width: 18px; padding-right: 6px; }
+.betslip-betting.success dt + dd { padding-left: 24px; }
+.betslip-betting.warning li > * { float: left; }
+.betslip-betting.warning li span { width: 85%; }
+.betslip-betting.group > * { margin-bottom: 0px; padding: 4px 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-width: inherit; }
+.betslip-betting.group > :first-child { border-top-width: 0px; padding-top: 0px; }
+.betslip-betting.group.padding-clear { padding: 0px; }
+.betslip-betting.group.padding-clear > * { padding: 4px 6px; }
+.betslip-betting.group.padding-clear > :first-child { padding-top: 4px; }
+.betslip .betting-close { position: relative; }
+.betslip .betting-close .icon-close { display: none; }
+.betslip .betting-close .betting-close-overlay { padding: 2px 4px 0px; }
+.betslip .betting-close .betting-close-overlay .icon-close { display: block; position: relative; float: right; z-index: 2; }
+.betslip .betting-close .betting-close-overlay .icon-close:hover { cursor: pointer; }
+.betslip .betting-close .betting-close-overlay::before { content: ""; z-index: 1; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; }
+.account-history { margin-bottom: 2px; }
+.account-money { font-weight: bold; margin-bottom: 6px; }
+.account-money ul { display: block; }
+.account-money li { display: inline-block; }
+.account-money li:last-child { text-align: right; padding-left: 5px; }
+.account-money span + span { padding-left: 4px; }
+.account-money a { padding: 2px; }
+.side-menu ul { padding: 0px; border-style: solid; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-width: 0px ! important; }
+.side-menu li { padding: 6px; border-style: solid; border-bottom-width: 1px; cursor: pointer; }
+.side-menu li:last-child { border-bottom-width: 0px; border-bottom-left-radius: inherit; border-bottom-right-radius: inherit; }
+.side-menu strong { font-weight: normal; }
+.side-menu i { margin-right: 8px; }
+.bulletin h3 > :last-child { text-align: right; }
+.bulletin h3 + div { padding: 8px; border-top-width: 0px; border-style: solid; }
+.bulletin a { font-weight: normal; text-decoration: underline; }
+.bulletin .marquee { overflow: hidden; }
+.promotion img { max-width: 223px; margin: -8px -8px -12px; border-bottom-left-radius: inherit; border-bottom-right-radius: inherit; }
+.message-box { padding: 12px; font-weight: bold; text-align: center; }
+.message-box + .btn-group { margin-top: 8px; }
+.switch-view { border-radius: 4px; }
+.switch-view a { width: 100%; text-align: left; font-size: 1.25em; }
+.side-banner img { width: 100%; }
+.match, .all-bets-layout { min-width: 750px; padding-bottom: 10px; border-radius: 16px; border-width: 2px; border-style: solid; }
+.match-title, .all-bets-layout h1 { padding: 3px 14px; border-radius: 14px 14px 0px 0px; }
+.match-title div, .all-bets-layout h1 div { text-align: right; }
+.match-toolbar { margin-bottom: 0px; padding: 4px 6px; border-style: solid; border-width: 2px 2px 0px; }
+.match-toolbar > :last-child { text-align: right; }
+.match-container { padding: 1px 2px 2px; }
+.match-odds-title { margin-bottom: -2px; border-style: solid; border-width: 1px; }
+.match-odds-title .col { border-style: solid; border-left-width: 1px; }
+.match-odds-title .col:first-child { border-left: medium none; }
+.match-odds-title .cell { width: 100%; float: left; border-style: solid; border-left-width: 1px; }
+.match-odds-title .cell:first-child { border-left: medium none; }
+.match-odds-title .cell li { padding: 0px 2px; text-align: center; }
+.match-odds-title .cell span { display: block; }
+.match-odds-title .col.event li { text-align: center; }
+.match-odds-title + .match-league { border-top: medium none; }
+.match-league { border-style: solid; border-left-width: 0px; }
+.match-league + .match-league, .match-league + .match-odds-title { margin-top: 5px; }
+.match-league h2 { padding: 4px 6px; cursor: pointer; }
+.match-league h2 .icon::before { border-radius: 2px; }
+.match-league h2 .icon + span { margin-left: 10px; }
+.match-league h2 span { font-size: 1.1em; }
+.match-league h2 + .odds-title { margin: 0px; padding: 0px; border: medium none; }
+.match-odds-list { position: relative; }
+.match-odds-list + .match-odds-list { border-style: solid; border-top-width: 1px; }
+.match-odds-list .row { border-style: solid; border-top-width: 1px; position: relative; table-layout: fixed; }
+.match-odds-list .row:first-child { border-top: medium none; }
+.match-odds-list .col { height: 100%; padding: 2px; vertical-align: top; border-style: solid; border-left-width: 1px; }
+.match-odds-list .col:first-child { border-left: medium none; }
+.match-odds-list .col.event { font-size: 1.1em; }
+.match-odds-list .cell { display: block; float: left; }
+.match-odds-list .cell li { padding: 1px 2px; }
+.match-odds-list .cell em { padding: 0px 2px; text-align: right; font-style: normal; white-space: nowrap; }
+.match-odds-list .cell b { width: 100%; min-width: 40px; padding: 0px 2px; font-weight: bold; text-align: center; cursor: pointer; border-style: solid; border-width: 0.08333em; border-radius: 4px; }
+.match-odds-list .cell b.odds-disable:hover { cursor: default; }
+.match-odds-list .cell em + b { width: 50%; }
+.match-odds-list .all-bets b { width: 100%; font-weight: normal; }
+.match-odds-list .icon-group { white-space: nowrap; }
+.match-odds-list .cell-inline { width: 100%; }
+.match-odds-list .cell-inline li { float: left; display: block; }
+.match-odds-list .cell-inline b { display: block; }
+.col.time { width: 4em; vertical-align: middle; }
+.col.time ul { display: table; float: none; width: 100%; margin: 0px auto; }
+.col.time li { display: table-cell; text-align: center; }
+.col.time span { display: block; padding: 0px 2px; }
+.col.event { width: auto; }
+.col.event ul { width: 100%; }
+.col.event li { position: relative; table-layout: fixed; }
+.col.event span { width: auto; padding: 0px 2px; border-top: 1px solid transparent; border-bottom: 1px solid transparent; }
+.match-panel { border: 1px solid rgb(204, 204, 204); margin-bottom: -1px; }
+.match-panel__header { padding: 2px 6px; border-bottom: 1px solid rgb(204, 204, 204); background-color: rgb(187, 187, 187); }
+.match-panel__header span { font-size: 1.1em; color: rgb(68, 68, 68); }
+.match-panel__list { display: table; width: 100%; padding: 6px; border-top: 1px solid rgb(204, 204, 204); }
+.match-panel__list:first-of-type { border-top-width: 0px; }
+.match-panel__item { display: table-cell; padding: 0px 6px; border-left: 1px solid rgb(204, 204, 204); }
+.match-panel__item:first-of-type { border-left-width: 0px; padding-left: 0px; }
+.match-panel__item:last-of-type { padding-right: 0px; }
+.match-panel__item-title { display: block; font-weight: bold; }
+.match-panel__item-text { margin-left: 12px; }
+.match-panel__list--text-h-align .match-panel__item { border-left-width: 0px; }
+.match-panel__list--text-h-align .match-panel__item:last-of-type { text-align: right; }
+.match-panel__list--text-h-align .match-panel__item-title { display: inline; }
+.match-panel__list--text-h-align .match-panel__item-text { margin-left: 0px; }
+.match-odds-list .cell.rowspan-2, .match-odds-list .cell.colspan-2 { height: 3.66667em; }
+.match-odds-list .cell[class*="rowspan-"], .match-odds-list .cell[class*="colspan-"] { display: table; table-layout: fixed; }
+.match-odds-list .cell[class*="rowspan-"] li, .match-odds-list .cell[class*="colspan-"] li { display: table-cell; height: 100%; vertical-align: middle; }
+.match-odds-list .cell[class*="rowspan-"] li > *, .match-odds-list .cell[class*="colspan-"] li > * { display: inline-block; }
+.match-container .col.bettype { width: 30%; }
+.match-container .col.bettype .cell.one-x-two { width: 15%; }
+.match-container .col.bettype .cell.handicap { width: 30%; }
+.match-container .col.bettype .cell.over-under { width: 35%; }
+.match-container .col.bettype .cell.odd-even { width: 20%; }
+.match-container .col.bettype .cell.all-bets { width: 100%; }
+.match-container .col.bettype + .col.bettype .cell.one-x-two { width: 18%; }
+.match-container .col.bettype + .col.bettype .cell.handicap { width: 38%; }
+.match-container .col.bettype + .col.bettype .cell.over-under { width: 44%; }
+.match-soccer .col.bettype { width: 41%; }
+.match-soccer .col.bettype .cell.one-x-two { width: 15%; }
+.match-soccer .col.bettype .cell.handicap { width: 30%; }
+.match-soccer .col.bettype .cell.over-under { width: 35%; }
+.match-soccer .col.bettype .cell.odd-even { width: 20%; }
+.match-soccer .col.bettype .cell.all-bets { width: 85%; }
+.match-soccer .col.bettype + .col.bettype { width: 32%; }
+.match-soccer .col.bettype + .col.bettype .cell.one-x-two { width: 18%; }
+.match-soccer .col.bettype + .col.bettype .cell.handicap { width: 38%; }
+.match-soccer .col.bettype + .col.bettype .cell.over-under { width: 44%; }
+.match-soccer.in-play .col.time { width: 4.5em; }
+.col.time .scoreboard { display: block; width: 90%; border-width: 1px; border-style: solid; }
+.col.time .scoreboard-title { display: block; padding: 0px; }
+.col.time .scoreboard-title span { border-width: 0px 0px 1px; border-style: solid; }
+.col.time .scoreboard-detail { display: block; }
+.col.time .scoreboard-detail span { display: inline-block; padding: 0px; }
+.match-tennis.in-play .col.time { width: 7em; }
+.match-tennis .col.time .scoreboard { display: table; }
+.match-tennis .col.time .scoreboard-title { display: table-row; }
+.match-tennis .col.time .scoreboard-title span { display: table-cell; }
+.match-tennis .col.time .scoreboard-detail { display: table-row; }
+.match-tennis .col.time .scoreboard-detail span { display: table-cell; }
+.match-tennis .col.time .scoreboard .socre::before { content: ""; display: inline-block; width: 0.5em; height: 0.5em; border-radius: 0.5em; position: relative; top: -1px; left: 1px; }
+.match-tennis .col.bettype { width: 45%; }
+.match-tennis .col.bettype .cell.one-x-two { width: 22%; }
+.match-tennis .col.bettype .cell.handicap { width: 24%; }
+.match-tennis .col.bettype .cell.over-under { width: 32%; }
+.match-tennis .col.bettype .cell.odd-even { width: 22%; }
+.match-tennis .col.bettype + .col.bettype { width: 15%; }
+.match-tennis .col.bettype + .col.bettype .cell.handicap { width: 100%; }
+.match-correct-score .col.bettype { width: 76.5%; vertical-align: middle; }
+.match-correct-score .col.bettype b { min-width: inherit; }
+.match-correct-score .col.bettype.col-16 > :nth-child(11) { width: 9% ! important; }
+.match-correct-score .col.bettype.col-16 > * { width: 6.06667% ! important; }
+.match-correct-score .col.bettype.col-11 > :nth-child(7) { width: 9% ! important; }
+.match-correct-score .col.bettype.col-11 > * { width: 9.1% ! important; }
+.match-total-goal .col.bettype { width: 40%; vertical-align: middle; }
+.match-halftime-fulltime .col.bettype { width: 60%; vertical-align: middle; }
+.match-league + .match-outright2 { margin-top: 5px; }
+.match-outright2 .col.time { width: 7em; }
+.match-outright2 .col.bettype { width: 10em; }
+.match-outright2 .col.bettype .cell { float: none; }
+.match-odds-title.match-outright2 h2 { font-weight: normal; padding: 2px 6px 2px 2px; }
+.match-odds-title.match-outright2 h2 > :last-child { float: right; }
+.match-odds-list.match-outright2 { float: left; width: 50%; border-top-width: 1px; border-style: solid; }
+.match-odds-list.match-outright2 .col { border-left: medium none; }
+.match-odds-list.match-outright2 .col:first-child { border-left-width: 1px; border-style: solid; }
+.match-odds-list.match-outright2:nth-child(2n) .col { border-left-width: 1px; border-style: solid; }
+.match-basketball.in-play .col.time { width: 6em; }
+.match-basketball .col.bettype { width: 33%; }
+.match-basketball .col.bettype .cell.handicap { width: 35%; }
+.match-basketball .col.bettype .cell.over-under { width: 39%; }
+.match-basketball .col.bettype .cell.odd-even { width: 26%; }
+.match-basketball .col.bettype + .col.bettype { width: 33%; }
+.match-basketball .col.bettype + .col.bettype .cell.handicap { width: 35%; }
+.match-basketball .col.bettype + .col.bettype .cell.over-under { width: 39%; }
+.match-basketball .col.bettype + .col.bettype .cell.odd-even { width: 26%; }
+.match-baseball.in-play .col.time { width: 6em; }
+.match-baseball .col.bettype { width: 36%; }
+.match-baseball .col.bettype .cell.one-x-two { width: 20%; }
+.match-baseball .col.bettype .cell.handicap { width: 38%; }
+.match-baseball .col.bettype .cell.over-under { width: 42%; }
+.match-baseball .col.bettype + .col.bettype { width: 36%; }
+.match-baseball .col.bettype + .col.bettype .cell.one-x-two { width: 20%; }
+.match-baseball .col.bettype + .col.bettype .cell.handicap { width: 38%; }
+.match-baseball .col.bettype + .col.bettype .cell.over-under { width: 42%; }
+.match-other.in-play .col.time { width: 6em; }
+.match-other .col.bettype { width: 45%; }
+.match-other .col.bettype .cell.one-x-two { width: 22%; }
+.match-other .col.bettype .cell.handicap { width: 24%; }
+.match-other .col.bettype .cell.over-under { width: 30%; }
+.match-other .col.bettype .cell.odd-even { width: 24%; }
+.match-cricket.in-play .col.time { width: 6em; }
+.match-cricket .col.bettype { width: 60%; }
+.match-cricket .col.bettype .cell.one-x-two { width: 17%; }
+.match-cricket .col.bettype .cell.one-x-two { width: 17%; }
+.match-cricket .col.bettype .cell.handicap { width: 20%; }
+.match-cricket .col.bettype .cell.over-under { width: 26%; }
+.match-cricket .col.bettype .cell.odd-even { width: 20%; }
+.match-cricket .col.bettype .cell.all-bets { width: 83%; }
+.result .col.time { width: 6em; }
+.result_outright span { display: block; }
+.result_outright .col.time { width: 6em; }
+.result_outright .col.league { width: 32%; }
+.result_outright .col.team { width: 32%; }
+.result_outright .col.winner { width: auto; }
+.all-bets-layout > * { padding: 0px 10px; }
+.all-bets-layout h1 { padding-top: 0px; padding-bottom: 0px; padding-right: 0px; }
+.all-bets-layout h1 > :last-child { border-top-right-radius: inherit; }
+.all-bets-layout h1 > :last-child > :last-child { border-top-right-radius: inherit; }
+.all-bets-layout h1 > :last-child > :last-child a { border-top-right-radius: inherit; }
+.all-bets-layout h1 .icon-grid { padding: 0px; border: medium none; }
+.all-bets-layout h1 .icon-grid a { font-size: 1.2em; display: inline-block; padding: 3px 6px; height: 100%; border-style: solid; border-width: 0px 0px 0px 1px; }
+.all-bets-layout h1 .icon-grid .icon { transform: scale(1); }
+.all-bets-bettype h3 { position: relative; padding: 0px 6px; min-height: 2em; line-height: 2em; font-weight: normal; }
+.all-bets-bettype h3 .icon-grid { float: right; margin-right: -6px; border-right: medium none; }
+.all-bets-bettype h3 .icon-grid i { cursor: pointer; }
+.all-bets-bettype b { display: inline-block; max-width: 4em; font-weight: bold; }
+.all-bets-bettype em { display: inline-block; max-width: 6em; font-style: normal; }
+.all-bets-bettype em + b { margin-left: 0.5em; }
+.all-bets-bettype [class*="list-"] { text-align: right; }
+.all-bets-bettype [class*="list-"] .cell { vertical-align: top; }
+.all-bets-bettype [class*="list-"] .cell > span { text-align: left; }
+.all-bets-bettype [class*="list-"] .cell > span:nth-last-child(2) { max-width: calc(100% - 4em); }
+.all-bets-bettype [class*="list-"] .cell > span:nth-last-child(3) { max-width: calc(100% - 10em - 0.5em); }
+.all-bets-bettype .list-row .row .cell { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; }
+.all-bets-bettype .list-row .row .cell:first-child { border-left-width: 1px; }
+.all-bets-bettype .list-col .col { float: left; }
+.all-bets-bettype .list-col .cell { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; }
+.all-bets-bettype .list-col .col:first-child .cell { border-left-width: 1px; }
+.all-bets-bettype .list-col .col:last-child .cell.title { border-left-width: 1px; }
+.all-bets-bettype .cell { padding: 6px; }
+.all-bets-bettype .cell > :first-child { float: left; }
+.all-bets-bettype .cell:hover, .all-bets-bettype .cell.selected { cursor: pointer; }
+.all-bets-bettype .cell.title { text-align: center; }
+.all-bets-bettype .cell.title > :first-child { float: none; }
+.all-bets-bettype .cell.title:hover { cursor: default; }
+.all-bets-bettype .cell.title > .group { display: block; text-align: left; }
+.all-bets-bettype .cell.title > .group > :last-child { float: right; margin-right: -6px; border: medium none; }
+.all-bets-bettype .cell.title > .collapsible + * { margin: 6px -6px -6px; overflow: hidden; }
+.all-bets-bettype .cell.rowspan-2 { padding-top: 12px; padding-bottom: 12px; line-height: 3em; }
+.all-bets-bettype .cell.rowspan-2::after { border-top: 1px solid transparent; }
+.all-bets-bettype .cell.rowspan-3 { padding-top: 18px; padding-bottom: 18px; line-height: 4.5em; }
+.all-bets-bettype .cell.rowspan-3::after { border-top: 2px solid transparent; }
+.all-bets-bettype .cell.disable:hover { cursor: default; background: inherit; }
+.all-bets-bettype .cell.disable::before { content: " "; display: block; }
+.all-bets-bettype .cell.odds-disable:hover { cursor: default; background: inherit; }
+.all-bets-bettype .cell.align-center { position: relative; text-align: center; }
+.all-bets-bettype .cell.align-center > :first-child { float: none; }
+.all-bets-bettype .cell.align-center b { position: absolute; right: 0px; margin: 4px; }
+.all-bets-bettype .cell.align-center .btn-toolbar { width: 85%; }
+.all-bets-bettype .cell.align-center .dropdown { width: 100%; }
+.all-bets-bettype .cell.align-center .dropdown a { width: 100%; text-align: left; }
+.all-bets-bettype .cell.align-center .dropdown .icon-caret-down { float: right; }
+.all-bets-bettype .col-home { width: 40% ! important; }
+.all-bets-bettype .col-draw { width: 20% ! important; }
+.all-bets-bettype .col-away { width: 40% ! important; }
+.all-bets-bettype .col-other { width: 33.3333%; }
+.all-bets-bettype + .all-bets-bettype { margin-top: 6px; }
+.all-bets-collection .icon-grid { min-width: 34px; }
+.all-bets-collection h2 { font-size: 1.17em; line-height: 2em; font-weight: normal; cursor: pointer; }
+.all-bets-collection h2 > :first-child { border-left: medium none; }
+.all-bets-collection h2 > :last-child { float: right; text-align: center; }
+.all-bets-collection h2 > span { margin-left: 10px; }
+.all-bets-collection + .all-bets-collection { margin-top: 15px; }
+.all-bets-collection.favorite h2 span + .icon-favorite { vertical-align: middle; }
+.all-bets-collection .no-data { padding: 10px; text-align: center; border-style: solid; border-width: 0px 1px 1px; }
+.all-bets-collection .icon-refresh { display: none; }
+.all-bets-category { margin-top: -10px; }
+.all-bets-category ul { margin: 0px -4px; padding: 4px 0px; }
+.all-bets-category ul.col-7 > * { width: 33.3333% ! important; }
+.all-bets-category ul.col-7 > :nth-child(n+4) { width: 25% ! important; }
+.all-bets-category li { float: left; padding: 4px; }
+.all-bets-category .btn { width: 100%; }
+.all-bets-socreboard { height: 160px; margin-bottom: 10px; padding: 10px; font-weight: bold; }
+.all-bets-socreboard-status ul { width: 600px; margin: 0px auto; padding: 16px; font-size: 1.25em; line-height: 1.25em; }
+.all-bets-socreboard-status li { padding: 4px; }
+.all-bets-socreboard-status .home { width: 45%; text-align: right; }
+.all-bets-socreboard-status .home .red-card { float: left; }
+.all-bets-socreboard-status .vs { width: 10%; text-align: center; font-weight: bold; white-space: nowrap; }
+.all-bets-socreboard-status .away { width: 45%; text-align: left; }
+.all-bets-socreboard-status .away .red-card { float: right; }
+.all-bets-socreboard-status .event-time { padding: 0px 4px; }
+.all-bets-socreboard-status .event-time li { font-size: 75%; }
+.all-bets-socreboard-status .event-time li:last-child { text-align: right; }
+.all-bets-socreboard-status em { padding: 0px 10px; font-style: normal; }
+.all-bets-socreboard-status .red-card { padding: 0px 4px; font-weight: normal; }
+.all-bets-socreboard-detail div { width: 600px; margin: 0px auto; }
+.all-bets-socreboard-detail ul { display: table-row; }
+.all-bets-socreboard-detail li { display: table-cell; width: 30px; padding: 4px 8px; text-align: center; white-space: nowrap; }
+.all-bets-socreboard-detail li:first-child { text-align: left; width: auto; }
+.all-bets-socreboard-detail span { display: block; padding: 4px 0px; }
+.all-bets-socreboard-detail span em { padding-left: 8px; font-style: normal; }
+.all-bets-socreboard-detail span.score::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 6px; }
+.all-bets-layout [class*="all-bets-sport"] { background-position: 50% 50%; background-repeat: no-repeat; }
+.all-bets-layout .all-bets-sport1 { background-image: url("field_soccer.jpg"); }
+.all-bets-layout .all-bets-sport2 { background-image: url("field_basketball.jpg"); }
+.all-bets-layout .all-bets-sport5 { background-image: url("field_tennis.jpg"); }
+.all-bets-layout .all-bets-sport6 { background-image: url("field_volleyball.jpg"); }
+.all-bets-layout .all-bets-sport8 { background-image: url("field_baseball.jpg"); }
+.all-bets-layout .all-bets-sport9 { background-image: url("field_badminton.jpg"); }
+.all-bets-layout .all-bets-sport18 { background-image: url("field_table-tennis.jpg"); }
+.all-bets-layout .all-bets-sport99 { background-image: url("field_others.jpg"); }
+.width-half { width: 50%; float: left; }
+.width-full { width: 100%; clear: both; }
+.match-numbergame.in-play .col.bettype { width: 100%; }
+.match-numbergame.in-play .cell { width: 20%; }
+.match-numbergame.in-play .cell.next-combo { width: 40%; }
+.match-numbergame.deadball .col.bettype { width: 85%; }
+.match-numbergame.deadball .col.bettype .cell { width: 14.2857%; }
+.match-numbergame.deadball .cell-icon { text-align: center; }
+.match-numbergame.deadball.match-odds-title { margin-top: 0.25em; }
+.match-numbergame.deadball.match-odds-list .col.event li { height: 44px; }
+.match-numbergame.match-odds-list { border: 1px solid rgb(204, 204, 204); }
+.row-overflow a { display: block; margin: -2px; text-align: center; background-color: rgb(245, 245, 245); cursor: pointer; }
+.row-overflow a:hover { background-color: rgb(255, 255, 255); }
+.row-sub { padding: 0.5em; background-color: rgb(221, 221, 221); }
+.row-sub .number-wheel { width: 75%; }
+.breadcrumb { display: inline-table; }
+.breadcrumb__item { display: table-cell; }
+.breadcrumb__item::before { content: "/"; display: inline-block; margin: 0px 4px; }
+.breadcrumb__item:first-of-type::before { display: none; }
+.breadcrumb__item-arrow::before { content: ""; }
+.match-panel .balls-drawn { margin-left: 12px; }
+.number-wheel { position: relative; margin: 0px auto; background-color: rgb(235, 235, 235); }
+.number-wheel .match-odds-title { border-width: 0px; margin-bottom: 0px; }
+.number-wheel-system { float: left; width: 62%; }
+.number-wheel-system__item { display: block; position: relative; float: left; width: 20%; height: 3em; text-align: center; }
+.number-wheel-system__item::before { content: ""; display: inline-block; height: 100%; vertical-align: middle; }
+.number-wheel-system__item::after { content: ""; display: block; position: absolute; top: -1px; z-index: 1; width: 100%; height: 100%; }
+.number-wheel-system__item:nth-of-type(n+71) { border-bottom: 1px solid rgb(204, 204, 204); }
+.number-wheel-system__item:nth-of-type(5n+1) { border-left: 1px solid rgb(204, 204, 204); }
+.number-wheel-system__item:hover { background-color: rgb(255, 255, 255); }
+.number-wheel-system__item:hover .tooltip-top { visibility: visible; opacity: 1; bottom: 100%; }
+.number-wheel-system__item:hover .number-ball__text { box-shadow: 0px 0px 0px 3px rgb(242, 75, 0); }
+.number-wheel-system .number-ball:hover { cursor: pointer; background-color: rgba(255, 255, 0, 0.5); }
+.btn-icon { display: inline-block; cursor: pointer; }
+.btn-icon[class*="shape-"] > .icon { border-radius: inherit; }
+.shape-circle { border-radius: 100%; }
+.shape-square { border-radius: 0px; }
+.shape-round-corner { border-radius: 4px; }
+.fill-color { color: rgb(255, 255, 255); background-color: rgb(153, 153, 153); }
+.btn-icon:hover .fill-color { background-color: rgb(102, 102, 102); }
+.btn-icon.selected .fill-color { background-color: rgb(102, 102, 102); }
+.btn-icon.selected:hover .fill-color { background-color: rgb(153, 153, 153); }
+.fill-color.icon-streming { color: rgb(255, 255, 255); background-color: rgb(204, 24, 30); }
+.btn-icon:hover .fill-color.icon-streming { background-color: rgb(231, 48, 54); }
+.number-ball { display: inline-block; position: relative; z-index: 2; width: 2.25em; height: 2.25em; line-height: 2.25em; text-align: center; font-weight: bold; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-radius: 100%; box-shadow: 0px 0px 0px 5px rgb(39, 118, 178) inset; }
+.number-ball__text { display: block; width: 100%; height: 100%; border-radius: 100%; box-shadow: 0px 0px transparent; }
+.number-ball::before { content: ""; position: absolute; top: 2px; left: 2px; bottom: 2px; right: 2px; border-radius: 100%; border: 1px solid rgb(255, 255, 255); }
+.number-ball::after { content: ""; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; border-radius: 100%; background: transparent linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 100%) repeat scroll 0% 0%; }
+.number-ball.desable { box-shadow: 0px 0px 0px 5px rgb(204, 204, 204) inset; }
+.number-ball.current { box-shadow: 0px 0px 0px 5px rgb(242, 75, 0) inset; }
+.betslip .number-ball, .betlist .number-ball { margin-right: 4px; }
+.tooltip { visibility: hidden; opacity: 0; position: absolute; z-index: 3; padding: 0.25em 0.5em; color: rgb(255, 255, 255); background-color: rgb(51, 51, 51); border-radius: 4px; }
+.tooltip::after { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; }
+.tooltip-top { left: 50%; bottom: 75%; min-width: 100%; margin-left: -50%; }
+.tooltip-top::after { left: 50%; bottom: -6px; margin-left: -6px; border-width: 6px 6px 0px; border-color: rgb(51, 51, 51) transparent transparent; }
+.tooltip-right { top: 50%; left: 100%; min-width: 100%; margin-top: -1em; white-space: nowrap; }
+.tooltip-right::after { right: 100%; top: 50%; margin-top: -6px; border-width: 6px 6px 6px 0px; border-color: transparent rgb(51, 51, 51) transparent transparent; }
+.number-wheel__odds-group { float: left; }
+.number-wheel__odds { display: block; float: left; width: 20%; height: 3em; text-align: center; border-color: rgb(204, 204, 204); border-style: solid; border-width: 0px 0px 1px 1px; }
+.number-wheel__odds::before { content: ""; display: inline-block; height: 100%; vertical-align: middle; }
+.number-wheel__odds::after { content: ""; display: block; position: absolute; z-index: 1; width: calc(62% / 5 - 0px); height: 100%; background-color: transparent; visibility: hidden; }
+.number-wheel__odds b { display: inline-block; position: relative; top: 1px; width: calc(100% - 1em); font-weight: bold; text-align: center; cursor: pointer; border-style: solid; border-width: 0.1em; border-radius: 4px; color: rgb(204, 0, 0); background-color: rgba(255, 255, 255, 0.5); border-color: rgb(204, 204, 204); box-shadow: 0px 0px transparent; }
+.number-wheel__odds b:hover { background-color: rgba(255, 255, 0, 0.5); }
+.number-wheel__odds:hover { background-color: rgb(255, 255, 255); }
+.number-wheel__odds:hover::after { visibility: visible; background-color: rgb(255, 255, 255); box-shadow: 0px 0px 0px 3px rgb(242, 75, 0) inset; box-sizing: border-box; }
+.number-wheel__odds:hover b { box-shadow: 0px 0px 0px 3px rgb(242, 75, 0); }
+.number-wheel__header { width: 100%; }
+.number-wheel__header .number-wheel__odds { border-top-width: 1px; }
+.number-wheel__header .number-wheel__odds::after { margin-top: 1px; height: calc(100% - 4.5em); }
+.number-wheel__header .number-wheel__odds-group:first-of-type { width: 62%; }
+.number-wheel__header .number-wheel__odds-group:last-of-type { width: 38%; }
+.number-wheel__header .number-wheel__odds-group:last-of-type .number-wheel__odds { width: 100%; border-right-width: 1px; }
+.number-wheel__header .number-wheel__odds-group:last-of-type .number-wheel__odds strong { margin-left: 0.5em; }
+.number-wheel__header .number-wheel__odds-group:last-of-type .number-wheel__odds:hover { background-color: transparent; }
+.number-wheel__header .number-wheel__odds-group:last-of-type .number-wheel__odds:hover::after { display: none; }
+.number-wheel__header .number-wheel__odds-group:last-of-type .number-wheel__odds:hover .odds-btn { border-width: 0.1em; border-color: rgb(204, 204, 204); }
+.number-wheel__side { float: right; width: 38%; }
+.number-wheel__side .number-wheel__odds-group { width: 33.3333%; float: left; }
+.number-wheel__side .number-wheel__odds { float: none; width: 100%; }
+.number-wheel__side .number-wheel__odds::after { left: 0px; margin-top: calc(-3em + 0px); width: calc(100% - 38%); height: 3em; }
+.number-wheel__side .number-wheel__odds-group:first-of-type + .number-wheel__odds-group .number-wheel__odds { height: calc(3em * 3); }
+.number-wheel__side .number-wheel__odds-group:first-of-type + .number-wheel__odds-group .number-wheel__odds::after { margin-top: calc(-3em * 3 - 0px); height: calc(3em * 3); }
+.number-wheel__side .number-wheel__odds-group:last-of-type .number-wheel__odds { height: calc(3em * 5); border-right-width: 1px; }
+.number-wheel__side .number-wheel__odds-group:last-of-type .number-wheel__odds::after { margin-top: calc(-3em * 5 + 0px); height: calc(3em * 5); }
+.match-virtual-sports .match-soccer .col.bettype { width: 50%; }
+.match-bettype.width-half { width: 50%; float: left; clear: none; }
+.match-bettype { border: 1px solid rgb(204, 204, 204); margin-bottom: 6px; clear: both; }
+.match-odds-title .row { border-left-width: 0px; }
+.match-odds-title .row + .row { border-top: 1px solid rgb(255, 255, 255); }
+.match-odds-list .row .col.bettype + .col.bettype { background-color: transparent; }
+.match-racing.match-odds-list .col { vertical-align: middle; }
+.match-racing.match-odds-list .col.number { width: calc(4em + 1px); }
+.match-racing.match-odds-list .col.number > .cell { width: 100%; }
+.match-racing.match-odds-list .col.colours > .cell { width: 100%; }
+.match-racing.match-odds-list .col.colours > .cell li { display: block; }
+.match-racing.match-odds-list .col.colours > .cell img { display: inline-block; }
+.match-racing.match-odds-list .col.draw > .cell { width: 100%; }
+.match-racing .col.number { width: 4em; text-align: center; }
+.match-racing .col.colours { width: 6em; text-align: center; }
+.match-racing .col.horse { width: auto; }
+.match-racing .col.jockey { width: 10em; }
+.match-racing .col.draw { width: 4em; text-align: center; }
+.match-racing .col.bettype { width: 40%; }
+.match-racing .col.bettype > .cell { width: 33.3333%; }
+.match-racing .col.bettype > .cell.draw { text-align: center; }
+.virtual-streaming { display: table; table-layout: fixed; width: 100%; padding: 2px; }
+.virtual-streaming + * { margin-top: 4px; }
+[class*="virtual-streaming-"] { display: table-cell; padding: 6px; vertical-align: top; border: 1px solid rgb(204, 204, 204); }
+[class*="virtual-streaming-"] h2 { border-bottom: 1px solid rgb(204, 204, 204); margin-bottom: 6px; padding-bottom: 6px; }
+.virtual-streaming-list { width: 32%; border-left-width: 0px; }
+.virtual-streaming-list .btn-group > * { float: none; }
+.virtual-streaming-list .btn-group > * + * { padding-left: 0px; margin-top: 6px; }
+.virtual-streaming-list .btn { display: block; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.virtual-streaming-list .btn.highlight { cursor: default; }
+.virtual-streaming-list .btn.highlight:hover { background: transparent linear-gradient(to bottom, rgb(77, 77, 77) 0%, rgb(77, 77, 77) 50%, rgb(51, 51, 51) 51%, rgb(51, 51, 51) 100%) repeat scroll 0% 0%; }
+.virtual-streaming-list .btn.selected { cursor: default; }
+.video-container { background-color: rgb(0, 0, 0); height: 300px; }
+.video-container object { width: 100%; height: 300px; }
+.video-container div { margin: 0px auto; width: 480px; height: 300px; line-height: 300px; text-align: center; color: rgb(204, 204, 204); background-color: rgb(51, 51, 51); }
+.help .header { display: block; padding-left: 1em; height: 5em; line-height: 5em; }
+.help .header h1 { font-size: 2em; }
+.help .header h1 span { font-size: 0.75em; }
+.help .header-tab { display: block; width: 100%; }
+.help .header-tab ul { display: table; table-layout: fixed; width: 100%; }
+.help .header-tab li { display: table-cell; float: none; width: auto; }
+.help .main { top: 5em; }
+.help .side { width: 13em; min-width: 13em; padding: 0px; }
+.help .article { left: 13em; border-top-width: 0px; }
+.help .container { top: 0px; padding: 0px; }
+.help .side-menu { font-size: 14px; }
+.help .side-menu li { padding: 0px; }
+.help .side-menu li.selected, .help .side-menu li.selected:hover { cursor: default; }
+.help .side-menu li:last-child { border-bottom-width: 1px; }
+.help .side-menu a { display: block; padding: 12px; height: 100%; }
+.help .article-format { padding: 1.5em; line-height: 1.5; font-size: 14px; }
+.help .article-format h1 { margin-top: 2.5em; margin-bottom: 0.5em; font-size: 2em; }
+.help .article-format h2 { margin-top: 2.5em; margin-bottom: 0.5em; font-size: 1.5em; }
+.help .article-format h3 { margin-top: 1em; margin-bottom: 0.5em; font-size: 1em; }
+.help .article-format p { margin: 0.5em 0px; }
+.help .article-format blockquote { margin: 1em 0px; padding-left: 2em; }
+.help .article-format table { margin: 1em 0px; }
+.help .article-format small { display: block; font-size: 12px; }
+.help .article-format .section:first-of-type h2 { margin-top: 0px; }
+.sportsbook.width-fixed { position: relative; width: 1000px ! important; height: 100%; }
+.sportsbook.width-fixed .side { width: 18em; min-width: 18em; }
+.sportsbook.width-fixed .article { left: 18em; }
+.sportsbook.width-fixed .header-info { width: 18em; min-width: 18em; }
+.sportsbook.width-fixed .float-box + .match { margin-right: 0px; }
+.sportsbook.width-fixed .match-odds-list em + b { width: 40px; }
+.sportsbook.width-fixed .btn, .sportsbook.width-fixed .dropdown-menu li { padding-left: 6px; padding-right: 6px; }
+.sportsbook.width-fixed .inframe { height: 100%; margin-right: -10px; }
+.sportsbook.width-fixed .category-sports li, .sportsbook.width-fixed .category-bettype li, .sportsbook.width-fixed .filter li { margin-left: 18px; }
+.sportsbook.width-fixed .category-sports li::before, .sportsbook.width-fixed .category-bettype li::before, .sportsbook.width-fixed .filter li::before { left: -18px; width: 18px; }
+.sportsbook.width-fixed .match-soccer .col.bettype { width: 40%; }
+.sportsbook.width-fixed .match-soccer .col.bettype .cell.one-x-two { width: 15%; }
+.sportsbook.width-fixed .match-soccer .col.bettype .cell.handicap { width: 30%; }
+.sportsbook.width-fixed .match-soccer .col.bettype .cell.over-under { width: 35%; }
+.sportsbook.width-fixed .match-soccer .col.bettype .cell.odd-even { width: 20%; }
+.sportsbook.width-fixed .match-soccer .col.bettype .cell.all-bets { width: 85%; }
+.sportsbook.width-fixed .match-soccer .col.bettype + .col.bettype { width: 32%; }
+.sportsbook.width-fixed .match-soccer .col.bettype + .col.bettype .cell.one-x-two { width: 20%; }
+.sportsbook.width-fixed .match-soccer .col.bettype + .col.bettype .cell.handicap { width: 38%; }
+.sportsbook.width-fixed .match-soccer .col.bettype + .col.bettype .cell.over-under { width: 42%; }
+.sportsbook.width-fixed .modal { width: 1000px; }
+.sportsbook.width-fixed ~ div .modal { width: 1000px; }
+@media only screen and (max-width: 1024px) {
+  .help .side { width: 13em; min-width: 13em; }
+  .help .article { left: 13em; }
+}
+@media only screen and (max-width: 1280px) {
+  .category-sports li, .category-bettype li, .filter li { margin-left: 18px; }
+  .category-sports li::before, .category-bettype li::before, .filter li::before { left: -18px; width: 18px; }
+  .btn { padding-left: 6px; padding-right: 6px; }
+  .match-odds-list em + b { width: 40px; }
+  .match-soccer .col.bettype { width: 40%; }
+  .match-soccer .col.bettype .cell.one-x-two { width: 15%; }
+  .match-soccer .col.bettype .cell.handicap { width: 30%; }
+  .match-soccer .col.bettype .cell.over-under { width: 35%; }
+  .match-soccer .col.bettype .cell.odd-even { width: 20%; }
+  .match-soccer .col.bettype .cell.all-bets { width: 85%; }
+  .match-soccer .col.bettype + .col.bettype { width: 32%; }
+  .match-soccer .col.bettype + .col.bettype .cell.one-x-two { width: 20%; }
+  .match-soccer .col.bettype + .col.bettype .cell.handicap { width: 38%; }
+  .match-soccer .col.bettype + .col.bettype .cell.over-under { width: 42%; }
+}
+@media only screen and (max-width: 1040px) {
+  .float-box.right { right: -110px ! important; }
+}
+@media only screen and (max-width: 1024px) {
+  .side { width: 18em; min-width: 18em; }
+  .article { left: 18em; }
+  .header-info { width: 18em; min-width: 18em; }
+  .float-box + .match { margin-right: 0px; }
+  .match-odds-list em + b { width: 40px; }
+}
+@media only screen and (max-height: 768px) {
+  .modal-body > * { max-height: 400px ! important; }
+  .modal-body .img-box { margin: 6px; padding: 0px 10px; overflow-y: auto; }
+}
+@media only screen and (max-height: 500px) {
+  .modal-body > * { max-height: 300px ! important; }
+  .modal-body .img-box { margin: 6px; padding: 0px 10px; overflow-y: auto; }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="">
+<head>
+<meta charset="UTF-8">
+<title>
+	Affiate Main Page
+</title>
+<link type="text/css" href="BlankPage.css" rel="stylesheet">
+ <link rel="stylesheet" href="swiper.min.css">
+    
+
+    <script type="text/javascript" src="../../lib/js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="../../lib/js/jQuery UI.js"></script>
+ <script type="text/javascript" src="../../lib/js/swiper.min.js" ></script> 
+
+
+
+<style type="text/css"> 
+#imagecol { background-image: url("b1.jpg"); background-repeat: no-repeat; }
+#imagemiddle { background-image: url("b2.jpg"); background-repeat: no-repeat; }
+#imagelast { background-image: url("b3.jpg"); background-repeat: no-repeat; }
+.maximageBanner { display: block; }
+#formdiv a:link { color: rgb(255, 255, 255); }
+#formdiv a:visited { color: rgb(255, 255, 255); }
+#formdiv a:hover { color: rgb(255, 255, 255); }
+#formdiv a:active { color: rgb(255, 255, 255); }
+#sidebar { position: fixed; }
+</style>
+
+
+<style type="text/css">
+
+.nav_01 { clear: both; margin-left: 12px; height: 34px; }
+.nav_tit { background-image: url("nav-title.png"); background-repeat: no-repeat; height: 34px; width: 136px; float: left; font-family: Microsoft YaHei,Helvetica,Arial,sans-serif,"??"; font-size: 15px; color: rgb(255, 255, 255); text-align: center; line-height: 37px; }
+.nav_tit_right { color: rgb(0, 0, 0); float: left; font-family: Microsoft YaHei,Helvetica,Arial,sans-serif,"??"; font-size: 15px; height: 31px; line-height: 34px; text-align: center; width: 104px; border-top: 1px solid rgb(208, 206, 206); border-right: 1px solid rgb(208, 206, 206); border-bottom: 1px solid rgb(208, 206, 206); }
+.nav_tit_right a { padding-left: 0px; }
+
+</style>
+
+  
+    <script type="text/javascript">
+        var $jParent = window.parent.jQuery.noConflict();
+        var splashbox = $jParent('#splashbox');
+        splashbox.show(1);
+    </script>
+</head>
+<body class="">
+    <div  id="form1">
+        
+        <div id="formdiv" >            
+            <span id="holder" onclick="window.open('Register.aspx','mainFrame')" style="height: 410px; position: relative; left: 5px; display: block; cursor: pointer;">
+               
+                  
+                        <div class="swiper-container" style="height: 410px; width: 1023px;position:relative;overflow: hidden;">
+   
+
+                            <div class="swiper-wrapper" >
+
+                                <div class="swiper-slide"><img src="banner1.jpg" /></div>
+                                <div class="swiper-slide"><img src="banner4.jpg" /></div>
+                                <div class="swiper-slide"><img src="banner5.jpg" /></div>
+                            
+                            </div>
+                                   
+                            <!-- 分页按钮 -->
+                            
+                        </div>
+   
+            </span>
+          <div class="pagination" style="width:100px;margin:0;position: absolute;top:380px;right:6%;z-index:1;"></div>  
+<script>  
+/*获取轮播图*/ 
+var AjaxURL = " "
+/*$(document).ready(function () {*/
+        
+/*        getswiperpic();
+        
+        function getswiperpic(){
+        $.ajax({
+        dataType:'json',
+        type:'GET',
+        data:{},        
+        url: AjaxURL+'',
+        success:function(data) {
+                //
+        for (var i = 0;i<data.data.length; i++) {
+                                            
+            var swiperpic ='<div class="swiper-slide"><img src="'+data.data[i].imgurl+'"/></div>'
+                
+            $(".swiper-wrapper").append(swiperpic);
+        }
+        
+        }
+        });
+        };                 
+   */
+
+     /*   <!-- 实例化轮播图 -->*/
+  var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay: 2500,//可选选项，自动滑动
+   
+    height: 420,//你的slide高度
+    
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    // 如果需要分页器
+    pagination: '.pagination',
+    paginationClickable :true,
+    grabCursor:true,
+
+        
+  })
+
+/*}); 
+*/ 
+
+  </script>
+
+            
+            <br>
+            <br>
+            <br>
+            <!-- Three Column Content -->
+            <div class="three-cols" style=" overflow: auto; zoom: 1; "><!-- zoom: 1; 是在处理兼容性问题 -->
+                <div class="col" style="float: left;">
+                    <a href="http://www.10010388.com/LM/Register.aspx" target="mainFrame">
+                        <div id="imagecol" class="imgHomeSprites" style="padding-left: 38px;">
+                        </div>
+                    </a>
+                </div>
+                <div class="imgHomeButtonArrow">
+                    <img src="arrow-bottom.jpg" alt="">
+                </div>
+                <div class="middle" style="float: left;">
+                    <a href="http://www.10010388.com/LM/Register.aspx" target="mainFrame">
+                        <div id="imagemiddle" class="imgHomeSprites">
+                        </div>
+                    </a>
+                </div>
+                <div class="imgHomeButtonArrow">
+                    <img src="arrow-bottom.jpg" alt="">
+                </div>
+                <div class="last" style="float:right;">
+                    <a href="http://www.10010388.com/LM/Register.aspx" target="mainFrame">
+                        <div id="imagelast" class="imgHomeSprites">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            &nbsp; 
+        </div>
+
+        <!-- END Three Column Content -->
+    </div>
+
+
+</body>
+</html>

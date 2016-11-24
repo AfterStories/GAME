@@ -1,0 +1,9 @@
+/* Code tidied up by ScrapBook */
+@import url("frameForAll.css");
+.hide_menu, .show_menu { border-color: rgb(155, 167, 173); background-color: rgb(255, 255, 255); }
+.show_menu a, .hide_menu a { color: rgb(225, 234, 242); background-color: rgb(30, 110, 171); background-image: url("mask1.png"); background-repeat: repeat-x; background-position: 0px 0px; text-align: left; }
+.hide_menu a:hover, .show_menu a:hover { color: rgb(33, 32, 33); background-color: rgb(181, 178, 181); background-image: url("mask1.png"); }
+.favoritemenu, .btnTvStreaming, .searchTeam input, .searchTeam .btnSearch, .news { border-color: rgb(155, 167, 173); }
+.favoritemenu, .btnTvStreaming, .news { background-color: rgb(255, 255, 255); }
+.favoritemenu a, .btnTvStreaming a, .searchTeam .btnSearch > div, .news a { color: rgb(212, 225, 236); background-color: rgb(30, 110, 171); background-image: url("mask1.png"); text-align: left; }
+.favoritemenu a:hover, .btnTvStreaming a:hover, .searchTeam .btnSearch > div:hover, .news a:hover { color: rgb(33, 32, 33); background-color: rgb(181, 178, 181); background-image: url("mask1.png"); }

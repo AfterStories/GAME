@@ -16,7 +16,7 @@ select { -moz-appearance: none; border: 1px solid; box-shadow: 0px 1px 3px rgba(
 .lang { display: inline; float: right; position: relative; top: 8px; width: 114px; }
 #arrow { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; vertical-align: middle; width: 0px; top: 13px; float: right; right: 4px; position: absolute; cursor: pointer; }
 #arrow2 { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; position: relative; vertical-align: middle; width: 0px; margin-left: 2px; cursor: pointer; top: 2px; }
-.blackArrow_right { background: transparent url('../images/arrow_allicons.png') no-repeat scroll -107px -23px; width: 26px; height: 31px; display: block; float: right; }
+.blackArrow_right { background: transparent url('../../lib/images/arrow_allicons.png') no-repeat scroll -107px -23px; width: 26px; height: 31px; display: block; float: right; }
 #target a { width: 113px; height: 34px; margin-top: 2px; }
 .field, .password { padding: 4px 5px; border: 1px solid rgb(183, 183, 183); color: rgb(150, 150, 150); height: 18px; }
 input.button { padding: 4px 5px; cursor: pointer; }
@@ -24,7 +24,7 @@ a { color: rgb(78, 80, 80); text-decoration: none; cursor: pointer; }
 a:hover { text-decoration: none; }
 p { padding-bottom: 18px; }
 .cl { font-size: 0px; line-height: 0; clear: both; display: block; height: 0px; }
-#page { width: 960px; margin: 0px auto; vertical-align: top; }
+#page { width: 960px; margin: 0px auto; vertical-align: top;position: relative;top:-40px;}
 .msg_bold { font-weight: bold; }
 .nav_tit { background-color: rgb(37, 170, 225); background-repeat: no-repeat; height: 34px; width: 136px; float: left; font-size: 15px; color: rgb(255, 255, 255); text-align: center; line-height: 37px; }
 
@@ -56,22 +56,22 @@ div#outer_top_header { margin:0 atuo;top: 0px; position: absolute; background-co
 #top_nav_left #topBannerLogo.CN { background: transparent url('../images/fun88_logo_cn.png') no-repeat scroll 0px 6px; }
 #top_nav_left #topBannerLogo { height: 28px; width: 56px; cursor: pointer; display: none; }
 #top_nav_left #topBannerLogoContainer { display: none; }
-#hbtn1 { background: transparent url('../images/allicons.png') no-repeat scroll -2px 2px; width: 28px; height: 33px; }
-#hbtn1:hover { background: transparent url('../images/allicons.png') no-repeat scroll -2px -28px; }
-#hbtn2 {border-left: 1px solid rgb(221, 221, 221);border-right: 1px solid rgb(221, 221, 221); background: transparent url('../images/allicons.png') no-repeat scroll -31px 2px; width: 27px; height: 33px; }
-#hbtn2:hover { background: transparent url('../images/allicons.png') no-repeat scroll -31px -28px; }
+#hbtn1 { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -2px 2px; width: 28px; height: 33px; }
+#hbtn1:hover { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -2px -28px; }
+#hbtn2 {border-left: 1px solid rgb(221, 221, 221);border-right: 1px solid rgb(221, 221, 221); background: transparent url('../../lib/images/allicons.png') no-repeat scroll -31px 2px; width: 27px; height: 33px; }
+#hbtn2:hover { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -31px -28px; }
 #hbtn3{border-right: 1px solid rgb(221, 221, 221);}
-#hbtn3 div { background: transparent url('../images/allicons.png') no-repeat scroll -96px 0px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn3:hover div { background: transparent url('../images/allicons.png') no-repeat scroll -96px -30px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn3 div { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -96px 0px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn3:hover div { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -96px -30px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
 #hbtn4 {border-right: 1px solid rgb(221, 221, 221); background-color: rgb(37, 170, 225); height: 25px; }
 #hbtn4:hover { background-color: rgb(17, 145, 191); height: 25px; }
-#hbtn4 div { background: transparent url('../images/allicons.png') no-repeat scroll -246px 0px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn4:hover div { background: transparent url('../images/allicons.png') no-repeat scroll -246px -30px ! important; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn5 { background: transparent url('../images/allicons.png') no-repeat scroll -393px 2px; width: 25px; height: 33px; }
-#hbtn5:hover { background: transparent url('../images/allicons.png') no-repeat scroll -393px -28px; }
-#hbtn7 div { background: transparent url('../images/allicons.png') no-repeat scroll -157px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn8 div { background: transparent url('../images/allicons.png') no-repeat scroll -125px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#btnRegisterCN { width: 185px ! important; font-size: 17px ! important; background: transparent url('../images/button_pop_up.png') no-repeat scroll 0px 0px; border: 0px none; }
+#hbtn4 div { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -246px 0px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn4:hover div { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -246px -30px ! important; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn5 { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -393px 2px; width: 25px; height: 33px; }
+#hbtn5:hover { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -393px -28px; }
+#hbtn7 div { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -157px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn8 div { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -125px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#btnRegisterCN { width: 185px ! important; font-size: 17px ! important; background: transparent url('../../lib/images/button_pop_up.png') no-repeat scroll 0px 0px; border: 0px none; }
 #btnDepositCN, #btnRegisterCN, #btnRegisterID, #btnRegisterTH, #btnRegisterVN { width: 205px; height: 27px; cursor: pointer; color: rgb(255, 255, 255); font-weight: bold; text-align: center; padding: 8px 0px 0px; z-index: 1001; }
 #btnRegisterCN:hover, #btnRegisterID:hover, #btnRegisterTH:hover, #btnRegisterVN:hover { height: 163px; }
 .btnRegisterAlignmentCN, .btnRegisterAlignmentVN, .btnRegisterAlignmentTH { width: 175px; height: 1px; }
@@ -81,21 +81,21 @@ div#outer_top_header { margin:0 atuo;top: 0px; position: absolute; background-co
 #login .field, #login .password { width: 118px; background: rgb(255, 255, 255) none repeat scroll 0px 0px; color: rgb(50, 51, 51); }
 #login .field:focus, #login .password:focus { border-color: rgb(37, 170, 226); }
 #login .button { float: right; display: inline; width: 107px; height: 36px; font-size: 9pt; font-weight: bold; color: rgb(37, 170, 225); text-indent: 8px; padding-top: 0px; margin-top: -2px; }
-#login .button { background: transparent url('../images/btn_login_.gif') no-repeat scroll 0px 3px; border: 0px none; }
-#login .button:hover { background: transparent url('../images/btn_login_.gif') no-repeat scroll 0px -33px; }
+#login .button { background: transparent url('../../lib/images/btn_login_.gif') no-repeat scroll 0px 3px; border: 0px none; }
+#login .button:hover { background: transparent url('../../lib/images/btn_login_.gif') no-repeat scroll 0px -33px; }
 #logofun88InZh { float: left; display: inline; font-size: 0px; line-height: 0; }
-#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; background-image: url('../images/logo-cn.png'); background-repeat: no-repeat; margin-left: 15px; }
+#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; background-image: url('../../lib/images/logo-cn.png'); background-repeat: no-repeat; margin-left: 15px; }
 #header_right { float: right; display: inline; margin-right: 15px; padding: 10px 0px 0px; }
 #header_right > div { display: block; float: left; }
 #header_right a { display: block; font-size: 15px; }
-#dvMedia01 { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -13px 3px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia01:hover { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -14px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia03 { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -142px 3px; width: 29px; height: 38px; margin-top: 0px; }
-#dvMedia03:hover { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -142px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia04 { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -201px 3px; width: 26px; height: 38px; margin-top: 0px; }
-#dvMedia04:hover { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -201px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia08 { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -420px -1px; width: 37px; height: 38px; margin-top: 0px; margin-right: 7px; }
-#dvMedia08:hover { background: transparent url('../images/footerlogo-combine.jpg') no-repeat scroll -420px -47px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+#dvMedia01 { background: transparent url('../../lib/images/footerlogo-combine.jpg') no-repeat scroll -13px 3px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia01:hover { background: transparent url('../../lib/images/footerlogo-combine.jpg') no-repeat scroll -14px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia03 { background: transparent url('../../lib/images/footerlogo-combine.jpg') no-repeat scroll -142px 3px; width: 29px; height: 38px; margin-top: 0px; }
+#dvMedia03:hover { background: transparent url('../../lib/images/footerlogo-combine.jpg') no-repeat scroll -142px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia04 { background: transparent url('../../lib/images/footerlogo-combine.jpg') no-repeat scroll -201px 3px; width: 26px; height: 38px; margin-top: 0px; }
+#dvMedia04:hover { background: transparent url('../../lib/images/footerlogo-combine.jpg') no-repeat scroll -201px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia08 { background: transparent url('../../lib/images/footerlogo-combine.jpg') no-repeat scroll -420px -1px; width: 37px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia08:hover { background: transparent url('../../lib/images/footerlogo-combine.jpg') no-repeat scroll -420px -47px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
 .media02 { width: 25px; height: 19px; margin-top: -2px; margin-right: 2px; display: block; }
 #footer { float: left; position: relative; z-index: -1; margin-top: 30px; width: 960px; }
 .footer_middle { margin: 0px auto; text-align: center; font-size: 15px; font-weight: bold; color: rgb(37, 170, 225); }
@@ -105,7 +105,6 @@ div#outer_top_header { margin:0 atuo;top: 0px; position: absolute; background-co
 .padding_space { color: rgb(37, 170, 225) ! important; padding-left: 13px; padding-right: 13px; }
 .padding_space2 { padding-left: 6px; padding-right: 6px; }
 .clickable:hover { text-decoration: underline; cursor: pointer; }
-div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); background-repeat: no-repeat; height: 31px; width: 693px; float: left; font-size: 14px; text-align: center; line-height: 34px; color: rgb(120, 120, 120); }
 .logoLoc { float: left; width: 185px; }
 .mediaicon { display: block; height: 38px; }
 #footericon2 { display: block; width: 40px; height: 40px; float: left; margin-left: 10px; }
@@ -124,12 +123,11 @@ div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid
 #line-dialog { display: none; padding: 1px 0px; cursor: pointer; text-align: center; }
 #line-dialog:hover { cursor: pointer; }
 .close-message { display: none; font-size: 8pt; color: gray; text-align: right; margin-right: 3px; }
-.cboxClose { background: transparent url('../images/allicons.png') no-repeat scroll -599px 10px; width: 30px; height: 35px; display: block; }
+.cboxClose { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -599px 10px; width: 30px; height: 35px; display: block; }
 .nav_tit_right.msg_bold > a, .nav_tit.msg_bold > a { color: rgb(255, 255, 255); padding: 0px 5px 5px 17px; }
 
 .nav_tit_right.msg_bold > a, .nav_tit.msg_bold > a { color: rgb(78, 80, 80) ! important; }
 #cboxClose { z-index: 10; margin-right: 9px; margin-top: 24px; }
-#marquee1 { color: rgb(24, 24, 24); float: right; font-size: 12px; height: 34px; text-align: center; width: 680px; margin-top: -29px; margin-left: 350px; margin-bottom: -10px; }
 #SA_Setting { margin-top: -13px; }
 .nav_tit_right { color: rgb(0, 0, 0); float: left; font-size: 15px; height: 31px; line-height: 34px; text-align: center; width: 104px; border: 1px solid rgb(208, 206, 206); }
 #japan_email { display: block; margin-top: -134px; margin-left: 115px; width: 134px; height: 22px; position: absolute; cursor: pointer; }
@@ -155,9 +153,9 @@ div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid
 #navMain td.hovered ul, #navMain td:hover ul, #navMain td.on:hover ul { display: block; }
 #navMain td#Rewards a:hover, #navMain td#LifeStyle a:hover, #navMain td#P2P a:hover, #navMain td#StarCasino a:hover { background: transparent none repeat scroll 0% 0%; border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin-top: -3px; margin-right: auto; margin-left: auto; }
 #navMain td a.cssSelectedHomeMenu { border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin-top: -3px; }
-#navMain td a.MenuImageHome { background: transparent url('../images/allicons.png') no-repeat scroll -456px -29px; margin-left: auto; margin-right: auto; width: 28px; height: 32px; }
+#navMain td a.MenuImageHome { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -456px -29px; margin-left: auto; margin-right: auto; width: 28px; height: 32px; }
 #navMain td a.MenuImageHome:hover { border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin: -3px 0px 1px; }
-#navMain td a.MenuImageMobile { background: transparent url('../images/allicons.png') no-repeat scroll -486px -27px; margin-left: auto; margin-right: auto; width: 28px; height: 30px; }
+#navMain td a.MenuImageMobile { background: transparent url('../../lib/images/allicons.png') no-repeat scroll -486px -27px; margin-left: auto; margin-right: auto; width: 28px; height: 30px; }
 #navMain td a.cssSelectedHomeMenu:hover, #navMain td a:hover, #navMain td:hover a { background-color: rgb(255, 255, 255); border-width: 3px 1px 1px; border-style: solid; border-color: rgb(37, 170, 225) rgb(229, 228, 228) rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin: -3px -1px -1px; }
 .dropdown dd { position: relative; z-index: 99999; }
 .dropdown a { text-decoration: none; outline: 0px none; display: block; width: 92px; height: 18px; overflow: hidden; z-index: 9999; float: right; top: -10px; }
@@ -165,7 +163,7 @@ div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid
 .dropdown dt a { background: transparent none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 92px; height: 18px; padding: 0px; }
 .dropdown dd ul { width:114px;left:-1px;background-color: rgb(17, 145, 191); color: rgb(255, 255, 255); display: none; list-style: outside none none; position: absolute; z-index: 99999; border-left: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); margin: 32px 17px 0px 0px; padding: 0px; }
 .dropdown dd ul li a { width: 92px; height: 18px;}
-.dropdown dd ul li a span, .dropdown dt a span { float: left; width: 92px; height: 18px; background-image: url('../images/flagcombine_.png'); background-repeat: no-repeat; cursor: pointer; margin: 8px 0px 0px 10px; }
+.dropdown dd ul li a span, .dropdown dt a span { float: left; width: 92px; height: 18px; background-image: url('../../lib/images/flagcombine_.png'); background-repeat: no-repeat; cursor: pointer; margin: 8px 0px 0px 10px; }
 #dd1 ul li:hover { background: rgb(17, 145, 191) none repeat scroll 0% 0%; height: 36px; }
 
 
@@ -175,7 +173,7 @@ div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid
 .spnTitle { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); }
 .spnTitleSecurity { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); }
 .divSprite { border: 0px dotted red; text-align: center; width: 100%; height: 83%; margin-right: 20%; margin-left: 13%; }
-.FooterSprite { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 64px; height: 40px; background: transparent url('../images/footerlogo-list.jpg') no-repeat scroll 0% 0%; }
+.FooterSprite { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 64px; height: 40px; background: transparent url('../../lib/images/footerlogo-list.jpg') no-repeat scroll 0% 0%; }
 .FooterSprite:hover { cursor: default; }
 #divLicense { position: relative; left: 7px; }
 #imgLicenses1 { width: 40px; background-position: -116px -2px; }
@@ -224,7 +222,7 @@ div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid
 #cboxPrevious:hover { background-position: -75px -25px; }
 #cboxNext { position: absolute; bottom: 0px; left: 27px; background: transparent url('../images/controls.png') no-repeat scroll -50px 0px; width: 25px; height: 25px; text-indent: -9999px; }
 #cboxNext:hover { background-position: -50px -25px; }
-#cboxLoadingGraphic { background: transparent url('../images/loading_001.gif') no-repeat scroll center center; }
+#cboxLoadingGraphic { background: transparent url('../lib/images/loading_001.gif') no-repeat scroll center center; }
 #cboxClose { position: absolute; top: 9px; bottom: 0px; border: 0px none; right: 18px; background: transparent url('../images/controls.png') no-repeat scroll -25px 0px; width: 25px; height: 25px; text-indent: -9999px; display: block; filter: none; text-decoration: none; }
 #cboxClose:hover { background-position: -25px -25px; }
 #PL_notification_box { width: 364px; height: 211px; background-image: url('../images/bg_dialogbox.png'); margin: 0px auto; padding-top: 5px; background-repeat: no-repeat; border-radius: 4px; }
@@ -255,7 +253,7 @@ div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid
 #slotLeaderboard_body { background-color: white; border: 1px solid rgb(69, 170, 226); border-radius: 10px; height: 600px; width: 800px; z-index: 9999; }
 #slotLeaderboard_html { margin: 75px 50px 15px; }
 #slotLeaderboard_nav { position: absolute; height: 75px; margin-left: 50px; z-index: 9999; max-width: 800px; }
-#slotLeaderboard_close { width: 25px; height: 25px; top: 18px; right: 18px; position: absolute; cursor: pointer; background: transparent url('../images/allicons.png') no-repeat scroll -641px -5px; }
+#slotLeaderboard_close { width: 25px; height: 25px; top: 18px; right: 18px; position: absolute; cursor: pointer; background: transparent url('../../lib/images/allicons.png') no-repeat scroll -641px -5px; }
 #slotLeaderboard_nav_weekly { border: 1px solid rgb(69, 170, 226); float: left; color: rgb(69, 170, 226); }
 #slotLeaderboard_nav_weekly select { color: rgb(69, 170, 226); }
 #slotLeaderboard_nav_monthly { border: 1px solid grey; margin-left: 15px; float: right; }
@@ -270,22 +268,22 @@ div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid
 #leaderboard_msg { margin-top: 15px; display: inline-block; width: 700px; font-size: 16px; text-align: center; color: rgb(69, 170, 226); font-weight: bold; }
 .comingSoon { text-align: center; font-size: 26px; line-height: 250px; color: rgb(69, 170, 226); }
 #banner_img { float: right; height: 85px; width: 310px; background-image: url('../images/fun88-leaderboard-banner-img.png'); }
-.quickcontactbtn1 { background: transparent url('../images/button-chat.png') no-repeat scroll 0% 0%; }
-.quickcontactbtn1:hover { background: transparent url('../images/button-chat-r.png') no-repeat scroll 0% 0%; }
-.quickcontactbtn2 { background: transparent url('../images/button-download.png') no-repeat scroll 0% 0%; }
-.quickcontactbtn2:hover { background: transparent url('../images/button-download-r.png') no-repeat scroll 0% 0%; }
+.quickcontactbtn1 { background: transparent url('../../lib/images/button-chat.png') no-repeat scroll 0% 0%; }
+.quickcontactbtn1:hover { background: transparent url('../../lib/images/button-chat-r.png') no-repeat scroll 0% 0%; }
+.quickcontactbtn2 { background: transparent url('../../lib/images/button-download.png') no-repeat scroll 0% 0%; }
+.quickcontactbtn2:hover { background: transparent url('../../lib/images/button-download-r.png') no-repeat scroll 0% 0%; }
 .quickcontactbtn { width: 135px; height: 32px; margin: auto; padding-bottom: 4px; }
 .quickcontacttext { font-size: 12px; text-align: center; }
 .quickcontactemailtext { font-size: 12px; text-align: center; }
 .quickcontactemailtext:hover { color: rgb(37, 170, 225); }
-#fun88APK_Container { display: none; height: 403px; background: transparent url('../images/fun88-apk-main.png') no-repeat scroll 0% 0%; }
+#fun88APK_Container { display: none; height: 403px; background: transparent url('../../lib/images/fun88-apk-main.png') no-repeat scroll 0% 0%; }
  
 .fun88APK_OpenMenu_zh { background: transparent url('../images/fun88-apk-sprite.png') no-repeat scroll 0px 0px; }
 .button_layout { height: 41px; width: 145px; display: block; }
 .button_layout_WC_ALI { height: 41px; width: 135px; display: block; }
 #quickMenu { position: fixed; bottom: 0%; z-index: 9999999999999; right: 8%; }
-#quickContact_OpenMenu { background-image: url('../images/button-a.png'); float: right; }
-#quickContactContainer { height: 405px; background: transparent url('../images/button-b.png') no-repeat scroll 0% 0%; }
+#quickContact_OpenMenu { background-image: url('../../lib/images/button-a.png'); float: right; }
+#quickContactContainer { height: 405px; background: transparent url('../../lib/images/button-b.png') no-repeat scroll 0% 0%; }
     #PTButton {
         background-image: url("../images/DL1.png");
     }
@@ -295,16 +293,16 @@ div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid
     }
 
 
-.WCP_OpenMenu { display: block; height: 41px; background: transparent url('../images/wcali_off.png') no-repeat scroll 0% 0%; }
-#WCP_Container { display: none; height: 95px; background: transparent url('../images/wcali_on.png') no-repeat scroll 0% 0%; }
-#WC_Container { display: none; height: 108px; background: transparent url('../images/wechatpay_on.png') no-repeat scroll 0% 0%; }
-#BtnWCOpen { background: transparent url('../images/wechatpay.png') no-repeat scroll 0% 0%; }
-#BtnWCOpen:hover { background: transparent url('../images/wechatpay_hover.png') no-repeat scroll 0% 0%; }
-#BtnWCSubmit { background: transparent url('../images/wechat_button.png') no-repeat scroll 0% 0%; }
-#Ali_Container { display: none; height: 106px; background: transparent url('../images/alipay_on.png') no-repeat scroll 0% 0%; }
-#BtnAliOpen { background: transparent url('../images/alipay.png') no-repeat scroll 0% 0%; }
-#BtnAliOpen:hover { background: transparent url('../images/alipay_hover.png') no-repeat scroll 0% 0%; }
-#BtnAliSubmit { background: transparent url('../images/ali_button.png') no-repeat scroll 0% 0%; }
+.WCP_OpenMenu { display: block; height: 41px; background: transparent url('../../lib/images/wcali_off.png') no-repeat scroll 0% 0%; }
+#WCP_Container { display: none; height: 95px; background: transparent url('../../lib/images/wcali_on.png') no-repeat scroll 0% 0%; }
+#WC_Container { display: none; height: 108px; background: transparent url('../../lib/images/wechatpay_on.png') no-repeat scroll 0% 0%; }
+#BtnWCOpen { background: transparent url('../../lib/images/wechatpay.png') no-repeat scroll 0% 0%; }
+#BtnWCOpen:hover { background: transparent url('../../lib/images/wechatpay_hover.png') no-repeat scroll 0% 0%; }
+#BtnWCSubmit { background: transparent url('../../lib/images/wechat_button.png') no-repeat scroll 0% 0%; }
+#Ali_Container { display: none; height: 106px; background: transparent url('../../lib/images/alipay_on.png') no-repeat scroll 0% 0%; }
+#BtnAliOpen { background: transparent url('../../lib/images/alipay.png') no-repeat scroll 0% 0%; }
+#BtnAliOpen:hover { background: transparent url('../../lib/images/alipay_hover.png') no-repeat scroll 0% 0%; }
+#BtnAliSubmit { background: transparent url('../../lib/images/ali_button.png') no-repeat scroll 0% 0%; }
 .hidVal, .hidBankCode { display: none; }
 .RewardLvlTooltip::after, .RewardLvlTooltip::before { bottom: 100%; left: 50%; border: 1px solid rgb(0, 0, 0); content: " "; height: 0px; width: 0px; position: absolute; pointer-events: none; }
 .RewardLvlTooltip::after { border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgb(255, 255, 255); border-width: 6px; margin-left: -6px; }
@@ -332,8 +330,8 @@ p { margin-bottom: 20px; }
 #newnavDiv { margin: 0px auto; width: 1067px; position: relative; }
 #cursorDiv { margin-top: -505px; position: absolute; }
 #cursorDiv .prev, #cursorDiv .next { z-index: 99; cursor: pointer; }
-#cursorDiv .prev { background: transparent url('../images/arrow_allicons.png') no-repeat scroll -4px -2px; width: 54px; height: 75px; display: block; float: left; }
-#cursorDiv .next { margin-left: 1017px; background: transparent url('../images/arrow_allicons.png') no-repeat scroll -4px -86px; width: 54px; height: 75px; display: block; }
+#cursorDiv .prev { background: transparent url('../../lib/images/arrow_allicons.png') no-repeat scroll -4px -2px; width: 54px; height: 75px; display: block; float: left; }
+#cursorDiv .next { margin-left: 1017px; background: transparent url('../../lib/images/arrow_allicons.png') no-repeat scroll -4px -86px; width: 54px; height: 75px; display: block; }
 .topBigBanner { background-position: 0px 83px; }
 .topBigBanner:hover { background-position: 0px 0px ! important; height: 305px ! important; margin-top: -226px; z-index: 5000; }
 .miniBanner1:hover { background-position: 0px -181px ! important; }
@@ -354,7 +352,7 @@ html, body {
     z-index: 9999;
     position: relative;
     text-align: center;
-    top:146px;
+    top:102px;
 }
 .swiper-container img{
 	max-width: 100%;
@@ -377,7 +375,7 @@ html, body {
 }
 
 /* 顶部滚动广告 */
-	#marquee1{ width: 680px; height: 34px; position: relative; margin:2px auto;overflow: hidden;z-index: 1}
+	#marquee1{ width: 680px; height: 34px; position: relative; top:-12px;margin:2px auto;overflow: hidden;z-index: 1}
 	#marquee1 ul { width: 680px; height: 34px; position: relative; }
 	#marquee1 ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
 	#marquee1 ul li a { text-decoration:none; height: 34px;}

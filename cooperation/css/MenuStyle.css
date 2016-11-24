@@ -1,0 +1,272 @@
+﻿/* Main Layer Fitter */
+#navigation {
+    width: 100%;
+    margin-top: 0;
+}
+
+/* Float Layer relative to Main Layer */
+#navMain2 {
+    width: auto;
+    z-index: 99;
+    position: relative;
+    height: 43px;
+    text-align: justify;
+    padding: 0;
+    /*font-family:HiraginoSansGB3, Helvetica, Arial, Sans-Serif, 宋体;*/
+    font-size: 12px; /* font-size 13px*/
+}
+
+    #navMain2 .menuInEN {
+        font-size: 13px;
+        text-align: center;
+        margin-left: 3px !important;
+        margin-right: 3px !important;
+        line-height: 1.5em;
+    }
+
+    #navMain2 .menuInCS {
+        font-size: 15px;
+        text-align: center;
+        margin-left: 9px !important;
+        margin-right: 9px !important;
+        line-height: 1.4em;
+    }
+
+    #navMain2 .menuInID {
+        font-size: 13px;
+        text-align: center;
+        margin-left: 1px !important;
+        margin-right: 2px !important;
+        line-height: 1.5em;
+    }
+
+    #navMain2 .menuInVI {
+        font-size: 9px;
+        text-align: center;
+        margin-left: 1px !important;
+        margin-right: 2px !important;
+        line-height: 1.8em;
+    }
+
+    #navMain2 .menuInTH {
+        font-size: 15px;
+        text-align: center;
+        margin-left: 3px !important;
+        margin-right: 3px !important;
+        line-height: 1.5em;
+    }
+
+    #navMain2 .menuInKO {
+        font-size: 15px;
+        text-align: center;
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+        line-height: 1.5em;
+    }
+
+    #navMain2 .menuInJA {
+        font-size: 14px;
+        text-align: center;
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+        line-height: 1.5em;
+    }
+
+    #navMain2 li.on ul, #navMain2 li.off ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    #navMain2 a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    #navMain2 li a.cssSelectedMenu {
+        font-weight: 700;
+        text-decoration: none;
+        display: block;
+        border-top: 3px solid #25AAE1;
+        margin: -3px 0 0;
+        padding: 7px;
+    }
+
+    #navMain2 li {
+        float: left;
+        display: block;
+        white-space: nowrap;
+        z-index: 200;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+        #navMain2 li ul {
+            display: none;
+        }
+
+        #navMain2 li a {
+            color: #25AAE1;
+            /*font-weight: 700;*/
+            display: block;
+            z-index: 300;
+            position: relative;
+            padding: 6px;
+            padding-left: auto;
+            padding-right: auto;
+        }
+        /**/
+        #navMain2 li ul li {
+            clear: both;
+            width: 150px;
+        }
+
+        /* Submenu 
+#navMain2 li.off ul,#navMain2 li.on ul
+{position:absolute;top:32px;padding-top:5px;border:1px solid #e5e4e4;padding-bottom:5px;font-size:12px;color:Gray;
+ z-index:400;background-color:#fff;margin-left:-1px;
+font-family:HiraginoSansGB3, Helvetica, Arial, Sans-Serif, 宋体;font-weight:400;}
+*/
+        #navMain2 li.off ul, #navMain2 li.on ul {
+            position: absolute;
+            top: 32px;
+            padding-top: 5px;
+            /*font-family:HiraginoSansGB3,Helvetica,Arial,Sans-Serif;*/
+            font-weight: 400;
+            border: 1px solid #e5e4e4;
+            padding-bottom: 5px;
+            font-size: 12px;
+            color: gray;
+            z-index: 500;
+            background-color: #fff;
+            margin-left: -1px;
+            *width: 220px;
+        }
+
+
+            /*sub menu hover*/
+            #navMain2 li.on ul li a:hover, #navMain2 li.off ul li a:hover {
+                color: #25AAE1;
+                text-decoration: underline;
+            }
+
+            #navMain2 li.on ul li, #navMain2 li.off ul li {
+                display: table;
+                margin-top: -5px;
+            }
+
+        #navMain2 li.on a {
+            color: #fff;
+            background: #25AAE1;
+        }
+        /*#navMain2 li.menuSeperator{padding-right:8px;padding-left:8px} removed padding in seperator */
+        #navMain2 li.on ul a, #navMain2 li.off ul a {
+            float: left;
+            border: 0;
+            color: Gray;
+            margin: 1px;
+        }
+
+        #navMain2 li:hover ul, #navMain2 li.on:hover ul {
+            display: block;
+        }
+
+        /* Menu thats doesn't have child/submenu */
+        #navMain2 li#NoSubMenu1 a:hover,
+        #navMain2 li#NoSubMenu2 a:hover,
+        #navMain2 li#NoSubMenu3 a:hover,
+        #navMain2 li#NoSubMenu4 a:hover,
+        #navMain2 li#NoSubMenu5 a:hover,
+        #navMain2 li#NoSubMenu6 a:hover,
+        #navMain2 li#NoSubMenu7 a:hover,
+        #navMain2 li#NoSubMenu8 a:hover,
+        #navMain2 li#NoSubMenu9 a:hover,
+        #navMain2 li#NoSubMenu10 a:hover,
+        #navMain2 li#NoSubMenu11 a:hover,
+        #navMain2 li#NoSubMenu12 a:hover,
+        #navMain2 li#NoSubMenu13 a:hover,
+        #navMain2 li#NoSubMenu14 a:hover,
+        #navMain2 li#NoSubMenu15 a:hover,
+        #navMain2 li#NoSubMenu16 a:hover,
+        #navMain2 li#NoSubMenu17 a:hover,
+        #navMain2 li#NoSubMenu18 a:hover,
+        #navMain2 li#NoSubMenu19 a:hover,
+        #navMain2 li#NoSubMenu20 a:hover,
+        #navMain2 li#NoSubMenu21 a:hover,
+        #navMain2 li#NoSubMenu22 a:hover,
+        #navMain2 li#NoSubMenu23 a:hover,
+        #navMain2 li#NoSubMenu24 a:hover,
+        #navMain2 li#NoSubMenu25 a:hover,
+        #navMain2 li#NoSubMenu26 a:hover,
+        #navMain2 li#NoSubMenu27 a:hover,
+        #navMain2 li#NoSubMenu28 a:hover,
+        #navMain2 li#NoSubMenu29 a:hover,
+        #navMain2 li#NoSubMenu30 a:hover {
+            background: none;
+            /*border:1px solid #e5e4e4;*/
+            border: 0;
+            border-top: 3px solid #25AAE1;
+            margin-top: -3px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        /* Hover on main menu */
+        #navMain2 li a:hover,
+        #navMain2 li:hover a {
+            background: #fff;
+            border: 1px solid #e5e4e4;
+            border-top: 3px solid #25AAE1;
+            border-bottom: 1px solid #fff;
+            margin: -3px -1px -1px;
+        }
+
+        #navMain2 li a.cssSelectedHomeMenu {
+            width: 14px;
+            height: 16px;
+            background-image: url(../images/nav-home_All.png);
+            background-repeat: no-repeat;
+            background-position: -18px 0;
+            margin-left: auto;
+            margin-right: auto;
+            border: 0;
+            border-top: 3px solid #25AAE1;
+            margin-top: -3px;
+        }
+
+        #navMain2 li a.MenuImageHome {
+            background-image: url(../images/nav-home_All.png);
+            background-repeat: no-repeat;
+            background-position: -18px 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 14px;
+            height: 16px;
+        }
+
+            #navMain2 li a.MenuImageHome:hover {
+                border: 0;
+                border-top: 3px solid #25AAE1;
+                margin-top: -3px;
+            }
+
+/* Language selector 
+.dropdown dd{position:relative;z-index:99999}
+.dropdown a{text-decoration:none;outline:0;font:12px Arial, Helvetica, sans-serif;display:block;width:92px;height:18px;overflow:hidden;z-index:9999;float:right;top:-10px}
+.dropdown dt{background:#FF0;margin:-10px 0 0}
+.dropdown dt a{background:transparent;color:#fff;width:92px;height:18px;padding:0}
+.dropdown dt a.active{background:#FFF;width:92px;height:18px;color:#fff}
+.dropdown dd ul{background-color:#FFF;color:#C5C0B0;display:none;list-style:none outside none;position:absolute;z-index:99999;border-left:1px solid #DDD;border-bottom:1px solid #DDD;border-right:1px solid #DDD;margin:26px 17px 0 0;padding:0}
+.dropdown dd ul li a{width:92px;height:18px;padding:2px 0 0}
+.dropdown dd ul li a span,.dropdown dt a span{float:left;width:92px;height:18px;background-image:url(../images/languageselector/flagcombine.png);background-repeat:no-repeat;cursor:pointer;margin:8px 0 0 6px}
+#dd1 ul li:hover{background:#25aae1}
+.dropdown dd ul li{padding-top:7px}
+.vi-VN a span{background-position:-368px 0}
+.th-TH a span{background-position:-276px 0}
+.id-ID a span{background-position:-184px 0}
+.en-US a span{background-position:-92px 0}
+.zh-CN a span{background-position:0 0}
+.dropdown dd ul li a em,.dropdown dt a em{font-style:normal;float:left;cursor:pointer}
+.dropdown dd ul li a em{color:#dbc3b5}
+.dropdown dd ul li a:hover{background-color:rgba(255,255,255,.1)}
+.dropdown dd ul li a:hover em{color:#fff}
+*/

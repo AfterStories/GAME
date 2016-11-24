@@ -1,0 +1,204 @@
+﻿#sportsBookIntro {
+    position: relative;
+    height: 468px;
+}
+
+#top_laptop {
+    position: absolute;
+    padding: 0 0 0 0;
+}
+
+#top_line {
+    left: 197px;
+    position: absolute;
+    top: 16px;
+}
+
+#left_laptop {
+    padding: 30px 0 0;
+    position: relative;
+}
+
+#left_line {
+    left: 196px;
+    position: absolute;
+    top: 29px;
+}
+
+#content {
+    left: 110px;
+    position: absolute;
+}
+
+#sportbook_background_right {
+    right: -319px;
+    position: absolute;
+    top: 0;
+}
+
+#right_laptop {
+    right: 109px;
+    position: absolute;
+    top: 30px;
+}
+
+#right_line {
+    right: 219px;
+    position: absolute;
+    top: 29px;
+}
+
+#bottom_laptop {
+    top: 369px;
+    left: 197px;
+    position: absolute;
+}
+
+#bottom_line {
+    bottom: 82px;
+    position: absolute;
+    right: 220px;
+}
+
+#sportbook_description {
+    bottom: 4px;
+    left: 197px;
+    position: relative;
+}
+
+#sportbook_title {
+    position: relative;
+    text-align: center;
+    color: #25AAE2;
+    font-size: 25px;
+    font-weight: bold;
+    width: 586px;
+}
+
+#sportbook_option {
+    left: -100px;
+    position: relative;
+    top: 35px;
+    width: 500px;
+}
+
+    #sportbook_option table {
+        position: relative;
+        width: 100px;
+        cursor: pointer;
+        float: left;
+        text-align: center;
+    }
+
+#separator {
+    left: 294px;
+    position: absolute;
+    top: 45px;
+}
+
+#description {
+    height: 215px;
+}
+
+    #description > .title {
+        color: #25AAE2;
+        font-size: 18px;
+        font-weight: bold;
+        left: 339px;
+        padding-top: 20px;
+        position: absolute;
+        top: 45px;
+        text-transform: uppercase;
+    }
+
+    #description > .desc {
+        color: #7B7F81;
+        font-size: 16px;
+        padding-top: 10px;
+        left: 339px;
+        position: absolute;
+        top: 85px;
+        max-width: 500px;
+    }
+
+#buttons {
+    left: 335px;
+    position: absolute;
+    top: 155px;
+    display: block !important;
+}
+
+#BetNowBtn {
+    background: url("../images/button-anmation-green-short.gif") 0 0 no-repeat scroll;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 13px;
+    height: 33px;
+    line-height: 35px;
+    margin-bottom: 1px;
+    text-align: center;
+    text-indent: 10px;
+    width: 130px;
+}
+
+#InfoBtn {
+    background: url("../images/button-animation.gif") -197px -39px no-repeat scroll transparent;
+    cursor: pointer;
+    font-size: 13px;
+    height: 33px;
+    line-height: 35px;
+    text-align: center;
+    text-indent: 10px;
+    width: 130px;
+    color: #FFFFFF;
+}
+
+#bettype.clicked {
+    background-position: -98px 0;
+}
+
+#layout {
+    background-position: 0 -190px;
+}
+
+    #layout.clicked {
+        background-position: -98px -190px;
+    }
+
+#push {
+    background-position: 0 -98px;
+}
+
+    #push.clicked {
+        background-position: -98px -98px;
+    }
+
+#bettrade {
+    background-position: 0 -277px;
+}
+
+    #bettrade.clicked {
+        background-position: -98px -277px;
+    }
+
+#description > div, #content > img {
+    display: none;
+}
+
+.temp {
+    height: 79px;
+    width: 75px;
+    position: relative;
+    left: 11px;
+    background-image: url("../images/sprites.png");
+    background-repeat: no-repeat;
+}
+
+.display {
+    display: inline-block !important;
+}
+
+.sportsBookIntroBg {
+    position: absolute;
+    height: 425px;
+}

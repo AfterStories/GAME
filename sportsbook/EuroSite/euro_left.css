@@ -1,0 +1,94 @@
+/* Code tidied up by ScrapBook */
+.ContainerLeft { width: 191px; float: left; }
+.menu_R a, .menu_gr a, .menu_R a span, .menu_gr a span { background-image: url("mutag.gif"); background-repeat: no-repeat; }
+.menu_R a span, .menu_gr a span { overflow: hidden; display: block; text-overflow: ellipsis; white-space: nowrap; }
+.menu_R { border-bottom: 0px solid rgb(90, 89, 90); height: 26px; margin-top: 2px; min-width: 75px; }
+.menu_R a { width: 100%; display: block; font-weight: bold; text-decoration: none; font-size: 11px; line-height: 24px; background-position: 0px -60px; }
+.menu_R a span, .menu_gr a span { display: block; text-align: center; padding: 2px 4px 0px; }
+.menu_R a span { background-position: right -180px; width: 93px; }
+.menu_gr a span { background-position: 100% -150px; width: 82px; }
+.menu_gr { border-bottom: 0px solid rgb(90, 89, 90); height: 26px; margin-top: 2px; min-width: 75px; }
+.menu_gr a { width: 100%; display: block; font-weight: bold; text-decoration: none; font-size: 11px; line-height: 24px; background-position: 0px 0px; }
+.menu_R a:link, .menu_R a:visited { color: rgb(255, 255, 255); display: block; }
+.menu_R a:hover { color: rgb(255, 255, 255) ! important; }
+.menu_R.current a:link, .menu_R.current a:visited { background-position: 0px -60px ! important; color: rgb(255, 255, 255); text-decoration: none; }
+.menu_R.current a span { background-position: 100% -210px ! important; }
+.menu_gr a:link, .menu_gr a:visited { color: rgb(102, 102, 102); display: block; }
+.menu_gr a:hover { background-position: 0px 0px; color: rgb(38, 38, 38) ! important; }
+.menu_gr a:hover span { background-position: 100% -150px; }
+.menu_gr.current a, .menu_gr.current a:visited { background-position: 0px -30px ! important; color: rgb(102, 102, 102); text-decoration: none; }
+.menu_gr.current a span { background-position: 100% -120px ! important; }
+.Special_game .menu_R a span, .Special_game .menu_gr a span { width: auto; }
+.menu_livevg { font-size: 11px; font-weight: bold ! important; color: rgb(255, 255, 255); background-image: url("mutag_livebg.png"); width: 18px; background-position: 0px 1px; display: inline; float: right; margin-top: -2px; padding-left: 2px; background-repeat: no-repeat; }
+.menu_liveR { font-size: 11px; font-weight: bold ! important; color: rgb(255, 255, 255); background-image: url("mutag_liveR.png"); width: 18px; background-position: 0px 1px; display: inline; float: right; margin-top: -2px; padding-left: 2px; background-repeat: no-repeat; }
+.menu_livevg_L { float: left; width: 100px; }
+table { border-collapse: collapse; }
+a { text-decoration: none; }
+form { margin: 0px; }
+#subnav, .Special_game { background-image: url("menu_bg_left.gif"); margin-bottom: 0px; width: 187px; padding-right: 1px; border-right: 1px solid rgb(226, 226, 226); padding-left: 2px; background-repeat: repeat-y; background-color: rgb(255, 255, 255); }
+#subnav .boxbg { border-right: 5px solid rgb(204, 204, 204); border-left: 5px solid rgb(204, 204, 204); }
+.betbox_footer_left { width: 187px; border-width: 0px 1px 1px; border-style: solid; border-color: rgb(230, 230, 230); display: block; border-radius: 0px 0px 6px 6px; margin-bottom: 3px; padding: 0px 1px 1px; height: 0px; background-color: rgb(255, 255, 255); }
+#subnav span.nav { color: rgb(102, 102, 102); display: list-item; font-size: 11px; height: 24px; line-height: 24px; list-style-position: outside; list-style-type: none; border-bottom: 1px solid rgb(255, 255, 255); }
+#subnav span.nav a:link, #subnav span.nav a:visited, #subnav span.navnone a:link, #subnav span.navnone a:visited { color: rgb(33, 32, 33) ! important; }
+#subnav span.nav, #subnav span.navnone { background-color: rgb(238, 238, 238) ! important; }
+.Special_game { background-color: rgb(187, 187, 187); }
+.Special_game .menu_R { background-color: rgb(232, 230, 231) ! important; }
+.Special_game .menu_R a, .Special_game .menu_R.current a, .Special_game .menu_R a:hover, .Special_game .menu_livevg { color: rgb(0, 0, 0) ! important; }
+.Special_game .menu_gr a, .Special_game .menu_liveR { color: rgb(105, 103, 104) ! important; }
+.Special_game .menu_gr a:hover .menu_liveR, .Special_game .menu_gr a:hover { color: rgb(66, 0, 0) ! important; }
+#subnav span.nav a:link, #subnav span.nav a:visited { text-decoration: none; text-indent: 25px; display: block; font-weight: bold; background-image: url("icon_plus.gif"); background-repeat: no-repeat; background-position: 10px 8px; }
+#subnav span.nav a:hover, #subnav span.navnone a:hover { color: rgb(33, 32, 33) ! important; font-weight: bold; background-color: rgb(255, 255, 198); }
+#subnav span.navclose { color: rgb(255, 255, 255); display: list-item; font-size: 11px; height: 24px; line-height: 24px; list-style-position: outside; list-style-type: none; background-color: rgb(50, 130, 190); border-bottom: 1px solid rgb(255, 255, 255); }
+#subnav span.navclose a:link, #subnav span.navclose a:visited { color: rgb(255, 255, 255) ! important; text-decoration: none; background-image: url("icon_plus1.gif"); background-repeat: no-repeat; background-position: 10px 8px; text-indent: 25px; display: block; font-weight: bold; }
+#subnav span.navclose a:hover { color: rgb(255, 255, 255) ! important; font-weight: bold; }
+#subnav span.navnone { display: list-item; font-size: 11px; height: 24px; line-height: 24px; list-style-position: outside; list-style-type: none; }
+#subnav span.navnone a:link, #subnav span.navnone a:visited { text-decoration: none; text-indent: 25px; display: block; font-weight: bold; }
+#subnav div.subnav-link { padding-top: 4px; padding-bottom: 4px; }
+#subnav div.subnav-link a { color: rgb(33, 32, 33) ! important; display: block; font-size: 11px; text-indent: 26px; }
+#subnav div.subnav-link a:link, #subnav div.subnav-link a:visited { color: rgb(33, 32, 33) ! important; text-decoration: none; }
+#subnav div.subnav-link a:hover { color: rgb(0, 0, 255) ! important; }
+#subnav div.subnav-link2 {  }
+#subnav div.subnav-link2 a { background-image: url("sub_icon2.gif"); background-position: 6px 5px; background-repeat: no-repeat; color: rgb(33, 32, 33) ! important; display: block; font-size: 10px ! important; line-height: 15px; padding-bottom: 4px; padding-left: 18px; padding-right: 3px; }
+#subnav div.subnav-link2 a:link, #subnav div.subnav-link2 a:visited { color: rgb(33, 32, 33) ! important; text-decoration: none; }
+#subnav div.subnav-link2 a:hover { color: rgb(0, 0, 255) ! important; }
+#subnav div.subnav-more { background-image: url("sub_moerline.gif"); background-repeat: no-repeat; background-position: left top; }
+#subnav div.subnav-hide { background-image: url("sub_moerline.gif"); background-repeat: no-repeat; background-position: left -44px; }
+#subnav div.subnav-more a, #subnav div.subnav-hide a { font-size: 11px ! important; color: rgb(0, 0, 0) ! important; line-height: 25px; display: block; padding-left: 26px; }
+#subnav div.subnav-more a:link, #subnav div.subnav-more a:visited, #subnav div.subnav-hide a:link, #subnav div.subnav-hide a:visited { color: rgb(0, 0, 0) ! important; text-decoration: none; }
+#subnav div.subnav-more a:hover, #subnav div.subnav-hide a:hover { color: rgb(0, 0, 255) ! important; }
+.Layer3 { text-decoration: none; border-top: 1px dotted rgb(102, 102, 102); border-bottom: 1px dotted rgb(102, 102, 102); border-color: rgb(102, 102, 102); width: 165px; margin-left: 10px; display: block; margin-right: 10px; margin-bottom: 5px; }
+.gray_bg_left { background-image: url("gray_bg_left.gif"); background-repeat: no-repeat; height: 26px; width: 191px; font-size: 11px; font-weight: bold; text-indent: 8px; line-height: 25px; margin-top: 8px; color: rgb(255, 255, 255); }
+.betbox { width: 218px; background-color: rgb(153, 153, 153); }
+.servicesBox { background-image: url("menu_bg_left.gif"); background-color: rgb(230, 230, 230); margin-bottom: 0px; width: 189px; padding-left: 1px; padding-right: 1px; background-repeat: repeat-y; }
+.serviceslink a:link, .serviceslink a:visited { background-image: url("mutag_left_arr.gif"); color: rgb(67, 67, 67) ! important; text-decoration: none; margin-bottom: 6px; display: block; font-size: 11px; line-height: 16px; background-repeat: no-repeat; background-position: 5px 4px; padding-left: 20px; }
+.serviceslink a:hover { color: rgb(0, 0, 255) ! important; }
+.margin { padding-top: 5px; padding-bottom: 1px; }
+.menu_line_left { display: none; }
+.Special_game .menu_R, .Special_game .menu_gr { height: 22px; padding-left: 4px; padding-right: 2px; }
+.Special_game .menu_R a, .Special_game .menu_gr a { background-image: none; }
+.Special_game .menu_R a span, .Special_game .menu_gr a span { background-image: none; display: inline-block; padding-top: 0px; }
+.Special_game .menu_line_left, .normal_game .TabBoxLine { display: none; }
+.Special_game .menu_liveR, .Special_game .menu_livevg { background-image: none; margin-top: 0px; padding-left: 0px; float: none; }
+.Special_game .menu_gr a, .Special_game .menu_gr.current a { background-image: url("betslip-arrow_close.gif"); background-position: 0px -54px ! important; background-repeat: no-repeat; padding-left: 14px; display: block; line-height: 16px; font-weight: bold; }
+.Special_game .menu_R a, .Special_game .menu_R.current a { background-image: url("arrow_open.gif"); background-position: 0px 2px; background-repeat: no-repeat; padding-left: 16px; display: block; line-height: 16px; font-weight: bold; }
+.Balance { border-bottom: 1px solid rgb(216, 216, 216); }
+.Balance th { padding-top: 4px; padding-bottom: 4px; padding-left: 4px; color: rgb(67, 67, 67); font-size: 10px; font-weight: lighter; text-align: left; background-color: rgb(226, 226, 226); border-bottom: 1px solid rgb(255, 255, 255); border-right: 1px solid rgb(255, 255, 255); }
+.Balance td { padding-top: 4px; padding-bottom: 4px; padding-left: 4px; color: rgb(12, 96, 156); font-size: 10px; background-color: rgb(226, 226, 226); border-bottom: 1px solid rgb(255, 255, 255); }
+.Currency { font-size: 10px; background-color: rgb(55, 55, 55); padding: 4px; text-align: left; }
+.Currency em { color: rgb(255, 255, 255); font-style: normal; }
+.Balancebox { width: 180px; border-width: 1px; border-style: solid; border-color: rgb(174, 174, 174); font-size: 11px; color: rgb(255, 255, 255); z-index: 200; position: absolute; margin-top: 26px; }
+.Special-event { width: 189px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-width: 1px 1px 0px; border-style: solid solid none; border-color: rgb(226, 226, 226) rgb(226, 226, 226) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; position: relative; }
+#subnav_olympic div { display: table-cell; white-space: nowrap; width: 100%; background-image: url("titlebg.png"); background-repeat: repeat-x; background-position: left -48px; }
+#subnav_olympic.Special-event div#menu_type_0 { border-top-left-radius: 4px; border-top-right-radius: 4px; display: block; margin-top: 0px; box-sizing: border-box; border-bottom: 0px none; }
+#subnav_olympic.Special-event #menu_type_1 { border-right: 0px none; }
+.Special-event #menu_type_0.menu_R a span { width: auto; }
+.menu_R a, .Special-event #menu_type_0.menu_R.current a:link, .menu_R.current a:visited { background-position: 0px -90px ! important; }
+#subnav_olympic.Special-event div { border: 1px solid rgb(255, 255, 255); text-align: center; background: transparent linear-gradient(to bottom, rgb(217, 216, 216) 10%, rgb(201, 201, 201) 100%) repeat scroll 0% 0%; }
+.Special-event div:first-child { display: block; }
+.Special-event div span, .Special-event div a { background-image: none; }
+#subnav_olympic.Special-event div.current { background: transparent linear-gradient(to bottom, rgb(101, 160, 206) 10%, rgb(51, 131, 190) 100%) repeat scroll 0% 0%; }
+.Special-event div a { color: rgb(102, 102, 102) ! important; }
+.Special-event div.current a, .Special-event div.menu_R.current a:link { color: rgb(255, 255, 255) ! important; }
+.Special-event div.menu_R a:hover { color: rgb(38, 38, 38) ! important; }
+#subnav_olympic p { margin: 0px; padding: 0px; display: none; }
+.Special-event #menu_type_1.current p, .Special-event #menu_type_2.current p { content: ""; display: block; position: absolute; bottom: 0px; right: 1px; width: 187px; border-top: 2px solid rgb(51, 131, 190); z-index: 999; }

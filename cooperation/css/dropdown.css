@@ -1,0 +1,11 @@
+body {margin:25px; /*font:12px Verdana, Arial, Helvetica*/}
+* {padding:0; margin:0}
+.dropdown {float:left; height:40px;}
+.dropdown dt {border-right:0px solid #d3d3d3; border-left:1px solid #e2e2e2; padding-left:15px; padding-right:15px; padding-top:12px; padding-bottom:20px; font-weight:bold; border-top:0px solid #ccc; cursor:pointer; background:url(../images/FooterBg.png) repeat-x; background-position:top;}
+.dropdown dt:hover {background:url(../images/header_over.gif); margin-top:-0px}
+.dropdown dd {position:absolute; overflow:hidden; display:none; opacity:0; margin-top:-7px; height:33px; top:145px;}
+.dropdown ul a{ background:url(../images/dropdown-li.png); border-left:1px solid #e2e2e2; border-right:1px solid #e2e2e2; list-style:none; background-position:center; padding-left:15px; padding-right:15px}
+.dropdown ul a:hover { border-left:1px solid #e2e2e2; border-right:1px solid #e2e2e2; list-style:none; background-position:center; color:#25aae1; }
+.dropdown li {display:inline; margin-top:-6px;}
+.dropdown a, .dropdown a:active, .dropdown a:visited {display:block; padding-top:10px; padding-bottom:10px; color:#333; text-decoration:none; font-weight:bold;}
+.dropdown .underline {border-bottom:0px solid #b9d6dc}

@@ -1,0 +1,10 @@
+
+.imgHomeButtonArrow { float: left; padding: 100px 5px 0px; }
+.imgHomeSprites { width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+#cycle-nav { margin-top: -50px; margin-right: 10px; position: relative; z-index: 99; float: right; width: 180px; }
+#cycle-nav ul { list-style-type: none; }
+#cycle-nav ul li { float: left; }
+#cycle-nav ul li.activeSlide a { background: transparent url("pagination.png") no-repeat scroll 0px -12px; }
+#cycle-nav ul li a { background: transparent url("pagination.png") no-repeat scroll 0% 0%; float: left; height: 12px; margin: 2px; width: 12px; }
+#arrow_left { margin-top: -240px; position: relative; z-index: 99; float: left; cursor: pointer; }
+#arrow_right { margin-top: -240px; position: relative; z-index: 99; float: right; cursor: pointer; }

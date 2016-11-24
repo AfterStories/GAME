@@ -1,0 +1,152 @@
+/* Code tidied up by ScrapBook */
+.ContainerRight { width: 218px; margin-left: 10px; float: left; }
+.ContainerRight table { width: 100% ! important; }
+.ContainerRight table .menu_R a span, .ContainerRight table .menu_gr a span { width: 94%; }
+.R_menu_R a, .R_menu_gr a, .R_menu_R span.menufull, .R_menu_R a span, .R_menu_gr a span, .R_menu_R span.menufull span { background-image: url("mutag.gif"); background-repeat: no-repeat; }
+.R_menu_R { border-bottom: 0px solid rgb(90, 89, 90); height: 26px; margin-top: 2px; }
+.R_menu_R a { width: 100%; display: block; font-weight: bold; text-decoration: none; font-size: 11px; line-height: 24px; background-position: 0px -90px; }
+.R_menu_R a span { display: block; padding-top: 2px; text-align: center; background-position: right -210px; }
+.R_menu_gr { border-bottom: 0px solid rgb(90, 89, 90); height: 26px; margin-top: 2px; }
+.R_menu_gr a { width: 100%; display: block; font-weight: bold; text-decoration: none; font-size: 11px; line-height: 24px; background-position: 0px 0px; }
+.R_menu_gr a span { display: block; padding-top: 2px; text-align: center; background-position: 100% -150px; }
+.R_menu_R a:link, .R_menu_R a:visited { color: rgb(255, 255, 255); display: block; }
+.R_menu_R a:hover { color: rgb(236, 101, 9) ! important; }
+.R_menu_R.current a:link, .R_menu_R.current a:visited { background-position: 0px -60px ! important; color: rgb(255, 255, 255); text-decoration: none; }
+.R_menu_R.current a span { background-position: 100% -90px ! important; }
+.R_menu_gr a:link, .R_menu_gr a:visited { color: rgb(102, 102, 102); display: block; }
+.R_menu_gr a:hover { background-position: 0px 0px; color: rgb(236, 101, 9) ! important; }
+.R_menu_gr a:hover span { background-position: 100% -150px; }
+.R_menu_gr.current a, .R_menu_gr.current a:visited { background-position: 0px -30px ! important; color: rgb(102, 102, 102); text-decoration: none; }
+.R_menu_gr.current a span { background-position: 100% -120px ! important; }
+.R_menu_R span.menufull { width: 208px; display: block; font-weight: bold; text-decoration: none; font-size: 11px; padding-left: 10px; height: 26px; line-height: 21px; background-position: 0px -90px; }
+.R_menu_R span.menufull span { display: block; padding-top: 2px; height: 26px; text-align: left; background-position: right -210px; }
+.R_menu_R span.menufull span { color: rgb(255, 255, 255); }
+.betlist_tag_R a, .betlist_tag_gr a, .betlist_tag_R a span, .betlist_tag_gr a span { background-image: url("mutag.gif"); background-repeat: no-repeat; }
+.betlist_tag_R { border-bottom: 0px solid rgb(90, 89, 90); height: 26px; margin-top: 2px; }
+.betlist_tag_R a { width: 100%; display: block; font-weight: bold; text-decoration: none; font-size: 11px; line-height: 24px; background-position: 0px -90px; }
+.betlist_tag_R a span { display: block; padding-top: 2px; text-align: center; background-position: right -180px; }
+.betlist_tag_gr { border-bottom: 0px solid rgb(90, 89, 90); height: 26px; margin-top: 2px; }
+.betlist_tag_gr a { width: 100%; display: block; font-weight: bold; text-decoration: none; font-size: 11px; line-height: 24px; background-position: 0px 0px; }
+.betlist_tag_gr a span { display: block; padding-top: 2px; text-align: center; background-position: 100% -150px; }
+.betlist_tag_R a:link, .betlist_tag_R a:visited { color: rgb(255, 255, 255); display: block; }
+.betlist_tag_R a:hover { color: rgb(255, 255, 0) ! important; }
+.betlist_tag_R.current a:link, .betlist_tag_R.current a:visited { background-position: 0px -60px ! important; color: rgb(255, 255, 255); text-decoration: none; }
+.betlist_tag_R.current a span { background-position: 100% -210px ! important; }
+.betlist_tag_gr a:link, .betlist_tag_gr a:visited { color: rgb(102, 102, 102); display: block; }
+.betlist_tag_gr a:hover { background-position: 0px 0px; color: rgb(0, 0, 0) ! important; }
+.betlist_tag_gr a:hover span { background-position: 100% -150px; }
+.betlist_tag_gr.current a, .betlist_tag_gr.current a:visited { background-position: 0px -30px ! important; color: rgb(102, 102, 102); text-decoration: none; }
+.betlist_tag_gr.current a span { background-position: 100% -120px ! important; }
+.Multiple_close { height: 25px; width: 100%; margin-top: 0px; }
+.Multiple_close .link a { background-image: url("betslip-arrow_close.gif"); background-position: 0px 8px; padding-left: 15px; background-repeat: no-repeat; color: rgb(0, 0, 0); text-decoration: none; display: block; float: left; line-height: 25px; }
+.Multiple_open { height: 25px; width: 100%; margin-top: 0px; font-size: 11px; }
+.Multiple_open .link { background-image: url("betslip-arrow_open.gif"); background-position: 0px 7px; padding-left: 15px; background-repeat: no-repeat; text-decoration: none; display: block; float: left; line-height: 25px; }
+.check { color: rgb(0, 0, 0); text-decoration: none; display: block; height: 25px; width: 100%; background-color: rgb(232, 230, 231); line-height: 25px; }
+.check_line { color: rgb(0, 0, 0); text-decoration: none; display: block; height: 25px; width: 100%; background-color: rgb(232, 230, 231); line-height: 25px; margin-top: 5px; }
+.multiples { margin-top: 5px; height: 1px; }
+.multiplesLine { margin-top: 5px; background-color: rgb(204, 204, 204); height: 1px; margin-bottom: 5px; }
+a.disabled, a.disabled span { background-image: url("button.gif"); background-repeat: no-repeat; }
+a.disabled { color: rgb(153, 153, 153); display: block; float: right; height: 20px; padding-right: 6px; font: 10px sans-serif; margin-right: 2px; text-decoration: none; background-color: transparent; background-position: right -20px; }
+a.disabled span { display: block; line-height: 11px; padding: 5px 0px 4px 6px; background-color: transparent; background-position: 0px 0px; }
+a.disabled:hover { color: rgb(153, 153, 153); }
+.overlay_show { left: 0px; opacity: 0.65; position: absolute; top: 31px; width: 218px; z-index: 1000; height: 100%; background-attachment: scroll; background-color: rgb(51, 51, 51); background-image: none; background-repeat: repeat; background-position: 0px 0px; }
+.overlay_hidden { background: rgb(164, 164, 164) none repeat scroll 0px 0px; bottom: 0px; left: 0px; opacity: 0.65; position: absolute; top: 0px; width: 100%; z-index: 1000; display: none; }
+.holder { position: absolute; text-align: center; width: 218px; z-index: 2000; }
+.error { background-color: rgb(255, 255, 255); display: block; border: 1px solid rgb(204, 204, 204); width: 170px; padding: 5px; }
+.error .taxtbox { color: rgb(102, 102, 102); font-size: 11px; }
+.taxtbox { background-color: rgb(255, 255, 255); }
+.errorlogon { background-color: rgb(232, 231, 231); display: block; width: 168px; font-size: 11px; padding: 5px; border-right: 1px solid rgb(204, 204, 204); border-left: 1px solid rgb(204, 204, 204); }
+.errorlogon th { font-weight: normal; text-align: left; padding: 5px; color: rgb(0, 0, 0); }
+.errorlogon_r { background-color: rgb(255, 255, 255); font-weight: normal; text-align: right; padding-top: 3px; padding-bottom: 3px; padding-right: 3px; }
+.errorlogon_top { background-image: url("loginbox_head.gif"); width: 180px; height: 3px; }
+.errorlogon_footer { background-image: url("loginbox_footer.gif"); width: 180px; height: 3px; }
+.errorlogon em { color: rgb(235, 99, 7); font-style: normal; }
+.bg_line { background-image: url("bg_line.gif"); background-repeat: repeat-x; height: 2px; width: auto; margin-top: 3px; margin-left: 5px; margin-right: 5px; }
+.gray_bg { background-image: url("gray_bg_right.gif"); background-repeat: repeat-x; height: 26px; width: 215px; font-size: 11px; padding-left: 3px; font-weight: bold; text-indent: 8px; line-height: 28px; color: rgb(255, 255, 255); }
+.ItemMessageList-Mid { font-size: 15px; color: rgb(255, 60, 123); font-weight: normal; padding-left: 0px; background-color: rgba(102, 102, 102, 0.6); position: absolute; left: 0px; top: 0px; width: 218px; height: 100%; z-index: 2; }
+.talkbox { font-size: 15px; font-weight: normal; padding-left: 0px; z-index: 1000; position: absolute; width: 184px; left: 16px; top: 32px; height: 170px; }
+.overlay_show { position: absolute; top: 0px; bottom: 0px; left: 0px; width: 100%; background: rgb(164, 164, 164) none repeat scroll 0% 0%; z-index: 1000; opacity: 0.65; }
+.overlay_hidden { position: absolute; top: 0px; bottom: 0px; left: 0px; width: 100%; background: rgb(164, 164, 164) none repeat scroll 0% 0%; z-index: 1000; opacity: 0.65; display: none; }
+.portlet .holder { position: absolute; text-align: center; width: 238px; z-index: 2000; }
+.portlet .alertbox { position: relative; margin: 0px 12px; padding: 4px 6px; min-height: 80px; background: rgb(230, 230, 230) url("betslip_inner-bg.jpg") repeat scroll 0% 0%; color: rgb(51, 51, 51); border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); font-size: 11px; text-align: left; }
+.betbox_footer { width: 214px; border-width: 0px 1px 1px; border-style: solid; border-color: rgb(230, 230, 230); display: block; border-radius: 0px 0px 6px 6px; margin-bottom: 3px; padding: 0px 1px 1px; height: 0px; background-color: rgb(255, 255, 255); }
+.placebet, .betboxbg font, .Multiple_open .link, .remove .link a { color: rgb(0, 0, 0); }
+.betboxbg font { font-size: 11px; text-align: center; line-height: 18px; padding: 5px 0px; display: block; }
+.betboxbg { background-image: url("menu_bg_right.gif"); margin-bottom: 0px; width: 214px; padding: 4px 2px 2px; background-repeat: repeat-y; background-position: 0px 0px; display: block; clear: both; }
+.betboxbg img { margin-left: 1px; }
+.betboxbg, .TabOpen { background-color: rgb(230, 230, 230); }
+.greybox, .eachbox { background-color: rgb(255, 255, 255); padding: 5px; font-size: 11px; margin: 0px 4px 2px; }
+.greybox th { padding-right: 5px; vertical-align: top; text-align: left; }
+.greybox td { padding-top: 2px; }
+.greybox .price { font-size: 11px; font-weight: normal; }
+.greybox .price span { font-size: 11px; font-weight: bold; }
+.greybox .event { color: rgb(153, 153, 153); text-indent: 0px; font-size: 10px; }
+.greybox .text, .infolink a, .infoclose a, .eachbox .text { color: rgb(67, 67, 67); }
+.greybox .text span { font-weight: bold; font-size: 11px; padding-right: 5px; }
+.greybox input { font-family: Arial,Helvetica,sans-serif; font-size: 11px; }
+.greybg { background-color: rgb(204, 204, 204); }
+.greybg .text, .greybg .event { color: rgb(153, 153, 153) ! important; }
+.greybg th { color: rgb(255, 255, 255) ! important; }
+.TabBox { width: 214px; font-size: 11px; border-right: 1px solid rgb(226, 226, 226); border-left: 1px solid rgb(226, 226, 226); padding: 0px 1px; background-color: rgb(255, 255, 255); }
+.TabOpen { padding-left: 4px; padding-right: 2px; }
+.TabBoxLine { background-image: url("tabline.gif"); background-position: 0px 0px; background-repeat: repeat-y; width: 2px; }
+.TabOpen a { background-image: url("betslip-arrow_open.gif"); background-position: 0px 2px; background-repeat: no-repeat; padding-left: 16px; display: block; line-height: 16px; font-weight: bold; color: rgb(0, 0, 0) ! important; }
+.TabClose { background-color: rgb(187, 187, 187); padding-left: 4px; padding-right: 2px; }
+.TabClose a { background-image: url("betslip-arrow_close.gif"); background-position: 0px -54px ! important; background-repeat: no-repeat; padding-left: 14px; display: block; line-height: 16px; font-weight: bold; color: rgb(105, 103, 104); }
+.TabClose a:hover { color: rgb(38, 38, 38); }
+.eachbox { margin-top: 5px; margin-bottom: 5px; }
+.infolink a { font-size: 10px ! important; background-image: url("betslip-smallarrow1.gif"); background-color: transparent; background-repeat: no-repeat; background-position: 2px 4px; text-decoration: none; padding-left: 10px; }
+.infoclose a { font-size: 10px ! important; background-image: url("betslip-smallarrow.gif"); background-color: transparent; background-repeat: no-repeat; background-position: 2px 4px; text-decoration: none; padding-left: 10px; }
+.infoclose.half a { display: inline-block; max-width: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.totalStakesTitle { display: inline-block; max-width: 95px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; position: relative; top: 5px; }
+.Infobox { font-size: 10px ! important; padding-top: 5px; }
+.remove { font-size: 10px; width: 98%; height: 18px; margin-top: 5px; }
+.remove .link a { font-size: 10px; background-image: url("betslip-smallarrow.gif"); background-color: transparent; background-repeat: no-repeat; background-position: 0px 6px; text-decoration: none; display: block; float: right; padding-left: 8px; padding-top: 3px; margin-right: 2px; }
+.infolink a:hover, .infolink a:hover, .remove .link a:hover { text-decoration: underline; }
+.placebet { font-size: 11px; margin-top: 3px; padding-bottom: 5px; padding-right: 5px; }
+.placebet input { width: 95px; margin: 5px 2px 5px 5px; border-style: none; font-size: 11px; color: rgb(204, 204, 204); background-color: rgb(102, 102, 102); padding: 2px; }
+a.button, a.button span { background-image: url("button_gra.gif"); background-repeat: no-repeat; }
+a.button:hover, a.button:hover span { background-image: url("button.gif"); background-repeat: no-repeat; }
+a.button { color: rgb(0, 0, 0); display: block; float: right; height: 20px; padding-right: 6px; font: 10px sans-serif; margin-right: 2px; text-decoration: none; background-position: right -20px; }
+a.button span { display: block; line-height: 11px; margin-left: 2px; padding: 5px 0px 4px 6px; background-position: left 0px; }
+a.button:hover { background-position: right -20px; color: rgb(0, 0, 0); }
+a.button:hover span { background-position: left 0px; }
+a.button_red, a.button_red span { background-image: url("button.gif"); background-repeat: no-repeat; }
+a.button_red:hover, a.button_red:hover span { background-image: url("button_gra.gif"); background-repeat: no-repeat; }
+a.button_red { color: rgb(0, 0, 0); display: block; float: right; height: 20px; padding-right: 6px; font: 10px sans-serif; margin-right: 2px; text-decoration: none; background-position: right -20px; }
+a.button_red span { display: block; line-height: 11px; margin-left: 2px; padding: 5px 0px 4px 6px; background-position: left 0px; }
+a.button_red:hover { background-position: right -20px; color: rgb(0, 0, 0); }
+a.button_red:hover span { background-position: left 0px; }
+.stakeline_open, .stakeline_close { height: 25px; width: 100%; }
+.stakeline_open .link a, .stakeline_close .link a { background-image: url("betslip-arrow_open.gif"); background-position: 0px 7px; padding-left: 15px; background-repeat: no-repeat; text-decoration: none; display: block; float: left; line-height: 25px; font-size: 12px; margin-left: 4px; }
+.stakeline_open .link a:hover { text-decoration: none; }
+.stakeline_open .Stake { display: block; float: right; line-height: 25px; }
+.stakeline_close .link a { background-image: url("betslip-arrow_close.gif"); background-position: 0px -50px; }
+.betlistbg font { text-align: center; line-height: 18px; padding: 5px 0px; display: block; color: rgb(0, 0, 0) ! important; }
+.betlistbg, .stakeline_open .link a, .stakeline_close .link a { color: rgb(0, 0, 0); }
+.betlistbg { font-size: 11px; background-image: url("menu_bg_right.gif"); margin-bottom: 0px; width: 214px; padding: 4px 2px 2px; background-repeat: repeat-y; background-position: 0px 0px; display: block; clear: both; background-color: rgb(230, 230, 230); }
+.betlistbg img { margin-left: 1px; }
+.betlistbg .R_btnRefresh { display: inline-block; max-width: 30%; margin-top: 4px; }
+.betlistbg .R_btnRefresh span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.betlistbox { background-color: rgb(255, 255, 255); padding: 5px; font-size: 11px; margin: 0px 4px 2px; }
+.betlistbox th { padding-right: 5px; vertical-align: top; text-align: left; }
+.betlistbox td { padding-top: 2px; }
+.betlistbox .price { font-size: 11px; font-weight: normal; }
+.betlistbox .price span { font-size: 11px; font-weight: bold; }
+.betlistbox .event { color: rgb(153, 153, 153); text-indent: 0px; font-size: 10px; }
+.betlistbox .text { color: rgb(67, 67, 67); font-size: 11px; }
+.betlistbox .voidtext { color: rgb(201, 14, 34); font-size: 10px; }
+.betlistbox .text span { font-weight: bold; font-size: 11px; padding-right: 5px; }
+.betlistbox input { font-family: Arial,Helvetica,sans-serif; font-size: 11px; }
+.eventbg font { font-size: 11px; text-align: center; line-height: 18px; padding: 5px 0px; display: block; }
+.eventbg { background-image: url("menu_bg_right.gif"); margin-bottom: 0px; width: 214px; padding: 4px 2px 2px; background-repeat: repeat-y; background-position: 0px 0px; display: block; clear: both; background-color: rgb(230, 230, 230); }
+.eventbg img { margin-left: 1px; }
+.PendingBet { background-color: rgb(214, 214, 214); }
+.linethrough { background-color: rgb(204, 204, 204); }
+.linethrough, .linethrough .text, .linethrough .event { color: rgb(102, 102, 102) ! important; }
+a.R_btnRefresh, a.R_btnRefresh span { background-image: url("button_gra.gif"); background-repeat: no-repeat; }
+a.R_btnRefresh:hover, a.R_btnRefresh:hover span { background-image: url("button_001.gif"); background-repeat: no-repeat; }
+a.R_btnRefresh { float: right; height: 16px; color: rgb(0, 0, 0) ! important; text-decoration: none; font-weight: normal; font-size: 10px; background-position: right -56px; margin-right: 2px; padding-right: 6px; display: inline-block; white-space: nowrap; }
+a.R_btnRefresh span { height: 16px; padding: 1px 0px 2px 6px; background-position: left -40px; display: inline-block; cursor: pointer; line-height: 13px; }
+a.R_btnRefresh:hover { background-position: right -56px; color: rgb(0, 0, 0) ! important; }
+a.R_btnRefresh:hover span { background-position: left -40px; }

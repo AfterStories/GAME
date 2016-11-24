@@ -1,0 +1,117 @@
+﻿/* Language selector */
+.langdropdown dd{position:relative;z-index:99999}
+.langdropdown a{text-decoration:none;outline:0;font:12px;display:block;width:92px;height:18px;overflow:hidden;z-index:9999;float:right;top:-10px}
+.langdropdown dt{background:#FF0;margin: -10px 0 0}
+.langdropdown dt a{background:transparent;color:#fff;width:92px;height:18px;padding:0}
+.langdropdown dt a.active{background:#1191bf;width:92px;height:18px;color:#fff}
+.langdropdown dd ul{background-color:#1191bf;color:white;display:none;list-style:none outside none;
+                    position:absolute;z-index:99999;border-left:1px solid #DDD;border-bottom:1px solid #DDD;
+                    border-right:1px solid #DDD;margin:26px 17px 0 0;padding:0}
+.langdropdown dd ul li a
+{width:92px;height:18px;padding:2px 0 0}
+/*.langdropdown dd ul li a span,*/
+#dd1 ul li a span
+{float:left;width:92px;height:18px;background-image:url(../../lib/images/flagcombine_.png);
+  background-repeat:no-repeat;cursor:pointer;margin:8px 0 0 6px}
+.langdropdown dt a span
+{float:left;width:92px;height:18px;background-image:url(../../lib/images/flagcombine_.png);
+ background-repeat:no-repeat;cursor:pointer;margin:8px 0 0 6px}
+#dd1 ul li:hover{ background: #1191bf;height: 29px;}
+.langdropdown dd ul li{padding-top:7px}
+.langKO a span{background-position:-460px 0}
+.langVI a span{background-position:-368px 0}
+.langTH a span{background-position:-276px 0}
+.langID a span{background-position:-184px 0}
+.langEN a span{background-position:-92px 0}
+.langCS a span{background-position:0 0}
+.langJP a span,.langJA a span{background-position:-552px 0}
+.langdropdown dd ul li a em,.langdropdown dt a em{font-style:normal;float:left;cursor:pointer}
+.langdropdown dd ul li a em{color:white}
+.langdropdown dd ul li a:hover{ background-color: #25aae1;}
+.langdropdown dd ul li a:hover em{color:#fff}
+
+/* language selector */
+select
+{
+     -moz-appearance: none;   
+    border: 1px solid ;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    color: #6C6C6C;
+    background-attachment:fixed;
+    background-position: center;
+    cursor: pointer;
+}
+
+/*FLAG*/
+.lang {
+    display: inline;
+    float: right;
+    position: relative;
+    top: 17px;
+    width: 114px;
+}
+
+#target dt a span.flag:after { /* Little arrow */
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 4px;
+    margin-top: 5px;
+    border-width: 6px 6px 0;
+    border-style: solid;
+    border-color: white transparent;
+    display: block;
+    margin-left: 92px; 
+}
+/* Little arrow */
+/*#target dt a.active span.flag:after { 
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 4px;
+    border-width: 6px 6px 0;
+    border-style: solid;
+    border-color: white transparent;
+}*/
+
+#target dt a.active span.flag:after { /* Little arrow */
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 35%;
+    right: 4px;
+    margin-top: -10px;
+    border-width: 6px 6px 0;
+    border-style: solid;
+    border-color: white transparent;
+}
+
+#target a 
+{
+    width: 113px;
+    height: 34px;
+    margin-top: -7px;   
+}
+
+/*
+.FlagSelector { width:40px; height:20px; margin:0 0 0 0; float:right; padding:0px 0 0 0; }
+.FlagOption {
+    width:34px; height:16px; margin-left:5px; margin-bottom:5px; 
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    background: #6E6E6E;
+}
+.FlagOption:hover { cursor:pointer; }
+*/

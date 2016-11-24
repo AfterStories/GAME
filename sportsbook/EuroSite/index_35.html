@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Outright tmpl</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="12BET offers online sport betting and football betting">
+	<meta name="keywords" content="online betting, sport betting, football betting, sports betting, tennis betting, golf betting, online sports betting, soccer betting, online gambling">
+</head>
+
+<body onload="window.top.hash_TmplLoaded['Outright_tmpl']=true">
+
+<table id="tmplTable" class="Oddstab" width="100%">
+	<tbody><tr><td></td></tr>
+</tbody></table>
+
+<table id="tmplLeague">
+	<tbody id="L_{%ShowTime}_{%LeagueId}" class="{@Class}" onclick="clickORLeagueRow(this);">
+		<tr>
+			<td colspan="2"><div class="Header">{@MatchDate} - {%LeagueName}</div></td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="tmplHeader" class="Oddstab" width="100%">
+	<tbody id="H_{%ShowTime}_{%LeagueId}" class="{@DisplayCls}">
+		<tr>
+			<th class="oddsLborder" align="left">队伍</th>
+			<th class="oddsRborder">赔率</th>
+		</tr>
+	</tbody>
+</table>
+
+<table id="tmplEvent" class="Oddstab" width="100%">
+	<tbody id="O_{%ShowTime}_{%LeagueId}_{%MatchId}" class="{@DisplayCls} {@Tr_Cls}">
+		<tr>
+			<td class="rborder oddsLborder" align="left">{%TeamName}</td>
+			<td class="OddsBet {%Changed} oddsRborder"><a href="JavaScript:BetO({%MatchId}+'_Outright_'+{%Odds});">{%Odds}</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<span id="tmplEnd"></span>
+
+
+</body>
+</html>

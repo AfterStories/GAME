@@ -1,0 +1,386 @@
+﻿body {
+    background-color: #FFFFFF;
+    /*font-family:Verdana,Arial;*/
+    font-family: Microsoft Yahei;
+    font-size: 12px;
+    color: #555555;
+    margin: 6px 6px 5px 6px;
+}
+
+a {
+    text-decoration: none;
+}
+
+select, input {
+    font-size: 11px;
+    color: #666666;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: Microsoft Yahei;
+    border: 1px solid #999999;
+    padding-left: 3px;
+}
+
+.mainTopTitle {
+    font-weight: bold;
+    color: White;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+.titleGray {
+    font-weight: bold;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #333333;
+}
+
+.titleYellow {
+    font-weight: bold;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #F46C20;
+}
+
+.titleGray2 {
+    font-weight: bold;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.member_tool {
+    color: #0a6eba;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.member_white {
+    color: White;
+    font-size: 11px;
+}
+
+.tableReport {
+    width: 460px;
+    text-align: left;
+}
+
+    .tableReport,
+    .tableReport td {
+        border: 0;
+        /*	border-color: #FFFFFF;*/
+    }
+
+.tableReportTitle {
+    font-weight: bold;
+    background-image: url(../images/titleReportBG2.gif);
+    height: 48px;
+}
+
+.tableReporttd {
+    padding-top: 5px;
+    height: 52px;
+    width: 20%; /* 25% */
+}
+
+.tableReportTitle_ {
+    padding-top: 2px;
+    background-image: url(../images/titleReportBG22.gif);
+    height: 24px;
+}
+
+.tableReporttd_ {
+    padding-left: 5px;
+    height: 78px;
+}
+
+.tableNews {
+    width: 99%;
+    text-align: center;
+}
+
+    .tableNews td {
+        padding-left: 12px;
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-bottom: 3px;
+    }
+
+.bgFilter {
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#d2e4f8', endColorStr='#f1f6fc', gradientType='0');
+    background-image: url(../images/tableBG__.gif);
+}
+
+.sumYellow {
+    font-weight: bold;
+    font-size: 12pt;
+    font-weight: 600;
+    color: #f76c2b;
+}
+
+.sumYellow13 {
+    font-weight: bold;
+    font-size: 13px;
+    color: #f76c2b;
+}
+
+.normalFont {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.titleBlue {
+    font-weight: bold;
+    font-size: 13pt;
+    color: #245482;
+}
+
+.titleBlue2 {
+    font-weight: bold;
+    font-size: 10pt;
+    color: #245482;
+}
+
+.titleBlue14 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #007BBB;
+}
+
+.overflowText {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* btn*/
+input.buttonOut {
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-size: 11px;
+    color: #FFFFFF;
+    background-color: #4676ae;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-color: #5d5d5d;
+    border-bottom-color: #5d5d5d;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    cursor: hand;
+    margin-right: 2px;
+    margin-left: 2px;
+    height: 20px;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    font-weight: normal;
+}
+
+input.button-ovr {
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-size: 11px;
+    color: #FFFFFF;
+    background-color: #ff6600;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-color: #5d5d5d;
+    border-bottom-color: #5d5d5d;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    cursor: hand;
+    margin-right: 2px;
+    margin-left: 2px;
+    height: 20px;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    font-weight: normal;
+}
+
+.grdTitle {
+    background-image: url(../images/grdTitle.jpg);
+    background-repeat: repeat-x;
+    font-size: 12px;
+    border: 1px solid #B3CBDE;
+    border-collapse: collapse;
+}
+
+    .grdTitle th {
+        border: 1px solid #B3CBDE;
+        border-collapse: collapse;
+    }
+
+.PagerClassCss {
+    color: #666666;
+    margin-top: 3px;
+}
+
+    .PagerClassCss a {
+        color: #666666;
+    }
+
+.rowDetails td {
+    padding-left: 3px;
+    border: 1px solid #B3CBDE;
+    border-collapse: collapse;
+    padding-right: 3px;
+}
+
+.foot_css td {
+    border: 1px solid #B3CBDE;
+    border-collapse: collapse;
+    padding-right: 3px;
+}
+
+/* table deposit and withdrawal
+
+
+
+*/
+
+.tabstyle02 {
+    width: 100%;
+    text-align: left;
+    border: 0px;
+    background-color: #B3CBDE;
+}
+
+.bgwhite td {
+    text-align: left;
+    border: 0px;
+    background-color: White;
+    height: 32px;
+    padding-left: 5px;
+}
+
+.tabthdwn {
+    text-align: left;
+    background-image: url(../images/grdTitle.jpg);
+    background-repeat: repeat-x;
+    font-size: 12px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.payment-form { /*border:1px solid #B3CBDF;*/
+    height: 100px;
+    vertical-align: top;
+}
+
+.bgwhite {
+    background-color: White;
+}
+
+.tabthup {
+    height: 24px;
+}
+
+h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.tabTitle {
+    color: #990000;
+    font-size: 14px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.tabstyle03 {
+    width: 100%;
+    text-align: left;
+    border: 0px;
+    background-color: #B3CBDE;
+}
+
+    .tabstyle03 td {
+        background-color: White;
+        height: 24px;
+    }
+
+.tabcontbk {
+    font-weight: normal;
+}
+
+
+a img {
+    border: 0;
+}
+
+.cssLineBarIE7 {
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 10px;
+    margin-top: -15px;
+}
+
+.cssLineBar {
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 13px;
+}
+
+.cssLineBarFireFox {
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 13px;
+}
+
+.cssEmptyMenuDD {
+    position: absolute;
+    overflow: hidden;
+    display: none;
+    background: #fff;
+    opacity: 0;
+    margin-top: -7px;
+    height: 33px;
+    top: 145px;
+}
+
+.cssEmptyMenuDL {
+    border-right: 0px solid #d3d3d3;
+    border-left: 1px solid #e2e2e2;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 12px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    border-top: 0px solid #ccc;
+    height: 8px;
+    background: url(images/FooterBg.png) repeat-x;
+    background-position: top;
+}
+
+.cssDDT {
+    border-right: 0px solid #d3d3d3;
+    border-left: 1px solid #e2e2e2;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 12px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    border-top: 0px solid #ccc;
+    cursor: pointer;
+    background: url(../images/FooterBg.png) repeat-x;
+    background-position: top;
+}
+
+.cssRegister {
+    margin-top: -51px;
+    height: 51px;
+}
+
+.cssLogo {
+    background-repeat: no-repeat;
+}
+@media (max-width: 1500px) {
+    .splashbox {
+        display: none;
+    }
+}

@@ -1,0 +1,630 @@
+﻿body {
+}
+
+
+/* START ------ Footer Icon(s) */
+#divFooterLogo
+{
+    border:0 dashed red;
+    width: 1023px;
+    height:105px;
+    border-top:1px solid #c9cacb;
+    border-bottom:1px solid #c9cacb;
+    text-align:center;
+    vertical-align:top;
+    padding-top:20px;
+}
+
+.FooterDiv
+{border:0 solid green;
+ float:left;
+ vertical-align:top;
+ text-align:center;
+ margin:0;
+ padding:0;
+ width:100px;
+ height:100%;
+ }
+
+.spnTitle
+{
+    /*font-family:Arial,Helvetica,sans-serif;*/
+    text-align:center;
+    font-size:11px;
+    font-weight:bold;
+    color:#4e4e4e
+ 
+}
+
+.spnTitleSecurity
+{
+    /*font-family: Arial,Helvetica,sans-serif;*/
+    text-align:center;
+    font-size: 11px;
+    font-weight: bold;
+    color:#4E4E4E;  
+    margin-left:-55px;  
+    
+}
+
+.divSprite
+{
+    border:0 dotted red;
+    text-align:center;
+    width:100%;
+    height:83%;
+    margin-left:20%;
+    margin-right:20%
+    }
+    
+.FooterSprite
+{
+    border:0 dashed purple;
+    float:left;
+    padding:0;
+    margin:0;
+    width:64px;
+    height:40px;
+    background:url("../images/footerlogo-list.jpg");
+    background-repeat:no-repeat;
+}
+
+.FooterSprite2
+{
+    border:0 dashed purple;
+    float:left;
+    padding:0;
+    margin:0;
+    width:64px;
+    height:40px;
+    background:url("../images/footerlogo-list2.jpg");
+    background-repeat:no-repeat;
+}
+
+.FooterSprite:hover
+{
+    cursor:default;
+ }
+
+.FooterSprite2:hover
+{
+    cursor:default;
+ }
+
+#divPartner
+{
+    position:relative;
+    left:24px;
+    *margin-left:0;
+    *left: 0;    
+}
+
+#imgPartner1
+{
+    background-position:-26px -1px
+}
+
+#imgPartner1:hover
+{
+    cursor:pointer;
+}
+
+#divLicenses
+{
+    position:relative;
+    left:17px;  
+}
+
+#divLicense
+{
+    position:relative;
+    left:33px;    
+    *margin-left:4%;
+    *left:40px;
+}
+
+#imgLicenses1
+{
+    background-position:-116px -2px
+}
+
+#imgLicenses1:hover
+{
+    background-position:-116px -48px;
+    cursor:pointer
+}
+
+#imgLicenses2
+{
+    background-position:-206px -2px
+}
+
+#imgLicenses2:hover
+{
+    background-position:-206px -48px;
+    cursor:pointer
+}
+
+#divPaymentOption
+{
+    position:relative;
+    left:-10px;
+    *margin-left:5%;
+}
+
+#imgPaymentOption1
+{
+    width:55px;
+    background-position:-293px -2px
+}
+
+#imgPaymentOption1:hover
+{
+    background-position:-293px -48px
+}
+
+#imgPaymentOption2
+{
+    width:55px;background-position:-384px -2px
+}
+
+#imgPaymentOption2:hover
+{
+    background-position:-384px -48px
+}
+
+#imgPaymentOption3
+{
+    width:77px;background-position:-464px -2px
+}
+
+#imgPaymentOption3:hover
+{
+    background-position:-464px -48px;
+}
+
+#imgPaymentOption4
+{
+    width:67px;
+    background-position:-561px -2px
+}
+
+#imgPaymentOption4:hover
+{
+    background-position:-561px -48px
+}
+
+#imgPaymentOption5
+{
+    width:67px;
+    background-position:-648px -2px
+}
+
+#imgPaymentOption5:hover
+{
+    background-position:-648px -48px
+}
+
+#imgPaymentOption6
+{
+    width:50px;
+    background-position:-749px -2px
+}
+
+#imgPaymentOption6:hover
+{
+    background-position:-749px -48px
+}
+
+#imgPaymentOption7
+{
+    width:67px;
+    background-position:-665px -2px
+}
+
+#imgPaymentOption7:hover
+{
+    background-position:-665px -45px
+}
+
+#imgPaymentOption8
+{
+    width:67px;
+    background-position:-747px -2px
+}
+
+#imgPaymentOption8:hover
+{
+    background-position:-747px -48px
+}
+
+#divSecurity
+{
+    position:relative;
+    left:-7px;
+}
+
+#imgSecurity1
+{
+    width:90px;background-position:-820px -2px;margin-left:-25px
+}
+
+#imgSecurity1:hover
+{
+    background-position:-820px -48px
+}
+
+#divResponsibility
+{
+    position:relative;left:-14px;
+    *margin-left:5%;
+}
+
+#imgResponsibility1
+{
+    width:73px;
+    background-position:-920px -2px
+}
+
+#imgResponsibility1:hover
+{
+    background-position:-920px -48px;cursor:pointer
+}
+
+#imgResponsibility2
+{
+    width:30px;background-position:-1031px -2px
+}
+
+#imgResponsibility2:hover
+{
+    background-position:-1031px -48px;
+    cursor:pointer
+}
+
+#imgResponsibility3
+{
+    width:34px;
+    background-position:-1119px -2px
+}
+
+#imgResponsibility3:hover
+{
+    background-position:-1119px -48px;cursor:pointer
+}
+
+/* END ------ Footer Icon(s) */
+/*
+   ========================================================================================================================================
+                                                          START ------ KENO
+   ========================================================================================================================================
+*/
+.Keno
+{
+
+}
+
+.Keno.LandingPage
+{
+    
+}
+
+.Keno.VideoPage
+{
+    
+}
+
+.Keno.Button
+{
+  cursor :pointer; 
+
+  border:0px dashed purple;
+
+  float:left; 
+  padding:0px;
+  margin:0px;    
+  
+
+}
+.Keno.Button:hover
+{
+  cursor:default;    
+}
+
+
+.Keno.Button.Text
+{
+    margin-left: 34px;
+    position: relative;
+    top: 8px;
+}
+
+
+/* ----------------------------------
+START ------ Keno (Landing)
+-------------------------------------*/
+.LandingPage.Button
+{
+  width:212px;
+  height:56px;  
+}
+
+/* By Languages */
+.LandingPage.Button.en-US 
+{
+  background:url("/images/en-US/PK/button-keno-sprite.gif");
+  background-repeat:no-repeat;       
+  
+}
+.LandingPage.Button.id-ID
+{
+  background:url("/images/id-ID/PK/button-keno-sprite.gif"); 
+  background-repeat:no-repeat;       
+}
+.LandingPage.Button.th-TH
+{
+  background:url("/images/th-TH/PK/button-keno-sprite.gif"); 
+  background-repeat:no-repeat;       
+}
+.LandingPage.Button.vi-VN
+{
+  background:url("/images/vi-VN/PK/button-keno-sprite.gif"); 
+  background-repeat:no-repeat;       
+}
+.LandingPage.Button.zh-CN
+{
+  background:url("/images/zh-CN/PK/button-keno-sprite.gif");
+  background-repeat:no-repeat;       
+}
+
+/* Custom Style By ID */
+#btnKenoPlayReal
+{
+   background-position: -6px -7px;      
+}
+#btnKenoPlayReal:hover
+{
+   cursor:pointer;   
+   background-position: -6px -63px;      
+}
+
+#btnILottoPlayReal
+{
+   background-position: -6px -7px;      
+}
+#btnILottoPlayReal:hover
+{
+   cursor:pointer;   
+   background-position: -6px -63px;       
+}
+
+
+#btnKenoPlayFree
+{
+   background-position: -220px -7px;      
+}
+#btnKenoPlayFree:hover
+{
+   cursor:pointer;   
+   background-position: -220px -63px;      
+}
+
+#btnILottoPlayFree
+{
+   background-position: -220px -7px;        
+}
+#btnILottoPlayFree:hover
+{
+   cursor:pointer;   
+   background-position: -220px -63px;         
+}
+
+
+#btnVideoTutorial
+{
+   background-position: -435px -7px;      
+}
+#btnVideoTutorial:hover
+{
+   cursor:pointer;   
+   background-position: -435px -63px;      
+}
+
+
+#btnPromotion
+{
+   background-position: -650px -7px;      
+}
+#btnPromotion:hover
+{
+   cursor:pointer;   
+   background-position: -650px -63px;      
+}
+
+
+#btnMoreDetails
+{
+  /*background:url("/CasinoGames/PK/images/keno/btn_grey.png");*/
+  background-position: 0px 0px;       
+  background-repeat:no-repeat;     
+    font-weight:normal;
+}
+#btnMoreDetails:hover
+{
+   cursor:pointer;   
+  font-weight:bold;  
+}
+/* ----------------------------------
+END ------ Keno (Landing)
+-------------------------------------*/
+
+
+/* ----------------------------------
+START ------ Keno (Video)
+-------------------------------------*/
+
+.VideoPage.Button
+{
+  width:174px;
+  height:47px;    
+}
+
+
+/* By Languages */
+.VideoPage.Button.en-US
+{
+  background:url("/images/en-US/PK/button-kenovideo-sprite.gif");
+  background-repeat:no-repeat;       
+  
+}
+.VideoPage.Button.id-ID
+{
+  background:url("/images/id-ID/PK/button-kenovideo-sprite.gif"); 
+  background-repeat:no-repeat;       
+}
+.VideoPage.Button.th-TH
+{
+  background:url("/images/th-TH/PK/button-kenovideo-sprite.gif"); 
+  background-repeat:no-repeat;       
+}
+.VideoPage.Button.vi-VN
+{
+  background:url("/images/vi-VN/PK/button-kenovideo-sprite.gif"); 
+  background-repeat:no-repeat;       
+}
+.VideoPage.Button.zh-CN
+{
+  background:url("/images/zh-CN/PK/button-kenovideo-sprite.gif");
+  background-repeat:no-repeat;       
+}
+
+/* Custom Style By ID */
+#btnKenoSingleView
+{
+   background-position: -6px -7px;      
+}
+#btnKenoSingleView:hover
+{
+   cursor:pointer;   
+   background-position: -6px -57px;      
+}
+
+#btnKenoMultipleView
+{
+   background-position: -179px -7px;      
+}
+#btnKenoMultipleView:hover
+{
+   cursor:pointer;   
+   background-position: -179px -57px;       
+}
+
+
+#btnILottoSingleView
+{
+   background-position: -363px -7px;      
+}
+#btnILottoSingleView:hover
+{
+   cursor:pointer;   
+   background-position: -363px -57px;      
+}
+
+#btnILottoMultipleView
+{
+   background-position: -537px -7px;        
+}
+#btnILottoMultipleView:hover
+{
+   cursor:pointer;   
+   background-position: -537px -57px;         
+}
+
+
+#btnParlay
+{
+   background-position: -716px -7px;      
+}
+#btnParlay:hover
+{
+   cursor:pointer;   
+   background-position: -716px -57px;      
+}
+
+
+#btnTips
+{
+   background-position: -892px -7px;      
+}
+#btnTips:hover
+{
+   cursor:pointer;   
+   background-position: -892px -57px;  
+ 
+}
+/* ----------------------------------
+START ------ Keno (Video)
+-------------------------------------*/
+
+/* 
+   ========================================================================================================================================
+                                                             END ------ KENO
+   ========================================================================================================================================
+*/
+
+
+
+/* START ------ P2P Button(s) */
+.P2P_Button
+{
+
+  border:0px dashed purple;
+
+  float:left; 
+  padding:0px;
+  margin:0px;    
+
+  width:246px;
+  height:61px;
+
+  background:url("images/P2P/button_p2p_sprite.gif"); 
+  background-repeat:no-repeat;   
+
+}
+.P2P_Button:hover
+{
+  cursor:default;
+    
+}
+
+#imgGameIntro
+{
+   background-position: -4px -4px;      
+}
+#imgGameIntro:hover
+{
+   cursor:pointer;   
+   background-position: -4px -74px;      
+}
+
+#imgGameDownload
+{
+   background-position: -258px -4px;      
+}
+#imgGameDownload:hover
+{
+   cursor:pointer;   
+   background-position: -258px -74px;      
+}
+
+#imgGameFAQ
+{
+   background-position: -511px -4px;      
+}
+#imgGameFAQ:hover
+{
+   cursor:pointer;   
+   background-position: -511px -74px;      
+}
+
+/* END ------ P2P Button(s) */

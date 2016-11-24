@@ -1,0 +1,234 @@
+/* Code tidied up by ScrapBook */
+@import url("frameForAll.css");
+body { background-color: rgb(255, 255, 255); }
+#containerTwo { width: 809px; display: block; float: left; }
+.column3 { width: 100%; border-collapse: collapse; }
+.column3_75 { width: 564px; border-collapse: collapse; }
+.Refresh_button { width: 770px; }
+.code { margin-bottom: -3px; }
+table td { padding: 0px; }
+a { text-decoration: none; }
+.select_Line { color: rgb(102, 102, 102); font-size: 11px; font-family: Arial,Helvetica,sans-serif,Tahoma; background-color: rgb(232, 232, 232); border: 1px none rgb(232, 232, 232); }
+.input { color: rgb(102, 102, 102); font-size: 11px; font-family: Arial,Helvetica,sans-serif,Tahoma; border: 1px solid rgb(153, 153, 153) ! important; margin-left: 2px; }
+.Soccer { color: rgb(17, 48, 108); height: 18px; float: left; font-size: 13px; font-weight: bold; text-indent: 5px; padding: 2px 2px 2px 20px; margin-top: 1px; position: relative; }
+.Soccer1 { height: 21px; width: 0px; float: left; padding-bottom: 0px; margin-top: 5px; margin-bottom: 0px; }
+.Soccer1 span { display: none; }
+.pop_border_d { border-bottom: 110px dashed rgb(255, 255, 255); }
+.pop_border_top { border-top: 110px dashed rgb(255, 255, 255); }
+.pop_border_div { border: 5px solid rgb(255, 255, 255) ! important; width: 560px; background-color: rgb(251, 214, 80); }
+.pop_border_div input { font-size: 11px; font-family: Arial,Helvetica,sans-serif,Tahoma; background-color: rgb(251, 214, 80); color: rgb(251, 214, 80); }
+.Reslut_Head { margin-top: 0px; margin-bottom: 0px; margin-left: 10px; }
+.Reslut_Head a { font-weight: bold; text-decoration: none; }
+.Result { color: rgb(235, 7, 0); font-size: 11px; padding-left: 5px; }
+.tabtitle, .box01 .border { color: rgb(33, 32, 33); height: 15px; font-size: 12px; font-weight: bold; background-color: rgb(223, 223, 223); text-indent: 0px; }
+.tabtitle_Result { color: rgb(102, 102, 102); left: 20px; font-size: 11px; font-weight: bold; background-color: rgb(255, 255, 255); text-indent: 1px; }
+.tabtitle-Left { color: rgb(102, 102, 102); height: 15px; background-color: rgb(223, 223, 223); font-size: 11px; font-weight: bold; text-indent: 50px; }
+table_1px.tabstyle01 { color: rgb(102, 102, 102); font-size: 65%; border: 1px solid rgb(163, 179, 217); word-spacing: 0px; }
+.tabstyle01 th { color: rgb(102, 102, 102); font-size: 11px; font-weight: bold; padding: 2px; border-bottom: 1px solid rgb(163, 179, 217); background-image: url("tab_th03.gif"); background-repeat: repeat-x; text-align: left; }
+.tabstyle01 td { background-color: rgb(255, 255, 255); padding: 2px 4px; }
+.tabstyle01 a:link, .tabstyle01 a:visited { color: rgb(43, 89, 25); }
+.tabstyle01 a:hover { color: rgb(255, 102, 0); }
+.tabstyle02 { font-size: 12px; }
+.tabstyle02 th { color: rgb(102, 102, 102); border-right-color: rgb(219, 218, 218); border-bottom-color: rgb(219, 218, 218); }
+.tabstyle03 th, .oddsTableTagArea li.current, .moreBetType.tag .MoewLine, .moreBetType.tag .MoreNav li.current, .moreBetType.tag .oddsTable td.eventD .title { color: rgb(255, 255, 255); font-size: 12px; background-image: none; background-color: rgb(50, 130, 190); }
+.tabstyle03_Horse th { padding: 2px 4px ! important; }
+.tabstyle07 { color: rgb(102, 102, 102); font-size: 11px ! important; border-top: 1px solid rgb(202, 202, 202); border-right: 0px solid rgb(202, 202, 202); border-left: 0px solid rgb(202, 202, 202); }
+.tabstyle07 th { font-size: 11px ! important; border-bottom: 1px solid rgb(202, 202, 202); border-right: 1px solid rgb(202, 202, 202); padding: 2px; }
+.tabstyle07 td { padding: 2px; border-bottom: 1px solid rgb(202, 202, 202); border-right: 1px solid rgb(202, 202, 202); }
+th.tabthdwn-bg { background-image: none; }
+.tabt_L { border-left: 3px solid rgb(204, 204, 204); }
+.tabt_R { border-right: 3px solid rgb(204, 204, 204) ! important; }
+.tabt_L2 { border-left: 2px solid rgb(204, 204, 204); }
+.tabt_D { border-top: 2px solid rgb(204, 204, 204); }
+.tabt_unR { border-right-style: none; }
+.tabt_unL { border-left: 1px solid rgb(51, 51, 51); }
+.tabbox { width: 790px; clear: both; border: 1px solid rgb(226, 226, 226); }
+.tabbox_F { border-color: rgb(255, 255, 255); }
+.tabtitbox span { height: 28px; background-image: url("titbgbox_a.gif"); background-repeat: no-repeat; background-position: left top; display: block; }
+.tabtitbox { background-image: url("titbgbox_b.gif"); background-repeat: no-repeat; background-position: right top; }
+.tabbox_FB { border: 2px solid rgb(255, 255, 255); background-image: url("boxbg.gif"); background-repeat: repeat-x; }
+.tabbox_F1 { border-top: 2px solid rgb(255, 255, 255); border-right: 2px solid rgb(255, 255, 255); border-left: 2px solid rgb(255, 255, 255); border-style: solid solid none; }
+.msgtabbox { width: 810px; clear: both; border: 0px solid rgb(232, 232, 232); padding: 5px 2px 1px; background-color: rgb(232, 232, 232); }
+.tabstyle02 td { border-bottom-color: rgb(204, 204, 204); border-right-color: rgb(204, 204, 204); }
+.tableline_1 { border-right-style: none; border-left-style: none; }
+.tabcontbubig, .tabcontbubig a { font-size: 11px; color: rgb(12, 87, 144) ! important; font-weight: bold; text-align: center; }
+.tabcontbkbig, .tabcontbkbig a { font-size: 11px ! important; color: rgb(102, 102, 102) ! important; font-weight: bold; text-align: left; }
+.tabcontrdbig, .tabcontrdbig a { color: rgb(255, 0, 0) ! important; font-size: 11px; font-weight: bold; text-align: center; }
+.tabstyle06 th { color: rgb(76, 76, 76); font-size: 11px; font-weight: bold; vertical-align: top; text-align: left; padding: 4px; }
+.tabstyle06 td { color: rgb(76, 76, 76); font-size: 11px; vertical-align: top; text-align: left; padding: 4px; }
+.cont12oe { color: rgb(255, 102, 0) ! important; font-size: 12px ! important; }
+.td_left { display: inline-table; float: left; }
+.td_right { display: inline; float: right; }
+.EarlyMarket_top_bg, .Reslut_Head, .Reslut_Head a { color: rgb(17, 48, 108); width: 100%; font-size: 11px; padding-top: 1px; padding-left: 0px; padding-bottom: 4px; }
+.EarlyMarket_top_bg span.Current { color: rgb(17, 48, 108); }
+.DBetlist { font-size: 11px; height: 20px; line-height: 20px; background-color: rgb(232, 232, 232); }
+.DBetlist1 { font-size: 11px; background-color: rgb(232, 232, 232); }
+.tabcontbu, .tabcontbu a { color: rgb(102, 102, 102); }
+.tabcontrd, .tabcontrd a, .tabcontrd span { color: rgb(235, 99, 7); }
+.tabcontbk, .tabcontbk a { color: rgb(102, 102, 102); font-weight: bold; }
+.tabcontbk span { color: rgb(102, 102, 102); font-weight: bold; }
+.tabcontwh, .tabcontwh a { color: rgb(255, 255, 255); font-weight: bold; }
+.tabcontwh span { color: rgb(255, 255, 255); font-weight: bold; }
+.b11_bl { color: rgb(17, 48, 108); }
+.b11_b2 { color: rgb(102, 102, 102); font-size: 11px; font-family: Arial,Helvetica,sans-serif,Tahoma; }
+.ajxbox { border: 2px solid rgb(46, 76, 130); background-image: url("ajx_bg.jpg"); background-repeat: repeat-x; background-position: center top; padding: 10px; }
+.ajxbox h1 { color: rgb(2, 35, 82); background-image: url("ajx_icon.gif"); background-repeat: no-repeat; background-position: left top; font-size: 15px; font-weight: bold; line-height: 20px; border-bottom: 1px solid rgb(186, 205, 225); text-indent: 20px; display: block; padding-bottom: 5px; margin-top: 0px; margin-bottom: 15px; }
+.ipColor { color: rgb(102, 102, 102); font-size: 10px; font-weight: bold; }
+.text_blue11 { color: rgb(43, 89, 25); font-size: 11px; }
+.MessageHistory { color: rgb(102, 102, 102); font-size: 12px; font-family: Arial,Helvetica,sans-serif,Tahoma; }
+.miniver_en a { height: 18px; width: 80px; float: left; background-image: url("oddmini.gif"); background-position: -3px -2px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.miniver_en a:hover { background-position: -86px -2px; }
+.miniver_en a span { display: none; }
+.maxiver_en a { height: 18px; width: 80px; float: left; background-image: url("oddmini.gif"); background-position: -3px -21px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.maxiver_en a:hover { background-position: -86px -21px; }
+.maxiver_en a span { display: none; }
+.miniver_it a { height: 18px; width: 80px; float: left; background-image: url("oddmini.gif"); background-position: -3px -2px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.miniver_it a:hover { background-position: -86px -2px; }
+.miniver_it a span { display: none; }
+.maxiver_it a { height: 18px; width: 80px; float: left; background-image: url("oddmini.gif"); background-position: -3px -21px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.maxiver_it a:hover { background-position: -86px -21px; }
+.maxiver_it a span { display: none; }
+.miniver_jp a { height: 18px; width: 80px; float: left; background-image: url("oddmini.gif"); background-position: -3px -2px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.miniver_jp a:hover { background-position: -86px -2px; }
+.miniver_jp a span { display: none; }
+.maxiver_jp a { height: 18px; width: 80px; float: left; background-image: url("oddmini.gif"); background-position: -3px -21px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.maxiver_jp a:hover { background-position: -86px -21px; }
+.maxiver_jp a span { display: none; }
+.miniver_ch a { height: 18px; width: 64px; float: left; background-image: url("oddmini.gif"); background-position: -3px -40px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.miniver_ch a:hover { background-position: -86px -40px; }
+.miniver_ch a span { display: none; }
+.maxiver_ch a { height: 18px; width: 64px; float: left; background-image: url("oddmini.gif"); background-position: -3px -59px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.maxiver_ch a:hover { background-position: -86px -59px; }
+.maxiver_ch a span { display: none; }
+.miniver_cs a { height: 18px; width: 64px; float: left; background-image: url("oddmini.gif"); background-position: -3px -78px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.miniver_cs a:hover { background-position: -86px -78px; }
+.miniver_cs a span { display: none; }
+.maxiver_cs a { height: 18px; width: 64px; float: left; background-image: url("oddmini.gif"); background-position: -3px -59px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.maxiver_cs a:hover { background-position: -86px -59px; }
+.maxiver_cs a span { display: none; }
+.miniver_th a { height: 18px; width: 64px; background-image: url("oddmini.gif"); float: left; background-position: -3px -116px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 5px; margin-left: 6px; }
+.miniver_th a:hover { background-position: -86px -116px; }
+.miniver_th a span { display: none; }
+.maxiver_th a { height: 18px; width: 64px; float: left; background-image: url("oddmini.gif"); background-position: -3px -135px; background-repeat: no-repeat; display: block; cursor: pointer; margin-top: 6px; margin-left: 6px; }
+.maxiver_th a:hover { background-position: -86px -135px; }
+.maxiver_th a span { display: none; }
+.sorting { display: inline-block; float: left; margin-top: 2px; }
+.messagesp { color: rgb(102, 102, 102); font-size: 11px; }
+.message { color: rgb(102, 102, 102); font-size: 11px; padding-top: 2px; }
+.message a { color: rgb(102, 102, 102) ! important; text-decoration: none ! important; padding-bottom: 4px; }
+.message a:hover { color: rgb(235, 99, 7) ! important; }
+.message .active { font-weight: bold; color: rgb(235, 99, 7) ! important; }
+.textor a { font-weight: bold; color: rgb(255, 102, 0); }
+.title_border, .tmpl_border, .oddsTableTagArea { background-color: rgb(239, 239, 239); }
+.title_border { width: 788px; border-radius: 4px 4px 0px 0px; display: block; padding: 1px 4px 0px 0px; }
+.info a { color: rgb(255, 255, 255) ! important; height: 12px; width: 22px ! important; padding-right: 5px; background-image: url("horse_info2.gif"); background-repeat: no-repeat; font-size: 12px; padding-left: 10px ! important; margin-left: 10px; margin-top: 2px; background-position: 1px center; }
+.info a:hover { color: rgb(255, 255, 255) ! important; height: 12px; width: 22px ! important; padding-right: 5px; background-image: url("horse_info1.gif"); background-repeat: no-repeat; font-size: 12px; padding-left: 10px ! important; margin-left: 10px; margin-top: 2px; background-position: 1px center; }
+.league02 { color: rgb(102, 102, 102); font-size: 11px; border: 1px solid rgb(203, 203, 203); margin: 0px; background-color: rgb(255, 255, 255); }
+.league02 th { color: rgb(0, 0, 0); font-size: 11px; font-weight: bold; padding: 5px; }
+.league03 th { color: rgb(255, 255, 255); font-size: 13px; font-weight: bold; background-color: rgb(74, 94, 144); padding: 2px 2px 2px 20px; }
+.Leaguename a { color: rgb(102, 102, 102); width: 97%; font-size: 11px; font-family: Arial,Helvetica,sans-serif,Tahoma; display: block; padding: 0px; }
+.Leaguename a:hover { color: rgb(255, 255, 255); background-color: rgb(74, 94, 144); }
+.Leaguename span { font-weight: normal; }
+.date_close { display: block; background-image: url("date_close.gif"); background-repeat: no-repeat; text-indent: 20px; background-position: 5px center; border-bottom: 1px solid rgb(255, 255, 255); font-size: 12px; font-weight: bold; background-color: rgb(74, 94, 144); height: 20px; padding-top: 5px; }
+.date_close a { color: rgb(154, 185, 215) ! important; }
+.date_close a:hover { color: rgb(255, 255, 255) ! important; margin-top: 10px; }
+.date_open { color: rgb(255, 255, 255); height: 20px; display: block; font-size: 12px; font-weight: bold; background-image: url("date_open.gif"); background-repeat: no-repeat; background-color: rgb(74, 94, 144); background-position: 5px center; text-indent: 20px; padding-top: 5px; }
+.date_open a { color: rgb(255, 255, 255) ! important; }
+.date_open a:hover { color: rgb(255, 255, 255) ! important; }
+.teamname_bg { color: rgb(29, 43, 77); height: 22px; font-size: 12px; font-weight: bold; font-family: Arial,Helvetica,sans-serif,Tahoma; display: block; background-image: url("teamname_bg.gif"); background-repeat: repeat-x; text-indent: 5px; padding-top: 6px; }
+.time { color: rgb(129, 129, 129); font-size: 10px; font-family: Arial,Helvetica,sans-serif,Tahoma; text-align: center; }
+.odds_bg { background-color: rgb(210, 210, 210); padding-right: 4px ! important; padding-left: 4px ! important; height: 10px; }
+.oddslive_bg { background-color: rgb(250, 218, 195); padding-right: 4px ! important; padding-left: 4px ! important; height: 10px; }
+.odds_bg td { color: rgb(255, 255, 255) ! important; background-color: rgb(74, 94, 144) ! important; font-weight: bold ! important; }
+.bb123 { display: block ! important; }
+.bb123 a:hover { color: rgb(255, 255, 255) ! important; background-color: rgb(74, 94, 144) ! important; font-weight: bold ! important; }
+.OEteam_name { color: rgb(51, 102, 153) ! important; height: 15px; width: 500px; font-weight: bolder ! important; display: block; background-color: rgb(255, 255, 255) ! important; text-indent: 0px; padding-top: 3px; padding-right: 20px; margin: 5px; }
+.oddslive { color: rgb(181, 0, 0) ! important; }
+.mixparlay_line { height: 2px; background-image: url("pop_line_bg.gif"); background-repeat: repeat-x; margin-right: 8px; margin-left: 8px; }
+.mixparlay_title { font-size: 14px; color: rgb(102, 102, 102); }
+.TimeRange { margin-left: 4px; border: 1px solid; height: 16px; border-radius: 4px; line-height: 16px; padding-left: 4px; padding-right: 4px; display: inline-block; white-space: nowrap; font-size: 11px; }
+.TimeRange_y { padding-left: 2px; }
+.TimeRange_w, .allTimebg, .allTimebg a { color: rgb(255, 255, 255); }
+.TimeRange, .allTimebg { background-image: url("time_bg.png"); background-repeat: repeat-x; background-position: 0px 0px; background-color: rgb(50, 130, 190); border-color: rgb(191, 189, 189); }
+.TimeRange_y, .allTimebg a:hover { color: rgb(255, 255, 255) ! important; }
+.allTimebg { height: 20px; border-width: 1px; border-style: solid; overflow: visible; display: block; position: relative; padding-left: 10px; padding-top: 2px; padding-right: 10px; margin-top: 2px; border-radius: 4px; box-shadow: 0px 0px 5px rgb(102, 102, 102); }
+.allTimebg a { font-size: 11px; font-weight: bold; line-height: 20px; padding-top: 5px; }
+.allTimebg a:hover { font-size: 11px; font-weight: bold; }
+.allTimebg span { font-size: 9px; padding-left: 10px; padding-right: 10px; }
+.popUO3 { width: 250px; background-color: rgb(55, 181, 255); padding: 3px; border-bottom: 1px solid rgb(135, 153, 194); overflow: hidden; }
+.popUO3 td { font-size: 11px; padding: 5px; text-align: left; }
+.popUO3tab_bg { padding: 5px; background-color: rgb(55, 181, 255); }
+.popUO3tab td { line-height: 15px; border: 1px solid rgb(255, 255, 255); background-color: rgb(255, 255, 255); }
+.popUO3tab th { line-height: 20px; }
+.font15_w { color: rgb(255, 255, 255); font-size: 12px; font-weight: bold; }
+.font14_r { color: rgb(102, 102, 102); font-size: 13px; font-weight: bold; text-align: center; }
+.HomeN { color: rgb(204, 0, 0); font-size: 11px; }
+.HomeA { color: rgb(0, 51, 153); font-size: 11px; }
+.more-win { border-color: rgb(255, 255, 255); background-color: rgb(249, 249, 249); }
+.more-box { width: 98%; text-align: center; margin-bottom: 10px; padding: 6px 6px 0px; }
+form { margin: 0px; }
+.displayOff { display: none ! important; }
+.Alpha { background-image: url("Alpha.png"); background-repeat: repeat; font-weight: normal; }
+.score_box { font-size: 11px; color: inherit; font-weight: normal ! important; }
+.score_box .box02 { font-weight: normal ! important; }
+.score_box td { border-style: none ! important; padding: 0px ! important; }
+.score_box .border { border: 1px solid; text-align: center; padding: 0px; width: 32px; height: 29px; }
+.box01 .border { font-weight: normal; }
+.score_box .border, .line_b { border-color: rgb(145, 147, 144); }
+.line_b { border-bottom-width: 1px; border-bottom-style: solid; height: 14px; }
+.Team_box { padding-left: 0px; }
+.Team_box .FavTeamClass, .Team_box .UdrDogTeamClass { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 16px; }
+.img td { width: 13px; height: 13px; padding: 2px ! important; border-style: none ! important; }
+.baseball_LS > .line_divL td div { float: left; }
+.baseball_LS > .line_divL .border { height: 29px; line-height: 29px; margin: 0px; padding: 0px 2px; }
+.baseball_LS > .line_divL td + td .border { border-left: medium none; }
+.baseball_LS > .line_divR table { width: 540px; }
+.baseball_LS > .line_divR .border { width: 24px; margin: 0px 2px 0px 0px; }
+.baseball_LS1 .border { line-height: 29px; }
+.border_bg { padding: 0px; background-image: url("horse_trbg.gif"); background-position: 0px 0px; }
+.border_bg .tabstyle02 td { border: medium none; line-height: 17px; }
+.rborder { border-right: 2px solid rgb(204, 204, 204); }
+td.rborder + td.rborder + td.rborder + td.rborder + td.rborder { border-right: 0px none; }
+.tabtitle a { color: inherit; }
+.Races { height: 20px; line-height: 20px; margin-bottom: 1px; width: 156px; }
+#HorseFutureRacesDiv .tabbox, #GreyhoundsFutureRacesDiv .tabbox, #HarnessFutureRacesDiv .tabbox { background-color: transparent; }
+.ItemMessageList-Mid { background-color: rgb(247, 255, 255); font-size: 15px; font-weight: normal; padding-left: 0px; opacity: 0.6; position: absolute; z-index: 100; }
+.container { font-size: 30px; color: rgb(136, 34, 34); margin-left: -125px; position: absolute; top: 50%; left: 50%; width: 350px; height: 70px; }
+.HelpBox { padding: 5px 10px; position: relative; width: 551px; font-size: 12px ! important; }
+.HelpBox .FavTeamClass { font-size: 12px ! important; }
+.PoiintLine { background-image: url("Point_line.png"); background-position: 0px 0px; background-repeat: no-repeat; display: block; width: 29px; height: 10px; position: absolute; left: -25px; top: 40%; }
+.radius { border-radius: 4px; }
+.streamVirtual, .liveInfo { width: 514px ! important; display: inline-block; border: 1px solid rgb(203, 203, 203); padding-bottom: 0px; }
+.streamVideo { width: 491px; height: 394px; margin: 0px 11px 8px; }
+.streamVirtual .virtualTitle { padding: 11px 10px; height: 14px; }
+.matchVirtual { width: 266px; height: 440px; display: inline-block; vertical-align: top; }
+.marchTitle { font-size: 11px; padding: 8px 10px; text-align: left; height: 14px; }
+.virtualMarch td { padding: 4px 8px; height: 20px; line-height: 20px; }
+.virtualMarch td a { width: 177px; overflow: hidden; display: inline-block; text-overflow: ellipsis; white-space: nowrap; }
+.virtualMarch .IsLive, .virtualMarch .text_time { font-weight: bold; font-size: 11px; }
+.virtualBox .tabbox_F { border-width: 2px; }
+.EarlyMarket_top_bg .virtualBtn span { background-image: none; margin-left: 0px; margin-top: 0px; padding: 0px; }
+.virtualBtn { float: right; margin-top: 6px; margin-right: 3px; }
+.Streamingtext { width: 446px; height: 344px; border-right: 1px solid rgb(255, 255, 255); border-bottom: 1px solid rgb(255, 255, 255); border-radius: 2px; box-shadow: -1px -1px 1px 0px rgb(195, 195, 195); padding: 20px; font-size: 14px; position: absolute; left: 22px; }
+.popupIcon { vertical-align: middle; }
+.titleSection .control { margin-top: 2px; }
+.titleSection > div > div, .titleSection > div > a, .titleSection > div > span { float: left; width: auto; }
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+.moreBetType { padding: 8px 8px 0px ! important; background-color: rgba(255, 255, 255, 0.6); }
+@media �screen {
+  .moreBetType { background-color: rgb(255, 255, 255); }
+}
+.MoreTable { position: relative; margin-bottom: 8px; }
+.MoreTable > tbody > tr:first-child > td { border: medium none; padding: 0px; }
+.MoreTable .oddsTable th { background-image: none; }
+.MoreTable td.tabtitle { border-radius: 3px 3px 0px 0px ! important; padding-left: 5px; }
+.MoreTable td + td { padding-left: 10px ! important; }
+.MoreTable .oddsTable td + td { padding-left: 4px ! important; }
+.MoreTable td[class="displayOff"] + td { padding-left: 0px ! important; }
+.oddsTable th:first-child { border-top-left-radius: 3px; }
+.oddsTable th:last-child { border-top-right-radius: 3px; }
+.dropDown.percent { width: 92%; margin: 4px 0px 4px 4px; float: none; }
+.oddsTableTagArea li { background-color: rgb(146, 145, 146); color: rgb(255, 255, 255); }
+.tmpl_border.liveInfo iframe { height: 434px; }

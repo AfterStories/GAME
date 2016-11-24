@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Affiate Main Page
+</title>
+    <script type="text/javascript" src="jquery-1_002.js"></script>
+    <script type="text/javascript" src="jquery-ui-1_002.js"></script>
+    <script src="BlankPage_data/jquery_002.js" type="text/javascript"></script>
+    <script src="BlankPage_data/jquery.js" type="text/javascript"></script>
+    <link type="text/css" href="BlankPage_data/BlankPage.css" rel="stylesheet">
+    <script type="text/javascript">
+        $(function () {
+            var maximageObj = $('#maximage');
+            if (maximageObj) {
+                $(maximageObj).maximage({
+                    cycleOptions: {
+                        fx: 'fade',
+                        random: 1,
+                        speed: 800, //800
+                        timeout: 5000, //8000
+                        prev: '#arrow_left',
+                        next: '#arrow_right',
+                        pager: '#cycle-nav ul',
+                        pagerAnchorBuilder: function (idx, slide) {
+                            return '<li><a href="#"></a></li>';
+                        }
+                    },
+                    fillElement: '#holder',
+                    onFirstImageLoaded: function () {
+                        jQuery(maximageObj).fadeIn('fast');
+
+                    }
+                });
+                $('.toggle').bind('click', function (e) {
+                    e.preventDefault();
+                    $(maximageObj).cycle('toggle');
+                });
+            }
+
+            //change the iframe size because of the banner size is 1039px, iframe size 980px
+            window.parent.$("#mainFrame").width(1039);
+        });
+    </script>
+    <style type="text/css">
+        #imagecol {
+            background-image: url('images/Home/Background/CS/b1.jpg?ver=2');
+            background-repeat: no-repeat;
+        }
+
+        #imagemiddle {
+            background-image: url('images/Home/Background/CS/b2.jpg?ver=2');
+            background-repeat: no-repeat;
+        }
+
+        #imagelast {
+            background-image: url('images/Home/Background/CS/b3.jpg?ver=2');
+            background-repeat: no-repeat;
+        }
+
+        .maximageBanner {
+            display: block;
+        }
+
+        #formdiv a:link {
+            color: #FFFFFF;
+        }
+        /* unvisited link */
+        #formdiv a:visited {
+            color: #FFFFFF;
+        }
+        /* visited link */
+        #formdiv a:hover {
+            color: #FFFFFF;
+        }
+        /* mouse over link */
+        #formdiv a:active {
+            color: #FFFFFF;
+        }
+        /* selected link */
+        #sidebar {
+            position: fixed;
+        }
+    </style>
+
+    <script src="BlankPage_data/crawler.js" type="text/javascript"></script><style type="text/css">.marquee{white-space:nowrap;overflow:hidden;visibility:hidden;}#marq_kill_marg_bord{border:none!important;margin:0!important;}</style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($("div#marquee-with-options").length > 0) {
+                marqueeInit({
+                    uniqueid: 'marquee-with-options',
+                    style: {
+                        'height': '34px',
+                        'width': '799px',
+                        'float': 'left'
+                    },
+                    inc: 2, //speed - pixel increment for each iteration of this marquee's movement
+                    mouse: 'pause', //mouseover behavior ('pause' 'cursor driven' or false)
+                    moveatleast: 2,
+                    neutral: 150,
+                    savedirection: true
+                });
+            }
+        });
+    </script>
+    <style type="text/css">
+        /* this is News CSS*/
+        div#marquee {
+            background-image: url(images/footer/nav-msg.png);
+            background-repeat: no-repeat;
+            height: 34px;
+            width: 730px;
+            float: left;
+            font-size: 14px;
+            text-align: center;
+            line-height: 34px;
+            color: #787878;
+        }
+
+        #marquee0 {
+            color: #787878;
+            float: right;
+            font-size: 12px;
+            height: 34px;
+            text-align: center;
+            width: 680px;
+            margin-top: -29px;
+            margin-left: 350px;
+            margin-bottom: -10px;
+        }
+
+        .nav_01 {
+            clear: both;
+            margin-left: 12px;
+            height: 34px;
+        }
+
+        .nav_tit {
+            background-image: url(images/footer/nav-title.png);
+            background-repeat: no-repeat;
+            height: 34px;
+            width: 136px;
+            float: left;
+            font-family: Microsoft YaHei,Helvetica,Arial,Sans-Serif,"??";
+            font-size: 15px;
+            color: #fff;
+            text-align: center;
+            line-height: 37px;
+        }
+
+        .nav_tit_right {
+            color: #000;
+            float: left;
+            font-family: Microsoft YaHei,Helvetica,Arial,Sans-Serif,"??";
+            font-size: 15px;
+            height: 31px;
+            line-height: 34px;
+            text-align: center;
+            width: 104px;
+            border-top: solid 1px #d0cece;
+            border-right: solid 1px #d0cece;
+            border-bottom: solid 1px #d0cece;
+        }
+
+            .nav_tit_right a {
+                padding-left: 0;
+            }
+
+            div#marquee a, .nav_tit_right a {
+                font-family: Microsoft YaHei;
+                text-decoration: none;
+                color: black;
+            }
+
+        .msg_bold {
+            font-weight: bold;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        var $jParent = window.parent.jQuery.noConflict();
+        var splashbox = $jParent('#splashbox');
+        splashbox.show(1);
+    </script>
+</head>
+<body class="">
+    <form method="post" action="BlankPage.aspx?mid=42&amp;mver=5" id="form1">
+<div class="aspNetHidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="WghyH1WZNgfqH7kxmkMPFrHSAEw1LB5sdaFKU6cnls/7oejdGVWe4hCrXKnkFgO1FDhdM6rTES/2aXjok/zCAHK6Jzg=" type="hidden">
+</div>
+
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E642136E" type="hidden">
+	<input name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" type="hidden">
+</div>
+        
+        <div id="formdiv">            
+            <span id="holder" style="height: 410px; position: relative; left: 5px; display: block; cursor: pointer; top: 0px;" onclick="window.open('Register.aspx','mainFrame');">
+                <span id="maximage" style="display: block; position: relative; width: 1023px; height: 410px;" class="mc-cycle">
+                                        
+                                        
+                    
+                                              
+                    
+               
+                <div class="mc-image " title="" style="background-image: url(&quot;images/Home/Background/CS/banner1.jpg&quot;); position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1; width: 1023px; height: 410px;" data-href=""></div><div class="mc-image " title="" style="background-image: url(&quot;images/Home/Background/CS/banner4.jpg&quot;); position: absolute; top: 0px; left: 0px; display: none; z-index: 3; width: 1023px; height: 410px; opacity: 0;" data-href=""></div><div class="mc-image " title="" style="background-image: url(&quot;images/Home/Background/CS/banner5.jpg&quot;); position: absolute; top: 0px; left: 0px; display: none; z-index: 3; width: 1023px; height: 410px; opacity: 0;" data-href=""></div></span>
+            </span>
+            
+            
+            <div id="contentContainer" class="contentContainer">
+                <div id="cycle-nav">
+                    <ul><li class="activeSlide"><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li></ul>
+                </div>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+            <!-- Three Column Content -->
+            <div class="three-cols">
+                <div class="col" style="float: left;">
+                    <a href="http://www.10010388.com/lm/Register.aspx" target="mainFrame">
+                        <div id="imagecol" class="imgHomeSprites" style="padding-left: 38px;">
+                        </div>
+                    </a>
+                </div>
+                <div class="imgHomeButtonArrow">
+                    <img src="BlankPage_data/arrow-bottom.jpg" alt="">
+                </div>
+                <div class="middle" style="float: left">
+                    <a href="http://www.10010388.com/lm/Register.aspx" target="mainFrame">
+                        <div id="imagemiddle" class="imgHomeSprites">
+                        </div>
+                    </a>
+                </div>
+                <div class="imgHomeButtonArrow">
+                    <img src="BlankPage_data/arrow-bottom.jpg" alt="">
+                </div>
+                <div class="last" style="float: right">
+                    <a href="http://www.10010388.com/lm/Register.aspx" target="mainFrame">
+                        <div id="imagelast" class="imgHomeSprites">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            &nbsp; 
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- END Three Column Content -->
+    </form>
+
+
+</body></html>

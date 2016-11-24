@@ -1,26 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  <!-- 严格模式文档类型 -->
-<!-- saved from url=(0034)http://www.10010388.com/zh-CN/Home -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb" data-livestyle-extension="available" class="yui3-js-enabled">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"  data-livestyle-extension="available">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Games</title>   
+<title>Games home</title>   
     <!-- 搜索引擎SEO -->
 <meta name="description" content="games">
-<meta name="keywords" content="games,games.com"><!--  搜索引擎关键字在此填写 -->    
+<meta name="keywords" content="games,games.com"><!--  用于搜索引擎爬取关键词 -->    
 <meta http-equiv="content-language" content="zh-CN">
-<meta name="revisit-after" content="7 days"><!--  搜索引擎7抓取一次 -->
+<meta name="revisit-after" content="7 days"><!--  搜索引擎7天抓取一次 -->
 <meta name="robots" content="index">  <!-- 搜索引擎 可以检索页面文件 -->
 <meta name="baidu-site-verification" content="VE5pgXAERsXLFQfn">
 <meta name="360-site-verification" content="351df73c61f2e513bbabfd69af65370d">
- <!--  搜索引擎优化 "canonical"将内容形似度很高、或着重复的页面规范为一个主页面 -->
-<link rel="canonical" href="http://www.10010388.com/zh-CN/Home">
+ <!--  百度、360搜索引擎优化  -->
+<link rel="canonical" href="#"><!-- "canonical"将内容形似度很高、或着重复的页面规范为一个主页面 -->
 
 <!-- 引入样式 -->
-<link href="css/bundle.css" rel="stylesheet" type="text/css" />
+<link href="../lib/css/bundleCss.css" rel="stylesheet" type="text/css" />
 <link media="all" href="css/home.css" type="text/css" rel="stylesheet">
-
-
-
 
 <link rel="stylesheet" href="css/swiper.min.css">
 <!-- 浏览器不支持、在脚本未被执行时的替代内容 -->
@@ -32,26 +30,26 @@
 
 <!-- 引入js -->
 
-<script type="text/javascript" src="js/jquery-1.12.2.min.js"> </script>
-<script type="text/javascript" src="js/swiper.min.js" async=""></script>
-<script type="text/javascript" src="js/cookie.js" async=""></script>
-<script type="text/javascript" src="js/generateQCcodeApk.js" async=""></script>
-<script type="text/javascript" src="js/onlinepay.js" async=""></script>
-<script type="text/javascript" src="js/login.js" async=""></script>
-<script type="text/javascript" src="js/footbutton.js" async=""></script>
-<script type="text/javascript" src="js/scrollAD.js" async=""></script>
-<script type="text/javascript" src="js/homeAnimate.js" async=""></script>
-<script type="text/javascript" src="js/jquery.validate.js"  async=""></script>
-<script type="text/javascript" src="js/jquery.numeric.js" async=""></script>
-<script type="text/javascript" src="js/master.payment.crawler.js"></script>
+<script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
+<script type="text/javascript" src="../lib/js/swiper.min.js" ></script>
+<script type="text/javascript" src="../lib/js/cookie.js"  ></script>
+<script type="text/javascript" src="../lib/js/generateQCcodeApk.js" ></script>
+<script type="text/javascript" src="../lib/js/onlinepay.js" ></script>
+<script type="text/javascript" src="../lib/js/login.js" ></script>
+<script type="text/javascript" src="js/footbutton.js" ></script>
+<script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
+<script type="text/javascript" src="js/homeAnimate.js" ></script>
+<script type="text/javascript" src="../lib/js/jquery.validate.js"  ></script>
+<script type="text/javascript" src="../lib/js/jquery.numeric.js" ></script>
+<script type="text/javascript" src="../lib/js/master.payment.crawler.js"></script>
 <script type="text/javascript" src="js/bundle.js"></script>
 
 
 </head>
 <body id="uiHtmlBody" style="min-width: 1680px;" class=" lang-zh-CN" lang="zh-CN">
 <!-- Slider -->   <!-- 轮播图部分 -->
-<div class="swiper-container" style="width:100%;height:420px;position:relative;top:190px;overflow: hidden;">
-    <!-- 如果需要分页器 -->
+<div class="swiper-container" style="width:100%;height:420px;position:relative;top:150px;overflow: hidden;">
+   
 
     <div class="swiper-wrapper" >
 
@@ -73,8 +71,31 @@
 
 
 <script>  
+/*获取轮播图*/ 
+var AjaxURL = " "
  $(document).ready(function () {
-
+		
+        getswiperpic();
+		
+		function getswiperpic(){
+		$.ajax({
+		dataType:'json',
+		type:'GET',
+		data:{},		
+		url: AjaxURL+'',
+		success:function(data) {
+				//
+		for (var i = 0;i<data.data.length; i++) {
+											
+			var swiperpic ='<div class="swiper-slide"><img src="'+data.data[i].imgurl+'"/></div>'
+    			
+			$(".swiper-wrapper").append(swiperpic);
+		}
+		
+		}
+		});
+		};                 
+   
 
  	 /*   <!-- 实例化轮播图 -->*/
   var mySwiper = new Swiper ('.swiper-container', {
@@ -94,7 +115,7 @@
         
   })
 
-  }); 
+}); 
  
   </script>
 
@@ -232,7 +253,7 @@
             </a>
             <div style="margin-top: 13px;">
                 <div id="qr_generator">
-                    <img id="fun88apk_QR" src="./images/QR.png" style="margin: 10px 15px 10px 18px;" alt="apkQrCode" height="110" width="110">
+                    <img id="fun88apk_QR" src="../lib/images/QR.png" style="margin: 10px 15px 10px 18px;" alt="apkQrCode" height="110" width="110">
                 </div>
             </div>
             <div id="fun88apk_dl_btn" style="margin-top: 144px;">
@@ -259,7 +280,7 @@
             <a href="javascript:void(0);" id="quickContact_CloseMenu" onclick="$('#quickContact_OpenMenu').show(); $('#quickContactContainer').hide();" class="dy-unit">
                 <div class="button_layout"></div>
             </a>
-            <img src="./images/girl.png" style="width: 124px; height: 203px; margin: 10px 10px -4px;" height="203" width="124">
+            <img src="../lib/images/girl.png" style="width: 124px; height: 203px; margin: 10px 10px -4px;" height="203" width="124">
 
             <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('http://helpcn.fun585.com', 'newwindow', 'width=420, height=250'); return false;" href="http://helpcn.fun585.com/">
                 <div class="quickcontactbtn quickcontactbtn1">
@@ -296,14 +317,14 @@
 
 <div id="outer_top_header">
     <div id="sp_logo" style="display: none;">
-        <a id="A2" href="http://www.10010388.com/zh-CN/Home" onclick="javascript:newPage(this.href); return false;"></a>
+        <a id="A2" href="#" onclick="javascript:newPage(this.href); return false;"></a>
     </div>
     
     <div id="top_header">
         <div id="top_nav_left">
             
             <ul>
-                <li id="topBannerLogoContainer"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="http://www.10010388.com/zh-CN/Home"></a></li>
+                <li id="topBannerLogoContainer"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="#"></a></li>
                 <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/About-Us/About-Fun88', 'AboutUs',1020); return false;"></a></li>
                 <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/Help/General', 'Help',1020); return false;"></a></li>
                 
@@ -334,7 +355,7 @@
                     </ul>
                 </li>
             </ul>
-        </div>
+        </div> <!-- 啊啊 -->
 
 
 	<div id="top_nav_right">
@@ -510,27 +531,7 @@
         </li>
     </ul>    
             
-<!--     <style>
 
-        #zh-CN{
-            background-position: 0 0;
-        }
-        #en-US{
-            background-position: -92px 0;
-        }
-        #vi-VN{
-            background-position: -368px 0;
-        }
-        #th-TH{
-            background-position: -276px 0;
-        }
-        #id-ID{
-            background-position: -184px 0;
-        }
-        #ja-JP{
-            background-position: -550px 0;
-        }
-    </style> -->
 
 	<div id="RewardsDIV" style="visibility: hidden; display: none;"></div>
 
@@ -580,13 +581,23 @@
         }
     }
 
+        DropDown.prototype = {
+        initEvents: function () {
+            var obj = this;
+
+            obj.dd.on('mouseover', function (event) {
+                $(this).toggleClass('active');
+                event.stopPropagation();
+            });
+        }
+    };
+
 </script>
 
-<div id="top" style="position: relative;top:-370px;margin:0 auto;">
+<div id="top" style="position: relative;top:-400px;margin:54px 0 0 0;">
     <div id="logofun88InZh" class="logoLoc">
-        <a class="logo" href="http://www.10010388.com/zh-CN/Home">FUN88</a>
+        <a class="logo" href="#">FUN88</a>
     </div>
-
     <div id="header_right">
         <div id="BaseMainContent_HeaderContent_divBtnRegister" class="dy-unit">
                 
@@ -634,12 +645,12 @@
 </div>
 
 
-<div id="navigation" style="position: relative;top:-370px;">
+<div id="navigation" style="position: relative;top:-400px;">
     <table id="navMain" class="zh-CN">
         <tbody><tr>
             <td class="menuStatic off">
                 <div id="mainMenu-Home" class="dy-unit">
-                    <a href="http://www.10010388.com/zh-CN/Home" id="BaseMainContent_HeaderContent_ascxMainMenu_uiHomeIcon" class="MenuImageHome cssSelectedHomeMenu" onclick="window.location=this.href;"></a>
+                    <a href="#" id="BaseMainContent_HeaderContent_ascxMainMenu_uiHomeIcon" class="MenuImageHome cssSelectedHomeMenu" onclick="window.location=this.href;"></a>
                     <div class="menuSeperator"></div>
                 </div>
             </td>
@@ -654,7 +665,7 @@
                     <td id="Sportsbook" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Sportsbook">
-                                <a href="http://www.10010388.com/zh-CN/Sportsbook" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="" onclick="">体育博彩</a>
+                                <a href="../sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="" onclick="">体育博彩</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -671,7 +682,7 @@
                     <td id="IMSportsbook" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_IMSportsbook">
-                                <a href="http://www.10010388.com/zh-CN/IM-Sportsbook" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" class="" onclick="">IM 体育</a>
+                                <a href="../IM-sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" class="" onclick="">IM 体育</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -684,7 +695,7 @@
                     <td id="Sportsbook Exchange" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Exchange">
-                                <a href="http://www.10010388.com/zh-CN/Exchange" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_2" class="" onclick="">必发交易</a>
+                                <a href="../exchange/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_2" class="" onclick="">必发交易</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -710,7 +721,7 @@
                     <td id="SlotCasino Default" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Games">
-                                <a href="http://www.10010388.com/zh-CN/Slot-Casino/Top-Games" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_4" class="" onclick="">乐游戏</a>
+                                <a href="../topgames/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_4" class="" onclick="">乐游戏</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -907,25 +918,32 @@
 <script type="text/javascript">
     var rewards = '/Reward/zh-CN';
     var banner2 = '/zh-CN/Promotion';
+    function newPage(url) {
+	var pathname = window.location.pathname;
+	var pathInSplit = pathname.split("/");
+	var lastElement = pathInSplit.length - 1;
+	if (pathInSplit[lastElement] == "") url = "." + url;
+	window.location = url
+}
     
 </script>
 
 
-<div id="main" style="position: relative;top:45px;">
+<div id="main" >
       <!-- Three Column Content -->   <!-- 游戏栏目部分 -->
     <div id="miniBannerCMS" class="cols three-cols">
         <div class="col">
             <div class="imgHomeSprites">
                 <div id="topDiv" style="display: block;">
                     <div id="dy_Home_Small_Banner_1_B4_Login"> 
-                        <div id="topDivBanner" href="javascript:void(0);" style="background-image: url('./images/fun88-button_register_cn-v21.png'); display: block; padding: 8px 0px 0px; height: 75px; width: 295px; position: absolute; background-position: 295px 83px;" class="topMiniBanner topBigBanner"></div>
+                        <div id="topDivBanner" href="javascript:void(0);" style="background-image: url('./images/fun88-button_register_cn-v21.png'); display: block; padding: 8px 0px 0px; height: 75px; width: 295px; position: absolute; background-position: 295px 83px;" class="topMiniBanner topBigBanner" onclick="newPage('../topgames/index.html');"></div>
                     </div>
                     
                 </div>
                 <div id="firstBannerJP"></div>
                 <div>
                     <div id="dy_Home_Small_Banner_2_B4_Login">
-                        <div id="firstDiv" style="display: block; background-image: url('./images/fun88-bliss_banner.png'); background-position: 0px 0px; height: 152px; width: 295px;" onclick="newPage('/zh-CN/IM-Casino');" class="miniBanner1"></div>
+                        <div id="firstDiv" style="display: block; background-image: url('./images/fun88-bliss_banner.png'); background-position: 0px 0px; height: 152px; width: 295px;" onclick="newPage('../topgames/index.html');" class="miniBanner1"></div>
                     </div> 
                     
                 </div>
@@ -933,7 +951,7 @@
         </div>
         <div class="middle">
             <div id="dy_Home_Small_Banner_3">
-                <div id="middleDiv" style="display: block; background-image: url('./images/fun88-slots-banner-ag-cn.jpg'); background-position: 0px 0px; width: 295px; height: 245px; cursor: pointer;" href="javascript:void(0);" class="miniBanner2"></div>
+                <div id="middleDiv" style="display: block; background-image: url('./images/fun88-slots-banner-ag-cn.jpg'); background-position: 0px 0px; width: 295px; height: 245px; cursor: pointer;" href="javascript:void(0);" class="miniBanner2" " onclick="newPage('../topgames/index.html');"></div>
             </div> 
             <div id="secondBannerJP"></div>
         </div>
@@ -952,7 +970,7 @@
 
 
     
-<div class="nav"  style="position: relative;top:45px;">
+<div class="nav">
     
     
         <div class="nav_tit msg_bold zh-CN" style="margin-left: 12px; ">
@@ -1009,7 +1027,7 @@
         
         <!-- Footer -->
         
-<div id="footer"  style="position: relative;top:45px;">
+<div id="footer" >
     <div class="footer_middle">
         <a class="padding_space" href="http://www.10010388.com/zh-CN/About-Us">联系我们</a>
         |
@@ -1241,7 +1259,7 @@
 
       
         <div class="loadingLoginGif" style="background-color: rgb(170, 170, 170); display: none; height: 100%; opacity: 0.6; position: fixed; text-align: center; top: 0px; width: 100%; z-index: 5999; left: 0px;">
-            <img alt="" src="./images/loading.gif" height="32" width="32">
+            <img alt="" src="../lib/images/loading.gif" height="32" width="32">
         </div>
         <input name="ctl00$ctl00$hidblackbox" id="hidblackbox"  type="hidden">
     

@@ -1,0 +1,28 @@
+/* Code tidied up by ScrapBook */
+@import url("frameForAll.css");
+body { font-family: Arial,Helvetica,sans-serif,Tahoma; margin: 0px; -moz-text-size-adjust: none; }
+body, .odd_manu, .odd_manu::before { background-color: rgb(50, 130, 190); }
+body[lang="cs"], body[lang="ch"] { font-family: Arial,Helvetica,sans-serif,Tahoma,"新細明體","細明體"; }
+body[lang="cs"] .Tbutton a, body[lang="ch"] .Tbutton a {  }
+a { text-decoration: none; }
+#containerHead { float: left; width: 1000px; clear: both; }
+#containerHead .topbody { background-color: rgb(50, 130, 190); margin-bottom: 10px; }
+.topbg_line { width: 1000px; height: 30px; position: relative; }
+.containertime { white-space: nowrap; font-size: 10px; color: rgb(255, 255, 255); height: 18px; min-width: 172px; float: left; text-align: center; padding-top: 4px; margin-top: 3px; margin-left: 2px; border: 1px solid rgb(50, 130, 190); background-color: rgb(50, 130, 190); }
+.containerHotnews { margin: 3px 0px 0px 4px; border: 1px solid; float: left; }
+.containerHotnews, .odd_manu::before { height: 22px; }
+.containerHotnews span { color: rgb(255, 255, 255); height: 18px; width: 85px; float: left; font-size: 12px; font-weight: bold; text-align: center; padding-top: 4px ! important; background-color: rgb(66, 181, 230); }
+.containerHotnews marquee { color: rgb(255, 255, 255); font-size: 11px; height: 18px; width: 485px; float: left; text-align: center; padding-top: 4px ! important; margin: 0px 4px; }
+.containerHotnews marquee font { color: rgb(252, 214, 5); }
+.resize marquee { width: 702px ! important; }
+.odd_manu { color: rgb(255, 255, 255); height: 20px; font-size: 11px; font-weight: normal ! important; padding: 3px 9px 1px 5px; position: absolute; right: 0px; top: 3px; border-left: 1px solid; }
+.containerHotnews, .odd_manu { border-color: rgb(181, 178, 181); }
+.odd_manu::before { content: ""; float: left; width: 5px; margin: -2px 0px 0px -11px; }
+.Tbutton a { color: rgb(33, 32, 33); font-size: 11px; height: 16px; display: inline-block; line-height: 16px; padding: 0px 4px; margin-right: 2px; cursor: pointer; border-radius: 4px; border-width: 1px; border-style: solid; border-color: rgb(191, 189, 189); background-color: rgb(255, 255, 255); background-image: url("mask2_001.png"); background-repeat: repeat-x; background-position: 0px 0px; text-decoration: none; white-space: nowrap; }
+.Tbutton a:hover { color: rgb(33, 32, 33); border-color: rgb(0, 195, 198); }
+.Tbutton a:hover, .tvStreaming:hover { background-image: url("mask1.png"); background-repeat: repeat-x; background-position: 0px 0px; background-color: rgb(198, 255, 255); }
+input { font-size: 11px; color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif,Tahoma; border: 1px solid rgb(204, 204, 204); padding-left: 3px; background-color: rgb(255, 255, 255); }
+#memberact, .Memberlogin { margin-top: 2px; font-size: 11px; color: rgb(204, 204, 204); float: right; margin-right: 5px; }
+.functionNav { float: left; margin: 8px 0px 0px 18px; }
+.tvStreaming { height: 15px; width: 15px; background: transparent linear-gradient(to bottom, rgb(180, 180, 180) 0%, rgb(141, 141, 141) 100%) repeat scroll 0% 0%; border-radius: 2px; float: left; margin-right: 2px; }
+.tvStreaming a { display: block; width: inherit; height: inherit; }

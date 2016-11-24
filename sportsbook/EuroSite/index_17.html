@@ -1,0 +1,1839 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>AsiaBet88</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="AsiaBet88 offers online sport betting and football betting">
+<meta name="keywords" content="online betting, sport betting, football betting, sports betting, tennis betting, golf betting, online sports betting, soccer betting, online gambling">
+<meta name="viewport" content="width=1024">
+
+<link href="Euro_Index.aspx" rel="shortcut icon">
+<!--[if ! IE]-->
+<link href="Euro_Index.aspx" rel="shortcut icon">
+<!--[endif]-->
+<script type="text/javascript">
+var SiteMode = 2;
+var g_SelectedOddsText="";
+var g_SelectedOddsType="1";
+var IsCssGenerator = true;
+</script>
+<!--[if lte IE 8]>
+<script src="commJS/main/libs/es5-shim.min.js"></script>
+<script src="commJS/main/libs/es5-sham.min.js"></script>
+<![endif]-->
+<script src="react.0.13.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="dateformat.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="Euro_Content.aspx"></script>
+<script language="JavaScript" type="text/javascript" src="M_EuroIndex.js"></script><script language="JavaScript" type="text/javascript" src="Label.ashx"></script><script src="Onebook.System.min.js"></script><script language="JavaScript" type="text/javascript" src="LayoutConfig.js"></script><script language="JavaScript" type="text/javascript" src="GetIdentity.ashx"></script><script src="EuroTempCore.min.js"></script>
+
+
+
+
+
+
+<link href="M_EuroIndex.css" rel="stylesheet" type="text/css">
+
+<link href="euro_layout.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+
+setInterval("clock()",1000);
+$(window).load(function() {GetBetslip();StartRun();});
+function SwitchToAsia() {
+    if(IsLogin)
+    {
+        alert("欲访问亚洲界面，请先推出，然后在语言选项选择亚洲语言(English-Asia / 繁體中文/ 简体中文 / ภาษาไทย / Indonesian)。");
+    }
+    else
+    {
+        if (fFrame.Deposit_SiteMode == 5)
+        {
+            var hostName = window.location.host;
+            fFrame.location.href="../index_12.html"
+            /*"http://" + hostName + "/vender.aspx?lang=cs&iseuro=0&webskintype=0";*/
+        }
+    }
+}
+function CntSwitchToAsia() {
+    alert("欲访问亚洲界面，请先推出，然后在语言选项选择亚洲语言(English-Asia / 繁體中文/ 简体中文 / ภาษาไทย / Indonesian)。");
+}
+
+var memberWin;
+function popMember(url,title) {
+	var w = 820;
+	var h = 600;
+	memberWin = window.open(url,title,'width=' + w + ',height=' + h + ',toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');
+	memberWin.focus();
+	return false;
+}
+
+function popupInfo1(action) {
+    var forwardUrl='';
+    
+    switch(action)
+    {
+        case 'Betlist':
+            forwardUrl='BetList.aspx';
+            break;
+        case 'Statrment':
+            forwardUrl='AllStatement.aspx';
+            break;
+        case 'Result':
+            forwardUrl='Result.aspx';
+            break;
+        case 'News':
+            forwardUrl='MessageHistory.aspx';
+            break;
+        case 'Bonus':
+            forwardUrl='BonusInfo.aspx';
+            break;
+    }
+    
+    newWindow('../'+forwardUrl,'popupInfo',900,693,'scrollbars=yes,resizable=yes');
+}
+
+var windowsHandle = new Array();
+function openWindowsHandle(winName ,Condition,msg, url , winpara ,iscallback,callbackfunc){
+   if(!iscallback && userBrowser() == "Firefox"){
+       setTimeout(function(){openWindowsHandle(winName,Condition,msg,url,winpara,true,callbackfunc)} ,1 );
+       return ;
+   }
+    
+	if (Condition) {
+	    var isNewOpen=false;
+		if (windowsHandle[winName] == null || windowsHandle[winName].closed 
+               || (userBrowser()=="Safari" && windowsHandle[winName].length ==0)) {
+			var strURL = url;
+			if(winpara==null) winpara="";
+			windowsHandle[winName] = window.open(strURL , winName, winpara);
+			isNewOpen=true;
+			if(windowsHandle[winName] ==null) alert(RES_BlockPopMsg);
+		} else {
+			windowsHandle[winName].focus();
+		}
+		if(callbackfunc!=null) callbackfunc(windowsHandle[winName],isNewOpen);
+		
+	} else {
+		alert(msg);
+	}
+}
+function closeAllWindows(){
+   for(var key in windowsHandle){
+      if(windowsHandle[key]!=null){
+         windowsHandle[key].close();
+      }
+   }
+}
+
+function getOpenWindowsHandle(key){
+  return windowsHandle[key];
+}
+function IfrmServicesDisplay()
+{       
+    var CanSeeIframeServices="false";
+    var IframeServicesSrc="";
+    if(CanSeeIframeServices=="true")
+    {
+        $( "#IfrmServices" ).append( "<iframe  height=218 width=191 scrolling=no frameborder=0 src= ></iframe> " );
+    }
+}
+
+
+
+//function deleteResDataObj(){
+//  for(var i=0;i<ResData.length;i++){
+//      delete ResData[i];
+//  }
+//}
+</script>
+<script src="js/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.Event-sportClose:eq(0)').addClass('Event-sportOpen').next().next().hide();
+        $('.Event-sportClose:gt(0)').next().hide();
+        $('.Event-sportClose').click(function () {
+            $(this).addClass('Event-sportOpen').next().slideDown().next().hide();
+            $(this).siblings('.Event-sportOpen').removeClass('Event-sportOpen').next().slideUp().next('.bg_line').show();
+        });
+        if (document.getElementById("event") == null || document.getElementById("event") == "undefined") {
+            document.getElementById("eventfooter").style.display = "none";
+        }
+    });
+</script>
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+.Msg { width: 250px; z-index: 300; position: absolute; float: left; margin-left: 300px; }
+</style>
+</head>
+<!--<body id="Match" onload="Getheadinfo();SwitchSport('T','1');" >-->
+<body id="Match" onload="Getheadinfo(); IfrmServicesDisplay();">
+    <div class="Match">
+        <!-- ContainerHead Begin -->
+        <div class="ContainerHead" id="head"><!----></div>
+        <form name="frmhead" id="frmhead" action="http://sports.10010388.com/EuroSite/head_data.aspx" target="ifrmheadData" style="display: none;"></form>
+        <iframe name="ifrmheadData" id="ifrmheadData" src="index_26.html" height="0" frameborder="0" width="0"></iframe>
+        <!-- ContainerHead End -->
+        <div class="wrapper">
+            <div class="ContainerGlobe">
+                <div class="ContainerMain">
+                    <!-- ContainerLeft Begin -->
+                    <div class="ContainerLeft">
+                        <!-- BEGIN Banner -->
+                        <div id="leftbanner">
+                            
+                            
+                            
+                            <div style="margin-bottom: 5px;">
+                                <script type="text/javascript">
+              function switchToAsia() {
+              var hostName = window.location.host;
+              fFrame.location.href="../index_12.html"
+              }
+              function switchToSingbet() {
+              var hostName = window.location.host;
+              fFrame.location.href="../AsiaSite/index_11.html"
+              }
+            </script><div><a href="javascript: switchToAsia();" target="_self"><img src="bannerswitch1.png" vspace="3" border="0"></a><a href="javascript:switchToSingbet();" target="_self"><img src="bannerswitch2.png" vspace="3" border="0"></a><img src="bannerswitch3.png" vspace="3" border="0"></div>
+                            </div>
+                            
+                        </div>
+                        <!-- BEGIN Banner -->
+                        <iframe name="ifmMenu" id="ifmMenu" src="index_27.html" style="display: none;"></iframe>
+                        <form id="frmMenuData" name="frmMenuData" action="http://sports.10010388.com/EuroSite/menu/Menu_data_euro.aspx" method="post" target="ifmMenu">
+                            <input id="hidMenuType" name="hidMenuType" value="0" type="hidden">
+                            <input id="hidForce" name="hidForce" value="true" type="hidden">
+                        </form>
+                        <div id="menu"><script type="text/javascript">
+var SportName99 = '其他';
+</script>
+<!--/*  title tag*/-->
+
+<div id="subnav_olympic" class="">
+    
+</div>
+
+
+<div class="normal_game">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr>
+            <td id="T_Head" class="menu_R"><a href="JavaScript:" onclick="SwitchMarket('T',false);setMenuTypeChangeOddsDisplay('t');"><span>所有赛事</span></a></td>
+            <td id="L_Head" class="menu_gr">
+                <a href="JavaScript:" onclick="SwitchMarket('L',false);setMenuTypeChangeOddsDisplay('l');">
+                    <span>
+                        <table cellspacing="0" cellpadding="0" border="0" align="center">
+                            <tbody><tr>
+                                <td style="padding-right: 3px;">滚球</td>
+                                <td id="PL_Count" class="menu_liveR" align="center">
+                                    <div style="" id="L_Count">31</div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </span>
+                </a>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="menu_line_left"><img src="../images/spacer.gif" height="3"></div>
+<!--/*  title tag end*/-->
+<span style="display: inline;" id="MenuContainer"></span>
+<!--sport menu-->
+<div id="subnav" style="">
+  <div>
+  <div style="" id="T_Body">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <!--Soccer-->
+      <tbody id="T_1">
+        <tr>
+          <td>
+            <span id="T&amp;1" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','1');">
+                    <span id="T_1_Name">足球</span>
+                </a>
+            </span>
+            <div style="display: none;" id="T_1_body"><div id="T_1_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','world');"><span id="T_1_world_Name">世界</span></a></div><div id="T_1_world_layer" class="Layer3" style="display: none;"><div id="T_1_L_world_10" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','world','10','League')"><span id="T_1_world_10_Name">国际友谊赛 (11)</span></a></div><div id="T_1_L_world_90" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','world','90','League')"><span id="T_1_world_90_Name">国际友谊赛 U21 (3)</span></a></div><div id="T_1_L_world_275" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','world','275','League')"><span id="T_1_world_275_Name">女子国际友谊赛 (1)</span></a></div><div id="T_1_L_world_45155" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','world','45155','League')"><span id="T_1_world_45155_Name">2018 世界杯亚洲外围赛 (6)</span></a></div><div id="T_1_L_world_50761" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','world','50761','League')"><span id="T_1_world_50761_Name">2018 世界杯南美洲外围赛 (5)</span></a></div><div id="T_1_L_world_60385" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','world','60385','League')"><span id="T_1_world_60385_Name">女子世界杯U20 (在巴布亚新几内亚) (4)</span></a></div></div><div id="T_1_C_euro" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','euro');"><span id="T_1_euro_Name">欧洲</span></a></div><div id="T_1_euro_layer" class="Layer3" style="display: none;"><div id="T_1_L_euro_1837" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','euro','1837','League')"><span id="T_1_euro_1837_Name">*欧洲冠军杯 (16)</span></a></div><div id="T_1_L_euro_10132" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','euro','10132','League')"><span id="T_1_euro_10132_Name">*欧足联欧洲联赛 (24)</span></a></div><div id="T_1_L_euro_50191" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','euro','50191','League')"><span id="T_1_euro_50191_Name">*欧洲冠军杯 - 哪一队先开球 (16)</span></a></div><div id="T_1_L_euro_60382" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','euro','60382','League')"><span id="T_1_euro_60382_Name">2017欧洲U21足球锦标赛外围赛 (附加赛 ) (2)</span></a></div></div><div id="T_1_C_eng" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','eng');"><span id="T_1_eng_Name">英格兰</span></a></div><div id="T_1_eng_layer" class="Layer3" style="display: none;"><div id="T_1_L_eng_3" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','eng','3','League')"><span id="T_1_eng_3_Name">*英格兰超级联赛 (20)</span></a></div><div id="T_1_L_eng_79" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','eng','79','League')"><span id="T_1_eng_79_Name">英格兰冠军联赛 (12)</span></a></div><div id="T_1_L_eng_81" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','eng','81','League')"><span id="T_1_eng_81_Name">英格兰甲组联赛 (12)</span></a></div><div id="T_1_L_eng_138" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','eng','138','League')"><span id="T_1_eng_138_Name">英格兰乙组联赛 (12)</span></a></div><div id="T_1_L_eng_29670" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','eng','29670','League')"><span id="T_1_eng_29670_Name">英格兰足总杯 (13)</span></a></div><div id="T_1_L_eng_48422" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','eng','48422','League')"><span id="T_1_eng_48422_Name">*英格兰超级联赛 - 哪一队先开球 (20)</span></a></div><div id="T_1_L_eng_49724" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','eng','49724','League')"><span id="T_1_eng_49724_Name">英格兰联赛杯 (4)</span></a></div><div id="T_1_L_eng_49828" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','eng','49828','League')"><span id="T_1_eng_49828_Name">英格兰足球协会南部全国联赛 (2)</span></a></div></div><div id="T_1_C_esp" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','esp');"><span id="T_1_esp_Name">西班牙</span></a></div><div id="T_1_esp_layer" class="Layer3" style="display: none;"><div id="T_1_L_esp_43" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','esp','43','League')"><span id="T_1_esp_43_Name">*西班牙甲组联赛 (20)</span></a></div><div id="T_1_L_esp_49218" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','esp','49218','League')"><span id="T_1_esp_49218_Name">*西班牙甲组联赛 - 哪一队先开球 (20)</span></a></div></div><div id="T_1_C_ita" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','ita');"><span id="T_1_ita_Name">意大利</span></a></div><div id="T_1_ita_layer" class="Layer3" style="display: none;"><div id="T_1_L_ita_4" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','ita','4','League')"><span id="T_1_ita_4_Name">*意大利甲组联赛 (20)</span></a></div><div id="T_1_L_ita_30" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','ita','30','League')"><span id="T_1_ita_30_Name">意大利乙组联赛 (11)</span></a></div><div id="T_1_L_ita_42752" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','ita','42752','League')"><span id="T_1_ita_42752_Name">意大利职业联赛 (1)</span></a></div><div id="T_1_L_ita_49426" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','ita','49426','League')"><span id="T_1_ita_49426_Name">*意大利甲组联赛 - 哪一队先开球 (21)</span></a></div></div><div id="T_1_C_ger" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','ger');"><span id="T_1_ger_Name">德国</span></a></div><div id="T_1_ger_layer" class="Layer3" style="display: none;"><div id="T_1_L_ger_5" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','ger','5','League')"><span id="T_1_ger_5_Name">*德国甲组联赛 (18)</span></a></div><div id="T_1_L_ger_35" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','ger','35','League')"><span id="T_1_ger_35_Name">德国乙组联赛 (9)</span></a></div><div id="T_1_L_ger_48648" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','ger','48648','League')"><span id="T_1_ger_48648_Name">*德国甲组联赛 - 哪一队先开球 (18)</span></a></div><div id="T_1_L_ger_49268" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','ger','49268','League')"><span id="T_1_ger_49268_Name">德国乙组联赛 - 哪一队先开球 (9)</span></a></div></div><div id="T_1_C_fra" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','fra');"><span id="T_1_fra_Name">法国</span></a></div><div id="T_1_fra_layer" class="Layer3" style="display: none;"><div id="T_1_L_fra_8" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','fra','8','League')"><span id="T_1_fra_8_Name">法国甲组联赛 (10)</span></a></div><div id="T_1_L_fra_92" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','fra','92','League')"><span id="T_1_fra_92_Name">法国乙组联赛 (10)</span></a></div></div><div id="T_1_C_aut" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','aut');"><span id="T_1_aut_Name">奥地利</span></a></div><div id="T_1_aut_layer" class="Layer3" style="display: none;"><div id="T_1_L_aut_44" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','aut','44','League')"><span id="T_1_aut_44_Name">奧地利超级联赛 (5)</span></a></div><div id="T_1_L_aut_48848" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','aut','48848','League')"><span id="T_1_aut_48848_Name">奧地利甲组联赛 (5)</span></a></div></div><div id="T_1_C_den" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','den');"><span id="T_1_den_Name">丹麦</span></a></div><div id="T_1_den_layer" class="Layer3" style="display: none;"><div id="T_1_L_den_103" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','den','103','League')"><span id="T_1_den_103_Name">丹麦甲组联赛 (1)</span></a></div><div id="T_1_L_den_9415" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','den','9415','League')"><span id="T_1_den_9415_Name">丹麦超级联赛 (7)</span></a></div></div><!--<div id="T_1_R" class="navopen" style="display: block;"><a href="JavaScript:SwitchMoreCountry('T','1');">更多地區 (16)</a></div>--><div id="T_1_R" class="subnav-more" style="display: block;"><a href="JavaScript:SwitchMoreCountry('T','1');">更多地區 (16)</a></div><div id="T_1_R_asia" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','asia');"><span id="T_1_asia_Name">亚洲</span></a></div><div id="T_1_asia_layer" class="Layer3" style="display: none;"><div id="T_1_L_asia_26938" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','asia','26938','League')"><span id="T_1_asia_26938_Name">东亚杯女子足球赛外围赛 (1)</span></a></div></div><div id="T_1_R_aus" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','aus');"><span id="T_1_aus_Name">澳大利亚</span></a></div><div id="T_1_aus_layer" class="Layer3" style="display: none;"><div id="T_1_L_aus_404" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','aus','404','League')"><span id="T_1_aus_404_Name">澳洲甲组联赛 (5)</span></a></div></div><div id="T_1_R_bel" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','bel');"><span id="T_1_bel_Name">比利时</span></a></div><div id="T_1_bel_layer" class="Layer3" style="display: none;"><div id="T_1_L_bel_57328" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','bel','57328','League')"><span id="T_1_bel_57328_Name">比利时甲组联赛 (8)</span></a></div></div><div id="T_1_R_bra" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','bra');"><span id="T_1_bra_Name">巴西</span></a></div><div id="T_1_bra_layer" class="Layer3" style="display: none;"><div id="T_1_L_bra_252" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','bra','252','League')"><span id="T_1_bra_252_Name">巴西甲组联赛 (10)</span></a></div></div><div id="T_1_R_chi" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','chi');"><span id="T_1_chi_Name">智利</span></a></div><div id="T_1_chi_layer" class="Layer3" style="display: none;"><div id="T_1_L_chi_5601" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','chi','5601','League')"><span id="T_1_chi_5601_Name">智利杯 (1)</span></a></div></div><div id="T_1_R_cze" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','cze');"><span id="T_1_cze_Name">捷克</span></a></div><div id="T_1_cze_layer" class="Layer3" style="display: none;"><div id="T_1_L_cze_49262" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','cze','49262','League')"><span id="T_1_cze_49262_Name">捷克甲组联赛 (8)</span></a></div></div><div id="T_1_R_nld" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','nld');"><span id="T_1_nld_Name">荷兰</span></a></div><div id="T_1_nld_layer" class="Layer3" style="display: none;"><div id="T_1_L_nld_20" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','nld','20','League')"><span id="T_1_nld_20_Name">荷兰甲组联赛 (9)</span></a></div><div id="T_1_L_nld_13970" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','nld','13970','League')"><span id="T_1_nld_13970_Name">荷兰乙组联赛 (10)</span></a></div></div><div id="T_1_R_nor" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','nor');"><span id="T_1_nor_Name">挪威</span></a></div><div id="T_1_nor_layer" class="Layer3" style="display: none;"><div id="T_1_L_nor_85" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','nor','85','League')"><span id="T_1_nor_85_Name">挪威杯 (1)</span></a></div></div><div id="T_1_R_pol" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','pol');"><span id="T_1_pol_Name">波兰</span></a></div><div id="T_1_pol_layer" class="Layer3" style="display: none;"><div id="T_1_L_pol_9476" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','pol','9476','League')"><span id="T_1_pol_9476_Name">波兰超級联赛 (8)</span></a></div></div><div id="T_1_R_prt" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','prt');"><span id="T_1_prt_Name">葡萄牙</span></a></div><div id="T_1_prt_layer" class="Layer3" style="display: none;"><div id="T_1_L_prt_22" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','prt','22','League')"><span id="T_1_prt_22_Name">葡萄牙超级联赛 (9)</span></a></div></div><div id="T_1_R_rus" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','rus');"><span id="T_1_rus_Name">俄罗斯</span></a></div><div id="T_1_rus_layer" class="Layer3" style="display: none;"><div id="T_1_L_rus_127" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','rus','127','League')"><span id="T_1_rus_127_Name">俄罗斯超级联赛 (8)</span></a></div></div><div id="T_1_R_sco" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','sco');"><span id="T_1_sco_Name">苏格兰</span></a></div><div id="T_1_sco_layer" class="Layer3" style="display: none;"><div id="T_1_L_sco_41565" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','sco','41565','League')"><span id="T_1_sco_41565_Name">苏格兰超级联赛 (6)</span></a></div></div><div id="T_1_R_sui" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','sui');"><span id="T_1_sui_Name">瑞士</span></a></div><div id="T_1_sui_layer" class="Layer3" style="display: none;"><div id="T_1_L_sui_45" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','sui','45','League')"><span id="T_1_sui_45_Name">瑞士超级联赛 (5)</span></a></div></div><div id="T_1_R_swe" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','swe');"><span id="T_1_swe_Name">瑞典</span></a></div><div id="T_1_swe_layer" class="Layer3" style="display: none;"><div id="T_1_L_swe_680" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','swe','680','League')"><span id="T_1_swe_680_Name">瑞典甲组联赛 (附加赛) (1)</span></a></div></div><div id="T_1_R_tur" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','tur');"><span id="T_1_tur_Name">土耳其</span></a></div><div id="T_1_tur_layer" class="Layer3" style="display: none;"><div id="T_1_L_tur_60" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','tur','60','League')"><span id="T_1_tur_60_Name">土耳其超级联赛 (9)</span></a></div></div><div id="T_1_R_usa" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','1','usa');"><span id="T_1_usa_Name">美国</span></a></div><div id="T_1_usa_layer" class="Layer3" style="display: none;"><div id="T_1_L_usa_23" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','1','usa','23','League')"><span id="T_1_usa_23_Name">美国職业大联盟联赛 (附加赛) (2)</span></a></div></div><div id="T_1_OT" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchOutright('T','1','OT');"><span id="T_1_OT_Name">优胜冠军</span></a></div></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Horse Fixed Odds-->
+      <tbody id="T_154" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;154" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','154');">
+                    <span id="T_154_Name">赛马固定赔率</span>
+                </a>
+            </span>
+            <div style="display: none;" id="T_154_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Horse Race & Greyhounds-->
+      <tbody style="" id="T_150">
+        <tr>
+            <td>
+                <span id="T&amp;150" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','151');">
+                    <span id="T_150_Name">赛事</span> </a></span>
+                <div style="display: none;" id="T_150_body">                    
+                    <div id="T&amp;151" class="subnav-link" style="display: block;">
+                        <a href="JavaScript:SwitchSport('T','151')"><span class="submenu">赛马</span>
+                            <span id="151_A_Cnt" class="contrd"></span></a>
+                    </div>
+                    <div id="T&amp;152" class="subnav-link" style="display: none;">
+                        <a href="JavaScript:SwitchSport('T','152')"><span class="submenu">赛狗</span>
+                            <span id="152_A_Cnt" class="contrd"></span></a>
+                    </div>                    
+                    <div id="T&amp;153" class="subnav-link" style="display: none;">
+                        <a href="JavaScript:SwitchSport('T','153')"><span class="submenu">赛马车</span>
+                            <span id="153_A_Cnt" class="contrd"></span></a>
+                    </div>                    
+                </div>
+            </td>
+        </tr>
+      </tbody>
+      <!--Virtual Sports-->
+      <tbody style="display: none;" id="T_18X">
+        <tr>
+          <td>
+            <span id="T&amp;18X" class="nav"><a href="javascript:void(0);" onclick="JavaScript:SwitchSport('T','180');">
+                <span id="T_18X_Name">虚拟运动</span></a></span>
+            <div style="display: none;" id="T_18X_body">
+              
+              <div id="T&amp;180" class="subnav-link" style="display: block;">
+                <a href="JavaScript:SwitchSport('T','180')">
+                  <span class="submenu">虚拟足球</span></a>
+              </div>
+              <div id="T&amp;181" class="subnav-link" style="display: block;">
+                <a href="JavaScript:SwitchSport('T','181')">
+                  <span class="submenu">虚拟赛马</span></a>
+              </div>
+              <div id="T&amp;186" class="subnav-link" style="display: block;">
+                <a href="JavaScript:SwitchSport('T','186')">
+                  <span class="submenu">虚拟网球</span></a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Basketball-->
+      <tbody id="T_2">
+        <tr>
+            <td>
+                <span id="T&amp;2" class="nav"> 
+                    <a href="javascript:" onclick="JavaScript:SwitchSport('T','2');">
+                        <span id="T_2_Name">篮球</span> 
+                    </a>
+                </span>
+                <div style="display: none;" id="T_2_body"><div id="T_2_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','2','world');"><span id="T_2_world_Name">世界</span></a></div><div id="T_2_world_layer" class="Layer3" style="display: none;"><div id="T_2_L_world_60483" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','2','world','60483','League')"><span id="T_2_world_60483_Name">FIBA U18 亚洲锦标赛女子(在泰国) (1)</span></a></div></div><div id="T_2_C_usa" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','2','usa');"><span id="T_2_usa_Name">美国</span></a></div><div id="T_2_usa_layer" class="Layer3" style="display: none;"><div id="T_2_L_usa_6476" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','2','usa','6476','League')"><span id="T_2_usa_6476_Name">NCAA 美国大学篮球(男子) (1)</span></a></div><div id="T_2_L_usa_56038" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','2','usa','56038','League')"><span id="T_2_usa_56038_Name">*美国职业篮球赛 (8)</span></a></div></div><!--<div id="T_2_R" class="navopen" style="display: block;"><a href="JavaScript:SwitchMoreCountry('T','2');">更多地區 (1)</a></div>--><div id="T_2_R" class="subnav-more" style="display: block;"><a href="JavaScript:SwitchMoreCountry('T','2');">更多地區 (1)</a></div><div id="T_2_R_kor" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','2','kor');"><span id="T_2_kor_Name">韩国</span></a></div><div id="T_2_kor_layer" class="Layer3" style="display: none;"><div id="T_2_L_kor_6130" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','2','kor','6130','League')"><span id="T_2_kor_6130_Name">南韩WKBL联赛 (1)</span></a></div><div id="T_2_L_kor_11378" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','2','kor','11378','League')"><span id="T_2_kor_11378_Name">南韩WKBL联赛(第一节) (1)</span></a></div></div></div>
+            </td>
+        </tr>
+      </tbody>
+      <!--Football -->
+      <tbody id="T_3">
+        <tr>
+          <td>
+            <span id="T&amp;3" class="nav"> 
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','3');">
+                    <span id="T_3_Name">美式足球</span>
+                </a>
+            </span>
+            <div style="display: none;" id="T_3_body"><div id="T_3_C_usa" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','3','usa');"><span id="T_3_usa_Name">美国</span></a></div><div id="T_3_usa_layer" class="Layer3" style="display: none;"><div id="T_3_L_usa_629" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','3','usa','629','League')"><span id="T_3_usa_629_Name">美国橄榄球联盟球赛 (15)</span></a></div></div></div>
+          </td>              
+        </tr>
+      </tbody>
+      <!--Rugby -->
+      <tbody id="T_26" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;26" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','26');">
+                    <span id="T_26_Name">橄榄球</span> 
+                </a>
+            </span>
+            <div style="display: none;" id="T_26_body"></div>
+         </td>              
+        </tr>
+      </tbody>
+      <!--Ice Hockey-->
+      <tbody id="T_4">
+        <tr>
+          <td>
+            <span id="T&amp;4" class="nav"> 
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','4');">
+                    <span id="T_4_Name">冰上曲棍球</span>
+                </a>
+            </span>
+            <div style="display: none;" id="T_4_body"><div id="T_4_C_usa" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','4','usa');"><span id="T_4_usa_Name">美国</span></a></div><div id="T_4_usa_layer" class="Layer3" style="display: none;"><div id="T_4_L_usa_640" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','4','usa','640','League')"><span id="T_4_usa_640_Name">美式冰上曲棍球联盟球赛 - (包括加时赛与点球赛) (1)</span></a></div><div id="T_4_L_usa_4001" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','4','usa','4001','League')"><span id="T_4_usa_4001_Name">美式冰上曲棍球联盟球赛 - (不包括加时赛与点球赛) (1)</span></a></div><div id="T_4_L_usa_15348" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','4','usa','15348','League')"><span id="T_4_usa_15348_Name">美式冰上曲棍球联盟球赛 - (第一节) (1)</span></a></div></div></div>
+          </td> 
+        </tr>
+      </tbody>
+      <!--Field Hockey-->
+      <tbody id="T_28" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;28" class="nav"> 
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','28');">
+                    <span id="T_28_Name">曲棍球</span> 
+                </a>
+            </span>
+            <div style="display: none;" id="T_28_body"></div>
+          </td>               
+        </tr>
+      </tbody>
+      <!--Tennis-->
+      <tbody id="T_5">
+        <tr>
+          <td>
+            <span id="T&amp;5" class="nav"> 
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','5');">
+                    <span id="T_5_Name">网球</span> 
+                </a>
+            </span>
+            <div style="display: none;" id="T_5_body"><div id="T_5_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','5','world');"><span id="T_5_world_Name">世界</span></a></div><div id="T_5_world_layer" class="Layer3" style="display: none;"><div id="T_5_L_world_15195" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','5','world','15195','League')"><span id="T_5_world_15195_Name">ATP - 巴克莱世界巡回赛年终总决赛 (2)</span></a></div><div id="T_5_L_world_15202" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','5','world','15202','League')"><span id="T_5_world_15202_Name">男子双打 - 巴克莱世界巡回赛年终总决赛 (2)</span></a></div><div id="T_5_L_world_32808" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','5','world','32808','League')"><span id="T_5_world_32808_Name">ATP - 巴克莱世界巡回赛年终总决赛 获胜者 (1)</span></a></div><div id="T_5_L_world_43560" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','5','world','43560','League')"><span id="T_5_world_43560_Name">WTA - Engie Open de Limoges (2)</span></a></div><div id="T_5_L_world_43570" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','5','world','43570','League')"><span id="T_5_world_43570_Name">WTA - 台北海硕国际挑战赛 (12)</span></a></div></div><div id="T_5_OT" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchOutright('T','5','OT');"><span id="T_5_OT_Name">优胜冠军</span></a></div></div>
+          </td> 
+        </tr>
+      </tbody>
+      <!--Volleyball-->
+      <tbody id="T_6" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;6" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','6');">
+                    <span id="T_6_Name">排球</span> 
+                </a>
+            </span>
+            <div style="display: none;" id="T_6_body"></div>
+          </td>               
+        </tr>
+      </tbody>
+      <!--Billiard-->
+      <tbody style="" id="T_7">
+        <tr>
+          <td>
+            <span id="T&amp;7" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','7');">
+                    <span id="T_7_Name">斯诺克/台球</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_7_body"><div id="T_7_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','7','world');"><span id="T_7_world_Name">世界</span></a></div><div id="T_7_world_layer" class="Layer3" style="display: none;"><div id="T_7_L_world_60528" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','7','world','60528','League')"><span id="T_7_world_60528_Name">Northern Ireland Open (7局4胜) (30)</span></a></div><div id="T_7_L_world_60544" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','7','world','60544','League')"><span id="T_7_world_60544_Name">Northern Ireland Open (第1局) (12)</span></a></div></div><div id="T_7_OT" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchOutright('T','7','OT');"><span id="T_7_OT_Name">优胜冠军</span></a></div></div>
+         </td>
+        </tr>
+      </tbody>
+      <!--Baseball-->
+      <tbody style="display: none;" id="T_8">
+        <tr>
+          <td>
+            <span id="T&amp;8" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','8');">
+                    <span id="T_8_Name">棒球</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_8_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Badminton-->
+      <tbody style="display: none;" id="T_9">
+        <tr>
+          <td>
+            <span id="T&amp;9" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','9');">
+                    <span id="T_9_Name">羽毛球</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_9_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Athletics-->
+      <tbody style="display: none;" id="T_22">
+        <tr>
+          <td>
+            <span id="T&amp;22" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','22');">
+                    <span id="T_22_Name">田径</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_22_body"></div>
+         </td>
+        </tr>
+      </tbody>
+      <!--Swimming-->
+      <tbody id="T_12" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;12" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','12');">
+                    <span id="T_12_Name">游泳</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_12_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Boxing  -->
+      <tbody id="T_16" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;16" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','16');">
+                    <span id="T_16_Name">拳击</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_16_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Golf-->
+      <tbody id="T_10" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;10" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','10');">
+                    <span id="T_10_Name">高尔夫球</span> 
+                </a>
+            </span>
+            <div style="display: none;" id="T_10_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Motorsports-->
+      <tbody id="T_11">
+        <tr>
+          <td>
+            <span id="T&amp;11" class="navclose">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','11');">
+                    <span id="T_11_Name">赛车</span>  
+                </a>
+            </span>
+            <div style="" id="T_11_body"><div id="T_11_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','11','world');"><span id="T_11_world_Name">世界</span></a></div><div id="T_11_world_layer" class="Layer3" style="display: none;"><div id="T_11_L_world_51825" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','11','world','51825','League')"><span id="T_11_world_51825_Name">F1 - 2016 世界车手总冠军 获胜者 (1)</span></a></div></div></div>
+         </td>
+        </tr>
+      </tbody>
+      <!--Water Polo  -->
+      <tbody id="T_14" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;14" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','14');">
+                    <span id="T_14_Name">水球</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_14_body"></div>
+         </td>
+        </tr>
+      </tbody>
+      <!--Diving-->
+      <tbody id="T_15" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;15" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','15');">
+                    <span id="T_15_Name">跳水</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_15_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Archery  -->
+      <tbody id="T_17" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;17" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','17');">
+                    <span id="T_17_Name">射箭</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_17_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Table Tennis  -->
+      <tbody id="T_18" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;18" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','18');">
+                    <span id="T_18_Name">乒乓球</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_18_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Weightlifting   -->
+      <tbody id="T_19" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;19" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','19');">
+                    <span id="T_19_Name">举重</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_19_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Canoeing -->
+      <tbody id="T_20" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;20" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','20');">
+                    <span id="T_20_Name">皮划艇</span>  
+               </a>
+            </span>
+            <div style="display: none;" id="T_20_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Gymnastics  -->
+      <tbody id="T_21" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;21" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','21');">
+                    <span id="T_21_Name">体操</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_21_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Equestrian  -->
+      <tbody id="T_23" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;23" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','23');">
+                    <span id="T_23_Name">马术</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_23_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Handball   -->
+      <tbody id="T_24" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;24" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','24');">
+                    <span id="T_24_Name">手球</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_24_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!-- Darts -->
+      <tbody id="T_25">
+        <tr>
+          <td>
+            <span id="T&amp;25" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','25');">
+                    <span id="T_25_Name">飞镖</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_25_body"><div id="T_25_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','25','world');"><span id="T_25_world_Name">世界</span></a></div><div id="T_25_world_layer" class="Layer3" style="display: none;"><div id="T_25_L_world_10877" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','25','world','10877','League')"><span id="T_25_world_10877_Name">飞镖大满贯赛(轮次获胜者 - 九轮五胜) (8)</span></a></div></div></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Cricket-->
+      <tbody id="T_27" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;27" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','27');">
+                    <span id="T_27_Name">板球</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_27_body"></div>
+          </td>
+        </tr>
+      </tbody>
+	  <!--India Cricket-->
+	  <tbody id="T_50">
+        <tr>
+          <td>
+            <span id="T&amp;50" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','50');">
+                    <span id="T_50_Name">板球</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_50_body"><div id="T_50_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','50','world');"><span id="T_50_world_Name">世界</span></a></div><div id="T_50_world_layer" class="Layer3" style="display: none;"><div id="T_50_L_world_60315" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','50','world','60315','League')"><span id="T_50_world_60315_Name">孟加拉国超级联赛 (2)</span></a></div><div id="T_50_L_world_60540" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','50','world','60540','League')"><span id="T_50_world_60540_Name">Zimbabwe Tri-Series (第一场决赛) (1)</span></a></div><div id="T_50_L_world_60541" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','50','world','60541','League')"><span id="T_50_world_60541_Name">Zimbabwe Tri-Series (第一场决赛) - (跑位总得分) (2)</span></a></div><div id="T_50_L_world_60542" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','50','world','60542','League')"><span id="T_50_world_60542_Name">Zimbabwe Tri-Series (第一场决赛) - 第一轮跑位总得分 (2)</span></a></div><div id="T_50_L_world_60543" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','50','world','60543','League')"><span id="T_50_world_60543_Name">Zimbabwe Tri-Series (第一场决赛) - 第一轮最高得分 (1)</span></a></div></div><div id="T_50_OT" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchOutright('T','50','OT');"><span id="T_50_OT_Name">优胜冠军</span></a></div></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Winter Sport-->
+      <tbody id="T_29" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;29" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','29');">
+                    <span id="T_29_Name">冬季运动</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_29_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Sqaush-->
+      <tbody id="T_30" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;30" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','30');">
+                    <span id="T_30_Name">壁球</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_30_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Entertainment-->
+      <tbody id="T_31" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;31" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','31');">
+                    <span id="T_31_Name">娱乐</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_31_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Cycling-->
+        <tbody id="T_33" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;33" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','33');">
+                <span id="T_33_Name">自行车</span> </a></span>
+              <div style="display: none;" id="T_33_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Fencing-->
+        <tbody id="T_34" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;34" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','34');">
+                <span id="T_34_Name">击剑</span> </a></span>
+              <div style="display: none;" id="T_34_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Judo-->
+        <tbody id="T_35" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;35" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','35');">
+                <span id="T_35_Name">柔道</span> </a></span>
+              <div style="display: none;" id="T_35_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Modern Pentathlon-->
+        <tbody id="T_36" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;36" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','36');">
+                <span id="T_36_Name">现代五项</span> </a></span>
+              <div style="display: none;" id="T_36_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Rowing-->
+        <tbody id="T_37" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;37" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','37');">
+                <span id="T_37_Name">划船</span> </a></span>
+              <div style="display: none;" id="T_37_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Sailing-->
+        <tbody id="T_38" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;38" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','38');">
+                <span id="T_38_Name">帆船</span> </a></span>
+              <div style="display: none;" id="T_38_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Shooting-->
+        <tbody id="T_39" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;39" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','39');">
+                <span id="T_39_Name">射击</span> </a></span>
+              <div style="display: none;" id="T_39_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Taekwondo-->
+        <tbody id="T_40" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;40" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','40');">
+                <span id="T_40_Name">跆拳道</span> </a></span>
+              <div style="display: none;" id="T_40_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Triathlon-->
+        <tbody id="T_41" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;41" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','41');">
+                <span id="T_41_Name">铁人三项</span> </a></span>
+              <div style="display: none;" id="T_41_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Wrestling-->
+        <tbody id="T_42" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;42" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','42');">
+                <span id="T_42_Name">角力</span> </a></span>
+              <div style="display: none;" id="T_42_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--E Sports-->
+        <tbody id="T_43">
+          <tr>
+            <td>
+              <span id="T&amp;43" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','43');">
+                <span id="T_43_Name">电子竞技</span> </a></span>
+              <div style="display: none;" id="T_43_body"><div id="T_43_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('T','43','world');"><span id="T_43_world_Name">世界</span></a></div><div id="T_43_world_layer" class="Layer3" style="display: none;"><div id="T_43_L_world_51239" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','43','world','51239','League')"><span id="T_43_world_51239_Name">英雄联盟 - KeSPA Cup (比赛获胜者) (2)</span></a></div><div id="T_43_L_world_51240" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','43','world','51240','League')"><span id="T_43_world_51240_Name">英雄联盟 - KeSPA Cup (地图一) (2)</span></a></div><div id="T_43_L_world_51241" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','43','world','51241','League')"><span id="T_43_world_51241_Name">英雄联盟 - KeSPA Cup (地图二) (2)</span></a></div><div id="T_43_L_world_51242" class="subnav-link2" style="display: none;"><a href="JavaScript:ShowLevel3('T','43','world','51242','League')"><span id="T_43_world_51242_Name">英雄联盟 - KeSPA Cup (地图三) (2)</span></a></div></div><div id="T_43_OT" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchOutright('T','43','OT');"><span id="T_43_OT_Name">优胜冠军</span></a></div></div>
+            </td>
+          </tr>
+        </tbody>
+		<!--Muay Thai-->
+        <tbody id="T_44" style="display: none;">
+          <tr>
+            <td>
+              <span id="T&amp;44" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('T','44');">
+                <span id="T_44_Name">泰拳</span> </a></span>
+              <div style="display: none;" id="T_44_body"></div>
+            </td>
+          </tr>
+        </tbody>
+      <!--Other Sports-->
+      <tbody id="T_99" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;99" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','99');">
+                    <span id="T_99_Name">其他</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_99_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--politics -->
+      <tbody id="T_13" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;13" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','13');">
+                    <span id="T_13_Name">政治</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_13_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Finance-->
+      <tbody id="T_201" style="display: none;">
+        <tr>
+          <td>
+            <span id="T&amp;201" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('T','201');">
+                    <span id="T_201_Name">金融</span>  
+                </a>
+            </span>
+            <div style="display: none;" id="T_201_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Outright-->
+      <tbody style="" id="T_OT">
+        <tr>
+          <td>
+            <span id="T&amp;OT" class="navnone">
+                <a href="javascript:" onclick="JavaScript:SwitchOutright('T','OT');">
+                    <span id="T_OT_Name">优胜冠军</span>
+                </a>
+            </span>
+          </td>
+        </tr>
+      </tbody>      
+      <!--Mix Parlay
+      <tbody style="" id="T_MP">
+        <tr>
+          <td>
+            <span id="T&MP" class="navnone">
+                <a href="javascript:" onclick="JavaScript:SwitchMixParlay('T','MP');">
+                    <span id="T_MP_Name">混合过关</span>
+                </a>
+            </span>
+         </td>
+        </tr>
+      </tbody> -->
+    </table>
+  </div>
+  
+  <div style="display: none;" id="L_Body">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <!--Soccer-->
+      <tbody id="L_1">
+        <tr>
+          <td>
+            <span id="L&amp;1" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','1');">
+                    <span id="L_1_Name">足球</span>
+                </a>
+            </span>
+            <div style="" id="L_1_body"><div id="L_1_C_usa" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('L','1','usa');"><span id="L_1_usa_Name">美国</span></a></div><div id="L_1_usa_layer" class="Layer3" style="display: none;"><div id="L_1_M_usa_20826111" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','1','usa','20826111','Match')"><span id="L_1_usa_20826111_Name">纽约宇宙 (点球) vs 恩戴十一 (点球)</span></a></div><div id="L_1_M_usa_20826113" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','1','usa','20826113','Match')"><span id="L_1_usa_20826113_Name">纽约宇宙 (点球) vs 恩戴十一 (点球)</span></a></div><div id="L_1_M_usa_20826115" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','1','usa','20826115','Match')"><span id="L_1_usa_20826115_Name">纽约宇宙 (加时) vs 恩戴十一 (加时)</span></a></div></div></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Basketball-->
+      <tbody id="L_2">
+        <tr>
+            <td>
+                <span id="L&amp;2" class="nav"> 
+                    <a href="javascript:" onclick="JavaScript:SwitchSport('L','2');">
+                        <span id="L_2_Name">篮球</span> 
+                    </a>
+                </span>
+                <div style="" id="L_2_body"><div id="L_2_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('L','2','world');"><span id="L_2_world_Name">世界</span></a></div><div id="L_2_world_layer" class="Layer3" style="display: none;"><div id="L_2_M_world_20778819" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','world','20778819','Match')"><span id="L_2_world_20778819_Name">香港U18 (女) vs 哈萨克斯坦U18 (女)</span></a></div><div id="L_2_M_world_20780365" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','world','20780365','Match')"><span id="L_2_world_20780365_Name">香港U18 (女)(第三节) vs 哈萨克斯坦U18 (女)(第三节)</span></a></div></div><div id="L_2_C_usa" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('L','2','usa');"><span id="L_2_usa_Name">美国</span></a></div><div id="L_2_usa_layer" class="Layer3" style="display: none;"><div id="L_2_M_usa_20806867" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20806867','Match')"><span id="L_2_usa_20806867_Name">佛罗里达大学鳄鱼队 vs 默瑟大学熊队</span></a></div><div id="L_2_M_usa_20806878" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20806878','Match')"><span id="L_2_usa_20806878_Name">密苏里大学虎队 vs 阿拉巴马农工大学斗牛犬队</span></a></div><div id="L_2_M_usa_20806882" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20806882','Match')"><span id="L_2_usa_20806882_Name">内布拉斯加大学玉米剥皮者队 vs 萨克拉门托州立大学黄蜂队</span></a></div><div id="L_2_M_usa_20804907" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20804907','Match')"><span id="L_2_usa_20804907_Name">明尼苏达森林狼 vs 洛杉矶湖人</span></a></div><div id="L_2_M_usa_20804909" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20804909','Match')"><span id="L_2_usa_20804909_Name">金州勇士 vs 菲尼克斯太阳</span></a></div><div id="L_2_M_usa_20804912" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20804912','Match')"><span id="L_2_usa_20804912_Name">波特兰开拓者 vs 丹佛掘金</span></a></div><div id="L_2_M_usa_20804958" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20804958','Match')"><span id="L_2_usa_20804958_Name">开拓者(第一节) vs 掘金(第一节)</span></a></div><div id="L_2_M_usa_20805122" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20805122','Match')"><span id="L_2_usa_20805122_Name">勇士(第三节) vs 太阳(第三节)</span></a></div><div id="L_2_M_usa_20805127" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20805127','Match')"><span id="L_2_usa_20805127_Name">开拓者(第三节) vs 掘金(第三节)</span></a></div><div id="L_2_M_usa_20805323" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20805323','Match')"><span id="L_2_usa_20805323_Name">勇士最后得分(第三节) vs 太阳最后得分(第三节)</span></a></div><div id="L_2_M_usa_20805374" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20805374','Match')"><span id="L_2_usa_20805374_Name">开拓者最后得分(第一节) vs 掘金最后得分(第一节)</span></a></div><div id="L_2_M_usa_20805377" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20805377','Match')"><span id="L_2_usa_20805377_Name">开拓者最后得分(第二节) vs 掘金最后得分(第二节)</span></a></div><div id="L_2_M_usa_20805380" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20805380','Match')"><span id="L_2_usa_20805380_Name">开拓者最后得分(第三节) vs 掘金最后得分(第三节)</span></a></div><div id="L_2_M_usa_20805162" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20805162','Match')"><span id="L_2_usa_20805162_Name">波特兰开拓者 vs 丹佛掘金</span></a></div><div id="L_2_M_usa_20823513" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20823513','Match')"><span id="L_2_usa_20823513_Name">达米安-利拉德(开拓者) vs 达尼罗-加里纳利(掘金)</span></a></div><div id="L_2_M_usa_20805283" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','2','usa','20805283','Match')"><span id="L_2_usa_20805283_Name">勇士先得20分(第三节) vs 太阳先得20分(第三节)</span></a></div></div></div>
+            </td>
+        </tr>
+      </tbody>
+      <!--Football -->
+      <tbody id="L_3">
+        <tr>
+          <td>
+            <span id="L&amp;3" class="nav"> 
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','3');">
+                    <span id="L_3_Name">美式足球</span> 
+                </a>
+            </span>
+            <div style="" id="L_3_body"><div id="L_3_C_usa" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('L','3','usa');"><span id="L_3_usa_Name">美国</span></a></div><div id="L_3_usa_layer" class="Layer3" style="display: none;"><div id="L_3_M_usa_20716177" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','3','usa','20716177','Match')"><span id="L_3_usa_20716177_Name">新英格兰爱国者队 vs 西雅图海鹰队</span></a></div></div></div>
+          </td>              
+        </tr>
+      </tbody>
+      <!--Rugby -->
+      <tbody id="L_26" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;26" class="nav"> 
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','26');">
+                    <span id="L_26_Name">橄榄球</span> 
+                </a>
+            </span>
+            <div style="" id="L_26_body"></div>
+          </td>              
+        </tr>
+      </tbody>
+      <!--Ice Hockey-->
+      <tbody id="L_4">
+        <tr>
+          <td>
+            <span id="L&amp;4" class="nav"> 
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','4');">
+                    <span id="L_4_Name">冰上曲棍球</span> 
+                </a>
+            </span>
+            <div style="" id="L_4_body"><div id="L_4_C_usa" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('L','4','usa');"><span id="L_4_usa_Name">美国</span></a></div><div id="L_4_usa_layer" class="Layer3" style="display: none;"><div id="L_4_M_usa_20790118" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','4','usa','20790118','Match')"><span id="L_4_usa_20790118_Name">科罗拉多雪崩队 vs 波士顿棕熊队</span></a></div><div id="L_4_M_usa_20790119" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','4','usa','20790119','Match')"><span id="L_4_usa_20790119_Name">芝加哥黑鹰队 vs 蒙特利尔加拿大队</span></a></div></div></div>
+          </td> 
+        </tr>
+      </tbody>
+      <!--Field Hockey-->
+      <tbody id="L_28" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;28" class="nav"> 
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','28');">
+                    <span id="L_28_Name">曲棍球</span> 
+                </a>
+            </span>
+            <div style="" id="L_28_body"></div>
+          </td>               
+        </tr>
+      </tbody>
+      <!--Tennis-->
+      <tbody id="L_5">
+        <tr>
+          <td>
+            <span id="L&amp;5" class="nav"> 
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','5');">
+                    <span id="L_5_Name">网球</span> 
+                </a>
+            </span>
+            <div style="" id="L_5_body"><div id="L_5_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('L','5','world');"><span id="L_5_world_Name">世界</span></a></div><div id="L_5_world_layer" class="Layer3" style="display: none;"><div id="L_5_M_world_20821984" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','5','world','20821984','Match')"><span id="L_5_world_20821984_Name">伊藤龙马(日本) vs Yusuke Watanuki (日本)</span></a></div><div id="L_5_M_world_20822612" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','5','world','20822612','Match')"><span id="L_5_world_20822612_Name">瓦拉查雅-沃特安查伊(泰国) vs Greet Minnen (比利时)</span></a></div><div id="L_5_M_world_20822616" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','5','world','20822616','Match')"><span id="L_5_world_20822616_Name">阿什利-巴特伊(澳洲) vs 尼查-勒比达信猜(泰国)</span></a></div></div></div>
+          </td> 
+        </tr>
+      </tbody>
+      <!--Volleyball-->
+      <tbody id="L_6" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;6" class="nav"> 
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','6');"> 
+                    <span id="L_6_Name">排球</span>
+                </a>
+            </span>
+            <div style="" id="L_6_body"></div>
+          </td>               
+        </tr>
+      </tbody>
+      <!--Billiard-->
+      <tbody id="L_7" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;7" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','7');">
+                    <span id="L_7_Name">斯诺克/台球</span>  
+                </a>
+            </span>
+            <div style="" id="L_7_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Baseball-->
+      <tbody style="display: none;" id="L_8">
+        <tr>
+          <td>
+            <span id="L&amp;8" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','8');">
+                    <span id="L_8_Name">棒球</span>  
+                </a>
+            </span>
+            <div style="" id="L_8_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Badminton-->
+      <tbody style="display: none;" id="L_9">
+        <tr>
+          <td>
+            <span id="L&amp;9" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','9');">
+                    <span id="L_9_Name">羽毛球</span>  
+                </a>
+            </span>
+            <div style="" id="L_9_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Athletics-->
+      <tbody style="display: none;" id="L_22">
+        <tr>
+          <td>
+            <span id="L&amp;22" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','22');">
+                    <span id="L_22_Name">田径</span>  
+                </a>
+            </span>
+            <div style="" id="L_22_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Swimming-->
+      <tbody id="L_12" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;12" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','12');">
+                    <span id="L_12_Name">游泳</span>  
+                </a>
+            </span>
+            <div style="" id="L_12_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Boxing  -->
+      <tbody id="L_16" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;16" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','16');">
+                    <span id="L_16_Name">拳击</span>  
+                </a>
+            </span>
+            <div style="" id="L_16_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Golf-->
+      <tbody id="L_10" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;10" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','10');">
+                    <span id="L_10_Name">高尔夫球</span>  
+                </a>
+            </span>
+            <div style="" id="L_10_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Motorsports-->
+      <tbody id="L_11" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;11" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','11');">
+                    <span id="L_11_Name">赛车</span>  
+                </a>
+            </span>
+            <div style="" id="L_11_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Water Polo  -->
+      <tbody id="L_14" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;14" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','14');">
+                    <span id="L_14_Name">水球</span>  
+                </a>
+            </span>
+            <div style="" id="L_14_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Diving-->
+      <tbody id="L_15" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;15" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','15');">
+                    <span id="L_15_Name">跳水</span>  
+                </a>
+            </span>
+            <div style="" id="L_15_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Archery  -->
+      <tbody id="L_17" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;17" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','17');">
+                    <span id="L_17_Name">射箭</span>  
+                </a>
+            </span>
+            <div style="" id="L_17_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Table Tennis  -->
+      <tbody id="L_18" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;18" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','18');">
+                    <span id="L_18_Name">乒乓球</span>  
+                </a>
+            </span>
+            <div style="" id="L_18_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Weightlifting   -->
+      <tbody id="L_19" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;19" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','19');">
+                    <span id="L_19_Name">举重</span>  
+                </a>
+            </span>
+            <div style="" id="L_19_body"></div></td>
+        </tr>
+      </tbody>
+      <!--Canoeing -->
+      <tbody id="L_20" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;20" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','20');">
+                    <span id="L_20_Name">皮划艇</span>  
+                </a>
+            </span>
+            <div style="" id="L_20_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Gymnastics  -->
+      <tbody id="L_21" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;21" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','21');">
+                    <span id="L_21_Name">体操</span>  
+                </a>
+            </span>
+            <div style="" id="L_21_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Equestrian  -->
+      <tbody id="L_23" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;23" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','23');">
+                    <span id="L_23_Name">马术</span>  
+                </a>
+            </span>
+            <div style="" id="L_23_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Handball   -->
+      <tbody id="L_24" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;24" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','24');">
+                    <span id="L_24_Name">手球</span>  
+                </a>
+            </span>
+            <div style="" id="L_24_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!-- Darts -->
+      <tbody id="L_25" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;25" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','25');">
+                    <span id="L_25_Name">飞镖</span>  
+                </a>
+            </span>
+            <div style="" id="L_25_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Cricket-->
+      <tbody id="L_27" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;27" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','27');">
+                    <span id="L_27_Name">板球</span>  
+                </a>
+            </span>
+            <div style="" id="L_27_body"></div>
+          </td>
+        </tr>
+      </tbody>
+	  <!--India Cricket-->
+      <tbody id="L_50" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;27" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','50');">
+                    <span id="L_50_Name">板球</span>  
+                </a>
+            </span>
+            <div style="" id="L_50_body"></div>
+          </td>
+        </tr>
+      </tbody>	  
+      <!--Winter Sport-->
+      <tbody id="L_29" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;29" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','29');">
+                    <span id="L_29_Name">冬季运动</span>  
+                </a>
+            </span>
+            <div style="" id="L_29_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Sqaush-->
+      <tbody id="L_30" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;30" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','30');">
+                    <span id="L_30_Name">壁球</span>  
+                </a>
+            </span>
+            <div style="" id="L_30_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Entertainment-->
+      <tbody id="L_31" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;31" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','31');">
+                    <span id="L_31_Name">娱乐</span>  
+                </a>
+            </span>
+            <div style="" id="L_31_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--Cycling-->
+        <tbody id="L_33" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;33" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','33');">
+                <span id="L_33_Name">自行车</span> </a></span>
+              <div style="" id="L_33_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Fencing-->
+        <tbody id="L_34" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;34" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','34');">
+                <span id="L_34_Name">击剑</span> </a></span>
+              <div style="" id="L_34_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Judo-->
+        <tbody id="L_35" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;35" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','35');">
+                <span id="L_35_Name">柔道</span> </a></span>
+              <div style="" id="L_35_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Modern Pentathlon-->
+        <tbody id="L_36" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;36" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','36');">
+                <span id="L_36_Name">现代五项</span> </a></span>
+              <div style="" id="L_36_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Rowing-->
+        <tbody id="L_37" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;37" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','37');">
+                <span id="L_37_Name">划船</span> </a></span>
+              <div style="" id="L_37_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Sailing-->
+        <tbody id="L_38" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;38" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','38');">
+                <span id="L_38_Name">帆船</span> </a></span>
+              <div style="" id="L_38_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Shooting-->
+        <tbody id="L_39" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;39" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','39');">
+                <span id="L_39_Name">射击</span> </a></span>
+              <div style="" id="L_39_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Taekwondo-->
+        <tbody id="L_40" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;40" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','40');">
+                <span id="L_40_Name">跆拳道</span> </a></span>
+              <div style="" id="L_40_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Triathlon-->
+        <tbody id="L_41" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;41" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','41');">
+                <span id="L_41_Name">铁人三项</span> </a></span>
+              <div style="" id="L_41_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Wrestling-->
+        <tbody id="L_42" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;42" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','42');">
+                <span id="L_42_Name">角力</span> </a></span>
+              <div style="" id="L_42_body"></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--E Sports-->
+        <tbody id="L_43">
+          <tr>
+            <td>
+              <span id="L&amp;43" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','43');">
+                <span id="L_43_Name">电子竞技</span> </a></span>
+              <div style="" id="L_43_body"><div id="L_43_C_world" class="subnav-link" style="display: block;"><a href="JavaScript:SwitchCountry('L','43','world');"><span id="L_43_world_Name">世界</span></a></div><div id="L_43_world_layer" class="Layer3" style="display: none;"><div id="L_43_M_world_20816415" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','43','world','20816415','Match')"><span id="L_43_world_20816415_Name">G2 Esports (地图二) vs OpTic Gaming (地图二)</span></a></div><div id="L_43_M_world_20816422" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','43','world','20816422','Match')"><span id="L_43_world_20816422_Name">G2 Esports (地图三) vs OpTic Gaming (地图三)</span></a></div><div id="L_43_M_world_20828071" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','43','world','20828071','Match')"><span id="L_43_world_20828071_Name">Cloud9 (地图二) vs Immortals (地图二)</span></a></div><div id="L_43_M_world_20828076" class="subnav-link2" style="display: block;"><a href="JavaScript:ShowLevel3('L','43','world','20828076','Match')"><span id="L_43_world_20828076_Name">Cloud9 (地图三) vs Immortals (地图三)</span></a></div></div></div>
+            </td>
+          </tr>
+        </tbody>
+        <!--Muay Thai-->
+        <tbody id="L_44" style="display: none;">
+          <tr>
+            <td>
+              <span id="L&amp;44" class="nav"><a href="javascript:" onclick="JavaScript:SwitchSport('L','44');">
+                <span id="L_44_Name">泰拳</span> </a></span>
+              <div style="" id="L_44_body"></div>
+            </td>
+          </tr>
+        </tbody>
+      <!--Other Sports-->
+      <tbody id="L_99" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;99" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','99');">
+                    <span id="L_99_Name">其他</span>  
+                </a>
+            </span>
+            <div style="" id="L_99_body"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!--politics -->
+      <tbody id="L_13" style="display: none;">
+        <tr>
+          <td>
+            <span id="L&amp;13" class="nav">
+                <a href="javascript:" onclick="JavaScript:SwitchSport('L','13');">
+                    <span id="L_13_Name">政治</span>  
+                </a>
+            </span>
+            <div style="" id="L_13_body"></div>
+          </td>
+        </tr>
+      </tbody>      
+    </table>
+  </div>
+ </div></div>
+<div class="betbox_footer_left"><img src="../images/spacer.gif" height="1" width="1"></div>
+
+<script type="text/javascript">
+AutoRefreshMenuData();
+setInterval("AutoRefreshMenuData()",MaxMilliSec);
+</script>
+
+</div>
+                        <div id="services"> <span id="Span3"></span> </div>
+                        <div id="IfrmServices">  </div>
+                    </div>
+                    <!-- ContainerLeft End -->
+                    <!-- ContainerMiddle Begin -->
+                    <div class="ContainerMiddle">
+                        <div class="Even" id="EventAD" style="">
+                            
+                            
+                            
+                            
+                            <a href="http://www.fun78.com/zh-CN/Promotion" target="_blank"><img style="width: 540px;" src="sportsbook_top.jpg" border="0"></a>
+                            
+                            
+                        </div>
+                        <div id="divADimg"></div>
+                        <div id="DivMainOdds"><div style="-moz-user-select: none;" data-reactid=".1"><div class="location" data-reactid=".1.0"><ul data-reactid=".1.0.0"><li data-reactid=".1.0.0.0"><span data-reactid=".1.0.0.0.0">赛车</span></li></ul></div><table data-reactid=".1.1" width="540" cellspacing="0" cellpadding="0"><tbody data-reactid=".1.1.0"><tr data-reactid=".1.1.0.0"><td data-reactid=".1.1.0.0.0"><h1 class="BigTitle" data-reactid=".1.1.0.0.0.0">赛车</h1><span data-reactid=".1.1.0.0.0.1"> </span></td></tr><tr data-reactid=".1.1.0.1"><td data-reactid=".1.1.0.1.0"></td></tr></tbody><tbody data-reactid=".1.1.1"><tr data-reactid=".1.1.1.0"><td style="vertical-align: top; text-align: right;" data-reactid=".1.1.1.0.0"><table style="float: right;" data-reactid=".1.1.1.0.0.0" cellspacing="0" cellpadding="0"><tbody><tr data-reactid=".1.1.1.0.0.0.0"><td data-reactid=".1.1.1.0.0.0.0.0"><div data-reactid=".1.1.1.0.0.0.0.0.0"><span class="date" data-reactid=".1.1.1.0.0.0.0.0.0.0"><img src="../images/spacer.gif" data-reactid=".1.1.1.0.0.0.0.0.0.0.0" height="16" width="18"></span><div class="Selectedtime" data-reactid=".1.1.1.0.0.0.0.0.0.1"><div class="slangTime" data-reactid=".1.1.1.0.0.0.0.0.0.1.0"><span data-reactid=".1.1.1.0.0.0.0.0.0.1.0.0">11月 25</span></div><dl style="display: none; position: absolute;" data-reactid=".1.1.1.0.0.0.0.0.0.1.1"><dd data-reactid=".1.1.1.0.0.0.0.0.0.1.1.0"><a href="javascript:void(0)" data-reactid=".1.1.1.0.0.0.0.0.0.1.1.0.0">11月 25</a></dd></dl></div></div></td><td data-reactid=".1.1.1.0.0.0.0.1"><div class="Selectedtime" data-reactid=".1.1.1.0.0.0.0.1.0"><div class="slangTime" data-reactid=".1.1.1.0.0.0.0.1.0.0"><span data-reactid=".1.1.1.0.0.0.0.1.0.0.0">欧洲盘</span></div><dl style="display: none; position: absolute;" data-reactid=".1.1.1.0.0.0.0.1.0.1"><dd data-reactid=".1.1.1.0.0.0.0.1.0.1.0"><a href="javascript:void(0)" data-reactid=".1.1.1.0.0.0.0.1.0.1.0.0">美国盘</a></dd><dd data-reactid=".1.1.1.0.0.0.0.1.0.1.1"><a href="javascript:void(0)" data-reactid=".1.1.1.0.0.0.0.1.0.1.1.0">欧洲盘</a></dd></dl></div></td><td data-reactid=".1.1.1.0.0.0.0.2"><div class="Selectedtime" data-reactid=".1.1.1.0.0.0.0.2.0"><div class="slangTime" data-reactid=".1.1.1.0.0.0.0.2.0.0"><span data-reactid=".1.1.1.0.0.0.0.2.0.0.0">Group By Market</span></div><dl style="display: none; position: absolute;" data-reactid=".1.1.1.0.0.0.0.2.0.1"><dd data-reactid=".1.1.1.0.0.0.0.2.0.1.0"><a href="javascript:void(0)" data-reactid=".1.1.1.0.0.0.0.2.0.1.0.0">Group By Market</a></dd><dd data-reactid=".1.1.1.0.0.0.0.2.0.1.1"><a href="javascript:void(0)" data-reactid=".1.1.1.0.0.0.0.2.0.1.1.0">Group By League</a></dd></dl></div></td><td data-reactid=".1.1.1.0.0.0.0.3"><div class="btnRefresh link right" data-reactid=".1.1.1.0.0.0.0.3.0">刷新(2)</div></td></tr></tbody></table></td></tr></tbody></table><div data-reactid=".1.2"><div data-reactid=".1.2.0"><div class="Oddsbox1" data-reactid=".1.2.0.$20"><h2 class="SubTitle" data-reactid=".1.2.0.$20.0">独赢</h2><div class="SubOddsbox" data-reactid=".1.2.0.$20.1:$51825"><div class="Header Open" style="cursor: pointer;" data-reactid=".1.2.0.$20.1:$51825.0"><span data-reactid=".1.2.0.$20.1:$51825.0.0">11月 25 - F1 - 2016 世界车手总冠军 获胜者</span></div><div class="tab-outline" data-reactid=".1.2.0.$20.1:$51825.1"><table class="Oddstab" data-reactid=".1.2.0.$20.1:$51825.1.0"><thead data-reactid=".1.2.0.$20.1:$51825.1.0.0"><tr data-reactid=".1.2.0.$20.1:$51825.1.0.0.0"><th class="first" data-reactid=".1.2.0.$20.1:$51825.1.0.0.0.0">时间</th><th style="text-align: left;" data-reactid=".1.2.0.$20.1:$51825.1.0.0.0.1" width="350">赛事</th><th data-reactid=".1.2.0.$20.1:$51825.1.0.0.0.2">赔率</th><th class="time" data-reactid=".1.2.0.$20.1:$51825.1.0.0.0.3">更多</th><th data-reactid=".1.2.0.$20.1:$51825.1.0.0.0.4" width="17"></th><th data-reactid=".1.2.0.$20.1:$51825.1.0.0.0.5" width="17"></th><th class="last" data-reactid=".1.2.0.$20.1:$51825.1.0.0.0.6" width="17"></th></tr></thead><tbody class="oddstr1" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879"><tr data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0"><td rowspan="2" class="time rborder" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.0"><div data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.0.0"><span data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.0.0.1"><span data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.0.0.1.0">11月 25</span><br data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.0.0.1.1"><span data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.0.0.1.2">17:00</span></span></div></td><td class="rborder" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.1"><a href="javascript:void(0)" style="cursor: pointer;" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.1.0">其它</a></td><td class="OddsBet rborder" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.2"><div class="btnOdds link" style="cursor: pointer;" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.2.0">4.57</div><span data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.2.1"> </span></td><td rowspan="2" style="text-align: left;" class="BetMore" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.3"><div class="btnOdds link" style="cursor: pointer;" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.3.0">1</div></td><td rowspan="2" class="widicon" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.4"><noscript data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.4.0"></noscript></td><td rowspan="2" class="widicon" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.5"><noscript data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.5.0"></noscript></td><td rowspan="2" class="widicon" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.6"><noscript data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.0.6.0"></noscript></td></tr><tr data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.1"><td class="padtop rborder" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.1.0"><a href="javascript:void(0)" style="cursor: pointer;" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.1.0.0">尼克罗斯伯格</a></td><td class="OddsBet padtop rborder" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.1.1"><div class="btnOdds link" style="cursor: pointer;" data-reactid=".1.2.0.$20.1:$51825.1.0.1:$72993879.1.1.0">1.20</div></td></tr></tbody></table></div></div></div></div></div></div></div>
+                    </div>
+                    <!-- ContainerMiddle End -->
+                    <!-- ContainerRight Begin -->
+                    <div class="ContainerRight">
+                        <input name="betslipFocus" id="betslipFocus" value="" type="hidden"><div id="Betslip"><!--__MsgBlock__-->
+
+
+<div id="div_Title" style="position: relative;">
+  <!-- BEGIN MsgBlock -->
+  <div class="talkbox" id="div_AlertBox" style="display: none;">
+    <table width="100%" border="0" align="center">
+      <tbody><tr>
+        <td valign="bottom"><!-- mask login-->
+          <div class="errorlogon_top"><img src="../images/spacer.gif" height="1" width="1"></div>
+          <div class="errorlogon">
+            <table class="taxtbox" width="100%" cellspacing="0" cellpadding="0" border="0">
+               
+              <tbody><tr>
+                <th colspan="2"><a href="JavaScript:CloseMaskAndAlertBox();" class="button" id="btnRefresh2"><span>OK</span></a></th>
+              </tr>
+            </tbody></table>
+          </div>
+          <div class="errorlogon_footer"><img src="../images/spacer.gif" height="1" width="1"></div>
+          <!-- mask login end-->
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  <!--/*  title tag*/-->
+  <!-- END MsgBlock -->
+  <!--/*  Mask*  /-->
+  <div class="ItemMessageList-Mid" id="div_Betslip_Mask" style="display: none;"></div>
+  <!--div>
+    <table width="218" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td id="menu_single" class="TabOpen"><a href="JavaScript:SwitchBetslipTab(1);"><span>投注单</span></a></td>
+        <td id="menu_parlay" class="TabClose"><a href="JavaScript:SwitchBetslipTab(2);" ><span>过关</span></a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="menu_line"><img src="/EuroSite/template/fun88/public/images/layout/../images/spacer.gif" width="1" height="1" /></div-->
+ 
+  <!--table width="218" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="menu_R"><span class="menufull"><span>Betslip</span></span></td>
+      </tr>
+    </table-->
+    <div class="gray_bg">投注单</div>
+<div class="TabBox">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody><tr>
+        <td id="menu_single" class="TabOpen"><a href="JavaScript:SwitchBetslipTab(1);"><span>投注单</span></a></td>
+        <td class="TabBoxLine" width="2"><img src="../images/spacer.gif" height="20" width="2"></td>
+        <td id="menu_parlay" class="TabClose"><a href="JavaScript:SwitchBetslipTab(2);"><span>过关</span></a></td>
+      </tr>
+    </tbody></table>
+    </div>
+  
+</div>
+
+<div id="SingleNoData" style="display:">
+<div class="betboxbg">
+  <div align="center"><font>尚未选取任何投注单</font></div>
+  <!--div class="betbox_footer1"></div-->
+</div>
+<div class="betbox_footer"><img src="../images/spacer.gif" height="1" width="1"></div>
+</div>
+
+<div id="divSingleTickets" style="display: none;">
+  <!--<div class="menu_line"><img src="/EuroSite/template/fun88/public/images/layout/../images/spacer.gif" width="1" height="1" /></div>-->
+  <div class="betboxbg">
+    <!--<div class="stakeline_open" id="divSingleSelections">
+      <div  class="link"><a href="JavaScript:SwitchSingleSelections();"></a></div>
+    </div>-->
+    <div id="divSingleSelectionTicket">  </div>
+    <div class="bg_line"></div>
+    <div class="eachbox">
+      <table class="text" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr>
+          <td width="80%" valign="middle" align="right">{{lbl_eu_EachWay}}: </td>
+          <!-- <td align="right"><input name="textfield4" type="text" id="txtSingleEachWay" size="10" maxlength="10" onkeydown="return(validateOnKP(this, event,this.selectionStart));"  onkeyup="return(SetSingleBetEachWay(this, event,this.selectionStart));" onchange ="return(SetSingleBetEachWay(this, event,this.selectionStart));" /> -->
+          <td align="right"><input name="textfield4" id="txtSingleEachWay" size="10" maxlength="10" onkeypress="return(validateOnKP(this, event,this.selectionStart));" onkeyup="SetSingleBetEachWay(this, event,this.selectionStart);" type="text">
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+    <div class="bg_line"></div>
+    <div class="remove">
+      <div class="link"><a href="JavaScript:RemoveAllTicket();">{{lbl_RemoveAll}}</a></div>
+    </div>
+    <div class="placebet">
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr>
+          <td align="right">
+          	<span class="totalStakesTitle" title="{{lbl_TotalStakes}}">{{lbl_TotalStakes}}:</span>
+            <input name="txtSingleTotalStake" id="textfield2" size="15" maxlength="15" disabled="true" value="" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td><a href="JavaScript:GetSingleBetConfirmBet();" class="button" id="SingleBetConfirm"><span>{{lbl_CheckBets}}</span></a></td>
+        </tr>
+      </tbody></table>
+    </div>
+  </div>
+  <div class="betbox_footer"><img src="../images/spacer.gif" height="1" width="1"></div>
+</div>
+
+<div id="ParlayNoData" style="display: none;">
+    <div class="betboxbg">
+        <div align="center"><font>尚未选取任何投注单</font></div>
+    </div>
+    <div class="betbox_footer"><img src="../images/spacer.gif" height="1" width="1"></div>
+</div>
+
+<div id="divParlayTickets" style="display: none;">
+    <div>
+        <div class="betboxbg">
+            <div id="divParlaySelectionTicket">
+                
+            </div>
+            <div class="bg_line"></div>
+            <div id="parlay_bet_info" style="display:{{pinfo_display}}">
+                <div class="Multiple_open">
+                    <div class="link">{{lbl_MultiInfo}}</div>
+                </div>
+                <div class="greybox">
+                    <div class="text">
+                        <input id="ckKeepOdds" name="ckKeepOdds" {{ckkeepdodds_checked}}="" style="vertical-align: middle; margin-top: 0px; margin-left: 0px;" type="checkbox">
+                        <span>{{lbl_KeepOdds}}</span>
+                    </div>
+                </div>
+                <div class="greybox comboParlayArea">
+                    <div class="combo-item">
+                        <div class="titleArea">{{lbl_comboparlayoptions}}<a target="_blank" href="http://sports.10010388.com/EuroSite/template/fun88/cs_eu/sys_parlay_help.html"> <img src="../images/spacer.gif" class="icon_help" style="margin-bottom: 7px;" title="Help" border="0" align="absmiddle"></a></div>
+                        <div class="subTitleArea">
+                            <input id="" name="cbExpand" value="1" style="vertical-align: middle; margin-top: 0px; margin-left: 0px;" onclick="ToggleAllComboExpand(this)" type="checkbox">
+                            <span>{{lbl_expandcomboparlay}}</span>
+                        </div>
+                    </div>
+                    <div id="euroComboList" class="combo-list">
+                        <ul>                            
+                            {{ComboListOutput}}                            
+                        </ul>
+                    </div>
+                   <div class="combo-list">
+                        <ul>
+                            <li id="spb" class="option {{MP_stake_style}}">
+                                <div class="list" onclick="spbSwitch();">{{lbl_StakePerBet}}</div>
+                                    <div class="optionContent">
+                                        <div>
+                                        <label>{{lbl_Currency}}
+                                        <input id="txtParlayStake" name="txtParlayStake" size="10" maxlength="10" onkeypress="return (validateOnKP(this, event, this.selectionStart));" onkeyup="SetComboBetStake(this.value); UpdateMixParlayStake(this.value);" value="" type="text">
+                                        </label>
+                                        </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Infobox" id="divParlayInfobox">
+                        <table class="text" width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                                <tr>
+                                    <td>:&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="text" width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr id="trTotalMatch">
+                            <td>{{lbl_TotalMatch}}: <span id="spMP_count">{{MP_count}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>{{lbl_eu_potentialreturn}}: <span id="MP_PayOut">{{MP_PayOut}}</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div class="bg_line"></div>
+                <div class="remove">
+                    <div class="link"><a href="JavaScript:RemoveAllTicket();">{{lbl_RemoveAll}}</a></div>
+                </div>
+                <div class="placebet">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                            <td align="right">
+                                {{lbl_TotalStakes}}:<input name="textfield3" id="txtParlayTotalStake" size="15" maxlength="15" disabled="true" value="" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a onclick="GetMixParlayConfirmBet(); return false;" class="button" id="MixParlayConfirmBet"><span>{{lbl_CheckBets}}</span></a></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="betbox_footer"><img src="../images/spacer.gif" height="1" width="1"></div>
+</div>
+</div>
+                        <form name="frmBetListMini" action="http://sports.10010388.com/BetListMini_data.aspx" target="ifrmBetListMiniData" method="post" style="display: none;">
+                            <input name="showBetAcceptedMsg" value="" type="hidden">
+                            <input name="showSelectLine" value="" type="hidden">
+                            <input name="Last10Status" value="true" type="hidden">
+                        </form>
+                        <iframe name="ifrmBetListMiniData" id="ifrmBetListMiniData" src="index_28.html" style="display: none;" height="0" frameborder="0" width="0"></iframe>
+                        <form name="frmWaitingBets" id="frmWaitingBets" action="http://sports.10010388.com/EuroSite/WaitingBets_Data.aspx" target="WaitingBets" method="post" style="display: none;"></form>
+                        <iframe name="WaitingBets" id="WaitingBets" src="index_29.html" height="0" frameborder="0" width="0"></iframe>
+                        <!-- BetListMini Session -->
+                        <div id="div_BetListMini"><span id="BetListMiniContainer"></span></div>
+                        <!-- END BetListMini Session -->
+                        <!-- WaitingBets Session -->
+                        <div id="div_WaitingBets" style="display: none;"><span id="WaitingBetsSpan"></span></div>
+                        <!-- End Of WaitingBets Session -->
+                        <!--event start-->
+                        
+                        <div id="event">
+                            <div class="gray_bg" id="eventtitle">赛事</div>
+
+                            
+                            
+                            
+                            <script type="text/javascript">
+              function switchToAsia() {
+              var hostName = window.location.host;
+              fFrame.location.href="../index_18.html";
+              }
+            </script><div style="margin-bottom: 5px;"><a href="javascript: switchToAsia();" target="_self"><img style="width:191;" src="sportsbook_side1.jpg" border="0"></a></div>
+                            
+                        </div>
+                        
+                        <div id="eventfooter" class="betbox_footer"><img src="../images/spacer.gif" height="1"></div>
+                        <!--Event end-->
+                        
+                        <div id="adbanner">
+                            <div id="Promotitle" class="gray_bg">优惠活动</div>
+                            
+                            
+                            
+                            <a href="http://www.fun78.com/zh-CN/Mobile" target="_blank"><img style="width: 218px;" src="sportsbook_side2.jpg" border="0"></a>
+                            
+                        </div>
+                        
+                    </div>
+                    <!-- ContainerRight End -->
+                </div>
+            </div>
+            <!-- ContainerFooter Begin-->
+            <div class="container" style="display: none;">
+                
+                <!-- ContainerFooter End -->
+            </div>
+        </div>
+    </div>
+
+<!-- Select League Popup  Begin -->
+<div id="PopDiv" class="ajxbox" style="display: none;">
+	<div class="right">
+		<img id="PopCloser" style="cursor: pointer;" src="ajx_iconclose.gif">
+	</div>
+	<h1 id="PopTitle"><span id="PopTitleText"></span></h1>
+	<div class="ajxline"></div>
+	<div id="oPopContainer"></div>
+</div>
+<iframe name="PopFrame" id="PopFrame" src="index_30.html" style="display: none;" onload="document.getElementById('oPopContainer').innerHTML=this.contentWindow.document.body.innerHTML;"></iframe>
+<!-- Select League Popup End -->
+
+<iframe id="Match_tmpl" name="Match_tmpl" style="display: none;" src="index_31.html"></iframe>
+<iframe id="League_tmpl" name="League_tmpl" style="display: none;" src="index_32.html"></iframe>
+<iframe id="Country_tmpl" name="Country_tmpl" style="display: none;" src="index_33.html"></iframe>
+<iframe id="Sport_tmpl" name="Sport_tmpl" style="display: none;" src="index_34.html"></iframe>
+<iframe id="Outright_tmpl" name="Outright_tmpl" style="display: none;" src="index_35.html"></iframe>
+<iframe id="Racing" name="Racing" src="index_36.html" style="display: none;"></iframe>
+<iframe id="Horse_tmpl" name="Horse_tmpl" src="index_37.html" style="display: none;"></iframe>
+<iframe id="AUS_Horse_tmpl" name="AUS_Horse_tmpl" src="index_38.html" style="display: none;"></iframe>
+<iframe id="HorseInfo_tmpl" name="HorseInfo_tmpl" src="index_39.html" style="display: none;"></iframe>
+<iframe id="Horse" name="Horse" src="index_40.html" style="display: none;"></iframe>
+<iframe id="Greyhounds_tmpl" name="Greyhounds_tmpl" src="index_41.html" style="display: none;"></iframe>
+<iframe id="AUS_Greyhounds_tmpl" name="AUS_Greyhounds_tmpl" src="index_42.html" style="display: none;"></iframe>
+<iframe id="GreyhoundsInfo_tmpl" name="GreyhoundsInfo_tmpl" src="index_43.html" style="display: none;"></iframe>
+<iframe id="Greyhounds" name="Greyhounds" src="index_44.html" style="display: none;"></iframe>
+<iframe id="Harness_tmpl" name="Harness_tmpl" src="index_45.html" style="display: none;"></iframe>
+<iframe id="AUS_Harness_tmpl" name="AUS_Harness_tmpl" src="index_46.html" style="display: none;"></iframe>
+<iframe id="HarnessInfo_tmpl" name="HarnessInfo_tmpl" src="index_47.html" style="display: none;"></iframe>
+<iframe id="Harness" name="Harness" src="index_48.html" style="display: none;"></iframe>
+<iframe id="VirtualSports" name="VirtualSports" src="index_49.html" style="display: none;"></iframe>
+<iframe id="VirtualSports_tmpl" name="VirtualSports_tmpl" src="index_50.html" style="display: none;"></iframe>
+<iframe name="OddsBodyFrame" id="OddsBodyFrame" src="index_51.html" style="display: none;"></iframe>
+<form action="http://sports.10010388.com/EuroSite/Match.aspx" target="OddsBodyFrame" name="OddsBodyForm" style="display: none;">
+  <input name="Scope" value="Match" type="hidden">
+</form>
+<iframe name="DataFrame" src="index_52.html" style="display: none;"></iframe>
+<form action="http://sports.10010388.com/Outright_data.aspx" target="DataFrame" name="DataForm" style="display: none;">
+  <input name="Scope" value="Sport" type="hidden">
+  <input name="Id" value="11" type="hidden">
+  <input name="Sport" value="11" type="hidden">
+  <input name="Market" value="d" type="hidden">
+  <input name="RT" value="U" type="hidden">
+  <input name="CT" value="11/13/2016 22:19:36" type="hidden">
+  <input name="Game" value="0" type="hidden">
+  <input name="OddsType" value="1" type="hidden">
+</form>
+<iframe name="HorseDataFrame" src="index_53.html" style="display: none;"></iframe>
+<form action="http://sports.10010388.com/Horse_data.aspx" target="DataFrame" name="HorseDataForm" style="display: none;">
+    <input name="Market" value="T" type="hidden">
+    <input name="Sport" value="151" type="hidden">
+    <input name="RT" value="W" type="hidden">
+    <input name="CT" value="" type="hidden">
+    <input name="League" type="hidden">
+    <input name="RaceNumber" type="hidden">
+</form>
+<iframe name="GreyhoundsDataFrame" src="index_54.html" style="display: none;"></iframe>
+<form action="http://sports.10010388.com/Greyhounds_data.aspx" target="DataFrame" name="GreyhoundsDataForm" style="display: none;">
+    <input name="Market" value="T" type="hidden">
+    <input name="Sport" value="152" type="hidden">
+    <input name="RT" value="W" type="hidden">
+    <input name="CT" value="" type="hidden">
+    <input name="League" type="hidden">
+    <input name="RaceNumber" type="hidden">
+</form>
+<iframe name="HarnessDataFrame" src="index_55.html" style="display: none;"></iframe>
+<form action="http://sports.10010388.com/Harness_data.aspx" target="DataFrame" name="HarnessDataForm" style="display: none;">
+    <input name="Market" value="T" type="hidden">
+    <input name="Sport" value="153" type="hidden">
+    <input name="RT" value="W" type="hidden">
+    <input name="CT" value="" type="hidden">
+    <input name="League" type="hidden">
+    <input name="RaceNumber" type="hidden">
+</form>
+<iframe name="VirtualSportsDataFrame" src="index_56.html" style="display: none;"></iframe>
+<form action="http://sports.10010388.com/VirtualSports_data.aspx" target="DataFrame" name="VirtualSportsDataForm" style="display: none;">
+  <input name="tag" value="180" type="hidden">
+</form> 
+<table id="tmplLeague_TOP" style="display: none;">
+    <tbody id="L_TOP" class="odds_open Header-Open">
+      <tr>
+        <td colspan="9"><div class="Header">今日精选赛事</div></td>
+      </tr>
+    </tbody>
+  </table>
+  <table id="tmplLeague_TOP2" style="display: none;">
+    <tbody id="L_TOP2" class="odds_open Header-Open">
+      <tr>
+        <td colspan="9"><div class="Header">滚球</div></td>
+      </tr>
+    </tbody>
+  </table>
+<iframe name="ifrmFutureRacesData" id="ifrmFutureRacesData" src="index_57.html" style="display: none;"></iframe>
+<form action="http://sports.10010388.com/Horse_FutureRacesdata.aspx" target="ifrmFutureRacesData" name="frmFutureRacesData" style="display: none;">
+</form>
+<iframe name="ifrmFeaturedData" id="ifrmFeaturedData" src="index_58.html" style="display: none;" height="0" frameborder="0" width="0"></iframe>
+  <form action="http://sports.10010388.com/EuroSite/TopOddsData2_tmpl.aspx" target="ifrmFeaturedData" name="frmFeaturedData" id="frmFeaturedData" style="display: none;">
+    <input name="RT" value="W" type="hidden">
+    <input name="type" value="t" type="hidden">
+  </form>
+
+<form id="frmChangeLang" name="frmChangeLang" method="post" action="http://sports.10010388.com/ChangeLanguage.aspx">
+  <input id="hidSelLang" name="hidSelLang" type="hidden">
+  <input id="hidIsLogin" name="hidIsLogin" value="no" type="hidden">
+</form>
+<form action="http://sports.10010388.com/EuroSite/head_balance_data.aspx" target="BalanceFrame" name="BalanceForm" id="BalanceForm" style="display: none;">
+</form>
+<iframe name="BalanceFrame" id="BalanceFrame" src="index_59.html" style="display: none;"></iframe>
+<input id="League_TOPValue" name="League_TOPValue" value="0" type="hidden">
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿.username-error, .password-error {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid #FF8888;
+    display: block;
+    margin-top: 4px;
+    padding: 2px 4px;
+    position: absolute;
+    width: 120px;
+}
+
+.login_message {
+    display: none;
+    font-weight: bold;
+    color: #ff0000;
+    height: 0;
+}

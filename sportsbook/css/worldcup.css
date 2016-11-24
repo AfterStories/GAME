@@ -1,0 +1,57 @@
+/* Code tidied up by ScrapBook */
+.worldcup-scorebar { clear: both; padding: 2px 0px 2px 4px; width: 990px; height: 65px; color: rgb(255, 255, 255); line-height: 16px; font-size: 12px; font-family: Arial,PMingLiU,SimSun; }
+.worldcup-scorebar .image { float: left; width: 88px; height: 100%; background: transparent url("scorebar-image.png") repeat scroll 0% 0%; }
+.worldcup-scorebar [class^="arrow-"] { width: 16px; height: 100%; }
+.worldcup-scorebar [class="arrow-left"] { float: left; }
+.worldcup-scorebar [class="arrow-right"] { float: right; }
+.worldcup-scorebar [class^="arrow-"] a { display: block; width: 100%; height: 100%; background: transparent url("scorebar-arrow.png") repeat scroll 0% 0%; }
+.worldcup-scorebar [class="arrow-left"] a { background-position: 0px 0px; }
+.worldcup-scorebar [class="arrow-right"] a { background-position: -16px 0px; }
+.worldcup-scorebar [class="arrow-left"] a:hover { background-position: 0px -65px; }
+.worldcup-scorebar [class="arrow-right"] a:hover { background-position: -16px -65px; }
+.worldcup-scorebar [class="arrow-left"] a.disable, .worldcup-scorebar [class="arrow-left"] a.disable:hover { background-position: 0px -130px; cursor: default; }
+.worldcup-scorebar [class="arrow-right"] a.disable, .worldcup-scorebar [class="arrow-right"] a.disable:hover { background-position: -16px -130px; cursor: default; }
+.worldcup-scorebar .matches { position: relative; float: left; overflow: hidden; width: 870px; height: 63px; background: rgb(102, 102, 102) none repeat scroll 0% 0%; border-width: 1px medium; border-style: solid none; border-color: rgb(136, 136, 136) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; cursor: grab; }
+.worldcup-scorebar .slider { position: absolute; margin: 0px; padding: 0px; }
+.worldcup-scorebar .slider li { list-style: outside none none; float: left; width: 144px; height: 62px; background: rgb(136, 136, 136) none repeat scroll 0% 0%; border-top: 1px solid rgb(175, 175, 175); border-left: 1px solid rgb(102, 102, 102); }
+.worldcup-scorebar [class*="-team"] { clear: both; width: 100%; height: 22px; line-height: 22px; white-space: nowrap; }
+.worldcup-scorebar [class*="-team"]:first-child .country, .worldcup-scorebar [class*="-team"]:first-child .score { border-bottom: 1px solid rgb(102, 102, 102); }
+.worldcup-scorebar .flag { float: left; margin: 2px 8px 0px; width: 28px; height: 18px; background: transparent url("32team-flag.png") repeat scroll 0% 0%; padding: 0px; filter: none; }
+.worldcup-scorebar .flag.alg { background-position: 0px 0px; }
+.worldcup-scorebar .flag.arg { background-position: -30px 0px; }
+.worldcup-scorebar .flag.aus { background-position: -60px 0px; }
+.worldcup-scorebar .flag.bel { background-position: -90px 0px; }
+.worldcup-scorebar .flag.bih { background-position: -120px 0px; }
+.worldcup-scorebar .flag.bra { background-position: -150px 0px; }
+.worldcup-scorebar .flag.chi { background-position: -180px 0px; }
+.worldcup-scorebar .flag.civ { background-position: -210px 0px; }
+.worldcup-scorebar .flag.cmr { background-position: 0px -20px; }
+.worldcup-scorebar .flag.col { background-position: -30px -20px; }
+.worldcup-scorebar .flag.crc { background-position: -60px -20px; }
+.worldcup-scorebar .flag.cro { background-position: -90px -20px; }
+.worldcup-scorebar .flag.ecu { background-position: -120px -20px; }
+.worldcup-scorebar .flag.eng { background-position: -150px -20px; }
+.worldcup-scorebar .flag.esp { background-position: -180px -20px; }
+.worldcup-scorebar .flag.fra { background-position: -210px -20px; }
+.worldcup-scorebar .flag.ger { background-position: 0px -40px; }
+.worldcup-scorebar .flag.gha { background-position: -30px -40px; }
+.worldcup-scorebar .flag.gre { background-position: -60px -40px; }
+.worldcup-scorebar .flag.hon { background-position: -90px -40px; }
+.worldcup-scorebar .flag.irn { background-position: -120px -40px; }
+.worldcup-scorebar .flag.ita { background-position: -150px -40px; }
+.worldcup-scorebar .flag.jpn { background-position: -180px -40px; }
+.worldcup-scorebar .flag.kor { background-position: -210px -40px; }
+.worldcup-scorebar .flag.mex { background-position: 0px -60px; }
+.worldcup-scorebar .flag.ned { background-position: -30px -60px; }
+.worldcup-scorebar .flag.nga { background-position: -60px -60px; }
+.worldcup-scorebar .flag.por { background-position: -90px -60px; }
+.worldcup-scorebar .flag.rus { background-position: -120px -60px; }
+.worldcup-scorebar .flag.sui { background-position: -150px -60px; }
+.worldcup-scorebar .flag.uru { background-position: -180px -60px; }
+.worldcup-scorebar .flag.usa { background-position: -210px -60px; }
+.worldcup-scorebar .country { float: left; width: 76px; height: 100%; text-transform: uppercase; }
+.worldcup-scorebar .score { float: left; width: 18px; height: 100%; text-align: center; font-size: 15px; font-weight: bold; }
+.worldcup-scorebar .status { clear: both; width: 100%; height: 18px; line-height: 18px; text-align: center; background: rgb(118, 118, 118) none repeat scroll 0% 0%; }
+.worldcup-scorebar .endlight-left { z-index: auto; position: absolute; border: 0px none; left: 0px; height: 100%; width: 100px; background: transparent -moz-linear-gradient(left center , rgba(255, 255, 0, 0.3), rgba(255, 255, 0, 0)) repeat scroll 0% 0%; }
+.worldcup-scorebar .endlight-right { z-index: auto; position: absolute; border: 0px none; right: 0px; height: 100%; width: 100px; background: transparent -moz-linear-gradient(right center , rgba(255, 255, 0, 0.3), rgba(255, 255, 0, 0)) repeat scroll 0% 0%; }
+.worldcup-scorebar .scrollbar { z-index: auto; position: absolute; background: rgb(204, 204, 51) none repeat scroll 0% 0%; border: 0px none; bottom: 0px; height: 2px; width: 80%; }

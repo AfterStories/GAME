@@ -1,0 +1,48 @@
+/* Code tidied up by ScrapBook */
+html, body { height: 100%; }
+.Match { min-height: 100%; }
+* html .Match { height: 100%; }
+body { font-family: Arial,Helvetica,sans-serif; margin: 0px; background-color: rgb(246, 246, 246); -moz-text-size-adjust: none; }
+input[type="checkbox"] { border: medium none; }
+a, input[type="checkbox"] { outline: medium none; }
+.ContainerHead { width: 990px; clear: both; display: block; margin: 0px auto 20px; }
+.Match { background-color: rgb(255, 255, 255); overflow: hidden; width: 990px; margin: 0px auto; }
+.ContainerGlobe { display: block; padding-right: 10px; padding-left: 10px; }
+iframe { display: block; }
+form { margin: 0px; }
+input { font-size: 10px; color: rgb(114, 114, 114); font-family: Arial,Helvetica,sans-serif; border: 1px solid rgb(222, 222, 222); padding-left: 3px; line-height: 14px; }
+.marg-b { margin-bottom: 10px; }
+.marg-r { margin-right: 10px ! important; }
+.noborder { border-width: 0px ! important; }
+.right { float: right; z-index: 0; }
+.left { float: left; }
+.ContainerMain { width: 540px; margin-left: 10px; float: left; }
+.fontnormal td { font-weight: normal ! important; }
+.Even { width: 540px; margin-bottom: 10px; }
+.location { width: 540px; margin-bottom: 10px; font-size: 11px; line-height: 14px; color: rgb(0, 0, 0); }
+.location a { color: rgb(102, 102, 102); font-weight: bold; text-decoration: underline; }
+.location a:hover { color: rgb(0, 0, 0); }
+.msgboxTop { background-image: url("box.gif"); width: 250px; height: 3px; background-position: left top; background-repeat: no-repeat; }
+.msgboxMan { background-color: rgb(232, 231, 231); display: block; width: 238px; font-size: 11px; padding: 5px; border-right: 1px solid rgb(204, 204, 204); border-left: 1px solid rgb(204, 204, 204); }
+.msgboxMan .conbg { background-color: rgb(255, 255, 255); font-weight: lighter; padding: 5px; }
+.msgboxMan .msgT { font-size: 11px; font-weight: bold; padding: 2px 5px 5px; color: rgb(0, 0, 0); }
+.msgboxFot { background-image: url("box.gif"); width: 250px; height: 3px; background-repeat: no-repeat; background-position: left -14px; }
+.icon_warn { background-image: url("icon.gif"); background-repeat: no-repeat; background-position: -37px -103px; height: 20px; width: 20px; display: block; margin: 3px 0px 3px 3px; }
+.icon_info { background-image: url("icon_info.gif"); background-repeat: no-repeat; height: 35px; width: 45px; display: block; margin: 5px; }
+.icon_Success { background-image: url("icon.gif"); background-repeat: no-repeat; background-position: -72px -103px; height: 21px; width: 22px; display: block; margin: 3px 0px 3px 3px; }
+.notebox { margin-top: 5px; font-size: 12px; line-height: 16px; color: rgb(46, 46, 46); }
+.notebox em { font-size: 18px; line-height: 20px; font-style: normal; font-weight: bold; }
+.notebox em, .tabtitle2 em, .starttime em, .tabother em { color: rgb(235, 99, 7) ! important; }
+.noteboxtop { background-image: url("box.gif"); background-position: 100% -19px; background-repeat: repeat-x; height: 5px; display: block; background-color: rgb(248, 248, 248); }
+.noteboxtop span { background-image: url("box.gif"); background-position: left -34px; background-repeat: no-repeat; height: 5px; display: block; }
+.noteboxtop span span { background-image: url("box.gif"); background-position: right -47px; background-repeat: no-repeat; height: 5px; display: block; }
+.noteboxmain { background-color: rgb(248, 248, 248); display: block; font-size: 11px; border-right: 1px solid rgb(225, 225, 225); border-left: 1px solid rgb(225, 225, 225); }
+.noteboxmain a { color: rgb(206, 0, 20); text-decoration: underline; }
+.noteboxmain a:hover { color: rgb(206, 0, 20); text-decoration: none; }
+.noteboxfot { background-image: url("box.gif"); background-position: left -88px; background-repeat: repeat-x; height: 5px; display: block; background-color: rgb(248, 248, 248); }
+.noteboxfot span { background-image: url("box.gif"); background-position: left -71px; background-repeat: no-repeat; height: 5px; display: block; }
+.noteboxfot span span { background-image: url("box.gif"); background-position: right -83px; background-repeat: no-repeat; height: 5px; display: block; }
+.dotline { background-image: url("link2-line.gif"); background-position: center center; background-repeat: repeat-x; padding: 0px; height: 5px; }
+.icon-loading { background-image: url("Loading_002.gif"); background-repeat: no-repeat; width: 25px; height: 25px; }
+.icon-loading-s { background-image: url("loading_s.gif"); background-repeat: no-repeat; width: 14px; height: 14px; }
+.nopad { padding: 0px ! important; }

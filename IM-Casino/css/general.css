@@ -1,0 +1,1670 @@
+#sc-main {
+    width: 888px;
+    height: 600px;
+    background-image: url(im-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.empty_header {
+    width: 100%;
+    height: 100px;
+}
+
+.container {
+    width: 222px;
+    height: 95%;
+}
+
+.content {
+    width: 100%;
+    height: 60px;
+    padding: 10px 0;
+    color: #FFF;
+    text-transform: uppercase;
+    /*opacity: 0.7;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);filter:alpha(opacity=70);*/
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.no_boarder {
+    border: none;
+}
+/* content */
+#sc-content {
+    height: 400px;
+}
+
+#sc-inner {
+    width: 100%;
+    height: 100%;
+}
+/* drop down menu */
+#sc-menu {
+    position: relative;
+    width: 200px;
+    height: 385px;
+    left: 0;
+    margin-left: 48px;
+    list-style: none;
+    padding: 0;
+    /* z-index: 999; */
+}
+
+    #sc-menu li {
+        cursor: pointer;
+        height: 26px;
+        position: relative;
+        font-size: 12px;
+        color: #a2a5a7;
+        /*opacity: 1.0;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);filter:alpha(opacity=100);*/
+    }
+
+        #sc-menu li ul {
+            position: relative;
+            list-style: none;
+            /*opacity: 1.0;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);filter:alpha(opacity=100);*/
+            display: none;
+            z-index: 95;
+        }
+
+            /*#sc-menu li:hover > ul {display: block}*/
+
+            #sc-menu li ul li {
+                border-bottom-width: thin;
+                border-bottom-style: solid;
+                border-bottom-color: #276696;
+            }
+
+    #sc-menu ul li a.hover {
+        cursor: pointer;
+    }
+
+    #sc-menu li ul li.hover, #sc-menu li ul li.hover a:hover {
+        color: #3f8ee1;
+    }
+
+#sc-menuli a {
+    cursor: pointer;
+    width: 100%;
+}
+
+#sc-menu li a.hover {
+    background-image: url(hover.gif);
+}
+
+#sc-menu li a, li ul li a, #sc-menu li.hover ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+#sc-menu li.hover a, #sc-menu li ul li.hover a {
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+#sc-content .ui-widget-content {
+    border: 1px solid #000000;
+}
+
+/* footer */
+#sc-footer {
+    height: 100px;
+    position: absolute;
+}
+
+.date {
+    margin: 45px 0 0 48px;
+    float: left;
+    font-size: 9px;
+    color: #FFF;
+    z-index: 999;
+}
+
+#sc-livechat {
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 8px;
+    height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+    #sc-livechat a {
+        background-image: url(button-anmation-livechat.gif);
+        background-position: -2px -2px;
+        background-repeat: no-repeat;
+        width: 124px;
+        height: 26px;
+        color: #000;
+        text-decoration: none;
+        display: block;
+        padding-top: 8px;
+        text-indent: 12px;
+    }
+
+#livechat a:hover {
+    background-position: -2px -40px;
+}
+
+.ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active,
+#sc-menu .ui-menu .ui-menu-item a.ui-state-focus, #sc-menu .ui-menu .ui-menu-item a.ui-state-active {
+    margin: 0;
+    padding-top: 3px;
+}
+
+#sc-menu .ui-menu .ui-menu-item a {
+    padding: 4px 0.4em;
+}
+
+#imDownload {
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 69px;
+    margin: 25px 5px 5px 78px;
+    position: absolute;
+    width: 213px;
+    cursor: pointer;
+}
+
+.imDownload-en {
+    background-image: url(button_PTdownload_en.gif);
+}
+
+.imDownload-id {
+    background-image: url(button_PTdownload_en.gif);
+}
+
+.imDownload-zh {
+    background-image: url(button_PTdownload_cn.gif);
+}
+
+.imDownload-vi {
+    background-image: url(button_PTdownload_en.gif);
+}
+
+.imDownload-th {
+    background-image: url(button_PTdownload_th.gif);
+}
+
+
+
+
+/* --------------- Slider -------------------- */
+#header {
+    padding-bottom: 0;
+}
+
+#slider {
+    height: 810px;
+    width: 1584px;
+    background: url(/images/slider.gif) no-repeat 0 0;
+    position: relative;
+    float: left;
+    text-align: center;
+    top: 0;
+    z-index: 5;
+}
+
+    #slider .slider-nav a {
+        display: block;
+        width: 20px;
+        height: 49px;
+        font-size: 0;
+        line-height: 0;
+        text-indent: -4000px;
+        position: absolute;
+        top: 129px;
+    }
+
+        #slider .slider-nav a.prev {
+            left: 0;
+            background: url(/images/button-prev.png) no-repeat;
+        }
+
+        #slider .slider-nav a.next {
+            right: 0;
+            background: url(/images/button-next.png) no-repeat;
+        }
+
+#slider-holder {
+    height: 810px;
+}
+
+    #slider-holder .jcarousel-clip {
+        height: 810px;
+        width: 1584px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #slider-holder .slide-image {
+        float: left;
+        display: inline;
+    }
+
+    #slider-holder .slide-info {
+        float: left;
+        display: inline;
+        /*width: 1584px;*/
+        padding-top: 20px;
+    }
+
+        #slider-holder .slide-info p {
+            padding-bottom: 8px;
+        }
+
+    #slider-holder ul {
+        width: 810px;
+        height: 1584px;
+        position: relative;
+        overflow: hidden;
+    }
+
+        #slider-holder ul li {
+            list-style-type: none;
+            float: left;
+            display: inline;
+            /*height: 810px;
+            width: 1584px;*/
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+#slider ul {
+    width: 960px;
+    height: 810px;
+    position: relative;
+    overflow: hidden;
+}
+
+    #slider ul li {
+        list-style-type: none;
+        float: left;
+        display: inline;
+        /*height: 500px;
+        width: 960px;*/
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+    }
+/*#slides { width:1584px;	height:810px; position: relative; float: left; top: 0px; z-index: 10; }*/
+.slides_container {
+    width: 1584px;
+    height: 620px;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+
+    .slides_container a {
+        width: 1584px;
+        height: 810px;
+        display: block;
+    }
+
+        .slides_container a img {
+            display: block;
+        }
+
+#slides .next, #slides .prev {
+    position: absolute;
+    top: 145px;
+    left: -28px;
+    width: 42px;
+    height: 71px;
+    display: block;
+    z-index: 101;
+}
+
+#slides .next {
+    left: 928px;
+}
+
+#slides_info {
+    width: 960px;
+    position: relative;
+    z-index: 50;
+    text-align: center;
+    top: 168px;
+    right: 330px;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.pagination {
+    width: 100px;
+
+    z-index: 101;
+    margin: -96px auto 0 866px;
+}
+
+    .pagination li {
+        float: left;
+        margin: 0 1px;
+        list-style: none;
+    }
+
+        .pagination li a {
+            display: block;
+            width: 12px;
+            height: 0;
+            padding-top: 12px;
+            background-image: url(/images/pagination.png);
+            background-position: 0 0;
+            float: left;
+            overflow: hidden;
+        }
+
+        .pagination li.current a {
+            background-position: 0 -12px;
+        }
+
+#container {
+    min-height: 430px;
+}
+
+#contentContainer {
+    background: transparent;
+    color: #fff;
+    position: absolute;
+    z-index: 99;
+    width: 46%;
+    top: 464px;
+    *top: 464px;
+    margin-left: 320px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#game_category_menu {
+    display: block;
+    position: absolute;
+    width: 1000px;
+}
+
+    #game_category_menu > table {
+        border-spacing: 0;
+        width: 960px;
+        margin-top: -50px;
+        *border-collapse: collapse;
+    }
+
+    #game_category_menu td {
+        border: 1px solid #ccc;
+        width: 234px;
+        text-align: center;
+        line-height: 18px;
+        height: 40px;
+        background: -webkit-linear-gradient(#fff,#f2f2f2);
+        background: -o-linear-gradient(#fff,#f2f2f2);
+        background: -moz-linear-gradient(#fff,#f2f2f2);
+        background: linear-gradient(#fff,#f2f2f2);
+    }
+
+.selected {
+    border-bottom: 0 !important;
+    border-top: 5px solid #25AAE1 !important;
+    color: #25AAE1 !important;
+    cursor: pointer;
+    display: inline;
+    width: 16.6%;
+    border-right: 1px;
+    float: left;
+    text-align: center;
+    height: 34px;
+    vertical-align: middle;
+    background: url("title_background.jpg") repeat-x 0 0;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #cccccc;
+    position: relative;
+}
+
+    .selected #spBtn {
+        height: 32px;
+        margin-top: -4px;
+        color: #25AAE1 !important;
+    }
+
+#ulGameType>li {
+    display: inline;
+    width: 19.58%;
+    float: left;
+    text-align: center;
+    border: 1px solid #cccccc;
+    height: 37px;
+    background: url("title_background.jpg") repeat-x 0 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+    .tdMenu:hover #spBtn {
+        margin-top: -4px;
+    }
+
+#game_category_menu .tdMenu:hover {
+    border-bottom: 0 !important;
+    border-top: 5px solid #25AAE1 !important;
+    color: #25AAE1 !important;
+    cursor: pointer;
+    height: 34px;
+}
+
+table#tblGame {
+    width: 99%;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+}
+
+#ulGameType {
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+}
+
+
+
+
+#game_category_menu .tdMenu:hover a {
+    color: #25AAE1 !important;
+}
+
+#tdTitle {
+    height: 35px;
+    border: 1px solid #ccc;
+    background: url("title_background.jpg") repeat-x 0 0;
+    padding-bottom: 0;
+    /*background: -webkit-linear-gradient(#fff, #f2f2f2); */ /* For Safari */
+    /*background: -o-linear-gradient(#fff, #f2f2f2); */ /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(#fff, #f2f2f2); */ /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient(#fff, #f2f2f2); */ /* Standard syntax */
+}
+
+#dvTopGames, .dvMainBox {
+    padding-bottom: 15px;
+    text-align: center;
+    /*vertical-align: middle;*/
+    height: 423px;
+}
+
+.dvTitle {
+    border: 1px solid #cccccc;
+    margin: 15px 3px 0;
+    background: url("title_background.jpg") repeat-x 0 0;
+    height: 54px;
+}
+
+.dvBody {
+    /*border: 1px solid #cccccc;
+    background: #cccccc;*/
+    position: relative;
+    min-height: 350px;
+    height: auto;
+    margin: 0 3px 0;
+}
+
+.dvBody2 {
+    background: burlywood;
+}
+
+.dvMain {
+    float: left;
+    width: 466px;
+    position: relative;
+    margin-right: 2px;
+    height: 362px;
+    margin-top: 8px;
+    /*background: wheat;*/
+}
+
+
+.dvGameBox {
+    /*background: wheat;
+    border: thin solid #cccccc;*/
+    /*margin: 3px 3px 0;*/
+    /*height: 350px;*/
+    width: 50.2%;
+    float: right;
+    vertical-align: middle;
+}
+
+.dvGameBox1 {
+    /*background: wheat;*/
+    height: 173px;
+    margin: 0 0 4px;
+}
+
+.dvGameBox2 {
+    /*background: wheat;*/
+    height: 173px;
+    margin: 3px 0 0;
+}
+
+.dvGames {
+    /*background: turquoise;*/
+    width: 236px;
+    height: 173px;
+    margin-right: 1px;
+    float: left;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 2px;
+    position: relative;
+}
+
+.dvGames .gameLink .orignal {
+    width: 222px;
+    height: 142px;
+}
+
+.dvGames2 {
+    /*background: turquoise;*/
+    width: 236px;
+    height: 173px;
+    /*margin-left: 1px;*/
+    float: right;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 2px;
+    position: relative;
+}
+
+.dvGameChild {
+    /*background: turquoise;*/
+    width: 24%;
+    height: 173px;
+    margin: 1px 3px 1px 0;
+    float: left;
+    border: thin solid #cccccc;
+}
+
+#trTitle {
+    padding-bottom: 10px;
+}
+
+.tdMain {
+    width: 40%;
+    vertical-align: top;
+    position: relative;
+}
+
+.tdGames {
+    width: 25%;
+    vertical-align: top;
+    padding: 3px 3px 0 3px;
+    height: 188px;
+    position: relative;
+}
+
+.aLinkRight {
+    background: url("downloadbtnsmall.gif") no-repeat scroll 0 0;
+    float: right;
+    height: 30px;
+    width: 173px;
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 12px;
+    margin-top: 7px;
+    color: white;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .aLinkRight:hover {
+        background: url("downloadbtnsmall.gif") 0 -40px no-repeat;
+    }
+
+.aLinkLeft {
+    float: left;
+    margin-left: 0;
+    margin-bottom: -5px;
+}
+
+.pnl1 {
+    border: solid 1px #cccccc;
+    border-top-style: none;
+    padding-top: 40px;
+    width: 99.7%;
+    margin-top: 0;
+    background-color: White;
+}
+
+#spBtn {
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    margin-top: 0;
+}
+
+#lit_Category {
+    min-height: 400px;
+}
+
+
+/*landing*/
+
+
+.jb_04_back > a {
+    background: url("button-animation.gif") no-repeat scroll -624px 0;
+    float: left;
+    height: 30px;
+    width: 172px;
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 3px;
+    /*margin-top: 122px;*/
+    color: #25AAE1;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.jb_04_back:hover > a {
+    background: url("button-animation.gif") -624px -38px no-repeat;
+}
+
+.jb_04_PlayNow {
+    background: url(/images/CasinoGames/button-animation.gif) -202px 0 no-repeat;
+    float: left;
+    height: 10px;
+    width: 126px;
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 122px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2px;
+    margin-left: -196px;
+}
+
+    .jb_04_PlayNow:hover {
+        background: url(/images/CasinoGames/button-animation.gif) -202px -38px no-repeat;
+    }
+
+.playnow > a {
+    background: url(button-animation.gif) -460px -3px no-repeat;
+    margin-left: 14px;
+    float: left;
+    display: block;
+    color: Silver;
+    Width: 165px;
+    Height: 24px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 7px;
+    font-size: 12px;
+    margin-top: 3px;
+    color: #FFFFFF;
+}
+
+.playnow:hover > a {
+    background: url(button-animation.gif) -460px -41px no-repeat;
+    color: White;
+}
+
+
+
+#header_left {
+    float: left;
+}
+
+.game_line {
+    position: absolute;
+    z-index: 120;
+    /*float: left;*/
+    margin-left: -11px;
+    *margin-left: -972px;
+    /*margin-top: 700px;*/
+    width: 100%;
+    height: 10%;
+    background: url("line.png") no-repeat scroll 0 0;
+    margin-top: 170px;
+}
+
+
+.liquid {
+    width: 960px;
+    margin: 0 2px;
+    height: 226px;
+}
+
+/* arranges the whole jackpot and screenshot placer holders*/
+#slides {
+    width: 960px;
+    height: 990px;
+    position: relative;
+    float: left;
+    top: 0;
+    z-index: 10;
+}
+
+#slides_info02 {
+    margin: 0 auto;
+    width: 960px;
+    float: left;
+    text-align: left;
+    margin-top: -455px;
+    /*right: 321px;
+	height: 960px;*/
+    background: purple;
+    position: relative;
+}
+
+#jackpots_box {
+    vertical-align: middle;
+    width: 453px;
+    margin-left: 1px;
+    position: absolute;
+    float: left;
+}
+
+#jackpotsgame_box {
+    position: relative;
+    float: right;
+    margin-right: -1px;
+}
+
+.slides_container {
+    width: 1584px;
+    height: 900px;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+
+#header_left {
+    float: left;
+}
+
+
+/*more addition*/
+
+
+/* play button for two games*/
+.nav_tit_play2 {
+    background-image: url(/images/c_but_play.png);
+    background-repeat: no-repeat;
+    height: 31px;
+    width: 125px;
+    font-size: 12px;
+    color: #FFF;
+    text-align: center;
+    line-height: 29px;
+    text-indent: 15px;
+    margin-bottom: 1px;
+    float: left;
+}
+
+.nav_tit_game2 {
+    height: 34px;
+    width: 100px;
+    float: left;
+    font-size: 12px;
+    text-align: left;
+    line-height: 18px;
+    margin-left: 5px;
+    margin-top: 2px;
+    padding-right: 3px;
+}
+
+/*the jakcpot location*/
+
+.jb_03 {
+    /*float:left;
+    margin-top:15px;
+    height: 100px;*/
+    margin-left: 0;
+}
+
+
+
+#spJackpotDetail {
+    float: left;
+    margin: 42px 0 0 34px;
+}
+
+#spJackpotDetailAmount {
+    float: left;
+    margin: 32px 0 0 20px;
+    height: 30px;
+    width: 165px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.dvJackpotDetail {
+    background-image: url(jackpot.png);
+    width: 275px;
+    height: 80px;
+}
+
+/*gameplay bar*/
+#sc-sub-nav-pro2 {
+    border: thin solid #CCC;
+    float: left;
+    height: auto;
+    /*margin: 0 auto;*/
+    min-height: 516px;
+    padding-bottom: 1px;
+    position: absolute;
+    top: 655px;
+    *margin-left: -961px;
+    /*vertical-align: middle;*/
+    width: 959px;
+    background-color: #FFF;
+    z-index: 60;
+}
+
+
+#sub_games_box {
+    border: thin solid #CCC;
+    width: 953px;
+    *width: 951px;
+    background-image: url(title_background.jpg);
+    background-repeat: repeat-x;
+    height: 54px;
+    margin: 3px 2px 0;
+    vertical-align: middle;
+}
+
+/*jackpot games placeholder*/
+#slider_gamebox {
+    width: 235px;
+    height: 190px;
+    border-right-width: thin;
+    border-bottom-width: thin;
+    border-left-width: thin;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-color: #CCC;
+    border-bottom-color: #CCC;
+    border-left-color: #CCC;
+    margin-right: 0;
+    padding-bottom: 0;
+    background-color: #FFF;
+    padding-top: 7px;
+    text-align: center;
+}
+
+#slider_box {
+    border: thin solid #CCC;
+    width: 235px;
+    background-image: url(title_background.jpg);
+    background-repeat: repeat-x;
+    height: 54px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+/*screenshot holder*/
+.gamelist_04 {
+    float: left;
+    width: 299px;
+    height: 210px;
+    border-right-width: thin;
+    border-bottom-width: thin;
+    border-left-width: thin;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-color: #CCC;
+    margin-right: 5px;
+    *margin-right: 2px;
+    /*margin-top: 516px;*/
+    padding: 7px;
+    z-index: 100;
+    position: relative;
+}
+
+.gamelist_05 {
+    float: left;
+    width: 300px;
+    height: 210px;
+    margin-right: 4px;
+    padding: 4px;
+    border: 4px solid #25aae1;
+    margin-top: 4px;
+    z-index: 100;
+    position: relative;
+}
+
+
+
+.text1 {
+    float: left;
+    height: 30px;
+    width: auto;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 655px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.f_right {
+    float: right;
+    padding-right: 12px;
+    *padding-top: 2px;
+    *padding-bottom: 2px;
+}
+
+.f_rightmain {
+    float: right;
+    padding-right: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    *padding-top: 2px;
+    *padding-bottom: 2px;
+}
+
+.play2 > .btnPTRealPlay {
+    background: url("button-animation-im.png") -20px -20px no-repeat scroll;
+    float: left;
+    height: 33px;
+    width: 256px;
+    text-align: center;
+    padding-top: 15px;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-right: -5px;
+    margin-bottom: 20px;
+}
+
+    .play2 > .btnPTRealPlay:hover {
+        background: url("button-animation-im.png") -305px -20px no-repeat;
+    }
+    
+.play2 > .btnPTDemoPlay {
+    color: #25AAE1;
+    background: url("button-animation-im.png") -20px -74px no-repeat scroll;
+    float: left;
+    height: 33px;
+    width: 230px;
+    text-align: center;
+    padding-top: 11px;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 17px;
+}
+
+.play2 > .btnPTDemoPlay:hover {
+    background: url("button-animation-im.png") -305px -74px no-repeat;
+}
+
+.text2 {
+    height: 38px;
+    float: left;
+    font-size: 12px;
+    text-align: left;
+    line-height: 14px;
+    padding-left: 10px;
+}
+
+
+.play3 > .btnPTRealPlay {
+    background: url("button-animation-im.png") no-repeat scroll -20px -121px;
+    float: left;
+    height: 25px;
+    width: 174px;
+    padding-top: 8px;
+    margin-top: -8px;
+    margin-right: -6px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+    .play3 > .btnPTRealPlay:hover {
+        background: url("button-animation-im.png") -305px -121px no-repeat;
+    }
+    
+.play3 > .btnPTDemoPlay {
+    color: #25AAE1;
+    margin-top: 10px;
+    background: url(button-animation-im.png) -20px -161px no-repeat;
+    float: left;
+    height: 24px;
+    width: 146px;
+    padding-top: 6px;
+    margin-right: -10px;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 14px;
+}
+
+    .play3 > .btnPTDemoPlay:hover {
+        background: url(button-animation-im.png) -305px -161px no-repeat;
+    }
+
+
+.text3 {
+    height: 38px;
+    width: 100%;
+    float: left;
+    font-size: 12px;
+    text-align: left;
+    line-height: 14px;
+    padding-left: 6px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.play4 > .btnPTRealPlay {
+    background: url("button-animation-im.png") no-repeat scroll -20px -121px;
+    height: 23px;
+    width: 174px;
+    padding-top: 9px;
+    margin-right: -10px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+    .play4 > .btnPTRealPlay:hover {
+        background: url("button-animation-im.png") -305px -121px no-repeat;
+    }
+    
+.play4 > .btnPTDemoPlay {
+    color: #25AAE1;
+    margin-top: 10px;
+    background: url(button-animation-im.png) -20px -161px no-repeat;
+    float: left;
+    height: 22px;
+    width: 146px;
+    padding-top: 7px;
+    margin-right: -10px;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 14px;
+}
+
+    .play4 > .btnPTDemoPlay:hover {
+        background: url(button-animation-im.png) -305px -161px no-repeat;
+    }
+
+.text4 {
+    height: 38px;
+    font-size: 12px;
+    text-align: left;
+    line-height: 14px;
+    padding-left: 3px;
+}
+
+
+.playhot {
+    background: url(button-animation.gif) -202px -4px no-repeat;
+    margin-right: 0;
+    float: left;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 0;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+    .playhot:hover {
+        background: url(button-animation.gif) -202px -42px no-repeat;
+        color: White;
+    }
+
+
+
+
+.play5 > .btnPTRealPlay {
+    background: url("button-animation-im.png") -20px -20px no-repeat scroll;
+    float: left;
+    height: 33px;
+    width: 256px;
+    text-align: center;
+    padding-top: 15px;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+    .play5 > .btnPTRealPlay:hover {
+        background: url("button-animation-im.png") -305px -20px no-repeat;
+    }
+    
+.play5 > .btnPTDemoPlay {
+    color: #25AAE1;
+    background: url("button-animation-im.png") -20px -74px no-repeat scroll;
+    float: left;
+    height: 33px;
+    width: 230px;
+    text-align: center;
+    padding-top: 11px;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 17px;
+}
+
+    .play5 > .btnPTDemoPlay:hover {
+        background: url("button-animation-im.png") -305px -74px no-repeat;
+    }
+
+.text5 {
+    height: 38px;
+    width: auto;
+    float: left;
+    font-size: 12px;
+    text-align: left;
+    line-height: 22px;
+    padding-left: 10px;
+}
+
+
+/*   #dvtest
+    {
+       height:58px;
+    width:451px;
+       margin-top: -20px;
+       background: yellow;
+    float: left;
+    line-height:54px;
+    *margin-top: 0px;
+
+    *padding-top:4px;
+    }  */
+
+
+.gamelinejackpot {
+    font-size: 18px;
+    float: left;
+    width: 451px;
+    height: 54px;
+    *padding-top: 4px;
+    margin-top: -99px;
+    margin-top: -3px\9;
+    line-height: 54px;
+    font-weight: bolder;
+    margin-left: 0;
+    z-index: 180;
+    color: White;
+    position: relative;
+    background: url("jackbig.png");
+    background: rgb(0, 0, 0); /* Fall-back for browsers that don't support rgba */
+    background: rgba(0, 0, 0, .64);
+}
+
+.gamelinejackpotmain {
+    font-size: 18px;
+    float: left;
+    width: 449px;
+    *width: 451px;
+    height: 54px;
+    *padding-top: 4px;
+    bottom: 96px;
+    line-height: 54px;
+    font-weight: bolder;
+    margin-left: 8px;
+    z-index: 180;
+    color: White;
+    position: relative;
+    background: url("jackbig.png");
+    background: rgb(0, 0, 0); /* Fall-back for browsers that don't support rgba */
+    background: rgba(0, 0, 0, .64);
+}
+
+.dy_unit .gamelinejackpotmain {
+    bottom: 58px;
+}
+
+.gameminijackpot {
+    float: left;
+    width: 221px;
+    height: 27px;
+    position: relative;
+    z-index: 170;
+    bottom: 32px;
+    line-height: 27px;
+    font-weight: bold;
+    font-size: 14px;
+    color: White;
+    margin-left: 6px;
+    background: url("jack.png");
+    background: rgb(0, 0, 0); /* Fall-back for browsers that don't
+                                    support rgba */
+    background: rgba(0, 0, 0, .64);
+}
+
+.gameminijackpottable {
+    float: left;
+    width: 221px;
+    height: 27px;
+    position: relative;
+    z-index: 170;
+    margin-top: -70px;
+    line-height: 27px;
+    font-weight: bold;
+    color: White;
+    margin-left: 3px;
+    /*background:url("jack.png");*/
+    background: url("jack.png");
+    background: rgb(0, 0, 0); /* Fall-back for browsers that don't
+                                    support rgba */
+    background: rgba(0, 0, 0, .64);
+}
+
+.starcasinogame {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.hotbanner {
+    float: left;
+    position: absolute;
+    z-index: 190;
+    background: url("hot.png");
+    height: 116px;
+    right: 3px;
+    top: -3px;
+    width: 120px;
+}
+
+.hotbannersmall {
+    float: left;
+    position: relative;
+    background: url("hot.png");
+    margin-top: -366px;
+    *margin-top: -325px;
+    margin-left: 343px;
+    *margin-left: 343px;
+    height: 116px;
+    width: 120px;
+}
+
+.hotbannersmallmain {
+    float: right;
+    position: relative;
+    z-index: 190;
+    background: url("hotsmall.png");
+    margin-top: -163px;
+    *margin-top: -178px;
+    margin-right: -11px;
+    height: 72px;
+    width: 71px;
+}
+
+.dvPlay {
+    height: 54px;
+    line-height: 54px;
+    width: 451px;
+    margin-top: -60px;
+    *margin-top: -95px;
+    margin-left: 9px;
+    *margin-left: 0;
+}
+
+.displayFalse {
+    display: none;
+}
+
+.game-but {
+    width: 235px;
+    float: left;
+}
+
+#gamesub {
+    height: 38px;
+    width: auto;
+    float: left;
+    font-size: 12px;
+    text-align: left;
+    line-height: 3px;
+    padding-left: 10px;
+}
+
+
+
+.text6 {
+    float: left;
+    height: 30px;
+    width: auto;
+    padding-top: 12px;
+    color: #25AAE1;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    width: 120px;
+}
+
+#hgames {
+    line-height: 24px;
+    margin-left: 53px;
+}
+
+.text7 {
+    float: left;
+    color: #25AAE1;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    padding-top: 4px;
+}
+
+
+.title {
+    margin: 150px 0 0 15px;
+    width: 350px;
+    text-align: left;
+}
+
+.casinotitle {
+    float: left;
+    margin-left: -1px;
+}
+
+.spCurrency {
+    color: white;
+    width: 62px;
+    height: 36px;
+    float: left;
+    text-align: center;
+    line-height: 36px;
+    margin-top: -5px;
+    *margin-top: -30px;
+    margin-left: -5px;
+}
+
+.spCurrencyMain {
+    /* background: yellow;*/
+    color: white;
+    width: 62px;
+    height: 36px;
+    float: left;
+    text-align: center;
+    line-height: 36px;
+    margin-top: 10px;
+    *margin-top: -43px;
+    margin-left: 8px;
+}
+
+.spJackpotValue {
+    background: yellow;
+    color: white;
+    width: 222px;
+    height: 36px;
+    float: right;
+    text-align: center;
+    line-height: 36px;
+    margin-top: 10px;
+    *margin-top: -43px;
+    margin-left: 8px;
+}
+
+#dvProgressive1a {
+    background: url("Slots/IronMan2/jackpot.png");
+    width: 276px;
+    height: 136px;
+}
+
+#dvProgressive1b {
+    background: url("Slots/TheIncredibleHulk/jackpot.png");
+    width: 276px;
+    height: 136px;
+}
+
+#dvProgressive1c {
+    background: url("Slots/TheMummy/jackpot.png");
+    width: 276px;
+    height: 136px;
+}
+
+#dvProgressive1d {
+    background: url("Slots/ThorTheMightyAvengers/jackpot.png");
+    width: 276px;
+    height: 136px;
+    z-index: 999;
+}
+
+#dvProgressive1e {
+    background: url("Slots/TheAvengers/jackpot.png");
+    width: 276px;
+    height: 136px;
+    position: absolute;
+    z-index: 2;
+}
+
+#dvProgressive2 {
+    background: url("Slots/Gladiator/jackpot.png");
+    width: 276px;
+    height: 104px;
+}
+
+#dvProgressive3 {
+    background: url("Slots/FootballRules/jackpot.png");
+    width: 276px;
+    height: 100px;
+    margin-left: -3px;
+}
+
+#spCurrency1a, #spCurrency1b, #spCurrency1c, #spCurrency1d, #spCurrency1e {
+    float: left;
+    width: 45px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    margin-top: 90px;
+    margin-left: 10px;
+}
+
+#spCurrency2 {
+    width: 36px;
+    height: 36px;
+    float: left;
+    text-align: center;
+    line-height: 36px;
+    margin-top: 54px;
+    margin-left: 48px;
+}
+
+#spCurrency3 {
+    color: white;
+    width: 36px;
+    height: 36px;
+    float: left;
+    text-align: center;
+    line-height: 36px;
+    margin-top: 55px;
+    margin-left: 50px;
+}
+
+.spJackpotMainPage {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#spJackpotAmount1a, #spJackpotAmount1b, #spJackpotAmount1c, #spJackpotAmount1d, #spJackpotAmount1e {
+    float: left;
+    margin-top: 90px;
+    margin-left: 4px;
+    line-height: 36px;
+    width: 165px;
+    height: 36px;
+    text-align: center;
+    font-size: 19px;
+}
+
+#spJackpotAmount2 {
+    float: left;
+    margin-top: -36px;
+    margin-left: 88px;
+    line-height: 36px;
+    width: 140px;
+    height: 36px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#spJackpotAmount3 {
+    float: left;
+    margin-top: 54px;
+    margin-left: 4px;
+    line-height: 36px;
+    width: 140px;
+    height: 36px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.downloadbuttonbig {
+    margin-right: 38px;
+    margin-top: 340px;
+    float: right;
+    cursor: pointer;
+}
+
+/*
+.downloadbuttonspan
+{
+    margin-right:-280px;
+    margin-top:3px;
+    float:right;
+    cursor:pointer;
+    color:White;
+    line-height:55px;
+    font-weight:bold;
+    vertical-align:top;
+}
+*/
+.ViewRightid, .ViewRightvi,
+.ViewRighten, .ViewRightzh,
+.ViewRightth, .ViewRightko {
+    background: url("viewall.gif") no-repeat scroll -5px 0;
+    float: right;
+    height: 30px;
+    width: 261px;
+    text-align: center;
+    padding-top: 10px;
+    margin-right: -11px;
+    margin-top: 7px;
+    color: #25AAE1;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ViewRightvi, .ViewRightid {
+    font-size: 11px;
+}
+
+.ViewRightid:hover, .ViewRightvi:hover,
+.ViewRighten:hover, .ViewRightzh:hover,
+.ViewRightth:hover, .ViewRightko:hover {
+        background: url("viewall.gif") -5px -38px no-repeat;
+    }
+
+.PTButtons {
+    width: 185px;
+    padding-top: 70px;
+}
+
+.ptDemoTrue .PTButtons {
+    padding-top: 47px;
+}
+
+.dy_unit .PTButtons {
+    padding-top: 31px;
+}
+
+.PTButtons_main {
+    padding-top: 150px;
+    width: 335px;
+}
+
+.ptDemoTrue .PTButtons_main {
+    padding-top: 126px;
+}
+
+.dy_unit .PTButtons_main {
+    padding-top: 89px;
+}
+
+.PT_button_hover {
+    background: url("pt_hover_small.png") 7px 6px no-repeat;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 228px;
+    display: none;
+}
+
+.PT_hover_main {
+    background: url("pt_hover_main.png") 10px 3px no-repeat;
+    display: none;
+    height: 331px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 465px;
+}
+
+.dy_unit .PT_hover_main {
+    background-position: 8px -1px;
+    *background-position: 0 -1px;
+}
+
+.dvMain:hover .PT_hover_main, .dvGames:hover .PT_button_hover {
+    display: block;
+}
+
+.dy_unit .pt_hover_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.dy_unit .PT_hover_main .starcasinogame {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+.dy_unit .PT_button_hover .starcasinogame {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}

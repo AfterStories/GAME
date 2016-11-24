@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Outright Odds</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body onload="parent.OddsBody['Outright']=document.body.innerHTML;">
+
+	<div id="divPathLink" class="location"></div>
+	<!--location End-->
+	<!--Odds Begin-->
+	<h1 id="divLeagueTitle" class="BigTitle">优胜冠军</h1>
+	<!-- Match Info-->
+
+	<table height="25" width="540">
+		<tbody><tr>
+			<td align="right">
+				<a class="btnRefresh" name="btnRefresh" href="javascript:refreshORData();"><span disabled="">请稍候</span></a>
+				<a id="btnSelectLeague" class="btnRefresh" href="javascript:openLeague(640,'选择联赛','Outright','0','10','0','Outright');"><span>选择联赛</span></a>
+			</td>
+		</tr>
+	</tbody></table>
+
+	<div id="TrNoInfo" style="display: none;" class="styleblack" align="left">目前没有适合赛事</div>
+	<div id="BetList" align="center"><img src="../images/spacer.gif" class="icon-loading" height="25" width="25" vspace="2"></div>
+	<div id="OddsTr" style="display: none;">
+		<div id="oTableContainer" class="Oddstab_bg"></div>
+	</div>
+
+
+
+</body>
+</html>

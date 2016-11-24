@@ -1,0 +1,9 @@
+/* Code tidied up by ScrapBook */
+#page_features IMG { border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221); padding: 6px; }
+.highslide { cursor: url("zoomin.cur"), pointer; }
+.tabnav { color: rgb(9, 140, 184); font-size: 19px; text-align: center; font-weight: 700; margin-top: -25px; padding-top: 40px; }
+.tabnav ul { float: left; color: rgb(37, 136, 185); width: 797px; background: transparent url("info_menu.png") no-repeat scroll 0px 0px; list-style: outside none none; position: relative; margin-top: -10px; margin-left: 92px; z-index: 23; }
+.tabnav li { display: block; list-style: outside none none; float: left; height: 100px; }
+.tabnav li a { margin-top: 45px; display: block; color: rgb(37, 170, 225); height: 82px; padding-left: 35px; padding-top: 8px; }
+.tabnav li a:hover, .tabnav li a:active, .tabnav li.ui-tabs-selected a { margin-top: 7px; display: block; color: rgb(37, 136, 185); height: 82px; padding-top: 46px; background: transparent url("info_menu2.png") no-repeat scroll 0px 15px / 240px 98px; }
+#Sportsbook, #Entertainment, #Casino, #Join_now { background: transparent url("info_menu1.png") no-repeat scroll 0px 29px / 240px 100px; width: 227px; }

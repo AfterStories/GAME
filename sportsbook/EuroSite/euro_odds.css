@@ -1,0 +1,151 @@
+/* Code tidied up by ScrapBook */
+.Msg { width: 250px; z-index: 300; position: absolute; float: left; margin-left: 300px; }
+.border-right { border-right: 1px solid rgb(86, 86, 86); }
+.odds_open { margin-top: 0px; }
+.odds_close { display: none; }
+.mathbg { background-image: url("mathbg.jpg"); background-repeat: no-repeat; background-position: left top; padding: 10px; height: 53px; width: 387px; }
+.widicon { width: 2px; padding: 4px 2px ! important; }
+.BackLink a { display: block; font-size: 11px; color: rgb(46, 46, 46); text-decoration: none; padding: 0px 15px 0px 3px; vertical-align: top; }
+.BackLink a:hover { color: rgb(235, 99, 7); text-decoration: none; }
+.ContType { float: left; font-size: 11px; color: rgb(46, 46, 46); margin-right: 5px; }
+.date { background-image: url("icon.gif"); background-repeat: no-repeat; background-position: 0px -53px; height: 16px; width: 18px; display: block; float: left; margin-right: 5px ! important; }
+.SelectedPlace { float: right; margin-top: 6px; margin-right: 5px; }
+.Selected { margin-right: 5px; }
+.slang span { background-image: url("slang.gif"); background-repeat: no-repeat; background-position: right -17px; cursor: pointer; padding-right: 26px; height: 16px; line-height: 16px; display: inline-block; }
+.slang { background-image: url("slang.gif"); background-repeat: no-repeat; background-position: 0px top; font-size: 10px; color: rgb(33, 32, 33); height: 16px; padding-left: 5px; display: block; cursor: pointer; float: right; }
+.Selected dl { background-color: rgb(255, 255, 255); border: 1px solid rgb(229, 229, 229); font-size: 10px; color: rgb(33, 32, 33); margin-top: 0px; text-align: left; padding: 0px; position: absolute; z-index: 300; }
+.Selected dd { margin: 0px; }
+.Selected dd a { color: rgb(33, 32, 33); text-decoration: none; display: block; padding: 3px 5px; cursor: pointer; }
+.Selected dd a:hover { background-color: rgb(198, 255, 255); color: rgb(33, 32, 33); text-decoration: none; }
+.Selectedtime { float: left; width: auto; margin-right: 5px; }
+.slangTime span { background-image: url("slang.gif"); background-repeat: no-repeat; background-position: right -17px; cursor: pointer; padding-right: 30px; display: block; height: 16px; }
+.slangTime { background-image: url("slang.gif"); background-repeat: no-repeat; background-position: 0px top; font-size: 10px; color: rgb(46, 46, 46); height: 16px; padding-left: 5px; cursor: pointer; }
+.Selectedtime dl { background-color: rgb(255, 255, 255); border: 1px solid rgb(229, 229, 229); font-size: 10px; color: rgb(33, 32, 33); margin-top: 0px; text-align: left; padding: 0px; position: absolute; z-index: 300; }
+.Selectedtime dd { margin: 0px; }
+.Selectedtime dd a { color: rgb(33, 32, 33); text-decoration: none; display: block; padding: 3px 5px; cursor: pointer; }
+.Selectedtime dd a:hover { background-color: rgb(198, 255, 255); color: rgb(33, 32, 33); text-decoration: none; }
+.ajxbox { border: 8px solid rgb(204, 204, 204); padding: 10px; background-color: rgb(248, 248, 248); }
+.ajxbox h1 { font-size: 12px; font-weight: bold; color: rgb(17, 48, 108); background-image: url("BigTitle_icon.gif"); background-repeat: no-repeat; background-position: left 1px; padding-left: 18px; margin: 0px 0px 10px; display: block; }
+.ajxline { background-color: rgb(214, 214, 214); display: block; height: 1px; width: 100%; }
+.titletext { font-size: 11px; padding-top: 2px; padding-bottom: 2px; }
+.starttime { color: rgb(67, 67, 67); font-size: 11px; font-weight: bold; }
+.starttime em { font-size: 13px; font-weight: bold; }
+.Selecttext td { padding-right: 5px; }
+.Selectbtn { margin-left: -3px; }
+a.btnhorse { color: rgb(0, 0, 0); display: block; float: left; height: 20px; padding-right: 6px; font: 11px sans-serif; margin-right: 2px; text-decoration: none; background-color: transparent; background-image: url("button2.gif"); background-repeat: no-repeat; background-position: right 0px; }
+a.btnhorse span { display: block; line-height: 11px; margin-left: 2px; padding: 5px 0px 4px 6px; background-color: transparent; background-image: url("button1.gif"); background-repeat: no-repeat; background-position: left 0px; }
+a.btnhorse:hover { background-position: right -20px; color: rgb(255, 255, 255); }
+a.btnhorse:hover span { background-position: left -20px; }
+.horseno { font-size: 11px; font-weight: normal ! important; text-align: center; }
+.sal_Oddstab { border-collapse: collapse; clear: both; width: 540px; }
+.sal_Oddstab th { font-size: 10px; color: rgb(255, 255, 255); white-space: nowrap; background-color: rgb(180, 180, 180); padding: 0px 0px 0px 4px; line-height: 10px; height: 21px; }
+.sal_Oddstab td { padding: 3px 5px; text-decoration: none; font-size: 11px; color: rgb(67, 67, 67); font-weight: bold; vertical-align: top; }
+.sal_Oddstab a { text-decoration: none; font-weight: bold; color: rgb(67, 67, 67); }
+.sal_Oddstab a:hover { text-decoration: none; color: rgb(255, 0, 0); }
+.sal_Oddstab td.rightborder { border-right: 1px solid rgb(181, 181, 181); }
+.sal_Oddstab td.noborder { border-left-width: 0px; }
+.sal_Oddstab td.bottomborder { border-bottom: 1px solid rgb(181, 181, 181); }
+.liveicon { background-image: url("liveicon.gif"); background-repeat: no-repeat; background-position: center 0px; display: block; width: 31px; height: 13px; margin-right: auto; margin-left: auto; }
+.livetime { background-image: url("livetime.gif"); background-repeat: no-repeat; width: 40px; height: 19px; font-size: 9px; color: rgb(102, 102, 102); text-align: center; line-height: 10px; padding: 3px 4px; }
+tbody.Header-Open { text-decoration: none; cursor: pointer; background-image: url("Header_Bg.gif") ! important; background-position: 0px -3px ! important; background-repeat: no-repeat ! important; text-align: left ! important; background-color: rgb(255, 255, 255) ! important; }
+tbody.Header-Close { background-image: url("Header_Bg_gra.gif") ! important; background-position: 0px -31px; cursor: pointer; text-decoration: none; text-align: left; padding-top: 0px ! important; }
+tbody.Header-Open .Header { color: rgb(255, 255, 255) ! important; }
+tbody.Header-Close .Header { color: rgb(106, 106, 106) ! important; height: 13px ! important; }
+tbody.Header-Open .Header, tbody.Header-Close .Header { height: 16px; font-size: 11px ! important; padding-top: 0px ! important; padding-right: 8px ! important; padding-left: 20px ! important; margin-top: 3px; font-weight: bold; }
+h1.BigTitle { font-size: 12px; font-weight: bold; color: rgb(17, 48, 108); background-image: url("BigTitle_icon.gif"); background-repeat: no-repeat; background-position: left 1px; padding-left: 18px; margin: 0px 0px 10px; display: block; }
+h2.SubTitle { font-size: 12px; margin: 5px 0px 0px; padding-top: 5px; font-weight: bold; color: rgb(17, 48, 108); }
+.Oddstab_bg { background-image: url("oddsBborder.gif") ! important; background-repeat: no-repeat; background-position: left bottom; padding-bottom: 2px; clear: both; }
+.Oddstab { border-collapse: collapse; clear: both; width: 540px; }
+.Oddstab em.Score { color: rgb(42, 49, 72); font-style: normal; font-size: 14px; font-weight: bold; }
+.Oddstab em, .tabtitle2 .FavOddsClass { color: rgb(255, 0, 0); }
+.Oddstab em, .tabtitle2 em, .starttime em, .tabother em { font-style: normal; padding-right: 5px; padding-left: 5px; }
+.Oddstab th, .tabtitle3, .tabtitle3 a, .tabother { font-size: 10px; padding: 0px 5px; line-height: 17px; height: 21px; }
+.Oddstab td { padding: 3px 5px; text-decoration: none; }
+.Oddstab td, .Oddstab .slangTime span { font-size: 11px; color: rgb(67, 67, 67); font-weight: bold; }
+.Oddstab .Selectedtime { width: 100%; position: relative; }
+.Oddstab .Selectedtime dl { width: 100%; }
+.Oddstab .Selectedtime dl a { font-weight: normal; }
+.Oddstab th, .tabtitle3, .tabtitle3 a, .tabother, .tabtitle2 { background-color: rgb(180, 180, 180); }
+.Oddstab th, .tabtitle3, .tabtitle3 a, .tabother td, .tabtitle2, .tabtitle2 a { color: rgb(255, 255, 255) ! important; }
+.Oddstab th { white-space: nowrap; }
+.Oddstab th.first { border-left: 0px solid rgb(181, 181, 181); }
+.Oddstab th.last { border-right: 0px solid rgb(181, 181, 181); }
+.vs { color: rgb(255, 0, 0); }
+.Oddstab td.padtop { padding-top: 0px ! important; }
+.Oddstab a, .matchList a .matchTeam { text-decoration: none; font-weight: bold; color: rgb(67, 67, 67); line-height: 18px; }
+.Oddstab a:hover, .tabtitle2 a:hover, .matchList a:hover .matchTeam { text-decoration: none; color: rgb(255, 0, 0); }
+.rborder { border-right: 1px solid rgb(181, 181, 181); }
+.noborder { border-left-width: 0px; }
+.bottomborder { border-bottom: 1px solid rgb(181, 181, 181); }
+.Oddstab td.time { width: 47px; font-size: 9px ! important; color: rgb(49, 49, 49); text-align: center; font-weight: normal ! important; }
+.Oddstab td.OddsBet { width: 49px; text-align: center; }
+.Oddstab td.OddsBet a, .races a { font-size: 11px; font-weight: bold; color: rgb(67, 67, 67); text-decoration: none; background-image: url("odds_bet_gra.gif"); background-repeat: no-repeat; background-position: 0px 0px; cursor: pointer; display: inline-block; height: 20px; text-align: center; line-height: 20px; width: 49px; vertical-align: middle; }
+.Oddstab td.OddsBet a:hover, .races a:hover { background-image: url("odds_bet.gif"); background-repeat: no-repeat; background-position: 0px 0px; color: rgb(67, 67, 67); }
+.Oddstab td.BetMore { width: 30px; text-align: center; }
+.Oddstab td.BetMore a { font-size: 11px; color: rgb(67, 67, 67); text-decoration: none; background-image: url("odds_bet_gra.gif"); background-repeat: no-repeat; background-position: -100px 0px; cursor: pointer; display: block; height: 20px; text-align: center; line-height: 20px; width: 30px; font-weight: bold; }
+.Oddstab td.BetMore a:hover { font-weight: bold; font-size: 11px; color: rgb(67, 67, 67); text-decoration: none; background-image: url("odds_bet.gif"); background-repeat: no-repeat; background-position: -100px 0px; cursor: pointer; display: block; height: 20px; text-align: center; line-height: 20px; width: 30px; }
+.Oddstab th.BetNow { width: 66px ! important; text-align: center; }
+.Oddstab td.BetNow { width: 66px ! important; text-align: center; }
+.oddsLborder { background-image: url("odds_bg.gif") ! important; background-repeat: repeat-y; background-position: left 0px; }
+.oddsRborder { background-image: url("odds_bg.gif") ! important; background-repeat: repeat-y; background-position: right 0px; }
+.whistle, .TV, .Stats, .horseinfo, .icon_help { background-image: url("3s_icon_gra.GIF"); background-repeat: no-repeat; height: 16px; width: 16px; }
+a:hover .whistle, a:hover .TV, a:hover .Stats, a:hover .horseinfo, .horseinfo.selected, a:hover .icon_help { background-image: url("3s_icon.GIF"); background-repeat: no-repeat; cursor: pointer; }
+.whistle, a:hover .whistle { background-position: left top; }
+.TV, a:hover .TV { background-position: -19px top; }
+.Stats, a:hover .Stats { background-position: -38px top; }
+.horseinfo, a:hover .horseinfo { background-position: -76px top; }
+.icon_help, a:hover .icon_help { background-position: -95px top; }
+a.btnRefresh, a.btnRefresh span { background-image: url("button_gra.gif"); background-repeat: no-repeat; }
+a.btnRefresh:hover, a.btnRefresh:hover span { background-image: url("button.gif"); background-repeat: no-repeat; }
+a.btnRefresh { float: right; height: 16px; color: rgb(0, 0, 0) ! important; text-decoration: none; font-size: 10px; background-position: right -56px; padding-right: 6px; margin-right: 2px; display: inline-block; }
+a.btnRefresh span { height: 16px; background-position: left -40px; padding-top: 1px; padding-left: 6px; display: inline-block; cursor: pointer; line-height: 13px; }
+a.btnRefresh:hover { background-position: right -56px; color: rgb(0, 0, 0) ! important; text-decoration: none; }
+a.btnRefresh:hover span { background-position: left -40px; }
+.oddstr1 { background-color: rgb(255, 255, 255); }
+.oddstr2 { background-color: rgb(220, 220, 220); }
+.bglivelight { background-color: rgb(220, 220, 220); }
+.bglive { background-color: rgb(255, 255, 255); }
+.liveicon2 { background-image: url("liveicon2.gif"); background-position: center 0px; background-repeat: no-repeat; color: rgb(255, 255, 255); display: block; font-size: 10px; height: 12px; margin-left: auto; margin-right: auto; padding-left: 1px; padding-right: 1px; width: 50px; }
+.MatchInfo { color: rgb(102, 102, 102); font-size: 12px; }
+.MatchInfo span { margin-right: 0px; margin-left: 0px; }
+.MatchInfo h4 { color: rgb(102, 102, 102); font-size: 14px; margin-top: 5px; margin-bottom: 0px; display: block; }
+.MatchInfo h4.Score { color: rgb(102, 102, 102); font-size: 18px; font-weight: bolder; margin-top: 0px; margin-bottom: 3px; line-height: 18px; }
+.topinfo_g { background-image: url("ho-mathbg.png"); background-repeat: no-repeat; background-position: right top; padding: 10px; width: 385px; background-color: rgb(255, 204, 102); border-top: 1px solid rgb(225, 225, 225); border-right: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225); }
+.topinfo_Lg { background-color: rgb(255, 204, 102); border-top: 1px solid rgb(225, 225, 225); border-left: 1px solid rgb(225, 225, 225); border-bottom: 1px solid rgb(225, 225, 225); background-image: url("ho-mathbg.png"); background-repeat: no-repeat; background-position: left top; }
+.top_Line { background-image: url("topinfo_line.gif"); background-repeat: repeat-y; background-position: left 10px; padding: 5px 0px 5px 10px; }
+.topinfo_mid { width: 522px; background-color: rgb(248, 248, 248); border-right: 1px solid rgb(225, 225, 225); border-left: 1px solid rgb(225, 225, 225); padding: 5px 8px; border-bottom: 1px solid rgb(225, 225, 225); }
+.Header-Open2 { background-image: url("Header_Bg.gif"); background-repeat: no-repeat; background-position: left top; height: 15px; font-size: 11px; font-weight: bold; color: rgb(255, 255, 255); text-decoration: none; cursor: pointer; clear: both; padding: 9px 8px 4px 23px; margin-top: 0px; }
+.Header-Close2 { background-image: url("Header_Bg_gra.gif"); background-repeat: no-repeat; background-position: left -28px; height: 17px; font-size: 11px; font-weight: bold; color: rgb(115, 113, 115); text-decoration: none; cursor: pointer; clear: both; padding: 9px 8px 5px 23px; margin-top: 0px; }
+.tabframe2 { border: 2px solid rgb(216, 216, 216); padding: 2px; float: left; width: auto; }
+.tabtitle3 { font-size: 11px ! important; padding-top: 2px; padding-bottom: 1px; line-height: 22px; height: 22px; }
+.tabtitle2 { font-size: 11px ! important; line-height: 20px; height: 20px; text-align: center; }
+.tabtitle2 a { font-weight: normal ! important; }
+.border_bg { padding: 0px; background-image: url("horse_trbg.gif"); background-position: 0px 0px; }
+.races a, .races a:hover { background-position: -162px 0px; width: 68px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.racestab { width: 536px; }
+.racestab td { text-align: center; line-height: 18px; width: 70px ! important; border-bottom: 1px solid rgb(181, 181, 181); }
+.racesborder { text-align: center; line-height: 18px; border-right: 1px solid rgb(181, 181, 181); border-left: 1px solid rgb(181, 181, 181); }
+.horseinfo span { font-weight: normal; }
+#select-league { z-index: 1; position: absolute; visibility: hidden; float: left; left: 225px; top: 200px; }
+.ItemMessageList-Mid { font-size: 15px; color: rgb(255, 60, 123); font-weight: normal; padding-left: 0px; background-color: rgba(102, 102, 102, 0.6); position: absolute; }
+.Horsecontainer { opacity: 0.6; font-size: 25px; color: rgb(136, 34, 34); margin-left: -153px; position: absolute; top: 50%; left: 50%; width: 350px; height: 70px; }
+.noline_r { border-right-style: none; }
+.horsecolor img { border: 1px solid rgb(153, 153, 153); }
+.tabhigh { text-align: center; font-size: 12px; font-weight: bold; color: rgb(47, 47, 47) ! important; padding: 4px; }
+.tabother { font-size: 13px ! important; }
+.Alpha { background-image: url("Alpha.png"); background-repeat: repeat; }
+.streamVirtual { width: 538px; display: inline-block; border: 1px solid rgb(204, 204, 204); background: rgb(232, 230, 231) none repeat scroll 0% 0%; border-radius: 3px; margin-bottom: 10px; height: 430px; }
+.streamTitle { font-size: 11px; font-weight: bold; color: rgb(98, 98, 98); padding: 10px 11px; text-indent: 20px; background: transparent url("betslip-arrow_close.gif") no-repeat scroll 13px 13px; }
+.streamTitle span { color: rgb(220, 1, 0); }
+.streamVideo { width: 518px; height: 283px; margin: 0px 11px 11px; }
+.matchVirtual { width: 540px; margin-bottom: 10px; display: inline-block; }
+.matchList { width: 107px; float: left; }
+.matchGap { width: 1px; height: 84px; float: left; border-bottom: 1px solid rgb(204, 204, 204); }
+.matchTime { padding: 4px; font-size: 12px; font-weight: bold; text-align: center; background: rgb(120, 120, 120) none repeat scroll 0% 0%; border-radius: 3px 3px 0px 0px; }
+.matchTime, .matchList a .matchTime { color: rgb(255, 255, 255); }
+.matchList.live .matchTime { background: transparent url("Header_Bg_001.gif") no-repeat scroll -32px -5px; }
+.matchTeam { width: 95px; font-size: 11px; font-weight: bold; text-align: center; margin: 0px; line-height: 12px; border-left: 1px solid rgb(204, 204, 204); border-right: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); padding: 3px 5px 4px; }
+.matchList.live .matchTeam { border-bottom: medium none; background: transparent none repeat scroll 0% 0%; padding: 3px 5px 5px; }
+.ovf { width: 90px; overflow: hidden; text-overflow: ellipsis; }
+.player-red { color: rgb(255, 0, 0) ! important; }
+.player-blue { color: rgb(0, 99, 255) ! important; }

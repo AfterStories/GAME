@@ -1,0 +1,145 @@
+/* Code tidied up by ScrapBook */
+@import url("frameForAll.css");
+body { font-family: Arial,Helvetica,sans-serif,Tahoma; background-color: rgb(255, 255, 255); background-image: none; margin: 0px; overflow: hidden; -moz-text-size-adjust: none; }
+body[lang="cs"], body[lang="ch"] { font-family: Arial,Helvetica,sans-serif,Tahoma,"新細明體","細明體"; }
+table td { padding: 0px; }
+a { text-decoration: none; }
+form { margin: 0px; }
+input.noborder { border: 0px none; }
+input.bgbu { background-color: rgb(221, 243, 255); font-weight: normal; }
+select { color: rgb(102, 102, 102); font-size: 11px; font-family: Arial,Helvetica,sans-serif,Tahoma; }
+input { font-size: 11px; font-family: Arial,Helvetica,sans-serif,Tahoma; }
+.right { float: right; }
+.left { float: left; }
+.txtright { text-align: right; }
+.mgdon5 { margin-bottom: 5px; }
+.hight { margin-right: 3px; float: left; }
+.btn-gylight, .btn-gylight[disabled]:hover, .btn-gylight[disabled]:active, .btn-gylight.disabled:hover, .btn-gylight.disabled:active { color: rgb(33, 32, 33); height: 20px; font-size: 11px; font-family: Arial,Helvetica,sans-serif,Tahoma; display: inline-block; overflow: visible; white-space: nowrap; padding: 0px 5px; cursor: pointer; border-radius: 4px; border-width: 1px; border-style: solid; border-color: rgb(155, 167, 173); background-color: rgb(255, 255, 255); background-image: url("mask2_001.png"); background-repeat: repeat-x; background-position: 0px 0px; }
+.btn-gylight:hover, .btn-gylight:focus { color: rgb(33, 32, 33) ! important; border-color: rgb(0, 195, 198); background-image: url("mask1.png"); background-repeat: repeat-x; background-position: 0px 0px; background-color: rgb(198, 255, 255); }
+.btn-gylight[disabled]:hover, .btn-gylight[disabled]:active, .btn-gylight.disabled:hover, .btn-gylight.disabled:active, button[disabled]:active, button[disabled] { color: rgb(172, 168, 153) ! important; }
+.banner { margin-bottom: 1px; }
+#ControlLeft { width: 191px; padding-left: 0px; float: left; display: block; }
+.item, #subnav_olympic div { height: 25px; width: 170px; font-size: 12px; border-radius: 4px 4px 0px 0px; font-weight: bold; display: block; padding: 1px 1px 0px; border-width: 1px 1px 0px; border-style: solid; }
+.item, #subnav_olympic div, #subnav { background-color: rgb(255, 255, 255); }
+.item, #subnav, #subnav_olympic div { border-color: rgb(212, 225, 236); }
+.item .itemrd:first-child, .item .itemrdon:first-child { border-top-left-radius: 4px; }
+.item .itemrd:last-child, .item .itemrdon:last-child { border-top-right-radius: 4px; }
+.itemrd a { text-align: center; line-height: 26px; height: 26px; display: block; background-image: url("mask1.png"); background-repeat: repeat-x; background-position: 0px 8px; }
+.sub_itemline, .itemrd, #subnav_olympic + div#SportsMenu .itemrd, #subnav_olympic + div#SportsMenu .itemrd a, #subnav_olympic + div#SportsMenu .itemrdon, #subnav_olympic div.current a, #subnav_olympic.Special-game div a { background-color: rgb(50, 130, 190); }
+.itemrd a:hover, #subnav_olympic + div#SportsMenu .itemrdon a, .leftboxinfo.betSlip .title:hover > span, #subnav_olympic.Special-game div.current a, #subnav_olympic.Special-game div.current a:hover, #subnav_olympic.Special-game div a:hover { color: rgb(255, 255, 255); }
+.itemrd, .itemrd a, #subnav_olympic div.current a, #subnav_olympic div.current a:hover, #subnav_olympic.Special-game div a { color: rgb(210, 223, 235); }
+.itemrdon { font-weight: bold; text-align: center; line-height: 26px; height: 26px; color: rgb(235, 99, 7); background-color: rgb(226, 226, 226); }
+.sub_itemline { padding-top: 4px; background-image: url("sub_itemline2.png"); background-repeat: no-repeat; background-position: -1px 0px; width: 1px; height: 22px; }
+.subnav-item { height: 26px; width: 174px; padding: 0px; }
+#subnav_olympic div { height: 0px; display: table-cell; white-space: nowrap; }
+#subnav_olympic div a { border-top-left-radius: 4px; border-top-right-radius: 4px; color: rgb(255, 255, 255); text-align: center; line-height: 24px; height: 24px; padding: 0px 3px; display: block; background-image: url("mask2_001.png"); background-repeat: repeat-x; background-position: 0px 0px; background-color: rgb(50, 130, 190); }
+#subnav_olympic div a:hover { color: rgb(115, 113, 115); }
+.itemrdon a { display: block; color: rgb(235, 99, 7); }
+#subnav_olympic + div#SportsMenu .itemrd, #subnav_olympic + div#SportsMenu .itemrd a, #subnav_olympic + div#SportsMenu .itemrdon { background-image: url("mask3.png"); background-position: 0px -22px; background-repeat: repeat-x; }
+#subnav_olympic div.current a, #subnav_olympic.Special-game div a { background-image: url("mask1.png"); background-repeat: repeat-x; background-position: 0px 3px; }
+#subnav_olympic + div#SportsMenu .item, #subnav_olympic + div#SportsMenu .item .itemrd:first-child, #subnav_olympic + div#SportsMenu .item .itemrdon:first-child { border-radius: 0px; padding: 0px 1px ! important; border-width: 0px 1px ! important; }
+#subnav_olympic + div#SportsMenu .item .itemrd:last-child, #subnav_olympic + div#SportsMenu .item .itemrdon:last-child { border-radius: 0px; }
+.subnav_all2 a, .subnav-itemmu a:hover { color: rgb(255, 255, 255); height: 21px; font-size: 11px; text-align: center; font-weight: bold; background-image: url("menu_all_1.gif"); background-repeat: no-repeat; background-position: 0px 0px; cursor: pointer; display: block; line-height: 20px; padding-top: 5px; }
+.subnav_all1 a { color: rgb(153, 51, 0); height: 21px; font-size: 11px; text-align: center; font-weight: bold; background-image: url("menu_all_1_001.gif"); background-repeat: no-repeat; background-position: 0px -29px; cursor: pointer; display: block; line-height: 20px; padding-top: 5px; }
+#subnav { width: 172px; border-width: 0px 1px 1px; border-style: solid; border-radius: 0px 0px 4px 4px; }
+#subnav-foot { margin-bottom: 6px; }
+#subnav span.nav a, #subnav span.nava a { font-size: 12px ! important; }
+#subnav span.nav a:hover .tabcontrd { color: rgb(235, 99, 7) ! important; }
+#subnav span.livelist a { height: 22px; font-size: 11px; font-weight: bold; display: block; line-height: 22px; padding-left: 4px; margin-bottom: 1px; margin-left: 1px; margin-right: 1px; }
+#subnav span.nav a, #subnav span.livelist a { background-color: rgb(238, 238, 238); }
+#subnav span.nav a, #subnav span.nav a:link, #subnav span.nav a:visited, #subnav span.livelist a, #subnav span.livelist a:link, #subnav span.livelist a:visited { color: rgb(33, 32, 33); text-decoration: none; }
+#subnav span.nav a:hover, #subnav span.livelist a:hover, #subnav span.nava a:hover, #subnav span.nava a { background-color: rgb(255, 255, 198); color: rgb(33, 32, 33) ! important; display: block; }
+#subnav span.nav a span.tabcontor, #subnav span.livelist a span.tabcontor { color: rgb(50, 130, 190); font-weight: bold ! important; }
+#subnav span.nav a:hover span.tabcontor, #subnav span.livelist a:hover span.tabcontor, #subnav span.nava a, #subnav span.nava a span { color: rgb(50, 130, 190) ! important; font-weight: bold ! important; }
+#subnav span.nava a { background-image: url("icon_reduce.gif"); background-repeat: no-repeat; background-position: 10px 8px; }
+.subnav-link { width: 172px; }
+#subnav div.subnav-link a { font-size: 12px ! important; font-weight: normal; padding-top: 0px; display: block; list-style-type: none; list-style-position: outside; line-height: 20px; padding-left: 20px; }
+#subnav div.subnav-link a:link, #subnav div.subnav-link a:visited { color: rgb(33, 32, 33); text-decoration: none; margin: 0px 1px; background-color: rgb(255, 255, 255); line-height: 22px; min-height: 22px; }
+#subnav div.subnav-link a:hover { color: rgb(0, 0, 255) ! important; display: block; }
+#subnav div.subnav-link a span.submenu { max-width: 125px; overflow: hidden; display: inline-block; text-overflow: ellipsis; white-space: nowrap; float: left; margin-right: 2px; }
+#subnav div.subnav-link a span.contor { color: rgb(59, 139, 198); padding-top: 2px; }
+.liveicon { background: transparent linear-gradient(to bottom, rgb(209, 42, 38) 0%, rgb(146, 2, 14) 100%) repeat scroll 0% 0% ! important; border-color: rgb(144, 28, 28) ! important; }
+.contbk { color: rgb(17, 48, 108); }
+.contbu { color: rgb(102, 102, 102); font-weight: bold ! important; padding-left: 0px; margin-left: 2px; }
+.conttable { color: rgb(33, 32, 33) ! important; padding-left: 6px; margin-left: 5px; }
+.contrd { color: rgb(255, 0, 0); font-weight: bold; padding-top: 2px; }
+.contor { color: rgb(59, 139, 198); padding-top: 2px; }
+.Choice, .price, .result, .comboParlayMini .betType { color: rgb(50, 130, 190); }
+.contgy { color: rgb(102, 102, 102) ! important; }
+.tabcontbu, .tabcontbu a { color: rgb(30, 110, 171) ! important; }
+.tabcontbl, .tabcontbl a { color: rgb(33, 32, 33) ! important; padding-left: 5px; }
+.tabcontrd, .tabcontrd a, .comboParlayArea .note { color: rgb(255, 0, 0) ! important; padding: 5px 0px 3px; }
+.tabcontor, .tabcontor a { color: rgb(50, 130, 190); font-weight: bold ! important; }
+.tabcontgr, .tabcontgr a { color: rgb(102, 102, 102) ! important; padding: 5px 5px 3px 3px; }
+.tabcontbk, .tabcontbk a { color: rgb(102, 102, 102) ! important; }
+.tabcontwt, .tabcontwt a { color: rgb(255, 255, 255) ! important; font-weight: bold ! important; }
+.maxbet { color: rgb(204, 0, 0) ! important; }
+.minbet { color: rgb(0, 51, 153) ! important; }
+.Ltrbgov { background-color: rgb(255, 255, 198); }
+.Lwait, .comboParlayArea .option:hover, .comboParlayArea .option.active { background-color: rgb(255, 195, 198); }
+.LOddBg { background-color: rgb(255, 255, 255); }
+.LEvenBg { background-color: rgb(228, 241, 251); }
+.bgpk { background-color: rgb(254, 204, 203); }
+.bgwhite-box td, .leftbox3 .info { border-width: 2px 1px 1px; border-style: solid; border-color: rgb(237, 237, 237); }
+.fone14 { font-size: 14px; }
+.fone15 { font-size: 11px ! important; }
+.tabstyle04 th { color: rgb(77, 77, 77); font-size: 10px; background-color: rgb(225, 225, 225); padding: 4px; border-top: 1px solid rgb(237, 237, 237); border-bottom: 1px solid rgb(237, 237, 237); margin: 2px; text-indent: 5px; text-align: left; }
+.tabstyle04 td { color: rgb(13, 96, 158); font-size: 11px; background-color: rgb(226, 226, 226); border-bottom: 1px solid; border-left: 1px solid; padding: 4px; }
+.tabstyle04 tr:first-child td { border-top: 1px solid; }
+.tabstyle04 td, .tabstyle04 tr:first-child td, .comboParlayArea .option, .comboParlayArea .perBet, .comboParlayMini .detailArea { border-color: rgb(210, 223, 235) ! important; }
+.tabstyle04 td:first-child { border-left: medium none; }
+.tabstyle04_1 { width: 167px; margin-left: 1px; margin-right: 1px; }
+.tabstyle04_1 th.bu { color: rgb(255, 255, 255); font-size: 10px; font-weight: normal; background-color: rgb(118, 133, 164); border: 1px solid rgb(223, 223, 223); padding: 2px; }
+.tabstyle04_1 th.rd { color: rgb(255, 255, 255); font-size: 10px; font-weight: normal; background-color: rgb(255, 99, 115); border: 1px solid rgb(255, 255, 255); padding: 2px; }
+.bet { color: rgb(66, 65, 66); font-size: 11px; border: 1px solid rgb(255, 255, 255); }
+td.nopad { padding: 0px; }
+.betpad { padding: 2px 3px; margin: 0px 2px; }
+.tabstyle04_1 .we { color: rgb(33, 32, 33); font-size: 11px; padding: 2px 5px 3px; line-height: 14px; border-bottom: 1px solid rgb(237, 237, 237); }
+.tabstyle04_1 a:link, .tabstyle04_1 a:visited { color: rgb(10, 52, 128); }
+.tabstyle04_1 a:hover { color: rgb(235, 99, 7); }
+.tabstyle05 th { color: rgb(102, 102, 102); font-size: 10px; font-weight: normal; background-color: rgb(225, 225, 225); border-bottom: 1px solid rgb(237, 237, 237); border-right: 1px solid rgb(234, 234, 234); border-left: 1px solid rgb(255, 255, 255); padding: 4px; margin: 0px; text-indent: 5px; text-align: left; }
+.tabstyle05 td { color: rgb(102, 102, 102); font-size: 11px; font-weight: normal; background-color: rgb(225, 225, 225); padding: 2px; border-bottom: 1px solid rgb(237, 237, 237); border-right: 1px solid rgb(255, 255, 255); }
+.leftbox, .leftbox2 { width: 170px; color: rgb(33, 32, 33); font-size: 11px; }
+.leftbox { background-color: rgb(244, 244, 244); }
+.leftbox2 { background-color: rgb(237, 237, 237); }
+.leftbox3 { width: 164px; padding: 3px; }
+.leftboxinfo { border-color: rgb(155, 167, 173); background-color: rgb(255, 255, 255); }
+.leftboxinfo span.title, .leftboxinfo.betSlip .title.current:hover > span { color: rgb(255, 255, 255); background-color: rgb(30, 110, 171); }
+.leftboxinfo span.title2 { color: rgb(255, 255, 255); background-color: rgb(30, 110, 171); }
+.leftboxinfo-foot { display: none; }
+.betlist_B { color: rgb(33, 32, 33); font-size: 11px; padding-top: 2px; padding-bottom: 2px; margin-top: 3px; }
+.betlist_BL { color: rgb(102, 102, 102); font-size: 10px; font-weight: normal; margin-top: 5px; }
+.betlist_BLor { color: rgb(33, 32, 33); font-size: 10px; font-weight: normal; margin-top: 5px; }
+.backmenu, .backmenu a { font-size: 11px; font-weight: bold; height: 22px; border-radius: 4px; }
+.backmenu { width: 170px ! important; border-width: 1px; border-style: solid; border-color: rgb(211, 215, 218); padding: 1px; background-color: rgb(255, 255, 255); }
+.backmenu a { padding: 0px 5px; color: rgb(33, 32, 33); line-height: 22px; display: inline-block; width: 160px; background-color: rgb(205, 203, 205); background-image: url("mask1.png"); background-repeat: repeat-x; background-position: 0px 0px; text-align: left; }
+.backmenu a:hover { color: rgb(33, 32, 33); background-color: rgb(191, 218, 237); background-image: url("mask1.png"); }
+.BetprocessMinBet { color: rgb(13, 96, 158); height: 20px; font-size: 11px; }
+.BetprocessMaxBet { color: rgb(13, 96, 158); height: 20px; font-size: 11px; }
+a.Lbutton, .betTrade .sellArea .Lbutton { color: rgb(33, 32, 33); font-size: 11px; height: 20px; display: inline-block; float: none; min-width: 76px; max-width: 76px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0px 2px; cursor: pointer; line-height: 20px; border-radius: 4px; border-width: 1px; border-style: solid; border-color: rgb(191, 189, 189); background-color: rgb(255, 255, 255); background-image: url("mask2_001.png"); background-repeat: repeat-x; background-position: 0px 0px; margin: 0px -1px; }
+a.Lbutton:hover, .betTrade .sellArea .Lbutton:hover { color: rgb(33, 32, 33); border-color: rgb(0, 195, 198); background-image: url("mask1.png"); background-repeat: repeat-x; background-position: 0px 0px; background-color: rgb(198, 255, 255); }
+.accountMini { height: 72px; width: 174px; font-size: 11px; background-image: url("left_item.gif"); background-repeat: no-repeat; background-position: left top; padding-top: 6px; }
+#subnav span.Cnav { color: rgb(2, 35, 82); height: 22px; font-size: 11px; font-weight: bold; background-image: url("casino_menu_button.gif"); background-repeat: no-repeat; background-position: 0px 0px; display: list-item; list-style-type: none; list-style-position: outside; line-height: 22px; border-bottom: 1px solid rgb(255, 255, 255); }
+#subnav span.Cnav a:link, #subnav span.Cnav a:visited { color: rgb(159, 40, 0) ! important; text-decoration: none; }
+#subnav span.Cnav a:hover { color: rgb(255, 255, 255) ! important; background-image: url("casino_menu_button.gif"); background-repeat: no-repeat; background-position: 0px -29px; }
+#subnav span.Cnav a { padding-left: 20px; display: block; border-bottom: 1px solid rgb(255, 255, 255); }
+.BPstakebg { background-color: rgb(225, 225, 225); border-bottom: 1px solid rgb(237, 237, 237); }
+.tabcontbk_status { color: rgb(102, 102, 102); font-size: 11px; font-weight: bold; margin: 0px; text-indent: 5px; text-align: left; }
+.betlisttit { color: rgb(77, 77, 77) ! important; height: 16px; font-weight: bold ! important; background-color: rgb(213, 222, 238); padding-top: 4px; margin-left: 4px; margin-right: 4px; }
+.auto-fresh-txt { color: rgb(30, 110, 171); font-weight: bold; font-size: 11px; line-height: 16px; }
+.icon-AutoR a::before { color: rgb(55, 212, 229) ! important; }
+.icon-AutoL::before { color: rgb(55, 212, 229) ! important; }
+.betpad1 { background-color: rgb(209, 209, 209); }
+.none_dline { border-bottom-style: none ! important; }
+.line_unL { border-left-width: 0px ! important; }
+.td_padding { padding: 5px 4px 0px; }
+.tabsport, .tabsportLive, .tabWBla, .tabWBet { overflow: hidden; display: inline-block; text-overflow: ellipsis; white-space: nowrap; float: left; margin-right: 2px; }
+.tabsport { max-width: 75px; }
+#subnav div.subnav-link a span.submenu.iconLive, .tabsportLive { max-width: 96px; }
+.tabWBla { max-width: 80px; }
+@media not all {
+  .tabWBla { max-width: 70px; }
+}
+.tabWBet { max-width: 74px; }
+.checktext { margin-left: 22px; font-weight: bold; padding-top: 2px; }
+.TVicon, .TVicon2 { background: transparent linear-gradient(to bottom, rgb(80, 179, 255) 0%, rgb(21, 129, 208) 100%) repeat scroll 0% 0% ! important; }
