@@ -1,0 +1,218 @@
+.spacing0 {
+	clear:both;
+	height:50px;	
+}
+
+
+/*keno_content*/
+/*
+#content_cn{
+	width: 960px;
+	height: 454px;
+	margin: 0px auto 0px auto;
+	background-image: url(../images/keno/keno_background_cn.jpg);
+	background-repeat: no-repeat;
+}
+#content_en{
+	width: 960px;
+	height: 454px;
+	margin: 0px auto 0px auto;
+	background-image: url(../images/keno/keno_background_en.jpg);
+	background-repeat: no-repeat;
+}
+#content_id{
+	width: 960px;
+	height: 454px;
+	margin: 0px auto 0px auto;
+	background-image: url(../images/keno/keno_background_id.jpg);
+	background-repeat: no-repeat;
+}
+#content_vn{
+	width: 960px;
+	height: 454px;
+	margin: 0px auto 0px auto;
+	background-image: url(../images/keno/keno_background_vn.jpg);
+	background-repeat: no-repeat;
+}
+#content_th{
+	width: 960px;
+	height: 454px;
+	margin: 0px auto 0px auto;
+	background-image: url(../images/keno/keno_background_th.jpg);
+	background-repeat: no-repeat;
+}
+*/
+
+
+           
+    
+   #header
+    {
+      display:block;      
+      height:476px;
+    }    
+       
+    
+    .rowButton
+    { 
+       position:relative;
+       top:-14px; 
+       z-index:11;
+    }    
+    
+    .pagination
+    {
+        z-index:120;
+    }
+    
+    a.prev
+    {
+        position:relative;
+        top:30px;
+    }
+    a.next
+    {
+        position:relative;
+        top:30px;
+        left:100px;
+    }
+
+
+.kenofooter_spacing{ 
+	height:29px;
+}
+
+.bluefont_keno_cn{
+	font-size: 32px;
+	color: #25aae1;
+	font-weight: bold;
+}
+
+.bluefont_keno_th{
+	font-size: 32px;
+	color: #25aae1;
+	font-weight: bold;
+}
+
+.bluefont_keno_vn{
+	font-size: 26px;
+	color: #25aae1;
+	font-weight: bold;
+}
+.bluefont_keno_en{
+	font-size: 30px;
+	color: #25aae1;
+	font-weight: bold;
+}
+
+#BaseMainContent_MainContent_lblMoreDetails
+{
+    background: url("/Images/CasinoGames/button-animation.gif") no-repeat scroll -630px -2px transparent;
+    border: 0 none;
+    color: #25AAE2;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 150px;
+    text-align: center;
+}
+
+#BaseMainContent_MainContent_lblMoreDetails:hover
+{
+    background: url("/Images/CasinoGames/button-animation.gif") no-repeat scroll -630px -40px transparent;
+    border: 0 none;
+    color: #25AAE2;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 150px;
+    text-align: center;
+    cursor:pointer;
+}
+
+#trendmap_box{
+	width: 960px;
+	height: 500px;/*100%;*/
+	background-repeat: no-repeat;
+	margin: 50px auto 0px auto;
+	background-color: #fafbfb;
+	border: thin solid #cecece;
+	display:block;
+}
+
+#trendmap_header
+{
+  display: block;
+  position:absolute;
+  float:left;
+  width:960px;
+  
+}
+
+#trendmap_table
+{
+    width:100%; 
+    height:410px; 
+    vertical-align:top;
+    display:inline;
+}
+
+
+#header_left
+{
+   width:40%;
+   float:left; 
+}
+
+
+
+#trendmap_logo
+{
+    height:71px;
+    float: left;
+    margin-top: -5px;
+}
+
+#trendmap_label
+{
+    float: left;
+    margin-top: 22px;
+    *margin-top: 13px;
+    line-height: 35px;
+}
+
+#trendmap_button
+{
+    /*
+    position:absolute;
+    
+    width:960px;    
+*/
+   width:18%; 
+   float:right;
+}
+
+#iframeContainer
+{
+    float:left;
+    width:100%;
+    height:419px;
+    vertical-align:top;
+}
+
+#frameTrendsMap
+{
+    display:inline;
+    width: 100%;
+    height: 100%;
+    border-width:0;
+}
+
+/*.imageTitle
+{
+  margin-left:145px;   
+}
+
+.imagePKTitle{
+    margin-left: 57px;   
+}*/

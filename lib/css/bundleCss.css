@@ -571,27 +571,27 @@ div#outer_top_header { top: 0px; position: fixed; background-color: rgb(37, 170,
 #header_right > div { display: block; float: left; }
 #header_right a { display: block; font-size: 15px; }
 #header_right > div > #CNbtnRegister { display: block; font-size: 17px; word-spacing: -3px; }
-#dvMedia01 { background: transparent url("footerlogo-combine.png") no-repeat scroll -13px 3px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia01:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -14px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia02 { background: transparent url("footerlogo-combine.png") no-repeat scroll 0px 0px; width: 55px; height: 38px; margin-top: 0px; }
-#dvMedia02:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll 0px 0px; cursor: pointer; margin-top: 0px; }
-#dvMedia03 { background: transparent url("footerlogo-combine.png") no-repeat scroll -142px 3px; width: 29px; height: 38px; margin-top: 0px; }
-#dvMedia03:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -142px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia04 { background: transparent url("footerlogo-combine.png") no-repeat scroll -201px 3px; width: 26px; height: 38px; margin-top: 0px; }
-#dvMedia04:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -201px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia04.onlyVip:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -201px -89px; cursor: pointer; margin-top: 0px; }
-#dvMedia05 { background: transparent url("footerlogo-combine.png") no-repeat scroll -247px -1px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia05:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -247px -47px; cursor: pointer; margin-top: 0px; }
-#dvMedia06 { background: transparent url("footerlogo-combine.png") no-repeat scroll -303px -1px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia06:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -303px -47px; cursor: pointer; margin-top: 0px; }
-#dvMedia07 { background: transparent url("footerlogo-combine.png") no-repeat scroll -359px -1px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia07:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -359px -47px; cursor: pointer; margin-top: 0px; }
-#dvMedia08 { background: transparent url("footerlogo-combine.png") no-repeat scroll -420px -1px; width: 37px; height: 38px; margin-top: 0px; margin-right: 7px; }
-#dvMedia08:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -420px -47px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
-#dvMedia09 { background: transparent url("footerlogo-combine.png") no-repeat scroll -474px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
-#dvMedia09:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -474px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
-#dvMedia10 { background: transparent url("footerlogo-combine.png") no-repeat scroll -531px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
-#dvMedia10:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -531px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+#dvMedia01 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -13px 3px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia01:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -14px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia02 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll 0px 0px; width: 55px; height: 38px; margin-top: 0px; }
+#dvMedia02:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll 0px 0px; cursor: pointer; margin-top: 0px; }
+#dvMedia03 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -142px 3px; width: 29px; height: 38px; margin-top: 0px; }
+#dvMedia03:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -142px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia04 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -201px 3px; width: 26px; height: 38px; margin-top: 0px; }
+#dvMedia04:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -201px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia04.onlyVip:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -201px -89px; cursor: pointer; margin-top: 0px; }
+#dvMedia05 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -247px -1px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia05:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -247px -47px; cursor: pointer; margin-top: 0px; }
+#dvMedia06 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -303px -1px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia06:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -303px -47px; cursor: pointer; margin-top: 0px; }
+#dvMedia07 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -359px -1px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia07:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -359px -47px; cursor: pointer; margin-top: 0px; }
+#dvMedia08 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -420px -1px; width: 37px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia08:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -420px -47px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+#dvMedia09 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -474px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia09:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -474px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+#dvMedia10 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -531px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia10:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -531px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
 .rewardIcon { height: 27px; margin-top: 0px; display: block; float: right; background-image: url("reward_icon_CN.png"); background-repeat: no-repeat; }
 #dvRewardL001 { background-position: 4px 3px; width: 35px; }
 #dvRewardL002 { background-position: -24px 3px; width: 36px; }

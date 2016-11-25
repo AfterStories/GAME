@@ -1,0 +1,87 @@
+/* Code tidied up by ScrapBook */
+body { margin: 0px auto; }
+li { list-style-type: none; }
+ul, ol, dl { padding: 0px; margin: 0px; }
+optgroup { font-weight: normal; font-style: normal; text-decoration: none; }
+a.title { color: rgb(255, 255, 255); }
+a img { border: medium none; text-decoration: none; }
+a:link { color: rgb(0, 0, 0); text-decoration: none; }
+a:visited { color: rgb(0, 0, 0); text-decoration: none; }
+a:hover { color: rgb(153, 153, 153); text-decoration: none; }
+.color_2 { color: red; }
+#content { margin: 0px auto; width: 960px; }
+.angle_banner { float: left; width: 467px; height: 318px; border-width: 1px; border-color: rgb(219, 219, 219); border-style: solid; }
+.angle_logo { margin-left: 10px; margin-top: 15px; }
+.angle_photo_cn { float: right; margin-top: -12px; }
+.angle_photo_id { float: right; margin-top: -62px; }
+.angle_photo_other { float: right; margin-top: -28px; }
+.chinese { font-size: 16px; color: rgb(0, 0, 0); }
+.cont_txt { position: absolute; margin-left: 20px; margin-top: 15px; width: 223px; height: 70px; }
+.cont_txt_2 { width: 432px; margin-left: 20px; }
+.angle_button { position: absolute; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 96px; }
+.angle_button a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2.gif") no-repeat scroll 0px 0px; }
+.angle_button a:link { background: transparent url("button-anmation_2.gif") no-repeat scroll 0px 0px; }
+.angle_button a:hover { background-position: 0px -50px; }
+.pop_button { float: left; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 10px; }
+.pop_button a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2.gif") no-repeat scroll 0px 0px; }
+.pop_button a:link { background: transparent url("button-anmation_2.gif") no-repeat scroll 0px 0px; }
+.pop_button a:hover { background-position: 0px -50px; }
+.angle_button_en { position: absolute; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 96px; }
+.angle_button_en a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
+.angle_button_en a:link { background: transparent url("button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
+.angle_button_en a:hover { background-position: 0px -50px; }
+.pop_button_en { float: left; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 10px; }
+.pop_button_en a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
+.pop_button_en a:link { background: transparent url("button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
+.pop_button_en a:hover { background-position: 0px -50px; }
+.angle_button_vn { position: absolute; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 114px; }
+.angle_button_vn a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
+.angle_button_vn a:link { background: transparent url("button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
+.angle_button_vn a:hover { background-position: 0px -50px; }
+.pop_button_vn { float: left; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 10px; }
+.pop_button_vn a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
+.pop_button_vn a:link { background: transparent url("button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
+.pop_button_vn a:hover { background-position: 0px -50px; }
+.angle_button_th { position: absolute; z-index: 10; width: 186px; height: 50px; margin-left: 18px; margin-top: 92px; }
+.angle_button_th a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_003.gif") no-repeat scroll 0px 0px; }
+.angle_button_th a:link { background: transparent url("button-anmation_2_003.gif") no-repeat scroll 0px 0px; }
+.angle_button_th a:hover { background-position: 0px -50px; }
+.pop_button_th { float: left; z-index: 10; width: 242px; height: 50px; margin-left: 18px; margin-top: 5px; }
+.pop_button_th a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_Rewards.gif") no-repeat scroll 0px 0px; }
+.pop_button_th a:link { background: transparent url("button-anmation_Rewards.gif") no-repeat scroll 0px 0px; }
+.pop_button_th a:hover { background-position: 0px -50px; }
+.angle_button_id { position: absolute; z-index: 10; width: 186px; height: 50px; margin-left: 18px; margin-top: 86px; }
+.angle_button_id a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
+.angle_button_id a:link { background: transparent url("button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
+.angle_button_id a:hover { background-position: 0px -50px; }
+.pop_button_id { float: left; z-index: 10; width: 186px; height: 50px; margin-left: 18px; }
+.pop_button_id a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
+.pop_button_id a:link { background: transparent url("button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
+.pop_button_id a:hover { background-position: 0px -50px; }
+.pop_banner { float: left; margin-left: 10px; width: 469px; height: 467px; border-width: 1px; border-color: rgb(219, 219, 219); border-style: solid; }
+.slides_container { width: 469px; height: 467px; overflow: hidden; position: relative; }
+.slides_container a { width: 469px; height: 467px; display: block; }
+.slides_container a img { display: block; }
+#bannerprev, #bannernext { display: none; position: absolute; margin-top: -265px; }
+#bannernext { margin-left: 427px; }
+.pop_logo_cn { margin-left: 20px; margin-top: 17px; margin-bottom: 18px; }
+.pop_logo { margin-left: 5px; margin-top: 0px; }
+.angle_banner_b { margin-top: 322px; background: transparent url("bg_2.jpg") no-repeat scroll 0px 0px; width: 469px; height: 146px; position: relative; }
+#displaycssbelt { visibility: hidden; }
+#stocklevels { visibility: hidden; }
+.stock { clear: both; font-size: 10px; padding-bottom: 5px; margin: 0px auto; width: 800px; color: rgb(0, 0, 0); border-bottom: 1px dashed rgb(0, 0, 0); height: 10px; text-align: right; }
+.subfeature { display: block; margin: 0px; overflow: hidden; width: 84px; }
+.subfeature-txt { padding: 3px 0px 0px; float: left; text-align: center; margin: 0px; width: 84px ! important; line-height: 17px; position: relative; }
+.subfeature-txt H2 { color: rgb(255, 255, 255); line-height: 46px; clear: both; font-size: 12px; padding-bottom: 3px; }
+.subfeature-txt H2 A { color: rgb(255, 255, 255); line-height: 46px; }
+.subfeature-txt H2 A:hover { color: rgb(153, 153, 153); }
+.subfeature A IMG { opacity: 0.3; }
+.subfeature A IMG:hover { opacity: 1; }
+.angle_banner_b ul { margin: 0px; padding: 0px; list-style: outside none none; display: block; }
+.angle_banner_b li { text-align: center; width: 80px; padding: 0px; margin: 6px; display: block; float: left; }
+.angle_banner_b .panel { float: left; margin: 0px 0px 0px -1px; overflow: hidden; width: 84px; }
+.angle_banner_b.responsive { width: auto; margin-left: 0px; }
+.prev { float: left; margin-left: 1px; }
+.next { float: right; margin-right: 1px; }
+.prev, .next { margin-top: -105px; position: relative; z-index: 99999; }
+.prev.disabled, .next.disabled { display: none ! important; }

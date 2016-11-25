@@ -6,7 +6,6 @@
 
     <link type="image/x-icon" rel="icon" href="../lib/images/favicon.ico">
     <link type="image/x-icon" rel="shortcut icon" href="../lib/images/favicon.ico">
-
     <link type="text/css" rel="Stylesheet" href="css/jquery-ui.css">
     <link type="text/css" rel="stylesheet" href="css/dropdown.css">
     <link type="text/css" rel="stylesheet" href="css/mainStyleCS.css" id="mainStyle">
@@ -62,12 +61,11 @@
     <script type="text/javascript" src="../lib/js/jQuery UI.js"></script>
     <script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
     <script type="text/javascript" src="js/dropdown.js"></script>
-<script type="text/javascript" src="js/jquery-migrate.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate.js"></script>
     <script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.min.js"></script>
     <script type="text/javascript" src="js/jQuery Colorbox.js"></script>
     <script type="text/javascript" src="js/master.announcement.js"></script>
-    <script type="text/javascript" src="js/master.dialogmanager.js"></script>
-   
+    <script type="text/javascript" src="js/master.dialogmanager.js"></script>   
     <script type="text/javascript" src="js/master.js"></script>
     <script type="text/javascript" src="js/master.windowmanager.js"></script>
     <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
@@ -86,10 +84,10 @@
             var doc = document.documentElement;
             doc.setAttribute('data-useragent', navigator.userAgent);
             /*if ($.browser.msie && parseFloat($.browser.version) == 7) {
-                $('#imgLineUp').addClass("cssLineBarIE7");
+                jQuery('#imgLineUp').addClass("cssLineBarIE7");
             }
             if ($.browser.mozilla) {
-                $('#imgLineUp').addClass('cssLineBarFireFox');
+                jQuery('#imgLineUp').addClass('cssLineBarFireFox');
             }*/
 
             var isAgent = jQuery('#hiddenIsAgent').val();
@@ -122,20 +120,20 @@
     </script>
 
  <!--    <script type="text/javascript">
-     $(function ($) {
+     jQuery(function ($) {
          var addToAll = false;
          var gallery = false;
          var titlePosition = 'outside';
-         $(addToAll ? 'img' : 'img.fancybox').each(function () {
-             var $this = $(this);
+         jQuery(addToAll ? 'img' : 'img.fancybox').each(function () {
+             var $this = jQuery(this);
              var title = $this.attr('title');
              var src = $this.attr('data-big') || $this.attr('src');
-             var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+             var a = jQuery('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
              $this.wrap(a);
          });
          if (gallery)
-             $('a.fancybox').attr('rel', 'fancyboxgallery');
-         $('a.fancybox').fancybox({
+             jQuery('a.fancybox').attr('rel', 'fancyboxgallery');
+         jQuery('a.fancybox').fancybox({
              titlePosition: titlePosition
          });
      });
@@ -250,16 +248,16 @@
 <script type="text/javascript">
 jQuery(document).ready(function () {
         createDropDown();
-        $("#target dt").removeClass().addClass('langCS');
-        var $dropTrigger = $(".langdropdown dt a");
-        var $dropTrigger2 = $(".langdropdown dd span");
-        var $languageList = $(".langdropdown dd ul");
+        jQuery("#target dt").removeClass().addClass('langCS');
+        var $dropTrigger = jQuery(".langdropdown dt a");
+        var $dropTrigger2 = jQuery(".langdropdown dd span");
+        var $languageList = jQuery(".langdropdown dd ul");
 
         // open and close list when button is clicked
         $dropTrigger.click(function () {
             if ($dropTrigger.hasClass('active')) {
                 $languageList.slideUp(200);
-                $(this).removeAttr("class");
+                jQuery(this).removeAttr("class");
             } else {
                 $languageList.slideDown(200);
                 $dropTrigger.addClass("active");
@@ -268,16 +266,16 @@ jQuery(document).ready(function () {
         });
 
 
-        /*$("#dd1 ul li").hover(function () {
-            $(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine_.png)");
+        /*jQuery("#dd1 ul li").hover(function () {
+            jQuery(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine_.png)");
         },
         function () {
-            $(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine.png)");
+            jQuery(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine.png)");
         });*/
 
         // close list when anywhere else on the screen is clicked
-        $(document).bind('click', function (e) {
-            var $clicked = $(e.target);
+        jQuery(document).bind('click', function (e) {
+            var $clicked = jQuery(e.target);
             if (!$clicked.parents().hasClass("langdropdown")) {
                 if ($dropTrigger.hasClass("active")) {
                     $dropTrigger.click();
@@ -286,16 +284,16 @@ jQuery(document).ready(function () {
         });
 
         // when a language is clicked, make the selection and then hide the list
-        $(".langdropdown dd ul li a").click(function () {
-            var clickedValue = $(this).parent().attr("class");
-            var clickedTitle = $(this).find("em").html();
-            $("#target dt").removeClass().addClass(clickedValue);
-            $("#target dt em").html(clickedTitle);
+        jQuery(".langdropdown dd ul li a").click(function () {
+            var clickedValue = jQuery(this).parent().attr("class");
+            var clickedTitle = jQuery(this).find("em").html();
+            jQuery("#target dt").removeClass().addClass(clickedValue);
+            jQuery("#target dt em").html(clickedTitle);
             $languageList.hide();
             $dropTrigger.removeAttr("class");
 
 
-            var getLang = $(this).parent().attr("class");
+            var getLang = jQuery(this).parent().attr("class");
             //alert();
             if (getLang == null) return;
 
@@ -329,19 +327,19 @@ jQuery(document).ready(function () {
         });
     });  
     function createDropDown() {
-        var $form = $("div.lang form");
+        var $form = jQuery("div.lang form");
         $form.hide();
-        var source = $("#HeaderContent_ascxLang_uiLanguages");
+        var source = jQuery("#HeaderContent_ascxLang_uiLanguages");
         source.removeAttr("autocomplete");
         var selected = source.find("option:selected");
-        var options = $("option", source);
-        $(".lang").append('<dl id="target" class="langdropdown"></dl>');
-        $("#target").append('<dt class="">' 
+        var options = jQuery("option", source);
+        jQuery(".lang").append('<dl id="target" class="langdropdown"></dl>');
+        jQuery("#target").append('<dt class="">' 
         + '<a href="cooperation.html"><span class="flag"></span></a></dt>');
-        $("#target").append('<dd id="dd1"><ul></ul></dd>');
+        jQuery("#target").append('<dd id="dd1"><ul></ul></dd>');
         options.each(function () {
-            $("#target dd ul").append('<li class="lang' + $(this).val() + '" >'
-            + '<a href="Default.aspx?lng=' + $(this).val() + '" ><span class="flag"></span></a></li>');                
+            jQuery("#target dd ul").append('<li class="lang' + jQuery(this).val() + '" >'
+            + '<a href="Default.aspx?lng=' + jQuery(this).val() + '" ><span class="flag"></span></a></li>');                
         });
     }
 </script>
@@ -375,14 +373,14 @@ jQuery(document).ready(function () {
     }
 
     jQuery(document).ready(function () {
-        var uiUN = $("#UserName");
+        var uiUN = jQuery("#UserName");
         uiUN.watermark('用户名');
 
-        var uiPwd = $("#Password");
+        var uiPwd = jQuery("#Password");
         uiPwd.watermark('用户密码');
 
-//        var d1 = new DropDown($('#ddlSettings'));
-//        var d2 = new DropDown($('#ddlWallets'));
+//        var d1 = new DropDown(jQuery('#ddlSettings'));
+//        var d2 = new DropDown(jQuery('#ddlWallets'));
     });
 </script>
 <link href="css/MemberAuthentication.css" rel="stylesheet" type="text/css">
@@ -584,12 +582,12 @@ jQuery(document).ready(function () {
             var obj = this;
 
             obj.dd.on('click', function (event) {
-                $(this).toggleClass('active');
+                jQuery(this).toggleClass('active');
                 event.stopPropagation();
             });
 
             obj.dd.on('mouseleave', function (event) {
-                $(this).removeClass('active');
+                jQuery(this).removeClass('active');
                 event.stopPropagation();
             });
         }
@@ -661,12 +659,12 @@ jQuery(document).ready(function () {
         }
 
 
-        $("#dvMedia07").attr("title", fbTitle);
-        $("#dvMedia06").attr("title", twtTitle);
-        $("#dvMedia05").attr("title", youtubeTitle);
-        $("#dvMedia01").attr("title", bookTitle);
+        jQuery("#dvMedia07").attr("title", fbTitle);
+        jQuery("#dvMedia06").attr("title", twtTitle);
+        jQuery("#dvMedia05").attr("title", youtubeTitle);
+        jQuery("#dvMedia01").attr("title", bookTitle);
 
-        $("#dvMedia09").attr("title", lineTitle);
+        jQuery("#dvMedia09").attr("title", lineTitle);
     }
 
     function getBookmarkAlert(lang) {
@@ -726,14 +724,14 @@ jQuery(document).ready(function () {
         var fblinklang;
         var twlinklang;
         //        if ($.browser.mozilla && parseFloat($.browser.version) = 11) {
-        //            $('#memberAuthDiv').attr("style","position:relative;right:145px;top:-35px;");
+        //            jQuery('#memberAuthDiv').attr("style","position:relative;right:145px;top:-35px;");
         //        }
         if (lang == 'CS') {
-            $('.mediaCN').show();
-            $('.mediaAll').hide();
+            jQuery('.mediaCN').show();
+            jQuery('.mediaAll').hide();
         } else {
-            $('.mediaCN').hide();
-            $('.mediaAll').show();
+            jQuery('.mediaCN').hide();
+            jQuery('.mediaAll').show();
             if (lang == 'ID') {
                 fblinklang = 'indo';
                 twlinklang = 'sea';
@@ -753,21 +751,21 @@ jQuery(document).ready(function () {
                 fblinklang = 'eng';
                 twlinklang = 'eng';
             }
-            $("#dvMedia06").attr("onclick", "javascript:window.open('" + twitterUrl + twlinklang + "', '_blank');return false;");
-            $("#dvMedia07").attr("onclick", "javascript:window.open('" + fbUrl + fblinklang + "', '_blank');return false;");
+            jQuery("#dvMedia06").attr("onclick", "javascript:window.open('" + twitterUrl + twlinklang + "', '_blank');return false;");
+            jQuery("#dvMedia07").attr("onclick", "javascript:window.open('" + fbUrl + fblinklang + "', '_blank');return false;");
         }
-        $(".tooltip").tooltip();
+        jQuery(".tooltip").tooltip();
 
-        $("#hbtn3,#hbtn4").hover(function () {
-            $(this).next().css('color', '#25AAE1');
+        jQuery("#hbtn3,#hbtn4").hover(function () {
+            jQuery(this).next().css('color', '#25AAE1');
         }, function () {
-            $(this).next().css('color', '#615F5F');
+            jQuery(this).next().css('color', '#615F5F');
         });
 
-        $("a.jQueryBookmark").click(function (e) {
+        jQuery("a.jQueryBookmark").click(function (e) {
             e.preventDefault(); // this will prevent the anchor tag from going the user off to the link
             var bookmarkUrl = window.location;
-            var bookmarkTitle = $(document).find("title").text();
+            var bookmarkTitle = jQuery(document).find("title").text();
             if (window.sidebar) { // For Mozilla Firefox Bookmark
                 window.sidebar.addPanel(bookmarkTitle, bookmarkUrl, "");
                 return false;
@@ -779,9 +777,9 @@ jQuery(document).ready(function () {
                 //alert('BookmarkNotSupport');
                 return false;
             } else if (window.opera) { // For Opera Browsers
-                $("a.jQueryBookmark").attr("href", bookmarkUrl);
-                $("a.jQueryBookmark").attr("title", bookmarkTitle);
-                $("a.jQueryBookmark").attr("rel", "sidebar");
+                jQuery("a.jQueryBookmark").attr("href", bookmarkUrl);
+                jQuery("a.jQueryBookmark").attr("title", bookmarkTitle);
+                jQuery("a.jQueryBookmark").attr("rel", "sidebar");
             } else { // for other browsers which does not support
                 alert(getBookmarkAlert('CS'));
                 //alert('BookmarkNotSupport');
@@ -789,65 +787,65 @@ jQuery(document).ready(function () {
                 }
         });
 
-        $("#dvMedia08").click(function () {
-            $("#wechat-dialog").dialog({
+        jQuery("#dvMedia08").click(function () {
+            jQuery("#wechat-dialog").dialog({
                 modal: true,
                 draggable: false,
                 resizable: false,
                 width: 260
             });
-            $(".ui-dialog-titlebar").hide();
+            jQuery(".ui-dialog-titlebar").hide();
         });
 
-        $("#dvMedia09").click(function () {
-            $("#line-dialog").dialog({
+        jQuery("#dvMedia09").click(function () {
+            jQuery("#line-dialog").dialog({
                 modal: true,
                 draggable: false,
                 resizable: false,
                 width: 260
             });
-            $(".ui-dialog-titlebar").hide();
+            jQuery(".ui-dialog-titlebar").hide();
         });
-        $("#line-dialog").click(function () {
-            $(this).dialog("close");
+        jQuery("#line-dialog").click(function () {
+            jQuery(this).dialog("close");
         });
-        $("#line-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
+        jQuery("#line-dialog").hover(function () {
+            jQuery(".close-message").slideDown("fast");
         }, function () {
-            $(".close-message").slideUp("fast");
+            jQuery(".close-message").slideUp("fast");
         }
         );
 
-        $("#dvMedia10").click(function () {
-            $("#BBM-dialog").dialog({
+        jQuery("#dvMedia10").click(function () {
+            jQuery("#BBM-dialog").dialog({
                 modal: true,
                 draggable: false,
                 resizable: false,
                 width: 260
             });
-            $(".ui-dialog-titlebar").hide();
+            jQuery(".ui-dialog-titlebar").hide();
         });
-        $("#BBM-dialog").click(function () {
-            $(this).dialog("close");
+        jQuery("#BBM-dialog").click(function () {
+            jQuery(this).dialog("close");
         });
-        $("#BBM-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
+        jQuery("#BBM-dialog").hover(function () {
+            jQuery(".close-message").slideDown("fast");
         }, function () {
-            $(".close-message").slideUp("fast");
+            jQuery(".close-message").slideUp("fast");
         }
         );
 
 
 
-        $("#wechat-dialog").click(function () {
-            $(this).dialog("close");
+        jQuery("#wechat-dialog").click(function () {
+            jQuery(this).dialog("close");
         });
 
-        $("#wechat-dialog").hover(function () {
-            $("#close-message").slideDown("fast");
+        jQuery("#wechat-dialog").hover(function () {
+            jQuery("#close-message").slideDown("fast");
         },
             function () {
-                $("#close-message").slideUp("fast");
+                jQuery("#close-message").slideUp("fast");
             }
         );
 

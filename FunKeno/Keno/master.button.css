@@ -1,0 +1,425 @@
+
+.Btn {
+    cursor: pointer;
+    text-align: center;
+}
+.Btn_floatLeft {
+    float: left !important;
+}
+.Btn_floatLeft_special {
+    float: left !important;
+}
+.Btn_med_width {
+    width: 380px;
+}
+.Btn_long_width {
+    width: 465px;
+}
+.pos_bankDefault {
+    float: right;
+    margin-left: 5px;
+    margin-top: -6px;
+}
+.margin0 {
+    font-size: 13px;
+    margin-top: 0 !important;
+}
+@media not all {
+.pos_bankDefault {
+    float: right;
+    margin-left: 5px;
+    margin-top: -30px;
+}
+}
+.skrill1TapBtn {
+    background: transparent url("/Images/SkrillOneTap/Skrill1-Tapbutton/20121009_Skrill-1-tap-TM-RGB-25x128.gif") no-repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    height: 25px;
+    margin: 0 auto;
+    padding: 8px;
+    position: relative;
+    top: 5px;
+    vertical-align: bottom;
+    width: 128px;
+}
+.skrill1TapBtn:hover {
+    background: transparent url("/Images/SkrillOneTap/Skrill1-Tapbutton/20121009_Skrill-1-tap-TM-RGB-grey-25x128.gif") no-repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    height: 25px;
+    margin: 0 auto;
+    padding: 8px;
+    vertical-align: bottom;
+    width: 128px;
+}
+.skrill_tooltip {
+    background-color: #f2f1f1;
+    border: 1px solid #dbdbdb;
+    display: none;
+    font-weight: bold;
+    padding: 6px 7px;
+    position: absolute;
+    top: 36px;
+    width: 433px;
+}
+.greenMedBtn {
+    background: transparent url("button-anmation-green-short.gif") no-repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 121px;
+}
+.greenMedBtn:hover {
+    background: rgba(0, 0, 0, 0) url("button-anmation-green-short.gif") no-repeat scroll 0 -38px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 121px;
+}
+.blueMedBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll -202px -1px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 112px;
+}
+.blueMedBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll -202px -39px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 112px;
+}
+.blueMedBtn_USD {
+    background: transparent url("button-animation.gif") no-repeat scroll -202px -1px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 112px;
+}
+.whiteMedBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll -330px -1px;
+    border: 0 none;
+    color: #25aae2;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 112px;
+}
+.whiteMedBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll -330px -39px;
+    border: 0 none;
+    color: #25aae2;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 112px;
+}
+.zPayblueMedBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll -202px 0;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 112px;
+}
+.zPayblueMedBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll -202px -38px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 112px;
+}
+.zPayblueLongBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll -459px 0;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 149px;
+}
+.zPayblueLongBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll -459px -38px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 149px;
+}
+.blueLongBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll -460px -1px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 150px;
+}
+.blueLongBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll -460px -39px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 150px;
+}
+.whiteLongBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll -631px -1px;
+    border: 0 none;
+    color: #25aae2;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 150px;
+}
+.whiteLongBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll -631px -39px;
+    border: 0 none;
+    color: #25aae2;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 150px;
+}
+.liveChatMedBtn {
+    background: transparent url("/Images/button-anmation-livechat.gif") no-repeat scroll 0 0;
+    border: 0 none;
+    color: #000;
+    display: block;
+    float: right;
+    font-size: 11px;
+    margin-top: 11px;
+    padding: 9px 9px 9px 13px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 165px;
+}
+.liveChatMedBtn:hover {
+    background: transparent url("/Images/button-anmation-livechat.gif") no-repeat scroll 0 -38px;
+    border: 0 none;
+    color: #000;
+    display: block;
+    float: right;
+    font-size: 11px;
+    margin-top: 11px;
+    padding: 9px 9px 9px 13px;
+    text-transform: uppercase;
+    width: 165px;
+}
+.blueShortBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    height: 35px;
+    margin: 0 auto;
+    padding: 0 0 0 8px;
+    width: 103px;
+}
+.blueShortBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll 0 -38px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    height: 35px;
+    margin: 0 auto;
+    padding: 0 0 0 8px;
+    width: 103px;
+}
+.whiteShortBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll -97px 0;
+    border: 0 none;
+    color: #25aae2;
+    display: block;
+    height: 35px;
+    margin: 0 auto;
+    padding: 2px 0 0 8px;
+    width: 103px;
+}
+.whiteShortBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll -97px -38px;
+    border: 0 none;
+    color: #25aae2;
+    display: block;
+    height: 35px;
+    margin: 0 auto;
+    padding: 2px 0 0 8px;
+    width: 103px;
+}
+.regblueMedBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll -202px 2px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 126px;
+}
+.regblueMedBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll -202px -36px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 126px;
+}
+.regwhiteMedBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll -331px 2px;
+    border: 0 none;
+    color: #25aae2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 126px;
+}
+.regwhiteMedBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll -331px -36px;
+    border: 0 none;
+    color: #25aae2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 126px;
+}
+.searchLoadingImg {
+    background-color: #ededed;
+    display: none;
+    margin-top: -45px;
+    opacity: 0.6;
+    position: absolute;
+    width: 737px;
+    z-index: 9999;
+}
+.searchLoadingImg img {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+#Button1 {
+    height: 27px;
+    width: 70px;
+}
+.blueCopyShortBtn {
+    background: transparent url("button-animation.gif") no-repeat scroll 0 -2px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    width: 97px;
+}
+.blueCopyShortBtn:hover {
+    background: transparent url("button-animation.gif") no-repeat scroll 0 -40px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    width: 97px;
+}
+.blueCopyShortBtn > a {
+    color: #fff;
+    margin-left: 12px;
+}
+embed {
+    height: 26px;
+    margin-left: -35px;
+    margin-top: -29px;
+    width: 88px;
+}
+.Btn_Submit {
+    margin-right: 5px;
+    padding-right: 10px;
+    width: 112px;
+}
+.Btn_Cancel {
+    border: 1px solid blue;
+    float: right;
+}
+.id-IDkenoBtn {
+    background: transparent url("button-keno-sprite2.gif") no-repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 10px;
+    margin: 0 auto;
+    padding: 15px 23px 44px;
+    width: 173px;
+}
+.id-IDkenoBtn:hover {
+    background: transparent url("button-keno-sprite2.gif") no-repeat scroll 0 -61px;
+}
+.en-USkenoBtn, .zh-CNkenoBtn, .vi-VNkenoBtn, .th-THkenoBtn, .ko-KRkenoBtn {
+    background: transparent url("button-keno-sprite2.gif") no-repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 23px;
+    width: 173px;
+}
+.en-USkenoBtn:hover, .zh-CNkenoBtn:hover, .vi-VNkenoBtn:hover, .th-THkenoBtn:hover, .ko-KRkenoBtn:hover {
+    background: transparent url("button-keno-sprite2.gif") no-repeat scroll 0 -60px;
+}
+.btnKeno {
+    display: block;
+    margin-top: -11px;
+    padding-left: 25px;
+    padding-top: 9px;
+    width: 152px;
+}
+#divVideoButtonContainer {
+    position: relative;
+    width: 960px;
+    z-index: 80;
+}
+#divVideoButton {
+    height: 47px;
+    left: 30px;
+    position: absolute;
+    top: 15px;
+    width: 47px;
+    z-index: 80;
+}
+#imgKenoVideo {
+    background-image: url("button-video.png");
+    float: left;
+    height: 47px;
+    width: 47px;
+}
+#imgKenoVideo:hover {
+    background-image: url("button-video-r.png");
+}
+.copyHeight {
+    height: 33px;
+}
+.lnkCopy {
+    line-height: 32px;
+    vertical-align: sub;
+}
+.depositLB embed {
+    margin-left: -32px;
+    margin-top: -8px;
+}
