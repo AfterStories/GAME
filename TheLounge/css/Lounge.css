@@ -19,44 +19,44 @@ a:hover { color: rgb(153, 153, 153); text-decoration: none; }
 .cont_txt { position: absolute; margin-left: 20px; margin-top: 15px; width: 223px; height: 70px; }
 .cont_txt_2 { width: 432px; margin-left: 20px; }
 .angle_button { position: absolute; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 96px; }
-.angle_button a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2.gif") no-repeat scroll 0px 0px; }
-.angle_button a:link { background: transparent url("button-anmation_2.gif") no-repeat scroll 0px 0px; }
+.angle_button a { display: block; height: 50px; text-indent: -200em; background: transparent url("images/button-anmation_2.gif") no-repeat scroll 0px 0px; }
+.angle_button a:link { background: transparent url("images/button-anmation_2.gif") no-repeat scroll 0px 0px; }
 .angle_button a:hover { background-position: 0px -50px; }
 .pop_button { float: left; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 10px; }
-.pop_button a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2.gif") no-repeat scroll 0px 0px; }
-.pop_button a:link { background: transparent url("button-anmation_2.gif") no-repeat scroll 0px 0px; }
+.pop_button a { display: block; height: 50px; text-indent: -200em; background: transparent url("images/button-anmation_2.gif") no-repeat scroll 0px 0px; }
+.pop_button a:link { background: transparent url("images/button-anmation_2.gif") no-repeat scroll 0px 0px; }
 .pop_button a:hover { background-position: 0px -50px; }
 .angle_button_en { position: absolute; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 96px; }
-.angle_button_en a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
-.angle_button_en a:link { background: transparent url("button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
+.angle_button_en a { display: block; height: 50px; text-indent: -200em; background: transparent url("images/button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
+.angle_button_en a:link { background: transparent url("images/button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
 .angle_button_en a:hover { background-position: 0px -50px; }
 .pop_button_en { float: left; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 10px; }
-.pop_button_en a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
-.pop_button_en a:link { background: transparent url("button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
+.pop_button_en a { display: block; height: 50px; text-indent: -200em; background: transparent url("images/button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
+.pop_button_en a:link { background: transparent url("images/button-anmation_2_001.gif") no-repeat scroll 0px 0px; }
 .pop_button_en a:hover { background-position: 0px -50px; }
 .angle_button_vn { position: absolute; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 114px; }
-.angle_button_vn a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
-.angle_button_vn a:link { background: transparent url("button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
+.angle_button_vn a { display: block; height: 50px; text-indent: -200em; background: transparent url("images/button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
+.angle_button_vn a:link { background: transparent url("images/button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
 .angle_button_vn a:hover { background-position: 0px -50px; }
 .pop_button_vn { float: left; z-index: 10; width: 150px; height: 50px; margin-left: 18px; margin-top: 10px; }
-.pop_button_vn a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
-.pop_button_vn a:link { background: transparent url("button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
+.pop_button_vn a { display: block; height: 50px; text-indent: -200em; background: transparent url("images/button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
+.pop_button_vn a:link { background: transparent url("images/button-anmation_2_002.gif") no-repeat scroll 0px 0px; }
 .pop_button_vn a:hover { background-position: 0px -50px; }
 .angle_button_th { position: absolute; z-index: 10; width: 186px; height: 50px; margin-left: 18px; margin-top: 92px; }
-.angle_button_th a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_003.gif") no-repeat scroll 0px 0px; }
-.angle_button_th a:link { background: transparent url("button-anmation_2_003.gif") no-repeat scroll 0px 0px; }
+.angle_button_th a { display: block; height: 50px; text-indent: -200em; background: transparent url("images/button-anmation_2_003.gif") no-repeat scroll 0px 0px; }
+.angle_button_th a:link { background: transparent url("images/button-anmation_2_003.gif") no-repeat scroll 0px 0px; }
 .angle_button_th a:hover { background-position: 0px -50px; }
 .pop_button_th { float: left; z-index: 10; width: 242px; height: 50px; margin-left: 18px; margin-top: 5px; }
 .pop_button_th a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_Rewards.gif") no-repeat scroll 0px 0px; }
 .pop_button_th a:link { background: transparent url("button-anmation_Rewards.gif") no-repeat scroll 0px 0px; }
 .pop_button_th a:hover { background-position: 0px -50px; }
 .angle_button_id { position: absolute; z-index: 10; width: 186px; height: 50px; margin-left: 18px; margin-top: 86px; }
-.angle_button_id a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
-.angle_button_id a:link { background: transparent url("button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
+.angle_button_id a { display: block; height: 50px; text-indent: -200em; background: transparent url("images/button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
+.angle_button_id a:link { background: transparent url("images/button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
 .angle_button_id a:hover { background-position: 0px -50px; }
 .pop_button_id { float: left; z-index: 10; width: 186px; height: 50px; margin-left: 18px; }
-.pop_button_id a { display: block; height: 50px; text-indent: -200em; background: transparent url("button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
-.pop_button_id a:link { background: transparent url("button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
+.pop_button_id a { display: block; height: 50px; text-indent: -200em; background: transparent url("images/button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
+.pop_button_id a:link { background: transparent url("images/button-anmation_2_004.gif") no-repeat scroll 0px 0px; }
 .pop_button_id a:hover { background-position: 0px -50px; }
 .pop_banner { float: left; margin-left: 10px; width: 469px; height: 467px; border-width: 1px; border-color: rgb(219, 219, 219); border-style: solid; }
 .slides_container { width: 469px; height: 467px; overflow: hidden; position: relative; }
@@ -66,7 +66,7 @@ a:hover { color: rgb(153, 153, 153); text-decoration: none; }
 #bannernext { margin-left: 427px; }
 .pop_logo_cn { margin-left: 20px; margin-top: 17px; margin-bottom: 18px; }
 .pop_logo { margin-left: 5px; margin-top: 0px; }
-.angle_banner_b { margin-top: 322px; background: transparent url("bg_2.jpg") no-repeat scroll 0px 0px; width: 469px; height: 146px; position: relative; }
+.angle_banner_b { margin-top: 322px; background: transparent url("images/bg_2.jpg") no-repeat scroll 0px 0px; width: 469px; height: 146px; position: relative; }
 #displaycssbelt { visibility: hidden; }
 #stocklevels { visibility: hidden; }
 .stock { clear: both; font-size: 10px; padding-bottom: 5px; margin: 0px auto; width: 800px; color: rgb(0, 0, 0); border-bottom: 1px dashed rgb(0, 0, 0); height: 10px; text-align: right; }

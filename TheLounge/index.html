@@ -3,7 +3,7 @@
 <head><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
 	乐天堂/休闲资讯
 </title>
-    <link href="../lib/css/bundleCss.css" rel="stylesheet" type="text/css">
+    <link href="css/bundleCss.css" rel="stylesheet" type="text/css">
     
 <meta name="keywords" content="乐天堂，FUN88，FUN88.COM，天使之吻，免费投注">
 <meta name="description" content="乐天堂天使之吻为您带来最新的休闲资讯以及额外福利。乐天堂额外福利免费投注。">
@@ -15,13 +15,13 @@
     <meta http-equiv="content-language" content="zh-CN">
     <meta name="revisit-after" content="7 days">
     <meta name="robots" content="index">  
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../lib/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../lib/images/favicon.ico" type="image/x-icon">
     <noscript>
         <meta HTTP-EQUIV="REFRESH" content="0; url=/zh-CN/JavaScript-Not-Enabled">
     </noscript>
     
-    <link href="Lounge.css" rel="stylesheet" type="text/css">
+    <link href="css/Lounge.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../lib/css/swiper.min.css">
     
 
@@ -34,12 +34,12 @@
     
 
 
-    <script type="text/javascript" src="jquery-1.12.2.min.js"> </script>
+    <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
     <script type="text/javascript" src="../lib/js/swiper.min.js" ></script>
-    <script type="text/javascript" src="jquery-qrcode-0.14.0.min.js" async=""></script>
-    <script src="bundleJquery.js" type="text/javascript"></script>
-    <script type="text/javascript" src="master.yui.js" async=""></script>
-    <script type="text/javascript" src="master.js" async=""></script>
+    <script type="text/javascript" src="../lib/js/jquery-qrcode-0.14.0.min.js" ></script>
+    <script src="../lib/js/bundleJquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../lib/js/master.yui.js" ></script>
+    <script type="text/javascript" src="../lib/js/master.js" ></script>
 
     <script type="text/javascript">
         var g_Cookie_PopUpWelcome = "PopUpWelcome";
@@ -127,17 +127,7 @@
             return true;
         });
     </script>
-    <script type="text/javascript">
-        $('#top_header').scrollToFixed();
-        var strURLIovation = "https://mpsnare.iesnare.com/snare.js";
-        $(document).ready(function () {
-            $("#colorbox, #cboxOverlay").appendTo('form:first');
-            $("#uiHtmlBody").css("display", "block");
-            $(".ui-dialog").css({ "position": "absolute", "top": "50%", "left": "50%", "margin-left": -$('.ui-dialog').width() / 2, "margin-top": -$('.ui-dialog').height() / 2 });
-        });
-        var PokerRegister = "False";
-        var isLogin = "false";
-    </script>
+
     
     <form method="post" action="http://www.10010388.com/zh-CN/The-Lounge" onsubmit="javascript:return WebForm_OnSubmit();" id="MainForm">
      
@@ -325,8 +315,8 @@
 
 <div id="quickMenu">
     
-    <script src="jquery.validate.js" type="text/javascript" async=""></script>
-    <script src="jquery.numeric.js" type="text/javascript" async=""></script>
+    <script src="../lib/js/jquery.validate.js" type="text/javascript" async=""></script>
+    <script src="../lib/js/jquery.numeric.js" type="text/javascript" async=""></script>
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
             function onlinealipayinmaintenance() {
@@ -1029,28 +1019,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     </div>
     <!--MaintenanceCountdown, it is only for maintenance countdown only-->
     
-    
-
-<script type="text/javascript">
-
-    $(document).ready(function () { 
-        $.ajax({
-            type: "POST",
-            url: "/Services/SpecialAnnouncement.asmx/GetSpecialAnnouncement",
-            data: "{'newsType':'true','lng':'zh-CN'}",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (data) {
-                var text = "";
-                for (var i = 0; i < data.d.length; i++) {
-                    text += data.d[i]  + "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;";
-                }
-                
-                $("#s_announcement").append(text);
-            }
-        });
-    })
-</script>
 
     <!--The slider above navigation bar-->
     <div id="marquee1">
@@ -1084,12 +1052,12 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 </div>
 
 
-<div id="navigation" style="position: relative;top: 30px;">
-    <table id="navMain" class="zh-CN">
+<div id="navigation">
+    <table id="navMain" class="zh-CN" style="position: relative;top:4px;">
         <tbody><tr>
             <td class="menuStatic off">
                 <div id="mainMenu-Home" class="dy-unit">
-                    <a href="http://www.10010388.com/zh-CN/Home" id="BaseMainContent_HeaderContent_ascxMainMenu_uiHomeIcon" class="MenuImageHome" onclick="window.location=this.href;"></a>
+                    <a href="../home/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiHomeIcon" class="MenuImageHome" onclick="window.location=this.href;"></a>
                     <div class="menuSeperator"></div>
                 </div>
             </td>
@@ -1104,7 +1072,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="Sportsbook" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Sportsbook">
-                                <a href="http://www.10010388.com/zh-CN/Sportsbook" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="" onclick="">体育博彩</a>
+                                <a href="../sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="" onclick="">体育博彩</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1117,7 +1085,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="IMSportsbook" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_IMSportsbook">
-                                <a href="http://www.10010388.com/zh-CN/IM-Sportsbook" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" class="" onclick="">IM 体育</a>
+                                <a href="../IM-sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" class="" onclick="">IM 体育</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1130,7 +1098,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="Sportsbook Exchange" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Exchange">
-                                <a href="http://www.10010388.com/zh-CN/Exchange" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_2" class="" onclick="">必发交易</a>
+                                <a href="../exchange/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_2" class="" onclick="">必发交易</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1143,7 +1111,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="LiveCasinoImperial" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_LiveCasino">
-                                <a href="http://www.10010388.com/zh-CN/Live-Casino/Imperial-Palace" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="" onclick="">真人娱乐场</a>
+                                <a href="../Live-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="" onclick="">真人娱乐场</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1156,7 +1124,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="SlotCasino Default" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Games">
-                                <a href="http://www.10010388.com/zh-CN/Slot-Casino/Top-Games" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_4" class="" onclick="">乐游戏</a>
+                                <a href="../topgames/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_4" class="" onclick="">乐游戏</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1169,7 +1137,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="StarCasino" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_IMCasino">
-                                <a href="http://www.10010388.com/zh-CN/IM-Casino" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" class="" onclick="">PT百乐城</a>
+                                <a href="../IM-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" class="" onclick="">PT百乐城</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1181,7 +1149,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="Keno" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Keno">
-                                <a href="http://www.10010388.com/zh-CN/Keno" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_6" class="" onclick="">快乐彩</a>
+                                <a href="../FunKeno/Keno.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_6" class="" onclick="">快乐彩</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1194,7 +1162,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="Promo Default" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Promotion">
-                                <a href="http://www.10010388.com/zh-CN/Promotion/NewMembers" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_7" class="" onclick="">促销</a>
+                                <a href="../Promotion/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_7" class="" onclick="">促销</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1207,7 +1175,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="TheLounge" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_LifeStyleRewards">
-                                <a href="#" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_8" class="cssSelectedMenu" onclick="">天上人间</a>
+                                <a href="../TheLounge/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_8" class="cssSelectedMenu" onclick="">天上人间</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1220,7 +1188,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="AffiliateLM" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_AffiliateMenu">
-                                <a href="http://www.10010388.com/lm/?lng=CN" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_9" class="" onclick="" target="_blank">联盟合作</a>
+                                <a href="../cooperation/cooperation.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_9" class="" onclick="" target="_blank">联盟合作</a>
 
                                 <div class="menuSeperator" id="MenuSeparatorLast"></div>
                             </div>
@@ -1370,7 +1338,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         });
 
         $("#dvMedia08").click(function () {
-            $("#wechat-dialog img").attr("src", "/Images/header/wechat-qr.jpg");
+            $("#wechat-dialog img").attr("src", "../lib/images/wechat-qr.jpg");
             $("#wechat-dialog").dialog({
                 modal: true,
                 draggable: false,
@@ -1619,7 +1587,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         <!-- Content -->
         
     
-<script src="jquery-ui-caroufredsel-6.2.1.packed.js" type="text/javascript"> </script>
+<script src="js/jquery-ui-caroufredsel-6.2.1.packed.js" type="text/javascript"> </script>
 
 
 <div id="content">
@@ -1627,7 +1595,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     
         <div style="float: left;">
             <a class="angle_banner" href="http://www.10010388.com/zh-CN/Bliss/All" target="_blank">
-                <img src="blissAugust2016.jpg" alt="blissAugust2016" width="467" height="318">
+                <img src="images/blissAugust2016.jpg" alt="blissAugust2016" width="467" height="318">
             </a>
            
             <div class="angle_banner_b">
@@ -1636,7 +1604,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         <div class="panel">
                             <div class="subfeature">
                                 <a href="http://www.10010388.com/zh-CN/Bliss/All?month=08&amp;year=2016" target="_blank">
-                                    <img src="MAGAZINE_2016_AUGUST.jpg" alt="august-girl" width="84" height="96"></a>
+                                    <img src="images/MAGAZINE_2016_AUGUST.jpg" alt="august-girl" width="84" height="96"></a>
                                 <div class="subfeature-txt">
                                     <h2>
                                         八月</h2>
@@ -1648,7 +1616,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         <div class="panel">
                             <div class="subfeature">
                                 <a href="http://www.10010388.com/zh-CN/Bliss/All?month=07&amp;year=2016" target="_blank">
-                                    <img src="MAGAZINE_2016_JULY.jpg" alt="july-girl" width="84" height="96"></a>
+                                    <img src="images/MAGAZINE_2016_JULY.jpg" alt="july-girl" width="84" height="96"></a>
                                 <div class="subfeature-txt">
                                     <h2>
                                         七月</h2>
@@ -1660,7 +1628,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         <div class="panel">
                             <div class="subfeature">
                                 <a href="http://www.10010388.com/zh-CN/Bliss/All?month=06&amp;year=2016" target="_blank">
-                                    <img src="magazine_2016_June.jpg" alt="june-girl" width="84" height="96"></a>
+                                    <img src="images/magazine_2016_June.jpg" alt="june-girl" width="84" height="96"></a>
                                 <div class="subfeature-txt">
                                     <h2>
                                         六月</h2>
@@ -1672,7 +1640,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         <div class="panel">
                             <div class="subfeature">
                                 <a href="http://www.10010388.com/zh-CN/Bliss/All?month=05&amp;year=2016" target="_blank">
-                                    <img src="magazine_2016_May.jpg" alt="may-girl" width="84" height="96"></a>
+                                    <img src="images/magazine_2016_May.jpg" alt="may-girl" width="84" height="96"></a>
                                 <div class="subfeature-txt">
                                     <h2>
                                         五月</h2>
@@ -1684,7 +1652,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         <div class="panel">
                             <div class="subfeature">
                                 <a href="http://www.10010388.com/zh-CN/Bliss/All?month=04&amp;year=2016" target="_blank">
-                                    <img src="magazine_2016_April.jpg" alt="apr-girl" width="84" height="96"></a>
+                                    <img src="images/magazine_2016_April.jpg" alt="apr-girl" width="84" height="96"></a>
                                 <div class="subfeature-txt">
                                     <h2>
                                         四月</h2>
@@ -1693,11 +1661,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         </div>
                     </li>
                 </ul></div>
-                <a id="prev" class="prev hidden disabled" href="#" style="display: none;">
-                    <img src="butt-left.png" alt="left">
-                </a><a id="next" class="next hidden" href="#" style="display: none;">
-                    <img src="butt-right.png" alt="right">
-                </a>
+
             </div>
         </div>
    
@@ -1707,9 +1671,9 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
     <div class="swiper-wrapper" >
 
-        <div class="swiper-slide"><img src="fun88-1.jpg" /></div>
-        <div class="swiper-slide"><img src="fun88-2.jpg" /></div>
-        <div class="swiper-slide"><img src="fun88-3.jpg" /></div>
+        <div class="swiper-slide"><img src="images/fun88-1.jpg" /></div>
+        <div class="swiper-slide"><img src="images/fun88-2.jpg" /></div>
+        <div class="swiper-slide"><img src="images/fun88-3.jpg" /></div>
     </div>
 
     
@@ -2088,7 +2052,7 @@ var AjaxURL = " "
                 </div>
             </div>
         </div>
-        <iframe class="dvEmptyFrame" src="index_12.html" style="display: none;"></iframe>
+   <!--      <iframe class="dvEmptyFrame" src="index_12.html" style="display: none;"></iframe> -->
     </div>
     <div id="PL_loginSuccess_box">
         <div class="PL_header">
@@ -2164,7 +2128,7 @@ var AjaxURL = " "
         
 <div class="loadingGif" style="background-color: rgb(170, 170, 170); display: none; height: 100%; opacity: 0.6; position: fixed; text-align: center; top: 0px; width: 100%; z-index: 999;">
     
-    <img alt="" src="loading.gif" width="32" height="32">
+    <img alt="" src="../lib/images/loading.gif" width="32" height="32">
 </div>
 <script type="text/javascript">
     function isleap() {
@@ -2302,7 +2266,7 @@ var AjaxURL = " "
 
 <script type="text/javascript">
     $(function () {
-        $('#slides1').slides({ preload: true, preloadImage: '/Images/loading.gif', play: 5000, pause: 2500, hoverPause: true });
+        $('#slides1').slides({ preload: true, preloadImage: '../lib/imagesloading.gif', play: 5000, pause: 2500, hoverPause: true });
         $("#slides1 .slides_container, .slides_LiveStream").mouseenter(function () {
             $(".slides_LiveStream.prev").css("display", "block");
             $(".slides_LiveStream.next").css("display", "block");
@@ -2311,7 +2275,7 @@ var AjaxURL = " "
             $(".slides_LiveStream.next").css("display", "none");
         });
 
-        $('#slidesCDC').slides({ preload: true, preloadImage: '/Images/loading.gif', play: 5000, pause: 2500, hoverPause: true });
+        $('#slidesCDC').slides({ preload: true, preloadImage: '../lib/images/loading.gif', play: 5000, pause: 2500, hoverPause: true });
         $("#slidesCDC .slides_container, .slides_LiveStream").mouseenter(function () {
             $(".slides_LiveStream.prev").css("display", "block");
             $(".slides_LiveStream.next").css("display", "block");
@@ -2320,7 +2284,7 @@ var AjaxURL = " "
             $(".slides_LiveStream.next").css("display", "none");
         });
 
-        $('#slidesPlayBoyTutorial').slides({ preload: true, preloadImage: '/Images/loading.gif', play: 5000, pause: 2500, hoverPause: true });
+        $('#slidesPlayBoyTutorial').slides({ preload: true, preloadImage: '../lib/images/loading.gif', play: 5000, pause: 2500, hoverPause: true });
         $("#slidesPlayBoyTutorial .slides_container, .slides_LiveStream").mouseenter(function () {
             $(".slides_LiveStream.prev").css("display", "block");
             $(".slides_LiveStream.next").css("display", "block");
@@ -2349,16 +2313,13 @@ var AjaxURL = " "
         
         
         <div class="loadingLoginGif" style="background-color: rgb(170, 170, 170); display: none; height: 100%; opacity: 0.6; position: fixed; text-align: center; top: 0px; width: 100%; z-index: 5999; left: 0px;">
-            <img alt="" src="loading.gif" width="32" height="32">
+            <img alt="" src="../lib/images/loading.gif" width="32" height="32">
         </div>
         <input name="ctl00$ctl00$hidblackbox" id="hidblackbox"  type="hidden">
     
 
 <div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button type="button" id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></form><div id="yui3-css-stamp" style="position: absolute ! important; visibility: hidden ! important;"></div>
     
-<script type="text/javascript">
-    window.lpTag = window.lpTag || {}; if (typeof window.lpTag._tagCount === 'undefined') { window.lpTag = { site: '77738374' || '', section: lpTag.section || '', autoStart: lpTag.autoStart === false ? false : true, ovr: lpTag.ovr || {}, _v: '1.5.1', _tagCount: 1, protocol: location.protocol, events: { bind: function (app, ev, fn) { lpTag.defer(function () { lpTag.events.bind(app, ev, fn); }, 0); }, trigger: function (app, ev, json) { lpTag.defer(function () { lpTag.events.trigger(app, ev, json); }, 1); } }, defer: function (fn, fnType) { if (fnType == 0) { this._defB = this._defB || []; this._defB.push(fn); } else if (fnType == 1) { this._defT = this._defT || []; this._defT.push(fn); } else { this._defL = this._defL || []; this._defL.push(fn); } }, load: function (src, chr, id) { var t = this; setTimeout(function () { t._load(src, chr, id); }, 0); }, _load: function (src, chr, id) { var url = src; if (!src) { url = this.protocol + '//' + ((this.ovr && this.ovr.domain) ? this.ovr.domain : 'lptag.liveperson.net') + '/tag/tag.js?site=' + this.site; } var s = document.createElement('script'); s.setAttribute('charset', chr ? chr : 'UTF-8'); if (id) { s.setAttribute('id', id); } s.setAttribute('src', url); document.getElementsByTagName('head').item(0).appendChild(s); }, init: function () { this._timing = this._timing || {}; this._timing.start = (new Date()).getTime(); var that = this; if (window.attachEvent) { window.attachEvent('onload', function () { that._domReady('domReady'); }); } else { window.addEventListener('DOMContentLoaded', function () { that._domReady('contReady'); }, false); window.addEventListener('load', function () { that._domReady('domReady'); }, false); } if (typeof (window._lptStop) == 'undefined') { this.load(); } }, start: function () { this.autoStart = true; }, _domReady: function (n) { if (!this.isDom) { this.isDom = true; this.events.trigger('LPT', 'DOM_READY', { t: n }); } this._timing[n] = (new Date()).getTime(); }, vars: lpTag.vars || [], dbs: lpTag.dbs || [], ctn: lpTag.ctn || [], sdes: lpTag.sdes || [], ev: lpTag.ev || [] }; lpTag.init(); } else { window.lpTag._tagCount += 1; }
-</script>
 
 
     <script type="text/javascript">

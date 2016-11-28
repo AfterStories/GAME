@@ -1,0 +1,6 @@
+
+.countdown li span { background: transparent url("../../lib/images/countdown.png") no-repeat scroll 0% 0%; float: left; width: 43px; height: 28px; padding: 5px 0px 0px 6px; letter-spacing: 12px; color: rgb(255, 255, 255); font-size: 20px; line-height: 19px; }
+.countdown li { display: inline; list-style-type: none; }
+.countdown_info { margin-left: 9px; }
+.countdown_info li { display: inline; list-style-type: none; margin-left: 9px; }
+.countdown_title { color: red; }

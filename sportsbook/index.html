@@ -12,8 +12,8 @@
     <meta http-equiv="content-language" content="zh-CN">
     <meta name="revisit-after" content="7 days">
     <meta name="robots" content="index">  
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../lib/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../lib/images/favicon.ico" type="image/x-icon">
     <noscript>
         <meta HTTP-EQUIV="REFRESH" content="0; url=/zh-CN/JavaScript-Not-Enabled">
     </noscript>
@@ -50,8 +50,10 @@
 </head>
 <body id="uiHtmlBody" style="display: block; background: transparent url(&quot;bg_cyanBlue.jpg&quot;) no-repeat scroll 0px 158px / 1687px 920px;" class="spbg lang-zh-CN" lang="zh-CN">
     
-<script async="" src="js/analytics.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"> </script>
+
+<script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
+<script type="text/javascript" src="../lib/js/jquery.validate.js"> </script>
+
 <script>
     jQuery.browser={};(function(){jQuery.browser.msie=false; jQuery.browser.version=0;if(navigator.userAgent.match(/MSIE ([0-9]+)./)){ jQuery.browser.msie=true;jQuery.browser.version=RegExp.$1;}})();
 </script>
@@ -158,50 +160,7 @@
         var isLogin = "false";
     </script>
     
-    <form method="post" action="http://www.10010388.com/zh-CN/Sportsbook" onsubmit="javascript:return WebForm_OnSubmit();" id="MainForm">
-<div class="aspNetHidden">
-<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
-<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
-<input name="__VIEWSTATE" id="__VIEWSTATE"  type="hidden">
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['MainForm'];
-if (!theForm) {
-    theForm = document.MainForm;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
-
-
-<script type="text/javascript">
-//<![CDATA[
-function WebForm_OnSubmit() {
-if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
-return true;
-}
-//]]>
-</script>
-
-<div class="aspNetHidden">
-
-	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="834261EB" type="hidden">
-	<input name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" type="hidden">
-	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION"  type="en">
-</div>
-<!--         <script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ctl04', 'MainForm', [], [], [], 90, 'ctl00$ctl00$ctl00');
-//]]>
-</script> -->
+    <form  id="MainForm">
 
         
     <div id="fixed_header"></div>
@@ -771,7 +730,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     </div>
     
 </div>
-<div id="top" style="margin-top:20px;">
+<div id="top" style="margin-top:40px;">
     <div id="logofun88InZh" class="logoLoc">
         <a class="logo" href="http://www.10010388.com/zh-CN/Home">FUN88</a>
     </div>
@@ -802,29 +761,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         &nbsp;
     </div>
     <!--MaintenanceCountdown, it is only for maintenance countdown only-->
-    
-    
 
-<script type="text/javascript">
-
-    $(document).ready(function () { 
-        $.ajax({
-            type: "POST",
-            url: "/Services/SpecialAnnouncement.asmx/GetSpecialAnnouncement",
-            data: "{'newsType':'true','lng':'zh-CN'}",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (data) {
-                var text = "";
-                for (var i = 0; i < data.d.length; i++) {
-                    text += data.d[i]  + "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;";
-                }
-                
-                $("#s_announcement").append(text);
-            }
-        });
-    })
-</script>
 
     <!--The slider above navigation bar-->
     <div id="marquee1">
@@ -838,7 +775,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                 <li><a href="#">【广告7广告7】</a></li>
             </ul>   
     </div>
-<script type="text/javascript" src="master.payment.crawler.js"></script>
+<script type="text/javascript" src="../lib/js/master.payment.crawler.js"></script>
 
 
 <style type="text/css">
@@ -854,8 +791,8 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 </div>
 
 
-<div id="navigation">
-    <table id="navMain" class="zh-CN">
+<div id="navigation" >
+    <table id="navMain" class="zh-CN" >
         <tbody><tr>
             <td class="menuStatic off">
                 <div id="mainMenu-Home" class="dy-unit">
@@ -874,7 +811,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="Sportsbook" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Sportsbook">
-                                <a href="#" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="cssSelectedMenu" onclick="">体育博彩</a>
+                                <a href="../sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="cssSelectedMenu" onclick="">体育博彩</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -913,7 +850,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="LiveCasinoImperial" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_LiveCasino">
-                                <a href="http://www.10010388.com/zh-CN/Live-Casino/Imperial-Palace" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="" onclick="">真人娱乐场</a>
+                                <a href="../Live-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="" onclick="">真人娱乐场</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -939,7 +876,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="StarCasino" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_IMCasino">
-                                <a href="http://www.10010388.com/zh-CN/IM-Casino" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" class="" onclick="">PT百乐城</a>
+                                <a href="../IM-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" class="" onclick="">PT百乐城</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -951,7 +888,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="Keno" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Keno">
-                                <a href="http://www.10010388.com/zh-CN/Keno" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_6" class="" onclick="">快乐彩</a>
+                                <a href="../FunKeno/Keno.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_6" class="" onclick="">快乐彩</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -964,7 +901,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="Promo Default" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Promotion">
-                                <a href="http://www.10010388.com/zh-CN/Promotion/NewMembers" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_7" class="" onclick="">促销</a>
+                                <a href="../Promotion/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_7" class="" onclick="">促销</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -977,7 +914,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="TheLounge" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_LifeStyleRewards">
-                                <a href="http://www.10010388.com/zh-CN/The-Lounge" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_8" class="" onclick="">天上人间</a>
+                                <a href="../TheLounge/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_8" class="" onclick="">天上人间</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -990,7 +927,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <td id="AffiliateLM" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_AffiliateMenu">
-                                <a href="http://www.10010388.com/lm/?lng=CN" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_9" class="" onclick="" target="_blank">联盟合作</a>
+                                <a href="../cooperation/cooperation.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_9" class="" onclick="" target="_blank">联盟合作</a>
 
                                 <div class="menuSeperator" id="MenuSeparatorLast"></div>
                             </div>
@@ -1002,6 +939,8 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         </tr>
     </tbody></table>
 </div>
+
+
 <script type="text/javascript">
     var gameLockMessage = "您已经被封锁下注此游戏，请联系我们的线上客服以求帮助。谢谢";
     var koreaMessage = "Game access has been blocked as Korea service will be terminated by 30/9/2016, please proceed to withdraw your balance.";
@@ -2169,11 +2108,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         </div>
         <input name="ctl00$ctl00$ctl00$hidblackbox" id="hidblackbox"  type="hidden">
     
-<script type="text/javascript">
-//<![CDATA[
-var Page_Validators =  new Array(document.getElementById("BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator"), document.getElementById("BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator"), document.getElementById("ctl05_UserNamePopupValidator"), document.getElementById("ctl05_PasswordPopupValidator"));
-//]]>
-</script>
+
 
 <script type="text/javascript">
 //<![CDATA[
@@ -2236,53 +2171,7 @@ document.getElementById('ctl05_PasswordPopupValidator').dispose = function() {
 //]]>
 </script>
 <div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button type="button" id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></form><div id="yui3-css-stamp" style="position: absolute ! important; visibility: hidden ! important;"></div>
-    
-<script type="text/javascript">
-    window.lpTag = window.lpTag || {}; if (typeof window.lpTag._tagCount === 'undefined') { window.lpTag = { site: '77738374' || '', section: lpTag.section || '', autoStart: lpTag.autoStart === false ? false : true, ovr: lpTag.ovr || {}, _v: '1.5.1', _tagCount: 1, protocol: location.protocol, events: { bind: function (app, ev, fn) { lpTag.defer(function () { lpTag.events.bind(app, ev, fn); }, 0); }, trigger: function (app, ev, json) { lpTag.defer(function () { lpTag.events.trigger(app, ev, json); }, 1); } }, defer: function (fn, fnType) { if (fnType == 0) { this._defB = this._defB || []; this._defB.push(fn); } else if (fnType == 1) { this._defT = this._defT || []; this._defT.push(fn); } else { this._defL = this._defL || []; this._defL.push(fn); } }, load: function (src, chr, id) { var t = this; setTimeout(function () { t._load(src, chr, id); }, 0); }, _load: function (src, chr, id) { var url = src; if (!src) { url = this.protocol + '//' + ((this.ovr && this.ovr.domain) ? this.ovr.domain : 'lptag.liveperson.net') + '/tag/tag.js?site=' + this.site; } var s = document.createElement('script'); s.setAttribute('charset', chr ? chr : 'UTF-8'); if (id) { s.setAttribute('id', id); } s.setAttribute('src', url); document.getElementsByTagName('head').item(0).appendChild(s); }, init: function () { this._timing = this._timing || {}; this._timing.start = (new Date()).getTime(); var that = this; if (window.attachEvent) { window.attachEvent('onload', function () { that._domReady('domReady'); }); } else { window.addEventListener('DOMContentLoaded', function () { that._domReady('contReady'); }, false); window.addEventListener('load', function () { that._domReady('domReady'); }, false); } if (typeof (window._lptStop) == 'undefined') { this.load(); } }, start: function () { this.autoStart = true; }, _domReady: function (n) { if (!this.isDom) { this.isDom = true; this.events.trigger('LPT', 'DOM_READY', { t: n }); } this._timing[n] = (new Date()).getTime(); }, vars: lpTag.vars || [], dbs: lpTag.dbs || [], ctn: lpTag.ctn || [], sdes: lpTag.sdes || [], ev: lpTag.ev || [] }; lpTag.init(); } else { window.lpTag._tagCount += 1; }
-</script>
 
-    
-<script type="text/javascript">
-    var TrackingID =  'UA-4079383-8'; 
-    var GA_UserID = "0";
-    var testing = "";
-
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'js/analytics.js', 'ga');
-
-    if (getCookie("verifyform") == "1" && GA_UserID != "0") {
-        ga('create', TrackingID, 'none', { 'userId': GA_UserID, 'allowLinker': true });
-        ga('set', 'dimension1', GA_UserID);
-    } else
-        ga('create', TrackingID, 'none', { 'allowLinker': true });
-
-    ga('require', 'displayfeatures');
-    ga('send', 'pageview');
-</script>
-
-    
-    
-
-<!-- Live Google Tag Manager GTM-5QQ3K6 -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5QQ3K6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function (w, d, s, l, i) {
-w[l] = w[l] || []; w[l].push({
-'gtm.start':
-new Date().getTime(), event: 'gtm.js'
-}); var f = d.getElementsByTagName(s)[0],
-j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-5QQ3K6');</script>
-<!-- End Live Google Tag Manager -->
-
-<!-- Staging Google Tag Manager GTM-PJFS5H -->
-
-<!-- End Staging Google Tag Manager -->
 
     <script type="text/javascript">
         var getUri = window.location.href.toLowerCase();
@@ -2293,79 +2182,9 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
         var nonHomepageBackground = getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('im-casino') != -1 ||
         ((getUri.indexOf("im-casino") !== -1) && getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('top-games') != -1) ||
         ((getUri.indexOf("worldcup") !== -1) && getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('worldcup') != -1);
-        function initiate_backgroundBanner(notDy) {
-            if (getUri.indexOf("/zh-cn/default") != -1 ||
-                    getUri.indexOf("/zh-cn/home") != -1 || nonHomepageBackground
-            ) {
-                var maximageObj = $("#maximage1");
-                if (typeof (notDy) == 'undefined') {
-                    for (var loop = 1; loop <= $(maximageObj).children().length; loop++)
-                        checks.push(loop);
-                }
-                if (typeof maximageObj !== 'undefined' && $(maximageObj).children().length == checks.length && checks.length != 0) {
-                    var tempButton = [];
-                    var tempLinks = [];
-                    for (var a = 0; a < checks.length; a++) {
-                        var n = checks[a] - 1;
-                        $($("#maximage1 > img")[n]).clone().appendTo($("#maximage"));
-                        tempButton[a] = SliderButtonName[n];
-                        tempLinks[a] = links[n];
-                    }
-                    SliderButtonName = tempButton;
-                    links = tempLinks;
-                    maximageObj.remove();
-                    maximageObj = $("#maximage");
-                    $(maximageObj).maximage({
-                        cycleOptions: {
-                            fx: 'scrollHorz',
-                            speed: 1000, 
-                            timeout: 8000,
-                            prev: ".prev",
-                            next: ".next",
-                            pager: '#cycle-nav table tr',
-                            pagerAnchorBuilder: function (idx, slide) {
-                                var result = '<td id="homeBannerButton' + (idx + 1) + '" class="dy-unit" ><a href="javascript:void(0);">';
-                                if (getUri.indexOf("/zh-cn/home") != -1 || getUri.indexOf("/zh-cn/default") != -1) {
-                                    result += SliderButtonName[idx];
-                                }
-                                return result + '</a></td>';
-                            }
-                        },
-                        onFirstImageLoaded: function () {
-                            jQuery(maximageObj).fadeIn('fast');
 
-                        }
-                    });
-                    $('.toggle').bind('click', function (e) {
-                        e.preventDefault();
-                        $(maximageObj).cycle('toggle');
-                    });
-                    $('div#slides').on('click', function () {
-                        var num = $('td.activeSlide').attr('id').split('homeBannerButton').pop();
-                        if (typeof DY !== "undefined")
-                            DY.API('event', { name: 'HomeBannerClicked', properties: { BannerNumber: num } });
-                        sendDesktopGA("Home Banner " + getCookie("CultureInfo").toLowerCase(), "Click", SliderButtonName[num - 1] + (isLogin === "true" ? " Auth" : " Anon"));
-                        var func = new Function(links[--num]);
-                        func();
-                    });
-                }
-            }
-        }
-        $(function () {
-            if ($.browser.msie && $.browser.version < '8.0') {
-                $(window).ready(function () { initiate_backgroundBanner(); });
-            } else {
-                initiate_backgroundBanner();
-            }
-                  
-            $("#slides, #cursorDiv, .prev, .next").mouseleave(function () {
-                $("#cursorDiv .prev").css("visibility", "hidden");
-                $("#cursorDiv .next").css("visibility", "hidden");
-            }).mouseenter(function () {
-                $("#cursorDiv .prev").css("visibility", "visible");
-                $("#cursorDiv .next").css("visibility", "visible");
-            });
-        });
+    
+
         function ClosePopupLiveStream() {
             $.colorbox.close();
             $("#PL_popup_box").css("display", "none");

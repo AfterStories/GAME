@@ -352,7 +352,7 @@
 	        background-color: #75A00E !important;
         }
         .closeBtnSlotClub{
-            background: url("images/allicons.png") no-repeat;
+            background: url("../lib/images/allicons.png") no-repeat;
             background-position: -641px -5px;
             height: 25px;
             width: 25px;
@@ -527,7 +527,7 @@
         right: 18px;
         position: absolute;
         cursor: pointer;
-        background: url("images/allicons.png") no-repeat;
+        background: url("../lib/images/allicons.png") no-repeat;
         background-position: -641px -5px;
     }
 
@@ -1657,28 +1657,6 @@
     </div>
     <!--MaintenanceCountdown, it is only for maintenance countdown only-->
     
-    
-
-<script type="text/javascript">
-
-    $(document).ready(function () { 
-        $.ajax({
-            type: "POST",
-            url: "/Services/SpecialAnnouncement.asmx/GetSpecialAnnouncement",
-            data: "{'newsType':'true','lng':'zh-CN'}",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (data) {
-                var text = "";
-                for (var i = 0; i < data.d.length; i++) {
-                    text += data.d[i]  + "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;";
-                }
-                
-                $("#s_announcement").append(text);
-            }
-        });
-    })
-</script>
 
     <!--The slider above navigation bar-->
     <div id="marquee1">
@@ -1704,11 +1682,11 @@
 
 
 <div id="navigation">
-    <table id="navMain" class="zh-CN">
+    <table id="navMain" class="zh-CN" ">
         <tbody><tr>
             <td class="menuStatic off">
                 <div id="mainMenu-Home" class="dy-unit">
-                    <a href="http://www.10010388.com/zh-CN/Home" id="BaseMainContent_HeaderContent_ascxMainMenu_uiHomeIcon" class="MenuImageHome" onclick="window.location=this.href;"></a>
+                    <a href="../home/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiHomeIcon" class="MenuImageHome" onclick="window.location=this.href;"></a>
                     <div class="menuSeperator"></div>
                 </div>
             </td>
@@ -1723,7 +1701,7 @@
                     <td id="Sportsbook" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Sportsbook">
-                                <a href="http://www.10010388.com/zh-CN/Sportsbook" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="" onclick="">体育博彩</a>
+                                <a href="../sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="" onclick="">体育博彩</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1736,7 +1714,7 @@
                     <td id="IMSportsbook" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_IMSportsbook">
-                                <a href="http://www.10010388.com/zh-CN/IM-Sportsbook" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" class="" onclick="">IM 体育</a>
+                                <a href="../IM-sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" class="" onclick="">IM 体育</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1749,7 +1727,7 @@
                     <td id="Sportsbook Exchange" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Exchange">
-                                <a href="http://www.10010388.com/zh-CN/Exchange" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_2" class="" onclick="">必发交易</a>
+                                <a href="../exchange/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_2" class="" onclick="">必发交易</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1762,12 +1740,12 @@
                     <td id="LiveCasinoImperial" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_LiveCasino">
-                                <a href="#" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="cssSelectedMenu" onclick="">真人娱乐场</a>
+                                <a href="../Live-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="cssSelectedMenu" onclick="">真人娱乐场</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
                             <ul class="lcSubMenu">
-<li id="mainMenu_LiveCasino_GD" class="dy-unit"><a href="#" id="providerGD" class="menuChild">北方堂 (gd)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 10px; text-transform: uppercase;">推荐!</sup></li><li id="mainMenu_LiveCasino_AG" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Royal-Palace" id="providerAG" class="menuChild">至尊堂 (ag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="mainMenu_LiveCasino_SAG" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Sky-Palace" id="providerSAG" class="menuChild">沙龙厅 (sag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 11px; text-transform: uppercase; margin-left: -4px;">新!</sup></li><li id="mainMenu_LiveCasino_AB" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Dragon-Palace" id="providerAB" class="menuChild">隆运堂 (欧博)</a></li><li id="mainMenu_LiveCasino_SUN" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Sun-Palace" id="providerSUN" class="menuChild">太阳厅 (申博太阳)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">首家!</sup></li><li id="mainMenu_LiveCasino_EA" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Oriental-Palace" id="providerEA" class="menuChild">东方堂 (ea)</a></li><li id="mainMenu_LiveCasino_OPUS" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/M-Palace" id="providerOPUS" class="menuChild">凯旋堂 (opus)</a></li><li id="mainMenu_LiveCasino_BOY" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Fortune-Palace" id="providerBOY" class="menuChild">波音堂 (波音)</a></li><li id="mainMenu_LiveCasino_CP" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Crown-Palace" id="providerCP" class="menuChild">南方堂 (cp)</a></li><li id="mainMenu_LiveCasino_PT" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Casino/Live-Dealers" id="PT" class="menuChild">百乐城 (PT)</a></li></ul>
+<li id="mainMenu_LiveCasino_GD" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Imperial-Palace" id="providerGD" class="menuChild">北方堂 (gd)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 10px; text-transform: uppercase;">推荐!</sup></li><li id="mainMenu_LiveCasino_AG" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Royal-Palace" id="providerAG" class="menuChild">至尊堂 (ag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="mainMenu_LiveCasino_SAG" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Sky-Palace" id="providerSAG" class="menuChild">沙龙厅 (sag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 11px; text-transform: uppercase; margin-left: -4px;">新!</sup></li><li id="mainMenu_LiveCasino_AB" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Dragon-Palace" id="providerAB" class="menuChild">隆运堂 (欧博)</a></li><li id="mainMenu_LiveCasino_SUN" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Sun-Palace" id="providerSUN" class="menuChild">太阳厅 (申博太阳)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">首家!</sup></li><li id="mainMenu_LiveCasino_EA" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Oriental-Palace" id="providerEA" class="menuChild">东方堂 (ea)</a></li><li id="mainMenu_LiveCasino_OPUS" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/M-Palace" id="providerOPUS" class="menuChild">凯旋堂 (opus)</a></li><li id="mainMenu_LiveCasino_BOY" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Fortune-Palace" id="providerBOY" class="menuChild">波音堂 (波音)</a></li><li id="mainMenu_LiveCasino_CP" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Crown-Palace" id="providerCP" class="menuChild">南方堂 (cp)</a></li><li id="mainMenu_LiveCasino_PT" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Casino/Live-Dealers" id="PT" class="menuChild">百乐城 (PT)</a></li></ul>
                         </div>
                     </td>
                 
@@ -1775,7 +1753,7 @@
                     <td id="SlotCasino Default" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Games">
-                                <a href="http://www.10010388.com/zh-CN/Slot-Casino/Top-Games" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_4" class="" onclick="">乐游戏</a>
+                                <a href="../topgames/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_4" class="" onclick="">乐游戏</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1788,7 +1766,7 @@
                     <td id="StarCasino" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_IMCasino">
-                                <a href="http://www.10010388.com/zh-CN/IM-Casino" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" class="" onclick="">PT百乐城</a>
+                                <a href="../IM-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" class="" onclick="">PT百乐城</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1800,7 +1778,7 @@
                     <td id="Keno" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Keno">
-                                <a href="http://www.10010388.com/zh-CN/Keno" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_6" class="" onclick="">快乐彩</a>
+                                <a href="../FunKeno/Keno.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_6" class="" onclick="">快乐彩</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1813,7 +1791,7 @@
                     <td id="Promo Default" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Promotion">
-                                <a href="http://www.10010388.com/zh-CN/Promotion/NewMembers" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_7" class="" onclick="">促销</a>
+                                <a href="../Promotion/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_7" class="" onclick="">促销</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1826,7 +1804,7 @@
                     <td id="TheLounge" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_LifeStyleRewards">
-                                <a href="http://www.10010388.com/zh-CN/The-Lounge" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_8" class="" onclick="">天上人间</a>
+                                <a href="../TheLounge/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_8" class="" onclick="">天上人间</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
@@ -1839,7 +1817,7 @@
                     <td id="AffiliateLM" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_AffiliateMenu">
-                                <a href="http://www.10010388.com/lm/?lng=CN" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_9" class="" onclick="" target="_blank">联盟合作</a>
+                                <a href="../cooperation/cooperation.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_9" class="" onclick="" target="_blank">联盟合作</a>
 
                                 <div class="menuSeperator" id="MenuSeparatorLast"></div>
                             </div>
@@ -2584,7 +2562,7 @@
         }
 
         .closeTutorialPopup{
-            background: url("images/allicons.png") no-repeat;
+            background: url("../lib/images/allicons.png") no-repeat;
             background-position: -641px -5px;
             height: 25px;
             width: 25px;
@@ -2899,7 +2877,7 @@
                         <input id="hdnGameProvider_EA_10015" class="hdnGameProvider" value="EA" type="hidden">
                         
                         <a href="http://www.10010388.com/zh-CN/Live-Casino/Oriental-Palace/Points-Baccarat" class="LinkImgGame" id="ImgGameId_EA_10015">
-                            <img id="imgGameProv" src="images/PointsBaccarat.png" alt="" width="100" height="101"></a>
+                            <img id="imgGameProv" src="images/Baccarat.png" alt="" width="100" height="101"></a>
                         <br>
 
                         <a href="http://www.10010388.com/zh-CN/Live-Casino/Oriental-Palace/Points-Baccarat" id="GameNameId_EA_10015" class="lnkProdName" style="color: rgb(37, 170, 225);">
@@ -3206,7 +3184,7 @@
                         <input id="hdnGameProvider_CP_1" class="hdnGameProvider" value="CP" type="hidden">
                         
                         <a href="http://www.10010388.com/zh-CN/Live-Casino/Crown-Palace/Baccarat" class="LinkImgGame" id="ImgGameId_CP_1">
-                            <img id="imgGameProv" src="Baccarat.png" alt="" width="100" height="101"></a>
+                            <img id="imgGameProv" src="images/Baccarat.png" alt="" width="100" height="101"></a>
                         <br>
 
                         <a href="http://www.10010388.com/zh-CN/Live-Casino/Crown-Palace/Baccarat" id="GameNameId_CP_1" class="lnkProdName" style="color: rgb(37, 170, 225);">
@@ -4144,7 +4122,7 @@
                         <input id="hdnGameProvider_OPUS_GoldenChalice" class="hdnGameProvider" value="OPUS" type="hidden">
                         
                         <a href="http://www.10010388.com/zh-CN/Live-Casino/M-Palace/Squeeze-Baccarat" class="LinkImgGame" id="ImgGameId_OPUS_GoldenChalice">
-                            <img id="imgGameProv" src="images/SqueezeBaccarat.png" alt="" width="100" height="101"></a>
+                            <img id="imgGameProv" src="images/Baccarat.png" alt="" width="100" height="101"></a>
                         <br>
 
                         <a href="http://www.10010388.com/zh-CN/Live-Casino/M-Palace/Squeeze-Baccarat" id="GameNameId_OPUS_GoldenChalice" class="lnkProdName" style="color: rgb(37, 170, 225);">
@@ -4169,7 +4147,7 @@
                         <input id="hdnGameProvider_OPUS_RoyalRuby" class="hdnGameProvider" value="OPUS" type="hidden">
                         
                         <a href="http://www.10010388.com/zh-CN/Live-Casino/M-Palace/7-Up-Baccarat" class="LinkImgGame" id="ImgGameId_OPUS_RoyalRuby">
-                            <img id="imgGameProv" src="images/7UpBaccarat.png" alt="" width="100" height="101"></a>
+                            <img id="imgGameProv" src="images/Baccarat.png" alt="" width="100" height="101"></a>
                         <br>
 
                         <a href="http://www.10010388.com/zh-CN/Live-Casino/M-Palace/7-Up-Baccarat" id="GameNameId_OPUS_RoyalRuby" class="lnkProdName" style="color: rgb(37, 170, 225);">
@@ -4993,10 +4971,10 @@
             </div>
             <div class="closeTutorialPopup" onclick="CloseGDTutorialPopup(); return false;"></div>
             <a href="javascript:void(0);" class="slides_GDT prev" style="margin-top: -500px; display: none; position: absolute; z-index: 999;">
-                <img src="images/arrow-prev.png" alt="Arrow Prev" width="42" height="71">
+                <img src="../lib/images/arrow-prev.png" alt="Arrow Prev" width="42" height="71">
             </a>
             <a href="javascript:void(0);" class="slides_GDT next" style="float: right; margin-left: 950px; margin-top: -500px; display: none; position: absolute; z-index: 999;">
-                <img src="images/arrow-next.png" alt="Arrow Next" width="42" height="71">
+                <img src="../lib/images/arrow-next.png" alt="Arrow Next" width="42" height="71">
             </a>
         <ul class="pagination"><li class="current"><a href="#0">1</a></li><li><a href="#1">2</a></li></ul></div>
         <!-- END Slider -->
@@ -5565,7 +5543,7 @@
                 </div>
             </div>
         </div>
-        <iframe class="dvEmptyFrame" src="index_15.html" style="display: none;"></iframe>
+  
     </div>
     <div id="PL_loginSuccess_box">
         <div class="PL_header">

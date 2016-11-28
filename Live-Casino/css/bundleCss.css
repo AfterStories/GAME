@@ -2729,27 +2729,27 @@ div#outer_top_header {
 }
 
 #hbtn1 {
-	background: url("../images/allicons.png") no-repeat scroll -2px 2px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -2px 2px transparent;
 	width: 28px;
 	height: 33px
 }
 
 #hbtn1:hover {
-	background: url("../images/allicons.png") no-repeat scroll -2px -28px transparent
+	background: url("../../lib/images/allicons.png") no-repeat scroll -2px -28px transparent
 }
 
 #hbtn2 {
-	background: url("../images/allicons.png") no-repeat scroll -31px 2px;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -31px 2px;
 	width: 27px;
 	height: 33px
 }
 
 #hbtn2:hover {
-	background: url("../images/allicons.png") no-repeat scroll -31px -28px transparent
+	background: url("../../lib/images/allicons.png") no-repeat scroll -31px -28px transparent
 }
 
 #hbtn3 div {
-	background: url("../images/allicons.png") no-repeat scroll -96px 0 transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -96px 0 transparent;
 	height: 28px;
 	width: 25px;
 	float: left;
@@ -2758,7 +2758,7 @@ div#outer_top_header {
 }
 
 #hbtn3:hover div {
-	background: url("../images/allicons.png") no-repeat scroll -96px -30px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -96px -30px transparent;
 	height: 28px;
 	width: 25px;
 	float: left;
@@ -2777,7 +2777,7 @@ div#outer_top_header {
 }
 
 #hbtn4 div {
-	background: url("../images/allicons.png") no-repeat scroll -246px 0 transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -246px 0 transparent;
 	height: 25px;
 	width: 25px;
 	float: left;
@@ -2786,7 +2786,7 @@ div#outer_top_header {
 }
 
 #hbtn4:hover div {
-	background: url("../images/allicons.png") no-repeat scroll -246px -30px transparent!important;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -246px -30px transparent!important;
 	height: 25px;
 	width: 25px;
 	float: left;
@@ -2795,27 +2795,27 @@ div#outer_top_header {
 }
 
 #hbtn5 {
-	background: url("../images/allicons.png") no-repeat scroll -393px 2px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -393px 2px transparent;
 	width: 25px;
 	height: 33px
 }
 
 #hbtn5:hover {
-	background: url("../images/allicons.png") no-repeat scroll -393px -28px transparent
+	background: url("../../lib/images/allicons.png") no-repeat scroll -393px -28px transparent
 }
 
 #hbtn6 {
-	background: url("../images/allicons.png") no-repeat scroll -62px 2px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -62px 2px transparent;
 	width: 25px;
 	height: 33px
 }
 
 #hbtn6:hover {
-	background: url("../images/allicons.png") no-repeat scroll -62px -28px transparent
+	background: url("../../lib/images/allicons.png") no-repeat scroll -62px -28px transparent
 }
 
 #hbtn7 div {
-	background: url("../images/allicons.png") no-repeat scroll -157px -32px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -157px -32px transparent;
 	height: 25px;
 	width: 25px;
 	float: left;
@@ -2824,7 +2824,7 @@ div#outer_top_header {
 }
 
 #hbtn8 div {
-	background: url("../images/allicons.png") no-repeat scroll -125px -32px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -125px -32px transparent;
 	height: 25px;
 	width: 25px;
 	float: left;
@@ -2861,24 +2861,24 @@ div#outer_top_header {
 }
 
 #ddlSettings div {
-	background: url("../images/allicons.png") no-repeat scroll -576px -2px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -576px -2px transparent;
 	width: 32px;
 	height: 22px
 }
 
 #ddlSettings:hover div {
-	background: url("../images/allicons.png") no-repeat scroll -576px -34px transparent
+	background: url("../../lib/images/allicons.png") no-repeat scroll -576px -34px transparent
 }
 
 #ddlWallets div {
-	background: url("../images/allicons.png") no-repeat scroll -424px -3px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -424px -3px transparent;
 	width: 25px;
 	height: 22px;
 	margin-left: -8px
 }
 
 #ddlWallets:hover div {
-	background: url("../images/allicons.png") no-repeat scroll -424px -34px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -424px -34px transparent;
 	width: 25px;
 	height: 22px;
 	margin-left: -8px
@@ -4140,7 +4140,7 @@ div#marquee {
 }
 
 .cboxClose {
-	background: url("../images/allicons.png") no-repeat scroll -599px 10px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -599px 10px transparent;
 	width: 30px;
 	height: 35px;
 	display: block
@@ -4489,7 +4489,7 @@ a.WelcomeBox.last {
 }
 
 #navMain td a.MenuImageHome {
-	background: url("../images/allicons.png") no-repeat scroll -456px -29px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -456px -29px transparent;
 	margin-left: auto;
 	margin-right: auto;
 	width: 28px;
@@ -4503,7 +4503,7 @@ a.WelcomeBox.last {
 }
 
 #navMain td a.MenuImageMobile {
-	background: url("../images/allicons.png") no-repeat scroll -486px -27px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -486px -27px transparent;
 	margin-left: auto;
 	margin-right: auto;
 	width: 28px;
