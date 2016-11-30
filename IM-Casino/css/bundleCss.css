@@ -3040,6 +3040,10 @@ div#outer_top_header {
 	margin-top: -2px
 }
 
+#login input{
+	height:28px;
+}
+
 #login .button {
 	background: url("../lib/images/btn_login_.gif") no-repeat;
 	background-position: 0 3px;

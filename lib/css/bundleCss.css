@@ -147,12 +147,12 @@ body .ui-tooltip { border-width: 2px; border-color: rgb(170, 170, 170); }
 .ui-widget .ui-widget { font-size: 1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-size: 1em; }
 .ui-widget-content { border: 1px solid rgb(66, 151, 215); background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(34, 34, 34); }
-.ui-widget-header { border: 1px solid rgb(66, 151, 215); background: rgb(204, 204, 204) url("ui-bg_gloss-wave_55_0b81da_500x100.png") repeat-x scroll 50% 50%; color: rgb(255, 255, 255); font-weight: 700; }
+.ui-widget-header { border: 1px solid rgb(66, 151, 215); background: rgb(204, 204, 204) url("../images/ui-bg_gloss-wave_55_0b81da_500x100.png") repeat-x scroll 50% 50%; color: rgb(255, 255, 255); font-weight: 700; }
 .ui-widget-content a, .ui-widget-header a { color: rgb(34, 34, 34); }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid rgb(197, 219, 236); background: rgb(223, 239, 252) none repeat scroll 0% 0%; font-weight: 400; color: rgb(85, 85, 85); }
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: rgb(85, 85, 85); text-decoration: none; }
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid rgb(121, 183, 231); background: rgb(208, 229, 245) url("ui-bg_glass_75_d0e5f5_1x400.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid rgb(121, 183, 231); background: rgb(245, 248, 249) url("ui-bg_inset-hard_100_f5f8f9_1x100.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid rgb(121, 183, 231); background: rgb(208, 229, 245) url("../images/ui-bg_glass_75_d0e5f5_1x400.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid rgb(121, 183, 231); background: rgb(245, 248, 249) url("../images/ui-bg_inset-hard_100_f5f8f9_1x100.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
 .ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: rgb(29, 89, 135); text-decoration: none; }
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight { border: 1px solid rgb(252, 239, 161); color: rgb(54, 54, 54); }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a { color: rgb(54, 54, 54); }
@@ -163,9 +163,9 @@ body .ui-tooltip { border-width: 2px; border-color: rgb(170, 170, 170); }
 .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a, .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: rgb(205, 10, 10); }
 .ui-state-disabled .ui-icon {  }
 .ui-icon { width: 16px; height: 16px; }
-.ui-widget-header .ui-icon { background-image: url("ui-icons_888888_256x240.png"); }
-.ui-state-highlight .ui-icon { background-image: url("ui-icons_064792_256x240.png"); }
-.ui-state-error .ui-icon, .ui-state-error-text .ui-icon { background-image: url("ui-icons_cd0a0a_256x240.png"); }
+.ui-widget-header .ui-icon { background-image: url("../images/ui-icons_888888_256x240.png"); }
+.ui-state-highlight .ui-icon { background-image: url("../images/ui-icons_064792_256x240.png"); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon { background-image: url("../images/ui-icons_cd0a0a_256x240.png"); }
 .ui-icon-blank { background-position: 16px 16px; }
 .ui-icon-carat-1-n { background-position: 0px 0px; }
 .ui-icon-carat-1-ne { background-position: -16px 0px; }
@@ -365,7 +365,7 @@ select { -moz-appearance: none; border: 1px solid; box-shadow: 0px 1px 3px rgba(
 .lang { display: inline; float: right; position: relative; top: 17px; width: 114px; }
 #arrow { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; vertical-align: middle; width: 0px; top: 13px; float: right; right: 4px; position: absolute; cursor: pointer; }
 #arrow2 { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; position: relative; vertical-align: middle; width: 0px; margin-left: 2px; cursor: pointer; top: 2px; }
-.blackArrow_right { background: transparent url("Arrow_allicons.png") no-repeat scroll -107px -23px; width: 26px; height: 31px; display: block; float: right; }
+.blackArrow_right { background: transparent url("images/Arrow_allicons.png") no-repeat scroll -107px -23px; width: 26px; height: 31px; display: block; float: right; }
 #target a { width: 113px; height: 34px; margin-top: -7px; }
 .FlagSelector { width: 40px; height: 20px; margin: 0px; float: right; padding: 0px; }
 .FlagOption { width: 34px; height: 16px; margin-left: 5px; margin-bottom: 5px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); border-radius: 3px; background: rgb(110, 110, 110) none repeat scroll 0% 0%; }
@@ -401,8 +401,8 @@ p { padding-bottom: 18px; }
 .but_reg01 { width: 307px; float: right; height: 80px; padding-right: 202px; padding-top: 19px; }
 .but_reg02 { width: 419px; float: right; height: 80px; padding-left: 12px; }
 #slider .slider-nav a { display: block; width: 20px; height: 49px; font-size: 0px; line-height: 0; text-indent: -4000px; position: absolute; top: 129px; }
-#slider .slider-nav a.prev { left: 0px; background: transparent url("button-prev.png") no-repeat scroll 0% 0%; }
-#slider .slider-nav a.next { right: 0px; background: transparent url("button-next.png") no-repeat scroll 0% 0%; }
+#slider .slider-nav a.prev { left: 0px; background: transparent url("images/button-prev.png") no-repeat scroll 0% 0%; }
+#slider .slider-nav a.next { right: 0px; background: transparent url("images/button-next.png") no-repeat scroll 0% 0%; }
 #slider-holder { height: 460px; }
 #slider-holder .jcarousel-clip { height: 460px; width: 960px; position: relative; overflow: hidden; }
 #slider-holder .slide-image { float: left; display: inline; }

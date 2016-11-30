@@ -1,0 +1,138 @@
+/* Code tidied up by ScrapBook */
+#slides { width: 960px; position: relative; float: left; z-index: 10; height: 400px; cursor: pointer; background-color: white; opacity: 0.01; }
+#slides .next, #slides .prev { height: 71px; left: 15px; margin-left: -10px; position: absolute; top: 145px; width: 42px; z-index: 101; display: none; }
+#slides .next { left: 920px; }
+.slides_container { width: 960px; height: 467px; overflow: hidden; position: relative; }
+.slides_container a { width: 960px; height: 400px; display: block; }
+.slides_container a img { display: block; }
+.cols .col { float: left; margin-right: 25px; margin-left: 11px; }
+.cols .middle { float: left; }
+.cols .last { float: right; margin-right: 14px; }
+.imgTitle { background-position: 0px 0px; padding: 8px 0px 0px; height: 75px; width: 295px; }
+.three-cols .imgHomeSprites { width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.three-cols .imgHomeSprites:hover { background-position: 0px -265px; }
+.three-cols .imgDescHover { background-position: 0px 0px; height: 152px; width: 295px; }
+.three-cols .imgDescHover:hover { background-position: 0px -181px; }
+.three-cols .imgTitleDeposit { background-position: 0px 0px; padding: 8px 0px 0px; height: 75px; width: 295px; }
+.three-cols .imgTitleDeposit:hover { background-position: 0px -264px; }
+.last .display { display: inline-block ! important; }
+.three-cols #imgHomeCasino { background-image: url("casino1.jpg"); }
+.three-cols #imgHomeCasinoId { background-image: url("sportsbook.jpg"); }
+.three-cols #imgHomeCasinoTh { background-image: url("sportsbook_001.jpg"); }
+.three-cols #imgHomeCasinoVn { background-image: url("sportsbook_002.jpg"); }
+.three-cols #imgHomeCasinoCn { background-image: url("betfair-banner.jpg"); }
+.three-cols #imgHomeKoreaLiveCasino { background-image: url("livecasino.jpg"); }
+.three-cols #imgHomeSportBooks { background-image: url("sportsbook_003.jpg"); }
+.three-cols #imgHomeSportBooksId { background-image: url("casino1_001.jpg"); }
+.three-cols #imgHomeSportBooksTh { background-image: url("casino1_002.jpg"); }
+.three-cols #imgHomeSportBooksVn { background-image: url("casino1_003.jpg"); }
+.three-cols #imgHomeSportBooksCn { background-image: url("slots-banner-AG.jpg"); }
+.three-cols #imgHomeSportBooksKr { background-image: url("sportsbook_004.jpg"); }
+.three-cols #ImgHomeRegistrationTitle { background-image: url("button_register_en.png"); }
+.three-cols #ImgHomeRegistrationTitleId { background-image: url("button_register_id1.png"); }
+.three-cols #ImgHomeRegistrationTitleTh { background-image: url("button_register_th1.png"); }
+.three-cols #ImgHomeRegistrationTitleVn { background-image: url("button_register_vn1.png"); }
+.three-cols #ImgHomeRegistrationTitleCn { background-image: url("button_register_cn1-v3.png"); }
+.three-cols #ImgHomeRegistrationTitleKr { background-image: url("button_register_kr.png"); }
+.three-cols #imgHomeKoreaRegister { background-image: url("registration.jpg"); }
+.three-cols #ImgHomeRegistrationDesc { background-image: url("rewards_en.png"); }
+.three-cols #ImgHomeRegistrationDescId { background-image: url("rewards_id.png"); }
+.three-cols #ImgHomeRegistrationDescTh { background-image: url("rewards_th.jpg"); }
+.three-cols #ImgHomeRegistrationDescVn { background-image: url("rewards_vn.jpg"); }
+.three-cols #ImgHomeRegistrationDescCn { background-image: url("bliss_banner-v2.png"); }
+.three-cols #ImgHomeRegistrationDescKr { background-image: url("rewards_kr.png"); }
+.three-cols #imgHomeDeposit { background-image: url("rewards-en-after.png"); }
+.three-cols #imgHomeDepositId { background-image: url("rewards-id-after1.png"); }
+.three-cols #imgHomeDepositTh { background-image: url("rewards-th-after.png"); }
+.three-cols #imgHomeDepositVn { background-image: url("rewards-vn-after1.png"); }
+.three-cols #imgHomeDepositCn { background-image: url("rewards-cn-after1.png"); }
+.three-cols #imgHomeDepositKr { background-image: url("rewards-kr-after.png"); }
+.three-cols #ImgHomeDepositDesc { background-image: url("rewards_en1.png"); }
+.three-cols #ImgHomeDepositDescId { background-image: url("rewards_id1.png"); }
+.three-cols #ImgHomeDepositDescTh { background-image: url("rewards_th.jpg"); }
+.three-cols #ImgHomeDepositDescVn { background-image: url("rewards_vn1.png"); }
+.three-cols #ImgHomeDepositDescCn { background-image: url("bliss_banner.png"); }
+.three-cols #ImgHomeDepositDescKr { background-image: url("rewards_kr.png"); }
+.three-cols #ImgHomeRegistrationJP { background-image: url("minibanner1.jpg"); }
+.three-cols #imgHomeSportBooksJP { background-image: url("minibanner2.jpg"); }
+.three-cols #ImgHomeDepositDescJP { background-image: url("minibanner3.jpg"); }
+.three-cols #ImgHomeRegistrationEN { background-image: url("minibanner1_after.jpg"); }
+.three-cols #ImgHomeDepositDescEN { background-image: url("minibanner2_after.jpg"); }
+.three-cols #imgHomeSportBooksEN { background-image: url("minibanner3_after.jpg"); }
+body {  }
+#contentContainer { width: 934px; margin: 0px auto; position: relative; z-index: 99; }
+#maximage { display: none; z-index: -10; position: absolute; top: 0px; height: 100%; }
+#maximage1 { display: none; }
+#maximage * { background-repeat: no-repeat; background-position: center top; }
+#navTable, .lang-ja-JP #navTable { z-index: 99; border-spacing: 0px; }
+#navTable td.activeSlide, #navTable td.activeSlide:hover, .lang-ja-JP #navTable td.activeSlide, .lang-ja-JP #navTable td.activeSlide:hover { background-color: rgb(37, 170, 225); background-size: 100% 100%; z-index: 99; opacity: 1; }
+#navTable td:hover, .lang-ja-JP #navTable td:hover { background-color: rgb(171, 170, 170); background-size: 100% 100%; z-index: 99; opacity: 1; }
+#navTable td a, .lang-ja-JP #navTable td a { color: white; line-height: 30px; opacity: 1; }
+#navTable td, .lang-ja-JP #navTable td { margin: 0px auto; text-align: center; z-index: 99; width: 933px; max-width: 933px; cursor: pointer; overflow: hidden; border-left: 2px solid gray; }
+.lang-ja-JP #navTable td { margin: 0px auto; text-align: center; z-index: 99; width: 312px; max-width: 324px; cursor: pointer; overflow: hidden; border-left: 2px solid gray; }
+#navTable tr, .lang-ja-JP #navTable tr { display: block; margin-left: -4px; width: 937px; background-color: rgba(100, 95, 95, 0.7); }
+#cycle-nav { display: block; height: 40px; margin-top: -294px; position: absolute; }
+#arrow_left, #arrow_right { text-decoration: none; }
+hr { clear: both; }
+p { margin-bottom: 20px; }
+.largeTxt { font-size: 30px; }
+#newnavDiv { margin: 0px auto; width: 1067px; position: relative; }
+#cursorDiv { margin-top: -505px; position: absolute; }
+#cursorDiv .prev, #cursorDiv .next { z-index: 99; cursor: pointer; }
+#cursorDiv .prev { background: transparent url("Arrow_allicons.png") no-repeat scroll -4px -2px; width: 54px; height: 75px; display: block; float: left; }
+#cursorDiv .next { margin-left: 1017px; background: transparent url("Arrow_allicons.png") no-repeat scroll -4px -86px; width: 54px; height: 75px; display: block; }
+.imgHomeCasinoBigBanner:hover { background-position: 0px -265px; margin-top: -226px; height: 470px; position: relative; z-index: 200; }
+#ImgHomeRegistrationTitleCn, #ImgHomeRegistrationTitleId, #ImgHomeRegistrationTitleTh, #ImgHomeRegistrationTitleVn { background-position: 0px 83px; position: absolute; }
+.imgBanner1Hover { background-position: 0px 0px ! important; height: 305px; margin-top: -226px; z-index: 5000; }
+.topBigBanner { background-position: 0px 83px; }
+.topBigBanner:hover { background-position: 0px 0px ! important; height: 305px ! important; margin-top: -226px; z-index: 5000; }
+.miniBanner1:hover { background-position: 0px -181px ! important; }
+.miniBanner2:hover { background-position: 0px -265px ! important; }
+.miniBanner3:hover { background-position: 0px -265px ! important; }
+.bigMiniBanner:hover { margin-top: -226px; height: 470px ! important; position: relative; z-index: 200; background-position: 0px -265px ! important; }
+#topDiv { height: 83px; }
+#topDiv, #firstDiv, #middleDiv, #lastDiv, #firstBannerJP, #secondBannerJP, #thirdBannerJP, #japan_email { display: none; }
+.fBannerJP { background-image: url("minibanner1.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.fBannerEN { background-image: url("minibanner1_after.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.sBannerJP { background-image: url("minibanner3.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.sBannerEN { background-image: url("minibanner2_after.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.tBannerJP { background-image: url("minibanner2.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.tBannerEN { background-image: url("minibanner3_after.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.topBanneren, .topBannercn, .topBannerid, .topBannerth, .topBannervn, .topBannerko { padding: 8px 0px 0px; height: 75px; width: 295px; position: absolute; background-position: 0px 83px; }
+.topBanneren { background-image: url("button_registerEN.png"); }
+.topBannercn { background-image: url("button_registerCN.png"); background-position: 0px 83px; }
+.topBannerid { background-image: url("button_registerID.png"); background-position: 0px 83px; }
+.topBannerth { background-image: url("button_registerTH.png"); background-position: 0px 83px; }
+.topBannervn { background-image: url("button_registerVN.png"); background-position: 0px 83px; }
+.topBannerko { background-image: url("button_registerKR.png"); }
+.topBannercn:hover { background-position: 0px 0px ! important; height: 305px ! important; margin-top: -226px; z-index: 5000; }
+.topBannerid:hover { background-position: 0px 0px ! important; height: 305px ! important; margin-top: -226px; z-index: 5000; }
+.topBannerth:hover { background-position: 0px 0px ! important; height: 305px ! important; margin-top: -226px; z-index: 5000; }
+.topBannervn:hover { background-position: 0px 0px ! important; height: 305px ! important; margin-top: -226px; z-index: 5000; }
+.firstBanneren { background-image: url("rewardsEN.png"); background-position: 0px 0px; height: 152px; width: 295px; }
+.firstBannercn { background-image: url("rewardsCN.png"); background-position: 0px 0px; height: 152px; width: 295px; }
+.firstBannerid { background-image: url("rewardsID.png"); background-position: 0px 0px; height: 152px; width: 295px; }
+.firstBannerth { background-image: url("rewardsTH.png"); background-position: 0px 0px; height: 152px; width: 295px; }
+.firstBannervn { background-image: url("rewardsVN.png"); background-position: 0px 0px; height: 152px; width: 295px; }
+.firstBannerko { background-image: url("rewardsKR.png"); background-position: 0px 0px; height: 152px; width: 295px; }
+.firstBanneren:hover, .firstBannercn:hover, .firstBannerid:hover, .firstBannerth:hover, .firstBannervn:hover, .firstBannerko:hover { background-position: 0px -181px; }
+.secondBanneren { background-image: url("middleEN.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.secondBannercn { background-image: url("middleCN.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.secondBannerid { background-image: url("middleID.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.secondBannerth { background-image: url("middleTH.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.secondBannervn { background-image: url("middleVN.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.secondBannerko { background-image: url("middleKR.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.secondBanneren:hover, .secondBannercn:hover, .secondBannerid:hover, .secondBannerth:hover, .secondBannervn:hover, .secondBannerko:hover, .thirdBanneren:hover, .thirdBannercn:hover, .thirdBannerid:hover, .thirdBannerth:hover, .thirdBannervn:hover, .thirdBannerko:hover { background-position: 0px -265px; }
+.thirdBanneren { background-image: url("lastEN.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.thirdBannercn { background-image: url("lastCN.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.thirdBannerid { background-image: url("lastID.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.thirdBannerth { background-image: url("lastTH.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.thirdBannervn { background-image: url("lastVN.jpg"); width: 295px; height: 245px; background-position: 0px 0px; cursor: pointer; }
+.thirdBannerko { background-image: url("lastKR.jpg"); background-position: 0px 0px; padding: 8px 0px 0px; height: 245px; width: 295px; cursor: pointer; }
+.topBannerAfterLoginen { background-image: url("rewards-en-after1.png"); background-position: 0px 0px; padding: 8px 0px 0px; height: 75px; width: 295px; }
+.topBannerAfterLogincn { background-image: url("rewards-cn-after1.png"); background-position: 0px 0px; padding: 8px 0px 0px; height: 75px; width: 295px; }
+.topBannerAfterLoginid { background-image: url("rewards-id-after1.png"); background-position: 0px 0px; padding: 8px 0px 0px; height: 75px; width: 295px; }
+.topBannerAfterLoginth { background-image: url("rewards-th-after.png"); background-position: 0px 0px; padding: 8px 0px 0px; height: 75px; width: 295px; }
+.topBannerAfterLoginvn { background-image: url("rewards-vn-after1.png"); background-position: 0px 0px; padding: 8px 0px 0px; height: 75px; width: 295px; }
+.topBannerAfterLoginko { background-image: url("rewards-kr-after.png"); background-position: 0px 0px ! important; padding: 8px 0px 0px; height: 75px; width: 295px; }
+.firstDiv { padding-top: 83px; }

@@ -659,7 +659,7 @@ table#tblGame {
 
 
 .jb_04_back > a {
-    background: url("button-animation.gif") no-repeat scroll -624px 0;
+    background: url("../images/button-animation.gif") no-repeat scroll -624px 0;
     float: left;
     height: 30px;
     width: 172px;
@@ -674,11 +674,11 @@ table#tblGame {
 }
 
 .jb_04_back:hover > a {
-    background: url("button-animation.gif") -624px -38px no-repeat;
+    background: url("../images/button-animation.gif") -624px -38px no-repeat;
 }
 
 .jb_04_PlayNow {
-    background: url(/images/CasinoGames/button-animation.gif) -202px 0 no-repeat;
+    background: url(../images/button-animation.gif) -202px 0 no-repeat;
     float: left;
     height: 10px;
     width: 126px;
@@ -694,7 +694,7 @@ table#tblGame {
 }
 
     .jb_04_PlayNow:hover {
-        background: url(/images/CasinoGames/button-animation.gif) -202px -38px no-repeat;
+        background: url(../images/button-animation.gif) -202px -38px no-repeat;
     }
 
 .playnow > a {
@@ -977,7 +977,7 @@ table#tblGame {
 }
 
 .play2 > .btnPTRealPlay {
-    background: url("button-animation-im.png") -20px -20px no-repeat scroll;
+    background: url("../images/button-animation-im.png") -20px -20px no-repeat scroll;
     float: left;
     height: 33px;
     width: 256px;
@@ -993,12 +993,12 @@ table#tblGame {
 }
 
     .play2 > .btnPTRealPlay:hover {
-        background: url("button-animation-im.png") -305px -20px no-repeat;
+        background: url("../images/button-animation-im.png") -305px -20px no-repeat;
     }
     
 .play2 > .btnPTDemoPlay {
     color: #25AAE1;
-    background: url("button-animation-im.png") -20px -74px no-repeat scroll;
+    background: url("../images/button-animation-im.png") -20px -74px no-repeat scroll;
     float: left;
     height: 33px;
     width: 230px;
@@ -1011,7 +1011,7 @@ table#tblGame {
 }
 
 .play2 > .btnPTDemoPlay:hover {
-    background: url("button-animation-im.png") -305px -74px no-repeat;
+    background: url("../images/button-animation-im.png") -305px -74px no-repeat;
 }
 
 .text2 {
@@ -1025,7 +1025,7 @@ table#tblGame {
 
 
 .play3 > .btnPTRealPlay {
-    background: url("button-animation-im.png") no-repeat scroll -20px -121px;
+    background: url("../images/button-animation-im.png") no-repeat scroll -20px -121px;
     float: left;
     height: 25px;
     width: 174px;
@@ -1040,13 +1040,13 @@ table#tblGame {
 }
 
     .play3 > .btnPTRealPlay:hover {
-        background: url("button-animation-im.png") -305px -121px no-repeat;
+        background: url("../images/button-animation-im.png") -305px -121px no-repeat;
     }
     
 .play3 > .btnPTDemoPlay {
     color: #25AAE1;
     margin-top: 10px;
-    background: url(button-animation-im.png) -20px -161px no-repeat;
+    background: url(../images/button-animation-im.png) -20px -161px no-repeat;
     float: left;
     height: 24px;
     width: 146px;
@@ -1060,7 +1060,7 @@ table#tblGame {
 }
 
     .play3 > .btnPTDemoPlay:hover {
-        background: url(button-animation-im.png) -305px -161px no-repeat;
+        background: url(../images/button-animation-im.png) -305px -161px no-repeat;
     }
 
 
@@ -1078,7 +1078,7 @@ table#tblGame {
 }
 
 .play4 > .btnPTRealPlay {
-    background: url("button-animation-im.png") no-repeat scroll -20px -121px;
+    background: url("../images/button-animation-im.png") no-repeat scroll -20px -121px;
     height: 23px;
     width: 174px;
     padding-top: 9px;
@@ -1091,13 +1091,13 @@ table#tblGame {
 }
 
     .play4 > .btnPTRealPlay:hover {
-        background: url("button-animation-im.png") -305px -121px no-repeat;
+        background: url("../images/button-animation-im.png") -305px -121px no-repeat;
     }
     
 .play4 > .btnPTDemoPlay {
     color: #25AAE1;
     margin-top: 10px;
-    background: url(button-animation-im.png) -20px -161px no-repeat;
+    background: url(../images/button-animation-im.png) -20px -161px no-repeat;
     float: left;
     height: 22px;
     width: 146px;
@@ -1111,7 +1111,7 @@ table#tblGame {
 }
 
     .play4 > .btnPTDemoPlay:hover {
-        background: url(button-animation-im.png) -305px -161px no-repeat;
+        background: url(../images/button-animation-im.png) -305px -161px no-repeat;
     }
 
 .text4 {
@@ -1124,7 +1124,7 @@ table#tblGame {
 
 
 .playhot {
-    background: url(button-animation.gif) -202px -4px no-repeat;
+    background: url(../images/button-animation.gif) -202px -4px no-repeat;
     margin-right: 0;
     float: left;
     color: white;
@@ -1137,7 +1137,7 @@ table#tblGame {
 }
 
     .playhot:hover {
-        background: url(button-animation.gif) -202px -42px no-repeat;
+        background: url(../images/button-animation.gif) -202px -42px no-repeat;
         color: White;
     }
 
@@ -1145,7 +1145,7 @@ table#tblGame {
 
 
 .play5 > .btnPTRealPlay {
-    background: url("button-animation-im.png") -20px -20px no-repeat scroll;
+    background: url("../images/button-animation-im.png") -20px -20px no-repeat scroll;
     float: left;
     height: 33px;
     width: 256px;
@@ -1159,12 +1159,12 @@ table#tblGame {
 }
 
     .play5 > .btnPTRealPlay:hover {
-        background: url("button-animation-im.png") -305px -20px no-repeat;
+        background: url("../images/button-animation-im.png") -305px -20px no-repeat;
     }
     
 .play5 > .btnPTDemoPlay {
     color: #25AAE1;
-    background: url("button-animation-im.png") -20px -74px no-repeat scroll;
+    background: url("../images/button-animation-im.png") -20px -74px no-repeat scroll;
     float: left;
     height: 33px;
     width: 230px;
@@ -1177,7 +1177,7 @@ table#tblGame {
 }
 
     .play5 > .btnPTDemoPlay:hover {
-        background: url("button-animation-im.png") -305px -74px no-repeat;
+        background: url("../images/button-animation-im.png") -305px -74px no-repeat;
     }
 
 .text5 {
