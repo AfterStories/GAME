@@ -1,0 +1,75 @@
+
+.Btn { text-align: center; cursor: pointer; }
+.Btn_floatLeft { float: left ! important; }
+.Btn_floatLeft_special { float: left ! important; }
+.Btn_med_width { width: 380px; }
+.Btn_long_width { width: 465px; }
+.pos_bankDefault { float: right; margin-left: 5px; margin-top: -6px; }
+.margin0 { margin-top: 0px ! important; font-size: 13px; }
+@media not all {
+  .pos_bankDefault { float: right; margin-left: 5px; margin-top: -30px; }
+}
+.skrill1TapBtn { background: transparent url("../images/20121009_Skrill-1-tap-TM-RGB-25x128.gif") no-repeat scroll 0% 0%; border: 0px none; color: rgb(255, 255, 255); display: block; width: 128px; height: 25px; margin: 0px auto; padding: 8px; vertical-align: bottom; position: relative; top: 5px; }
+.skrill1TapBtn:hover { background: transparent url("../images/20121009_Skrill-1-tap-TM-RGB-grey-25x128.gif") no-repeat scroll 0% 0%; border: 0px none; color: rgb(255, 255, 255); display: block; width: 128px; height: 25px; margin: 0px auto; padding: 8px; vertical-align: bottom; }
+.skrill_tooltip { width: 433px; padding: 6px 7px; position: absolute; background-color: rgb(242, 241, 241); top: 36px; font-weight: bold; border: 1px solid rgb(219, 219, 219); display: none; }
+.greenMedBtn { background: transparent url("../../lib/images/button-anmation-green-short.gif") no-repeat scroll 0px 0px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 121px; margin: 0px auto; padding: 8px; }
+.greenMedBtn:hover { background: transparent url("../../lib/images/button-anmation-green-short.gif") no-repeat scroll 0px -38px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 121px; margin: 0px auto; padding: 8px; }
+.blueMedBtn { 
+	background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -202px -1px; 
+	border: 0px none; color: rgb(255, 255, 255); 
+	display: block; 
+	width: 112px; 
+	margin: 0px auto; 
+	padding: 8px; 
+}
+.blueMedBtn:hover { 
+	background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -202px -39px; 
+	border: 0px none; 
+	color: rgb(255, 255, 255); 
+	display: block;
+	width: 112px;
+	margin: 0px auto; padding: 8px; 
+}
+
+.blueMedBtn_USD { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -202px -1px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 112px; margin: 0px auto; padding: 8px; }
+.whiteMedBtn { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -330px -1px; border: 0px none; color: rgb(37, 170, 226); display: block; width: 112px; margin: 0px auto; padding: 8px; }
+.whiteMedBtn:hover { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -330px -39px; border: 0px none; color: rgb(37, 170, 226); display: block; width: 112px; margin: 0px auto; padding: 8px; }
+.zPayblueMedBtn { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -202px 0px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 112px; margin: 0px auto; padding: 8px; }
+.zPayblueMedBtn:hover { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -202px -38px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 112px; margin: 0px auto; padding: 8px; }
+.zPayblueLongBtn { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -459px 0px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 149px; margin: 0px auto; padding: 8px; }
+.zPayblueLongBtn:hover { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -459px -38px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 149px; margin: 0px auto; padding: 8px; }
+.blueLongBtn { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -460px -1px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 150px; margin: 0px auto; padding: 8px; }
+.blueLongBtn:hover { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -460px -39px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 150px; margin: 0px auto; padding: 8px; }
+.whiteLongBtn { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -631px -1px; border: 0px none; color: rgb(37, 170, 226); display: block; width: 150px; margin: 0px auto; padding: 8px; }
+.whiteLongBtn:hover { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -631px -39px; border: 0px none; color: rgb(37, 170, 226); display: block; width: 150px; margin: 0px auto; padding: 8px; }
+.liveChatMedBtn { background: transparent url("../../lib/images/button-anmation-livechat.gif") no-repeat scroll 0px 0px; border: 0px none; color: rgb(0, 0, 0); display: block; float: right; font-size: 11px; margin-top: 11px; text-transform: uppercase; width: 165px; padding: 9px 9px 9px 13px; text-align: center; }
+.liveChatMedBtn:hover { background: transparent url("../../lib/images/button-anmation-livechat.gif") no-repeat scroll 0px -38px; border: 0px none; color: rgb(0, 0, 0); display: block; float: right; font-size: 11px; margin-top: 11px; text-transform: uppercase; width: 165px; padding: 9px 9px 9px 13px; }
+.blueShortBtn { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll 0px 0px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 103px; margin: 0px auto; padding: 0px 0px 0px 8px; height: 35px; }
+.blueShortBtn:hover { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll 0px -38px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 103px; margin: 0px auto; padding: 0px 0px 0px 8px; height: 35px; }
+.whiteShortBtn { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -97px 0px; border: 0px none; color: rgb(37, 170, 226); display: block; width: 103px; margin: 0px auto; padding: 2px 0px 0px 8px; height: 35px; }
+.whiteShortBtn:hover { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -97px -38px; border: 0px none; color: rgb(37, 170, 226); display: block; width: 103px; margin: 0px auto; padding: 2px 0px 0px 8px; height: 35px; }
+.regblueMedBtn { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -202px 2px; border: 0px none; color: rgb(255, 255, 255); display: block; margin-left: auto; margin-right: auto; width: 126px; }
+.regblueMedBtn:hover { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -202px -36px; border: 0px none; color: rgb(255, 255, 255); display: block; margin-left: auto; margin-right: auto; width: 126px; }
+.regwhiteMedBtn { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -331px 2px; border: 0px none; color: rgb(37, 170, 226); display: block; margin-left: auto; margin-right: auto; width: 126px; }
+.regwhiteMedBtn:hover { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll -331px -36px; border: 0px none; color: rgb(37, 170, 226); display: block; margin-left: auto; margin-right: auto; width: 126px; }
+.searchLoadingImg { background-color: rgb(237, 237, 237); display: none; margin-top: -45px; opacity: 0.6; position: absolute; width: 737px; z-index: 9999; }
+.searchLoadingImg img { left: 50%; position: absolute; top: 50%; }
+#Button1 { height: 27px; width: 70px; }
+.blueCopyShortBtn { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll 0px -2px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 97px; margin: 0px auto; }
+.blueCopyShortBtn:hover { background: transparent url("../../lib/images/button-animation.gif") no-repeat scroll 0px -40px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 97px; margin: 0px auto; }
+.blueCopyShortBtn > a { color: rgb(255, 255, 255); margin-left: 12px; }
+embed { height: 26px; margin-left: -35px; margin-top: -29px; width: 88px; }
+.Btn_Submit { padding-right: 10px; width: 112px; margin-right: 5px; }
+.Btn_Cancel { border: 1px solid blue; float: right; }
+.id-IDkenoBtn { background: transparent url("../../lib/images/button-keno-sprite2.gif") no-repeat scroll 0px 0px; border: 0px none; color: rgb(255, 255, 255); display: block; font-size: 16px; width: 173px; height: 10px; margin: 0px auto; padding: 15px 23px 44px; font-weight: bold; }
+.id-IDkenoBtn:hover { background: transparent url("../../lib/images/button-keno-sprite2.gif") no-repeat scroll 0px -61px; }
+.en-USkenoBtn, .zh-CNkenoBtn, .vi-VNkenoBtn, .th-THkenoBtn, .ko-KRkenoBtn { background: transparent url("../../lib/images/button-keno-sprite2.gif") no-repeat scroll 0px 0px; border: 0px none; color: rgb(255, 255, 255); display: block; font-size: 16px; width: 173px; margin: 0px auto; padding: 23px; font-weight: bold; }
+.en-USkenoBtn:hover, .zh-CNkenoBtn:hover, .vi-VNkenoBtn:hover, .th-THkenoBtn:hover, .ko-KRkenoBtn:hover { background: transparent url("../../lib/images/button-keno-sprite2.gif") no-repeat scroll 0px -60px; }
+.btnKeno { display: block; margin-top: -11px; padding-left: 25px; width: 152px; padding-top: 9px; }
+#divVideoButtonContainer { width: 960px; position: relative; z-index: 80; }
+#divVideoButton { width: 47px; height: 47px; z-index: 80; position: absolute; top: 15px; left: 30px; }
+#imgKenoVideo { width: 47px; height: 47px; background-image: url("images/button-video.png"); float: left; }
+#imgKenoVideo:hover { background-image: url("images/button-video-r.png"); }
+.copyHeight { height: 33px; }
+.lnkCopy { vertical-align: sub; line-height: 32px; }
+.depositLB embed { margin-top: -8px; margin-left: -32px; }
