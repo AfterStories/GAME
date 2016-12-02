@@ -1,0 +1,124 @@
+/* Code tidied up by ScrapBook */
+body { font-size: 12px; color: rgb(49, 46, 46); margin: 0px; padding: 0px; }
+img { border: 0px none; }
+#container { width: 738px; background-color: rgb(249, 250, 250); margin: 0px auto; padding: 18px; }
+#header2 { padding-bottom: 10px; height: 58px; }
+#logout { float: right; }
+.termsTitle1 { margin-top: 10px; background-color: rgb(37, 170, 226); font-size: 24px; text-transform: uppercase; height: 43px; padding: 13px 0px 0px 15px; }
+.termsTitle1_VN_THCurrency_BC, .termsTitle1_VN_THCurrency_LB, .termsTitle1_VN_THCurrency_CC { background-color: rgb(37, 170, 226); font-size: 24px; text-transform: uppercase; height: 43px; padding: 13px 0px 0px 15px; margin-top: 10px; }
+.termsTitle2 { background-color: rgb(37, 170, 226); height: 28px; padding-top: 8px; margin-bottom: 3px; }
+.livechat { float: right; margin-right: 15px; }
+#leftcol { float: left; margin: 0px; padding: 0px; }
+#leftcol_content { width: 222px; border: 1px solid rgb(219, 219, 219); padding: 3px; }
+#DepositLimitInfo_VN_THCurrency_BC, #DepositLimitInfo_VN_THCurrency_LB, #DepositLimitInfo_VN_THCurrency_CC { width: 222px; border: 1px solid rgb(219, 219, 219); padding: 3px; margin-top: 10px; }
+.name_box { font-size: 15px; text-transform: uppercase; text-align: center; color: rgb(49, 46, 46); padding: 10px; }
+.name { font-weight: 700; color: rgb(37, 170, 225); }
+.items { margin-bottom: -18px; padding-bottom: 5px; padding-top: 5px; text-align: center; }
+span#AccountBalanceContent span:first-child .items { background-color: rgb(242, 241, 241); }
+span#AccountBalanceContent span:last-child .items { background-color: rgb(107, 107, 102); color: rgb(255, 255, 255); }
+.items_total { background-color: rgb(107, 107, 102); height: 17px; text-align: center; margin-top: 3px; margin-bottom: 3px; color: rgb(255, 255, 255); padding: 8px; }
+.acc_msg { font-weight: 700; margin-top: 30px; text-align: center; }
+#shadow2 { width: 172px; margin-left: auto; margin-right: auto; text-align: center; }
+#rightcol { width: 501px; min-height: 250px; float: right; position: relative; }
+.content { border: 1px solid rgb(219, 219, 219); min-height: 260px; font-size: 12px; padding: 5px 15px 15px; }
+.table1 { font-size: 13px; }
+.table2 { font-size: 13px; margin-left: 100px; }
+.table_sub1 { font-size: 12px; text-align: left; vertical-align: 0px; position: relative; }
+.red { color: red; vertical-align: 0px; }
+.black { color: rgb(0, 0, 0); font-size: 12px; line-height: 16px; }
+.signup_input { font-size: 13px; font-weight: 400; font-style: normal; text-decoration: none; width: 230px; min-height: 26px; border-radius: 0px; border: 1px solid rgb(204, 204, 204); color: rgb(108, 108, 108); line-height: 26px; }
+.signup_input2 { font-size: 13px; font-weight: 400; font-style: normal; text-decoration: none; background: transparent url("text_bg_s.png") no-repeat scroll 0% 0%; width: 139px; min-height: 28px; border: 1px solid rgb(204, 204, 204); padding-left: 8px; line-height: 34px; color: rgb(108, 108, 108); }
+.signup_input3 { font-weight: 400; font-style: normal; text-decoration: none; border: 1px solid rgb(204, 204, 204); color: rgb(108, 108, 108); }
+.signup_input4 { font-size: 13px; font-weight: 400; font-style: normal; text-decoration: none; width: 130px; min-height: 26px; border-radius: 0px; border: 1px solid rgb(204, 204, 204); color: rgb(108, 108, 108); line-height: 26px; }
+.signup_input5 { font-size: 12px; font-weight: 400; font-style: normal; text-decoration: none; width: 200px; min-height: 26px; border-radius: 0px; border: 1px solid rgb(204, 204, 204); color: black; line-height: 26px; }
+.history_nav { margin-top: 10px; margin-bottom: 10px; }
+.history_content { margin-top: 10px; margin-bottom: 5px; }
+.mGrid { width: 100%; border: 0px none; }
+.mGrid td { border: 1px solid rgb(183, 186, 190); color: rgb(0, 0, 0); font-size: 11px; height: 29px; margin-bottom: 3px; }
+.history_content_info { border: 1px solid rgb(183, 186, 190); color: rgb(0, 0, 0); height: 29px; text-align: center; margin-bottom: 3px; }
+#btm_navigation { float: right; height: 20px; width: 260px; }
+#btm_navigation ul { font-size: 13px; line-height: 20px; text-transform: capitalize; margin: 0px; padding: 0px; }
+#btm_navigation ul li { float: left; display: inline; list-style: outside none none; padding-right: 3px; border-right: 1px solid rgb(0, 0, 0); margin: 0px 2px; }
+#btm_navigation ul li a { float: left; display: inline; color: rgb(0, 0, 0); text-decoration: none; padding-left: 0px; }
+.btm_nav_selected { color: rgb(37, 170, 225); text-decoration: underline; }
+.fail { color: red; }
+.divider { background: transparent url("divider.gif") repeat-x scroll 0% 0%; width: 448px; height: 1px; margin: 15px 0px; }
+.clear { clear: both; }
+.ui-datepicker-trigger { position: absolute; cursor: pointer; }
+#navigation { position: relative; z-index: 100; margin: 0px; padding: 0px; }
+#navigation > table { height: 43px; text-align: center; width: 501px; }
+#navigation td { background-color: rgb(255, 250, 250); border: 1px solid rgb(218, 220, 219); }
+#navigation a { color: rgb(37, 170, 226); }
+.btnsIn3 { padding: 15px 35px; }
+.VNDbtnsIn3 { padding: 15px 30px; }
+.btnsIn2 { padding: 15px 65px; }
+.table3 { font-size: 12px; line-height: 33px; }
+.table4 { font-size: 13px; line-height: 20px; margin-left: 30px; margin-top: 20px; font-weight: bold; }
+.tableTitle { font-size: 13px; margin-top: 30px; }
+#bankLogo { text-align: center; }
+.ctrDate .ui-datepicker-trigger { cursor: pointer; position: absolute; }
+#ReceiptUpload { width: 82px; }
+label.error { color: red; font-size: 11px; }
+.content label.error { display: block; }
+#lblTransMsg label.error { display: block; }
+.table2 td { width: 17px; }
+#divMsg { margin: 10px 0px; text-align: center; }
+.msg_success { color: green; line-height: 25px; }
+.msg_failed { color: red; line-height: 25px; }
+.msg_success label.lblTransMsg { color: green; line-height: 25px; }
+.msg_failed label.lblTransMsg { color: red; line-height: 25px; }
+#divMsg span { font-weight: 700; font-size: 11px; }
+.items span, .fontsize12 { font-size: 12px; }
+.signup_input:hover, .signup_input:focus, .signup_input2:hover, .signup_input2:focus, .signup_input3:hover, .signup_input3:focus, .signup_input4:hover, .signup_input4:focus { border: 1px solid rgb(37, 170, 226); }
+.mGrid th, .history_content_head { background-color: rgb(107, 107, 102); color: rgb(255, 255, 255); height: 29px; text-align: center; margin-bottom: 3px; }
+#navigation td:hover, #navigation .active { background: transparent url("active_tab.jpg") repeat-x scroll 0px 0px; border-width: 3px 1px 1px; border-style: solid; border-color: rgb(37, 170, 225) rgb(218, 220, 219) rgb(255, 255, 255); }
+.hidVal, .hidBankCode { display: none; }
+.deposit_msgs { margin-bottom: 25px; }
+.paymentNoticeMsg { font-weight: bold; margin-top: 5px; }
+.btm_navigation, #gvResult table { float: right; }
+.tempPos { margin-left: 118px; margin-top: 20px; }
+.aspNetDisabled { cursor: auto; color: rgb(108, 108, 108); }
+.BalAmt { padding-right: 10px; text-align: right; }
+.sGrid td { height: 0px ! important; }
+select { border: 1px solid rgb(204, 204, 204); border-radius: 0px; }
+#gvResult table td { border: 0px none; padding-bottom: 0px; padding-left: 6px; padding-top: 0px; }
+.noFoundMsg { font-weight: 700; text-align: center; }
+.divTitle { color: rgb(255, 255, 255); float: left; font-size: 22px; margin-top: 6px; line-height: 22px; }
+.termsTitle2 > span { color: rgb(255, 255, 255); font-size: 14px; font-weight: 700; }
+.formEmail { font-size: 12px; margin: 10px 0px 0px 65px; }
+.formEmail > a { text-decoration: underline; }
+.rdbtns { margin-bottom: 20px; }
+.bgGrayWhite { background-color: rgb(107, 107, 102); color: rgb(255, 255, 255); }
+.DivSkrill, .DivIBanq { margin-top: 20px; }
+.skrillContent, .IBanqContent { font-size: 13px; }
+.IBanqContent { padding-top: 10px; }
+.inputError { min-height: 35px; vertical-align: middle; }
+.inputError img {  }
+.zclip object { width: 50px; height: 16px; padding: 6px 32px 6px 5px; margin: -18px 0px 0px -32px; }
+#dvTooltipHeader { background: transparent url("tooltip-header.png") no-repeat scroll 0px 0px; height: 50px; width: 350px; font-weight: bold; }
+#dvTooltipHeaderText { padding: 23px 0px 10px 30px; color: rgb(0, 0, 0); font-size: 22px; font-weight: bold; margin-left: 0px; }
+#dvTooltipContent { background: transparent url("tooltip-content.png") repeat scroll 0px 0px; min-height: 49px; width: 350px; margin-top: -1px; }
+#dvTooltipContentText { padding: 10px 0px 0px 30px; width: 295px; }
+#dvTooltipFooter { background: transparent url("tooltip-footer.png") no-repeat scroll 0px 0px; height: 30px; width: 350px; }
+#dvTooltipFooterText { padding: 5px 0px 0px 30px; color: white; }
+#dvTooltipFooterText a { color: white; }
+.popupTooltip { display: none; margin-top: 0px; position: absolute; min-height: 20px; width: 350px; margin-left: -390px; }
+.popup_tip { display: block; margin-top: 54px; margin-left: 16px; width: 200px; }
+.ContentText { padding-bottom: 10px; width: 280px; }
+#dvDdlBankType { float: left; }
+#dvImgPopup { float: left; vertical-align: middle; }
+#CouponWatermark { font-size: 9px; }
+#alipayTable { padding-left: 26px; padding-bottom: 15px; }
+#alipayTable table { border: 1px solid gray; width: 300px; font-weight: bold; }
+#alipayTable table td { padding: 2px; }
+.textbold { font-weight: bold; }
+.deposit_notification { height: 93%; width: 94%; position: absolute; z-index: 1; background-color: gray; opacity: 0.6; }
+.notification_title, .notification_info { width: 332px; }
+.notification_info { z-index: 2; display: block; border: 1px solid rgb(66, 151, 215); margin: 47px 0px 0px 70px; background-color: White; height: 143px; font-weight: 700; color: White; position: absolute; }
+.notification_title { background-color: rgb(37, 170, 226); height: 26px; color: rgb(85, 85, 85); }
+.notification_info > label { position: relative; left: 16px; top: 4px; display: inline-block; width: 298px; font-weight: bold; color: rgb(85, 85, 85); }
+.notification_button { height: 17px; position: absolute; right: 0px; bottom: 8px; cursor: pointer; font-weight: normal; }
+.notification_button > label { cursor: pointer; padding: 0px 0px 0px 30px; }
+#closeButton { display: block; height: 25px; width: 25px; float: right; cursor: pointer; margin: 3px 10px 0px 0px; background: transparent url("xwhite.png") no-repeat scroll center center; }
+#closeButton:hover { background: transparent url("xwhite_hover.png") no-repeat scroll center center; }
+.timepicker { width: 62.4px; font-size: 13px; min-height: 25px; padding-top: 3px; }

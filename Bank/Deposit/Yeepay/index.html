@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../../master.payment.css" rel="stylesheet" type="text/css">
+    <link href="../../master.bonuslisting.css" rel="stylesheet" type="text/css">
+    <link href="../../master.button.css" rel="stylesheet" type="text/css">
+    <script  src="../../jquery-1.12.2.min.js" type="text/javascript"> </script>
+    <script  src="../../master.payment.crawler.js" type="text/javascript"> </script>
+    <script  src="../../jquery.validate.js" type="text/javascript"> </script>
+
+    
+
+
+</head>
+<body topmargin="0" onload="parent.document.getElementById('tabContent').height = document.body.scrollHeight > 500 ?document.body.scrollHeight+10:700;">
+
+
+    <div id="divMsg">
+        <span id="BaseMainContent_DepositMainContent_lblTransMsg"></span>
+    </div>
+    <div id="divMsgBonus">
+        <span id="lblMsgBonus"></span><br>
+        <span id="lblMsgBonus2"></span>
+    </div>
+    <div id="BaseMainContent_DepositMainContent_divDepositMsg" class="deposit_msgs">
+        <span id="BaseMainContent_DepositMainContent_depositMsg">乐天使温馨提醒：<br></span>
+        <span id="BaseMainContent_DepositMainContent_depositMsg1">1. 会员可使用点卡支付银行来进行存款，目前乐天堂支持15种点卡支付方式，您可以任意选择一种进行充值。 </span><br>
+        <span id="BaseMainContent_DepositMainContent_depositMsg1p2">2. 充值前请先提交一份准确的存款单。以便您的存款更快的到账哦。<br><br>单笔存款</span>
+        <span id="BaseMainContent_DepositMainContent_depositMsg2" style="color: red;">最低：20元,</span>
+        <span id="BaseMainContent_DepositMainContent_depositMsg3" style="color: red;">最高：10,000元</span>
+    </div>
+    <div class="table1">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td class="table_sub1" width="5%"></td>
+                <td class="table_sub1" width="35%">
+                    点支付银行<span class="red">*</span>
+                </td>
+                <td>
+                    <div class="inputError">
+                        <div id="BaseMainContent_DepositMainContent_UpdatePanel7">
+    
+                                 <img id="imgCardProvider" src="../../YP00002.png" style="height: 27px; width: 42px; float: left;">
+                            
+</div>
+<select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlCardProvider"  id="ddlCardProvider" class="signup_input" style="height: 25px; width: 191px;">
+    <option value="YP00002" selected="selected">联通充值卡（5%手续费）</option>
+    <option value="YP00001">移动充值卡（5%手续费）</option>
+    <option value="YP00003">电信充值卡（5%手续费）</option>
+    <option value="YP00004">盛大游戏卡（15%手续费）</option>
+    <option value="YP00005">骏网卡（15%手续费）</option>
+    <option value="YP00006">盛付通卡（15%手续费）</option>
+    <option value="YP00007">网易卡（15%手续费）</option>
+    <option value="YP00008">完美卡（15%手续费）</option>
+    <option value="YP00009">QQ充值卡（15%手续费）</option>
+    <option value="YP00010">搜狐卡（15%手续费）</option>
+    <option value="YP00011">久游卡（15%手续费）</option>
+    <option value="YP00012">天宏卡（15%手续费）</option>
+    <option value="YP00014">光宇卡（15%手续费）</option>
+    <option value="YP00015">纵游卡（15%手续费）</option>
+    <option value="YP00016">征途卡（15%手续费）</option>
+
+</select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_sub1"></td>
+                <td class="table_sub1">
+                    卡面值<span class="red">*</span>
+                </td>
+                <td>
+                    <div class="inputError">
+                        <div id="BaseMainContent_DepositMainContent_UpdatePanel1">
+    
+                                <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlCardValues"  id="ddlCardValues" class="signup_input" style="height: 25px; width: 233px;">
+        <option value="20" selected="selected">20元</option>
+        <option value="30">30元</option>
+        <option value="50">50元</option>
+        <option value="100">100元</option>
+        <option value="200">200元</option>
+        <option value="300">300元</option>
+        <option value="500">500元</option>
+
+    </select>
+                            
+</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_sub1" width="5%"></td>
+                <td class="table_sub1" width="35%">
+                    卡号<span class="red">*</span>
+                </td>
+                <td width="60%">
+                    <div class="inputError">
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardNo" maxlength="20" id="BaseMainContent_DepositMainContent_txtCardNo" class="signup_input" type="text">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_sub1"></td>
+                <td class="table_sub1">
+                    密码<span class="red">*</span>
+                </td>
+                <td>
+                    <div class="inputError">
+                            <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardPin" maxlength="20" id="BaseMainContent_DepositMainContent_txtCardPin" class="signup_input" type="password">
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <div style="margin-left: 26px; margin-bottom: 15px; margin-top: 15px; padding: 5px; border: 1px solid grey; width: 382px;">
+        <div style="padding-left: 4px; color: red;">
+            [注意]
+        </div>
+        <div style="padding-left: 12px;">
+             <div id="BaseMainContent_DepositMainContent_UpdatePanel2">
+    
+                     <table id="BaseMainContent_DepositMainContent_Table1">
+        <tbody><tr>
+            <td class="col1">1.</td>
+            <td>
+                                 <span id="BaseMainContent_DepositMainContent_lblRemarkMsg1">您选择的是: 联通充值卡（5%手续费） </span>
+                             </td>
+        </tr>
+        <tr>
+            <td class="col1">2.</td>
+            <td>
+                                 <span id="BaseMainContent_DepositMainContent_lblRemarkMsg2">支持面额: </span>
+                                 <span id="BaseMainContent_DepositMainContent_lblSelectedCardValues">20元 , 30元 , 50元 , 100元 , 200元 , 300元 , 500元</span>
+                             </td>
+        </tr>
+        <tr>
+            <td class="col1">3.</td>
+            <td>
+                                 <span id="BaseMainContent_DepositMainContent_lblRemarkMsg3">不同卡型将会将增收指定手续费。最终可得存款额度可在[可得总值]查询</span>
+                             </td>
+        </tr>
+        <tr>
+            <td class="col1">4.</td>
+            <td>
+                                 <span id="BaseMainContent_DepositMainContent_lblRemarkMsg4">该卡种提示 如：选择50元面额但使用100元卡支付，<span style="color: red; font-weight: bold;">则系统认为实际支付金额为50元， 高于50元部分不予退还</span>；
+      <span style="color: red; font-weight: bold;">选择50元面额但使用30元卡支付则系统认为支付失败， 30元不予退还。</span><br>
+      支付前请仔细检查卡号密码是否对应，以及充值额度是否选择正确，否则造成损失Fun88乐天堂不承担任何责任。</span>
+                             </td>
+        </tr>
+    </tbody></table>
+    
+                 
+</div>   
+        </div>
+    </div>
+
+    <div class="table1">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td class="table_sub1" width="5%"></td>
+                <td class="table_sub1" width="35%">
+                    存款总值<span class="red">*</span>
+                </td>
+                <td width="60%">
+                    <div class="inputError">
+                        <div id="BaseMainContent_DepositMainContent_UpdatePanel4">
+    
+                                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtDepositAmount" maxlength="10" readonly="readonly" id="txtDepositAmount" class="signup_input" style="background-color: rgb(235, 235, 228);" type="text">
+                            
+</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_sub1"></td>
+                <td class="table_sub1">
+                    可得总值<span class="red">*</span>
+                </td>
+                <td>
+                    <div class="inputError">
+                        <div id="BaseMainContent_DepositMainContent_UpdatePanel5">
+    
+                                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtDepositAmountAfterCharge" maxlength="10" readonly="readonly" id="txtDepositAmountAfterCharge" class="signup_input" style="background-color: rgb(235, 235, 228);" type="text">
+                            
+</div>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+         <div id="BaseMainContent_DepositMainContent_UpdatePanel6">
+    
+                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$btnReload" id="btnReload" src="loading_search.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$btnReload&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height: 20px; width: 20px; display: none;" type="image">
+                <div style="text-align: center;">
+                <div id="BaseMainContent_DepositMainContent_upProgress" style="display: none;" role="status" aria-hidden="true">
+        
+                    <img alt="" src="loading_small.gif">
+                    
+    </div>
+                </div>
+                <div id="pnlContent" style="width: 100%;">
+        
+    <div id="bonus">
+        <div class="header">
+            注意，前方发现优惠红利一只，可供您选择申请：
+        </div>
+        <div id="lists">
+            <table id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses">
+            <tbody><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_0" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="106820"  type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_0">[尊贵专属]58%体育博彩再存红利，最高588元，18倍流水</label></td>
+            </tr><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_1" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="106939"  type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_1">【体育博彩】新会员100%首存红利，最高1288元，25倍流水 - [点击申请]</label></td>
+            </tr><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_2" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="106940"  type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_2">体育博彩10%红利最高888元，10倍流水, 火爆申请中! - [我也参加]</label></td>
+            </tr><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_3" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="0" checked="checked" type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_3">下回再参与！</label></td>
+            </tr>
+        </tbody></table>
+            
+            
+        </div>
+        
+        <div id="bonus_msg">
+            乐天使提示::<br>
+            会员在任意游戏账户、同一时间仅可申请一项红利。<br>须完成已申请红利的要求后，方可在同一个账户申请其他优惠红利。<br>
+            例：会员须在完成体育博彩首存红利要求后，才可申请体育博彩再存红利。<br>
+        </div>
+    </div>
+
+    </div>
+
+            
+</div>
+    </div>
+
+    <div class="divider">
+    </div>
+    <div class="table2">
+        <table>
+            <tbody><tr>
+                <td>
+                    <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$BtnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="height: 20px;">提交</a>
+                </td>
+                <td>
+                    <a id="BtnCancel" class="Btn whiteMedBtn" style="height: 20px;" href="#">
+                        取消
+                    </a>
+                </td>
+            </tr>
+        </tbody></table>
+
+    </div>
+
+                
+                <div class="formEmail">
+                    如果有疑问请点击 "<a onclick="window.open('/zh-CN/Info-Center/Help/Banking-Info/Deposit', '_blank')">存款帮助</a>" 页面，或联系
+                    "<a href="http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif" target="_blank" onclick="open_new_window(this.href, 'http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif'); return false;">在线客服</a>"
+                    <br>乐天使客服7*24小时为您服务<br>邮箱:
+                    <a href="mailto:cs@fun88.com" id="BaseMainContent_mailHref">
+                            cs@fun88.com</a>
+                    </div>
+          
+           
+</body>
+</html>

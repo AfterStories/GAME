@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../../master.payment.css" rel="stylesheet" type="text/css">
+    <link href="../../master.bonuslisting.css" rel="stylesheet" type="text/css">
+    <link href="../../master.button.css" rel="stylesheet" type="text/css">
+    <script  src="../../jquery-1.12.2.min.js" type="text/javascript"> </script>
+    <script src="master.transaction.js" type="text/javascript"></script>
+</head>
+
+<body topmargin="0" onload="parent.document.getElementById('tabContent').height = document.body.scrollHeight > 500 ?document.body.scrollHeight+10:700;">
+    
+   
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            /*Announcement*/
+            function wechatinmaintenance() {
+                emergencyAlert('微信存款维护中','欲使用微信存款支付，请联系在线客服。','http://helpcn.fun585.com','在线客服','关闭');
+            }
+            if(window.location.href.toLowerCase().indexOf("fun2008") &gt; -1) {
+                wechatinmaintenance();
+                $('#txtAmount').attr('disabled', 'disabled');
+            }
+            $.fn.clearForm = function () { return this.each(function () { var type = this.type, tag = this.tagName.toLowerCase(); if (tag == 'form') return $(':input', this).clearForm(); if ((type == 'text' &amp;&amp; this.id != 'txtDepDateFrm' &amp;&amp; this.id != 'txtDepDateTo') || type == 'password' || tag == 'textarea') this.value = ''; else if (type == 'checkbox') this.checked = false; else if (type == 'radio' &amp;&amp; this.value == '0') this.click(); }) };
+            $.support.placeholder = ('placeholder' in document.createElement('input'));
+            resetForm(true);
+           
+            jQuery.validator.addMethod("Zerodecimal", function (value, element, param) {
+                var val = $(param).val();
+                if (val.indexOf('.') != -1 &amp;&amp; val.length &gt; 2) {
+                    //remove ',' to match the regex accurately
+                    var txtnumber = val.replace(/,/g, '');
+                    if (/^\d+\.{0,1}[0]{1,2}$/.test(txtnumber)) return true;
+                    else return false;
+                }
+                else {
+                    return true;
+                }
+            }, '金额小数点只允许00');
+
+            jQuery.validator.addMethod("checkZero", function (value, element, param) {
+                var val = $(param).val();
+                if ("zh-CN"=="zh-CN" &amp;&amp; ("True"||"False")){
+                     if (val == 0) {
+                         return false;
+                     }
+                 }
+                 return true;
+             }, '仅限 100 或以上的整数金额');
+
+            $("#MainForm").validate({
+                onsubmit: false,
+                rules: {
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount': {
+                         required: true,
+                         boydigit: false,
+                        DigitRegex: "^(?!0.00)\\d{1,7}(,\\d{3})*(\\.\\d{2})?$",
+                         checkZero:'#txtAmount',
+                         Zerodecimal: '#txtAmount',
+                         min: '100.0000'
+                     }
+                 },
+                 messages: {
+                     'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount': {
+                        required: '存款金额不得为空',
+                        boydigit: '请使用整数金额',
+                        DigitRegex: '金额格式无效',
+                        min: function (error) {
+                            if ("zh-CN"=="zh-CN" &amp;&amp; ("True"||"False"))
+                                return '请输入 100 或以上的整数金额';
+                            else 
+                                return '金额必须在最小范围 100.00 内或以上';
+                        }
+                    }
+                },
+                 onkeyup: function (element, evet) {
+                     this.element(element);
+                 },
+                 showErrors: function (errorMap, errorList) {
+                     this.defaultShowErrors();
+                 },
+                 errorPlacement: function (error, element) {
+                     if (($('#LitZero').length &amp;&amp; !element.is($("#txtAmount"))) || (!$('#LitZero').length &amp;&amp; element.is($("#txtAmount"))) || (!$('#LitZero').length &amp;&amp; !element.is($("#txtAmount"))))
+                         error.insertAfter(element);
+                     else
+                         error.insertAfter('#LitZero');
+
+                 },
+
+                 onfocusout: false,
+                 invalidHandler: function (form, validator) {
+                     var errors = validator.numberOfInvalids();
+                     if (errors) {
+                         //var errorMessage = validator.errorList[0].message;                        
+                         //Alert(errorMessage);
+                         //validator.errorList[0].element.focus();
+                     }
+                 },
+
+                 success: function (label) {
+                     label.text("").addClass("success");
+                 }
+             });
+
+
+            $('#txtAmount').keyup(function () {
+                clickReload();
+                 
+                var amount = $('#txtAmount').val();
+                var amountConverted = amount * 0.99;
+                $('#txtAmountAfterCalcualtion').val(amountConverted.toFixed(2));
+                convertWithComma($('#txtAmountAfterCalcualtion'));
+            });
+
+            if ("zh-CN"=="zh-CN" &amp;&amp; ("True"||"False")){
+                $('#txtAmount').attr("placeholder", "请输入"+100.0000+"或以上的整数金额");
+
+                 if (!$.support.placeholder &amp;&amp; $('#txtAmount').val() == "") {
+                     $('#txtAmount').val($('#txtAmount').attr("placeholder")).css({ color: "#A0A0A0" });
+                 }
+                        
+                 $('#txtAmount').focus(function () {
+                     if (!$.support.placeholder &amp;&amp; $(this).val() == $(this).attr("placeholder")) {
+                         $('#txtAmount').val("").css({ color: "#000" });
+                     }
+                 });
+
+                 $('#txtAmount').blur(function () {
+                     if (!$.support.placeholder) {
+                         if ($('#txtAmount').val() == "") {
+                             $('#txtAmount').val($('#txtAmount').attr("placeholder")).css({ color: "#A0A0A0" });
+                         }
+                     }
+                 });
+             }
+
+            $('#txtCouponCode').keyup(function () {
+                clickReload();
+            });
+
+            $("#BtnSubmit").click(function (e) {
+                if (window.location.href.toLowerCase().indexOf("fun2008") &gt; -1) {
+                    wechatinmaintenance();
+                    return false;
+                }
+                var amount = $('#txtAmount').val();
+                $('#txtAmount').val(amount.replace(/,/g, ""));
+
+                $("#btnReload").click();
+                var validate = $('#MainForm').valid();
+                if ($("#tempCouponStatus")) { if ($("#tempCouponStatus").val() == "fail") validate = false; }
+                if ($(".lblError").length) validate = false;
+
+                if (validate) 
+                    getLoading();
+                else
+                    convertWithComma($('#txtAmount'));
+
+                return validate;
+            });
+
+            $("#BtnCancel").click(function () {
+                resetForm(false);
+            });
+        });
+    </script>
+
+    <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$hidblackbox" id="BaseMainContent_DepositMainContent_hidblackbox" value="" type="hidden">
+    <span class="hidBankCode">WC</span>
+    <div id="divMsg">
+        <span id="BaseMainContent_DepositMainContent_lblTransMsg"></span>
+    </div>
+    <div id="divMsgBonus">
+        <span id="lblMsgBonus"></span><br>
+        <span id="lblMsgBonus2"></span>
+    </div>
+    <div id="BaseMainContent_DepositMainContent_divDepositMsg" class="deposit_msgs">
+        <span id="BaseMainContent_DepositMainContent_depositMsg1">乐天使温馨提醒：</span><br>
+        <span id="BaseMainContent_DepositMainContent_depositMsg2">1. v信支付简易快捷，仅需两步即可完成：</span><br>
+        <span id="BaseMainContent_DepositMainContent_Label2" style="margin: 13px;">a. 输入预存的金额提交</span><br>
+        <span id="BaseMainContent_DepositMainContent_Label3" style="margin: 13px;">b. 扫描二维码成功支付</span><br>
+        <span id="BaseMainContent_DepositMainContent_depositMsg2_2">2. v信支付将收取1%的固定手续费。实际存款额度可在[实际到账]查询。</span><br>
+        <br>
+        单笔存款<span id="BaseMainContent_DepositMainContent_depositMsg4" style="color: red;">最低: 100元起，最高为1,000元，每日可存款10次。</span><br>
+        </div>
+
+    <div class="table1">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td class="table_sub1" width="5%"></td>
+                <td class="table_sub1" width="35%" align="right">
+                    存款金额<span class="red">*</span>
+                </td>
+                <td width="60%">
+                    <div class="inputError">
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount" maxlength="7" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtAmount" class="signup_input" updateaftercallback="False" oncopy="return false;" onpaste="return false" placeholder="请输入100或以上的整数金额" type="text">
+                        
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_sub1" width="5%"></td>
+                <td class="table_sub1" width="35%" align="right">
+                    实际到账<span class="red">*</span>
+                </td>
+                <td width="60%">
+                    <div class="inputError">
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmountAfterCalcualtion" readonly="readonly" id="txtAmountAfterCalcualtion" class="signup_input" updateaftercallback="False" oncopy="return false;" onpaste="return false" type="text">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+        <div id="BaseMainContent_DepositMainContent_UpdatePanel1">
+    
+                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$btnReload" id="btnReload" src="loading_search.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$btnReload&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height: 20px; width: 20px; display: none;" type="image">
+                <div style="text-align: center;">
+                    <div id="BaseMainContent_DepositMainContent_upProgress" style="display: none;" role="status" aria-hidden="true">
+        
+                            <img alt="" src="loading_small.gif">
+                        
+    </div>
+                </div>
+                <div id="pnlContent" style="width: 100%;">
+        
+    <div id="bonus">
+        <div class="header">
+            注意，前方发现优惠红利一只，可供您选择申请：
+        </div>
+        <div id="lists">
+            <table id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses">
+            <tbody><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_0" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="106939" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses$0\',\'\')', 0)" type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_0">【体育博彩】新会员100%首存红利，最高1288元，25倍流水 - [点击申请]</label></td>
+            </tr><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_1" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="106940" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses$1\',\'\')', 0)" type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_1">体育博彩10%红利最高888元，10倍流水, 火爆申请中! - [我也参加]</label></td>
+            </tr><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_2" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="0" checked="checked" type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_2">下回再参与！</label></td>
+            </tr>
+        </tbody></table>
+            
+            
+        </div>
+        
+        <div id="bonus_msg">
+            乐天使提示::<br>
+            会员在任意游戏账户、同一时间仅可申请一项红利。<br>须完成已申请红利的要求后，方可在同一个账户申请其他优惠红利。<br>
+            例：会员须在完成体育博彩首存红利要求后，才可申请体育博彩再存红利。<br>
+        </div>
+    </div>
+
+    </div>
+
+            
+</div>
+    </div>
+    <div class="divider">
+    </div>
+    <div class="table2">
+        <table>
+            <tbody><tr>
+                <td>
+                    <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$BtnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">提交</a>
+                </td>
+                <td>
+                    <a id="BtnCancel" class="Btn whiteMedBtn">
+                        取消
+                    </a>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+                
+                <div class="formEmail">
+                    如果有疑问请点击 "<a onclick="window.open('/zh-CN/Info-Center/Help/Banking-Info/Deposit', '_blank')">存款帮助</a>" 页面，或联系
+                    "<a href="http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif" target="_blank" onclick="open_new_window(this.href, 'http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif'); return false;">在线客服</a>"
+                    <br>乐天使客服7*24小时为您服务<br>邮箱:
+                    <a href="mailto:cs@fun88.com" id="BaseMainContent_mailHref">
+                            cs@fun88.com</a>
+                    </div>
+
+</body>
+</html>

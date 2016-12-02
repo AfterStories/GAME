@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../../master.payment.css" rel="stylesheet" type="text/css">
+    <link href="../../master.bonuslisting.css" rel="stylesheet" type="text/css">
+    <link href="../../master.button.css" rel="stylesheet" type="text/css">
+    <script  src="../../jquery-1.12.2.min.js" type="text/javascript"> </script>
+    <script src="master.deposit.localbank.js" type="text/javascript"></script>
+    <script src="jquery.zclip.js" type="text/javascript"></script>
+    <script src="master.mainmenu.js" type="text/javascript"></script>
+    <script src="master.transaction.js" type="text/javascript"></script>
+    <script  src="../../jquery.numeric.js" type="text/javascript"> </script>
+    <script  src="../../jquery.validate.js" type="text/javascript"> </script>
+</head>
+<body topmargin="0" onload="parent.document.getElementById('tabContent').height = document.body.scrollHeight > 500 ?document.body.scrollHeight+10:700;">
+
+                
+  <!--   <style type="text/css">
+  
+  .inputError_THB_VND { margin-bottom: 8px; }
+  .inputError_Remark { min-height: 28px; }
+  .labels_alignment { width: 35%; }
+  .rbtBankList label { padding-left: 5px; }
+  .rbtBankListOther { padding-left: 2px; vertical-align: top; }
+  .rbtBankListOther input[type="radio"] { margin-top: 4px; vertical-align: top; }
+  .rbtBankListOther label { padding-left: 5px; display: inline-block; width: 400px; }
+  .ui-dialog { width: 475px ! important; }
+  .remark { color: red; font-size: 11px; }
+  .table_sub1_tdAmount, .table_sub1_tdTime, .table_sub1_tdDate, .table_sub1_tdBankSlip { font-size: 12px; text-align: left; vertical-align: 0px; padding-bottom: 5px; }
+  ._tdAmount, ._tdTime, .ctrDate_tdDate, ._tdBankSlip, .changePaddingBottom { padding-bottom: 5px; }
+  .scroll { text-decoration: underline; color: blue; margin-right: 50px; }
+  .dividerLB { background: transparent url("divider.gif") repeat-x scroll 0% 0%; width: 448px; height: 1px; margin: 15px -100px; }
+  </style> -->
+
+    <script type="text/javascript" language="javascript">
+        $.support.placeholder = ('placeholder' in document.createElement('input'));
+        var _strCharacterNotAllow = "^([^;:；：]*)$";
+        var memberWallet = "SP";
+        var memberCurrency = "CNY";
+        var isResubmit = "false";
+
+        function onSuccessCall(data) {
+            var name = data.d["AccountHolderName"];
+            if (('zh-CN' == 'zh-CN' && 'CNY' == 'CNY') ||
+                ('zh-CN' == 'vi-VN' && 'CNY' == 'VND')) {
+                var bank = data.d["BankNameLocal"];
+            }
+            else {
+                var bank = data.d["BankName"];
+            }
+            var acc = data.d["AccountNumber"];
+           
+            $("#txtUsedName").val(name);
+            $("#txtUsedBank").val(bank);
+            $("#txtUsedAcc").val(acc);
+        }
+
+        function CopyBank() {
+            $('#lnkCopyAccName').zclip({ path: '/Members/Deposit/ZeroClipboard.swf', copy: function () { return $('#AccountHolderNameLbl').text(); } });
+            $('#lnkCopyAccNum').zclip({ path: '/Members/Deposit/ZeroClipboard.swf', copy: function () { return $('#BankAccountNumberLbl').text(); } });
+            $('#lnkCopyAccProvince').zclip({ path: '/Members/Deposit/ZeroClipboard.swf', copy: function () { return $('#ProvinceLbl').text(); } });
+            $('#lnkCopyAccCity').zclip({ path: '/Members/Deposit/ZeroClipboard.swf', copy: function () { return $('#CityLbl').text(); } });
+            $('#lnkCopyAccBranch').zclip({ path: '/Members/Deposit/ZeroClipboard.swf', copy: function () { return $('#BranchLbl').text(); } });
+        }
+
+
+        $(document).ready(function () {
+            if ($("#BaseMainContent_DepositMainContent_rbtBankList input:checked").length == 0 && !($('#rbtBankListNull').is(':checked'))) {
+                $("#BaseMainContent_DepositMainContent_rbtBankList input:first").click();
+            }
+
+            if($('#ckNewAcc').is(':checked')) { 
+                $("#divNewAcc").css("display", "block");
+            }
+
+            CopyBank();
+            var lang = "zh-CN";
+            var d = new Date();
+            var month = d.getMonth() + 1;
+            var day = d.getDate();
+            var today = d.getFullYear() + '-' + (month & 10 ? '0' : '') + month + '-' + (day & 10 ? '0' : '') + day;
+
+            $("#txtTransactionDate").datepicker({
+                showOn: 'button',
+                buttonImage: '/css/images/calendar.gif',
+                buttonImageOnly: true,
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-10",
+                dateFormat: 'yy-mm-dd',
+                showAnim: 'slide',
+                maxDate: '0',
+                'beforeShow': function (input, datepicker) {
+                    setTimeout(function () {
+                        $(datepicker.dpDiv).css('zIndex', 999999);
+                    }, 500);
+                }
+            });
+
+            if(isResubmit == "false"){
+            $("#txtTransactionDate").datepicker("setDate", today);
+            $("#txtTransactionDate").datepicker($.datepicker.setDefaults($.datepicker.regional[lang]));
+            }
+            $("#txtTransactionDate").live('click', function () { $(this).next().click(); });
+
+            
+            $('#txtFullName').attr("placeholder", "请用中文输入正确全名");
+
+            if (!$.support.placeholder && $('#txtFullName').val() == "") {
+                $('#txtFullName').val($('#txtFullName').attr("placeholder")).css({ color: "#A0A0A0" });
+            }
+                        
+            $('#txtFullName').focus(function () {
+                if (!$.support.placeholder && $(this).val() == $(this).attr("placeholder")) {
+                    $('#txtFullName').val("").css({ color: "#6C6C6C" });
+                }
+            });
+
+            $('#txtFullName').blur(function () {
+                if (!$.support.placeholder) {
+                    if ($('#txtFullName').val() == "") {
+                        $('#txtFullName').val($('#txtFullName').attr("placeholder")).css({ color: "#A0A0A0" });
+                    }
+                }
+            });
+            
+
+            $.validator.addMethod(//override email validation using below regex format -tgh-
+                'AlphanumericAccountFormat',
+                function (value, element) {
+                    return this.optional(element) || /^[a-zA-Z0-9]+$/.test(value);
+                },
+                '格式不正确。');
+
+            $("#MainForm").validate({
+                onsubmit: false,
+                /*IE8fix*/
+                ignore: ":hidden,.rdbtns input[type='radio'],#ckPreferAcc,#ckNewAcc,#ckRmbBank,#ReceiptUpload,#txtReplaceUpload,.history_nav input,.history_nav select",
+                rules: {
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount': {
+                        required: true,
+                        boydigit: false,
+                        DigitRegex: "^(?!0.00)\\d{1,7}(,\\d{3})*(\\.\\d{2})?$",
+                        min: 100.0000
+                        },
+                    
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtTransaction': {
+                        required: { depends: function() {
+                            var bankname = $("#BaseMainContent_DepositMainContent_BankNameLbl").text();
+                            var currCode = "CNY";
+            
+                            if (currCode == "THB" || currCode == "CNY" || currCode == "RMB") return false;
+                            if (!isVNDSpecialBank()) return false;
+                            return true;
+                        }
+                        },
+                        regex: _strCharacterNotAllow
+                    },
+                    
+             
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$TxtAccLastFive': {
+                        required: true,
+                        regex: "^[0-9]{5}$"
+                    },
+                    
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtFullName': {
+                        required: true,
+                        regex: _strCharacterNotAllow
+                        ///,regex: "^[a-zA-Z\u4e00-\u9fa5\u00e0-\u1EF4\u0e00-\u0e7f\s ]+$"
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtBankAcc': {
+                        required: true,
+                        AlphanumericAccountFormat : true
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtSpecialBankAcc': {
+                        required: true,
+                        regex: "^[0-9a-zA-Z]+$"
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAccOtherBank': {
+                        required: true,
+                        regex: "^[^&|>|'|;|*|=]+$"
+                    }
+                },
+                messages: {
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount': {
+                        required: '存款金额不可为空',
+                        boydigit: '请使用整数金额',
+                        DigitRegex: '金额格式无效',
+                        min: function (error) {
+                            return '金额必须在最小范围 100.00 内或以上';
+                         }
+                    },
+                    
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$TxtAccLastFive': {
+                        required: '存款银行账号不正确',
+                        regex: '存款银行账号不正确'
+                    },
+                    
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtFullName': {
+                        required: '请输入全名',
+                        regex: '格式不正确。'
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtBankAcc': {
+                        required: '银行账户号码不可为空',
+                        regex: '格式不正确。'
+                    }
+                    ,
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtSpecialBankAcc': {
+                        required: '银行账户号码不可为空',
+                        regex: '格式不正确。'
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAccOtherBank': {
+                        required: '银行名称不可为空',
+                        regex: '格式不正确。'
+                    }
+                },
+                onkeyup: function (element, evet) {
+                    this.element(element);
+                },
+                showErrors: function (errorMap, errorList) {
+                    this.defaultShowErrors();
+                },
+                errorPlacement: function (error, element) {
+                    if (!element.is($("#txtTransactionDate")) && (($('#LitZero').length && !element.is($("#txtAmount"))) || (!$('#LitZero').length && element.is($("#txtAmount"))) || (!$('#LitZero').length && !element.is($("#txtAmount")))))
+                        error.insertAfter(element);
+                    else if (element.is($("#txtTransactionDate")))
+                        error.insertAfter('#hfTransactionDate');
+                    else
+                        error.insertAfter('#LitZero');
+                },
+
+                onfocusout: false,
+                invalidHandler: function (form, validator) {
+                    var errors = validator.numberOfInvalids();
+                    if (errors) {
+                        //var errorMessage = validator.errorList[0].message;
+                        //Alert(errorMessage);
+                        //validator.errorList[0].element.focus();
+                    }
+                },
+
+
+                success: function (label) {
+                    label.text("").addClass("success");
+                }
+            });
+
+
+            if ($("#hfHasRightFormat").val() == "true") { $(".specialForFileUpload").css("display", "none") } else { $(".specialForFileUpload").css("display", "block") }
+
+            $("#ReceiptUpload").change(function (e) {
+                if (e.target.files) {
+                    var files = e.originalEvent.target.files;
+                    var n = files[0].name,
+                    s = files[0].size,
+                    t = files[0].type;
+
+                    if (t != "image/jpeg" && t != "image/gif" && t != "image/bmp" && t != "image/png" && t != "application/vnd.openxmlformats-officedocument.wordprocessingml.document" && t != "application/msword" && t != "application/pdf") {
+                        var wrongFormat = '只有图像，文档和PDF的存款单据才能被接受';
+                        $(".specialForFileUpload").text(wrongFormat);
+                        $(".specialForFileUpload").css("display", "block");
+                        $("#txtReplaceUpload").val('');
+                        $("#hfHasRightFormat").val("false");
+                    }
+                    else if (s > 1048576) {
+                        var wrongSize = '此文件不能超过1MB';
+                            $(".specialForFileUpload").text(wrongSize);
+                            $(".specialForFileUpload").css("display", "block");
+                            $("#txtReplaceUpload").val('');
+                            $("#hfHasRightFormat").val("false");
+                        } else {
+                            $("#txtReplaceUpload").val(n);
+                            $(".specialForFileUpload").css("display", "none");
+                            $("#hfHasRightFormat").val("true");
+                        }
+                }
+                    //&= IE9
+                else {
+                    var files = e.target.value;
+                    var n = files.replace(/^.*[\\\/]/, '')
+                    t = files.substr((files.lastIndexOf('.') + 1));
+
+                    if (t != "jpg" && t != "jpeg" && t != "gif" && t != "bmp" && t != "png" && t != "doc" && t != "docx" && t != "pdf") {
+                        var wrongFormat = '只有图像，文档和PDF的存款单据才能被接受';
+                        $(".specialForFileUpload").text(wrongFormat);
+                        $(".specialForFileUpload").css("display", "block");
+                        $("#txtReplaceUpload").val('');
+                        $("#hfHasRightFormat").val("false");
+                    }
+                    else {
+                        $("#txtReplaceUpload").val(n);
+                        $(".specialForFileUpload").css("display", "none");
+                        $("#hfHasRightFormat").val("true");
+                    }
+                }
+            });
+
+            //IE8 only
+            if ($.browser.msie && $.browser.version <= '8.0') {
+                $("#ddlPreferBank,#ddlBankName").mousedown(function() {
+                    $(this).css("width", "auto");
+                }).select(function() {
+                    $(this).width(230);
+                }).change(function() {
+                    $(this).width(230);
+                }).blur(function() {
+                    $(this).width(230);
+                });
+            }
+
+            //Tooltips popup
+            function getBankType() {
+                var bankType = $("#ddlBankType option:selected").val();
+                if (bankType == "IB") {
+                    $("#lblBankTypeTooltip").html("&b>跨行转账 &/b>- 若您所使用银行与所提供银行不一样,请登入您的网络银行转账至所提供账户 (例: 农行转账至建行)");
+                } else if (bankType == "IBT") {
+                    $("#lblBankTypeTooltip").html("&b>同行转账 &/b>- 若您所使用的银行与所提供银行相同,请登入您网络银行进行转账.(例: 建行转账至建行)");
+                } else if (bankType == "ATM") {
+                    $("#lblBankTypeTooltip").html("&b>自动柜员机转账 &/b>- 到您附近的ATM将款项转账至所提供账户");
+                } else if (bankType == "Cash-ATM") {
+                    $("#lblBankTypeTooltip").html("&b>无卡转账 &/b>- 到所提供账户所属银行ATM进行现金存入");
+                } else if (bankType == "OTC") {
+                    $("#lblBankTypeTooltip").html("&b>柜台转账 &/b>- 到您最近银行将款项转到所提供银行账户");
+                } else if (bankType == "MB") {
+                    $("#lblBankTypeTooltip").html("&b>手机转账 &/b>- 在您手机银行进行转账至所提供账户");
+                    }
+}
+
+            $("#ddlBankType").ready(function() {
+                getBankType();
+            });
+
+            $("#ddlBankType").change(function () {
+                getBankType();
+            });
+
+            // Display/Hide popupTooltip when hover
+            if ("zh-CN"=="zh-CN" && "False"){
+                $("#imgQuestion").hover(function(e){
+                    e.stopPropagation();
+                    if($(".popupTooltip").css("display") == "block"){
+                        $(".popupTooltip").hide("blind",100); 
+                    }else{
+                        $(".popupTooltip").show("blind",100);
+                    }
+                    var posTop = $("#imgQuestion").offset().top;
+                    $("#imgQuestion").parent().parent().parent().find(".popupTooltip").css("top", posTop - 20);
+                });
+            
+            }
+            else
+            {
+                $("#imgQuestion").click(function (e) {
+                    e.stopPropagation();
+                    $(".popupTooltip").css("display", "block");
+                    var posTop = $("#imgQuestion").offset().top;
+                    $("#imgQuestion").parent().parent().parent().find(".popupTooltip").css("top", posTop - 20);
+                
+                });
+            }
+
+            $(".popupTooltip").click(function(e) {
+                //alert("test");
+                e.stopPropagation();
+            });
+
+            $(document).click(function(e) {
+                //alert("test");
+                $(".popupTooltip").css("display", "none");
+            });
+
+          
+            $("#notification_click").click(function(){
+                $(".notification_info").css("display", "none");
+                $(".deposit_notification").css("display", "none");
+            });
+
+            $("#BaseMainContent_DepositMainContent_lblBankListReminder").hide();
+            
+            $("#BaseMainContent_DepositMainContent_rbtBankList input").click(function(){
+                $('#rbtBankListNull').attr('checked', false);
+                if("CNY"=="VND" || "CNY"=="THB")
+                    $('#panelAcc').css('display', 'none');
+                if ("zh-CN"!="ko-KR")
+                    $("#BaseMainContent_DepositMainContent_lblBankListReminder").show();
+                
+                if (isVNDSpecialBank()) {
+                    $("#panelTranxRef").show();
+                    $(".tdRefNo").toggleClass("changePaddingBottom");
+                }
+                else {
+                    $("#panelTranxRef").hide();
+                }
+
+                
+                    $('#BaseMainContent_DepositMainContent_UpdatePanel2').show();
+                    $('#remarkContainer').hide();
+                    $('#panelAcc').show();
+                    //$("#radDepositMethod").hide();
+                    $("#ddlBankType").show();
+                
+                
+            });
+
+            $("#ddlAlipayBankType").hide();
+            //$("#radDepositMethod").hide();
+
+            if (isVNDSpecialBank()) {
+                $("#panelTranxRef").show();
+            }
+            else {
+                $("#panelTranxRef").hide();
+            }
+            
+            
+
+            function isVNDSpecialBank() {
+
+                var strVal = $("#BaseMainContent_DepositMainContent_rbtBankList input:checked").siblings("label").text();
+                
+                if ("CNY" == "VND") {
+                    if (strVal == "Ngân hàng Ngoại Thương" || strVal == "Ngân hàng Kỹ Thương Việt Nam" || strVal == "Vietcom Bank" || strVal == "Techcom Bank" || strVal == "Ngân hàng Sài Gòn Thương Tín" || strVal == "Sacom Bank") {
+                        if(strVal == "Ngân hàng Ngoại Thương" ||strVal == "Vietcom Bank")
+                            $('#RefNoRemark_Vietcom').show();
+                        else
+                            $('#RefNoRemark_Vietcom').hide();
+
+                        if(strVal == "Ngân hàng Kỹ Thương Việt Nam" ||strVal == "Techcom Bank")
+                            $('#RefNoRemark_Techcom').show();
+                        else
+                            $('#RefNoRemark_Techcom').hide();
+
+                        if(strVal == "Ngân hàng Sài Gòn Thương Tín" || strVal == "Sacom Bank")
+                            $('#RefNoRemark_Sacom').show();
+                        else
+                            $('#RefNoRemark_Sacom').hide();
+
+                        return true;
+                    }
+                }
+                else
+                {
+                    if ("CNY" != "KRW" && "CNY" != "THB" && "CNY" != "VND")
+                        return true;
+                }
+                return false;
+            }
+
+            $("#BtnCancel").click(function () {
+                if(memberCurrency.toLowerCase() == "rmb" || memberCurrency.toLowerCase() == "cny" || memberCurrency.toLowerCase() == "thb" || memberCurrency.toLowerCase() == "vnd" || memberCurrency.toLowerCase() == "idr"){
+                    if(memberCurrency.toLowerCase() == "rmb" || memberCurrency.toLowerCase() == "cny" || memberCurrency.toLowerCase() == "idr"){
+                        var date = new Date();
+                        var hr = ("0" + date.getHours()).substr(-2);
+                        var min = ("0" + date.getMinutes()).substr(-2);
+                        var sec = ("0" + date.getSeconds()).substr(-2);
+
+                        $("#ddlHour").val(hr);
+                        $("#ddlMinute").val(min);
+                        $("#ddlSecond").val(sec);
+                        $('#ddlBankType option:first-child').attr("selected", "selected");
+                    }
+                    else{
+                        $("#ddlHour").val("");
+                        $("#ddlMinute").val("");
+                        $("#ddlSecond").val("");
+                    }
+                    $("#txtTransactionDate").datepicker("setDate", today);
+                    $("#txtTransactionDate").datepicker($.datepicker.setDefaults($.datepicker.regional[lang]));
+                    $('#BaseMainContent_DepositMainContent_rbtBankList input:first').click();
+                }
+            });
+                });
+    </script> 
+
+    <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$hidblackbox" id="BaseMainContent_DepositMainContent_hidblackbox" value="0400nyhffR+vPCUNf94lis1ztjhYXstVAItX6Nsj4fdU50oB5HPx4c+c6JfI3fUoBkpI2m0i/QAa4hkyYB27Ps/QP9CWpYz9PNGM4TgS4X7BVhJDnwjTkUmjYeZcuz1oY8JvKNg/00nqkPXWpeIuKL4meLku81j7y0GGlyr6IxxHWPe0yCwUojapMbfemzKAlA4Lwx/N92fWAavBOmoLto4X8btxUT7HF5Mfhlz5wlRFwWJi0FRulruXQQGCQaJkXU7G/xCx87H3fYKpqOurJ+l94mG/cdkIMFbm6Yf0/pTJUUyPiIQyP8tKlgydKgnOIDKXq4HnEqNOos0/B5zvrPJclk3253GghNNu5gW5YJ5OhFM/6D0SsrNZUt8dhOLXjHxwJFDd9XbRk1Jdk2jDJhRZqtPtb5t32w+KrQeSb/xlCX9kVCgcdPoulz7dFb25wIkrBSWIJeUMgDHgFpiKyuYOPibvcz/HjIds898GnyP1mBxIRPQcjTx8xG2fymlvI1hEOgtBK+xLaY0ZTldAVdb6oN3pZ/WuuaUQiokVJnL1hhijYmLrUKTmt2IexFSsDpBLi6gqYs3uxZzI/9TX4RjmZzBnxg3zCYy934n7ITrYRpY9CmcqYFsttHQcNH/5vCB0uZmcL034xXvYh1xwdzf3vL8LpXrtIUled8i87/17lzENfyJw5Y9lzPtwK6dBL0wrOVVPyQ4V1oTurKZQptWVutfidlHjZD64NsMimvYSySgB84+POrI4Mh35NhDjGKa+f2B4Tpv0TfQJdmNWP4mnLySIEmkyozD9JUF4rMCu74lhfIUcFuybLLNvS9LBZED55Ix5aAKTQzyBTn6l/Soa3SYXteGvpHB9Pwec76zyXJap3glrgRjgdPbKRXey06cY4a7euFqiMUivlcetxenoDWjVzQINcpkG4eeYe06RXaNjjZSkBTBViCtv5Q+LwBkPGYWc8AmavPCLmpHnNYcLOpdkEccTr6OGxF9DvO9JTX/ej91Mbt0UI8cTyFDIsqpKf0LAMiO8U4tW5N21Jb0aeDy84RP8N2pmSX4UpqS43/uJBynuXwSg9Vk5ZrsCaIyRmz61zhzFB1dE3qrYIANEVlPaFWyC92M0OM0JDPGSoro1TD9yr6c3I0lWdzVTBTct2L5RN8fI6PLBxjgcAXds9um+NwS8Udk12VIh1Vj4pT/6Ch4kmyyUBjcbrp2pkKjYKNQr6UMT7l8WhykfdRIo4yrLZXKtrhOcsfH1GTpS4vSJyXodHUaotRXDr+Or86yn1NB56wFKy8QuIg8x2XhzBzQG/G4lOzv5ahdyamRgJ2HQFCJSal29e6NDeKyTXldOx1TjIWxa8xNy57VCKR099vGyUhZhnrplSuU9ez5xuLA3aK3LigNM5mjACzVEv/lb0GPdtU37u3jkMmkNloS2fYc5e+GgRzF6ZBDP8vHFsx8Fpk2lJFkAlX1iaZBGOK9x5rWcgXMyWy2vUpX7+tjI98aErJzbdPRvKf62c/izGhoaigMLo06NXQ+RoACIk7TaRnu7crKioVmm1oKTCvedjIogOdzxV3f6vpVvdbaFspRDTzmg5ffWAPKd3Oi4ZsUgUrm8UaRsFFB4pkncOKZ8/wCkK+71FBr/tyTcaE6Jw9Qpg8xQYF8axEBEHwN1fKmnCsZ7/SXf5JmEiYmxX3TYvYm/8YI3twwsw6MdGDLHT7M5RpTgmxUNhcSLg++4jsWm06KHBKHPtRJRXqeu0dcVXnVR/lp+cERa8p3c6LhmxSCykXv2Z6EnplDa/Vh9Nxj85sdrzcINkHor+KLn496QA7Uj55EVjm5djyG3w66iAnj+urlCd//FzmjlROYNDf5b2Z0oLi9XGouUC/BNMMhBryx8TIeizB2u+Q01MzvlCxr1gVKyFjPDPHT+YoZa9rMaO0m1flZQCYk=" type="hidden">
+    <span class="hidBankCode">LB</span>
+    <div id="divMsg">
+        <span id="BaseMainContent_DepositMainContent_lblTransMsg"></span>
+    </div>
+    <div id="divMsgBonus">
+            <span id="lblMsgBonus"></span><br>
+            <span id="lblMsgBonus2"></span>
+    </div>     
+    <div class="deposit_msgs">
+                <span id="BaseMainContent_DepositMainContent_depositMsg1">乐天使温馨提醒：</span><br>
+        <span id="BaseMainContent_DepositMainContent_Label4">1. 会员可使用银行转账, ATM存款转账,银行柜台转账和手机转账等方式进行存款。</span><br>
+        <span id="BaseMainContent_DepositMainContent_Label6">2. 通常到账时间约15-30分钟</span><br><br>
+        <span id="BaseMainContent_DepositMainContent_depositMsg2">单笔存款</span>
+        <span id="BaseMainContent_DepositMainContent_depositMsg3" style="color: red;">最低: 100 元，最高: 50,000 元</span><br>
+        
+
+    </div>  
+     
+    <div class="rdbtns">
+          
+         <span id="BaseMainContent_DepositMainContent_lblBankListReminder" style="font-weight: bold; color: red; padding-bottom: 10px;">请务必按照以下提示的银行账户信息进行存款。否则，您的存款申请将会受到延迟。</span>
+         <table id="BaseMainContent_DepositMainContent_rbtBankList" class="rbtBankList" style="color: rgb(57, 57, 57);">
+    <tbody><tr>
+        <td><input id="BaseMainContent_DepositMainContent_rbtBankList_0" name="ctl00$ctl00$BaseMainContent$DepositMainContent$rbtBankList" value="14593" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$rbtBankList$0\',\'\')', 0)" type="radio"><label for="BaseMainContent_DepositMainContent_rbtBankList_0">中国民生银行</label></td>
+    </tr>
+</tbody></table>
+        
+        <div id="BaseMainContent_DepositMainContent_UpdatePanel2">
+                <div id="bankContainer" class="box" >
+                    <a href="#" onclick="showHide('FundInBankDetailsDiv');" style="text-decoration: none;">
+                        <h2 style="background-color: rgb(37, 170, 226); color: White; height: 25px; padding: 10px 10px 5px; font-size: 16px;">
+                            <label id="ShowHideMe" style="cursor: pointer;">[+]</label>
+                            <span id="BaseMainContent_DepositMainContent_LocalBankInfoTitleLbl">本地银行转账信息</span>
+                        </h2>
+                    </a>
+                    <div id="FundInBankDetailsDiv" style="display: none;">
+                        <p id="BaseMainContent_DepositMainContent_AttentionPara" style="display: none;">
+                            <font color="red">&注意> 存款账户已经更换</font><br>由于本地银行转账的银行账户已经更换，请您存款到我们新的银行账户，但您本次的存款我们依然会为您处理到账。
+                        </p>
+                      
+                        <div class="depositLB">
+                            <span id="BaseMainContent_DepositMainContent_NewBankAccountLbl" style="font-weight: bold; text-decoration: underline;">新帐户</span> 
+                            <table style="width: 98%; margin: 5px 3px;">
+                                <tbody><tr>
+                                    <td style="width: 200px;">
+                                        <span id="BaseMainContent_DepositMainContent_Label13">银行名称</span>:
+                                    </td>
+                                    <td>
+                                        <span id="BaseMainContent_DepositMainContent_BankNameLbl">中国民生银行</span>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="BaseMainContent_DepositMainContent_Label17">帐户名称</span>:
+                                    </td>
+                                    <td>
+                                        <span id="AccountHolderNameLbl">冯军水</span>
+                                    </td>
+                                    <td>
+                                        <div id="div4" class="Btn" style="position: relative;">
+                                            <div class="blueCopyShortBtn copyHeight">
+                                                <a id="lnkCopyAccName" class="lnkCopy">复制</a>                                                 
+                                            <div class="zclip" id="zclip-ZeroClipboardMovie_1" style="position: absolute; left: 100px; top: 8px; width: 24px; height: 17px; z-index: 99;"><embed id="ZeroClipboardMovie_1" src="ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_1" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&width=24&height=17" wmode="transparent" width="24" height="17" align="middle"></div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="BaseMainContent_DepositMainContent_Label15">帐号</span>
+                                    </td>
+                                    <td>
+                                        <span id="BankAccountNumberLbl">6226191002019208</span>
+                                    </td>
+                                    <td>
+                                        <div id="div3" class="Btn" style="position: relative;">
+                                            <div class="blueCopyShortBtn copyHeight">
+                                                <a id="lnkCopyAccNum" class="lnkCopy">复制</a>
+                                            <div class="zclip" id="zclip-ZeroClipboardMovie_2" style="position: absolute; left: 100px; top: 8px; width: 24px; height: 17px; z-index: 99;"><embed id="ZeroClipboardMovie_2" src="ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_2" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&width=24&height=17" wmode="transparent" width="24" height="17" align="middle"></div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <span id="BaseMainContent_DepositMainContent_Label1">省／自治区</span>:
+                                    </td>
+                                    <td>
+                                        <span id="ProvinceLbl">河北</span>
+                                    </td>
+                                    <td>
+                                        <div id="BaseMainContent_DepositMainContent_divProvince" class="Btn" style="position: relative;">
+                                            <div class="blueCopyShortBtn copyHeight">
+                                                <a id="lnkCopyAccProvince" class="lnkCopy">复制</a>
+                                            <div class="zclip" id="zclip-ZeroClipboardMovie_3" style="position: absolute; left: 100px; top: 8px; width: 24px; height: 17px; z-index: 99;"><embed id="ZeroClipboardMovie_3" src="ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_3" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=3&width=24&height=17" wmode="transparent" width="24" height="17" align="middle"></div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="BaseMainContent_DepositMainContent_Label3">城市／城镇</span>:
+                                    </td>
+                                    <td>
+                                        <span id="CityLbl">石家庄</span>
+                                    </td>
+                                    <td>
+                                        <div id="BaseMainContent_DepositMainContent_divCity" class="Btn" style="position: relative;">
+                                            <div class="blueCopyShortBtn copyHeight">
+                                                <a id="lnkCopyAccCity" class="lnkCopy">复制</a>
+                                            <div class="zclip" id="zclip-ZeroClipboardMovie_4" style="position: absolute; left: 100px; top: 8px; width: 24px; height: 17px; z-index: 99;"><embed id="ZeroClipboardMovie_4" src="ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_4" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=4&width=24&height=17" wmode="transparent" width="24" height="17" align="middle"></div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="BaseMainContent_DepositMainContent_Label5">分行</span>:
+                                    </td>
+                                    <td>
+                                        <span id="BranchLbl">体育南大街支行</span>
+                                    </td>
+                                    <td>
+                                        <div id="BaseMainContent_DepositMainContent_divBranch" class="Btn" style="position: relative;">
+                                            <div class="blueCopyShortBtn copyHeight">
+                                                <a id="lnkCopyAccBranch" class="lnkCopy">复制</a>
+                                            <div class="zclip" id="zclip-ZeroClipboardMovie_5" style="position: absolute; left: 100px; top: 8px; width: 24px; height: 17px; z-index: 99;"><embed id="ZeroClipboardMovie_5" src="ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_5" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=5&width=24&height=17" wmode="transparent" width="24" height="17" align="middle"></div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                               
+                            </tbody></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div id="remarkContainer" class="box" style="display: none; border: 1px solid grey;">
+            <a href="#" onclick="showHide_Remark('RemarkDetail');">
+                        <h2 style="background-color: rgb(37, 170, 226); color: White; height: 25px; padding: 10px 10px 5px; font-size: 16px;">
+                            <label id="ShowHideRemark" style="cursor: pointer;">[-]</label>
+                            <span id="BaseMainContent_DepositMainContent_Label2">注意事项</span>
+                        </h2>
+                    </a>
+                    <div id="RemarkDetail" style="padding: 10px 0px 0px 10px;">
+                        <p>
+                             易支付/招行支付宝掉单； 请提供存款截图
+                        </p>
+                    </div>
+                </div>
+    </div>
+    <div id="lbtable1" class="table1">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                
+                    <td class="table_sub1" width="5%"></td>
+                
+                <td class="table_sub1 labels_alignment">
+                    存入金额:<span class="red">*</span>
+                </td>
+                <td class="" width="60%">
+                    <div class="inputError tdAmount">
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount" maxlength="7" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtAmount" class="signup_input" updateaftercallback="False" oncopy="return false;" onpaste="return false" type="text">
+                        
+                    </div>
+                     
+                </td>
+            </tr>
+            
+        </tbody></table>
+
+        <div id="BaseMainContent_DepositMainContent_UpdatePanel1">
+    
+                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$btnReload" id="btnReload" src="loading_search.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$btnReload&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height: 20px; width: 20px; display: none;" type="image">
+                <div style="text-align: center;">
+                <div id="BaseMainContent_DepositMainContent_upProgress" style="display: none;" role="status" aria-hidden="true">
+        
+                    <img alt="" src="loading_small.gif">
+                    
+    </div>
+                </div>
+                <div id="pnlContent" style="width: 100%;">
+        
+    <div id="bonus">
+        <div class="header">
+            注意，前方发现优惠红利一只，可供您选择申请：
+        </div>
+        <div id="lists">
+            <table id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses">
+            <tbody><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_0" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="106939" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses$0\',\'\')', 0)" type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_0">【体育博彩】新会员100%首存红利，最高1288元，25倍流水 - [点击申请]</label></td>
+            </tr><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_1" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="106940" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses$1\',\'\')', 0)" type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_1">体育博彩10%红利最高888元，10倍流水, 火爆申请中! - [我也参加]</label></td>
+            </tr><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_2" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="0" checked="checked" type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_2">下回再参与！</label></td>
+            </tr>
+        </tbody></table>
+            
+            
+        </div>
+        
+        <div id="bonus_msg">
+            乐天使提示::<br>
+            会员在任意游戏账户、同一时间仅可申请一项红利。<br>须完成已申请红利的要求后，方可在同一个账户申请其他优惠红利。<br>
+            例：会员须在完成体育博彩首存红利要求后，才可申请体育博彩再存红利。<br>
+        </div>
+    </div>
+
+    </div>
+
+                
+</div>
+    </div>
+    <div id="lbtable2" class="table1">
+        <table class="hidetable1row" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr id="panelAcc">
+    <td class="table_sub1" width="5%">
+                </td>
+    <td class="table_sub1" style="padding-bottom: 10px;" align="right">
+                    存款银行账号<br>（最后5个号码）<span class="red">*</span>
+                </td>
+    <td width="60%">
+                    <div class="inputError">
+                        <div id="BaseMainContent_DepositMainContent_UpdatePanel3">
+                                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$TxtAccLastFive" value="19208" maxlength="5" id="TxtAccLastFive" class="signup_input" type="text">
+                            </div>
+                    </div>
+                </td>
+</tr>
+
+            
+            <tr>
+                <td class="table_sub1">
+                </td>
+               <td class="table_sub1" align="right">
+                    存款時間:<span class="red">*</span>
+                </td>
+                <td class="">
+                    <div class="inputError">
+                        <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlHour" id="ddlHour" class="timepicker">
+    <option value="00">00</option>
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option selected="selected" value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+
+</select>
+                         &nbsp; :&nbsp;
+                        <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlMinute" id="ddlMinute" class="timepicker">
+    <option value="00">00</option>
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="49">49</option>
+    <option value="50">50</option>
+    <option value="51">51</option>
+    <option value="52">52</option>
+    <option value="53">53</option>
+    <option value="54">54</option>
+    <option selected="selected" value="55">55</option>
+    <option value="56">56</option>
+    <option value="57">57</option>
+    <option value="58">58</option>
+    <option value="59">59</option>
+
+</select>
+                        &nbsp; :&nbsp;
+                        <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlSecond" id="ddlSecond" class="timepicker">
+    <option value="00">00</option>
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option selected="selected" value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="49">49</option>
+    <option value="50">50</option>
+    <option value="51">51</option>
+    <option value="52">52</option>
+    <option value="53">53</option>
+    <option value="54">54</option>
+    <option value="55">55</option>
+    <option value="56">56</option>
+    <option value="57">57</option>
+    <option value="58">58</option>
+    <option value="59">59</option>
+
+</select>
+                    </div>
+                    
+                </td>
+            </tr>
+
+            
+            <tr>
+                <td class="table_sub1">
+                </td>
+                <td class="table_sub1" align="right">
+                    存款收据:
+                </td>
+                <td class="">
+                     <div style="position: absolute;">
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$ReceiptUpload" id="ReceiptUpload" tabindex="1" style="height: 25px; width: 233px; opacity: 0;" type="file"><br>
+                    </div>
+                    <div class="inputError">
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtReplaceUpload" id="txtReplaceUpload" class="signup_input" style="width: 156px; vertical-align: top;" type="text">
+                        <input id="Button1" value="游览..." type="button">
+                        <label class="error success specialForFileUpload" style="display: none;"></label>
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$hfHasRightFormat" id="hfHasRightFormat" value="true" type="hidden">
+                    </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="table_sub1">
+                </td>
+                <td class="table_sub1" align="right">
+                    银行类型:
+                </td>
+                <td>
+                    <div class="inputError">
+                        <div id="dvDdlBankType">
+                            <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlBankType" id="ddlBankType" tabindex="1" class="signup_input" style="height: 25px; width: 230px;">
+    <option value="IB">跨行转账</option>
+    <option value="IBT">同行转账</option>
+    <option value="ATM">自动柜员机转账</option>
+    <option value="Cash-ATM">无卡转账</option>
+    <option value="OTC">柜台转账</option>
+    <option value="MB">手机转账</option>
+
+</select>
+                            
+              
+                        </div>
+                        <div id="dvImgPopup">
+                            <img id="imgQuestion" alt="" src="questionmark.jpg" clientidmode="Static" style="vertical-align: middle; height: 20px; width: 22px; cursor: pointer;">    
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="popupTooltip" style="display: none;">
+                        <div id="dvTooltipHeader">
+                            <div id="dvTooltipHeaderText">
+                                注意
+                            </div>   
+                        </div>
+                        <div id="dvTooltipContent">
+                            <div id="dvTooltipContentText">
+                                <div id="ContentBT" class="ContentText">
+                                    <b>跨行转账 </b>- 若您所使用银行与所提供银行不一样,请登入您的网络银行转账至所提供账户 (例: 农行转账至建行)    
+                                </div>
+                                <div id="ContentBTT" class="ContentText">
+                                    <b>同行转账 </b>- 若您所使用的银行与所提供银行相同,请登入您网络银行进行转账.(例: 建行转账至建行)    
+                                </div>
+                                <div id="ContentATM" class="ContentText">
+                                    <b>自动柜员机转账 </b>- 到您附近的ATM将款项转账至所提供账户    
+                                </div>
+                                <div id="ContentCashATM" class="ContentText">
+                                    <b>无卡转账 </b>- 到所提供账户所属银行ATM进行现金存入    
+                                </div>
+                                <div id="ContentOTC" class="ContentText">
+                                    <b>柜台转账 </b>- 到您最近银行将款项转到所提供银行账户    
+                                </div>
+                                <div id="ContentMBT" class="ContentText">
+                                    <b>手机转账 </b>- 在您手机银行进行转账至所提供账户    
+                                </div>
+                            </div>
+                        </div>
+                        <div id="dvTooltipFooter">
+                            <div id="dvTooltipFooterText">
+                                <a href="http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
+                                需要帮助吗？</a>
+                            </div>    
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="table_sub1">
+                    <span class="aspNetDisabled"><input id="ckPreferAcc" name="ctl00$ctl00$BaseMainContent$DepositMainContent$ckPreferAcc" value="ckPreferAcc" disabled="disabled" type="radio"></span>
+                </td>
+                <td class="table_sub1" align="right">
+                    <label for="ckPreferAcc">
+                        首选账户
+                    </label>
+                </td>
+                <td>
+                    <div class="inputError">
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtPreferBank" id="txtPreferBank" type="hidden">
+                        <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlPreferBank" id="ddlPreferBank" tabindex="1" class="signup_input" disabled="disabled" style="height: 25px; width: 230px;">
+
+</select>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+        <div id="divUsedAcc" style="display: none;">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="table_sub1" width="5%">
+                    </td>
+                    <td class="table_sub1 labels_alignment">
+                        存款人姓名:
+                    </td>
+                    <td width="60%">
+                        <div class="inputError">
+                            <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtUsedName" id="txtUsedName" class="signup_input fontsize12" value="" disabled="disabled" type="text">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_sub1">
+                    </td>
+                    <td class="table_sub1" align="right">
+                        银行名称:
+                    </td>
+                    <td>
+                        <div class="inputError">
+                            <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtUsedBank" maxlength="50" id="txtUsedBank" class="signup_input fontsize12" size="20" value="" disabled="disabled" type="text">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_sub1">
+                    </td>
+                    <td class="table_sub1">
+                        银行账号:
+                    </td>
+                    <td>
+                        <div class="inputError">
+                            <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtUsedAcc" maxlength="50" id="txtUsedAcc" class="signup_input fontsize12" size="20" value="" disabled="disabled" type="text">
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td class="table_sub1" width="5%">
+                    <input id="ckNewAcc" name="ctl00$ctl00$BaseMainContent$DepositMainContent$ckNewAcc" value="ckNewAcc" checked="checked" type="radio">
+                </td>
+                <td class="table_sub1 labels_alignment">
+                    <label for="ckNewAcc">
+                        新账户 
+                    </label>
+                </td>
+                <td width="60%">
+                    <div class="inputError">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+        <div id="divNewAcc" style="display: block;">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="table_sub1" width="5%">
+                    </td>
+                    <td class="table_sub1 labels_alignment">
+                        存款人姓名:<span class="red">*</span>
+                    </td>
+                    <td width="60%">
+                        <div class="inputError">
+                            <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtFullName" maxlength="50" id="txtFullName" class="signup_input" value="" placeholder="请用中文输入正确全名" type="text">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_sub1">
+                    </td>
+                    <td class="table_sub1" align="right">
+                        银行名称:<span class="red">*</span>
+                    </td>
+                    <td>
+                        <div class="inputError" style="width: 230px; overflow: hidden;">
+                            <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlBankName" id="ddlBankName" tabindex="1" class="signup_input" style="height: 25px; width: 230px;">
+    <option value="工商银行" selected="selected">工商银行</option>
+    <option value="招商银行">招商银行</option>
+    <option value="建设银行">建设银行</option>
+    <option value="农业银行">农业银行</option>
+    <option value="交通银行">交通银行</option>
+    <option value="中国银行">中国银行</option>
+    <option value="上海浦东发展银行">上海浦东发展银行</option>
+    <option value="广东发展银行">广东发展银行</option>
+    <option value="东莞农村商业银行">东莞农村商业银行</option>
+    <option value="中信银行">中信银行</option>
+    <option value="中国民生银行">中国民生银行</option>
+    <option value="中国邮政银行">中国邮政银行</option>
+    <option value="兴业银行">兴业银行</option>
+    <option value="华夏银行">华夏银行</option>
+    <option value="平安银行">平安银行</option>
+    <option value="广西农村信用社">广西农村信用社</option>
+    <option value="广州银行">广州银行</option>
+    <option value="南京银行">南京银行</option>
+    <option value="广州农村商业银行">广州农村商业银行</option>
+    <option value="光大银行">光大银行</option>
+    <option value="温州银行">温州银行</option>
+    <option value="重庆农村商业银行">重庆农村商业银行</option>
+    <option value="上海农商银行">上海农商银行</option>
+    <option value="浙江省农村信用社">浙江省农村信用社</option>
+    <option value="厦门银行">厦门银行</option>
+    <option value="福建省农村信社农商银行">福建省农村信社农商银行</option>
+    <option value="珠海华润银行">珠海华润银行</option>
+    <option value="广东省农信">广东省农信</option>
+    <option value="北京银行">北京银行</option>
+    <option value="东莞银行">东莞银行</option>
+    <option value="上海银行">上海银行</option>
+    <option value="渤海银行">渤海银行</option>
+    <option value="浙商银行">浙商银行</option>
+    <option value="杭州银行">杭州银行</option>
+    <option value="0">其他银行</option>
+
+</select>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="rowotherbank" style="display: none;">
+                    <td class="table_sub1" width="5%">
+                    </td>
+                    <td class="table_sub1 labels_alignment">
+                    </td>
+                    <td width="60%">
+                        <div class="inputError">
+                            <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtAccOtherBank" id="txtAccOtherBank" class="signup_input" size="20" value="" type="text">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_sub1">
+                    </td>
+                    <td class="table_sub1" align="right">
+                        银行账号:<span class="red">*</span>
+                    </td>
+                    <td>
+                        <div class="inputError">
+                            <div class="divBankAcc" style="display: block;">
+                                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtBankAcc" maxlength="20" id="txtBankAcc" class="signup_input" value="" type="text">
+                            </div>
+                            <div class="divVietBankAcc" style="display: none;">
+                                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtSpecialBankAcc" maxlength="20" id="txtSpecialBankAcc" class="signup_input" value="" type="text">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+   
+    <div class="table2">
+        <div id="divRmb" style="display: block;">
+            <input id="ckRmbBank" name="ctl00$ctl00$BaseMainContent$DepositMainContent$ckRmbBank" checked="checked" type="checkbox">
+            <span id="BaseMainContent_DepositMainContent_lblRmbBank">记住我的银行信息</span>
+        </div>
+        <div class="dividerLB">
+        </div>
+        <table>
+            <tbody><tr>
+                <td>
+                    <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$BtnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">提交</a>
+                </td>
+                <td>
+                    <a id="BtnCancel" class="Btn whiteMedBtn">
+                        取消
+                    </a>      
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+                
+                <div class="formEmail">
+                    如果有疑问请点击 "<a onclick="window.open('/zh-CN/Info-Center/Help/Banking-Info/Deposit', '_blank')">存款帮助</a>" 页面，或联系
+                    "<a href="http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif" target="_blank" onclick="open_new_window(this.href, 'http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif'); return false;">在线客服</a>"
+                    <br>乐天使客服7*24小时为您服务<br>邮箱:
+                    <a href="mailto:cs@fun88.com" id="BaseMainContent_mailHref">
+                            cs@fun88.com</a>
+                    </div>
+                    
+
+</body>
+</html>

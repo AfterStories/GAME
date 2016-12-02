@@ -1,0 +1,1823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb" class="yui3-js-enabled">
+<head>
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
+
+</title>
+    <link href="bundleCss.css" rel="stylesheet" type="text/css">
+    
+    <link href="master.payment.css" rel="stylesheet" type="text/css">
+    <link href="master.button.css" rel="stylesheet" type="text/css">
+    <link href="master.transactionhistory.css" rel="stylesheet" type="text/css">
+    <link href="master.bonuslisting.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+
+#DepositLimitInfo_ShowDepositLimitInfo { width: 222px; border: 1px solid rgb(219, 219, 219); padding: 3px; margin-top: 10px; }
+.termsTitle1_ShowDepositLimitInfo { background-color: rgb(37, 170, 226); font-size: 24px; text-transform: uppercase; height: 43px; padding: 13px 0px 0px 15px; margin-top: 10px; }
+#LD_Title { font-size: 14px; background-color: rgb(37, 170, 226); color: rgb(255, 255, 255); height: 18px; padding: 10px 10px 10px 20px; }
+#LD_BankType { text-align: center; padding: 10px; height: 18px; }
+.DepositLimit_Label { border: 1px solid rgb(219, 219, 219); background-color: rgb(128, 128, 128); color: white; width: 50%; padding: 5px; }
+.DepositLimitAmount { text-align: center; width: 50%; border: 1px solid rgb(219, 219, 219); padding-left: 2px; padding-right: 0px; }
+.LBTutorialBtn { background: transparent url("LBTutorialBtn_white.png") no-repeat scroll 0px 0px; border: 0px none; color: rgb(0, 0, 0); font-size: 11px; width: 165px; padding: 6px 0px 9px; text-align: center; margin-left: 368px; top: 45px; position: absolute; cursor: pointer; }
+.LBTutorialBtn:hover { background: transparent url("LBTutorialBtn_grey.png") no-repeat scroll 0px 0px; }
+#sliderLB { bottom: 0px; display: none; height: 420px; left: 0px; margin-left: auto; margin-right: auto; position: fixed ! important; right: 480px; top: 243px; width: 600px; z-index: 101; }
+#sliderLB ul { list-style: outside none none; width: 600px; height: 420px; }
+#sliderLB ul li { position: absolute; }
+#next { position: relative; top: 101px; z-index: 1; float: left; left: 525px; width: 30px; height: 40px; background-color: white; }
+#prev { position: relative; top: 58px; z-index: 1; float: right; right: -70px; width: 30px; height: 40px; background-color: white; }
+#win7Redirect { width: 155px; height: 40px; position: relative; top: -345px; left: 100px; cursor: pointer; text-decoration: underline; background: transparent url("win7.png") repeat scroll 0% 0%; }
+#keyboardRedirect { width: 155px; height: 40px; position: relative; top: -385px; left: 345px; cursor: pointer; background: transparent url("keyboard.png") repeat scroll 0% 0%; }
+#QQRedirect { width: 155px; height: 40px; position: relative; top: -375px; left: 100px; cursor: pointer; background: transparent url("QQ.png") repeat scroll 0% 0%; }
+#sougouRedirect { width: 155px; height: 40px; position: relative; top: -415px; left: 345px; cursor: pointer; background: transparent url("sougou.png") repeat scroll 0% 0%; }
+#cboxClose { top: 0px; left: 560px; background: transparent url("controls.png") no-repeat scroll -25px 0px; display: block; width: 25px; height: 25px; }
+#cboxClose:hover { background-position: -25px -25px; }
+.LBTutorialBtn {  }
+#sliderLB {  }
+#next {  }
+#prev {  }
+#cboxClose {  }
+</style>
+
+<style id="style-1-cropbar-clipper">
+
+.en-markup-crop-options { top: 18px ! important; left: 50% ! important; margin-left: -100px ! important; width: 200px ! important; border: 2px solid rgba(255, 255, 255, 0.38) ! important; border-radius: 4px ! important; }
+.en-markup-crop-options div div:first-of-type { margin-left: 0px ! important; }
+</style><style charset="utf-8" type="text/css" class="firebugResetStyles">
+
+.firebugResetStyles { z-index: 2147483646 ! important; top: 0px ! important; left: 0px ! important; display: block ! important; border: 0px none ! important; margin: 0px ! important; padding: 0px ! important; outline: 0px none ! important; min-width: 0px ! important; max-width: none ! important; min-height: 0px ! important; max-height: none ! important; position: fixed ! important; transform: rotate(0deg) ! important; transform-origin: 50% 50% 0px ! important; border-radius: 0px ! important; box-shadow: none ! important; background: transparent none repeat scroll 0% 0% ! important; pointer-events: none ! important; white-space: normal ! important; }
+style.firebugResetStyles { display: none ! important; }
+.firebugBlockBackgroundColor { background-color: transparent ! important; }
+.firebugResetStyles::before, .firebugResetStyles::after { content: "" ! important; }
+.firebugCanvas { display: none ! important; }
+.firebugLayoutBox { width: auto ! important; position: static ! important; }
+.firebugLayoutBoxOffset { opacity: 0.8 ! important; position: fixed ! important; }
+.firebugLayoutLine { opacity: 0.4 ! important; background-color: rgb(0, 0, 0) ! important; }
+.firebugLayoutLineLeft, .firebugLayoutLineRight { width: 1px ! important; height: 100% ! important; }
+.firebugLayoutLineTop, .firebugLayoutLineBottom { width: 100% ! important; height: 1px ! important; }
+.firebugLayoutLineTop { margin-top: -1px ! important; border-top: 1px solid rgb(153, 153, 153) ! important; }
+.firebugLayoutLineRight { border-right: 1px solid rgb(153, 153, 153) ! important; }
+.firebugLayoutLineBottom { border-bottom: 1px solid rgb(153, 153, 153) ! important; }
+.firebugLayoutLineLeft { margin-left: -1px ! important; border-left: 1px solid rgb(153, 153, 153) ! important; }
+.firebugLayoutBoxParent { border-width: 0px 1px 1px 0px ! important; border-style: none dashed dashed none ! important; border-color: -moz-use-text-color rgb(238, 0, 0) rgb(238, 0, 0) -moz-use-text-color ! important; position: fixed ! important; width: auto ! important; }
+.firebugRuler { position: absolute ! important; }
+.firebugRulerH { top: -15px ! important; left: 0px ! important; width: 100% ! important; height: 14px ! important; background: transparent url("data:image/png") repeat-x scroll 0% 0% ! important; border-top: 1px solid rgb(187, 187, 187) ! important; border-right: 1px dashed rgb(187, 187, 187) ! important; border-bottom: 1px solid rgb(0, 0, 0) ! important; }
+.firebugRulerV { top: 0px ! important; left: -15px ! important; width: 14px ! important; height: 100% ! important; background: transparent url("data:image/png") repeat-y scroll 0% 0% ! important; border-left: 1px solid rgb(187, 187, 187) ! important; border-right: 1px solid rgb(0, 0, 0) ! important; border-bottom: 1px dashed rgb(187, 187, 187) ! important; }
+.overflowRulerX > .firebugRulerV { left: 0px ! important; }
+.overflowRulerY > .firebugRulerH { top: 0px ! important; }
+.fbProxyElement { position: fixed ! important; pointer-events: auto ! important; }
+</style>
+</head>
+<body id="uiHtmlBody" style="display: block;" class=" lang-zh-CN" lang="zh-CN">
+    
+    
+    
+    <script type="text/javascript" src="jquery-1.12.2.min.js"> </script>
+    
+    <script type="text/javascript" src="jquery-qrcode-0.14.0.min.js" async=""></script>
+    <script src="bundleJquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="master.yui.js" async=""></script>
+    <script type="text/javascript" src="master.js" async=""></script>
+    <script type="text/javascript" src="master.payment.crawler.js" async=""></script>
+    <script src="master.transaction.js" type="text/javascript"></script>
+    <script src="../lib/pulg/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        var g_Cookie_PopUpWelcome = "PopUpWelcome";
+        function getCookie(c_name) {
+            var c_value = document.cookie;
+            var c_start = c_value.indexOf(" " + c_name + "=");
+            if (c_start == -1) {
+                c_start = c_value.indexOf(c_name + "=");
+            }
+            if (c_start == -1) {
+                c_value = null;
+            }
+            else {
+                c_start = c_value.indexOf("=", c_start) + 1;
+                var c_end = c_value.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = c_value.length;
+                }
+                c_value = unescape(c_value.substring(c_start, c_end));
+            }
+            return c_value;
+        }
+        function setCookie(c_name, value, exdays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+            document.cookie = c_name + "=" + c_value;
+        }
+        function deleteCookie(cname) {
+            CreateCookie(cname, "", -1);
+            document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+        function isCookieExist(strCookieKey) {
+            var cookieValue = $.cookie(strCookieKey);
+            if ($.cookie(strCookieKey) == "" || $.cookie(strCookieKey) == null || $.cookie(strCookieKey) == "undefined") {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function createCookie(strCookieKey) {
+            $.cookie(strCookieKey, 1,
+            {
+                expires: 3650
+            });
+        }
+        function deleteCookie(strCookieKey) {
+            $.removeCookie(strCookieKey);
+        }
+        $(document).keypress(function (evt) {
+            evt = (evt) ? evt : ((event) ? event : null);
+            var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+            if ((evt.keyCode == 13) && (node.type == "text" || node.type == "password")) {
+                if (node.id == "UserName" && node.value) {
+                    if ($("#Password").val()) {
+                        $("#login .button").click();
+                    } else {
+                        $("#Password").focus();
+                    }
+                }
+                if (node.id == "Password" && node.value) {
+                    if ($("#UserName").val()) {
+                        $("#login .button").click();
+                    } else {
+                        $("#UserName").focus();
+                    }
+                }
+                if (node.id == "txtUsn" && node.value) {
+                    if ($("#txtPwd").val()) {
+                        $(".PL_login_btn .PL_button").click();
+                    } else {
+                        $("#txtPwd").focus();
+                    }
+                }
+                if (node.id == "txtPwd" && node.value) {
+                    if ($("#txtUsn").val()) {
+                        $(".PL_login_btn .PL_button").click();
+                    } else {
+                        $("#txtUsn").focus();
+                    }
+                }
+                return false;
+            }
+            return true;
+        });
+    </script>
+
+<script src="jquery.numeric.js" type="text/javascript"></script>
+<script src="jquery.validate.js" type="text/javascript"></script>
+<script src="jquery.metadata.min.js" type="text/javascript"></script>
+<script src="master.payment.js" type="text/javascript"></script>
+<form id="MainForm" novalidate="novalidate">
+
+    <script type="text/javascript" language="javascript">
+        $(document.body).ready(function () {
+            var tab = $(".hidBankCode").html();
+            var counter = 0;
+            $("#tblDepositMethod td").each(function () {
+                var activeTab = $(this).find('span').text();
+                counter++;
+                if (tab == activeTab) {
+                    $(this).addClass("active");
+                }
+            });
+
+            if (counter == 1) {
+                $("#navigation").css("display", "none");
+            }
+        
+            //$("#txtAmount").numeric({ precision: 2, negative: false }, function () { this.value = ""; this.focus(); });            
+
+            $(".btnTab").click(function () {
+                getLoading();
+            });
+
+            $(".btnTab").addClass("btnsIn4");
+
+            $.validator.addMethod("regex", function (value, element, regexp) {
+                var check = false;
+                var re = new RegExp(regexp);
+                return this.optional(element) || re.test(value);
+            }, "");
+
+            //Show and Hide Wallet Legend
+            $(".WalletLegend").css("display", "none");
+
+            $(".tooltip_AccountSummary").mouseleave(function () {
+                $(".WalletLegend").delay(800).hide("slow");
+            });
+
+            $(".tooltip_AccountSummary").click(function () {
+                $(".WalletLegend").show("slow");
+            });
+
+            $("body").append("<a id=\"colorboxIndicator\" style=\"position:absolute;\"></a>");
+
+            $('#closeButton').click(function () {
+                window.location = "htcmd:close";
+            });
+
+            // Prevent Iovation and Alert show togehter to prevent conflict
+            if ($("#colorbox").css("display") == "block") {
+                $("#msgDialog").dialog("close");
+            }
+
+            /*截屏小助手*/
+            $(".LBTutorialBtn").click(function () {
+                DPSorting();
+                $("#sliderLB").css("display", "block");
+            });
+
+            var slideCount = $('#sliderLB ul li').length;
+            var slideWidth = $('#sliderLB ul li').width();
+            var slideHeight = $('#sliderLB ul li').height();
+            var sliderUlWidth = slideCount * slideWidth;
+
+            $('#sliderLB').css({ width: slideWidth, height: slideHeight });
+
+            function moveLeft() {
+                $('#sliderLB ul').animate({
+                    left: +slideWidth
+                }, 200, function () {
+                    $('#sliderLB ul li:last-child').prependTo('#sliderLB ul');
+                    $('#sliderLB ul').css('left', '');
+                });
+            };
+
+            function moveRight() {
+                $('#sliderLB ul').animate({
+                    left: -slideWidth
+                }, 200, function () {
+                    $('#sliderLB ul li:first-child').appendTo('#sliderLB ul');
+                    $('#sliderLB ul').css('left', '');
+                });
+            };
+
+            $('#win7Redirect').click(function (e) {
+                $('#sliderLB ul li > img[id=win7_s1]').closest("li").appendTo('#sliderLB ul');
+            });
+
+            $('#keyboardRedirect').click(function () {
+                $('#sliderLB ul li > img[id=win7_s1]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=win7_s2]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=win7_s3]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=keyboard_s1]').closest("li").appendTo('#sliderLB ul');
+            });
+
+            $('#QQRedirect').click(function () {
+                $('#sliderLB ul li > img[id=win7_s1]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=win7_s2]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=win7_s3]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=keyboard_s1]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=keyboard_s2]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=QQ_s1]').closest("li").appendTo('#sliderLB ul');
+            });
+
+            $('#sougouRedirect').click(function () {
+                $('#sliderLB ul li > img[id=win7_s1]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=win7_s2]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=win7_s3]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=keyboard_s1]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=keyboard_s2]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=QQ_s1]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=QQ_s2]').closest("li").appendTo('#sliderLB ul');
+                $('#sliderLB ul li > img[id=sougou_s1]').closest("li").appendTo('#sliderLB ul');
+            });
+
+            $('a#prev').click(function () {
+                moveLeft();
+            });
+
+            $('a#next').click(function () {
+                moveRight();
+            });
+
+            $('#cboxClose').click(function () {
+                $("#sliderLB").css("display", "none");
+            });
+        });
+        /*Sort Slide*/
+        function DPSorting() {
+            $("#sliderLB > ul > li").sort(function (a, b) {
+                if (($(a).attr("data-sort") > $(b).attr("data-sort"))) {
+                    return 1;
+                } else if (($(a).attr("data-sort") == $(b).attr("data-sort"))) {
+                    return 0;
+                } else {
+                    return -1;
+                }
+            }).each(function () {
+                $(this).appendTo($("#sliderLB > ul"));
+        });
+            //$('#cboxClose').click(function () {
+            //    //$('#sliderLB ul li:last-child').prependTo('#sliderLB ul');
+            //    $("#sliderLB").css("display", "none");
+            //});    
+        }
+    </script>
+
+    <div id="container" style="width: 950px;">
+        <input name="ctl00$ctl00$BaseMainContent$hidblackbox" id="BaseMainContent_hidblackbox" type="hidden">
+        <!-- Header -->
+        <div id="header2">
+            <div class="clear">
+            </div>
+            <div class="termsTitle1">
+                <div class="divTitle">
+                    存款充值
+                </div>
+                
+                <a class="Btn" id="liveChatBtn" href="http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif" onclick="javascript:open_new_window(this.href); return false;">
+                    <div class="liveChatMedBtn margin0">
+                        在线客服
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Left col -->
+        <div id="leftcol" style="width: 20%;">
+            <div id="leftcol_content">
+                <div class="termsTitle2">
+                    <div class="AccountSummary_Text">
+                        账户余额
+                    </div>
+
+                    <div class="tooltip_AccountSummary">
+                        <span id="BaseMainContent_Label1">?</span>
+                    </div>
+                </div>
+                <span id="AccountBalanceContent"><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletMAIN" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>主账户</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="MAIN">
+                            <span class="walletBal">RMB 510.00</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletSP" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>体育博彩</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="SP">
+                            <span class="walletBal">RMB 104.05</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletIPSB" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>IM 体育</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="IPSB">
+                            <span class="walletBal">N/A</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletBFR" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>必发交易</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="BFR">
+                            <span class="walletBal">N/A</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletGD" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>北方堂 (GD)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="GD">
+                            <span class="walletBal">RMB 0.00</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletAG" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>至尊堂 (AG)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="AG">
+                            <span class="walletBal">RMB 69.00</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletSAG" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>沙龙厅 (SAG)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="SAG">
+                            <span class="walletBal">N/A</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletAB" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>隆运堂 (欧博)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="AB">
+                            <span class="walletBal">N/A</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletSUN" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>太阳厅<br>(申博太阳)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="SUN">
+                            <span class="walletBal">N/A</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletEA" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>东方堂 (EA)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="EA">
+                            <span class="walletBal">N/A</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletOPUS" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>凯旋堂 (OPUS)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="OPUS">
+                            <span class="walletBal">N/A</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletBOY2" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>波音堂 (波音)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="BOY2">
+                            <span class="walletBal">N/A</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletCP" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>南方堂 (CP)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="CP">
+                            <span class="walletBal">N/A</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletPT" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>百乐城 (PT)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="PT">
+                            <span class="walletBal">RMB 0.82</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletSLOT" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>乐游戏</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="SLOT">
+                            <span class="walletBal">RMB 24.00</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletPK" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>欢乐彩 (IM)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="PK">
+                            <span class="walletBal">RMB 100.00</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletLBK" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>优乐彩 (LB)</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="LBK">
+                            <span class="walletBal">N/A</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span><br><span>
+        <div class="items">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="walletTotalBal" width="3%">
+                        &nbsp;
+                    </td>
+                    <td width="40%">
+                        <div class="BalTitle">
+                            <span>总余额</span>
+                        </div>
+                    </td>
+                    <td width="1%">
+                        :
+                    </td>
+                    <td width="56%">
+                        <div class="BalAmt" id="TotalBal">
+                            <span class="walletBal">RMB 807.87</span>                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </span></span>
+
+<script type="text/javascript" src="jquery.ajaxqueue.min.js"></script>
+<script type="text/javascript" language="javascript">
+    var count = 0;
+    var currentTotal = 0;
+
+    $(document).ready(function () {
+        var done = $("span.walletBal").length - 1;
+
+        var currency = 'CNY';
+        if (currency == "CNY") {
+            currency = "RMB";
+        }
+
+        $("div.BalAmt").each(function () {
+            var walletId = $(this).attr('id');
+            if (walletId != "TotalBal") {
+                $.post("/Services/SingleBalance.ashx", { culture: 'zh-CN', account: walletId},
+                    function(data) {
+                        var bal = data["Balance"];
+                        $("div#" + data["Name"] + " span.walletBal").text(data["FormattedBalance"]);
+                        done -= 1;
+
+                        if (bal > 0) {
+                            currentTotal += bal;
+                        }
+                        if (done == 0) {
+                            var chgTwoDecimal = currentTotal.toFixed(2);
+                            var displayTotal = addCommas(chgTwoDecimal);
+                            $("div#TotalBal span.walletBal").text(currency + " " + displayTotal);
+                        }
+                    }
+                );
+            }
+        });
+    });
+</script>
+                <div class="acc_msg">
+                    您可进行以下操作
+                </div>
+                <div class="Btn">
+                    <a href="Deposit/Savings/index.html" class="blueMedBtn" target="tabContent">
+                        转账
+                    </a>
+                   
+                </div>
+                <div class="Btn">
+                    <a href="Deposit/Drawings/index.html" class="blueMedBtn" target="tabContent">
+                        提款
+                    </a>
+                </div>
+                
+                <div class="Btn">
+                    <a href="Deposit/SOS/index.html" class="greenMedBtn" target="tabContent">
+                        SOS救援金
+                    </a>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <!-- End Left col -->
+        <!-- Right col -->
+        <div id="rightcol" style="width: 75%;">
+            
+<div class="WalletLegend" style="position: absolute; display: none;">
+    <div class="walletStyle walletStyleCN">
+        <table>
+            <tbody><tr class="WalletLegendTittle">
+                <th style="width: 35%;">
+                    <div class="ColorLegendProperty">
+                        颜色</div>
+                </th>
+                <th style="width: 65%;">
+                    <div class="ColorLegendProperty">
+                        代表</div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ColorLegendProperty walletMAIN">
+                        &nbsp;</div>
+                </td>
+                <td>
+                    <div class="ColorLegendMeaning">
+                        主账户</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <div class="ColorLegendProperty walletSport">
+                        &nbsp;</div>
+                </td>
+                <td>
+                    <div class="ColorLegendMeaning">
+                        体育博彩</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <div class="ColorLegendProperty walletCasino">
+                        &nbsp;</div>
+                </td>
+                <td>
+                    <div class="ColorLegendMeaning">
+                        真人娱乐场</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <div class="ColorLegendProperty walletKeno">
+                        &nbsp;</div>
+                </td>
+                <td>
+                    <div class="ColorLegendMeaning">
+                        欢乐彩 (IM)</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <div class="ColorLegendProperty walletGame">
+                        &nbsp;</div>
+                </td>
+                <td>
+                    <div class="ColorLegendMeaning">
+                        乐游戏</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <div class="ColorLegendProperty walletIMCasino">
+                        &nbsp;</div>
+                </td>
+                <td>
+                    <div class="ColorLegendMeaning">
+                        百乐城 (PT)</div>
+                </td>
+            </tr>
+            
+        </tbody></table>
+    </div>
+</div>
+
+            <div id="navigation" style="width: 100%;">
+                <table id="tblDepositMethod" style="width: 100%; border-collapse: collapse;" cellspacing="0">
+	<tbody><tr>
+    <tr>
+		            <td class="active">
+                        
+                        <a class="uiLink02" class="" href="Deposit/Yeepay/index.html" target="tabContent">点卡充值</a>
+                        <span class="hidVal">YP</span>
+                    </td>
+
+                    <td>
+                        
+                        <a class="uiLink02" class="" href="Deposit/Debit-Card/index.html" target="tabContent">在线存款</a>
+                        <span class="hidVal">BC</span>
+                    </td>
+                    <td>
+                        
+                        <a class="uiLink02" class="" href="Deposit/Local-Bank/index.html" target="tabContent">本地银行转帐</a>
+                        <span class="hidVal">LB</span>
+                    </td>
+                    <td>
+            
+                        <a class="uiLink02" class="" href="Deposit/Alipay/index.html" target="tabContent">本地支付宝</a>
+                        <span class="hidVal">LBA</span>
+                    </td>
+                    <td>
+                        
+                        <a class="uiLink02" class="" href="Deposit/AstroPay/index.html" target="tabContent"">AstroPay</a>
+                        <span class="hidVal">AP</span>
+                    </td>
+                    <td>
+                        
+                        <a class="uiLink02" class="" href="Deposit/WeChat/index.html" target="tabContent"">v信支付</a>
+                        <span class="hidVal">WC</span>
+                    </td>
+	</tr>
+</tbody></table>
+                <input name="ctl00$ctl00$BaseMainContent$hidDepositTabName" id="hidDepositTabName" type="hidden">
+            </div>
+
+<style type="text/css">
+
+.col1 { float: left; }
+</style>
+ <script type="text/javascript">
+        $(document).ready(function () {
+            $.fn.clearForm = function () { return this.each(function () { var type = this.type, tag = this.tagName.toLowerCase(); if (tag == 'form') return $(':input', this).clearForm(); if ((type == 'text' && this.id != 'txtDepDateFrm' && this.id != 'txtDepDateTo') || type == 'password' || tag == 'textarea') this.value = ''; else if (type == 'checkbox') this.checked = false; else if (type == 'radio' && this.value == '0') this.click(); }) };
+
+            resetForm(true);
+
+            $("#MainForm").validate({
+                onsubmit: false,
+                rules: {
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardNo': {
+                        required: true,
+                        regex: "^[a-zA-Z0-9]{1,20}$",
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardPin': {
+                        required: true,
+                        regex: "^[a-zA-Z0-9]{1,20}$",
+                    }
+
+                },
+                messages: {
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardNo': {
+                        required: '卡号不可为空',
+                        regex: '无效的格式'
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardPin': {
+                        required: '密码不可为空',
+                        regex: "仅可使用字母 'A-Z', 'a-z' 和数字 '0-9'。"
+                     }
+                },
+                onkeyup: function (element, evet) {
+                    this.element(element);
+                },
+                showErrors: function (errorMap, errorList) {
+                    this.defaultShowErrors();
+                },
+                onfocusout: false,
+                invalidHandler: function (form, validator) {
+                    var errors = validator.numberOfInvalids();
+                    if (errors) {
+                    }
+                },
+
+                success: function (label) {
+                    label.text("").addClass("success");
+                }
+            });
+
+            $('#ddlCardValues option[selected="selected"]').each(
+                function () {
+                    $(this).removeAttr('selected');
+                }
+                );
+            $('#ddlCardValues option:first-child').attr("selected", "selected");
+
+
+            $('#ddlCardProvider option[selected="selected"]').each(
+               function () {
+                   $(this).removeAttr('selected');
+               }
+               );
+            $('#ddlCardProvider option:first-child').attr("selected", "selected");
+
+            
+            $('#txtDepositAmount').val($("#ddlCardValues option:first").val());
+            
+            calActualAmt();
+
+            $("#BtnSubmit").click(function () {
+                $("#btnReload").click();
+                calActualAmt();
+                var validate = $('#MainForm').valid();
+                if ($("#tempCouponStatus")) { if ($("#tempCouponStatus").val() == "fail") validate = false; }
+                if ($(".lblError").length) validate = false;
+                if (validate) getLoading();
+                return validate;
+            });
+
+        });
+
+        function calActualAmt() {
+            var cardProviderID = $("#ddlCardProvider").val();
+            $.ajax({
+                type: "POST",
+                url: "/Services/PaymentService.asmx/GetActualAmt",
+                data: "{'cardProviderID':'" + cardProviderID + "','cardValue':'" + $("#ddlCardValues option:first").val() + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    $('#txtDepositAmountAfterCharge').val(data.d + '元');
+                   
+                }
+            });
+        }
+    </script>            
+            
+<iframe class="content" id="tabContent" name="tabContent" src="Deposit/Yeepay/index.html" scrolling="no" frameborder="0" style="width: 680px;">
+                
+</iframe>
+
+ 
+            </div>
+            <!-- End Right col -->
+            <div class="clear">
+            </div>
+            <div id="header">
+                <div class="clear">
+                </div>
+                <div class="termsTitle1">
+                    <div class="divTitle">
+                        存款历史
+                    </div>
+                </div>
+                
+
+
+<script type="text/javascript">
+ /*        $("#txtDepDateFrm, #txtDepDateTo").live('click', function () {
+            $(this).parent().find('img').click();
+        });*/
+
+/*        $("#btnSearch").click(function () {
+            var dateFrom = $('#txtDepDateFrm').datepicker('getDate');
+            var dateTo = $('#txtDepDateTo').datepicker('getDate');
+            var range = ((dateTo - dateFrom) / 86400000);
+
+            if (range > 14) {
+                popUpAlert('日期必须在14天内！', '');
+                return false;
+            }
+            else {
+                getHistoryLoading();
+                return true;
+            }
+        });*/
+
+/*        $("#gvResult a").click(function () {
+            getHistoryLoading();
+        });
+    });*/
+</script>
+<style>
+
+.btn_resubmitTrans { cursor: pointer; color: white; background-color: rgb(37, 170, 225); padding: 5px 5px 4px; text-align: center; border-radius: 4px; border-style: none; }
+.btn_resubmitTrans:hover { background-color: rgb(14, 134, 184); }
+</style>
+<div class="history_nav history_depositWithdrawal">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr>
+            <td>
+                <span class="history_header history_font">
+                    <span id="litDepfrm">从：</span>
+                    <input type="text" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}'})" id="logmin" class="input-text Wdate" style="width:120px;">
+                </span>
+            </td>
+            <td>
+                <span class="history_header history_font">
+                    <span id="litDepto">至：</span>
+                    <input type="text" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d'})" id="logmax" class="input-text Wdate" style="width:120px;">
+                </span>
+            </td>
+            <td>
+                <span class="history_header history_font">
+                    <span id="BaseMainContent_TransactionHistory_litDepType">存款类型:</span>
+                    <select name="ctl00$ctl00$BaseMainContent$TransactionHistory$ddlDeptType" id="ddlDeptType" class="signup_input3 history_ddlLonger">
+	<option selected="selected" value="0">请选择</option>
+	<option value="YP">点卡充值</option>
+	<option value="BC">在线存款</option>
+	<option value="LB">本地银行转帐</option>
+	<option value="AP">Astropay</option>
+	<option value="WC">v信支付</option>
+
+</select>
+                </span>
+            </td>
+            <td>
+                <a id="btnSearch" class="Btn blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$TransactionHistory$btnSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">查找</a>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="historyContent">
+    <div id="BaseMainContent_TransactionHistory_UpdatePanel1">
+	
+            <div id="BaseMainContent_TransactionHistory_divSearchLoading" class="searchLoadingImg" style="display: none;">
+                <img alt="" src="loading_001.gif" width="32" height="32">
+            </div>
+            <div id="BaseMainContent_TransactionHistory_divLog" class="history_content" style="display: none;">
+                <div>
+
+	</div>
+            </div>
+            <div id="BaseMainContent_TransactionHistory_divNoFoundMsg" class="noFoundMsg" style="display: block;">
+                <span id="BaseMainContent_TransactionHistory_lblNoFound">没有找到记录！</span>
+            </div>
+        
+</div>
+</div>
+            </div>
+        </div>
+    
+    
+<script type="text/javascript" language="javascript">
+   
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#quickContact_OpenMenu, #quickContactContainer').toggle();
+        }, 90000);
+    });
+    
+
+
+    function generateAffiliateApk() {   
+        $.ajax({
+            type: "POST",
+            url: "/Services/AndroidAffiliate.ashx",
+            data: { AffiliateCode: affiliateCode, ProductType: "Fun88_Gaming" },
+            dataType: "json",
+            success: function (data) {
+                if (data.Success && data.ResponseUrl != null && data.ResponseUrl != "") {
+                        $('#fun88apk_dl_btn a').attr('href', data.ResponseUrl).css("display", "block");
+                        $('#qr_generator').empty();
+                        $('#qr_generator').qrcode({
+                            "render": "image",
+                            "size": 110,
+                            "color": "#3a3",
+                            "text": window.location.host + data.ResponseUrl
+                        });
+                        $('#qr_generator img').css("margin", "10px 15px 10px 18px");
+                } else {
+                    $('#fun88apk_dl_btn a').attr('href', "http://media.10010388.com/Download/Android/android-fun88.apk").css("display", "block");
+                    $('#qr_generator').empty();
+                    $('#qr_generator').qrcode({
+                        "render": "image",
+                        "size": 110,
+                        "color": "#3a3",
+                        "text": "http://media.10010388.com/Download/Android/android-fun88.apk"
+                    });
+                    $('#qr_generator img').css("margin", "10px 15px 10px 18px");
+                }
+            }
+        });          
+    }
+
+    var apkGenerated = false;
+    function genereteApkQr() {
+        if (!apkGenerated) {
+            generateAffiliateApk();
+            
+            $("#fun88APK_Container").css({'height':'342px'});
+            $("#fun88apk_dl_btn").css({'margin-top':'77px'});
+            $("#fun88apk_dl_btn").css({'margin-right':'1px'});
+            
+            apkGenerated = true;
+        }
+    }
+
+    function quickchatopenclose() {
+        if ($("#quickcontact").attr('class') == 'quickcontactcontainerbeforehover') {
+            $("#quickcontact").removeClass('quickcontactcontainerbeforehover');
+            $("#quickcontact").addClass('quickcontactcontainer');
+            $("#SOSBonuszh").css("bottom", "405px");
+            $("#SOSBonuszh").css("bottom", "446px");
+            $("#PTButton").css("bottom", "405px");
+        }
+        else {
+            $("#quickcontact").removeClass('quickcontactcontainer');
+            $("#quickcontact").addClass('quickcontactcontainerbeforehover');
+            $("#SOSBonuszh").css("bottom", "41px");
+            $("#SOSBonuszh").css("bottom", "81px");
+            $("#PTButton").css("bottom", "40px");
+        }
+    }
+  
+    $(document).ready(function() {
+        
+        $("#imgLiveChatGirl").attr("style","width: 124px; height: 203px; margin: 10px 10px -4px 10px;");
+        
+    });
+  
+</script>
+<style>
+
+.quickcontactbtn1 { background: transparent url("button-chat.png") no-repeat scroll 0% 0%; }
+.quickcontactbtn1:hover { background: transparent url("button-chat-r.png") no-repeat scroll 0% 0%; }
+.quickcontactbtn2 { background: transparent url("button-download.png") no-repeat scroll 0% 0%; }
+.quickcontactbtn2:hover { background: transparent url("button-download-r.png") no-repeat scroll 0% 0%; }
+.quickcontactbtn { width: 135px; height: 32px; margin: auto; padding-bottom: 4px; }
+.quickcontacttext { font-size: 12px; text-align: center; }
+.quickcontactemailtext { font-size: 12px; text-align: center; }
+.quickcontactemailtext:hover { color: rgb(37, 170, 225); }
+#SOSBonusvi, #SOSBonusid, #SOSBonusen, #SOSBonusth, #SOSBonusko, #SOSBonuszh, #SOSBonusja { background-image: url("btnblue.png"); right: 8%; color: white; font-size: 18px; }
+#fun88APK_Container { display: none; height: 403px; background: transparent url("fun88-apk-main.png") no-repeat scroll 0% 0%; }
+#fun88apk_dl_zh { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -146px 0px; }
+#fun88apk_dl_vi { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -146px -84px; }
+#fun88apk_dl_th { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -146px -168px; }
+#fun88apk_dl_en { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -146px -42px; }
+#fun88apk_dl_ko { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -146px -210px; }
+#fun88apk_dl_ja { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -146px -252px; }
+#fun88apk_dl_id { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -146px -126px; }
+#fun88apk_dl_id:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -282px -126px; }
+#fun88apk_livechat_zh { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -418px 0px; }
+#fun88apk_livechat_vi { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -418px -84px; }
+#fun88apk_livechat_th { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -418px -168px; }
+#fun88apk_livechat_en { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -418px -41px; }
+#fun88apk_livechat_ko { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -418px -210px; }
+#fun88apk_livechat_ja { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -418px -252px; }
+#fun88apk_livechat_id { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -418px -126px; }
+#fun88apk_dl_zh:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -282px 0px; }
+#fun88apk_dl_vi:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -282px -84px; }
+#fun88apk_dl_th:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -282px -168px; }
+#fun88apk_dl_en:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -282px -42px; }
+#fun88apk_dl_ko:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -282px -210px; }
+#fun88apk_dl_ja:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -282px -252px; }
+#fun88apk_dl_id:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -282px -126px; }
+#fun88apk_livechat_zh:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -554px 0px; }
+#fun88apk_livechat_vi:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -554px -84px; }
+#fun88apk_livechat_th:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -554px -168px; }
+#fun88apk_livechat_en:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -554px -41px; }
+#fun88apk_livechat_ko:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -554px -210px; }
+#fun88apk_livechat_ja:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -554px -252px; }
+#fun88apk_livechat_id:hover { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -554px -126px; }
+.fun88APK_OpenMenu_zh { background: transparent url("fun88-apk-sprite.png") no-repeat scroll 0px 0px; }
+.fun88APK_OpenMenu_vi { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -1px -84px; }
+.fun88APK_OpenMenu_th { background: transparent url("fun88-apk-sprite.png") no-repeat scroll 0px -168px; }
+.fun88APK_OpenMenu_en { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -1px -41px; }
+.fun88APK_OpenMenu_ko { background: transparent url("fun88-apk-sprite.png") no-repeat scroll 0px -210px; }
+.fun88APK_OpenMenu_ja { background: transparent url("fun88-apk-sprite.png") no-repeat scroll -1px -252px; }
+.fun88APK_OpenMenu_id { background: transparent url("fun88-apk-sprite.png") no-repeat scroll 0px -125px; }
+.button_layout { height: 41px; width: 145px; display: block; }
+.button_layout_WC_ALI { height: 41px; width: 135px; display: block; }
+#quickMenu { position: fixed; bottom: 0%; z-index: 999; right: 3%; }
+#quickContact_OpenMenu { background-image: url("button-a.png"); float: right; }
+#quickContactContainer { height: 405px; background: transparent url("button-b.png") no-repeat scroll 0% 0%; }
+#PTButton { background-image: url("DL1.png"); }
+#PTButton:hover { background-image: url("DL2.png"); }
+.WCP_OpenMenu { display: block; height: 41px; background: transparent url("WCALI_off.png") no-repeat scroll 0% 0%; }
+#WCP_Container { display: none; height: 95px; background: transparent url("WCALI_on.png") no-repeat scroll 0% 0%; }
+#WC_Container { display: none; height: 108px; background: transparent url("WechatPay_on.png") no-repeat scroll 0% 0%; }
+#BtnWCOpen { background: transparent url("WechatPay.png") no-repeat scroll 0% 0%; }
+#BtnWCOpen:hover { background: transparent url("WechatPay_hover.png") no-repeat scroll 0% 0%; }
+#BtnWCSubmit { background: transparent url("Wechat_button.png") no-repeat scroll 0% 0%; }
+#Ali_Container { display: none; height: 106px; background: transparent url("Alipay_on.png") no-repeat scroll 0% 0%; }
+#BtnAliOpen { background: transparent url("Alipay.png") no-repeat scroll 0% 0%; }
+#BtnAliOpen:hover { background: transparent url("Alipay_hover.png") no-repeat scroll 0% 0%; }
+#BtnAliSubmit { background: transparent url("Ali_button.png") no-repeat scroll 0% 0%; }
+</style>
+
+<div id="quickMenu">
+    
+    <!--Start: Fun88 APK Download-->
+    <div>            
+        <div>
+            <a href="javascript:void(0)" id="fun88APK_OpenMenu" class="dy-unit" onclick="genereteApkQr(); $('#fun88APK_Container').show(); $('#fun88APK_OpenMenu').hide(); $('#quickContactContainer').hide(); $('#quickContact_OpenMenu').show();$('#WCP_Container').hide(); $('#OpenWCP').show()">
+                <div class="button_layout fun88APK_OpenMenu_zh"></div>
+            </a>
+        </div>     
+        <div id="fun88APK_Container" style="display: none;">
+            <a href="javascript:void(0)" id="fun88APK_CloseMenu" class="dy-unit" onclick="$('#fun88APK_Container').hide(); $('#fun88APK_OpenMenu').show();">
+                <div class="button_layout fun88APK_CloseMenu"></div>
+            </a>
+            <div style="margin-top: 13px;">
+                <div id="qr_generator">
+                    <img id="fun88apk_QR" src="loading_001.gif" style="margin: 10px 15px 10px 18px;" alt="apkQrCode" width="110" height="110">
+                </div>
+            </div>
+            <div id="fun88apk_dl_btn" style="margin-top: 144px;">
+                <div>
+                    <a id="fun88apk_dl_zh" style="margin: -5px auto 5px; display: none; width: 135px; height: 32px; cursor: pointer;" onclick="sendAndroidApkGA('Mobile APK','Desktop'); window.open(this.href, 'newwindow', 'width=420, height=250'); return false;"> </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--END: Fun88 APK Download-->
+
+    
+
+   
+
+    <!--Start: Quick Contact-->
+    <div> 
+        <div>
+            <a href="javascript:void(0);" id="quickContact_OpenMenu" class="dy-unit" onclick="$('#quickContact_OpenMenu').hide(); $('#quickContactContainer').show(); $('#fun88APK_Container').hide(); $('#fun88APK_OpenMenu').show();$('#WCP_Container').hide(); $('#OpenWCP').show();">
+                <div class="button_layout quickContact_OpenMenu"></div>
+            </a>
+        </div> 
+        <div id="quickContactContainer" style="display: none;">
+            <a href="javascript:void(0);" id="quickContact_CloseMenu" onclick="$('#quickContact_OpenMenu').show(); $('#quickContactContainer').hide();" class="dy-unit">
+                <div class="button_layout"></div>
+            </a>
+            <img src="girl.png" style="width: 124px; height: 203px; margin: 10px 10px -4px;" id="imgLiveChatGirl" width="124" height="203">
+
+            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif', 'newwindow', 'width=420, height=250'); return false;" href="http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif">
+                <div class="quickcontactbtn quickcontactbtn1">
+                </div>
+            </a>
+
+            <a id="quickContactDownload" class="dy-unit" target="_blank" href="http://www.10010388.com/zh-CN/LiveChat" onclick="sendQuickContactGA('QuickContactDownload');">
+                <div class="quickcontactbtn quickcontactbtn2">
+                </div>
+            </a>
+
+            <div class="quickcontacttext" style="padding-bottom: 4px;">
+                
+                <b>客服热线</b>
+                
+                <br>
+                +86 400 890 0398
+            </div>
+            <div class="quickcontacttext" id="quickContactSelId">
+                
+                <b>客服邮箱</b>
+                <br>
+                
+                <a id="quickContactMail" class="quickcontactemailtext dy-unit" href="mailto:cs@fun88.com" onclick="sendQuickContactGA('QuickContactMail');">
+                    cs@fun88.com
+                </a>
+            </div>
+        </div>
+	</div>
+    <!--END: Quick Contact-->
+</div>
+
+
+
+        
+    <div class="loadingGif" style="background-color: rgb(170, 170, 170); display: none; height: 100%; opacity: 0.6; position: fixed; text-align: center; top: 0px; width: 100%; z-index: 999;">
+        <img alt="" src="loading_001.gif" width="32" height="32">
+    </div>
+
+        
+        <input name="ctl00$ctl00$ctl05$ProceedNextUrl" id="ctl05_ProceedNextUrl" type="hidden">
+
+<script type="text/javascript">
+    $(document.body).ready(function() {
+        
+    });
+
+    function PopupLogin(Username, Password) {
+        var userName = $("#txtUsn").val();
+        var password = $("#txtPwd").val();
+        var quickRegLogin = false;
+        //Login overriding for quick registration
+        if(Username && Password ) {
+            userName = Username;
+            password = Password;
+            quickRegLogin = true;
+        }
+
+        if (!userName || !password || !window.Page_IsValid) {
+            if (!userName || !password) {
+                ClosePopupLogin();
+                Alert('请输入您的用户名与密码。', true);
+            }
+            return false;
+        }
+
+        ClosePopupLogin();
+        getLoginLoading();
+        $.post("/Services/Login.ashx?action=login",
+            { login: userName, password: password, blackbox: $('input[id$=hidblackbox]').val(), QuickRegLogin: quickRegLogin },
+            function(data) {
+
+                $(".loadingLoginGif").hide();
+                if (data.Description === 'Success') {
+                    CreateCookie("verifyform", "1", 0);
+
+                    $("#RewardsControlDIV").html("<iframe id='RewardsOuterDIV' src='/Reward/zh-CN?Fun88Login=true' style='visibility:hidden;display:none;'></iframe>");
+
+                    $("#RewardsOuterDIV").load(function(){
+                        $("#RewardsControlDIV").html('');
+                        if(getParameterByName("isRegSuccess"))
+                            window.location.href = '/zh-CN/Registration-Success' + '?IsQuickReg=1';
+                        else
+                            window.location.href = (window.location.href.toLowerCase().indexOf("/zh-cn/home") != -1) ? "/zh-CN/Default" : window.location.href.substring(0, window.location.href.indexOf('#'));
+                    });
+                } else {
+                    if (data.u === "registrationDeny") {
+                        registerDeny();
+                    } else
+                        Alert(data.Description);
+                }
+            }, "json");
+
+            return false;
+        }
+</script>
+
+<script type="text/javascript">
+    function CBPopupLogin(url) {
+        $("#ctl05_ProceedNextUrl").val(url);
+        $.colorbox({
+            inline: true,
+            href: "#PL_notification_box",
+            innerWidth: 364,
+            innerHeight: 350
+        });
+        $('#cboxClose').remove();
+    }
+
+    function ClosePopupLogin() {
+        if($('#SU_notification_box').parent().css('display') == "none" || 
+            $('#FI_notification_box').parent().css('display' == "none")){
+            $('#SlotGameFakeContainer').hide();
+        }
+        $.colorbox.close();
+    }
+
+    function EnsureLogin(url) {
+        var isLogin = true;
+        if (isLogin) {
+            window.location.href = url;
+            return;
+        }
+        CBPopupLogin(url);
+    }
+
+    function EnsureSlotLogin(url) {
+        var isLogin = true;
+        if (isLogin) {
+            window.location.href = url;
+            return;
+        }
+        SlotPopupLogin(url);
+    }
+
+    function SlotPopupLogin(url) {
+        $('#SlotGameFakeContainer').show();
+        $("#ctl05_ProceedNextUrl").val(url);
+        $.colorbox({
+            inline: true,
+            href: "#PL_notification_box",
+            innerWidth: 364,
+            innerHeight: 350,
+            escKey: false,
+            overlayClose: false
+        });
+        $('#cboxClose').remove();
+    }
+</script>
+
+        
+        
+<div class="loadingGif" style="background-color: rgb(170, 170, 170); display: none; height: 100%; opacity: 0.6; position: fixed; text-align: center; top: 0px; width: 100%; z-index: 999;">
+    
+    <img alt="" src="loading_001.gif" width="32" height="32">
+</div>
+<script type="text/javascript">
+    function isleap() {
+        var yr = $('#ddlYearQR').val();
+        if ((parseInt(yr) % 4) == 0) {
+            if (parseInt(yr) % 100 == 0) {
+                if (parseInt(yr) % 400 != 0) {
+                    return "false";
+                }
+                if (parseInt(yr) % 400 == 0) {
+                    return "true";
+                }
+            }
+            if (parseInt(yr) % 100 != 0) {
+                return "true";
+            }
+        }
+        if ((parseInt(yr) % 4) != 0) {
+            return "false";
+        }
+    }
+
+    $("#ddlMonthQR, #ddlYearQR").change(function () {
+        populateDay();
+    });
+
+    function populateDay() {
+        var dayfield = $('#ddlDateQR');
+        var monthfield = $('#ddlMonthQR');
+        var yearfield = $('#ddlYearQR');
+        var actualmonth = monthfield.val();
+        var selectedDay = dayfield.val();
+        var maxDaysOfMonth = 0;
+
+        $('#ddlDateQR').find('option').remove().end();
+        dayfield.append($('<option></option>').val(0).html('天'));
+
+            if ((isleap() === "true") && (actualmonth == 2)) {
+                maxDaysOfMonth = 29;
+            } else if (actualmonth == 2) {
+                maxDaysOfMonth = 28;
+            } else if (actualmonth == 4 || actualmonth == 6 || actualmonth == 9 || actualmonth == 11) {
+                maxDaysOfMonth = 30;
+            } else {
+                maxDaysOfMonth = 31;
+            }
+
+            for (var i = 1; i <= maxDaysOfMonth; i++) {
+                var text = i < 10 ? '0' + i : i;
+                dayfield.append($('<option></option>').val(i).html(text))
+            }
+
+            if (!isNaN(parseInt(selectedDay)) && isFinite(selectedDay)) {
+                if (parseInt(selectedDay) > maxDaysOfMonth) {
+                    selectedDay = maxDaysOfMonth;
+                }
+                dayfield.val(selectedDay);
+            }
+            else {
+                dayfield.val(1);
+            }
+
+            $('#ddlDateQR').trigger("chosen:updated");
+        }
+
+        function populatedropdown() {
+            var today = new Date();
+            today.setYear(parseInt(today.getFullYear()) - 18);
+            var dayfield = $('#ddlDateQR');
+            var monthfield = $('#ddlMonthQR');
+            var yearfield = $('#ddlYearQR');
+
+            for (var m = 1; m < 13; m++) {
+                var text = m < 10 ? '0' + m : m;
+                monthfield.append($('<option></option>').val(m).html(text));
+            }
+
+            for (var y = 1, thisyear = today.getFullYear() - 50; y < 52; y++, thisyear += 1) {
+                yearfield.append($('<option></option>').val(thisyear).html(thisyear));
+            }
+
+            for (var d = 1; d < 32; d++) {
+                var text = d < 10 ? '0' + d : d;
+                dayfield.append($('<option></option>').val(d).html(text))
+            }
+        }
+
+        function CallQuickRegUpdate() {
+            $("#QuickRegErrorMessage").text("");
+
+            if (($('#ddlDateQR').val() == "0") || ($('#ddlMonthQR').val() == "0") || ($('#ddlYearQR').val() == "0")) {
+                $('#ddlDOBReq').show();
+                return false;
+            }
+
+            Page_ClientValidate("QuickRegValidation");
+            if (!Page_IsValid)
+                return false;
+
+            var dateOfBrith = $('#ddlYearQR').val() + "-" + $('#ddlMonthQR').val() + "-" + $('#ddlDateQR').val();
+
+            getPTLoading();
+            $.post("/Services/QuickRegistration.ashx",
+                { answer: $("#txtSecurityQuestion").val(), question: $("#ddlSecurityQuestion").val(), dob: dateOfBrith },
+                function (data) {
+                    if (data.result === "success") {
+                        submitQuickRegistrationReferrerGA();
+                        Alert(data.description, true);
+                        $.colorbox.close();
+                        $('#quickRegUpdate').hide();
+                    } else {
+                        $("#QuickRegErrorMessage").text("您输入的信息不正确，请重新输入。");
+                    }
+                    closePTLoading();
+                }, "json").fail(function () {
+                    closePTLoading();
+                    $("#QuickRegErrorMessage").text("您输入的信息不正确，请重新输入。");
+                });
+                return false;
+            }
+
+            function getPTLoading() {
+                $(".loadingGif").css("display", "block").css("z-index", 1000000000).find("img").css("padding-top", $(window).height() / 2);
+            }
+
+            function closePTLoading() {
+                $(".loadingGif").css("display", "none");
+            }
+
+            $(document).ready(function () {
+                populatedropdown();
+            });
+</script>
+        
+
+
+<style type="text/css">
+
+#slides1 .pagination { float: right; margin-bottom: 0px; margin-right: 28px; margin-top: -37px; position: relative; z-index: 101; }
+#slidesCDC .pagination, #slidesPlayBoyTutorial .pagination { float: right; margin-bottom: 0px; margin-right: 28px; margin-top: -37px; position: relative; z-index: 101; }
+#CDC_popup_box .dvEmptyFrame { display: none; }
+</style>
+
+
+
+<div id="CDC_popup_box" style="height: 440px; width: 600px; display: none;">
+    <!-- Slider -->
+    <div id="slidesCDC" style="display: block; overflow: hidden; position: relative;">                
+        <div class="slides_container" style="width: 600px; height: 440px; overflow: hidden; position: relative; display: block;">
+            <div class="slides_control" style="position: relative; width: 1800px; height: 440px; left: -600px;"><div style="background-image: url(&quot;01.png&quot;); height: 440px; width: 600px; position: absolute; top: 0px; left: 600px; z-index: 0; display: none;"></div><div style="display: block; background-image: url(&quot;02.png&quot;); height: 440px; width: 600px; position: absolute; top: 0px; left: 600px; z-index: 5;"></div><div style="display: none; background-image: url(&quot;03.png&quot;); height: 440px; width: 600px; position: absolute; top: 0px; left: 600px; z-index: 0;"></div><div style="display: none; background-image: url(&quot;04.png&quot;); height: 440px; width: 600px; position: absolute; top: 0px; left: 600px; z-index: 0;"></div><div style="display: none; background-image: url(&quot;05.png&quot;); height: 440px; width: 600px; position: absolute; top: 0px; left: 600px; z-index: 0;"></div></div>
+            
+            
+            
+            
+        </div>                    
+        
+        <a href="javascript:void(0);" class="slides_LiveStream prev" style="margin-top: -235px; display: none; margin-left: 35px; position: absolute; z-index: 999;"><img src="arrow-prev.png" alt="Arrow Prev" width="42" height="71"></a>
+        <a href="javascript:void(0);" class="slides_LiveStream next" style="float: right; margin-left: 550px; margin-top: -235px; display: none; position: absolute; z-index: 999;"><img src="arrow-next.png" alt="Arrow Next" width="42" height="71"></a>
+        
+    <ul class="pagination"><li class=""><a href="#0">1</a></li><li class="current"><a href="#1">2</a></li><li class=""><a href="#2">3</a></li><li class=""><a href="#3">4</a></li><li class=""><a href="#4">5</a></li></ul></div>
+    <!-- END Slider -->    
+    <iframe class="dvEmptyFrame" src="index_13.html"></iframe>   
+</div>
+
+<div id="Video_popup_box" style="height: 480px; width: 640px; display: none;">
+    <iframe id="videoframe" src="index_14.html" width="640px" height="480px"></iframe>
+</div>
+
+        
+        
+        <div class="loadingLoginGif" style="background-color: rgb(170, 170, 170); display: none; height: 100%; opacity: 0.6; position: fixed; text-align: center; top: 0px; width: 100%; z-index: 5999; left: 0px;">
+            <img alt="" src="loading_001.gif" width="32" height="32">
+        </div>
+        <input name="ctl00$ctl00$hidblackbox" id="hidblackbox" type="hidden">
+    
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button type="button" id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></form>
+    
+
+
+
+    <script type="text/javascript">
+        var getUri = window.location.href.toLowerCase();
+        var SliderButtonName = [];
+        var checks = [];
+        var affiliateCode = getCookie("CO_affiliate") == null ? "" : getCookie("CO_affiliate").replace("affiliate=", "");
+        if (getUri.substr(getUri.lastIndexOf('/') + 1) == "") { getUri = getUri.substring(0, getUri.length - 1); }
+        var nonHomepageBackground = getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('im-casino') != -1 ||
+        ((getUri.indexOf("im-casino") !== -1) && getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('top-games') != -1) ||
+        ((getUri.indexOf("worldcup") !== -1) && getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('worldcup') != -1);
+  
+
+        function ClosePopupLiveStream() {
+            $.colorbox.close();
+            $("#PL_popup_box").css("display", "none");
+        }
+
+        function PopupVideo(video_link) {
+            video_frame = document.getElementById('videoframe');
+            video_frame.setAttribute('src', video_link);
+            $("#Video_popup_box").css("display", "block");
+            $.colorbox({
+                top: 84,
+                href: "#Video_popup_box",
+                innerWidth: 700,
+                innerHeight: 550,
+                inline: true,
+                onClosed: function () {
+                    ClosePopupVideo();
+                }
+            });
+            $("#cboxClose").css("display", "none");
+        }
+
+        function ClosePopupVideo() {
+            $.colorbox.close();
+            $("#Video_popup_box").css("display", "none");
+        }
+
+        $(function () {
+            if (typeof (Sys) !== 'undefined' && Sys.Browser.agent === Sys.Browser.InternetExplorer && Sys.Browser.version === 10) {
+                Sys.WebForms.PageRequestManager.getInstance()._onFormElementActive = function Sys$WebForms$PageRequestManager$_onFormElementActive(element, offsetX, offsetY) {
+                    if (element.disabled) {
+                        return;
+                    }
+                    this._activeElement = element;
+                    this._postBackSettings = this._getPostBackSettings(element, element.name);
+                    if (element.name) {
+                        var tagName = element.tagName.toUpperCase();
+                        if (tagName === 'INPUT') {
+                            var type = element.type;
+                            if (type === 'submit') {
+                                this._additionalInput = encodeURIComponent(element.name) + '=' + encodeURIComponent(element.value);
+                            } else if (type === 'image') {
+                                this._additionalInput = encodeURIComponent(element.name) + '.x=' + Math.floor(offsetX) + '&' + encodeURIComponent(element.name) + '.y=' + Math.floor(offsetY);
+                            }
+                        } else if ((tagName === 'BUTTON') && (element.name.length !== 0) && (element.type === 'submit')) {
+                            this._additionalInput = encodeURIComponent(element.name) + '=' + encodeURIComponent(element.value);
+                        }
+                    }
+                };
+            }
+        });
+
+        function registerDeny() { PopupIovation('/zh-CN/Registration-Deny?width=573&height=310',1, '673', '410' ,'/zh-CN/Default'); }
+
+        var ptUrl = window.location.href.toLowerCase().indexOf("/zh-cn/im-casino") !== -1 || window.location.href.toLowerCase().indexOf("/zh-cn/update-im-account") !== -1;
+        $(document).ready(function () {
+            try {
+                if (ptUrl && Boolean(false)) {
+                    EnsurePTAuth('', Boolean(true));
+                }
+            } catch (err) {
+            }
+            
+           /* mobileRedirect("http://m.10010388.com");*/
+            
+        });
+    </script>
+    <script type="text/javascript">
+        if (!Array.prototype.indexOf) {
+            Array.prototype.indexOf = function (obj, start) {
+                for (var i = (start || 0), j = this.length; i < j; i++) {
+                    if (this[i] === obj) {
+                        return i;
+                    }
+                }
+                return -1;
+            };
+        }</script>
+
+   
+    <script type="text/javascript">
+        var isLogin = 'True'.toLowerCase();
+        var language = 'zh-CN'.toLowerCase();
+        var currency = 'CNY'.toLowerCase();
+        var isPTUser = 'True'.toLowerCase();
+
+        $(document).ready(function () {
+            if (Boolean(isLogin) && currency == "krw" && getCookie("SkipKoreaNotice") != "true") {
+                $("#dialog-message").html('Fun88 Korea will be shut down by 30/9/2016, please proceed to withdraw your balance. Thank you for support.');
+                $("#dialog-message").dialog({
+                    title: " ",
+                    modal: true,
+                    closeOnEscape: false,
+                    open: function (event, ui) {
+                        $(".ui-dialog-titlebar-close", ui.dialog | ui).hide();
+                    },
+                    buttons: {
+                        Ok: function () {
+                            $(this).dialog("close");
+                            setSkipKoreaCookie('SkipKoreaNotice', 'true', 365, '/');
+                        }
+                    }
+                });
+                $(".ui-dialog-titlebar").css('height', '15px');
+            }
+        });
+
+        function setSkipKoreaCookie(c_name, value, exdays, path) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+            document.cookie = c_name + "=" + c_value + "; path=" + path;
+        }
+    </script>
+
+
+<a id="colorboxIndicator" style="position: absolute;"></a><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
+	
+</div>
+</body>
+</html>

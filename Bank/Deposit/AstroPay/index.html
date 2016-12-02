@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body topmargin="0" onload="parent.document.getElementById('tabContent').height = document.body.scrollHeight > 500 ?document.body.scrollHeight+10:700;">
+    <link href="../../master.payment.css" rel="stylesheet" type="text/css">
+    <link href="../../master.bonuslisting.css" rel="stylesheet" type="text/css">
+    <link href="../../master.button.css" rel="stylesheet" type="text/css">
+    <script  src="../../jquery-1.12.2.min.js" type="text/javascript"> </script>
+    <script src="master.mainmenu.js" type="text/javascript"></script>
+    <script src="master.transaction.js" type="text/javascript"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $.fn.clearForm = function () { return this.each(function () { var type = this.type, tag = this.tagName.toLowerCase(); if (tag == 'form') return $(':input', this).clearForm(); if ((type == 'text' && this.id != 'txtDepDateFrm' && this.id != 'txtDepDateTo') || type == 'password' || tag == 'textarea') this.value = ''; else if (type == 'checkbox') this.checked = false; else if (type == 'radio' && this.value == '0') this.click(); }) };
+            $.support.placeholder = ('placeholder' in document.createElement('input'));
+            resetForm(true);
+
+
+            var lang = "zh-CN";
+            var lbl_Amount_placeholder = '请输入卡片面值';
+            var lbl_CardNumber_placeholder = '请输入AstroPay卡号';
+            var lbl_CardCode_placeholder = '请输入安全码';
+
+            document.getElementById("txtAmount").placeholder = lbl_Amount_placeholder;
+            document.getElementById("txtCardNumber").value = "";
+            document.getElementById("txtCardCode").value = "";
+            document.getElementById("txtCardNumber").placeholder = lbl_CardNumber_placeholder;
+            document.getElementById("txtCardCode").placeholder = lbl_CardCode_placeholder;
+
+            $.validator.addMethod("cnRegex", function (value, element) {
+                return this.optional(element) || /^[0-9]{16}$/i.test(value);
+            }, '无效的格式');
+
+            $.validator.addMethod("ccRegex", function (value, element) {
+                return this.optional(element) || /^[0-9]{4}$/i.test(value);
+            }, '无效的格式');
+
+            $.validator.addMethod("cExpiryDate", function (value, element) {
+
+                var expMonth = parseInt(ddlMonth.value);
+                var expYear = parseInt(ddlYear.value);
+                var currentMonth = new Date().getMonth() + 1;
+                var currentYear = new Date().getFullYear();
+
+                if (expYear > currentYear) {
+                    return true;
+                } else if (expYear == currentYear) {
+                    if (expMonth >= currentMonth)
+                        return true;
+                }
+                else {
+                    return false;
+                }
+            }, '卡已经过期');
+
+            $("#MainForm").validate({
+                onsubmit: false,
+                rules: {
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount': {
+                        required: true,
+                        DigitRegex: "^(?!0.00)\\d{1,8}(,\\d{3})*(\\.\\d{2})?$",
+                        min: 0.01
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardNumber': {
+                        required: true,
+                        cnRegex: true
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardCode': {
+                        required: true,
+                        ccRegex: true
+                    }
+                },
+                messages: {
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount': {
+                        required: '存款额不可为空',
+                        DigitRegex: '金额格式无效',
+                        min: '金额必须在最小范围 {0} 内或以上'
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardNumber': {
+                        required: 'AstroPay卡号不可为空',
+                        cnRegex: '无效的格式'
+                    },
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardCode': {
+                        required: '安全码不可为空',
+                        ccRegex: '无效的格式'
+                    }
+                },
+                onkeyup: function (element, evet) {
+                    this.element(element);
+                },
+                showErrors: function (errorMap, errorList) {
+                    this.defaultShowErrors();
+                },
+                onfocusout: false,
+                invalidHandler: function (form, validator) {
+                    var errors = validator.numberOfInvalids();
+                    if (errors) {
+                        var errorMessage = validator.errorList[0].message;
+                        //Alert(errorMessage);
+                        validator.errorList[0].element.focus();
+                    }
+                },
+
+                success: function (label) {
+                    label.text("").addClass("success");
+                }
+
+            });
+
+            $('#txtAmount').keyup(function () {
+                clickReload();
+            });
+
+
+            $("#BtnSubmit").click(function () {
+                var amount = $('#txtAmount').val();
+                var amountCny = $('#txtAmountRmbConverted').val();
+                $('#txtAmount').val(amount.replace(/,/g, ""));
+                $('#txtAmountRmbConverted').val(amountCny.replace(/,/g, ""));
+                $("#btnReload").click();
+                var validate = $('#MainForm').valid();
+                if ($("#tempCouponStatus")) { if ($("#tempCouponStatus").val() == "fail") validate = false; }
+                if ($(".lblError").length) validate = false;
+                if
+                    (validate) getLoading();
+                else
+                    convertWithComma($('#txtAmount, #txtAmountRmbConverted'));
+                return validate;
+            });
+
+            $("#BtnCancel").click(function () {
+                resetForm(false);
+            });
+        });
+    </script>
+
+    <input name="" type="hidden">
+    <span class="hidBankCode">AP</span>
+    <div id="divMsg">
+        <span id="BaseMainContent_DepositMainContent_lblTransMsg"></span>
+    </div>
+    <div id="divMsgBonus">
+        <span id="lblMsgBonus"></span><br>
+        <span id="lblMsgBonus2"></span>
+    </div>
+    <div id="BaseMainContent_DepositMainContent_divDepositMsg" class="deposit_msgs">
+        <span id="BaseMainContent_DepositMainContent_remarkMsg1">乐天使温馨提醒：<br>
+    1. AstroPay卡是一种充值预付卡，无需额外填写银行账户资料。</span><br>
+        <span id="BaseMainContent_DepositMainContent_remarkMsg2">2. 在淘宝等网站均有出售不同面值AstroPay充值卡。购买(仅限)美元充值卡后，即可进行存款。</span><br>
+         <span id="BaseMainContent_DepositMainContent_depositMsg1">3. 依次填写卡号、安全码、有效日期、卡片面值后点击提交。<br><br>单笔存款</span>
+        <span id="BaseMainContent_DepositMainContent_depositMsg2" style="color: red;">最低：100 人民币</span><span id="BaseMainContent_DepositMainContent_minAmountinUSD" style="color: red;"> (15.38 美元) </span>
+        <span id="BaseMainContent_DepositMainContent_depositMsg3" style="color: red;">,最高金额 : 5,000 人民币</span><span id="BaseMainContent_DepositMainContent_maxAmountinUSD" style="color: red;"> (769.23 美元) </span>
+    </div>
+    <div class="table1">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td class="table_sub1" width="5%"></td>
+                <td class="table_sub1" width="35%">
+                    AstroPay卡号<span class="red">*</span>
+                </td>
+                <td width="60%">
+                    <div class="inputError">
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardNumber" maxlength="16" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardNumber\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtCardNumber" class="signup_input" value="" placeholder="请输入AstroPay卡号" autocomplete="off" type="text">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_sub1"></td>
+                <td class="table_sub1">
+                    安全码<span class="red">*</span>
+                </td>
+                <td>
+                    <div class="inputError">
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardCode" maxlength="4" id="txtCardCode" class="signup_input" value="" placeholder="请输入安全码" autocomplete="off" type="password">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_sub1"></td>
+                <td class="table_sub1">
+                    有效日期<span class="red">*</span>
+                </td>
+                <td>
+                    <div class="inputError">
+                        <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlMonth" id="ddlMonth" class="Datepicker">
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option selected="selected" value="12">12</option>
+
+</select>
+                        &nbsp; /&nbsp;
+                        <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlYear" id="ddlYear" class="Datepicker">
+    <option selected="selected" value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+    <option value="2026">2026</option>
+
+</select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_sub1"></td>
+                <td class="table_sub1">
+                    <span id="BaseMainContent_DepositMainContent_copyWritingUSDtoRMBConvertyion">美金兑换汇率</span>
+                </td>
+                <td>
+                    <div class="inputError">
+                        <span id="convertionRate">6.50</span>
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="table_sub1"></td>
+                <td class="table_sub1">
+                    卡片面值(USD)<span class="red">*</span>
+                </td>
+                <td>
+                    <div class="inputError">
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount" maxlength="11" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtAmount" class="signup_input" updateaftercallback="False" placeholder="请输入卡片面值" type="text">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table_sub1"></td>
+                <td class="table_sub1">
+                    实际存入(RMB)
+                </td>
+                <td>
+                    <div id="BaseMainContent_DepositMainContent_UpdatePanel2">
+    
+                            <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmountRmbConverted" maxlength="11" readonly="readonly" id="txtAmountRmbConverted" class="signup_input" placeholder="" disabled="Disabled" type="text">
+                        
+                    </div>
+                </td>
+            </tr>
+
+        </tbody></table>
+        <div id="BaseMainContent_DepositMainContent_UpdatePanel1">
+    
+                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$btnReload" id="btnReload" src="loading_search.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$btnReload&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height: 20px; width: 20px; display: none;" type="image">
+                <div style="text-align: center;">
+                    <div id="BaseMainContent_DepositMainContent_upProgress" style="display: none;" role="status" aria-hidden="true">
+        
+                            <img alt="" src="loading_small.gif">
+                        
+    </div>
+                </div>
+                <div id="pnlContent" style="width: 100%;">
+        
+    <div id="bonus">
+        <div class="header">
+            注意，前方发现优惠红利一只，可供您选择申请：
+        </div>
+        <div id="lists">
+            <table id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses">
+            <tbody><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_0" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="106939" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses$0\',\'\')', 0)" type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_0">【体育博彩】新会员100%首存红利，最高1288元，25倍流水 - [点击申请]</label></td>
+            </tr><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_1" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="106940" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses$1\',\'\')', 0)" type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_1">体育博彩10%红利最高888元，10倍流水, 火爆申请中! - [我也参加]</label></td>
+            </tr><tr>
+                <td><input id="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_2" name="ctl00$ctl00$BaseMainContent$DepositMainContent$BonusListing$rblBonuses" value="0" checked="checked" type="radio"><label for="BaseMainContent_DepositMainContent_BonusListing_rblBonuses_2">下回再参与！</label></td>
+            </tr>
+        </tbody></table>
+            
+            
+        </div>
+        
+        <div id="bonus_msg">
+            乐天使提示::<br>
+            会员在任意游戏账户、同一时间仅可申请一项红利。<br>须完成已申请红利的要求后，方可在同一个账户申请其他优惠红利。<br>
+            例：会员须在完成体育博彩首存红利要求后，才可申请体育博彩再存红利。<br>
+        </div>
+    </div>
+
+    </div>
+
+            
+</div>
+    </div>
+
+    <div class="divider">
+    </div>
+    <div class="table2">
+        <table>
+            <tbody><tr>
+                <td>
+                    <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$BtnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">提交</a>
+                </td>
+                <td>
+                    <a id="BtnCancel" class="Btn whiteMedBtn">
+                        取消
+                    </a>
+                </td>
+            </tr>
+        </tbody></table>
+
+    </div>
+
+                
+                <div class="formEmail">
+                    如果有疑问请点击 "<a onclick="window.open('/zh-CN/Info-Center/Help/Banking-Info/Deposit', '_blank')">存款帮助</a>" 页面，或联系
+                    "<a href="http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif" target="_blank" onclick="open_new_window(this.href, 'http://helpcn.fun585.com/index.htm?visitorName=Bkmyxif'); return false;">在线客服</a>"
+                    <br>乐天使客服7*24小时为您服务<br>邮箱:
+                    <a href="mailto:cs@fun88.com" id="BaseMainContent_mailHref">
+                            cs@fun88.com</a>
+                    </div>
+                    
+
+</body>
+</html>

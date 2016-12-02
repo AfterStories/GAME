@@ -1,0 +1,15 @@
+/* Code tidied up by ScrapBook */
+#bonus { background-color: rgb(242, 241, 241); color: rgb(0, 0, 0); font-size: 13px; line-height: 14px; margin-bottom: 8px; padding: 15px; }
+#lists { margin: 10px 0px; }
+#divCoupon { padding: 13px 0px; text-align: center; }
+#pnlPreview { text-align: center; border-top: 1px solid rgb(219, 219, 219); border-bottom: 1px solid rgb(219, 219, 219); color: gray; font-size: 20px; font-weight: 700; padding-bottom: 5px; padding-top: 5px; height: auto ! important; min-height: 25px; }
+#lblPreviousAmount { vertical-align: middle; height: auto ! important; min-height: 25px; line-height: 20px; }
+#bonus_msg { color: red; font-weight: 700; margin: 20px 0px; font-size: 12px; }
+.lblError { text-align: center; color: red; font-weight: 700; font-size: 12px; display: block; margin: 10px 0px; height: 15px; line-height: 25px; }
+.divMsgBonus { display: block; text-align: center; color: gray; font-size: 12px; font-weight: bold; min-height: 25px; padding-bottom: 10px; }
+.hideDisplay { display: none; }
+#divMsgBonus a:hover { text-decoration: underline; }
+#lblMsgBonus2 { text-align: center; }
+#lblBonusDesc { text-align: center; border-top: 1px solid rgb(219, 219, 219); border-bottom: 1px solid rgb(219, 219, 219); color: gray; font-size: 15px; font-weight: 700; min-height: 25px; padding-bottom: 10px; padding-top: 10px; }
+.divMsgBonusError { display: block; text-align: center; color: red; font-size: 11px; font-weight: bold; min-height: 25px; padding-bottom: 10px; }
+#dvBonusTitle { font-weight: bold; margin-top: -20px; width: 60%; margin-left: 170px; margin-bottom: 20px; }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="../../master.payment.css" rel="stylesheet" type="text/css">
+    <link href="../../master.bonuslisting.css" rel="stylesheet" type="text/css">
+    <link href="../../master.button.css" rel="stylesheet" type="text/css">
+    <script  src="../../jquery.numeric.js" type="text/javascript"> </script>
+    <script  src="../../jquery-1.12.2.min.js" type="text/javascript"></script>
+    
+        <style type="text/css">
+/* Code tidied up by ScrapBook */
+#sosBonusParent ul li { margin-left: 30px; }
+.form-button { text-align: center; cursor: pointer; }
+.button-submit { background: transparent url("button-animation.gif") no-repeat scroll -459px -1px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 145px; margin: 0px auto; padding: 10px; line-height: 15px; }
+.button-submit:hover { background: transparent url("button-animation.gif") no-repeat scroll -459px -39px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 145px; margin: 0px auto; padding: 10px; line-height: 15px; }
+.button-noted { background: transparent url("button-animation.gif") no-repeat scroll -459px -1px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 145px; margin: 0px auto; padding: 10px; line-height: 15px; }
+.button-noted:hover { background: transparent url("button-animation.gif") no-repeat scroll -459px -39px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 145px; margin: 0px auto; padding: 10px; line-height: 15px; }
+.button-Confirm { background: transparent url("button_green.gif") no-repeat scroll -459px -1px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 145px; margin: 0px auto; padding: 10px; line-height: 15px; float: left; }
+.button-Confirm:hover { background: transparent url("button_green.gif") no-repeat scroll -459px -39px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 145px; margin: 0px auto; padding: 10px; line-height: 15px; float: left; }
+.button-Cancel { background: transparent url("button-animation.gif") no-repeat scroll -459px -1px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 145px; margin-left: 175px; padding: 10px; line-height: 15px; }
+.button-Cancel:hover { background: transparent url("button-animation.gif") no-repeat scroll -459px -39px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 145px; margin-left: 175px; padding: 10px; line-height: 15px; }
+#navigation a { color: white; }
+</style>
+</head>
+<body topmargin="0" onload="parent.document.getElementById('tabContent').height = document.body.scrollHeight > 500 ?document.body.scrollHeight+130:700;">
+
+        <div id="navigation">
+            
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnApply, #btnConfirmApply").click(function () {
+                getLoading();
+            });
+        });
+    </script>
+    <div class="termsTitle1">
+        <div class="divTitle">
+            SOS救援金
+        </div>
+    </div>
+    <div id="BaseMainContent_SOSBonusMainContent_pnlSOSBefore">
+	
+        <div id="sosBonusParent">
+            <div id="sosBonusBackground"></div>
+            <br>
+            <div>
+                <ul class="sosText">
+                    <li>SOS救援金仅开放给乐天堂乐游戏以及百乐城的玩家
+                    </li>
+                </ul>
+                <br>
+                <ul class="sosText">
+                    <li>此活动最低负盈利金额要求：
+                        <span id="BaseMainContent_SOSBonusMainContent_lblNetDepAmount">RMB 495.00 或者以上</span>
+                    </li>
+                </ul>
+                <br>
+                <ul class="sosText">
+                    <li>单次最高救援金金额：
+                        <span id="BaseMainContent_SOSBonusMainContent_lblMaximumGivenAmount">RMB 1888.00</span>
+                    </li>
+                </ul>
+                <br>
+                <ul class="sosText">
+                    <li>每日领取SOS救援金累积最高上限为
+                        <span id="BaseMainContent_SOSBonusMainContent_lblTotalBalance">RMB 2888.00 </span>
+                    </li>
+                </ul>
+                <br>
+                <ul class="sosText">
+                    <li>此优惠的流水不与老虎机存款红利（首存或再存）共享
+                    </li>
+                </ul>
+                <br>
+                <ul class="sosText">
+                    <li>符合申请规格的救援金会在1小时内到账</li>
+                </ul>
+                <br>
+                <ul class="sosText">
+                    <li style="color: red;font-style:italic">一旦申请救援金红利，正在进行中的任何老虎机首存或者再存红利将会被取消，被取消的红利将无法恢复！</li>
+                </ul>
+                <br>
+                <br>
+
+                <div class="form-button">
+                    <a id="btnApply" class="button-submit" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$SOSBonusMainContent$btnApply&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">立即申请</a>
+                </div>
+            </div>
+        </div>
+    
+</div>
+    
+    
+    
+
+            </div>
+       
+</body>
+</html>

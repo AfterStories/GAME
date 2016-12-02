@@ -1,0 +1,13 @@
+/* Code tidied up by ScrapBook */
+.history_nav span.history_font { font-size: 11px; font-weight: 700; }
+.history_nav span.history_header { color: rgb(37, 170, 225); }
+.history_nav .history_ddlShorter { height: 22px; width: 70px; }
+.history_nav .history_ddlShort { height: 22px; width: 80px; }
+.history_nav .history_ddlLong { height: 22px; width: 110px; }
+.history_nav .history_ddlLonger { height: 22px; width: 180px; }
+.history_nav table { width: 100%; }
+.history_depositWithdrawal tr { text-align: center; }
+.history_depositWithdrawal td { width: 20%; }
+.history_depositWithdrawal td + td + td { width: 40%; }
+.history_bonus tr { text-align: center; }
+.history_bonus td:first-child { width: 20%; }
