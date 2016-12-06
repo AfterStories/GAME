@@ -33,11 +33,7 @@
 #sougouRedirect { width: 155px; height: 40px; position: relative; top: -415px; left: 345px; cursor: pointer; background: transparent url("sougou.png") repeat scroll 0% 0%; }
 #cboxClose { top: 0px; left: 560px; background: transparent url("controls.png") no-repeat scroll -25px 0px; display: block; width: 25px; height: 25px; }
 #cboxClose:hover { background-position: -25px -25px; }
-.LBTutorialBtn {  }
-#sliderLB {  }
-#next {  }
-#prev {  }
-#cboxClose {  }
+
 </style>
 
 <style id="style-1-cropbar-clipper">
@@ -177,21 +173,17 @@ style.firebugResetStyles { display: none ! important; }
 <form id="MainForm" novalidate="novalidate">
 
     <script type="text/javascript" language="javascript">
-        $(document.body).ready(function () {
-            var tab = $(".hidBankCode").html();
-            var counter = 0;
-            $("#tblDepositMethod td").each(function () {
-                var activeTab = $(this).find('span').text();
-                counter++;
-                if (tab == activeTab) {
-                    $(this).addClass("active");
-                }
-            });
+         
+        $(document.body).ready(function (){
 
-            if (counter == 1) {
-                $("#navigation").css("display", "none");
-            }
         
+           /*tab切换*/ 
+    $("#tblDepositMethod td").click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        
+    })
+});
+
             //$("#txtAmount").numeric({ precision: 2, negative: false }, function () { this.value = ""; this.focus(); });            
 
             $(".btnTab").click(function () {
@@ -301,7 +293,7 @@ style.firebugResetStyles { display: none ! important; }
             $('#cboxClose').click(function () {
                 $("#sliderLB").css("display", "none");
             });
-        });
+        
         /*Sort Slide*/
         function DPSorting() {
             $("#sliderLB > ul > li").sort(function (a, b) {
@@ -924,37 +916,37 @@ style.firebugResetStyles { display: none ! important; }
 
             <div id="navigation" style="width: 100%;">
                 <table id="tblDepositMethod" style="width: 100%; border-collapse: collapse;" cellspacing="0">
-	<tbody><tr>
-    <tr>
+	<tbody id="nav-tbody">   
+            <tr>
 		            <td class="active">
                         
-                        <a class="uiLink02" class="" href="Deposit/Yeepay/index.html" target="tabContent">点卡充值</a>
+                        <a class="uiLink02"  id="Debit-Card" href="Deposit/Debit-Card/index.html" target="tabContent">点卡充值</a>
                         <span class="hidVal">YP</span>
                     </td>
 
                     <td>
                         
-                        <a class="uiLink02" class="" href="Deposit/Debit-Card/index.html" target="tabContent">在线存款</a>
+                        <a class="uiLink02"  id="Yeepay" href="Deposit/Yeepay/index.html" target="tabContent">在线存款</a>
                         <span class="hidVal">BC</span>
                     </td>
                     <td>
                         
-                        <a class="uiLink02" class="" href="Deposit/Local-Bank/index.html" target="tabContent">本地银行转帐</a>
+                        <a class="uiLink02"  id="Local-Bank" href="Deposit/Local-Bank/index.html" target="tabContent">本地银行转帐</a>
                         <span class="hidVal">LB</span>
                     </td>
                     <td>
             
-                        <a class="uiLink02" class="" href="Deposit/Alipay/index.html" target="tabContent">本地支付宝</a>
+                        <a class="uiLink02" id="Alipay" href="Deposit/Alipay/index.html" target="tabContent">本地支付宝</a>
                         <span class="hidVal">LBA</span>
                     </td>
                     <td>
                         
-                        <a class="uiLink02" class="" href="Deposit/AstroPay/index.html" target="tabContent"">AstroPay</a>
+                        <a class="uiLink02" id="AstroPay" href="Deposit/AstroPay/index.html" target="tabContent"">AstroPay</a>
                         <span class="hidVal">AP</span>
                     </td>
                     <td>
                         
-                        <a class="uiLink02" class="" href="Deposit/WeChat/index.html" target="tabContent"">v信支付</a>
+                        <a class="uiLink02" id="WeChat" href="Deposit/WeChat/index.html" target="tabContent"">v信支付</a>
                         <span class="hidVal">WC</span>
                     </td>
 	</tr>
@@ -1061,11 +1053,11 @@ style.firebugResetStyles { display: none ! important; }
         }
     </script>            
             
-<iframe class="content" id="tabContent" name="tabContent" src="Deposit/Yeepay/index.html" scrolling="no" frameborder="0" style="width: 680px;">
+<iframe class="content" id="tabContent" name="tabContent" src="" scrolling="no" frameborder="0" style="width: 680px;">
                 
 </iframe>
-
- <iframe class="content" id="rightBox2" name="rightBox2" src="" scrolling="no" frameborder="0" style="width: 680px;">
+<br/> <br/>
+ <iframe class="content" id="rightBox2" name="rightBox2" src="Deposit/Savings/index.html" scrolling="no" frameborder="0" style="width: 680px;">
                 
 </iframe>
 
@@ -1176,11 +1168,36 @@ style.firebugResetStyles { display: none ! important; }
 <script type="text/javascript" language="javascript">
    
     $(document).ready(function () {
-        setTimeout(function () {
-            $('#quickContact_OpenMenu, #quickContactContainer').toggle();
-        }, 90000);
-    });
-    
+
+        getTab();
+
+        function getTab(){
+            var tabid = GetQueryString("tab"); 
+            var tabUrl = 'Deposit/'+tabid+'/index.html'
+            
+            $('#tabContent').attr("src",tabUrl); 
+            if(tabid == "Yeepay"){
+              
+             $("#nav-tbody").find("#Yeepay").parent().addClass("active");
+             $("#nav-tbody").find("#Debit-Card").parent().removeClass("active");
+
+            }
+             
+            }
+
+
+            function GetQueryString(name){
+                 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                 var r = window.location.search.substr(1).match(reg);
+                 if(r!=null)return  unescape(r[2]); return null;
+            }
+        });
+
+            setTimeout(function () {
+                $('#quickContact_OpenMenu, #quickContactContainer').toggle();
+            }, 90000);
+ 
+   
 
 
     function generateAffiliateApk() {   
@@ -1737,7 +1754,7 @@ style.firebugResetStyles { display: none ! important; }
             $("#Video_popup_box").css("display", "none");
         }
 
-        $(function () {
+/*        $(function () {
             if (typeof (Sys) !== 'undefined' && Sys.Browser.agent === Sys.Browser.InternetExplorer && Sys.Browser.version === 10) {
                 Sys.WebForms.PageRequestManager.getInstance()._onFormElementActive = function Sys$WebForms$PageRequestManager$_onFormElementActive(element, offsetX, offsetY) {
                     if (element.disabled) {
@@ -1761,7 +1778,7 @@ style.firebugResetStyles { display: none ! important; }
                 };
             }
         });
-
+*/
         function registerDeny() { PopupIovation('/zh-CN/Registration-Deny?width=573&height=310',1, '673', '410' ,'/zh-CN/Default'); }
 
         var ptUrl = window.location.href.toLowerCase().indexOf("/zh-cn/im-casino") !== -1 || window.location.href.toLowerCase().indexOf("/zh-cn/update-im-account") !== -1;

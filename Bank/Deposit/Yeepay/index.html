@@ -3,19 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link href="../../master.payment.css" rel="stylesheet" type="text/css">
-    <link href="../../master.bonuslisting.css" rel="stylesheet" type="text/css">
-    <link href="../../master.button.css" rel="stylesheet" type="text/css">
-    <script  src="../../jquery-1.12.2.min.js" type="text/javascript"> </script>
-    <script  src="../../master.payment.crawler.js" type="text/javascript"> </script>
-    <script  src="../../jquery.validate.js" type="text/javascript"> </script>
 
-    
-
-
+      <link href="../../master.payment.css" rel="stylesheet" type="text/css">
+      <link href="../../master.bonuslisting.css" rel="stylesheet" type="text/css">
+      <link href="../../master.button.css" rel="stylesheet" type="text/css">
+      <script  src="../../jquery-1.12.2.min.js" type="text/javascript"> </script>
+      <script  src="../../master.payment.crawler.js" type="text/javascript"> </script>
+      <script  src="../../jquery.validate.js" type="text/javascript"> </script>
 </head>
 <body topmargin="0" onload="parent.document.getElementById('tabContent').height = document.body.scrollHeight > 500 ?document.body.scrollHeight+10:700;">
+    
 
+    <style type="text/css">
+
+#cdcBankImg { background: transparent url("2_.jpg") no-repeat scroll 0% 0%; height: 25px; width: 47px; vertical-align: middle; display: inline; float: left; }
+.cdcdropdown { display: inline; }
+</style>
+    <script type="text/javascript" language="javascript">
+
+        function Imgchg() {
+            
+            var e = document.getElementById("ddlBank");
+            var selectedBank = e.options[e.selectedIndex].getAttribute("value");
+            if(selectedBank.toLowerCase() == "scb")
+                $('#cdcBankImg').css("background-position","0 0" );  
+            else if(selectedBank.toLowerCase() == "ktb")
+                $('#cdcBankImg').css("background-position","-50px 0" );                         
+            else if(selectedBank.toLowerCase() == "bay" || selectedBank.toLowerCase() == "boa")
+                $('#cdcBankImg').css("background-position","-100px 0" ); 
+            else if(selectedBank.toLowerCase() == "bbl")
+                $('#cdcBankImg').css("background-position","-150px 0" ); 
+            else if(selectedBank.toLowerCase() == "uob")
+                $('#cdcBankImg').css("background-position","-200px 0" ); 
+            else if(selectedBank.toLowerCase() == "psb")
+                $('#cdcBankImg').css("background-position","-250px 0" ); 
+            else if(selectedBank.toLowerCase() == "kkr")
+                $('#cdcBankImg').css("background-position","-300px 0" ); 
+            else
+                $('#cdcBankImg').css("background-position","0 0" ); 
+        }
+
+        $(document).ready(function () {
+             
+            $.fn.clearForm = function () { return this.each(function () { var type = this.type, tag = this.tagName.toLowerCase(); if (tag == 'form') return $(':input', this).clearForm(); if ((type == 'text' && this.id != 'txtDepDateFrm' && this.id != 'txtDepDateTo') || type == 'password' || tag == 'textarea') this.value = ''; else if (type == 'checkbox') this.checked = false; else if (type == 'radio' && this.value == '0') this.click(); }) };
+            $.support.placeholder = ('placeholder' in document.createElement('input'));
+            resetForm(true);
+            
+            jQuery.validator.addMethod("Zerodecimal", function (value, element, param) {
+                var val = $(param).val();
+                if (val.indexOf('.') != -1 && val.length > 2) {
+                    //remove ',' to match the regex accurately
+                    var txtnumber = val.replace(/,/g, '');
+                    if (/^\d+\.{0,1}[0]{1,2}$/.test(txtnumber)) return true;
+                    else return false;
+                }
+                else {
+                    return true;
+                }
+            }, '金额小数点只允许00');
+
+            jQuery.validator.addMethod("checkZero", function (value, element, param) {
+                var val = $(param).val();
+                if ("zh-CN"=="zh-CN" && ("True"||"False")){
+                    if (val == 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }, '仅限 100 或以上的整数金额');
+
+            $("#MainForm").validate({
+                onsubmit: false,
+                rules: {
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount': {
+                        required: true,
+                        boydigit: false,
+                        checkZero:'#txtAmount',
+                        min: '100.0000'
+                    }
+                },
+                messages: {
+                    'ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount': {
+                        required: '存款金额不得为空',
+                        boydigit: '请使用整数金额',
+                        DigitRegex: '金额格式无效',
+                        min: function (error) {
+                            if ("zh-CN"=="zh-CN" && ("True"||"False"))
+                                return '请输入 100 或以上的整数金额';
+                            else 
+                                return '金额必须在最小范围 100.00 内或以上';
+                        }
+                    }
+                },
+                onkeyup: function (element, evet) {
+                    this.element(element);
+                },
+                showErrors: function (errorMap, errorList) {
+                    this.defaultShowErrors();
+                },
+                errorPlacement: function (error, element) {
+                    if (($('#LitZero').length && !element.is($("#txtAmount"))) || (!$('#LitZero').length && element.is($("#txtAmount"))) || (!$('#LitZero').length && !element.is($("#txtAmount"))))
+                        error.insertAfter(element);
+                    else
+                        error.insertAfter('#LitZero');
+
+                },
+
+
+                onfocusout: false,
+                invalidHandler: function (form, validator) {
+                    var errors = validator.numberOfInvalids();
+                    if (errors) {
+                        //var errorMessage = validator.errorList[0].message;                        
+                        //Alert(errorMessage);
+                        //validator.errorList[0].element.focus();
+                    }
+                },
+
+                success: function (label) {
+                    label.text("").addClass("success");
+                }
+            });
+
+
+            $('#txtAmount').keyup(function () {
+                clickReload();
+                
+            });
+
+            if ("zh-CN"=="zh-CN" && ("True"||"False")){
+                $('#txtAmount').attr("placeholder", "请输入"+100.0000+"或以上的整数金额");
+
+                if (!$.support.placeholder && $('#txtAmount').val() == "") {
+                    $('#txtAmount').val($('#txtAmount').attr("placeholder")).css({ color: "#A0A0A0" });
+            }
+
+                $('#txtAmount').focus(function () {
+                    if (!$.support.placeholder && $(this).val() == $(this).attr("placeholder")) {
+                        $('#txtAmount').val("").css({ color: "#000" });
+                }
+            });
+
+            $('#txtAmount').blur(function(){
+                    if (!$.support.placeholder) {
+                        if ($('#txtAmount').val() == "") {
+                            $('#txtAmount').val($('#txtAmount').attr("placeholder")).css({ color: "#A0A0A0" });
+                        }
+                }
+            });
+            }
+
+            $('#txtCouponCode').keyup(function () {
+                clickReload();
+            });
+
+            $("#BtnSubmit").click(function () {
+                var amount = $('#txtAmount').val();
+                $('#txtAmount').val(amount.replace(/,/g, ""));
+
+                $("#btnReload").click();
+                var validate = $('#MainForm').valid();
+                if ($("#tempCouponStatus")) { if ($("#tempCouponStatus").val() == "fail") validate = false; }
+                if ($(".lblError").length) validate = false;
+
+                if (validate) 
+                    getLoading();
+                else
+                    convertWithComma($('#txtAmount'));
+
+                return validate;
+            });
+
+            $("#BtnCancel").click(function () {
+                resetForm(false);
+            });
+
+            $('#ddlBank').change(function () {
+                
+                    var e = document.getElementById("ddlBank");
+                    var imgUrl = e.options[e.selectedIndex].getAttribute("data-value");
+                    $('#cdcBankImg').attr("src", imgUrl.replace('.gif','.jpg'));
+                
+            });
+        });
+    </script>
 
     <div id="divMsg">
         <span id="BaseMainContent_DepositMainContent_lblTransMsg"></span>
@@ -25,172 +196,64 @@
         <span id="lblMsgBonus2"></span>
     </div>
     <div id="BaseMainContent_DepositMainContent_divDepositMsg" class="deposit_msgs">
-        <span id="BaseMainContent_DepositMainContent_depositMsg">乐天使温馨提醒：<br></span>
-        <span id="BaseMainContent_DepositMainContent_depositMsg1">1. 会员可使用点卡支付银行来进行存款，目前乐天堂支持15种点卡支付方式，您可以任意选择一种进行充值。 </span><br>
-        <span id="BaseMainContent_DepositMainContent_depositMsg1p2">2. 充值前请先提交一份准确的存款单。以便您的存款更快的到账哦。<br><br>单笔存款</span>
-        <span id="BaseMainContent_DepositMainContent_depositMsg2" style="color: red;">最低：20元,</span>
-        <span id="BaseMainContent_DepositMainContent_depositMsg3" style="color: red;">最高：10,000元</span>
-    </div>
+        
+        <p style="padding-bottom: 0px ! important; margin-bottom: 0px ! important;">乐天使温馨提醒：</p>
+        <ol style="padding-left: 13px;">
+            <li>会员可使用您的银联卡，维萨卡(VISA)或万事达卡(MasterCard)进行存款。
+            </li>
+            <li>只需输入符合要求的存款金额，点击提交即可操作。
+            </li>
+            <li>到帐时间通常约1-10分钟。<br><br>
+                单笔存款<span id="BaseMainContent_DepositMainContent_getMinMaxDesc" style="color: red;">最低：100元起，最高：50,000元</span>
+            </li>
+        </ol>
+        </div>
     <div class="table1">
         <table width="100%" cellspacing="0" cellpadding="0" border="0">
             <tbody><tr>
-                <td class="table_sub1" width="5%"></td>
-                <td class="table_sub1" width="35%">
-                    点支付银行<span class="red">*</span>
+                <td class="table_sub1" width="5%">
                 </td>
-                <td>
+                <td class="table_sub1" width="35%" align="right">
+                    存款金额<span class="red">*</span>
+                </td>
+                <td width="60%">
                     <div class="inputError">
-                        <div id="BaseMainContent_DepositMainContent_UpdatePanel7">
-    
-                                 <img id="imgCardProvider" src="../../YP00002.png" style="height: 27px; width: 42px; float: left;">
-                            
-</div>
-<select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlCardProvider"  id="ddlCardProvider" class="signup_input" style="height: 25px; width: 191px;">
-    <option value="YP00002" selected="selected">联通充值卡（5%手续费）</option>
-    <option value="YP00001">移动充值卡（5%手续费）</option>
-    <option value="YP00003">电信充值卡（5%手续费）</option>
-    <option value="YP00004">盛大游戏卡（15%手续费）</option>
-    <option value="YP00005">骏网卡（15%手续费）</option>
-    <option value="YP00006">盛付通卡（15%手续费）</option>
-    <option value="YP00007">网易卡（15%手续费）</option>
-    <option value="YP00008">完美卡（15%手续费）</option>
-    <option value="YP00009">QQ充值卡（15%手续费）</option>
-    <option value="YP00010">搜狐卡（15%手续费）</option>
-    <option value="YP00011">久游卡（15%手续费）</option>
-    <option value="YP00012">天宏卡（15%手续费）</option>
-    <option value="YP00014">光宇卡（15%手续费）</option>
-    <option value="YP00015">纵游卡（15%手续费）</option>
-    <option value="YP00016">征途卡（15%手续费）</option>
-
-</select>
+                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtAmount" maxlength="7"  onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtAmount" class="signup_input" updateaftercallback="False" oncopy="return false;" onpaste="return false" placeholder="请输入100或以上的整数金额" type="text">
+                        
                     </div>
                 </td>
             </tr>
-            <tr>
-                <td class="table_sub1"></td>
-                <td class="table_sub1">
-                    卡面值<span class="red">*</span>
+            <tr id="UIBankList">
+    <td class="table_sub1" width="5%">
                 </td>
-                <td>
-                    <div class="inputError">
-                        <div id="BaseMainContent_DepositMainContent_UpdatePanel1">
-    
-                                <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlCardValues"  id="ddlCardValues" class="signup_input" style="height: 25px; width: 233px;">
-        <option value="20" selected="selected">20元</option>
-        <option value="30">30元</option>
-        <option value="50">50元</option>
-        <option value="100">100元</option>
-        <option value="200">200元</option>
-        <option value="300">300元</option>
-        <option value="500">500元</option>
+    <td class="table_sub1" width="35%" align="right">
+                    存款银行<span class="red">*</span>
+                </td>
+    <td width="60%">
+                    <img src="ICBC.jpg" id="cdcBankImg" style="vertical-align: middle;" width="42" height="25">
+                    <select name="ctl00$ctl00$BaseMainContent$DepositMainContent$ddlBank" id="ddlBank" class="ddlCDCBank" style="height: 25px; width: 186px;">
+        <option selected="selected" value="ICBC" data-value="/Members/Deposit/images/cdc/ICBC.jpg">工商银行</option>
+        <option value="CMB" data-value="/Members/Deposit/images/cdc/CMB.jpg">招商银行</option>
+        <option value="ABC" data-value="/Members/Deposit/images/cdc/ABC.jpg">农业银行</option>
+        <option value="BOC" data-value="/Members/Deposit/images/cdc/BOC.jpg">中国银行</option>
+        <option value="CCB" data-value="/Members/Deposit/images/cdc/CCB.jpg">建设银行</option>
+        <option value="BCOM" data-value="/Members/Deposit/images/cdc/BCOM.jpg">交通银行</option>
+        <option value="CIB" data-value="/Members/Deposit/images/cdc/CIB.jpg">兴业银行</option>
+        <option value="GDB" data-value="/Members/Deposit/images/cdc/GDB.jpg">广东发展银行</option>
+        <option value="CMBC" data-value="/Members/Deposit/images/cdc/CMBC.jpg">中国民生银行</option>
+        <option value="CEB" data-value="/Members/Deposit/images/cdc/CEB.jpg">光大银行</option>
+        <option value="CPSRB" data-value="/Members/Deposit/images/cdc/CPSRB.jpg">邮政储蓄银行</option>
+        <option value="SPDB" data-value="/Members/Deposit/images/cdc/SPDB.jpg">浦东银行</option>
+        <option value="SZCB" data-value="/Members/Deposit/images/cdc/SZCB.jpg">平安银行</option>
+        <option value="CITIC" data-value="/Members/Deposit/images/cdc/CITIC.jpg">中信银行</option>
+        <option value="HXB" data-value="/Members/Deposit/images/cdc/HXB.jpg">华夏银行</option>
 
     </select>
-                            
-</div>
-                    </div>
                 </td>
-            </tr>
-            <tr>
-                <td class="table_sub1" width="5%"></td>
-                <td class="table_sub1" width="35%">
-                    卡号<span class="red">*</span>
-                </td>
-                <td width="60%">
-                    <div class="inputError">
-                        <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardNo" maxlength="20" id="BaseMainContent_DepositMainContent_txtCardNo" class="signup_input" type="text">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="table_sub1"></td>
-                <td class="table_sub1">
-                    密码<span class="red">*</span>
-                </td>
-                <td>
-                    <div class="inputError">
-                            <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtCardPin" maxlength="20" id="BaseMainContent_DepositMainContent_txtCardPin" class="signup_input" type="password">
-                    </div>
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
+</tr>
 
-    <div style="margin-left: 26px; margin-bottom: 15px; margin-top: 15px; padding: 5px; border: 1px solid grey; width: 382px;">
-        <div style="padding-left: 4px; color: red;">
-            [注意]
-        </div>
-        <div style="padding-left: 12px;">
-             <div id="BaseMainContent_DepositMainContent_UpdatePanel2">
-    
-                     <table id="BaseMainContent_DepositMainContent_Table1">
-        <tbody><tr>
-            <td class="col1">1.</td>
-            <td>
-                                 <span id="BaseMainContent_DepositMainContent_lblRemarkMsg1">您选择的是: 联通充值卡（5%手续费） </span>
-                             </td>
-        </tr>
-        <tr>
-            <td class="col1">2.</td>
-            <td>
-                                 <span id="BaseMainContent_DepositMainContent_lblRemarkMsg2">支持面额: </span>
-                                 <span id="BaseMainContent_DepositMainContent_lblSelectedCardValues">20元 , 30元 , 50元 , 100元 , 200元 , 300元 , 500元</span>
-                             </td>
-        </tr>
-        <tr>
-            <td class="col1">3.</td>
-            <td>
-                                 <span id="BaseMainContent_DepositMainContent_lblRemarkMsg3">不同卡型将会将增收指定手续费。最终可得存款额度可在[可得总值]查询</span>
-                             </td>
-        </tr>
-        <tr>
-            <td class="col1">4.</td>
-            <td>
-                                 <span id="BaseMainContent_DepositMainContent_lblRemarkMsg4">该卡种提示 如：选择50元面额但使用100元卡支付，<span style="color: red; font-weight: bold;">则系统认为实际支付金额为50元， 高于50元部分不予退还</span>；
-      <span style="color: red; font-weight: bold;">选择50元面额但使用30元卡支付则系统认为支付失败， 30元不予退还。</span><br>
-      支付前请仔细检查卡号密码是否对应，以及充值额度是否选择正确，否则造成损失Fun88乐天堂不承担任何责任。</span>
-                             </td>
-        </tr>
-    </tbody></table>
-    
-                 
-</div>   
-        </div>
-    </div>
-
-    <div class="table1">
-        <table width="100%" cellspacing="0" cellpadding="0" border="0">
-            <tbody><tr>
-                <td class="table_sub1" width="5%"></td>
-                <td class="table_sub1" width="35%">
-                    存款总值<span class="red">*</span>
-                </td>
-                <td width="60%">
-                    <div class="inputError">
-                        <div id="BaseMainContent_DepositMainContent_UpdatePanel4">
-    
-                                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtDepositAmount" maxlength="10" readonly="readonly" id="txtDepositAmount" class="signup_input" style="background-color: rgb(235, 235, 228);" type="text">
-                            
-</div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="table_sub1"></td>
-                <td class="table_sub1">
-                    可得总值<span class="red">*</span>
-                </td>
-                <td>
-                    <div class="inputError">
-                        <div id="BaseMainContent_DepositMainContent_UpdatePanel5">
-    
-                                <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$txtDepositAmountAfterCharge" maxlength="10" readonly="readonly" id="txtDepositAmountAfterCharge" class="signup_input" style="background-color: rgb(235, 235, 228);" type="text">
-                            
-</div>
-                    </div>
-                </td>
-            </tr>
         </tbody></table>
-         <div id="BaseMainContent_DepositMainContent_UpdatePanel6">
+        <div id="BaseMainContent_DepositMainContent_UpdatePanel1">
     
                 <input name="ctl00$ctl00$BaseMainContent$DepositMainContent$btnReload" id="btnReload" src="loading_search.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$btnReload&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height: 20px; width: 20px; display: none;" type="image">
                 <div style="text-align: center;">
@@ -234,23 +297,21 @@
             
 </div>
     </div>
-
     <div class="divider">
     </div>
     <div class="table2">
         <table>
             <tbody><tr>
                 <td>
-                    <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$BtnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="height: 20px;">提交</a>
+                    <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$BtnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">提交</a>
                 </td>
                 <td>
-                    <a id="BtnCancel" class="Btn whiteMedBtn" style="height: 20px;" href="#">
+                    <a id="BtnCancel" class="Btn whiteMedBtn">
                         取消
                     </a>
                 </td>
             </tr>
         </tbody></table>
-
     </div>
 
                 
@@ -261,7 +322,6 @@
                     <a href="mailto:cs@fun88.com" id="BaseMainContent_mailHref">
                             cs@fun88.com</a>
                     </div>
-          
-           
+
 </body>
 </html>
