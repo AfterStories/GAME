@@ -72,6 +72,25 @@
 
 
 <script>  
+
+var isLogin = "false";
+
+$(document).ready(function () {
+	if (getCookie("verifyform")==1) {
+			var isLogin = true;
+			$("#login").css("display", "none");
+            $(".leftBorder").css("display,none")
+            $("#logined-header").css("display", "block");
+
+	}else{
+		$("#login").css("display", "block");
+            $(".leftBorder").css("display,block")
+            $("#logined-header").css("display", "none");
+			var isLogin =false;
+	}
+})
+       
+
 /*获取轮播图*/ 
 var AjaxURL = " "
  $(document).ready(function () {
@@ -535,9 +554,9 @@ var AjaxURL = " "
 	<div id="RewardsDIV" style="visibility: hidden; display: none;"></div>
 
 
-	<div id="login">
+	<div id="login" style="display: block;">
     <div class="field-holder">
-        <input name="ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$UserName" maxlength="20" id="UserName" tabindex="1" class="field" autocomplete="off" placeholder="用户名" value="" type="text">
+        <input name="UserName" maxlength="20" id="UserName" tabindex="1" class="field" autocomplete="off" placeholder="用户名" value="" type="text">
         <span id="BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator" class="username-error" style="visibility: hidden;"></span>
     </div>
     <div class="field-holder">
@@ -549,49 +568,142 @@ var AjaxURL = " "
             &nbsp;
         </div>
 	</div>
+	
+<div id="logined-header" style="display:none;">
+    <ul>
+        <li>
+            <div id="ddlSettings" class="wrapper-dropdown-5">
+                <div></div>
+                <span class="arrow_setting"></span>
+                <ul class="dropdown">
+                    <li id="chgPW"><a class="zh-CN" href="http://www.10010388.com/zh-CN/Change-Password">
+                        更换密码</a></li>
+                    <li id="UpdateProfile"><a class="zh-CN" href="http://www.10010388.com/zh-CN/Update-Profile">
+                        更新个人资料</a></li>
+                    
+                    <li id="IMacc"><a class="zh-CN" href="http://www.10010388.com/zh-CN/Update-IM-Account">
+                        百乐城账户</a></li>
+                    
+                    <li><a class="zh-CN" onclick="javascript:bankDetails();">
+                        银行资料</a></li>
+                    
+                    <li id="SelfExclusion"><a class="zh-CN" href="http://www.10010388.com/zh-CN/Self-Exclusion">
+                        自我限制</a></li>
+                    <li id="RebateCalculator"><a class="zh-CN" style="color: yellow;" href="http://www.10010388.com/zh-CN/Rebate-Calculator">
+                        返水查询</a></li>
+                    <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/Announcement', 'popUpWin', 800);">
+                        最新通告</a></li>
+                    <li>
+                        <a id="BaseMainContent_HeaderContent_ascxMbrAuth_LoginStatus1" onclick="return Logout();" >退出</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        <li>
+            <img src="../lib/images/top_navigation_line.png"></li>
+        <li>
+
+            
+            <div id="ddlWallets" class="wrapper-dropdown-5 ddlWalletsBank">
+                <div></div>
+                <span class="bank">
+                    银行</span>
+
+                
+
+                    <span class="arrow_setting"></span>
+                    <ul class="dropdown">
+                        <li><a id="depositLink" class="zh-CN" style="color: yellow;" onclick="javascript:popUpWindowManager('/zh-CN/Deposit-Yeepay','popUpWindow','1350');">
+                            存款充值
+                        </a></li>
+                        
+                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/Deposit-Yeepay','popUpWindow','1350');">
+                            点卡充值
+                            
+                        </a></li><li id="CDCPopup"><a class="zh-CN" onclick="javascript:PopupMobileCDC();">
+                            手机在线存款
+                        </a></li>
+                        
+                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/Withdrawal-Local-Bank','popUpWindow','1350');">
+                            提款
+                        </a></li>
+                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/Transfer','popUpWindow','1350');">
+                            转账
+                        </a></li>
+                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/Bonus','popUpWindow','793');">
+                            红利记录
+                        </a></li>
+                        
+                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/SOS-Bonus','popUpWindow','793');">
+                            SOS救援金
+                        </a></li>
+                        
+                        
+                    </ul>
+                </div>
+        </li>
+        <li>
+            <img src="../lib/images/top_navigation_line.png"></li>
+        <li>
+
+    <div class="balanceQuickView">
+    <div class="dropdownlist">
+        <input name="ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$Balances1$QuickBalance" readonly="readonly" id="BaseMainContent_HeaderContent_ascxMbrAuth_Balances1_QuickBalance" type="text">
+        <div class="picture">&nbsp;</div>
+    </div>
+
+    <div class="refresh">
+        
+        <img src="../lib/images/RefreshBalances.png" id="uiRefreshBalance" alt="Refresh" class="hoverImg">
+    </div>
+    <p id="balanceTable" class="walletList" style="display: none;"><table id="walletTable"></table></p>
+</div>
+        </li>
+        <li>
+            
+            <div id="divWelMember" style="min-width: 160px;">
+                    
+                <div style="float: right;">
+                <span id="BaseMainContent_HeaderContent_ascxMbrAuth_Label1">您好</span>
+                        <span>,</span>
+                        <span id="BaseMainContent_HeaderContent_ascxMbrAuth_LoginName">Bkmyxif</span>
+                    </div>
+                </div>
+
+            
+                <div id="tooltipsRewardLvl" class="RewardLvlTooltip" style="visibility: hidden;">
+                    <table class="tblMemberRewardLvl">
+                        <tbody><tr>
+                            <td>当前等级 </td>
+                            <td>:</td>
+                        <td>银</td>
+                            <td>
+                            <span id="dvRewardL001" class="rewardIcon"></span>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td>下一等级 </td>
+                            <td>:</td>
+                        
+                        <td>金</td>
+                        <td><span id="dvRewardL002" class="rewardIcon"></span></td>
+                        
+                        </tr>
+                    
+                       </tbody></table>
+            </div> 
+            
+        </li>
+    </ul>
+</div>
 
     </div>
     </div>
     
 </div>
 
-
-
-<script language="javascript" type="text/javascript">
-    var getUri = window.location.href.toLowerCase();
-    var isSlotLobby = getUri.indexOf("slotlobby") !== -1;
-    var depositDefaultLink = '';
-    function ValidateMemberExt(sender, args) {
-        sender.innerHTML = "仅可使用字母 'A-Z', 'a-z', 数字 '0-9', '.', '_' 和 '-'。";
-        return ValidateMember(sender, args);
-    }
-
-    function DropDown(el) {
-        this.dd = el;
-        this.initEvents();
-    }
-
-    function bankDetails() {
-        if (isSlotLobby) {
-            OpenInNewTab("/zh-CN/Bank-Details");
-        }
-        else {
-            window.location.href = "/zh-CN/Bank-Details";
-        }
-    }
-
-        DropDown.prototype = {
-        initEvents: function () {
-            var obj = this;
-
-            obj.dd.on('mouseover', function (event) {
-                $(this).toggleClass('active');
-                event.stopPropagation();
-            });
-        }
-    };
-
-</script>
 
 <div id="top" style="position: relative;top:-400px;margin:54px 0 0 0;">
     <div id="logofun88InZh" class="logoLoc">

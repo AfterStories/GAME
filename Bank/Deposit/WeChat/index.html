@@ -8,6 +8,7 @@
     <link href="../../master.button.css" rel="stylesheet" type="text/css">
     <script  src="../../jquery-1.12.2.min.js" type="text/javascript"> </script>
     <script src="master.transaction.js" type="text/javascript"></script>
+    <script  src="../../../lib/js/jquery.validate.js" type="text/javascript"> </script>
 </head>
 
 <body topmargin="0" onload="parent.document.getElementById('tabContent').height = document.body.scrollHeight > 500 ?document.body.scrollHeight+10:700;">
@@ -19,17 +20,17 @@
             function wechatinmaintenance() {
                 emergencyAlert('微信存款维护中','欲使用微信存款支付，请联系在线客服。','http://helpcn.fun585.com','在线客服','关闭');
             }
-            if(window.location.href.toLowerCase().indexOf("fun2008") &gt; -1) {
+            if(window.location.href.toLowerCase().indexOf("fun2008") > -1) {
                 wechatinmaintenance();
                 $('#txtAmount').attr('disabled', 'disabled');
             }
-            $.fn.clearForm = function () { return this.each(function () { var type = this.type, tag = this.tagName.toLowerCase(); if (tag == 'form') return $(':input', this).clearForm(); if ((type == 'text' &amp;&amp; this.id != 'txtDepDateFrm' &amp;&amp; this.id != 'txtDepDateTo') || type == 'password' || tag == 'textarea') this.value = ''; else if (type == 'checkbox') this.checked = false; else if (type == 'radio' &amp;&amp; this.value == '0') this.click(); }) };
+            $.fn.clearForm = function () { return this.each(function () { var type = this.type, tag = this.tagName.toLowerCase(); if (tag == 'form') return $(':input', this).clearForm(); if ((type == 'text'&& this.id != 'txtDepDateFrm'&& this.id != 'txtDepDateTo') || type == 'password' || tag == 'textarea') this.value = ''; else if (type == 'checkbox') this.checked = false; else if (type == 'radio'&& this.value == '0') this.click(); }) };
             $.support.placeholder = ('placeholder' in document.createElement('input'));
-            resetForm(true);
+           
            
             jQuery.validator.addMethod("Zerodecimal", function (value, element, param) {
                 var val = $(param).val();
-                if (val.indexOf('.') != -1 &amp;&amp; val.length &gt; 2) {
+                if (val.indexOf('.') != -1&& val.length > 2) {
                     //remove ',' to match the regex accurately
                     var txtnumber = val.replace(/,/g, '');
                     if (/^\d+\.{0,1}[0]{1,2}$/.test(txtnumber)) return true;
@@ -42,7 +43,7 @@
 
             jQuery.validator.addMethod("checkZero", function (value, element, param) {
                 var val = $(param).val();
-                if ("zh-CN"=="zh-CN" &amp;&amp; ("True"||"False")){
+                if ("zh-CN"=="zh-CN"&& ("True"||"False")){
                      if (val == 0) {
                          return false;
                      }
@@ -68,7 +69,7 @@
                         boydigit: '请使用整数金额',
                         DigitRegex: '金额格式无效',
                         min: function (error) {
-                            if ("zh-CN"=="zh-CN" &amp;&amp; ("True"||"False"))
+                            if ("zh-CN"=="zh-CN"&& ("True"||"False"))
                                 return '请输入 100 或以上的整数金额';
                             else 
                                 return '金额必须在最小范围 100.00 内或以上';
@@ -82,7 +83,7 @@
                      this.defaultShowErrors();
                  },
                  errorPlacement: function (error, element) {
-                     if (($('#LitZero').length &amp;&amp; !element.is($("#txtAmount"))) || (!$('#LitZero').length &amp;&amp; element.is($("#txtAmount"))) || (!$('#LitZero').length &amp;&amp; !element.is($("#txtAmount"))))
+                     if (($('#LitZero').length&& !element.is($("#txtAmount"))) || (!$('#LitZero').length&& element.is($("#txtAmount"))) || (!$('#LitZero').length&& !element.is($("#txtAmount"))))
                          error.insertAfter(element);
                      else
                          error.insertAfter('#LitZero');
@@ -114,15 +115,15 @@
                 convertWithComma($('#txtAmountAfterCalcualtion'));
             });
 
-            if ("zh-CN"=="zh-CN" &amp;&amp; ("True"||"False")){
+            if ("zh-CN"=="zh-CN"&& ("True"||"False")){
                 $('#txtAmount').attr("placeholder", "请输入"+100.0000+"或以上的整数金额");
 
-                 if (!$.support.placeholder &amp;&amp; $('#txtAmount').val() == "") {
+                 if (!$.support.placeholder&& $('#txtAmount').val() == "") {
                      $('#txtAmount').val($('#txtAmount').attr("placeholder")).css({ color: "#A0A0A0" });
                  }
                         
                  $('#txtAmount').focus(function () {
-                     if (!$.support.placeholder &amp;&amp; $(this).val() == $(this).attr("placeholder")) {
+                     if (!$.support.placeholder&& $(this).val() == $(this).attr("placeholder")) {
                          $('#txtAmount').val("").css({ color: "#000" });
                      }
                  });
@@ -141,7 +142,7 @@
             });
 
             $("#BtnSubmit").click(function (e) {
-                if (window.location.href.toLowerCase().indexOf("fun2008") &gt; -1) {
+                if (window.location.href.toLowerCase().indexOf("fun2008") > -1) {
                     wechatinmaintenance();
                     return false;
                 }
@@ -162,7 +163,7 @@
             });
 
             $("#BtnCancel").click(function () {
-                resetForm(false);
+               
             });
         });
     </script>

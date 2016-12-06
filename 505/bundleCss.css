@@ -1,16 +1,4 @@
-
-.balanceQuickView { float: left; padding-top: 5px; position: relative; right: 0px; top: 0px; width: 220px; }
-.balanceQuickView .refresh { width: 22px; }
-.balanceQuickView div { float: left; padding: 0px 3px 0px 0px; }
-.balanceQuickView balanceTable.zh-cn { color: rgb(148, 45, 38); font-size: 1em; font-weight: 400; width: 192px; }
-.balanceQuickView a img { cursor: pointer; height: 20px; }
-.balanceQuickView balanceTable.en-us, .balanceQuickView balanceTable.id-id, .balanceQuickView balanceTable.vi-vn, .balanceQuickView balanceTable.th-th { color: rgb(148, 45, 38); font-size: 0.8em; width: 192px; }
-
-
-.picture { margin: -19px 0px 0px 177px; top: -2px; left: -1px; }
-
-
-
+/* Code tidied up by ScrapBook */
 .ui-helper-hidden { display: none; }
 .ui-helper-hidden-accessible { border: 0px none; height: 1px; overflow: hidden; position: absolute; width: 1px; margin: -1px; padding: 0px; }
 .ui-helper-reset { border: 0px none; outline: 0px none; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: outside none none; margin: 0px; padding: 0px; }
@@ -159,12 +147,12 @@ body .ui-tooltip { border-width: 2px; border-color: rgb(170, 170, 170); }
 .ui-widget .ui-widget { font-size: 1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-size: 1em; }
 .ui-widget-content { border: 1px solid rgb(66, 151, 215); background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(34, 34, 34); }
-.ui-widget-header { border: 1px solid rgb(66, 151, 215); background: rgb(204, 204, 204) url("../images/ui-bg_gloss-wave_55_0b81da_500x100.png") repeat-x scroll 50% 50%; color: rgb(255, 255, 255); font-weight: 700; }
+.ui-widget-header { border: 1px solid rgb(66, 151, 215); background: rgb(204, 204, 204) url("ui-bg_gloss-wave_55_0b81da_500x100.png") repeat-x scroll 50% 50%; color: rgb(255, 255, 255); font-weight: 700; }
 .ui-widget-content a, .ui-widget-header a { color: rgb(34, 34, 34); }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid rgb(197, 219, 236); background: rgb(223, 239, 252) none repeat scroll 0% 0%; font-weight: 400; color: rgb(85, 85, 85); }
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: rgb(85, 85, 85); text-decoration: none; }
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid rgb(121, 183, 231); background: rgb(208, 229, 245) url("../images/ui-bg_glass_75_d0e5f5_1x400.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid rgb(121, 183, 231); background: rgb(245, 248, 249) url("../images/ui-bg_inset-hard_100_f5f8f9_1x100.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid rgb(121, 183, 231); background: rgb(208, 229, 245) url("ui-bg_glass_75_d0e5f5_1x400.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid rgb(121, 183, 231); background: rgb(245, 248, 249) url("ui-bg_inset-hard_100_f5f8f9_1x100.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
 .ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: rgb(29, 89, 135); text-decoration: none; }
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight { border: 1px solid rgb(252, 239, 161); color: rgb(54, 54, 54); }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a { color: rgb(54, 54, 54); }
@@ -175,9 +163,9 @@ body .ui-tooltip { border-width: 2px; border-color: rgb(170, 170, 170); }
 .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a, .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: rgb(205, 10, 10); }
 .ui-state-disabled .ui-icon {  }
 .ui-icon { width: 16px; height: 16px; }
-.ui-widget-header .ui-icon { background-image: url("../images/ui-icons_888888_256x240.png"); }
-.ui-state-highlight .ui-icon { background-image: url("../images/ui-icons_064792_256x240.png"); }
-.ui-state-error .ui-icon, .ui-state-error-text .ui-icon { background-image: url("../images/ui-icons_cd0a0a_256x240.png"); }
+.ui-widget-header .ui-icon { background-image: url("ui-icons_888888_256x240.png"); }
+.ui-state-highlight .ui-icon { background-image: url("ui-icons_064792_256x240.png"); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon { background-image: url("ui-icons_cd0a0a_256x240.png"); }
 .ui-icon-blank { background-position: 16px 16px; }
 .ui-icon-carat-1-n { background-position: 0px 0px; }
 .ui-icon-carat-1-ne { background-position: -16px 0px; }
@@ -377,7 +365,7 @@ select { -moz-appearance: none; border: 1px solid; box-shadow: 0px 1px 3px rgba(
 .lang { display: inline; float: right; position: relative; top: 17px; width: 114px; }
 #arrow { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; vertical-align: middle; width: 0px; top: 13px; float: right; right: 4px; position: absolute; cursor: pointer; }
 #arrow2 { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; position: relative; vertical-align: middle; width: 0px; margin-left: 2px; cursor: pointer; top: 2px; }
-.blackArrow_right { background: transparent url("images/Arrow_allicons.png") no-repeat scroll -107px -23px; width: 26px; height: 31px; display: block; float: right; }
+.blackArrow_right { background: transparent url("Arrow_allicons.png") no-repeat scroll -107px -23px; width: 26px; height: 31px; display: block; float: right; }
 #target a { width: 113px; height: 34px; margin-top: -7px; }
 .FlagSelector { width: 40px; height: 20px; margin: 0px; float: right; padding: 0px; }
 .FlagOption { width: 34px; height: 16px; margin-left: 5px; margin-bottom: 5px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); border-radius: 3px; background: rgb(110, 110, 110) none repeat scroll 0% 0%; }
@@ -413,8 +401,8 @@ p { padding-bottom: 18px; }
 .but_reg01 { width: 307px; float: right; height: 80px; padding-right: 202px; padding-top: 19px; }
 .but_reg02 { width: 419px; float: right; height: 80px; padding-left: 12px; }
 #slider .slider-nav a { display: block; width: 20px; height: 49px; font-size: 0px; line-height: 0; text-indent: -4000px; position: absolute; top: 129px; }
-#slider .slider-nav a.prev { left: 0px; background: transparent url("images/button-prev.png") no-repeat scroll 0% 0%; }
-#slider .slider-nav a.next { right: 0px; background: transparent url("images/button-next.png") no-repeat scroll 0% 0%; }
+#slider .slider-nav a.prev { left: 0px; background: transparent url("button-prev.png") no-repeat scroll 0% 0%; }
+#slider .slider-nav a.next { right: 0px; background: transparent url("button-next.png") no-repeat scroll 0% 0%; }
 #slider-holder { height: 460px; }
 #slider-holder .jcarousel-clip { height: 460px; width: 960px; position: relative; overflow: hidden; }
 #slider-holder .slide-image { float: left; display: inline; }
@@ -468,7 +456,7 @@ p { padding-bottom: 18px; }
 #sub-tit { float: left; height: 60px; width: 900px; }
 #slider ul { width: 960px; height: 460px; position: relative; overflow: hidden; }
 #slider ul li { list-style-type: none; float: left; display: inline; height: 500px; width: 960px; padding: 0px; position: relative; overflow: hidden; }
-.pagination { position: relative; z-index: 101; margin-top: -26px; margin-right: 14px; margin-bottom: 0px;  }
+.pagination { position: relative; z-index: 101; margin-top: -26px; margin-right: 14px; margin-bottom: 0px; float: right; }
 .pagination li { float: left; margin: 0px 1px; list-style: outside none none; }
 .pagination li a { display: block; width: 12px; height: 0px; padding-top: 12px; background-image: url("pagination.png"); background-position: 0px 0px; float: left; overflow: hidden; }
 .pagination li.current a { background-position: 0px -12px; }
@@ -516,43 +504,43 @@ h3.txt-247 { background-image: url("txt-247.gif"); }
 .tooltip {  }
 div#fixed_header { background-color: rgb(37, 170, 225); width: 100%; position: fixed; height: 33px; top: 0px; z-index: 4998; left: 0px; }
 div#outer_top_header { top: 0px; position: fixed; background-color: rgb(37, 170, 225); height: 33px; z-index: 4999; }
-#top_nav_left #topBannerLogo.CN { background: transparent url("../images/fun88_logo_cn.png") no-repeat scroll 0px 6px; }
-#top_nav_left #topBannerLogo.EN { background: transparent url("../images/fun88_logo_EN.png") no-repeat scroll 2px 10px; }
+#top_nav_left #topBannerLogo.CN { background: transparent url("fun88_logo_cn.png") no-repeat scroll 0px 6px; }
+#top_nav_left #topBannerLogo.EN { background: transparent url("fun88_logo_EN.png") no-repeat scroll 2px 10px; }
 #top_nav_left #topBannerLogo { height: 28px; width: 56px; cursor: pointer; display: none; }
 #top_nav_left #topBannerLogoContainer { display: none; }
-#hbtn1 { background: transparent url("../images/allicons.png") no-repeat scroll -2px 2px; width: 28px; height: 33px; }
-#hbtn1:hover { background: transparent url("../images/allicons.png") no-repeat scroll -2px -28px; }
-#hbtn2 { background: transparent url("../images/allicons.png") no-repeat scroll -31px 2px; width: 27px; height: 33px; }
-#hbtn2:hover { background: transparent url("../images/allicons.png") no-repeat scroll -31px -28px; }
-#hbtn3 div { background: transparent url("../images/allicons.png") no-repeat scroll -96px 0px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn3:hover div { background: transparent url("../images/allicons.png") no-repeat scroll -96px -30px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn1 { background: transparent url("allicons.png") no-repeat scroll -2px 2px; width: 28px; height: 33px; }
+#hbtn1:hover { background: transparent url("allicons.png") no-repeat scroll -2px -28px; }
+#hbtn2 { background: transparent url("allicons.png") no-repeat scroll -31px 2px; width: 27px; height: 33px; }
+#hbtn2:hover { background: transparent url("allicons.png") no-repeat scroll -31px -28px; }
+#hbtn3 div { background: transparent url("allicons.png") no-repeat scroll -96px 0px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn3:hover div { background: transparent url("allicons.png") no-repeat scroll -96px -30px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
 #hbtn4 { background-color: rgb(37, 170, 225); height: 25px; }
 #hbtn4:hover { background-color: rgb(17, 145, 191); height: 25px; }
-#hbtn4 div { background: transparent url("../images/allicons.png") no-repeat scroll -246px 0px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn4:hover div { background: transparent url("../images/allicons.png") no-repeat scroll -246px -30px ! important; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn5 { background: transparent url("../images/allicons.png") no-repeat scroll -393px 2px; width: 25px; height: 33px; }
-#hbtn5:hover { background: transparent url("../images/allicons.png") no-repeat scroll -393px -28px; }
-#hbtn6 { background: transparent url("../images/allicons.png") no-repeat scroll -62px 2px; width: 25px; height: 33px; }
-#hbtn6:hover { background: transparent url("../images/allicons.png") no-repeat scroll -62px -28px; }
-#hbtn7 div { background: transparent url("../images/allicons.png") no-repeat scroll -157px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn8 div { background: transparent url("../images/allicons.png") no-repeat scroll -125px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn4 div { background: transparent url("allicons.png") no-repeat scroll -246px 0px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn4:hover div { background: transparent url("allicons.png") no-repeat scroll -246px -30px ! important; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn5 { background: transparent url("allicons.png") no-repeat scroll -393px 2px; width: 25px; height: 33px; }
+#hbtn5:hover { background: transparent url("allicons.png") no-repeat scroll -393px -28px; }
+#hbtn6 { background: transparent url("allicons.png") no-repeat scroll -62px 2px; width: 25px; height: 33px; }
+#hbtn6:hover { background: transparent url("allicons.png") no-repeat scroll -62px -28px; }
+#hbtn7 div { background: transparent url("allicons.png") no-repeat scroll -157px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn8 div { background: transparent url("allicons.png") no-repeat scroll -125px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
 #hbtnDiamond { background: rgb(37, 170, 225) url("VIP-Fun88.png") no-repeat scroll 5px 11px; height: 25px; }
 #hbtnDiamond:hover { background: transparent url("VIP-Fun88-Hover.png") no-repeat scroll 5px 11px ! important; }
 .ddlWalletsBank { width: 60px ! important; height: 22px ! important; }
 #ddlSettings { background: transparent none repeat scroll 0% 0%; width: 32px; height: 22px; }
 #ddlWallets { background: transparent none repeat scroll 0% 0%; width: 32px; height: 22px; }
-#ddlSettings div { background: transparent url("../images/allicons.png") no-repeat scroll -576px -2px; width: 32px; height: 22px; }
-#ddlSettings:hover div { background: transparent url("../images/allicons.png") no-repeat scroll -576px -34px; }
-#ddlWallets div { background: transparent url("../images/allicons.png") no-repeat scroll -424px -3px; width: 25px; height: 22px; margin-left: -8px; }
-#ddlWallets:hover div { background: transparent url("../images/allicons.png") no-repeat scroll -424px -34px; width: 25px; height: 22px; margin-left: -8px; }
+#ddlSettings div { background: transparent url("allicons.png") no-repeat scroll -576px -2px; width: 32px; height: 22px; }
+#ddlSettings:hover div { background: transparent url("allicons.png") no-repeat scroll -576px -34px; }
+#ddlWallets div { background: transparent url("allicons.png") no-repeat scroll -424px -3px; width: 25px; height: 22px; margin-left: -8px; }
+#ddlWallets:hover div { background: transparent url("allicons.png") no-repeat scroll -424px -34px; width: 25px; height: 22px; margin-left: -8px; }
 #btnDepositTH, #btnDepositVN, #btnDepositID, #btnDeposit, #btnRegister, #CNbtnRegister { background: transparent url("btn_register_sprite.gif") no-repeat scroll 0px 0px / 172px 87px; border: 0px none; width: 155px; height: 30px; cursor: pointer; color: rgb(255, 255, 255); font-weight: bold; text-align: center; padding: 9px 0px 0px 18px; }
 #btnDeposit { width: 155px; background-size: 172px 87px; padding: 8px 0px 0px 19px; }
 #btnDeposit:hover { background-position: 0px -43px; background-size: 172px 87px; }
 #btnDepositID { width: 180px; background-size: 205px 87px; padding: 8px 0px 0px 29px; }
 #btnDepositID:hover { background-position: 0px -43px; background-size: 205px 87px; }
-#btnDepositCN { width: 185px ! important; font-size: 17px ! important; background: transparent url("../images/button_popup2.png") no-repeat scroll 0px 0px; border: 0px none; }
+#btnDepositCN { width: 185px ! important; font-size: 17px ! important; background: transparent url("button_popup2.png") no-repeat scroll 0px 0px; border: 0px none; }
 #btnDepositTH:hover, #btnDepositVN:hover, #btnRegister:hover, #CNbtnRegister:hover { background-position: 0px -43px; background-size: 172px 87px; }
-#btnRegisterCN { width: 185px ! important; font-size: 17px ! important; background: transparent url("../images/button_pop_up.png") no-repeat scroll 0px 0px; border: 0px none; }
+#btnRegisterCN { width: 185px ! important; font-size: 17px ! important; background: transparent url("button_pop_up.png") no-repeat scroll 0px 0px; border: 0px none; }
 #btnRegisterID { width: 230px ! important; background: transparent url("button_popup2ID.png") no-repeat scroll 0px 0px; border: 0px none; }
 #btnRegisterTH { background: transparent url("button_popup2TH.png") no-repeat scroll 0px 0px; border: 0px none; }
 #btnRegisterVN { width: 195px ! important; background: transparent url("button_popup2VN.png") no-repeat scroll 0px 0px; border: 0px none; }
@@ -567,43 +555,43 @@ div#outer_top_header { top: 0px; position: fixed; background-color: rgb(37, 170,
 #login .field, #login .password { width: 118px; background: rgb(255, 255, 255) none repeat scroll 0px 0px; color: rgb(50, 51, 51); }
 #login .field:focus, #login .password:focus { border-color: rgb(37, 170, 226); }
 #login .button { float: right; display: inline; width: 107px; height: 36px; font-size: 9pt; font-weight: bold; color: rgb(37, 170, 225); text-indent: 8px; padding-top: 0px; margin-top: -2px; }
-#login .button { background: transparent url("../images/btn_login_.gif") no-repeat scroll 0px 3px; border: 0px none; }
-#login .button:hover { background: transparent url("../images/btn_login_.gif") no-repeat scroll 0px -33px; }
-#top_nav_shadow { height: 4px; background-image: url("../images/header-shadow.png"); background-repeat: no-repeat; background-position: center center; display: none; }
+#login .button { background: transparent url("btn_login_.gif") no-repeat scroll 0px 3px; border: 0px none; }
+#login .button:hover { background: transparent url("btn_login_.gif") no-repeat scroll 0px -33px; }
+#top_nav_shadow { height: 4px; background-image: url("header-shadow.png"); background-repeat: no-repeat; background-position: center center; display: none; }
 #logofun88 > table { width: 355px; }
 #logofun88InZh > table { width: 415px; }
 #logofun88 { float: left; display: inline; font-size: 0px; line-height: 0; }
 #logofun88InZh { float: left; display: inline; font-size: 0px; line-height: 0; }
-#logofun88 .logo { display: block; height: 67px; text-indent: -4000px; background: transparent url("../images/logo.png") no-repeat scroll 0px 0px; }
-#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; background-image: url("../images/logo-cn.png"); background-repeat: no-repeat; margin-left: 15px; }
-#logofun88JP .logo { display: block; height: 67px; text-indent: -4000px; background-image: url("../images/logo-jp.png"); background-repeat: no-repeat; margin-left: 15px; }
+#logofun88 .logo { display: block; height: 67px; text-indent: -4000px; background: transparent url("logo.png") no-repeat scroll 0px 0px; }
+#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; background-image: url("logo-cn.png"); background-repeat: no-repeat; margin-left: 15px; }
+#logofun88JP .logo { display: block; height: 67px; text-indent: -4000px; background-image: url("logo-jp.png"); background-repeat: no-repeat; margin-left: 15px; }
 #logofun88 span { display: block; height: 67px; text-indent: -4000px; }
 #logofun88InZh span { display: block; height: 45px; text-indent: -4000px; background-image: url("slogan_cn.gif"); background-repeat: no-repeat; margin-top: 10px; margin-left: 15px; }
 #header_right { float: right; display: inline; margin-right: 15px; padding: 10px 0px 0px; }
 #header_right > div { display: block; float: left; }
 #header_right a { display: block; font-size: 15px; }
 #header_right > div > #CNbtnRegister { display: block; font-size: 17px; word-spacing: -3px; }
-#dvMedia01 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -13px 3px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia01:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -14px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia02 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll 0px 0px; width: 55px; height: 38px; margin-top: 0px; }
-#dvMedia02:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll 0px 0px; cursor: pointer; margin-top: 0px; }
-#dvMedia03 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -142px 3px; width: 29px; height: 38px; margin-top: 0px; }
-#dvMedia03:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -142px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia04 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -201px 3px; width: 26px; height: 38px; margin-top: 0px; }
-#dvMedia04:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -201px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia04.onlyVip:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -201px -89px; cursor: pointer; margin-top: 0px; }
-#dvMedia05 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -247px -1px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia05:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -247px -47px; cursor: pointer; margin-top: 0px; }
-#dvMedia06 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -303px -1px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia06:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -303px -47px; cursor: pointer; margin-top: 0px; }
-#dvMedia07 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -359px -1px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia07:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -359px -47px; cursor: pointer; margin-top: 0px; }
-#dvMedia08 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -420px -1px; width: 37px; height: 38px; margin-top: 0px; margin-right: 7px; }
-#dvMedia08:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -420px -47px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
-#dvMedia09 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -474px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
-#dvMedia09:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -474px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
-#dvMedia10 { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -531px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
-#dvMedia10:hover { background: transparent url("../images/footerlogo-combine.png") no-repeat scroll -531px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+#dvMedia01 { background: transparent url("footerlogo-combine.png") no-repeat scroll -13px 3px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia01:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -14px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia02 { background: transparent url("footerlogo-combine.png") no-repeat scroll 0px 0px; width: 55px; height: 38px; margin-top: 0px; }
+#dvMedia02:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll 0px 0px; cursor: pointer; margin-top: 0px; }
+#dvMedia03 { background: transparent url("footerlogo-combine.png") no-repeat scroll -142px 3px; width: 29px; height: 38px; margin-top: 0px; }
+#dvMedia03:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -142px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia04 { background: transparent url("footerlogo-combine.png") no-repeat scroll -201px 3px; width: 26px; height: 38px; margin-top: 0px; }
+#dvMedia04:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -201px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia04.onlyVip:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -201px -89px; cursor: pointer; margin-top: 0px; }
+#dvMedia05 { background: transparent url("footerlogo-combine.png") no-repeat scroll -247px -1px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia05:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -247px -47px; cursor: pointer; margin-top: 0px; }
+#dvMedia06 { background: transparent url("footerlogo-combine.png") no-repeat scroll -303px -1px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia06:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -303px -47px; cursor: pointer; margin-top: 0px; }
+#dvMedia07 { background: transparent url("footerlogo-combine.png") no-repeat scroll -359px -1px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia07:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -359px -47px; cursor: pointer; margin-top: 0px; }
+#dvMedia08 { background: transparent url("footerlogo-combine.png") no-repeat scroll -420px -1px; width: 37px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia08:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -420px -47px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+#dvMedia09 { background: transparent url("footerlogo-combine.png") no-repeat scroll -474px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia09:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -474px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+#dvMedia10 { background: transparent url("footerlogo-combine.png") no-repeat scroll -531px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia10:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -531px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
 .rewardIcon { height: 27px; margin-top: 0px; display: block; float: right; background-image: url("reward_icon_CN.png"); background-repeat: no-repeat; }
 #dvRewardL001 { background-position: 4px 3px; width: 35px; }
 #dvRewardL002 { background-position: -24px 3px; width: 36px; }
@@ -714,8 +702,11 @@ div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid
 #footericon4CN { display: block; width: 45px; height: 40px; float: left; margin-right: 8px; }
 #footericon5CN { display: block; width: 55px; height: 40px; float: left; margin-right: 8px; }
 #footericon6 { display: block; width: 77px; height: 40px; float: left; }
-#footericon7, #footericonJP, #footericonJP2 { display: block; width: 67px; height: 40px; float: left; }
-#footericonJP2 { margin-left: 80px; }
+#footericon7, #footericonJP, #footericonJP2, #footericonJP1, #footericonJP3, #footericonJP4 { display: block; width: 67px; height: 40px; float: left; }
+#footericonJP1 { margin-left: -17px; }
+#footericonJP3 { margin-left: -6px; }
+#footericonJP2 { margin-left: -9px; }
+#footericonJP4 { margin-left: 8px; }
 #footericon7CN { display: block; width: 61px; height: 40px; float: left; }
 #footericon8 { display: block; width: 67px; height: 40px; float: left; }
 #footericon9 { display: block; width: 50px; height: 40px; float: left; margin-left: 6px; }
@@ -762,7 +753,7 @@ a.WelcomeBox.last { cursor: pointer; }
 #outer_top_header #ddlWallets .dvEmptyFrame, #outer_top_header #ddlSettings .dvEmptyFrame { border: 0px none; width: 0px; height: 0px; display: none; }
 #japan_email { display: block; margin-top: -134px; margin-left: 115px; width: 134px; height: 22px; position: absolute; cursor: pointer; }
 #navigation { width: 100%; height: 40px; margin-bottom: 20px; margin-top: 10px; }
-#navMain { width: 960px; z-index: 99; height: 43px; font-size: 16px; text-align: justify; padding: 0px;position: relative;top:-28px; }
+#navMain { width: 960px; z-index: 99; height: 43px; font-size: 16px; text-align: justify; padding: 0px; }
 #navMain.ko-KR { font-size: 15px; }
 #navMain td.on ul, #navMain td.off ul { margin: 0px; padding: 0px; }
 #navMain a { text-decoration: none; text-transform: uppercase; float: left; }
@@ -788,9 +779,9 @@ a.WelcomeBox.last { cursor: pointer; }
 #navMain td.hovered ul, #navMain td:hover ul, #navMain td.on:hover ul { display: block; }
 #navMain td#Rewards a:hover, #navMain td#LifeStyle a:hover, #navMain td#P2P a:hover, #navMain td#StarCasino a:hover { background: transparent none repeat scroll 0% 0%; border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin-top: -3px; margin-right: auto; margin-left: auto; }
 #navMain td a.cssSelectedHomeMenu { border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin-top: -3px; }
-#navMain td a.MenuImageHome { background: transparent url("../images/allicons.png") no-repeat scroll -456px -29px; margin-left: auto; margin-right: auto; width: 28px; height: 32px; }
+#navMain td a.MenuImageHome { background: transparent url("allicons.png") no-repeat scroll -456px -29px; margin-left: auto; margin-right: auto; width: 28px; height: 32px; }
 #navMain td a.MenuImageHome:hover { border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin: -3px 0px 1px; }
-#navMain td a.MenuImageMobile { background: transparent url("../images/allicons.png") no-repeat scroll -486px -27px; margin-left: auto; margin-right: auto; width: 28px; height: 30px; }
+#navMain td a.MenuImageMobile { background: transparent url("allicons.png") no-repeat scroll -486px -27px; margin-left: auto; margin-right: auto; width: 28px; height: 30px; }
 #navMain td a.cssSelectedHomeMenu:hover, #navMain td a:hover, #navMain td:hover a { background-color: rgb(255, 255, 255); border-width: 3px 1px 1px; border-style: solid; border-color: rgb(37, 170, 225) rgb(229, 228, 228) rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin: -3px -1px -1px; }
 .menuInZhSlot { margin-left: 14px ! important; margin-right: 14px ! important; text-align: center; }
 .menuInThSlot { margin-left: 12px ! important; margin-right: 12px ! important; text-align: center; font-size: 14px; }
@@ -803,7 +794,7 @@ a.WelcomeBox.last { cursor: pointer; }
 .dropdown dt a.active { background: rgb(17, 145, 191) none repeat scroll 0% 0%; width: 92px; height: 18px; color: rgb(255, 255, 255); }
 .dropdown dd ul { background-color: rgb(17, 145, 191); color: rgb(255, 255, 255); display: none; list-style: outside none none; position: absolute; z-index: 99999; border-left: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); margin: 26px 17px 0px 0px; padding: 0px; }
 .dropdown dd ul li a { width: 92px; height: 18px; padding: 2px 0px 0px; }
-.dropdown dd ul li a span, .dropdown dt a span { float: left; width: 92px; height: 18px; background-image: url("../images/flagcombine_.png"); background-repeat: no-repeat; cursor: pointer; margin: 8px 0px 0px 6px; }
+.dropdown dd ul li a span, .dropdown dt a span { float: left; width: 92px; height: 18px; background-image: url("flagcombine_.png"); background-repeat: no-repeat; cursor: pointer; margin: 8px 0px 0px 6px; }
 #dd1 ul li:hover { background: rgb(17, 145, 191) none repeat scroll 0% 0%; height: 29px; }
 .dropdown dd ul li { padding-top: 7px; }
 .ja-JP a span { background-position: -550px 0px; }
@@ -826,7 +817,7 @@ a.WelcomeBox.last { cursor: pointer; }
 .spnTitleSecurity { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); }
 .spnTitleOfficialPatner { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); margin-right: -44px; }
 .divSprite { border: 0px dotted red; text-align: center; width: 100%; height: 83%; margin-right: 20%; margin-left: 13%; }
-.FooterSprite { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 64px; height: 40px; background: transparent url("../images/footerlogo-list.jpg") no-repeat scroll 0% 0%; }
+.FooterSprite { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 64px; height: 40px; background: transparent url("footerlogo-list.png") no-repeat scroll 0% 0%; }
 .RewardLvlSprite { border: 1px solid rgb(255, 255, 255); width: 33px; height: 27px; float: right; background: transparent url("404.dat") no-repeat scroll 0% 0%; }
 .FooterSprite:hover { cursor: default; }
 .FooterSpriteCN:hover { cursor: default; }
@@ -860,10 +851,14 @@ a.WelcomeBox.last { cursor: pointer; }
 #imgPaymentOption3 { width: 77px; background-position: -422px -2px; }
 #imgPaymentOption3:hover { background-position: -422px -48px; }
 #imgPaymentOption3.onlyVip:hover { background-position: -422px -94px; }
-#imgPaymentOptionJP1 { width: 67px; background-position: -665px -2px; }
-#imgPaymentOptionJP2 { width: 67px; background-position: -837px -2px; }
-#imgPaymentOptionJP1:hover { background-position: -665px -45px; }
-#imgPaymentOptionJP2:hover { background-position: -837px -48px; }
+#imgPaymentOptionJP1 { width: 67px; background-position: -254px -2px; }
+#imgPaymentOptionJP2 { width: 67px; background-position: -843px -2px; }
+#imgPaymentOptionJP3 { width: 72px; background-position: -1184px -2px; }
+#imgPaymentOptionJP4 { width: 78px; background-position: -1285px -2px; }
+#imgPaymentOptionJP1:hover { background-position: -254px -48px; }
+#imgPaymentOptionJP2:hover { background-position: -843px -48px; }
+#imgPaymentOptionJP3:hover { background-position: -1184px -47px; }
+#imgPaymentOptionJP4:hover { background-position: -1285px -47px; }
 #imgPaymentOption4 { width: 67px; background-position: -602px -2px; }
 #imgPaymentOption4:hover { background-position: -602px -48px; }
 #imgPaymentOption4.onlyVip:hover { background-position: -602px -94px; }
@@ -1009,7 +1004,7 @@ div.wrapper-dropdown-5 span.bank { line-height: 0; width: 25px; border-top-width
 #cboxPrevious:hover { background-position: -75px -25px; }
 #cboxNext { position: absolute; bottom: 0px; left: 27px; background: transparent url("controls.png") no-repeat scroll -50px 0px; width: 25px; height: 25px; text-indent: -9999px; }
 #cboxNext:hover { background-position: -50px -25px; }
-#cboxLoadingGraphic { background: transparent url("loading.gif") no-repeat scroll center center; }
+#cboxLoadingGraphic { background: transparent url("loading_002.gif") no-repeat scroll center center; }
 #cboxClose { position: absolute; top: 9px; bottom: 0px; border: 0px none; right: 18px; background: transparent url("controls.png") no-repeat scroll -25px 0px; width: 25px; height: 25px; text-indent: -9999px; display: block; filter: none; text-decoration: none; }
 #cboxClose:hover { background-position: -25px -25px; }
 .cboxIE #cboxTopLeft, .cboxIE #cboxTopCenter, .cboxIE #cboxTopRight, .cboxIE #cboxBottomLeft, .cboxIE #cboxBottomCenter, .cboxIE #cboxBottomRight, .cboxIE #cboxMiddleLeft, .cboxIE #cboxMiddleRight {  }

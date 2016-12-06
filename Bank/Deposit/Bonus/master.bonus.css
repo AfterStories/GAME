@@ -1,0 +1,35 @@
+/* Code tidied up by ScrapBook */
+.bonus { border: 1px solid rgb(219, 219, 219); min-height: 260px; font-size: 12px; padding: 3px 4px 0px; }
+.bonuscontent { margin-bottom: 30px; }
+.bonusexpiring { text-align: center; }
+.bigtitle { background-color: rgb(37, 170, 226); height: 28px; padding-left: 18px; padding-top: 8px; }
+.bigtitle span { color: rgb(255, 255, 255); font-size: 14px; font-weight: 700; }
+.bigcontent { padding: 10px; min-height: 600px; }
+.subbonustitle { font-weight: 700; margin-bottom: 11px; text-align: left; }
+.subbonus { width: 235px; }
+.subbonus > table { margin-left: -4px; }
+.subbonus th { height: 35px; background-color: rgb(239, 239, 255); color: rgb(37, 170, 226); }
+.subbonus td { text-align: center; }
+.subunclaimedbonus > table { font-size: 11px; margin-top: 10px; text-align: center; }
+.subunclaimedbonus th { background-color: rgb(107, 107, 102); color: rgb(255, 255, 255); height: 34px; }
+.subunclaimedbonus td { border: 1px solid rgb(183, 186, 190); height: 35px; }
+.rptbonushistory { display: inline-block; font-size: 10px; text-align: center; vertical-align: top; }
+.rptbonushistory .header td { background-color: rgb(239, 239, 255); color: rgb(37, 170, 226); font-weight: 700; padding: 5px 0px; }
+.rptbonushistory .link { text-decoration: underline; cursor: pointer; }
+.rptbonushistory .link:hover { text-decoration: none; }
+.red { color: red; }
+.progresstbl td { border: medium none; }
+.progressCal { width: 100%; }
+.pgsPct { padding-left: 13px; padding-right: 10px; }
+.pgsTtl { padding-left: 5px; }
+#btnClaim { border: 1px solid rgb(151, 151, 151); cursor: pointer; }
+#btnClaim:hover { background: rgb(215, 215, 215) none repeat scroll 0% 0%; }
+.bonusnotes { font-weight: bold; border: 1px dashed rgb(208, 208, 208); padding: 10px; }
+.lblError { color: red; font-weight: 700; font-size: 11px; margin: 0px; }
+#dvCouponCode { width: 500px; margin-top: 10px; margin-bottom: 0px; }
+#dvErrorMsg { width: 180px; margin-bottom: 40px; position: absolute; margin-left: 275px; }
+#dvLabelMsg { float: left; width: 265px; padding-bottom: 40px; }
+#lblCouponCode { margin-left: 15px; }
+.dvBtn { width: 25%; margin-left: auto; margin-right: auto; }
+.lblBonusTitle {  }
+.dvBonusTitle { text-align: center; font-weight: bold; }

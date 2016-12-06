@@ -1,0 +1,10 @@
+/* Code tidied up by ScrapBook */
+.progressBar { vertical-align: top; }
+.lblgreen { color: green; }
+.lblorange { color: rgb(255, 140, 0); }
+.lblred { color: rgb(178, 34, 34); }
+.lblnocolor { color: rgb(0, 0, 0); }
+.greenbar { background-color: green; height: 13px; }
+.orangebar { background-color: rgb(255, 140, 0); height: 13px; }
+.redbar { background-color: rgb(178, 34, 34); height: 13px; }
+.nocolorbar { background-color: rgb(255, 255, 255); height: 13px; }

@@ -1,0 +1,71 @@
+/* Code tidied up by ScrapBook */
+body { margin: 0px auto; }
+.error_bg li { list-style-type: none; }
+.error_bg ul, .error_bg ol, .error_bg dl { margin: 0px; padding: 0px; }
+.error_bg optgroup { font-style: normal; font-weight: normal; text-decoration: none; }
+.error_bg h1, .error_bg h2, .error_bg h4, .error_bg h5, .error_bg h6 { color: rgb(255, 255, 255); font-size: 20px; font-weight: bold; margin-top: 0px; padding-left: 0px; }
+.error_bg h3 { color: rgb(0, 0, 0); font-size: 14px; }
+.error_bg p { color: rgb(0, 0, 0); font-size: 18px; }
+.error_bg a img, .error_bg_browser a img, .error_bg_javascript a img { border: medium none; text-decoration: none; }
+.error_bg a:link { color: rgb(37, 170, 225); font-weight: bold; text-decoration: none; }
+.error_bg a:visited { color: rgb(37, 170, 225); text-decoration: none; }
+.error_bg a:hover { color: rgb(153, 153, 153); text-decoration: none; }
+.error_bg .color_2 { color: red; }
+.error_head_photo { left: 62px; position: absolute; top: 96px; }
+.error_head_photo_ad { left: 80px; top: 90px; }
+.error_head_photo_404 { left: 72px; top: 88px; }
+.error_head_photo_js { left: 68px; position: absolute; top: 103px; }
+.error_head_photo_browser { left: 95px; position: absolute; top: 103px; }
+.error_tel { left: 98px; position: absolute; top: 242px; }
+.error_email { left: 99px; position: absolute; top: 283px; }
+.error_bg { background: transparent url("Fun88_pageNotFound.jpg") no-repeat scroll 0% 0%; height: 700px; position: relative; }
+.error_bg_404 { height: 625px; left: 26px; }
+.error_bg_access_denied { background: transparent url("Fun88_pe_bg.jpg") no-repeat scroll 0% 0%; height: 625px; position: relative; }
+.error_bg_javascript { background: transparent url("Fun88_popup.jpg") no-repeat scroll 0% 0%; height: 700px; left: 50%; margin-left: -395px; margin-top: 15px; position: relative; }
+.error_bg_browser { background: transparent url("Fun88_popup_modify_bg.jpg") no-repeat scroll 0% 0%; left: 50%; margin-left: -395px; position: relative; width: 100%; }
+.error_browser_body { background: transparent url("Fun88_popup_modify_bg_middle.jpg") repeat scroll 0% 0%; min-height: 150px; margin-top: 280px; width: 768px; padding-top: 10px; }
+.error_browser_footer { background: transparent url("Fun88_popup_modify_bg_bottom.jpg") no-repeat scroll 0% 0%; min-height: 50px; width: 80%; margin-top: -5px; }
+.dvTitle { font-size: 12px; font-weight: bold; margin: 5px 0px 0px 70px; width: 84%; height: 50px; }
+.error_a_txt { height: 30px; left: 81px; position: absolute; top: 359px; width: 550px; }
+.error_a_txt_js { top: 332px; }
+.error_txt { height: 80px; left: 295px; position: absolute; top: 430px; width: 531px; }
+.error_txt_js { height: 80px; left: 211px; top: 384px; width: 495px; }
+.error_txt_browser { height: 80px; left: 211px; top: 365px; width: 500px; }
+.error_txt_browser p { font-size: 12px; font-weight: bold; height: 50px; overflow: hidden; }
+#browser_container { margin-top: -20px; position: relative; }
+div.browser_icon { display: block; text-align: left; vertical-align: middle; width: 83%; height: 110px; margin-left: 70px; margin-bottom: 5px; }
+.browser_icon img { height: 67px; width: 72px; padding-left: 28px; padding-top: 5px; }
+.browser_icon h3 { font-size: 11px; margin-top: -2px; padding-left: 5px; width: 120px; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
+.dvImg { float: left; height: 100%; }
+.dvContentText { width: 75%; float: left; height: 100%; padding-top: 8px; padding-left: 5px; }
+.button_fun88 { display: block; position: relative; text-align: center; top: 0px; width: 780px; }
+.button_fun88 img { height: 36px; width: 200px; }
+.button_goback { display: block; position: relative; text-align: center; top: 0px; width: 170px; margin-left: auto; margin-right: auto; }
+.button_goback p { font-size: 12px; font-weight: bold; }
+.error_button { left: 28px; position: absolute; top: 22px; }
+.error_button_browser { top: 26px; }
+.liveChatMedBtn { background: transparent url("button-anmation-livechat.gif") no-repeat scroll 0px 0px; border: 0px none; color: rgb(0, 0, 0); display: block; font-size: 11px; margin-top: -5px; padding: 9px 9px 9px 15px; text-transform: uppercase; width: 165px; height: 19px; text-align: center; }
+.liveChatMedBtn:hover { background: transparent url("button-anmation-livechat.gif") no-repeat scroll 0px -38px; margin-top: -5px; }
+.container { background-color: rgb(255, 255, 255); height: auto; vertical-align: top; width: 900px; margin: 0px auto; padding: 30px; border: 3px solid rgb(37, 170, 225); }
+.tblNews { padding-top: 35px; }
+.tblNews a { font-size: 16px; font-weight: 700; }
+.tblNews a:hover { color: rgb(37, 170, 225); }
+.newsInfo { padding: 10px; }
+.preparedInfo { font-size: 13px; padding-left: 10px; }
+.new_container { margin-top: 25px; }
+.news_title { font-size: 18px; font-weight: 700; }
+.news-content { font-size: 14px; line-height: 23px; padding: 20px; }
+.bold { font-weight: bold; }
+.red { color: red; }
+.underline { text-decoration: underline; }
+#iconWarning { float: left; width: 80px; height: 90px; position: relative; padding-left: 10px; padding-top: 10px; }
+.BP_content { height: 100px; margin-bottom: 15px; }
+.BP_header { background-color: rgb(37, 170, 225); color: rgb(255, 255, 255); font-size: 14pt; height: 39px; margin: 0px auto; padding: 0px; width: 510px; }
+#dvContent1 { padding-top: 15px; margin-bottom: 5px; margin-left: 10px; width: 410px; float: left; height: 100px; }
+#spContent1 { font-weight: bold; padding-bottom: 10px; }
+#dvContent2 { float: left; width: 80%; margin-left: 10px; margin-bottom: 10px; }
+#spLink { color: rgb(37, 170, 225); }
+#BP_notification_box { background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-radius: 5px; height: 211px; padding-top: 5px; width: 520px; overflow: hidden; }
+.BP_header_text { color: rgb(255, 255, 255); float: left; font-size: 13pt; margin-left: 11px; margin-top: 10px; }
+.BP_signup .BP_button { display: inline; float: left; font-size: 12px; font-weight: bold; height: 35px; margin-left: 3px; width: 123px; }
+.BP_login_btn { height: 35px; margin-left: auto; margin-right: auto; width: 255px; }

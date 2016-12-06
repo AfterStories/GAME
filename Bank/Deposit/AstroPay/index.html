@@ -11,11 +11,12 @@
     <script  src="../../jquery-1.12.2.min.js" type="text/javascript"> </script>
     <script src="master.mainmenu.js" type="text/javascript"></script>
     <script src="master.transaction.js" type="text/javascript"></script>
+    <script  src="../../../lib/js/jquery.validate.js" type="text/javascript"> </script>
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
             $.fn.clearForm = function () { return this.each(function () { var type = this.type, tag = this.tagName.toLowerCase(); if (tag == 'form') return $(':input', this).clearForm(); if ((type == 'text' && this.id != 'txtDepDateFrm' && this.id != 'txtDepDateTo') || type == 'password' || tag == 'textarea') this.value = ''; else if (type == 'checkbox') this.checked = false; else if (type == 'radio' && this.value == '0') this.click(); }) };
             $.support.placeholder = ('placeholder' in document.createElement('input'));
-            resetForm(true);
+           
 
 
             var lang = "zh-CN";
@@ -130,9 +131,7 @@
                 return validate;
             });
 
-            $("#BtnCancel").click(function () {
-                resetForm(false);
-            });
+ 
         });
     </script>
 
@@ -306,11 +305,11 @@
                 <td>
                     <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$DepositMainContent$BtnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">提交</a>
                 </td>
-                <td>
-                    <a id="BtnCancel" class="Btn whiteMedBtn">
-                        取消
-                    </a>
-                </td>
+<!--                 <td>
+    <a id="BtnCancel" class="Btn whiteMedBtn">
+        取消
+    </a>
+</td> -->
             </tr>
         </tbody></table>
 

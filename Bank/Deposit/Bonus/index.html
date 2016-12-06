@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bonus</title>
+
+	<link href="../../../lib/css/master.button.css" rel="stylesheet" type="text/css">
+	<link href="../../../lib/css/bundleCss.css" rel="stylesheet" type="text/css">
+	<link href="master.bonus.css" rel="stylesheet" type="text/css">
+	<link href="master.progressbar.css" rel="stylesheet" type="text/css">
+	<link href="master.transactionhistory.css" rel="stylesheet" type="text/css">
+    <script  src="../../../lib/js/jquery-1.12.2.min.js" type="text/javascript"> </script>
+</head>
+<body topmargin="0" onload="parent.document.getElementById('rightBox2').height = document.body.scrollHeight > 100 ?document.body.scrollHeight+10:700;">
+	<div id="rightcol">
+            <div class="bonus">
+                <div class="bigtitle">
+                    <span>
+                        <span id="BaseMainContent_BonusMainContent_Literal1">红利记录</span>
+                    </span>
+                </div>
+                <div class="bigcontent">
+                    <div class="bonuscontent">
+                        <table width="100%">
+                            <tbody><tr>
+                                <td>
+                                    <div class="subbonus">
+                                        <div class="subbonustitle">
+                                            <span>
+                                                <span id="BaseMainContent_BonusMainContent_Literal2">红利信息</span>
+                                            </span>
+                                        </div>
+                                        <table width="95%">
+                                            <tbody><tr>
+                                                <th>
+                                                    <span id="BaseMainContent_BonusMainContent_Literal4">可提红利</span>
+                                                </th>
+                                                <th>
+                                                    <span id="BaseMainContent_BonusMainContent_Literal5">锁定红利</span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span id="BaseMainContent_BonusMainContent_lblReleaseBns">RMB 0.00</span>
+                                                </td>
+                                                <td>
+                                                    <span id="BaseMainContent_BonusMainContent_lblLockBns">RMB 0.00</span>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </div>
+                                </td>
+                                
+
+                                <td>
+                                    <div class="subbonus">
+                                        <div class="subbonustitle">
+                                            <span>
+                                                <span id="BaseMainContent_BonusMainContent_Literal3">奖励乐币</span>
+                                            </span>
+                                        </div>
+                                        <table width="95%">
+                                            <tbody><tr>
+                                                <th>
+                                                    <span id="BaseMainContent_BonusMainContent_Literal6">可提乐币</span>
+                                                </th>
+                                                <th>
+                                                    <span id="BaseMainContent_BonusMainContent_Literal7">锁定乐币</span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span id="BaseMainContent_BonusMainContent_lblReleaseRwd">0.00</span>
+                                                </td>
+                                                <td>
+                                                    <span id="BaseMainContent_BonusMainContent_lblLockRwd">0.00</span>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                        </tbody></table>
+
+                        
+                        <br>
+                        <table>
+                            <tbody><tr>
+                                <td>
+                                <div class="subbonus">
+                                    <div class="subbonustitle">
+                                        <span>
+                                            <span id="BaseMainContent_BonusMainContent_LiteralFS">免费旋转</span>
+                                        </span>
+                                    </div>
+                                    <table width="95%">
+                                        <tbody><tr>
+                                            <th>
+                                                <span id="BaseMainContent_BonusMainContent_LiteralFSRelease">可提免费旋转</span>
+                                            </th>
+                                            <th>
+                                                <span id="BaseMainContent_BonusMainContent_LiteralFSLock">锁定免费旋转</span>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span id="BaseMainContent_BonusMainContent_lblReleaseFS">0</span>
+                                            </td>
+                                            <td>
+                                                <span id="BaseMainContent_BonusMainContent_lblLockFS">0</span>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </div>
+                            </td>
+                            </tr>
+                        </tbody></table>
+                        
+                    </div>
+                    <div class="bonuscontent">
+                        
+                    </div>
+                    <div class="bonuscontent bonusexpiring">
+                        <div class="subbonustitle">
+                            <span>
+                                <span id="BaseMainContent_BonusMainContent_Literal9">红利将过期于</span>
+                            </span>
+                        </div>
+                        <input name="ctl00$ctl00$BaseMainContent$BonusMainContent$tempBtnClicked" id="tempBtnClicked" type="hidden">
+                        <input name="ctl00$ctl00$BaseMainContent$BonusMainContent$tempYear" id="tempYear" type="hidden">
+                        <table>
+                            <tbody><tr>
+                                 
+                                    
+                                        <td>
+                                            <div class="rptbonushistory">
+                                                <table>
+                                                    <tbody><tr class="header">
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblDate_0">十二月 2016</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblBonusGivenCurrency_0">RMB</span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;BonusGiven&quot;, &quot;December 2016&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnBonusGiven_0" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblPoint_0">积分: </span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;RewardsPoint&quot;, &quot;December 2016&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnRewardPoint_0" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblFS_0">免费旋转</span>
+                                                            <span class="notlink">
+                                                                <a onclick="updatePanel(&quot;FreeSpin&quot;, &quot;December 2016&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnFreeSpin_0" class="aspNetDisabled">0</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody></table>
+                                            </div>
+                                        </td>
+                                    
+                                        <td>
+                                            <div class="rptbonushistory">
+                                                <table>
+                                                    <tbody><tr class="header">
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblDate_1">一月 2017</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblBonusGivenCurrency_1">RMB</span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;BonusGiven&quot;, &quot;January 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnBonusGiven_1" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblPoint_1">积分: </span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;RewardsPoint&quot;, &quot;January 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnRewardPoint_1" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblFS_1">免费旋转</span>
+                                                            <span class="notlink">
+                                                                <a onclick="updatePanel(&quot;FreeSpin&quot;, &quot;January 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnFreeSpin_1" class="aspNetDisabled">0</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody></table>
+                                            </div>
+                                        </td>
+                                    
+                                        <td>
+                                            <div class="rptbonushistory">
+                                                <table>
+                                                    <tbody><tr class="header">
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblDate_2">二月 2017</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblBonusGivenCurrency_2">RMB</span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;BonusGiven&quot;, &quot;February 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnBonusGiven_2" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblPoint_2">积分: </span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;RewardsPoint&quot;, &quot;February 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnRewardPoint_2" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblFS_2">免费旋转</span>
+                                                            <span class="notlink">
+                                                                <a onclick="updatePanel(&quot;FreeSpin&quot;, &quot;February 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnFreeSpin_2" class="aspNetDisabled">0</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody></table>
+                                            </div>
+                                        </td>
+                                    
+                                        <td>
+                                            <div class="rptbonushistory">
+                                                <table>
+                                                    <tbody><tr class="header">
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblDate_3">三月 2017</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblBonusGivenCurrency_3">RMB</span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;BonusGiven&quot;, &quot;March 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnBonusGiven_3" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblPoint_3">积分: </span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;RewardsPoint&quot;, &quot;March 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnRewardPoint_3" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblFS_3">免费旋转</span>
+                                                            <span class="notlink">
+                                                                <a onclick="updatePanel(&quot;FreeSpin&quot;, &quot;March 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnFreeSpin_3" class="aspNetDisabled">0</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody></table>
+                                            </div>
+                                        </td>
+                                    
+                                        <td>
+                                            <div class="rptbonushistory">
+                                                <table>
+                                                    <tbody><tr class="header">
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblDate_4">四月 2017</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblBonusGivenCurrency_4">RMB</span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;BonusGiven&quot;, &quot;April 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnBonusGiven_4" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblPoint_4">积分: </span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;RewardsPoint&quot;, &quot;April 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnRewardPoint_4" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblFS_4">免费旋转</span>
+                                                            <span class="notlink">
+                                                                <a onclick="updatePanel(&quot;FreeSpin&quot;, &quot;April 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnFreeSpin_4" class="aspNetDisabled">0</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody></table>
+                                            </div>
+                                        </td>
+                                    
+                                        <td>
+                                            <div class="rptbonushistory">
+                                                <table>
+                                                    <tbody><tr class="header">
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblDate_5">五月 2017</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblBonusGivenCurrency_5">RMB</span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;BonusGiven&quot;, &quot;May 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnBonusGiven_5" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblPoint_5">积分: </span>
+                                                            <span class="notlink">
+                                                            <a onclick="updatePanel(&quot;RewardsPoint&quot;, &quot;May 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnRewardPoint_5" class="aspNetDisabled">0.00</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span id="BaseMainContent_BonusMainContent_rptMilesE_lblFS_5">免费旋转</span>
+                                                            <span class="notlink">
+                                                                <a onclick="updatePanel(&quot;FreeSpin&quot;, &quot;May 2017&quot;);return false;" id="BaseMainContent_BonusMainContent_rptMilesE_btnFreeSpin_5" class="aspNetDisabled">0</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                </tbody></table>
+                                            </div>
+                                        </td>
+                                    
+                                    
+                            </tr>
+                        </tbody></table>
+                       
+                    </div>
+                    <div class="bonusnotes">
+                        <span class="red">
+                            <span id="BaseMainContent_BonusMainContent_Literal10">温馨提示：您的红利将在达到条件后的24小时内解除锁定，祝您游戏愉快！</span>
+                        </span>
+                        <br><br>
+                        <span id="BaseMainContent_BonusMainContent_lblNote" style="text-decoration: underline;">注解</span>
+                        <br>
+                        N/A:&nbsp;<span id="BaseMainContent_BonusMainContent_lblNA">不适用</span>
+                        <br>
+                        TO:&nbsp;<span id="BaseMainContent_BonusMainContent_lblTO">流水</span>
+                        <br>
+                        GP:&nbsp;<span id="BaseMainContent_BonusMainContent_lblGP">下注游戏次数</span>
+                        <br>
+                        DA:&nbsp;<span id="BaseMainContent_BonusMainContent_lblDA">存款金额</span>
+                        <br>
+                        TD:&nbsp;<span id="BaseMainContent_BonusMainContent_lblTD">存款次数</span>
+                    </div>
+                    <div id="divCoupon">
+                                <div>
+                                    <input name="ctl00$ctl00$BaseMainContent$BonusMainContent$btnCheckCoupon" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$BonusMainContent$btnCheckCoupon&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnCheckCoupon" style="display: none;" type="submit">
+                                </div>
+                                <br>
+                                <table width="100%" border="0">
+                                    <tbody><tr style="border-spacing: 3px;">
+                                        <td style="text-align: right; padding-right: 5px;" width="38%"><span id="lblCouponCode" style="font-weight: bold;">优惠券代码</span></td>
+                                        <td width="62%"><input name="ctl00$ctl00$BaseMainContent$BonusMainContent$txtCouponCode" maxlength="16" id="txtCouponCode" class="signup_input5" placeholder="在此输入优惠券代码" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" width="100%"> 
+                                            <div id="dvErrorMsg1" style="text-align: center;">
+                                                <div id="dvProgress" style="display: none;">
+                                                    <img alt="" src="loading_small.gif">
+                                                </div>
+                                                
+                                                <div><div id="UpdatePanelCoupon">
+	 
+                                                        <span id="lblErrorCoupon" class="lblError"></span> 
+                                                        <input name="ctl00$ctl00$BaseMainContent$BonusMainContent$lblCouponStatus" id="lblCouponStatus" value="false" type="hidden">
+                                                        <input name="ctl00$ctl00$BaseMainContent$BonusMainContent$lblPreviousAmount" id="lblPreviousAmount" type="hidden">
+                                                    
+</div></div>        
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="margin-left: 10px;">
+                                            <div><div id="UpdatePanelSubmit">
+	
+                                                        <div class="dvBonusTitle"><span id="lblBonusTitle" class="lblBonusTitle"></span></div>
+                                                        <div class="dvBtn">
+                                                            <div class="Btn_med_width">
+                                                                <a onclick="OnSubmit();" id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$BonusMainContent$BtnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="height: 25px; display: none;">提交</a>
+                                                            </div>
+                                                        </div>
+                                                    
+</div></div>
+                                                
+                                                
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                                
+                        </div> 
+                    </div>
+            </div>
+    </div>
+        
+</body>
+</html>
