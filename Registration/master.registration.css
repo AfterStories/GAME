@@ -1,0 +1,49 @@
+/* Code tidied up by ScrapBook */
+.slides_container { text-align: center; }
+#slides { position: relative; height: 320px; width: 960px; display: block; margin-left: 25px; }
+#slides div { height: 320px; width: 960px; }
+#slides div img { width: 909px; height: 311px; }
+#slides div a { cursor: default; }
+#content_TR { clear: both; width: 949px; }
+.terms { font-size: 12px; }
+#content_register { background-color: rgb(249, 250, 250); border: 1px solid rgb(197, 197, 197); margin-bottom: 20px; width: 100%; padding: 5px; }
+.termsTitle2 { background-color: rgb(37, 170, 226); font-size: 24px; text-transform: uppercase; height: 43px; padding: 13px 0px 0px 15px; }
+.table { font-size: 12px; line-height: 40px; padding: 15px 5px 5px 130px; }
+.endtable { font-size: 12px; line-height: 40px; margin-left: 147px; margin-top: 0px; padding: 15px 5px 5px 130px; }
+.table_sub1 { font-size: 12px; }
+.red { color: red; }
+.black { color: rgb(0, 0, 0); line-height: 30px; }
+#banner_random { float: left; margin-top: 9px; position: relative; width: 150px; z-index: 5000; }
+.ui-datepicker-trigger { margin-top: 8px; position: absolute; cursor: pointer; }
+.form_msg { float: right; position: relative; }
+.special_msg { margin-left: -85px; line-height: 2; }
+.qMsg { margin-left: 6px; position: absolute; width: 20px; }
+.popup { position: absolute; height: 187px; width: 250px; z-index: 1000; margin-left: 25px; }
+@media not all {
+  .popup { margin-left: 25px; }
+}
+label.error { color: black; line-height: 1.5; margin-left: 35px; margin-top: 53px; position: absolute; width: 189px; }
+.popup_tip { color: black; display: block; line-height: 1.5; margin-left: 35px; width: 189px; }
+.tbl_check { line-height: 1.5; }
+.special_msg_1 { margin-left: 93px; }
+.signup_input, .country_input { font-size: 12px; font-weight: 400; font-style: normal; text-decoration: none; width: 230px; min-height: 26px; border-radius: 0px; border: 1px solid rgb(204, 204, 204); color: rgb(108, 108, 108); }
+.country_input { background-color: rgb(235, 235, 228); }
+#rbtnGender > label { margin-right: 35px; }
+#rbtnGender > input { margin-right: 5px; }
+.regTitle { color: rgb(255, 255, 255); font-size: 20px; margin-top: 6px; }
+.signup_input:hover, .signup_input:focus { border: 1px solid rgb(37, 170, 226); }
+.divLiveHelp { bottom: 0px; margin-left: 35px; position: absolute; }
+.divLiveHelp > a { color: white; }
+.divLiveHelp > a:hover { text-decoration: underline; }
+.divTitleLiveHelp { color: black; font-size: 22px; font-weight: bold; margin-left: 35px; padding-top: 13px; }
+#linkTC { text-decoration: underline; color: rgb(37, 170, 226); }
+#lblPlus { position: absolute; padding: 0px 0px 0px 2px; }
+#txtCountryCode { padding: 0px 0px 0px 11px; }
+#txtCity { padding: 0px 0px 0px 4px; }
+#txtLastName span.red { display: inline-block; padding-right: 1px; }
+#QQLiveChat { position: fixed; z-index: 99999; width: 407px; }
+#upper { width: 382px; height: 185px; background-position: 0px 0px; cursor: pointer; display: block; }
+#lower { width: 382px; height: 63px; background-position: 0px 0px; cursor: pointer; display: block; }
+#upper:hover { background-position: 0px -265px; }
+#lower:hover { background-position: 0px -102px; }
+.QQCloseBtn { width: 25px; height: 25px; position: absolute; cursor: pointer; background: transparent url("allicons.png") no-repeat scroll -641px -5px; }

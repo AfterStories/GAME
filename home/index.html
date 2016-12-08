@@ -33,10 +33,10 @@
 <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
 <script type="text/javascript" src="../lib/js/swiper.min.js" ></script>
 <script type="text/javascript" src="../lib/js/cookie.js"  ></script>
+<script type="text/javascript" src="../lib/js/login.js" ></script>
 <script type="text/javascript" src="../lib/js/master.js" async=""></script>
 <script type="text/javascript" src="../lib/js/generateQCcodeApk.js" ></script>
 <script type="text/javascript" src="../lib/js/onlinepay.js" ></script>
-<script type="text/javascript" src="../lib/js/login.js" ></script>
 <script type="text/javascript" src="js/footbutton.js" ></script>
 <script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
 <script type="text/javascript" src="js/homeAnimate.js" ></script>
@@ -72,25 +72,6 @@
 
 
 <script>  
-
-var isLogin = "false";
-
-$(document).ready(function () {
-	if (getCookie("verifyform")==1) {
-			var isLogin = true;
-			$("#login").css("display", "none");
-            $(".leftBorder").css("display,none")
-            $("#logined-header").css("display", "block");
-
-	}else{
-		$("#login").css("display", "block");
-            $(".leftBorder").css("display,block")
-            $("#logined-header").css("display", "none");
-			var isLogin =false;
-	}
-
-})
-       
 
 /*获取轮播图*/ 
 var AjaxURL = " "
@@ -140,24 +121,6 @@ var AjaxURL = " "
  
   </script>
 
-
-
-
-<!-- 
-    <script type="text/javascript">
-    $('#top_header').scrollToFixed();
-    var strURLIovation = "https://mpsnare.iesnare.com/snare.js";
-    $(document).ready(function () {
-        $("#colorbox, #cboxOverlay").appendTo('form:first');
-        $("#uiHtmlBody").css("display", "block");
-        $(".ui-dialog").css({ "position": "absolute", "top": "50%", "left": "50%", "margin-left": -$('.ui-dialog').width() / 2, "margin-top": -$('.ui-dialog').height() / 2 });
-    });
-    var PokerRegister = "False";
-    var isLogin = "false";
-
-</script>
- -->
-
         
     <div id="fixed_header"></div>
     <div id="page" class="shell">
@@ -165,10 +128,6 @@ var AjaxURL = " "
         
 
 <div id="quickMenu">
-    
-
-
-
 
      <!--Start: Quick WechatPay OnlineAlipay-->
     <input type="hidden" name="ctl00$ctl00$BaseMainContent$HeaderContent$ascxQuickContact$hidblackbox" id="BaseMainContent_HeaderContent_ascxQuickContact_hidblackbox" />
@@ -211,7 +170,7 @@ var AjaxURL = " "
                     </a>
                     <div style="margin-left:6px;">
                         <div id="divWCAmount">
-                            <input name="ctl00$ctl00$BaseMainContent$HeaderContent$ascxQuickContact$txtWCAmount" type="text" maxlength="7" id="txtWCAmount" name="txtWCAmount" class="signup_input" oncopy="return false;" onpaste="return false" placeholder="100 - 1000元整数额" style="height:25px;width:120px;" />
+                            <input name="txtWCAmount" type="text" maxlength="7" id="txtWCAmount" name="txtWCAmount" class="signup_input" oncopy="return false;" onpaste="return false" placeholder="100 - 1000元整数额" style="height:25px;width:120px;" />
                             <div id="divWCMsg">
                                 <span id="lblWCTranMsg"></span>
                             </div>
@@ -374,7 +333,7 @@ var AjaxURL = " "
                     </ul>
                 </li>
             </ul>
-        </div> <!-- 啊啊 -->
+        </div>
 
 
 	<div id="top_nav_right">
@@ -394,105 +353,7 @@ var AjaxURL = " "
 
 			<span id="arrow"></span>
         </li>
-<script type="text/javascript" language="javascript">
-    $(document).ready(function () {
-        createDropDown();
-        $("#target dt").removeClass().addClass('zh-CN');
-        var $dropTrigger = $(".dropdown dt a");
-        var $dropTrigger2 = $(".dropdown dd span");
-        var $languageList = $(".dropdown dd ul");
 
-        // open and close list when button is clicked
-        $dropTrigger.toggle(function () {
-            $languageList.slideDown(200);
-            $dropTrigger.addClass("active");
-        }, function () {
-            $languageList.slideUp(200);
-            $(this).removeAttr("class");
-        });
-
-        $("span#arrow").click(function() {
-            $dropTrigger.click();
-        });
-
-
-        /*$("#dd1 ul li").hover(function () {
-        $(this).find("span").css("background-image", "url(/Images/LanguageSelector/png)");
-        },
-        function () {
-        $(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine.png)");
-        });*/
-
-        // close list when anywhere else on the screen is clicked
-        $(document).bind('click', function (e) {
-            var $clicked = $(e.target);
-            if (!$clicked.parents().hasClass("dropdown") && $clicked.attr('id') !== 'arrow') {
-                if ($dropTrigger.hasClass("active")) {
-                    $dropTrigger.click();
-                }
-            }
-        });
-
-        // when a language is clicked, make the selection and then hide the list
-        $(".dropdown dd ul li a").click(function () {
-            var clickedValue = $(this).parent().attr("class");
-            var clickedTitle = $(this).find("em").html();
-            $("#target dt").removeClass().addClass(clickedValue);
-            $("#target dt em").html(clickedTitle);
-            $languageList.hide();
-            $dropTrigger.removeAttr("class");
-
-
-            var getLang = $(this).parent().attr("class");
-            //alert();
-            if (getLang == null) return;
-
-            if (getLang.toLowerCase() != 'zh-cn') {
-                var url = window.parent.location.href;
-                var startIdx = 3;
-                var urlPath = url;
-                var extra = "";
-
-                var parts = url.split('/'); // 0 = protocol, 1 = protocol-separator, 2 = domain, 3...
-                if (parts.length > 3) {
-                    var chk = parts[3];
-
-                    if (chk.charAt(chk.length - 1) == '#') {
-                        extra = '#';
-                        chk = chk.substr(0, chk.length - 1);
-                    }
-
-                    if ((chk.length == 5) && (chk.charAt(2) == '-')) startIdx = 4;
-                }
-
-                url = "/" + getLang;
-                for (var i = startIdx; i < parts.length; i++) {
-                    var part = parts[i];
-                    if (part.length > 0) url += "/" + part;
-                }
-
-                url += extra;
-
-                window.parent.location = url;
-            }
-
-        });
-    });  
-    function createDropDown() {
-        var $form = $("div.lang form");
-        $form.hide();
-        var source = $("#BaseMainContent_HeaderContent_ascxLang_uiLanguages");
-        source.removeAttr("autocomplete");
-        var selected = source.find("option:selected");
-        var options = $("option", source);
-        $(".lang").append('<dl id="target" class="dropdown"></dl>');
-        $("#target").append('<dt class=""><a><span class="flag"></span></a></dt>');
-        $("#target").append('<dd id="dd1"><ul></ul></dd>');
-        options.each(function () {
-        $("#target dd ul").append('<li class="' + $(this).val() + '" ><a><span class="flag"></span></a></li>');                
-        });
-    }
-</script>
 <style type="text/css">
     .dropdown a.ja-JP {
         font-size: 12px;
@@ -642,7 +503,7 @@ var AjaxURL = " "
                         
                         
                     </ul>
-                </div>
+            </div>
         </li>
         <li>
             <img src="../lib/images/top_navigation_line.png"></li>
@@ -716,16 +577,7 @@ var AjaxURL = " "
                     <div class="btnRegisterAlignmentCN">
                         <a id="btnRegisterCN" href="http://www.10010388.com/zh-CN/Registration" style="position: absolute;" onclick="sendHomeContentGA('HeaderRegistration', 'BtnHomeRegistration');">
                             <div id="dy_RegistrationChgWording">立即开户</div>
-                            <script type="text/javascript">
-                                function RegistrationChgWording() {
-                                    try {
-                                        DYO.smartObject("RegistrationChgWording", { target: "dy_RegistrationChgWording", inline: true });
-                                    } catch (e) {
-                                        window.setTimeout(function () { RegistrationChgWording(); }, 2000);
-                                    }
-                                }
-                                RegistrationChgWording();
-                            </script>
+                            
                         </a>
                     </div>
                 </div>
@@ -913,67 +765,6 @@ var AjaxURL = " "
 </div>
 
 
-
-<!-- <script type="text/javascript">
-    var gameLockMessage = "您已经被封锁下注此游戏，请联系我们的线上客服以求帮助。谢谢";
-    var koreaMessage = "Game access has been blocked as Korea service will be terminated by 30/9/2016, please proceed to withdraw your balance.";
-    $(document).ready(function () {
-        
-        $(".MenuImageMobile").removeAttr("title");
-        
-
-        $("#mainMenu_Exchange a").click(function (event) {
-            sendMainMenuGA('Exchange');
-            
-});
-
-        
-
-        $("ul.kenSubMenu , ul.pokSubMenu").each(function () {
-
-            $(".tooltip").tooltip();
-
-            $(this).click(function () {
-                if (Boolean(0))
-                    $("#dialog-message").html('您已经被封锁下注此游戏，请联系我们的线上客服以求帮助。谢谢');
-            });
-        });
-        $("#navMain").hover(function() {
-            if ($(".dy-unit:not(.dyMonitor)").length > 0) {
-                if (document.addEventListener) {
-                    
-                }
-            } else {
-                this.unbind('mouseenter mouseleave');
-            }
-        });
-    });
-
-    function Is_TS_User(memberCode, provider) {
-        var re = new RegExp("^[a-zA-Z0-9]+$");
-        if (!re.test(memberCode) && provider == 'TS') {
-            Alert("利盈堂(泰山) 无法支持拥有特别数字或符号的用户名,您将无法转账或进行游。");
-            return false;
-        }
-        return true;
-    }
-
-    function Is_AB_User(memberCode, provider) {
-        var re = new RegExp("^[a-zA-Z0-9]+$");
-        if (!re.test(memberCode) && provider == 'AB') {
-            Alert("“隆运堂（欧博）”无法支持拥有特别数字用户名，您将无法转账或进行游戏。");
-            return false;
-        }
-
-        if (memberCode.length > 16 && provider == 'AB') {
-            Alert("“隆运堂（欧博）”无法支持拥有特别数字用户名，您将无法转账或进行游戏。");
-            return false;
-        }
-        return true;
-    }
-</script> -->
-
-
 <!-- Modal popup message no postback -->
 <div id="dialog-message" title="Alert" style="display: none; width: 259px;">
     <p>
@@ -995,51 +786,8 @@ var AjaxURL = " "
     
 </div>
 
-<script type="text/javascript">
-    function DropDown(el) {
-        this.dd = el;
-        this.initEvents();
-    }
-
-    DropDown.prototype = {
-        initEvents: function () {
-            var obj = this;
-
-            obj.dd.on('click', function (event) {
-                $(this).toggleClass('active');
-                event.stopPropagation();
-            });
-
-            obj.dd.on('mouseleave', function (event) {
-                $(this).removeClass('active');
-                event.stopPropagation();
-            });
-        }
-    };
-
- 
-
-</script>
-
-
-
 
         <!-- Content -->
-        
-
-
-<script type="text/javascript">
-    var rewards = '/Reward/zh-CN';
-    var banner2 = '/zh-CN/Promotion';
-    function newPage(url) {
-	var pathname = window.location.pathname;
-	var pathInSplit = pathname.split("/");
-	var lastElement = pathInSplit.length - 1;
-	if (pathInSplit[lastElement] == "") url = "." + url;
-	window.location = url
-}
-    
-</script>
 
 
 <div id="main" >
