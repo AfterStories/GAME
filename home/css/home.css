@@ -375,15 +375,15 @@ html, body {
 }
 
 /* 顶部滚动广告 */
-	#marquee1{ width: 680px; height: 34px; position: relative; top:-12px;margin:2px auto;overflow: hidden;z-index: 1}
-	#marquee1 ul { width: 680px; height: 34px; position: relative; }
-	#marquee1 ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
-	#marquee1 ul li a { text-decoration:none; height: 34px;}
+	#TopAD{ width: 680px; height: 34px; position: relative; top:-12px;left:114px;margin:2px auto;overflow: hidden;z-index: 1}
+	#TopAD ul { width: 680px; height: 34px; position: relative; }
+	#TopAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
+	#TopAD ul li a { text-decoration:none; height: 34px;}
 /* 底部滚动广告 */
-	#marquee2 { float: left;width: 688px; height: 34px; position: relative;overflow: hidden }
-	#marquee2 ul { width: 1000px; height: 34px; position: relative; }
-	#marquee2 ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
-	#marquee2 ul li a {line-height:34px;font-size:14px;text-decoration:none;  height: 34px;}
+	#BottomAD { float: left;width: 688px; height: 34px; position: relative;overflow: hidden }
+	#BottomAD ul { width: 1000px; height: 34px; position: relative; }
+	#BottomAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
+	#BottomAD ul li a {line-height:34px;font-size:14px;text-decoration:none;  height: 34px;}
 
 /* 点击下载按钮 */
 #fun88apk_dl_zh{background: transparent url('../images/fun88-apk-sprite.png') no-repeat scroll -146px 0px;}
