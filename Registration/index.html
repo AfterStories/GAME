@@ -31,11 +31,11 @@
 
 
 <style id="style-1-cropbar-clipper">
-/* Code tidied up by ScrapBook */
+
 .en-markup-crop-options { top: 18px ! important; left: 50% ! important; margin-left: -100px ! important; width: 200px ! important; border: 2px solid rgba(255, 255, 255, 0.38) ! important; border-radius: 4px ! important; }
 .en-markup-crop-options div div:first-of-type { margin-left: 0px ! important; }
 </style><style charset="utf-8" type="text/css" class="firebugResetStyles">
-/* Code tidied up by ScrapBook */
+
 .firebugResetStyles { z-index: 2147483646 ! important; top: 0px ! important; left: 0px ! important; display: block ! important; border: 0px none ! important; margin: 0px ! important; padding: 0px ! important; outline: 0px none ! important; min-width: 0px ! important; max-width: none ! important; min-height: 0px ! important; max-height: none ! important; position: fixed ! important; transform: rotate(0deg) ! important; transform-origin: 50% 50% 0px ! important; border-radius: 0px ! important; box-shadow: non...(line truncated)...
 style.firebugResetStyles { display: none ! important; }
 .firebugBlockBackgroundColor { background-color: transparent ! important; }
@@ -177,7 +177,7 @@ style.firebugResetStyles { display: none ! important; }
 
 
 <style type="text/css">
-/* Code tidied up by ScrapBook */
+
 #slotLeaderboard { position: absolute; z-index: 9999; margin-left: 85px; }
 #slotLeaderboard_body { background-color: white; border: 1px solid rgb(69, 170, 226); border-radius: 10px; height: 600px; width: 800px; z-index: 9999; }
 #slotLeaderboard_html { margin: 75px 50px 15px; }
@@ -289,7 +289,7 @@ style.firebugResetStyles { display: none ! important; }
   
 </script>
 <style>
-/* Code tidied up by ScrapBook */
+
 .quickcontactbtn1 { background: transparent url("button-chat.png") no-repeat scroll 0% 0%; }
 .quickcontactbtn1:hover { background: transparent url("button-chat-r.png") no-repeat scroll 0% 0%; }
 .quickcontactbtn2 { background: transparent url("button-download.png") no-repeat scroll 0% 0%; }
@@ -551,7 +551,7 @@ style.firebugResetStyles { display: none ! important; }
         }
     </script>
     <style type="text/css">
-/* Code tidied up by ScrapBook */
+
 .hidVal, .hidBankCode { display: none; }
 </style>
     <!--Start: Quick WechatPay OnlineAlipay-->
@@ -874,7 +874,7 @@ style.firebugResetStyles { display: none ! important; }
                 
 
 <style type="text/css">
-/* Code tidied up by ScrapBook */
+
 .dropdown a.ja-JP { font-size: 12px; }
 table.tblMemberRewardLvl td { padding-left: 5px; }
 .RewardLvlTooltip { border: 1px solid; background-color: rgb(255, 255, 255); border-radius: 6px; position: absolute; margin-top: 10px; padding: 5px 0px 5px 5px; min-width: 145px; visibility: hidden; margin-left: 30px; }
@@ -1098,7 +1098,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             </tbody></table></div></div></div>
     </div>
 <script type="text/javascript" src="master.payment.crawler.js"></script><style type="text/css">
-/* Code tidied up by ScrapBook */
+
 .marquee { white-space: nowrap; overflow: hidden; visibility: hidden; }
 #marq_kill_marg_bord { border: medium none ! important; margin: 0px ! important; }
 </style>
@@ -1745,6 +1745,16 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     </script>
     <!--<![endif]-->
 
+<style>
+    #ui-datepicker-div{
+        position: absolute!important ;
+        top: 390px !important ;
+        left: 760px !important ;
+        z-index: 1 !important ;
+        }
+</style>
+
+
     <script type="text/javascript">
         var currencyKRW = "KRW";
         var isPopUp = false;
@@ -2070,41 +2080,14 @@ lastFirstName();
         var currentDateDay = currentDate.getDate();
 
         var date18Year = new Date((currentDateYear - 18) + '-' + currentDateMonth + '-' + currentDateDay);
-/*
-        $("#txtPersonalDOBinput").datepicker({
-            showOn: 'button',
-            buttonImage: 'calendar.gif',
-            buttonImageOnly: true,
-            changeMonth: true,
-            changeYear: true,
-            yearRange: "-100",
-            dateFormat: 'yy-mm-dd',
-            showAnim: 'slide',
-            minDate: (currentDateYear - 100) + '-01-01',
-            maxDate: date18Year.getFullYear() + '-' + (date18Year.getMonth() + 1) + '-' + date18Year.getDate(),
-            onSelect: function(dateText) {
-                var id = $(this).attr('id');
-                id = id.slice(0, -5);
-                $('#' + id).val(date);
 
-                var posTop = $(this).offset().top;
-                $(this).parent().next().find(".qMsg").css("background", "url(Valid.gif) no-repeat 0 0");
-                $(this).parent().next().find(".qMsg").css("top", posTop + 3);
-
-                $(this).parent().next().next().find(".popup").css("background", "url(bluebox.png) no-repeat 0 0");
-                $(this).parent().next().next().find(".popup").css("top", posTop - 20);
-                $(this).parent().next().next().find(".popup").find(".popup_tip").css("display", "block");
-                $(this).parent().next().next().find(".popup").find(".error").css("display", "none");
-            }
-        });
-        */
         
        var lang = "zh-CN";
         $("#txtPersonalDOBinput").datepicker($.datepicker.setDefaults($.datepicker.regional[lang]));
 
 
         $.datepicker.setDefaults({
-            
+            showAnim: 'slide',
             changeMonth: true,
             changeYear: true,
             yearRange: "-100:+50",
@@ -2128,11 +2111,11 @@ lastFirstName();
             dateFormat: 'yy-mm-dd',
             showAnim: 'slide',
             minDate: (currentDateYear - 150) + '-01-01',
-            maxDate: 0 
-        });
+            maxDate: 0
+            });
 
 
-    $('.pickDate').click(function () {
+/*    $('.pickDate').click(function () {
         var id = $(this).attr('id');
         console.log(id)
         var input = id + 'input';
@@ -2141,14 +2124,14 @@ lastFirstName();
         $('#' + input).datepicker('show');
         console.log('trigggaaahhhh 2')
     });
-
+*/
 
 
 
 
 
         $("#txtPersonalDOB").focus(function() {
-                    var id = $(this).attr('id');
+         var id = $(this).attr('id');
         console.log(id)
         var input = id + 'input';
         console.log("----------------");
@@ -2358,7 +2341,7 @@ lastFirstName();
                     //remote:"http://192.168.188.4:16385/Fun/validate/checkUserNickname"
                     //regex: "^[a-zA-Z0-9]+$",
                     remote: {
-                        url: 'http://192.168.188.10:16385/Fun/validate/checkUserNickname',
+                        url: 'http://192.168.188.4:16385/Fun/validate/checkUserNickname',
                         type: 'GET',
                         data:{
                             nickname: function() {
@@ -2807,7 +2790,7 @@ lastFirstName();
 
 
 
-                            <input name="txtPersonalDOB" readonly="readonly" id="txtPersonalDOB" tabindex="2" class="signup_input hasDatepicker error" style="height: 25px; width: 293px;" type="text"><img class="ui-datepicker-trigger" src="calendar.gif" alt="..." title="...">
+                            <input name="txtPersonalDOB" readonly="readonly" id="txtPersonalDOB" tabindex="2" class="signup_input hasDatepicker error" style="height: 25px; width: 293px;" type="text">
 
                                 <input  style="height: 0px; width:0px; border: 0px;" id="txtPersonalDOBinput" name="" />
                             <input name="hfPersonalBOB" id="hfPersonalBOB" type="hidden">
@@ -4005,13 +3988,13 @@ lastFirstName();
     }
 
 </script>
-<style type="text/css">
-/* Code tidied up by ScrapBook */
+<!-- <style type="text/css">
+
 #slides1 .pagination { float: right; margin-bottom: 0px; margin-right: 28px; margin-top: -37px; position: relative; z-index: 101; }
 #slidesCDC .pagination, #slidesPlayBoyTutorial .pagination { float: right; margin-bottom: 0px; margin-right: 28px; margin-top: -37px; position: relative; z-index: 101; }
 #CDC_popup_box .dvEmptyFrame { display: none; }
 </style>
-
+ -->
 
 
 <div id="Video_popup_box" style="height: 480px; width: 640px; display: none;">
@@ -4091,55 +4074,10 @@ document.getElementById('ctl05_PasswordPopupValidator').dispose = function() {
 }
 //]]>
 </script>
-<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="fl...(line truncated)...
-
-</form>
-    
-<script type="text/javascript">
-    window.lpTag = window.lpTag || {}; if (typeof window.lpTag._tagCount === 'undefined') { window.lpTag = { site: '77738374' || '', section: lpTag.section || '', autoStart: lpTag.autoStart === false ? false : true, ovr: lpTag.ovr || {}, _v: '1.5.1', _tagCount: 1, protocol: location.protocol, events: { bind: function (app, ev, fn) { lpTag.defer(function () { lpTag.events.bind(app, ev, fn); }, 0); }, trigger: function (app, ev, json) { lpTag.defer(function () { lpTag.events.trigger(app, ev, json); }, 1); } }...(line truncated)...
-</script>
-
-    
-<script type="text/javascript">
-    var TrackingID =  'UA-4079383-8'; 
-    var GA_UserID = "0";
-    var testing = "";
-
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    if (getCookie("verifyform") == "1" && GA_UserID != "0") {
-        ga('create', TrackingID, 'none', { 'userId': GA_UserID, 'allowLinker': true });
-        ga('set', 'dimension1', GA_UserID);
-    } else
-        ga('create', TrackingID, 'none', { 'allowLinker': true });
-
-    ga('require', 'displayfeatures');
-    ga('send', 'pageview');
-</script>
-
-    
-    
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button type="button" id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></form>
     
 
-<!-- Live Google Tag Manager GTM-5QQ3K6 -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5QQ3K6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function (w, d, s, l, i) {
-w[l] = w[l] || []; w[l].push({
-'gtm.start':
-new Date().getTime(), event: 'gtm.js'
-}); var f = d.getElementsByTagName(s)[0],
-j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-5QQ3K6');</script>
-<!-- End Live Google Tag Manager -->
 
-<!-- Staging Google Tag Manager GTM-PJFS5H -->
 
 <!-- End Staging Google Tag Manager -->
 
@@ -4265,7 +4203,7 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
             } catch (err) {
             }
             
-            mobileRedirect("http://m.10010388.com");
+          /*  mobileRedirect("http://m.10010388.com");*/
             
         });
     </script>
@@ -4317,45 +4255,7 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
         }
     </script>
 
-
-<div style="display: none; visibility: hidden;"><script type="application/ld+json">
-{ "@context" : "http://schema.org",
-"@type" : "Organization",
-"name" : "Fun88",
-"logo" : "http://www.fun88.com/Images/header/logo-cn.png",
-"url": "http://fun88.com",
-"sameAs" :[
-"http://www.weibo.com/fun88angel",
-"http://i.youku.com/Fun88Bliss"
-]
-}
-</script>
-</div><div style="display: none; visibility: hidden;"><script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "WebSite", 
-  "name" : "Fun88",
-  "url" : "http://fun88.com/",
-  "potentialAction" : {
-    "@type" : "SearchAction",
-    "target" : "http://www.fun88.com/search?&q={query}",
-    "query-input" : "required"
-  }                     
-}
-</script>
-
-
-
-</div>
-<!-- <style>
-    #ui-datepicker-div{
-    display: block;
-    left: 702px;
-    position: absolute;
-    top: 410px;
-    z-index: 1;
-    }
-</style> -->
+    
 
 </body>
 </html>

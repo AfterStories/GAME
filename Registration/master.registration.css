@@ -1,4 +1,4 @@
-/* Code tidied up by ScrapBook */
+
 .slides_container { text-align: center; }
 #slides { position: relative; height: 320px; width: 960px; display: block; margin-left: 25px; }
 #slides div { height: 320px; width: 960px; }
