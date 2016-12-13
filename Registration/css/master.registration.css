@@ -46,4 +46,4 @@ label.error { color: black; line-height: 1.5; margin-left: 35px; margin-top: 53p
 #lower { width: 382px; height: 63px; background-position: 0px 0px; cursor: pointer; display: block; }
 #upper:hover { background-position: 0px -265px; }
 #lower:hover { background-position: 0px -102px; }
-.QQCloseBtn { width: 25px; height: 25px; position: absolute; cursor: pointer; background: transparent url("allicons.png") no-repeat scroll -641px -5px; }
+.QQCloseBtn { width: 25px; height: 25px; position: absolute; cursor: pointer; background: transparent url("../../lib/images/allicons.png") no-repeat scroll -641px -5px; }

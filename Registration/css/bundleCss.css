@@ -85,7 +85,7 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 .ui-menu { list-style: outside none none; display: block; outline: medium none; margin: 0px; padding: 2px; }
 .ui-menu .ui-menu { margin-top: -3px; position: absolute; }
 .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current, .ui-datepicker-rtl .ui-datepicker-group, .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
-.ui-menu .ui-menu-item { width: 100%; list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"); margin: 0px; padding: 0px; }
+.ui-menu .ui-menu-item { width: 100%; list-style-image: url("images/data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"); margin: 0px; padding: 0px; }
 .ui-menu .ui-menu-divider { height: 0px; font-size: 0px; line-height: 0; border-width: 1px 0px 0px; margin: 5px -2px; }
 .ui-menu .ui-menu-item a { text-decoration: none; display: block; line-height: 1.5; min-height: 0px; font-weight: 400; padding: 2px 0.4em; }
 .ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active { font-weight: 400; margin: -1px; }
@@ -97,7 +97,7 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 .ui-menu .ui-menu-icon { position: static; float: right; }
 .ui-progressbar { height: 2em; text-align: left; overflow: hidden; }
 .ui-progressbar .ui-progressbar-value { height: 100%; margin: -1px; }
-.ui-progressbar .ui-progressbar-overlay { background: transparent url("animated-overlay.gif") repeat scroll 0% 0%; height: 100%; opacity: 0.25; }
+.ui-progressbar .ui-progressbar-overlay { background: transparent url("images/animated-overlay.gif") repeat scroll 0% 0%; height: 100%; opacity: 0.25; }
 .ui-progressbar-indeterminate .ui-progressbar-value { background-image: none; }
 .ui-resizable { position: relative; }
 .ui-resizable-handle { position: absolute; font-size: 0.1px; display: block; }
@@ -147,12 +147,12 @@ body .ui-tooltip { border-width: 2px; border-color: rgb(170, 170, 170); }
 .ui-widget .ui-widget { font-size: 1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-size: 1em; }
 .ui-widget-content { border: 1px solid rgb(66, 151, 215); background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(34, 34, 34); }
-.ui-widget-header { border: 1px solid rgb(66, 151, 215); background: rgb(204, 204, 204) url("ui-bg_gloss-wave_55_0b81da_500x100.png") repeat-x scroll 50% 50%; color: rgb(255, 255, 255); font-weight: 700; }
+.ui-widget-header { border: 1px solid rgb(66, 151, 215); background: rgb(204, 204, 204) url("./../lib/images/ui-bg_gloss-wave_55_0b81da_500x100.png") repeat-x scroll 50% 50%; color: rgb(255, 255, 255); font-weight: 700; }
 .ui-widget-content a, .ui-widget-header a { color: rgb(34, 34, 34); }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid rgb(197, 219, 236); background: rgb(223, 239, 252) none repeat scroll 0% 0%; font-weight: 400; color: rgb(85, 85, 85); }
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: rgb(85, 85, 85); text-decoration: none; }
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid rgb(121, 183, 231); background: rgb(208, 229, 245) url("ui-bg_glass_75_d0e5f5_1x400.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid rgb(121, 183, 231); background: rgb(245, 248, 249) url("ui-bg_inset-hard_100_f5f8f9_1x100.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid rgb(121, 183, 231); background: rgb(208, 229, 245) url("images/ui-bg_glass_75_d0e5f5_1x400.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid rgb(121, 183, 231); background: rgb(245, 248, 249) url("images/ui-bg_inset-hard_100_f5f8f9_1x100.png") repeat-x scroll 50% 50%; font-weight: 400; color: rgb(33, 33, 33); }
 .ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: rgb(29, 89, 135); text-decoration: none; }
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight { border: 1px solid rgb(252, 239, 161); color: rgb(54, 54, 54); }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a { color: rgb(54, 54, 54); }
@@ -163,9 +163,9 @@ body .ui-tooltip { border-width: 2px; border-color: rgb(170, 170, 170); }
 .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a, .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: rgb(205, 10, 10); }
 .ui-state-disabled .ui-icon {  }
 .ui-icon { width: 16px; height: 16px; }
-.ui-widget-header .ui-icon { background-image: url("ui-icons_888888_256x240.png"); }
-.ui-state-highlight .ui-icon { background-image: url("ui-icons_064792_256x240.png"); }
-.ui-state-error .ui-icon, .ui-state-error-text .ui-icon { background-image: url("ui-icons_cd0a0a_256x240.png"); }
+.ui-widget-header .ui-icon { background-image: url("../../lib/images/ui-icons_888888_256x240.png"); }
+.ui-state-highlight .ui-icon { background-image: url("../../lib/images/ui-icons_064792_256x240.png"); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon { background-image: url("../../lib/images/ui-icons_cd0a0a_256x240.png"); }
 .ui-icon-blank { background-position: 16px 16px; }
 .ui-icon-carat-1-n { background-position: 0px 0px; }
 .ui-icon-carat-1-ne { background-position: -16px 0px; }
@@ -365,7 +365,7 @@ select { -moz-appearance: none; border: 1px solid; box-shadow: 0px 1px 3px rgba(
 .lang { display: inline; float: right; position: relative; top: 17px; width: 114px; }
 #arrow { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; vertical-align: middle; width: 0px; top: 13px; float: right; right: 4px; position: absolute; cursor: pointer; }
 #arrow2 { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; position: relative; vertical-align: middle; width: 0px; margin-left: 2px; cursor: pointer; top: 2px; }
-.blackArrow_right { background: transparent url("Arrow_allicons.png") no-repeat scroll -107px -23px; width: 26px; height: 31px; display: block; float: right; }
+.blackArrow_right { background: transparent url("images/Arrow_allicons.png") no-repeat scroll -107px -23px; width: 26px; height: 31px; display: block; float: right; }
 #target a { width: 113px; height: 34px; margin-top: -7px; }
 .FlagSelector { width: 40px; height: 20px; margin: 0px; float: right; padding: 0px; }
 .FlagOption { width: 34px; height: 16px; margin-left: 5px; margin-bottom: 5px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); border-radius: 3px; background: rgb(110, 110, 110) none repeat scroll 0% 0%; }
@@ -396,13 +396,13 @@ p { padding-bottom: 18px; }
 #help_lang a:link, a:hover { text-decoration: none; }
 .style { color: rgb(37, 170, 225); font-weight: bold; }
 #icon { float: left; height: 43px; width: 63px; margin-right: 1px; }
-#slider { height: 459px; background: transparent url("slider.gif") no-repeat scroll 0px 0px; position: relative; float: left; text-align: center; top: -45px; z-index: 10; }
+#slider { height: 459px; background: transparent url("images/slider.gif") no-repeat scroll 0px 0px; position: relative; float: left; text-align: center; top: -45px; z-index: 10; }
 #but_reg { clear: both; width: 960px; position: absolute; top: 362px; z-index: 200; }
 .but_reg01 { width: 307px; float: right; height: 80px; padding-right: 202px; padding-top: 19px; }
 .but_reg02 { width: 419px; float: right; height: 80px; padding-left: 12px; }
 #slider .slider-nav a { display: block; width: 20px; height: 49px; font-size: 0px; line-height: 0; text-indent: -4000px; position: absolute; top: 129px; }
-#slider .slider-nav a.prev { left: 0px; background: transparent url("button-prev.png") no-repeat scroll 0% 0%; }
-#slider .slider-nav a.next { right: 0px; background: transparent url("button-next.png") no-repeat scroll 0% 0%; }
+#slider .slider-nav a.prev { left: 0px; background: transparent url("images/button-prev.png") no-repeat scroll 0% 0%; }
+#slider .slider-nav a.next { right: 0px; background: transparent url("images/button-next.png") no-repeat scroll 0% 0%; }
 #slider-holder { height: 460px; }
 #slider-holder .jcarousel-clip { height: 460px; width: 960px; position: relative; overflow: hidden; }
 #slider-holder .slide-image { float: left; display: inline; }
@@ -416,7 +416,7 @@ p { padding-bottom: 18px; }
 #sub-nav-pro ul li { float: left; display: inline; list-style-type: none; padding-right: 0px; }
 #sub-nav-pro ul li a { float: left; display: inline; text-decoration: none; padding-left: 0px; }
 #sub-nav-pro ul li a span { float: left; display: inline; width: 70px; padding-right: 0px; background-position: right 0px ! important; }
-#sub-nav-pro ul li a:hover, #sub-nav-pro ul li a.active, #sub-nav-pro ul li a:hover span, #sub-nav-pro ul li a.active span { color: rgb(255, 255, 255); height: 30px; width: 70px; background-image: url("C_subtit_bg70.png"); background-repeat: no-repeat; }
+#sub-nav-pro ul li a:hover, #sub-nav-pro ul li a.active, #sub-nav-pro ul li a:hover span, #sub-nav-pro ul li a.active span { color: rgb(255, 255, 255); height: 30px; width: 70px; background-image: url("images/C_subtit_bg70.png"); background-repeat: no-repeat; }
 .sub-nav-01 { float: left; }
 .sub-nav-02 { padding-top: 10px; }
 .six-cols .col { width: 125px; }
@@ -424,17 +424,17 @@ p { padding-bottom: 18px; }
 .space03 { padding-right: 38px; }
 .space04 { padding-top: 6px; }
 .nav_tit_game { height: 38px; width: 125px; float: left; font-size: 20px; text-align: center; line-height: 33px; }
-.nav_tit_try { background-image: url("c_but_try.png"); background-repeat: no-repeat; height: 31px; width: 125px; float: left; font-size: 13px; color: rgb(61, 150, 197); text-align: center; line-height: 30px; text-indent: 10px; margin-bottom: 1px; }
+.nav_tit_try { background-image: url("images/c_but_try.png"); background-repeat: no-repeat; height: 31px; width: 125px; float: left; font-size: 13px; color: rgb(61, 150, 197); text-align: center; line-height: 30px; text-indent: 10px; margin-bottom: 1px; }
 #nav_tit_detail { height: 27px; width: 125px; float: left; font-size: 13px; text-align: center; line-height: 28px; text-indent: 8px; margin-bottom: 1px; }
 #nav_tit_detail a { text-decoration: underline; }
 #nav_tit_detail a:hover { text-decoration: none; }
-.calendar { width: 80px; height: 80px; left: 0px; top: 0px; background: transparent url("calendar.png") no-repeat scroll 0% 0%; position: absolute; }
+.calendar { width: 80px; height: 80px; left: 0px; top: 0px; background: transparent url("images/calendar.png") no-repeat scroll 0% 0%; position: absolute; }
 .calendar ul { margin: 0px; padding: 0px; text-align: center; }
 .calendar li { list-style-type: none; margin: 0px; line-height: 1em; padding-bottom: 5px; }
 .month { font-size: 16px; color: rgb(255, 255, 255); font-weight: bold; padding: 15px 0px 0px; }
 .date { font-size: 24px; color: rgb(255, 255, 255); font-weight: bold; padding: 5px 0px 0px; }
 .tour1 { width: 295px; height: 80px; float: left; margin: 0px; background-color: rgb(255, 255, 255); position: relative; }
-.tour2 { width: 295px; height: 80px; float: left; margin: 0px; background: transparent url("tourBg.jpg") no-repeat scroll 0% 0%; position: relative; }
+.tour2 { width: 295px; height: 80px; float: left; margin: 0px; background: transparent url("images/tourBg.jpg") no-repeat scroll 0% 0%; position: relative; }
 .tourBox { width: 200px; height: 60px; margin: 15px 0px 0px 80px; position: absolute; font-size: 12px; text-decoration: none; }
 .tourBox ul { margin: 0px; padding: 0px; }
 .tourBox li { list-style-type: none; margin: 0px; line-height: 1em; padding-bottom: 5px; }
@@ -447,18 +447,18 @@ p { padding-bottom: 18px; }
 .tourbgBox a { color: rgb(255, 255, 255); text-decoration: underline; }
 .tourbgBox a:hover { text-decoration: underline; }
 #but_mtit .bttn { display: block; font-size: 19px; line-height: 28px; height: 41px; text-align: center; margin-bottom: 7px; margin-top: 7px; }
-#but_mtit .bttn a { color: rgb(37, 170, 225); display: block; padding: 6px 0px 6px 12px; background: transparent url("p_but_01.png") no-repeat scroll center top; }
-#but_mtit .bttn a:hover { background: transparent url("p_but_01.png") no-repeat scroll center top; }
+#but_mtit .bttn a { color: rgb(37, 170, 225); display: block; padding: 6px 0px 6px 12px; background: transparent url("images/p_but_01.png") no-repeat scroll center top; }
+#but_mtit .bttn a:hover { background: transparent url("images/p_but_01.png") no-repeat scroll center top; }
 #but_mtit .bttn02 { display: block; font-size: 19px; line-height: 26px; height: 41px; margin-bottom: 5px; text-align: center; margin-top: 5px; }
-#but_mtit .bttn02 a { color: rgb(255, 255, 255); display: block; padding: 6px 0px 10px 8px; background: transparent url("p_but_02.png") no-repeat scroll center top; }
-#but_mtit .bttn02 a:hover { background: transparent url("p_but_02.png") no-repeat scroll center top; }
+#but_mtit .bttn02 a { color: rgb(255, 255, 255); display: block; padding: 6px 0px 10px 8px; background: transparent url("images/p_but_02.png") no-repeat scroll center top; }
+#but_mtit .bttn02 a:hover { background: transparent url("images/p_but_02.png") no-repeat scroll center top; }
 #but_mtit { height: 41px; width: 295px; text-decoration: none; padding-right: 0px; background-position: center center; }
 #sub-tit { float: left; height: 60px; width: 900px; }
 #slider ul { width: 960px; height: 460px; position: relative; overflow: hidden; }
 #slider ul li { list-style-type: none; float: left; display: inline; height: 500px; width: 960px; padding: 0px; position: relative; overflow: hidden; }
 .pagination { position: relative; z-index: 101; margin-top: -26px; margin-right: 14px; margin-bottom: 0px; float: right; }
 .pagination li { float: left; margin: 0px 1px; list-style: outside none none; }
-.pagination li a { display: block; width: 12px; height: 0px; padding-top: 12px; background-image: url("pagination.png"); background-position: 0px 0px; float: left; overflow: hidden; }
+.pagination li a { display: block; width: 12px; height: 0px; padding-top: 12px; background-image: url("images/pagination.png"); background-position: 0px 0px; float: left; overflow: hidden; }
 .pagination li.current a { background-position: 0px -12px; }
 #sb { clear: both; float: left; position: relative; padding-left: 117px; z-index: 102; }
 .sb01 { width: 186px; height: 45px; position: absolute; padding-left: 0px; margin-top: -59px; }
@@ -468,10 +468,10 @@ p { padding-bottom: 18px; }
 #sp_content { height: 506px; width: 1025px; border: 1px solid rgb(204, 204, 204); position: absolute; z-index: 150; margin-left: -30px; margin-top: -25px; }
 #sp_BL { width: 127px; position: absolute; z-index: 160; margin-left: -157px; }
 #sp_BR { width: 127px; position: absolute; z-index: 160; margin-left: 997px; }
-h3.txt-wedothis { background-image: url("txt-wedothis.gif"); }
-h3.txt-247 { background-image: url("txt-247.gif"); }
-.button-more { display: block; width: 66px; height: 22px; font-size: 0px; line-height: 0; text-indent: -4000px; background: transparent url("button-more.gif") no-repeat scroll 0px 0px; }
-.more { padding-left: 10px; background: transparent url("arr.gif") no-repeat scroll 0px center; }
+h3.txt-wedothis { background-image: url("images/txt-wedothis.gif"); }
+h3.txt-247 { background-image: url("images/txt-247.gif"); }
+.button-more { display: block; width: 66px; height: 22px; font-size: 0px; line-height: 0; text-indent: -4000px; background: transparent url("images/button-more.gif") no-repeat scroll 0px 0px; }
+.more { padding-left: 10px; background: transparent url("images/arr.gif") no-repeat scroll 0px center; }
 .two-cols .col { width: 420px; margin-right: 34px; }
 #top_header { border-left: 1px solid rgb(221, 221, 221); height: 33px; width: 960px; }
 #top_nav_left ul { margin: 0px; padding: 0px; z-index: 99; position: relative; }
@@ -504,46 +504,46 @@ h3.txt-247 { background-image: url("txt-247.gif"); }
 .tooltip {  }
 div#fixed_header { background-color: rgb(37, 170, 225); width: 100%; position: fixed; height: 33px; top: 0px; z-index: 4998; left: 0px; }
 div#outer_top_header { top: 0px; position: fixed; background-color: rgb(37, 170, 225); height: 33px; z-index: 4999; }
-#top_nav_left #topBannerLogo.CN { background: transparent url("fun88_logo_cn.png") no-repeat scroll 0px 6px; }
-#top_nav_left #topBannerLogo.EN { background: transparent url("fun88_logo_EN.png") no-repeat scroll 2px 10px; }
+#top_nav_left #topBannerLogo.CN { background: transparent url("images/fun88_logo_cn.png") no-repeat scroll 0px 6px; }
+#top_nav_left #topBannerLogo.EN { background: transparent url("images/fun88_logo_EN.png") no-repeat scroll 2px 10px; }
 #top_nav_left #topBannerLogo { height: 28px; width: 56px; cursor: pointer; display: none; }
 #top_nav_left #topBannerLogoContainer { display: none; }
-#hbtn1 { background: transparent url("allicons.png") no-repeat scroll -2px 2px; width: 28px; height: 33px; }
-#hbtn1:hover { background: transparent url("allicons.png") no-repeat scroll -2px -28px; }
-#hbtn2 { background: transparent url("allicons.png") no-repeat scroll -31px 2px; width: 27px; height: 33px; }
-#hbtn2:hover { background: transparent url("allicons.png") no-repeat scroll -31px -28px; }
-#hbtn3 div { background: transparent url("allicons.png") no-repeat scroll -96px 0px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn3:hover div { background: transparent url("allicons.png") no-repeat scroll -96px -30px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn1 { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -2px 2px; width: 28px; height: 33px; }
+#hbtn1:hover { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -2px -28px; }
+#hbtn2 { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -31px 2px; width: 27px; height: 33px; }
+#hbtn2:hover { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -31px -28px; }
+#hbtn3 div { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -96px 0px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn3:hover div { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -96px -30px; height: 28px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
 #hbtn4 { background-color: rgb(37, 170, 225); height: 25px; }
 #hbtn4:hover { background-color: rgb(17, 145, 191); height: 25px; }
-#hbtn4 div { background: transparent url("allicons.png") no-repeat scroll -246px 0px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn4:hover div { background: transparent url("allicons.png") no-repeat scroll -246px -30px ! important; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn5 { background: transparent url("allicons.png") no-repeat scroll -393px 2px; width: 25px; height: 33px; }
-#hbtn5:hover { background: transparent url("allicons.png") no-repeat scroll -393px -28px; }
-#hbtn6 { background: transparent url("allicons.png") no-repeat scroll -62px 2px; width: 25px; height: 33px; }
-#hbtn6:hover { background: transparent url("allicons.png") no-repeat scroll -62px -28px; }
-#hbtn7 div { background: transparent url("allicons.png") no-repeat scroll -157px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtn8 div { background: transparent url("allicons.png") no-repeat scroll -125px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
-#hbtnDiamond { background: rgb(37, 170, 225) url("VIP-Fun88.png") no-repeat scroll 5px 11px; height: 25px; }
-#hbtnDiamond:hover { background: transparent url("VIP-Fun88-Hover.png") no-repeat scroll 5px 11px ! important; }
+#hbtn4 div { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -246px 0px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn4:hover div { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -246px -30px ! important; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn5 { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -393px 2px; width: 25px; height: 33px; }
+#hbtn5:hover { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -393px -28px; }
+#hbtn6 { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -62px 2px; width: 25px; height: 33px; }
+#hbtn6:hover { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -62px -28px; }
+#hbtn7 div { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -157px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtn8 div { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -125px -32px; height: 25px; width: 25px; float: left; margin-left: -24px; margin-top: -6px; }
+#hbtnDiamond { background: rgb(37, 170, 225) url("images/VIP-Fun88.png") no-repeat scroll 5px 11px; height: 25px; }
+#hbtnDiamond:hover { background: transparent url("images/VIP-Fun88-Hover.png") no-repeat scroll 5px 11px ! important; }
 .ddlWalletsBank { width: 60px ! important; height: 22px ! important; }
 #ddlSettings { background: transparent none repeat scroll 0% 0%; width: 32px; height: 22px; }
 #ddlWallets { background: transparent none repeat scroll 0% 0%; width: 32px; height: 22px; }
-#ddlSettings div { background: transparent url("allicons.png") no-repeat scroll -576px -2px; width: 32px; height: 22px; }
-#ddlSettings:hover div { background: transparent url("allicons.png") no-repeat scroll -576px -34px; }
-#ddlWallets div { background: transparent url("allicons.png") no-repeat scroll -424px -3px; width: 25px; height: 22px; margin-left: -8px; }
-#ddlWallets:hover div { background: transparent url("allicons.png") no-repeat scroll -424px -34px; width: 25px; height: 22px; margin-left: -8px; }
-#btnDepositTH, #btnDepositVN, #btnDepositID, #btnDeposit, #btnRegister, #CNbtnRegister { background: transparent url("btn_register_sprite.gif") no-repeat scroll 0px 0px / 172px 87px; border: 0px none; width: 155px; height: 30px; cursor: pointer; color: rgb(255, 255, 255); font-weight: bold; text-align: center; padding: 9px 0px 0px 18px; }
+#ddlSettings div { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -576px -2px; width: 32px; height: 22px; }
+#ddlSettings:hover div { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -576px -34px; }
+#ddlWallets div { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -424px -3px; width: 25px; height: 22px; margin-left: -8px; }
+#ddlWallets:hover div { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -424px -34px; width: 25px; height: 22px; margin-left: -8px; }
+#btnDepositTH, #btnDepositVN, #btnDepositID, #btnDeposit, #btnRegister, #CNbtnRegister { background: transparent url("images/btn_register_sprite.gif") no-repeat scroll 0px 0px / 172px 87px; border: 0px none; width: 155px; height: 30px; cursor: pointer; color: rgb(255, 255, 255); font-weight: bold; text-align: center; padding: 9px 0px 0px 18px; }
 #btnDeposit { width: 155px; background-size: 172px 87px; padding: 8px 0px 0px 19px; }
 #btnDeposit:hover { background-position: 0px -43px; background-size: 172px 87px; }
 #btnDepositID { width: 180px; background-size: 205px 87px; padding: 8px 0px 0px 29px; }
 #btnDepositID:hover { background-position: 0px -43px; background-size: 205px 87px; }
-#btnDepositCN { width: 185px ! important; font-size: 17px ! important; background: transparent url("button_popup2.png") no-repeat scroll 0px 0px; border: 0px none; }
+#btnDepositCN { width: 185px ! important; font-size: 17px ! important; background: transparent url("images/button_popup2.png") no-repeat scroll 0px 0px; border: 0px none; }
 #btnDepositTH:hover, #btnDepositVN:hover, #btnRegister:hover, #CNbtnRegister:hover { background-position: 0px -43px; background-size: 172px 87px; }
-#btnRegisterCN { width: 185px ! important; font-size: 17px ! important; background: transparent url("button_pop_up.png") no-repeat scroll 0px 0px; border: 0px none; }
-#btnRegisterID { width: 230px ! important; background: transparent url("button_popup2ID.png") no-repeat scroll 0px 0px; border: 0px none; }
-#btnRegisterTH { background: transparent url("button_popup2TH.png") no-repeat scroll 0px 0px; border: 0px none; }
-#btnRegisterVN { width: 195px ! important; background: transparent url("button_popup2VN.png") no-repeat scroll 0px 0px; border: 0px none; }
+#btnRegisterCN { width: 185px ! important; font-size: 17px ! important; background: transparent url("../../lib/images/button_pop_up.png") no-repeat scroll 0px 0px; border: 0px none; }
+#btnRegisterID { width: 230px ! important; background: transparent url("images/button_popup2ID.png") no-repeat scroll 0px 0px; border: 0px none; }
+#btnRegisterTH { background: transparent url("images/button_popup2TH.png") no-repeat scroll 0px 0px; border: 0px none; }
+#btnRegisterVN { width: 195px ! important; background: transparent url("images/button_popup2VN.png") no-repeat scroll 0px 0px; border: 0px none; }
 #btnDepositCN, #btnRegisterCN, #btnRegisterID, #btnRegisterTH, #btnRegisterVN { width: 205px; height: 27px; cursor: pointer; color: rgb(255, 255, 255); font-weight: bold; text-align: center; padding: 8px 0px 0px; z-index: 1001; }
 #btnRegisterCN:hover, #btnRegisterID:hover, #btnRegisterTH:hover, #btnRegisterVN:hover { height: 163px; }
 .btnRegisterAlignmentID { width: 205px; height: 1px; }
@@ -555,44 +555,44 @@ div#outer_top_header { top: 0px; position: fixed; background-color: rgb(37, 170,
 #login .field, #login .password { width: 118px; background: rgb(255, 255, 255) none repeat scroll 0px 0px; color: rgb(50, 51, 51); }
 #login .field:focus, #login .password:focus { border-color: rgb(37, 170, 226); }
 #login .button { float: right; display: inline; width: 107px; height: 36px; font-size: 9pt; font-weight: bold; color: rgb(37, 170, 225); text-indent: 8px; padding-top: 0px; margin-top: -2px; }
-#login .button { background: transparent url("btn_login_.gif") no-repeat scroll 0px 3px; border: 0px none; }
-#login .button:hover { background: transparent url("btn_login_.gif") no-repeat scroll 0px -33px; }
-#top_nav_shadow { height: 4px; background-image: url("header-shadow.png"); background-repeat: no-repeat; background-position: center center; display: none; }
+#login .button { background: transparent url("../../lib/images/btn_login_.gif") no-repeat scroll 0px 3px; border: 0px none; }
+#login .button:hover { background: transparent url("../../lib/images/btn_login_.gif") no-repeat scroll 0px -33px; }
+#top_nav_shadow { height: 4px; background-image: url("images/header-shadow.png"); background-repeat: no-repeat; background-position: center center; display: none; }
 #logofun88 > table { width: 355px; }
 #logofun88InZh > table { width: 415px; }
 #logofun88 { float: left; display: inline; font-size: 0px; line-height: 0; }
 #logofun88InZh { float: left; display: inline; font-size: 0px; line-height: 0; }
-#logofun88 .logo { display: block; height: 67px; text-indent: -4000px; background: transparent url("logo.png") no-repeat scroll 0px 0px; }
-#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; background-image: url("logo-cn.png"); background-repeat: no-repeat; margin-left: 15px; }
-#logofun88JP .logo { display: block; height: 67px; text-indent: -4000px; background-image: url("logo-jp.png"); background-repeat: no-repeat; margin-left: 15px; }
+#logofun88 .logo { display: block; height: 67px; text-indent: -4000px; background: transparent url("images/logo.png") no-repeat scroll 0px 0px; }
+#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; background-image: url("../../lib/images/logo-cn.png"); background-repeat: no-repeat; margin-left: 15px; }
+#logofun88JP .logo { display: block; height: 67px; text-indent: -4000px; background-image: url("../../lib/images/logo-jp.png"); background-repeat: no-repeat; margin-left: 15px; }
 #logofun88 span { display: block; height: 67px; text-indent: -4000px; }
-#logofun88InZh span { display: block; height: 45px; text-indent: -4000px; background-image: url("slogan_cn.gif"); background-repeat: no-repeat; margin-top: 10px; margin-left: 15px; }
+#logofun88InZh span { display: block; height: 45px; text-indent: -4000px; background-image: url("../../lib/images/slogan_cn.gif"); background-repeat: no-repeat; margin-top: 10px; margin-left: 15px; }
 #header_right { float: right; display: inline; margin-right: 15px; padding: 10px 0px 0px; }
 #header_right > div { display: block; float: left; }
 #header_right a { display: block; font-size: 15px; }
 #header_right > div > #CNbtnRegister { display: block; font-size: 17px; word-spacing: -3px; }
-#dvMedia01 { background: transparent url("footerlogo-combine.png") no-repeat scroll -13px 3px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia01:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -14px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia02 { background: transparent url("footerlogo-combine.png") no-repeat scroll 0px 0px; width: 55px; height: 38px; margin-top: 0px; }
-#dvMedia02:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll 0px 0px; cursor: pointer; margin-top: 0px; }
-#dvMedia03 { background: transparent url("footerlogo-combine.png") no-repeat scroll -142px 3px; width: 29px; height: 38px; margin-top: 0px; }
-#dvMedia03:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -142px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia04 { background: transparent url("footerlogo-combine.png") no-repeat scroll -201px 3px; width: 26px; height: 38px; margin-top: 0px; }
-#dvMedia04:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -201px -43px; cursor: pointer; margin-top: 0px; }
-#dvMedia04.onlyVip:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -201px -89px; cursor: pointer; margin-top: 0px; }
-#dvMedia05 { background: transparent url("footerlogo-combine.png") no-repeat scroll -247px -1px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia05:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -247px -47px; cursor: pointer; margin-top: 0px; }
-#dvMedia06 { background: transparent url("footerlogo-combine.png") no-repeat scroll -303px -1px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia06:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -303px -47px; cursor: pointer; margin-top: 0px; }
-#dvMedia07 { background: transparent url("footerlogo-combine.png") no-repeat scroll -359px -1px; width: 43px; height: 38px; margin-top: 0px; }
-#dvMedia07:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -359px -47px; cursor: pointer; margin-top: 0px; }
-#dvMedia08 { background: transparent url("footerlogo-combine.png") no-repeat scroll -420px -1px; width: 37px; height: 38px; margin-top: 0px; margin-right: 7px; }
-#dvMedia08:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -420px -47px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
-#dvMedia09 { background: transparent url("footerlogo-combine.png") no-repeat scroll -474px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
-#dvMedia09:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -474px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
-#dvMedia10 { background: transparent url("footerlogo-combine.png") no-repeat scroll -531px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
-#dvMedia10:hover { background: transparent url("footerlogo-combine.png") no-repeat scroll -531px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
-.rewardIcon { height: 27px; margin-top: 0px; display: block; float: right; background-image: url("reward_icon_CN.png"); background-repeat: no-repeat; }
+#dvMedia01 { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -13px 3px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia01:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -14px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia02 { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll 0px 0px; width: 55px; height: 38px; margin-top: 0px; }
+#dvMedia02:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll 0px 0px; cursor: pointer; margin-top: 0px; }
+#dvMedia03 { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -142px 3px; width: 29px; height: 38px; margin-top: 0px; }
+#dvMedia03:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -142px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia04 { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -201px 3px; width: 26px; height: 38px; margin-top: 0px; }
+#dvMedia04:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -201px -43px; cursor: pointer; margin-top: 0px; }
+#dvMedia04.onlyVip:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -201px -89px; cursor: pointer; margin-top: 0px; }
+#dvMedia05 { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -247px -1px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia05:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -247px -47px; cursor: pointer; margin-top: 0px; }
+#dvMedia06 { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -303px -1px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia06:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -303px -47px; cursor: pointer; margin-top: 0px; }
+#dvMedia07 { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -359px -1px; width: 43px; height: 38px; margin-top: 0px; }
+#dvMedia07:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -359px -47px; cursor: pointer; margin-top: 0px; }
+#dvMedia08 { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -420px -1px; width: 37px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia08:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -420px -47px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+#dvMedia09 { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -474px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia09:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -474px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+#dvMedia10 { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -531px -1px; width: 43px; height: 38px; margin-top: 0px; margin-right: 7px; }
+#dvMedia10:hover { background: transparent url("../../lib/images/footerlogo-combine.png") no-repeat scroll -531px -46px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
+.rewardIcon { height: 27px; margin-top: 0px; display: block; float: right; background-image: url("images/reward_icon_CN.png"); background-repeat: no-repeat; }
 #dvRewardL001 { background-position: 4px 3px; width: 35px; }
 #dvRewardL002 { background-position: -24px 3px; width: 36px; }
 #dvRewardL003 { background-position: -57px 3px; width: 36px; }
@@ -611,30 +611,30 @@ div#outer_top_header { top: 0px; position: fixed; background-color: rgb(37, 170,
 #divWelMember { padding-right: 20px; padding-top: 8px; color: rgb(255, 255, 255); }
 #divWelMember:hover { background-color: rgb(37, 170, 225); height: 25px; }
 .balanceQuickView:hover { background-color: rgb(37, 170, 225); height: 28px; }
-#foot_icon2 { background: transparent url("footer_icon2.png") no-repeat scroll 0px 0px; float: left; width: 41px; height: 70px; }
-#foot_icon2:hover { background: transparent url("footer_icon2_c.png") no-repeat scroll 0px 0px; float: left; width: 41px; height: 70px; }
-#foot_icon3 { background: transparent url("footer_icon3.png") no-repeat scroll 0px 0px; float: left; width: 37px; height: 70px; }
-#foot_icon3:hover { background: transparent url("footer_icon3_c.png") no-repeat scroll 0px 0px; float: left; width: 37px; height: 70px; }
-#foot_icon4 { background: transparent url("footer_icon4.png") no-repeat scroll 0px 0px; float: left; width: 58px; height: 39px; }
-#foot_icon4:hover { background: transparent url("footer_icon4_c.png") no-repeat scroll 0px 0px; float: left; width: 58px; height: 39px; }
-#foot_icon5 { background: transparent url("footer_icon5.png") no-repeat scroll 0px 0px; float: left; width: 48px; height: 39px; }
-#foot_icon5:hover { background: transparent url("footer_icon5_c.png") no-repeat scroll 0px 0px; float: left; width: 48px; height: 39px; }
-#foot_icon6 { background: transparent url("footer_icon6.png") no-repeat scroll 0px 0px; float: left; width: 73px; height: 39px; }
-#foot_icon6:hover { background: transparent url("footer_icon6_c.png") no-repeat scroll 0px 0px; float: left; width: 73px; height: 39px; }
-#foot_icon7 { background: transparent url("footer_icon7.png") no-repeat scroll 0px 0px; float: left; width: 59px; height: 31px; }
-#foot_icon7:hover { background: transparent url("footer_icon7_c.png") no-repeat scroll 0px 0px; float: left; width: 59px; height: 31px; }
-#foot_icon8 { background: transparent url("footer_icon8.png") no-repeat scroll 0px 0px; float: left; width: 71px; height: 31px; }
-#foot_icon8:hover { background: transparent url("footer_icon8_c.png") no-repeat scroll 0px 0px; float: left; width: 71px; height: 31px; }
-#foot_icon9 { background: transparent url("footer_icon9.png") no-repeat scroll 0px 0px; float: left; width: 50px; height: 31px; }
-#foot_icon9:hover { background: transparent url("footer_icon9_c.png") no-repeat scroll 0px 0px; float: left; width: 50px; height: 31px; }
-#foot_icon10 { background: transparent url("footer_icon10.png") no-repeat scroll 0px 0px; float: left; width: 91px; height: 70px; }
-#foot_icon10:hover { background: transparent url("footer_icon10_c.png") no-repeat scroll 0px 0px; float: left; width: 91px; height: 70px; }
-#foot_icon11 { background: transparent url("footer_icon11.png") no-repeat scroll 0px 0px; float: left; width: 74px; height: 70px; }
-#foot_icon11:hover { background: transparent url("footer_icon11_c.png") no-repeat scroll 0px 0px; float: left; width: 74px; height: 70px; }
-#foot_icon12 { background: transparent url("footer_icon12.png") no-repeat scroll 0px 0px; float: left; width: 42px; height: 70px; }
-#foot_icon12:hover { background: transparent url("footer_icon12_c.png") no-repeat scroll 0px 0px; float: left; width: 42px; height: 70px; }
-#foot_icon13 { background: transparent url("footer_icon13.png") no-repeat scroll 0px 0px; float: left; width: 42px; height: 70px; }
-#foot_icon13:hover { background: transparent url("footer_icon13_c.png") no-repeat scroll 0px 0px; float: left; width: 42px; height: 70px; }
+#foot_icon2 { background: transparent url("images/footer_icon2.png") no-repeat scroll 0px 0px; float: left; width: 41px; height: 70px; }
+#foot_icon2:hover { background: transparent url("images/footer_icon2_c.png") no-repeat scroll 0px 0px; float: left; width: 41px; height: 70px; }
+#foot_icon3 { background: transparent url("images/footer_icon3.png") no-repeat scroll 0px 0px; float: left; width: 37px; height: 70px; }
+#foot_icon3:hover { background: transparent url("images/footer_icon3_c.png") no-repeat scroll 0px 0px; float: left; width: 37px; height: 70px; }
+#foot_icon4 { background: transparent url("images/footer_icon4.png") no-repeat scroll 0px 0px; float: left; width: 58px; height: 39px; }
+#foot_icon4:hover { background: transparent url("images/footer_icon4_c.png") no-repeat scroll 0px 0px; float: left; width: 58px; height: 39px; }
+#foot_icon5 { background: transparent url("images/footer_icon5.png") no-repeat scroll 0px 0px; float: left; width: 48px; height: 39px; }
+#foot_icon5:hover { background: transparent url("images/footer_icon5_c.png") no-repeat scroll 0px 0px; float: left; width: 48px; height: 39px; }
+#foot_icon6 { background: transparent url("images/footer_icon6.png") no-repeat scroll 0px 0px; float: left; width: 73px; height: 39px; }
+#foot_icon6:hover { background: transparent url("images/footer_icon6_c.png") no-repeat scroll 0px 0px; float: left; width: 73px; height: 39px; }
+#foot_icon7 { background: transparent url("images/footer_icon7.png") no-repeat scroll 0px 0px; float: left; width: 59px; height: 31px; }
+#foot_icon7:hover { background: transparent url("images/footer_icon7_c.png") no-repeat scroll 0px 0px; float: left; width: 59px; height: 31px; }
+#foot_icon8 { background: transparent url("images/footer_icon8.png") no-repeat scroll 0px 0px; float: left; width: 71px; height: 31px; }
+#foot_icon8:hover { background: transparent url("images/footer_icon8_c.png") no-repeat scroll 0px 0px; float: left; width: 71px; height: 31px; }
+#foot_icon9 { background: transparent url("images/footer_icon9.png") no-repeat scroll 0px 0px; float: left; width: 50px; height: 31px; }
+#foot_icon9:hover { background: transparent url("images/footer_icon9_c.png") no-repeat scroll 0px 0px; float: left; width: 50px; height: 31px; }
+#foot_icon10 { background: transparent url("images/footer_icon10.png") no-repeat scroll 0px 0px; float: left; width: 91px; height: 70px; }
+#foot_icon10:hover { background: transparent url("images/footer_icon10_c.png") no-repeat scroll 0px 0px; float: left; width: 91px; height: 70px; }
+#foot_icon11 { background: transparent url("images/footer_icon11.png") no-repeat scroll 0px 0px; float: left; width: 74px; height: 70px; }
+#foot_icon11:hover { background: transparent url("images/footer_icon11_c.png") no-repeat scroll 0px 0px; float: left; width: 74px; height: 70px; }
+#foot_icon12 { background: transparent url("images/footer_icon12.png") no-repeat scroll 0px 0px; float: left; width: 42px; height: 70px; }
+#foot_icon12:hover { background: transparent url("images/footer_icon12_c.png") no-repeat scroll 0px 0px; float: left; width: 42px; height: 70px; }
+#foot_icon13 { background: transparent url("images/footer_icon13.png") no-repeat scroll 0px 0px; float: left; width: 42px; height: 70px; }
+#foot_icon13:hover { background: transparent url("images/footer_icon13_c.png") no-repeat scroll 0px 0px; float: left; width: 42px; height: 70px; }
 #footer_icon table { text-align: center; margin-left: auto; margin-right: auto; font-size: 11px; font-weight: bold; color: rgb(0, 0, 0); padding: 15px 0px; border-top: thin solid rgb(201, 202, 203); border-bottom: thin solid rgb(201, 202, 203); }
 #footer { float: left; position: relative; z-index: -1; margin-top: 30px; width: 960px; }
 .footer_middle { margin: 0px auto; text-align: center; font-size: 15px; font-weight: bold; color: rgb(37, 170, 225); }
@@ -657,14 +657,14 @@ body.lang-th-TH .footer_middle1 { font-size: 13px; }
 #sub-nav-infoC ul { display: block; float: left; color: rgb(37, 136, 185); width: 912px; list-style: outside none none; position: relative; margin-top: -10px; margin-left: 43px; z-index: 23; }
 #sub-nav-infoC-tit { font-size: 20px; text-align: center; font-weight: bold; position: relative; top: 20px; }
 #sub-nav-infoC ul li { display: block; float: left; height: 100px; }
-#home { background: transparent url("info_menu1.png") no-repeat scroll 0px 29px / 240px 100px; width: 227px; }
-#about { background: transparent url("info_menu1.png") no-repeat scroll 0px 29px / 235px 100px; width: 221px; }
-#work { background: transparent url("info_menu1.png") no-repeat scroll 0px 29px / 235px 100px; width: 222px; }
-#contact { background: transparent url("info_menu1.png") no-repeat scroll 0px 29px / 235px 100px; width: 228px; }
-#home a:hover { background: transparent url("info_menu2.png") no-repeat scroll 0px 15px / 240px 98px; }
-#about a:hover { background: transparent url("info_menu2.png") no-repeat scroll 0px 15px / 235px 98px; }
-#work a:hover { background: transparent url("info_menu2.png") no-repeat scroll 0px 15px / 235px 98px; }
-#contact a:hover { background: transparent url("info_menu2.png") no-repeat scroll 0px 15px / 235px 98px; }
+#home { background: transparent url("images/info_menu1.png") no-repeat scroll 0px 29px / 240px 100px; width: 227px; }
+#about { background: transparent url("images/info_menu1.png") no-repeat scroll 0px 29px / 235px 100px; width: 221px; }
+#work { background: transparent url("images/info_menu1.png") no-repeat scroll 0px 29px / 235px 100px; width: 222px; }
+#contact { background: transparent url("images/info_menu1.png") no-repeat scroll 0px 29px / 235px 100px; width: 228px; }
+#home a:hover { background: transparent url("images/info_menu2.png") no-repeat scroll 0px 15px / 240px 98px; }
+#about a:hover { background: transparent url("images/info_menu2.png") no-repeat scroll 0px 15px / 235px 98px; }
+#work a:hover { background: transparent url("images/info_menu2.png") no-repeat scroll 0px 15px / 235px 98px; }
+#contact a:hover { background: transparent url("images/info_menu2.png") no-repeat scroll 0px 15px / 235px 98px; }
 .cols_infoC { clear: both; position: relative; padding: 1px 0px 1px 32px; z-index: 30; }
 .cols_infoC .col_infoC { float: left; }
 .cols_infoC .space { padding-right: 25px; }
@@ -674,7 +674,7 @@ body.lang-th-TH .footer_middle1 { font-size: 13px; }
 .cols_c .space { padding-right: 25px; }
 .two-cols .col { width: 420px; margin-right: 34px; }
 .tabnav { color: rgb(9, 140, 184); font-size: 19px; text-align: center; font-weight: bold; margin-top: -25px; }
-.tabnav ul { float: left; color: rgb(37, 136, 185); width: 797px; background: transparent url("info_menu.png") no-repeat scroll 0px 0px; list-style: outside none none; position: relative; margin-top: -10px; margin-left: 92px; z-index: 23; }
+.tabnav ul { float: left; color: rgb(37, 136, 185); width: 797px; background: transparent url("images/info_menu.png") no-repeat scroll 0px 0px; list-style: outside none none; position: relative; margin-top: -10px; margin-left: 92px; z-index: 23; }
 .tabnav li { display: block; list-style: outside none none; float: left; height: 82px; }
 .tabnav li a { margin-top: 45px; display: block; color: rgb(37, 170, 225); height: 82px; padding-left: 35px; padding-top: 8px; }
 .tabnav li a:hover, .tabnav li a:active, .tabnav li.ui-tabs-selected a { margin-top: 7px; display: block; color: rgb(37, 136, 185); height: 82px; padding-top: 46px; }
@@ -724,7 +724,7 @@ div#marquee { border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid
 #BBM-dialog { display: none; padding: 0px; cursor: pointer; text-align: center; }
 #BBM-dialog:hover { cursor: pointer; }
 .close-message { display: none; font-size: 8pt; color: gray; text-align: right; margin-right: 3px; }
-.cboxClose { background: transparent url("allicons.png") no-repeat scroll -599px 10px; width: 30px; height: 35px; display: block; }
+.cboxClose { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -599px 10px; width: 30px; height: 35px; display: block; }
 .wordStyle { color: rgb(78, 80, 80); font-size: 18px; margin-top: -8px; padding-left: 7px; font-weight: bold; }
 #but_reg_info > table { padding-left: 80px; line-height: 20px; padding-top: 11px; }
 .nav_tit_right.msg_bold > a, .nav_tit.msg_bold > a { color: rgb(255, 255, 255); padding: 0px 5px 5px 17px; }
@@ -779,9 +779,9 @@ a.WelcomeBox.last { cursor: pointer; }
 #navMain td.hovered ul, #navMain td:hover ul, #navMain td.on:hover ul { display: block; }
 #navMain td#Rewards a:hover, #navMain td#LifeStyle a:hover, #navMain td#P2P a:hover, #navMain td#StarCasino a:hover { background: transparent none repeat scroll 0% 0%; border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin-top: -3px; margin-right: auto; margin-left: auto; }
 #navMain td a.cssSelectedHomeMenu { border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin-top: -3px; }
-#navMain td a.MenuImageHome { background: transparent url("allicons.png") no-repeat scroll -456px -29px; margin-left: auto; margin-right: auto; width: 28px; height: 32px; }
+#navMain td a.MenuImageHome { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -456px -29px; margin-left: auto; margin-right: auto; width: 28px; height: 32px; }
 #navMain td a.MenuImageHome:hover { border-width: 3px 0px 0px; border-style: solid none none; border-color: rgb(37, 170, 225) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin: -3px 0px 1px; }
-#navMain td a.MenuImageMobile { background: transparent url("allicons.png") no-repeat scroll -486px -27px; margin-left: auto; margin-right: auto; width: 28px; height: 30px; }
+#navMain td a.MenuImageMobile { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -486px -27px; margin-left: auto; margin-right: auto; width: 28px; height: 30px; }
 #navMain td a.cssSelectedHomeMenu:hover, #navMain td a:hover, #navMain td:hover a { background-color: rgb(255, 255, 255); border-width: 3px 1px 1px; border-style: solid; border-color: rgb(37, 170, 225) rgb(229, 228, 228) rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin: -3px -1px -1px; }
 .menuInZhSlot { margin-left: 14px ! important; margin-right: 14px ! important; text-align: center; }
 .menuInThSlot { margin-left: 12px ! important; margin-right: 12px ! important; text-align: center; font-size: 14px; }
@@ -794,7 +794,7 @@ a.WelcomeBox.last { cursor: pointer; }
 .dropdown dt a.active { background: rgb(17, 145, 191) none repeat scroll 0% 0%; width: 92px; height: 18px; color: rgb(255, 255, 255); }
 .dropdown dd ul { background-color: rgb(17, 145, 191); color: rgb(255, 255, 255); display: none; list-style: outside none none; position: absolute; z-index: 99999; border-left: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); margin: 26px 17px 0px 0px; padding: 0px; }
 .dropdown dd ul li a { width: 92px; height: 18px; padding: 2px 0px 0px; }
-.dropdown dd ul li a span, .dropdown dt a span { float: left; width: 92px; height: 18px; background-image: url("flagcombine_.png"); background-repeat: no-repeat; cursor: pointer; margin: 8px 0px 0px 6px; }
+.dropdown dd ul li a span, .dropdown dt a span { float: left; width: 92px; height: 18px; background-image: url("../../lib/images/flagcombine_.png"); background-repeat: no-repeat; cursor: pointer; margin: 8px 0px 0px 6px; }
 #dd1 ul li:hover { background: rgb(17, 145, 191) none repeat scroll 0% 0%; height: 29px; }
 .dropdown dd ul li { padding-top: 7px; }
 .ja-JP a span { background-position: -550px 0px; }
@@ -810,15 +810,15 @@ a.WelcomeBox.last { cursor: pointer; }
 .dropdown dd ul li a:hover em { color: rgb(255, 255, 255); }
 #navMain td a .NEWLABEL { color: red; font-size: 10px; }
 #navMain #KenoComingSoon a, #navMain #IMSportsbookKorea a { cursor: default; }
-.PromoDiamond { width: 32px; height: 24px; float: left; display: block; margin: -2px 0px 0px -4px; background: transparent url("Diamond.png") no-repeat scroll 0px 0px; }
+.PromoDiamond { width: 32px; height: 24px; float: left; display: block; margin: -2px 0px 0px -4px; background: transparent url("images/Diamond.png") no-repeat scroll 0px 0px; }
 #divFooterLogo { border-width: 1px 0px; border-style: solid dashed; border-color: rgb(201, 202, 203) red; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; width: 960px; height: 105px; text-align: center; vertical-align: top; }
 .FooterDiv { border: 0px solid green; float: left; vertical-align: top; text-align: center; margin: 0px; padding: 0px; width: 100px; height: 100%; }
 .spnTitle { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); }
 .spnTitleSecurity { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); }
 .spnTitleOfficialPatner { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); margin-right: -44px; }
 .divSprite { border: 0px dotted red; text-align: center; width: 100%; height: 83%; margin-right: 20%; margin-left: 13%; }
-.FooterSprite { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 64px; height: 40px; background: transparent url("footerlogo-list.png") no-repeat scroll 0% 0%; }
-.RewardLvlSprite { border: 1px solid rgb(255, 255, 255); width: 33px; height: 27px; float: right; background: transparent url("404.dat") no-repeat scroll 0% 0%; }
+.FooterSprite { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 64px; height: 40px; background: transparent url("../../lib/images/footerlogo-list.png") no-repeat scroll 0% 0%; }
+.RewardLvlSprite { border: 1px solid rgb(255, 255, 255); width: 33px; height: 27px; float: right; background: transparent url("images/404.dat") no-repeat scroll 0% 0%; }
 .FooterSprite:hover { cursor: default; }
 .FooterSpriteCN:hover { cursor: default; }
 #divPartner { position: relative; left: 24px; }
@@ -892,11 +892,11 @@ a.WelcomeBox.last { cursor: pointer; }
 .Keno.Button:hover { cursor: default; }
 .Keno.Button.Text { margin-left: 34px; position: relative; top: 8px; }
 .LandingPage.Button { width: 212px; height: 56px; }
-.LandingPage.Button.en-US { background: transparent url("button-keno-sprite.gif") no-repeat scroll 0% 0%; }
-.LandingPage.Button.id-ID { background: transparent url("button-keno-sprite_001.gif") no-repeat scroll 0% 0%; }
-.LandingPage.Button.th-TH { background: transparent url("button-keno-sprite_002.gif") no-repeat scroll 0% 0%; }
-.LandingPage.Button.vi-VN { background: transparent url("button-keno-sprite_003.gif") no-repeat scroll 0% 0%; }
-.LandingPage.Button.zh-CN { background: transparent url("button-keno-sprite_004.gif") no-repeat scroll 0% 0%; }
+.LandingPage.Button.en-US { background: transparent url("images/button-keno-sprite.gif") no-repeat scroll 0% 0%; }
+.LandingPage.Button.id-ID { background: transparent url("images/button-keno-sprite_001.gif") no-repeat scroll 0% 0%; }
+.LandingPage.Button.th-TH { background: transparent url("images/button-keno-sprite_002.gif") no-repeat scroll 0% 0%; }
+.LandingPage.Button.vi-VN { background: transparent url("images/button-keno-sprite_003.gif") no-repeat scroll 0% 0%; }
+.LandingPage.Button.zh-CN { background: transparent url("images/button-keno-sprite_004.gif") no-repeat scroll 0% 0%; }
 #btnKenoPlayReal { background-position: -6px -7px; }
 #btnKenoPlayReal:hover { cursor: pointer; background-position: -6px -63px; }
 #btnILottoPlayReal { background-position: -6px -7px; }
@@ -912,11 +912,11 @@ a.WelcomeBox.last { cursor: pointer; }
 #btnMoreDetails { background-position: 0px 0px; background-repeat: no-repeat; font-weight: normal; }
 #btnMoreDetails:hover { cursor: pointer; font-weight: bold; }
 .VideoPage.Button { width: 174px; height: 47px; }
-.VideoPage.Button.en-US { background: transparent url("button-kenovideo-sprite.gif") no-repeat scroll 0% 0%; }
-.VideoPage.Button.id-ID { background: transparent url("button-kenovideo-sprite_001.gif") no-repeat scroll 0% 0%; }
-.VideoPage.Button.th-TH { background: transparent url("button-kenovideo-sprite_002.gif") no-repeat scroll 0% 0%; }
-.VideoPage.Button.vi-VN { background: transparent url("button-kenovideo-sprite_003.gif") no-repeat scroll 0% 0%; }
-.VideoPage.Button.zh-CN { background: transparent url("button-kenovideo-sprite_004.gif") no-repeat scroll 0% 0%; }
+.VideoPage.Button.en-US { background: transparent url("images/button-kenovideo-sprite.gif") no-repeat scroll 0% 0%; }
+.VideoPage.Button.id-ID { background: transparent url("images/button-kenovideo-sprite_001.gif") no-repeat scroll 0% 0%; }
+.VideoPage.Button.th-TH { background: transparent url("images/button-kenovideo-sprite_002.gif") no-repeat scroll 0% 0%; }
+.VideoPage.Button.vi-VN { background: transparent url("images/button-kenovideo-sprite_003.gif") no-repeat scroll 0% 0%; }
+.VideoPage.Button.zh-CN { background: transparent url("images/button-kenovideo-sprite_004.gif") no-repeat scroll 0% 0%; }
 #btnKenoSingleView { background-position: -6px -7px; }
 #btnKenoSingleView:hover { cursor: pointer; background-position: -6px -57px; }
 #btnKenoMultipleView { background-position: -179px -7px; }
@@ -929,7 +929,7 @@ a.WelcomeBox.last { cursor: pointer; }
 #btnParlay:hover { cursor: pointer; background-position: -716px -57px; }
 #btnTips { background-position: -892px -7px; }
 #btnTips:hover { cursor: pointer; background-position: -892px -57px; }
-.P2P_Button { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 246px; height: 61px; background: transparent url("button_p2p_sprite.gif") no-repeat scroll 0% 0%; }
+.P2P_Button { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 246px; height: 61px; background: transparent url("images/button_p2p_sprite.gif") no-repeat scroll 0% 0%; }
 .P2P_Button:hover { cursor: default; }
 #imgGameIntro { background-position: -4px -4px; }
 #imgGameIntro:hover { cursor: pointer; background-position: -4px -74px; }
@@ -967,7 +967,7 @@ div.wrapper-dropdown-5 span.bank { line-height: 0; width: 25px; border-top-width
 .walletShadow { background-color: rgb(174, 174, 166); height: 91px; padding: 5px; width: 193px; position: relative; }
 .walletStyle > table { border: 2px solid rgb(219, 219, 219); background-color: rgb(255, 255, 255); border-collapse: collapse; width: 200px; }
 .walletStyle > table td, th { border: 2px solid rgb(219, 219, 219); }
-.picture { background-image: url("arrow-head-down.jpg"); background-position: -31px 1px; height: 19px; position: relative; margin: -21px 0px 0px 175px; width: 10px; z-index: 1000; cursor: pointer; }
+.picture { background-image: url("images/arrow-head-down.jpg"); background-position: -31px 1px; height: 19px; position: relative; margin: -21px 0px 0px 175px; width: 10px; z-index: 1000; cursor: pointer; }
 .dropdownlist { width: 190px; }
 .dropdownlist > input[type="text"] { z-index: 999; position: relative; width: 188px; height: 20px; cursor: pointer; }
 .walletList, .CityList { padding: 23px; position: absolute; left: -23px; cursor: pointer; }
@@ -1000,16 +1000,16 @@ div.wrapper-dropdown-5 span.bank { line-height: 0; width: 25px; border-top-width
 #cboxTitle { position: absolute; bottom: 4px; left: 0px; text-align: center; width: 100%; color: rgb(148, 148, 148); }
 #cboxCurrent { position: absolute; bottom: 4px; left: 58px; color: rgb(148, 148, 148); }
 #cboxSlideshow { position: absolute; bottom: 4px; right: 30px; color: rgb(0, 146, 239); }
-#cboxPrevious { position: absolute; bottom: 0px; left: 0px; background: transparent url("controls.png") no-repeat scroll -75px 0px; width: 25px; height: 25px; text-indent: -9999px; }
+#cboxPrevious { position: absolute; bottom: 0px; left: 0px; background: transparent url("images/controls.png") no-repeat scroll -75px 0px; width: 25px; height: 25px; text-indent: -9999px; }
 #cboxPrevious:hover { background-position: -75px -25px; }
-#cboxNext { position: absolute; bottom: 0px; left: 27px; background: transparent url("controls.png") no-repeat scroll -50px 0px; width: 25px; height: 25px; text-indent: -9999px; }
+#cboxNext { position: absolute; bottom: 0px; left: 27px; background: transparent url("images/controls.png") no-repeat scroll -50px 0px; width: 25px; height: 25px; text-indent: -9999px; }
 #cboxNext:hover { background-position: -50px -25px; }
-#cboxLoadingGraphic { background: transparent url("loading_002.gif") no-repeat scroll center center; }
-#cboxClose { position: absolute; top: 9px; bottom: 0px; border: 0px none; right: 18px; background: transparent url("controls.png") no-repeat scroll -25px 0px; width: 25px; height: 25px; text-indent: -9999px; display: block; filter: none; text-decoration: none; }
+#cboxLoadingGraphic { background: transparent url("images/loading_002.gif") no-repeat scroll center center; }
+#cboxClose { position: absolute; top: 9px; bottom: 0px; border: 0px none; right: 18px; background: transparent url("images/controls.png") no-repeat scroll -25px 0px; width: 25px; height: 25px; text-indent: -9999px; display: block; filter: none; text-decoration: none; }
 #cboxClose:hover { background-position: -25px -25px; }
 .cboxIE #cboxTopLeft, .cboxIE #cboxTopCenter, .cboxIE #cboxTopRight, .cboxIE #cboxBottomLeft, .cboxIE #cboxBottomCenter, .cboxIE #cboxBottomRight, .cboxIE #cboxMiddleLeft, .cboxIE #cboxMiddleRight {  }
-#PL_notification_box { width: 364px; height: 211px; background-image: url("bg_dialogbox.png"); margin: 0px auto; padding-top: 5px; background-repeat: no-repeat; border-radius: 4px; }
-#PL_loginSuccess_box { width: 364px; height: 211px; background-image: url("bg_dialogbox.png"); margin: 0px auto; padding-top: 5px; background-repeat: no-repeat; }
+#PL_notification_box { width: 364px; height: 211px; background-image: url("images/bg_dialogbox.png"); margin: 0px auto; padding-top: 5px; background-repeat: no-repeat; border-radius: 4px; }
+#PL_loginSuccess_box { width: 364px; height: 211px; background-image: url("images/bg_dialogbox.png"); margin: 0px auto; padding-top: 5px; background-repeat: no-repeat; }
 .PL_header { width: 355px; height: 49px; background-color: rgb(37, 170, 225); margin: 0px auto; padding: 0px; font-size: 17pt; color: rgb(255, 255, 255); }
 .PL_header_text { font-size: 13pt; color: rgb(255, 255, 255); margin-top: 16px; margin-left: 11px; float: left; }
 .PL_exit_btn { float: right; margin-right: 10px; background-repeat: no-repeat; }
@@ -1024,18 +1024,18 @@ div.wrapper-dropdown-5 span.bank { line-height: 0; width: 25px; border-top-width
 .PL_login_textvn, .PL_login_textid { float: left; margin: 5px 0px 6px 8px; text-align: left; font-size: 12px; color: rgb(43, 44, 44); width: 110px; }
 #PL_login { float: right; display: inline; width: 160px; padding: 0px; }
 .PL_login_button { display: inline; width: 255px; }
-#PL_login .PL_field-holder { float: right; display: inline; width: 158px; height: 25px; background: transparent url("field_input.png") no-repeat scroll 0px 0px; padding: 1px; }
+#PL_login .PL_field-holder { float: right; display: inline; width: 158px; height: 25px; background: transparent url("images/field_input.png") no-repeat scroll 0px 0px; padding: 1px; }
 #PL_login .PL_field { width: 158px; border: 0px none; background: transparent none repeat scroll 0% 0%; }
 .PL_login_button .PL_button { float: left; display: inline; width: 123px; height: 35px; font-size: 12px; font-weight: bold; margin-left: 3px; }
-.PL_login_button .PL_button { background: transparent url("button-animation_001.gif") no-repeat scroll -202px 0px; border: 0px none; color: rgb(255, 255, 255); }
-.PL_login_button:hover .PL_button:hover { background: transparent url("button-animation_001.gif") no-repeat scroll -202px -38px; border: 0px none; cursor: pointer; }
+.PL_login_button .PL_button { background: transparent url("images/button-animation_001.gif") no-repeat scroll -202px 0px; border: 0px none; color: rgb(255, 255, 255); }
+.PL_login_button:hover .PL_button:hover { background: transparent url("images/button-animation_001.gif") no-repeat scroll -202px -38px; border: 0px none; cursor: pointer; }
 .PL_login_button .PL_signup { float: left; display: inline; width: 126px; height: 35px; font-size: 12px; font-weight: bold; margin-right: 2px; }
 .PL_login_button .PL_signupen, .PL_signupth, .PL_signupid { float: left; display: inline; width: 126px; height: 35px; font-size: 12px; font-weight: bold; margin-right: 2px; }
-.PL_login_button .PL_signup, .PL_signupen, .PL_signupth, .PL_signupid { background: transparent url("button-anmation-green-short.gif") no-repeat scroll 0px 0px; border: 0px none; color: rgb(255, 255, 255); padding: 0px 0px 0px 20px; }
-.PL_login_button:hover .PL_signup:hover, .PL_signupen:hover, .PL_signupth:hover, .PL_signupid:hover { background: transparent url("button-anmation-green-short.gif") no-repeat scroll 0px -38px; border: 0px none; cursor: pointer; }
+.PL_login_button .PL_signup, .PL_signupen, .PL_signupth, .PL_signupid { background: transparent url("images/button-anmation-green-short.gif") no-repeat scroll 0px 0px; border: 0px none; color: rgb(255, 255, 255); padding: 0px 0px 0px 20px; }
+.PL_login_button:hover .PL_signup:hover, .PL_signupen:hover, .PL_signupth:hover, .PL_signupid:hover { background: transparent url("images/button-anmation-green-short.gif") no-repeat scroll 0px -38px; border: 0px none; cursor: pointer; }
 .PL_field-holder .PL_field { margin-top: 5px; }
-#ContButton { background: transparent url("button-animation.gif") no-repeat scroll -630px -2px; border: 0px none; color: rgb(37, 170, 226); display: block; margin: 0px auto; padding: 8px; text-align: center; width: 150px; }
-#ContButton:hover { background: transparent url("button-animation.gif") no-repeat scroll -630px -40px; border: 0px none; color: rgb(37, 170, 226); display: block; margin: 0px auto; padding: 8px; width: 150px; text-align: center; cursor: pointer; }
+#ContButton { background: transparent url("images/button-animation.gif") no-repeat scroll -630px -2px; border: 0px none; color: rgb(37, 170, 226); display: block; margin: 0px auto; padding: 8px; text-align: center; width: 150px; }
+#ContButton:hover { background: transparent url("images/button-animation.gif") no-repeat scroll -630px -40px; border: 0px none; color: rgb(37, 170, 226); display: block; margin: 0px auto; padding: 8px; width: 150px; text-align: center; cursor: pointer; }
 .PopupTitlevn { font-size: 15px; }
 .PopupTitleja { font-size: 14px; }
 .bannertop { position: absolute; margin-top: -17px; overflow: hidden; width: 100%; margin-left: auto; margin-right: auto; left: 0px; z-index: 0; }
@@ -1049,14 +1049,14 @@ div.wrapper-dropdown-5 span.bank { line-height: 0; width: 25px; border-top-width
 .banner3 { margin-left: 101px; }
 .playnowBtn { height: 246px; width: 204px; display: block; }
 .jackpotContainer { position: relative; z-index: 10; }
-.PokerJackpot { background: transparent url("jackpot.jpg") no-repeat scroll 0px 0px; width: 289px; height: 65px; margin: 21px 0px; }
+.PokerJackpot { background: transparent url("images/jackpot.jpg") no-repeat scroll 0px 0px; width: 289px; height: 65px; margin: 21px 0px; }
 .PokerMainAmount { z-index: 100; overflow: hidden; height: 67px; position: absolute; width: 466px; left: 262px; top: -10px; }
 .PokerMainAmount div { display: none; }
-.PokerJackpotFrame { width: 30px; height: 80px; float: right; padding: 0px 5px; background: transparent url("jackpot-box-bg.jpg") no-repeat scroll 0% 0%; }
-.JackpotDot { width: 3px; height: 80px; float: right; padding: 0px 3.5px; background: transparent url("dot.png") no-repeat scroll 0px 61px; }
+.PokerJackpotFrame { width: 30px; height: 80px; float: right; padding: 0px 5px; background: transparent url("images/jackpot-box-bg.jpg") no-repeat scroll 0% 0%; }
+.JackpotDot { width: 3px; height: 80px; float: right; padding: 0px 3.5px; background: transparent url("images/dot.png") no-repeat scroll 0px 61px; }
 .PokerMainJackpot { width: 466px; z-index: 100; height: 81px; overflow: hidden; position: absolute; left: 264px; top: -14px; }
-.JackpotComma1, .JackpotComma2, .JackpotComma3 { padding: 0px 3.3px; width: 3px; height: 80px; float: right; background: transparent url("comma.png") no-repeat scroll 0px 61px; }
-#pokerAuthenticationBox { width: 689px; height: 253px; background-image: url("poker_bg.png"); margin: 0px auto; padding-top: 5px; background-repeat: no-repeat; }
+.JackpotComma1, .JackpotComma2, .JackpotComma3 { padding: 0px 3.3px; width: 3px; height: 80px; float: right; background: transparent url("images/comma.png") no-repeat scroll 0px 61px; }
+#pokerAuthenticationBox { width: 689px; height: 253px; background-image: url("images/poker_bg.png"); margin: 0px auto; padding-top: 5px; background-repeat: no-repeat; }
 #pokerAuthenticationBox .PL_header { width: 679px; }
 #pokerAuthenticationBox .PL_content { float: right; height: 97px; margin-right: 10px; padding-top: 38px; width: 323px; }
 #pokerAuthenticationBox .PL_login_info { height: 48px; width: 250px; }
@@ -1068,7 +1068,7 @@ div.wrapper-dropdown-5 span.bank { line-height: 0; width: 25px; border-top-width
 .lang-th-TH #pokerAuthenticationBox .PL_login_text { width: 86px; }
 .nickname_tooltip { border: 2px solid rgb(229, 228, 228); position: absolute; background-color: rgb(255, 255, 255); height: auto; display: none; color: rgb(108, 108, 108); font-weight: normal; margin: 3px 0px 0px; width: 251px; }
 .nickname_tooltip p { padding: 2px 10px; margin: 0px; display: block; }
-.recentWinnerPoker { position: absolute; width: 204px; height: 377px; background: transparent url("winnerlist_border.gif") no-repeat scroll 0px 0px; margin: 0px 8px 0px 0px; right: 0px; top: -284px; z-index: 11; }
+.recentWinnerPoker { position: absolute; width: 204px; height: 377px; background: transparent url("images/winnerlist_border.gif") no-repeat scroll 0px 0px; margin: 0px 8px 0px 0px; right: 0px; top: -284px; z-index: 11; }
 #RecentWinner { height: 321px; overflow: hidden; margin-top: 10px; }
 #RecentWinner > ul { list-style: outside none none; margin: 0px; padding: 0px; }
 #tdLatestWinnerHeader { width: 195px; font-weight: bold; color: rgb(37, 170, 225); vertical-align: middle; text-align: center; font-size: 15px; height: 26px; padding-top: 15px; }
