@@ -176,7 +176,7 @@ function CGInitEvents() {
         }
     });
 
-    $(".AtoZView").click(function () {
+    $(".AtoZView").click(function () {    //按游戏名首字母先后顺序排练,再次点击取消效果并还原.
         if (SortView != 0) {
             $(this).addClass("AtoZViewChecked");
             $(".ZtoAView").removeClass("ZtoAViewChecked");
@@ -215,7 +215,7 @@ function CGInitEvents() {
         CGHideGameInfo();
     });
 
-    $(".Theme").click(function () {
+    $(".Theme").click(function () {      //选择主题
 
         $(".Theme").removeClass("ThemeBtnChecked");
         $(this).addClass("ThemeBtnChecked");
@@ -375,7 +375,7 @@ function CGSorting(type) {
         'effect': "fadeIn",
     });
 }
-/*游戏列表 切换*/
+/*游戏列表  主题、平台 切换*/
 function CGCatFilter() {
     $(".cggamedata").each(function () {
         if (Category == "AllGames" || $(this).hasClass(Category)) {
@@ -492,7 +492,7 @@ function CGUpdateListBg() {
         });
     }
 }
-/*获取li标签内的游戏信息，填充展示*/
+/*获取li标签内的游戏信息属性，填充展示*/
 function CGDisplayGameInfo(ctrl) {
     var cginfo = $("#cginfo");
     var gamelocalname = ctrl.find(".cgboxlocalname").text();
@@ -570,7 +570,7 @@ function CGDisplayGameInfo(ctrl) {
 
     $("#cginfo").css("top", ctrl.offset().top).show();
    
-    cginfo.find(".cginfochart > .cginfocanvas").html("<canvas></canvas>");
+    cginfo.find(".cginfochart > .cginfocanvas").html("<canvas></canvas>");   /*canvas画出星芒图*/
 
     plotRadarPoints(cginfo.find(".cginfochart > .cginfocanvas > canvas")[0], [
             { 'label': $("#hdnReviewA").val(), 'points': ctrl.attr("data-ca") },

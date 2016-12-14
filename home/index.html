@@ -30,21 +30,6 @@
 
 <!-- 引入js -->
 
-<script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
-<script type="text/javascript" src="../lib/js/swiper.min.js" ></script>
-<script type="text/javascript" src="../lib/js/cookie.js"  ></script>
-<script type="text/javascript" src="../lib/js/login.js" ></script>
-<script type="text/javascript" src="../lib/js/master.js" async=""></script>
-<script type="text/javascript" src="../lib/js/generateQCcodeApk.js" ></script>
-<script type="text/javascript" src="../lib/js/onlinepay.js" ></script>
-<script type="text/javascript" src="js/footbutton.js" ></script>
-
-<script type="text/javascript" src="js/homeAnimate.js" ></script>
-<script type="text/javascript" src="../lib/js/jquery.validate.js"  ></script>
-<script type="text/javascript" src="../lib/js/jquery.numeric.js" ></script>
-<script type="text/javascript" src="../lib/js/master.payment.crawler.js"></script>
-<script type="text/javascript" src="js/bundle.js"></script>
-
 
 </head>
 <body id="uiHtmlBody" style="min-width: 1680px;" class=" lang-zh-CN" lang="zh-CN">
@@ -53,11 +38,7 @@
    
 
     <div class="swiper-wrapper" >
-
-	    <div class="swiper-slide"><img src="./images/FUN88.jpg" /></div>
-	    <div class="swiper-slide"><img src="./images/FUN89.jpg" /></div>
-		<div class="swiper-slide"><img src="./images/FUN90.jpg" /></div>
-		<div class="swiper-slide"><img src="./images/FUN87.jpg" /></div>
+            
     </div>
 
     
@@ -71,62 +52,6 @@
 <div class="pagination" style="margin: 0 auto;" ></div>
 
 
-<script>  
-
-
-var AjaxURL = "http://192.168.188.2:16385/"
-
-
- $(document).ready(function () {
-		/*getswiperpic();*//*获取轮播图*/ 
-		getMarquee("TopAD")/*顶部滚动文字*/
-		getMarquee("BottomAD")/*顶部滚动文字*/
-
-		function getMarquee(key){
-		$.ajax({
-		dataType:'json',
-		type:'GET',
-		data:{},		
-		url: AjaxURL+'fun/websiteInfo/getAdList?key='+key+'',
-		success:function(d) {	
-		for (var i = 0;i<d.data.adList.length; i++) {
-			var TopADContent = '<li><a href="#">'+d.data.adList[i]+'</a></li>'
-			$("#"+key+">ul").append(TopADContent);
-		}
-		
-		}
-		});
-		};                 
-   
-
- 	 /*   <!-- 实例化轮播图 -->*/
-  var mySwiper = new Swiper ('.swiper-container', {
-    direction: 'horizontal',
-    loop: true,
-    autoplay: 3000,//可选选项，自动滑动
-   
-    height: 420,//你的slide高度
-    
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    // 如果需要分页器
-    pagination: '.pagination',
-    paginationClickable :true,
-    grabCursor:true,
-/*    paginationElement : 'li',*/
-        
-  })
-
-
-
-
-
-
-
-
-}); 
- 
-  </script>
 
         
     <div id="fixed_header"></div>
@@ -792,28 +717,31 @@ var AjaxURL = "http://192.168.188.2:16385/"
             <div class="imgHomeSprites">
                 <div id="topDiv" style="display: block;">
                     <div id="dy_Home_Small_Banner_1_B4_Login"> 
-                        <div id="topDivBanner" href="javascript:void(0);" style="background-image: url('./images/fun88-button_register_cn-v21.png'); display: block; padding: 8px 0px 0px; height: 75px; width: 295px; position: absolute; background-position: 295px 83px;" class="topMiniBanner topBigBanner" onclick="newPage('../topgames/index.html');"></div>
+                        <div id="topDivBanner" href="javascript:void(0);" style="display: block; padding: 8px 0px 0px; height: 75px; width: 295px; position: absolute; background-position: 295px 83px;" class="topMiniBanner topBigBanner" onclick="newPage('../topgames/index.html');"></div>
                     </div>
                     
                 </div>
                 <div id="firstBannerJP"></div>
                 <div>
                     <div id="dy_Home_Small_Banner_2_B4_Login">
-                        <div id="firstDiv" style="display: block; background-image: url('./images/fun88-bliss_banner.png'); background-position: 0px 0px; height: 152px; width: 295px;" onclick="newPage('../topgames/index.html');" class="miniBanner1"></div>
+                        <div id="firstDiv" style="display: block; background-position: 0px 0px; height: 152px; width: 295px;" onclick="newPage('../topgames/index.html');" class="miniBanner1"></div>
                     </div> 
                     
                 </div>
             </div>
         </div>
+        <script>
+        	
+        </script>
         <div class="middle">
             <div id="dy_Home_Small_Banner_3">
-                <div id="middleDiv" style="display: block; background-image: url('./images/fun88-slots-banner-ag-cn.jpg'); background-position: 0px 0px; width: 295px; height: 245px; cursor: pointer;" href="javascript:void(0);" class="miniBanner2" " onclick="newPage('../topgames/index.html');"></div>
+                <div id="middleDiv" style="display: block;  background-position: 0px 0px; width: 295px; height: 245px; cursor: pointer;" href="javascript:void(0);" class="miniBanner2" " onclick="newPage('../topgames/index.html');"></div>
             </div> 
             <div id="secondBannerJP"></div>
         </div>
         <div class="last">
             <div id="dy_Home_Small_Banner_4">
-                <div id="lastDiv" style="display: block; background-image: url('./images/fun88-betfair-banner.jpg'); background-position: 0px 0px; width: 295px; height: 245px; cursor: pointer;" onclick="EnsureLogin(window.location.href); return false;" class="miniBanner3"></div>
+                <div id="lastDiv" style="display: block; background-position: 0px 0px; width: 295px; height: 245px; cursor: pointer;" onclick="EnsureLogin(window.location.href); return false;" class="miniBanner3"></div>
             </div> 
             <div id="thirdBannerJP"></div>
             <div id="japan_email" onclick="newPage('mailto:cs.jp@fun88.com')"></div>
@@ -1115,6 +1043,25 @@ var AjaxURL = "http://192.168.188.2:16385/"
 
 
 <div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></form><div id="yui3-css-stamp" style="position: absolute ! important; visibility: hidden ! important;"></div>
+
+</div>
+
+
+
+<script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
+<script type="text/javascript" src="../lib/js/swiper.min.js" ></script>
+<script type="text/javascript" src="../lib/js/cookie.js"  ></script>
+<script type="text/javascript" src="../lib/js/login.js" ></script>
+<script type="text/javascript" src="../lib/js/master.js" async=""></script>
+<script type="text/javascript" src="../lib/js/generateQCcodeApk.js" ></script>
+<script type="text/javascript" src="../lib/js/onlinepay.js" ></script>
+<script type="text/javascript" src="js/footbutton.js" ></script>
+<script type="text/javascript" src="js/homeAnimate.js" ></script>
+<script type="text/javascript" src="../lib/js/jquery.validate.js"  ></script>
+<script type="text/javascript" src="../lib/js/jquery.numeric.js" ></script>
+<script type="text/javascript" src="../lib/js/master.payment.crawler.js"></script>
+<script type="text/javascript" src="js/bundle.js"></script>
+<script type="text/javascript" src="js/getswiper.js" ></script>
 <script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
-</div></body>
+</body>
 </html>
