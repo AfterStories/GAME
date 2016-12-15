@@ -66,7 +66,7 @@ a:hover { color: rgb(153, 153, 153); text-decoration: none; }
 #bannernext { margin-left: 427px; }
 .pop_logo_cn { margin-left: 20px; margin-top: 17px; margin-bottom: 18px; }
 .pop_logo { margin-left: 5px; margin-top: 0px; }
-.angle_banner_b { margin-top: 322px; background: transparent url("images/bg_2.jpg") no-repeat scroll 0px 0px; width: 469px; height: 146px; position: relative; }
+.angle_banner_b { margin-top: 322px; background: transparent url("../images/bg_2.jpg") no-repeat scroll 0px 0px; width: 469px; height: 146px; position: relative; }
 #displaycssbelt { visibility: hidden; }
 #stocklevels { visibility: hidden; }
 .stock { clear: both; font-size: 10px; padding-bottom: 5px; margin: 0px auto; width: 800px; color: rgb(0, 0, 0); border-bottom: 1px dashed rgb(0, 0, 0); height: 10px; text-align: right; }

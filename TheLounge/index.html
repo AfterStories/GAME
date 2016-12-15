@@ -3,7 +3,8 @@
 <head><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
 	乐天堂/休闲资讯
 </title>
-    <link href="css/bundleCss.css" rel="stylesheet" type="text/css">
+
+  
     
 <meta name="keywords" content="乐天堂，FUN88，FUN88.COM，天使之吻，免费投注">
 <meta name="description" content="乐天堂天使之吻为您带来最新的休闲资讯以及额外福利。乐天堂额外福利免费投注。">
@@ -20,7 +21,7 @@
     <noscript>
         <meta HTTP-EQUIV="REFRESH" content="0; url=/zh-CN/JavaScript-Not-Enabled">
     </noscript>
-    
+    <link href="css/bundleCss.css" rel="stylesheet" type="text/css">
     <link href="css/Lounge.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../lib/css/swiper.min.css">
     
@@ -36,6 +37,7 @@
 
     <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
     <script type="text/javascript" src="../lib/js/swiper.min.js" ></script>
+    <script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
     <script type="text/javascript" src="../lib/js/jquery-qrcode-0.14.0.min.js" ></script>
     <script src="../lib/js/bundleJquery.js" type="text/javascript"></script>
     <script type="text/javascript" src="../lib/js/master.yui.js" ></script>
@@ -726,7 +728,7 @@
 </div>
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
-        createDropDown();
+        /*createDropDown();*/
         $("#target dt").removeClass().addClass('zh-CN');
         var $dropTrigger = $(".dropdown dt a");
         var $dropTrigger2 = $(".dropdown dd span");
@@ -1021,39 +1023,22 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     
 
     <!--The slider above navigation bar-->
-    <div id="marquee1">
-
+    <div id="TopAD">
+        <ul></ul>
     </div>
 
 
-<script type="text/javascript">
-    $(function () {
-        if ($("div#marquee-with-options").length > 0) {
-
-            $("#SA_Setting").css("width", 2362 + "px");
-            $("#SA_Setting").css("float", "left");
-
-            marqueeInit({
-                uniqueid: 'marquee-with-options',
-                style: {
-                    'height': '34px',
-                    'width': '660px',
-                    'float': 'left'
-                },
-                inc: 1, //speed - pixel increment for each iteration of this marquee's movement
-                mouse: 'pause', //mouseover behavior ('pause' 'cursor driven' or false)
-                moveatleast: 2,
-                neutral: 150,
-                savedirection: true
-            });
-        }
-    });
-</script>
 </div>
 
-
-<div id="navigation">
-    <table id="navMain" class="zh-CN" style="position: relative;top:4px;">
+<style>
+    
+    /* 顶部滚动广告 */
+    #TopAD{ width: 730px; height: 34px; position: relative; margin:2px auto;overflow: hidden;z-index: 1 ;float:right;top:-8px;}
+    #TopAD ul { width: 680px; height: 34px; position: relative; }
+    #TopAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
+    #TopAD ul li a { text-decoration:none; height: 34px;}
+</style><div id="navigation">
+    <table id="navMain" class="zh-CN" style="position: relative;top:-20px;">
         <tbody><tr>
             <td class="menuStatic off">
                 <div id="mainMenu-Home" class="dy-unit">
@@ -1692,7 +1677,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
 <script>  
 /*获取轮播图*/ 
-var AjaxURL = " "
+/*var AjaxURL = " "*/
  $(document).ready(function () {
         
 /*        getswiperpic();
@@ -2482,19 +2467,7 @@ var AjaxURL = " "
                 return -1;
             };
         }</script>
-    <script>
-        var blackbox = '';
-        $.getScript(strURLIovation, function () {
-            setTimeout(function () {
-                var bb_info = ioGetBlackbox();
-                if (bb_info)
-                    blackbox = bb_info.blackbox;
-                if ($('input[id$=hidblackbox]').length)
-                    $('input[id$=hidblackbox]').val(blackbox);
-            }, 2000);
 
-        });
-    </script>
    
     <script type="text/javascript">
         var isLogin = 'False'.toLowerCase();

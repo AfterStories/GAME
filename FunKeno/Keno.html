@@ -18,7 +18,7 @@
     <link rel="icon" href="http://www.10010388.com/Images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="http://www.10010388.com/Images/favicon.ico" type="image/x-icon">
     <noscript>
-        &lt;meta http-equiv="REFRESH" content="0; url=/zh-CN/JavaScript-Not-Enabled"&gt;
+        <meta http-equiv="REFRESH" content="0; url=/zh-CN/JavaScript-Not-Enabled">
     </noscript>
     
     <link rel="stylesheet" href="Keno/style_keno.css" type="text/css" media="all">
@@ -33,10 +33,11 @@
     
     
  
-    <script type="text/javascript" src="Keno/jquery-1.12.2.min.js"> </script>
-        <script type="text/javascript" src="../lib/js/jquery-migrate.js"> </script>
-    <script type="text/javascript" src="Keno/jquery-qrcode-0.14.0.min.js" async=""></script>
-    <script src="../lib/js/bundleJquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
+    <script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
+    <script type="text/javascript" src="../lib/js/jquery-migrate.js"> </script>
+    <script type="text/javascript" src="../lib/js/jquery-qrcode-0.14.0.min.js" async=""></script>
+    <script type="text/javascript" src="../lib/js/bundleJquery.js"></script>
     <script type="text/javascript" src="../lib/js/jQueryUI.js" async=""></script>
     <script type="text/javascript" src="../lib/js/master.js" async=""></script>
     <script type="text/javascript" src="../lib/js/swiper.min.js" ></script>
@@ -128,14 +129,11 @@
         });
     </script>
 
-    
-       
+           
     <div id="fixed_header"></div>
     <div id="page" class="shell">
         <!-- Logo + Search + Navigation -->
-        
-
-
+ 
 <style type="text/css">
     #slotLeaderboard {
         position: absolute;
@@ -304,14 +302,14 @@
         <div id="slotLeaderboard_nav">
             <div id="slotLeaderboard_nav_weekly">
                 <p>竞标赛赢家</p>
-                <select id="slotLeaderboard_ddlWeek" style="width:100px; height:30px" onclick="toggleSlotsLeaderboardContainer(&#39;weekly&#39;); setLeaderboard(&#39;week&#39;);" disabled="">
+                <select id="slotLeaderboard_ddlWeek" style="width:100px; height:30px" onclick="toggleSlotsLeaderboardContainer('weekly'); setLeaderboard('week');" disabled="">
                 </select>
-                <select id="slotLeaderboard_ddlMonth" style="width:100px; height:30px" onclick="toggleSlotsLeaderboardContainer(&#39;weekly&#39;); setLeaderboard(&#39;week&#39;);" disabled="">
+                <select id="slotLeaderboard_ddlMonth" style="width:100px; height:30px" onclick="toggleSlotsLeaderboardContainer('weekly'); setLeaderboard('week');" disabled="">
                 </select>
             </div>
             <div id="slotLeaderboard_nav_monthly">
                 <p>抽奖赢家</p>
-                <select id="slotLeaderboard_ddlMonthly" style="width:100px; height:30px" onclick="toggleSlotsLeaderboardContainer(&#39;monthly&#39;); setLeaderboard(&#39;month&#39;);" disabled="">
+                <select id="slotLeaderboard_ddlMonthly" style="width:100px; height:30px" onclick="toggleSlotsLeaderboardContainer('monthly'); setLeaderboard('month');" disabled="">
                 </select>
             </div>
         </div>
@@ -801,33 +799,33 @@
     <span class="hidBankCode">WC</span>
     <div>            
         <div>
-            <a href="javascript:void(0)" id="OpenWCP" class="dy-unit" onclick="$(&#39;#WCP_Container&#39;).show(); 
-                         $(&#39;#OpenWCP&#39;).hide(); 
+            <a href="javascript:void(0)" id="OpenWCP" class="dy-unit" onclick="$('#WCP_Container').show(); 
+                         $('#OpenWCP').hide(); 
                          HideShowWCOn9AliContainer();
-                         $(&#39;#quickContactContainer&#39;).hide(); 
-                         $(&#39;#quickContact_OpenMenu&#39;).show(); 
-                         $(&#39;#fun88APK_Container&#39;).hide(); 
-                         $(&#39;#fun88APK_OpenMenu&#39;).show();
+                         $('#quickContactContainer').hide(); 
+                         $('#quickContact_OpenMenu').show(); 
+                         $('#fun88APK_Container').hide(); 
+                         $('#fun88APK_OpenMenu').show();
                          resetWCP_ContainerImg();" style="display: none;">
                 <div class="button_layout WCP_OpenMenu"></div>
             </a>
         </div>  
         <div id="WCP_Container" style="display: block;">
-            <a href="javascript:void(0)" id="CloseWCP" class="dy-unit" onclick="$(&#39;#WCP_Container&#39;).hide(); 
-                            $(&#39;#OpenWCP&#39;).show();">
+            <a href="javascript:void(0)" id="CloseWCP" class="dy-unit" onclick="$('#WCP_Container').hide(); 
+                            $('#OpenWCP').show();">
                 <div class="button_layout CloseWCP"></div>
             </a>
             <div style="margin-top: 10px;  margin-left:5px;">
                 <div>
-                    <a id="BtnWCOpen" style="display: block; width: 135px; height: 32px; cursor: pointer;" href="javascript:void(0)" onclick="$(&#39;#WC_Container&#39;).show(); 
-                                 $(&#39;#BtnWCOpen&#39;).hide(); 
+                    <a id="BtnWCOpen" style="display: block; width: 135px; height: 32px; cursor: pointer;" href="javascript:void(0)" onclick="$('#WC_Container').show(); 
+                                 $('#BtnWCOpen').hide(); 
                                  HideShowOn9AliContainer();
                                  chgWCP_ContainerImg();">
                     </a>
                 </div>
                 <div id="WC_Container" style="display: none;">
-                    <a href="javascript:void(0)" id="CloseWC" class="dy-unit" onclick="$(&#39;#WC_Container&#39;).hide(); 
-                                 $(&#39;#BtnWCOpen&#39;).show();
+                    <a href="javascript:void(0)" id="CloseWC" class="dy-unit" onclick="$('#WC_Container').hide(); 
+                                 $('#BtnWCOpen').show();
                                  resetWCP_ContainerImg();">
                         <div class="button_layout_WC_ALI CloseWC"></div>
                     </a>
@@ -848,14 +846,14 @@
             </div>
             <div style="margin-top: 5px;  margin-left:5px;">
                 <div style="display: none;">
-                    <a id="BtnAliOpen" style="display: block; width: 135px; height: 32px; cursor: pointer;" href="javascript:void(0)" onclick="$(&#39;#Ali_Container&#39;).show(); 
-                                 $(&#39;#BtnAliOpen&#39;).hide();
+                    <a id="BtnAliOpen" style="display: block; width: 135px; height: 32px; cursor: pointer;" href="javascript:void(0)" onclick="$('#Ali_Container').show(); 
+                                 $('#BtnAliOpen').hide();
                                  HideShowWCContainer();
                                  chgWCP_ContainerImg();"></a>
                 </div>
                 <div id="Ali_Container" style="display: none;">
-                    <a href="javascript:void(0)" id="CloseAli" class="dy-unit" onclick="$(&#39;#Ali_Container&#39;).hide(); 
-                                 $(&#39;#BtnAliOpen&#39;).show();
+                    <a href="javascript:void(0)" id="CloseAli" class="dy-unit" onclick="$('#Ali_Container').hide(); 
+                                 $('#BtnAliOpen').show();
                                  resetWCP_ContainerImg();">
                         <div class="button_layout_WC_ALI CloseAli"></div>
                     </a>
@@ -881,12 +879,12 @@
     <!--Start: Fun88 APK Download-->
     <div>            
         <div>
-            <a href="javascript:void(0)" id="fun88APK_OpenMenu" class="dy-unit" onclick="genereteApkQr(); $(&#39;#fun88APK_Container&#39;).show(); $(&#39;#fun88APK_OpenMenu&#39;).hide(); $(&#39;#quickContactContainer&#39;).hide(); $(&#39;#quickContact_OpenMenu&#39;).show();$(&#39;#WCP_Container&#39;).hide(); $(&#39;#OpenWCP&#39;).show()">
+            <a href="javascript:void(0)" id="fun88APK_OpenMenu" class="dy-unit" onclick="genereteApkQr(); $('#fun88APK_Container').show(); $('#fun88APK_OpenMenu').hide(); $('#quickContactContainer').hide(); $('#quickContact_OpenMenu').show();$('#WCP_Container').hide(); $('#OpenWCP').show()">
                 <div class="button_layout fun88APK_OpenMenu_zh"></div>
             </a>
         </div>     
         <div id="fun88APK_Container" style="display: none;">
-            <a href="javascript:void(0)" id="fun88APK_CloseMenu" class="dy-unit" onclick="$(&#39;#fun88APK_Container&#39;).hide(); $(&#39;#fun88APK_OpenMenu&#39;).show();">
+            <a href="javascript:void(0)" id="fun88APK_CloseMenu" class="dy-unit" onclick="$('#fun88APK_Container').hide(); $('#fun88APK_OpenMenu').show();">
                 <div class="button_layout fun88APK_CloseMenu"></div>
             </a>
             <div style="margin-top: 13px;">
@@ -896,7 +894,7 @@
             </div>
             <div id="fun88apk_dl_btn" style="margin-top: 144px;">
                 <div>
-                    <a id="fun88apk_dl_zh" style="margin: -5px auto 5px auto;display:block; width: 135px; height: 32px; cursor: pointer;" onclick="sendAndroidApkGA(&#39;Mobile APK&#39;,&#39;Desktop&#39;); window.open(this.href, &#39;newwindow&#39;, &#39;width=420, height=250&#39;); return false;"> </a>
+                    <a id="fun88apk_dl_zh" style="margin: -5px auto 5px auto;display:block; width: 135px; height: 32px; cursor: pointer;" onclick="sendAndroidApkGA('Mobile APK','Desktop'); window.open(this.href, 'newwindow', 'width=420, height=250'); return false;"> </a>
                 </div>
                 
             </div>
@@ -911,22 +909,22 @@
     <!--Start: Quick Contact-->
     <div> 
         <div>
-            <a href="javascript:void(0);" id="quickContact_OpenMenu" class="dy-unit" onclick="$(&#39;#quickContact_OpenMenu&#39;).hide(); $(&#39;#quickContactContainer&#39;).show(); $(&#39;#fun88APK_Container&#39;).hide(); $(&#39;#fun88APK_OpenMenu&#39;).show();$(&#39;#WCP_Container&#39;).hide(); $(&#39;#OpenWCP&#39;).show();">
+            <a href="javascript:void(0);" id="quickContact_OpenMenu" class="dy-unit" onclick="$('#quickContact_OpenMenu').hide(); $('#quickContactContainer').show(); $('#fun88APK_Container').hide(); $('#fun88APK_OpenMenu').show();$('#WCP_Container').hide(); $('#OpenWCP').show();">
                 <div class="button_layout quickContact_OpenMenu"></div>
             </a>
         </div> 
         <div id="quickContactContainer" style="display: none;">
-            <a href="javascript:void(0);" id="quickContact_CloseMenu" onclick="$(&#39;#quickContact_OpenMenu&#39;).show(); $(&#39;#quickContactContainer&#39;).hide();" class="dy-unit">
+            <a href="javascript:void(0);" id="quickContact_CloseMenu" onclick="$('#quickContact_OpenMenu').show(); $('#quickContactContainer').hide();" class="dy-unit">
                 <div class="button_layout"></div>
             </a>
             <img src="Keno/girl.png" style="width: 124px; height: 203px; margin: 10px 10px -4px 10px;" width="124" height="203" id="imgLiveChatGirl">
 
-            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA(&#39;QuickContactOnline&#39;); window.open(&#39;http://helpcn.fun585.com&#39;, &#39;newwindow&#39;, &#39;width=420, height=250&#39;); return false;" href="http://helpcn.fun585.com/">
+            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('http://helpcn.fun585.com', 'newwindow', 'width=420, height=250'); return false;" href="http://helpcn.fun585.com/">
                 <div class="quickcontactbtn quickcontactbtn1">
                 </div>
             </a>
 
-            <a id="quickContactDownload" class="dy-unit" target="_blank" href="http://www.10010388.com/zh-CN/LiveChat" onclick="sendQuickContactGA(&#39;QuickContactDownload&#39;);">
+            <a id="quickContactDownload" class="dy-unit" target="_blank" href="http://www.10010388.com/zh-CN/LiveChat" onclick="sendQuickContactGA('QuickContactDownload');">
                 <div class="quickcontactbtn quickcontactbtn2">
                 </div>
             </a>
@@ -943,7 +941,7 @@
                 <b>客服邮箱</b>
                 <br>
                 
-                <a id="quickContactMail" class="quickcontactemailtext dy-unit" href="mailto:cs@fun88.com" onclick="sendQuickContactGA(&#39;QuickContactMail&#39;);">
+                <a id="quickContactMail" class="quickcontactemailtext dy-unit" href="mailto:cs@fun88.com" onclick="sendQuickContactGA('QuickContactMail');">
                     cs@fun88.com
                 </a>
             </div>
@@ -962,16 +960,16 @@
             
             <ul>
                 <li id="topBannerLogoContainer"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="http://www.10010388.com/zh-CN/Home"></a></li>
-                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager(&#39;/zh-CN/Info-Center/About-Us/About-Fun88&#39;, &#39;AboutUs&#39;,1020); return false;"></a></li>
-                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager(&#39;/zh-CN/Info-Center/Help/General&#39;, &#39;Help&#39;,1020); return false;"></a></li>
+                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/About-Us/About-Fun88', 'AboutUs',1020); return false;"></a></li>
+                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/Help/General', 'Help',1020); return false;"></a></li>
                 
-                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager(&#39;/zh-CN/Info-Center/How-To-Play/Sports/Sportsbook/Rules/General-Rules&#39;, &#39;GeneralRules&#39;,&#39;1020&#39;);">
+                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/How-To-Play/Sports/Sportsbook/Rules/General-Rules', 'GeneralRules','1020');">
                     <div></div>
                     如何投注</a>
                 </li>
                 
                 <li id="dropdown">
-                    <a id="hbtn4" class="top_nav_text" onclick="javascript:popUpWindowManager(&#39;http://helpcn.fun585.com&#39;, &#39;LiveHelp&#39;,1020); return false;" title="">
+                    <a id="hbtn4" class="top_nav_text" onclick="javascript:popUpWindowManager('http://helpcn.fun585.com', 'LiveHelp',1020); return false;" title="">
                         <div></div>
                         在线客服
                         <span id="arrow2"></span>
@@ -983,7 +981,7 @@
                         </a>
                         </li>
                         
-                        <li class="livechat_zh-CN"><a id="hbtn8" class="top_nav_text" onclick="javascript:open_new_window(&#39;/zh-CN/DNS/index.html&#39;); return false;">
+                        <li class="livechat_zh-CN"><a id="hbtn8" class="top_nav_text" onclick="javascript:open_new_window('/zh-CN/DNS/index.html'); return false;">
                             <div></div>
                             防劫持工具
                         </a>
@@ -1017,7 +1015,7 @@
 
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
-        createDropDown();
+        /*createDropDown();*/
         $("#target dt").removeClass().addClass('zh-CN');
         var $dropTrigger = $(".dropdown dt a");
         var $dropTrigger2 = $(".dropdown dd span");
@@ -1278,7 +1276,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         <div id="BaseMainContent_HeaderContent_divBtnRegister" class="dy-unit">
                 
                     <div class="btnRegisterAlignmentCN">
-                        <a id="btnRegisterCN" href="http://www.10010388.com/zh-CN/Registration" style="position:absolute;" onclick="sendHomeContentGA(&#39;HeaderRegistration&#39;, &#39;BtnHomeRegistration&#39;);">
+                        <a id="btnRegisterCN" href="http://www.10010388.com/zh-CN/Registration" style="position:absolute;" onclick="sendHomeContentGA('HeaderRegistration', 'BtnHomeRegistration');">
                             <div id="dy_RegistrationChgWording">立即开户</div>
                             <script type="text/javascript">
                                 function RegistrationChgWording() {
@@ -1302,50 +1300,22 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     <!--MaintenanceCountdown, it is only for maintenance countdown only-->
     
 
-    <div id="marquee1">
+    <div id="TopAD">
             <ul>
-                <li><a href="#">【广告1广告1】</a></li>
-                <li><a href="#">【广告2广告2】</a></li>
-                <li><a href="#">【广告3广告3】</a></li>
-                <li><a href="#">【广告4广告4】</a></li>
-                <li><a href="#">【广告5广告5】</a></li>
-                <li><a href="#">【广告6广告6】</a></li>
-                <li><a href="#">【广告7广告7】</a></li>
+
             </ul>   
 
     </div>
 
     <style>
         /* 顶部滚动广告 */
-    #marquee1{ width: 680px; height: 34px; position: relative; margin:2px auto;overflow: hidden;z-index: 1 ;float:right;}
-    #marquee1 ul { width: 680px; height: 34px; position: relative; }
-    #marquee1 ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
-    #marquee1 ul li a { text-decoration:none; height: 34px;}
+    #TopAD{ width: 680px; height: 34px; position: relative; margin:2px auto;overflow: hidden;z-index: 1 ;float:right;}
+    #TopAD ul { width: 680px; height: 34px; position: relative; }
+    #TopAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
+    #TopAD ul li a { text-decoration:none; height: 34px;}
     </style>
 
-<script type="text/javascript">
-    $(function () {
-        if ($("div#marquee-with-options").length > 0) {
 
-            $("#SA_Setting").css("width", 2362 + "px");
-            $("#SA_Setting").css("float", "left");
-
-            marqueeInit({
-                uniqueid: 'marquee-with-options',
-                style: {
-                    'height': '34px',
-                    'width': '660px',
-                    'float': 'left'
-                },
-                inc: 1, //speed - pixel increment for each iteration of this marquee's movement
-                mouse: 'pause', //mouseover behavior ('pause' 'cursor driven' or false)
-                moveatleast: 2,
-                neutral: 150,
-                savedirection: true
-            });
-        }
-    });
-</script>
 </div>
 
 
@@ -1374,7 +1344,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                                 <div class="menuSeperator"></div>
                             </div>
                             <ul class="spSubMenu">
-<li id="submainMenu_Sportsbook_SoccerGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Soccer-Game">足球投注</a></li><li id="submainMenu_Sportsbook_BasketballGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Basketball-Game">篮球投注</a></li><li id="submainMenu_Sportsbook_ESports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/E-Sports">电子竞技</a></li><li id="submainMenu_Sportsbook_NumberGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Number-Game">百练赛</a></li><li id="submainMenu_Sportsbook_VirtualSports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Virtual-Sports">虚拟运动</a></li><li id="submainMenu_Sportsbook_SoccerFacts" class="dy-unit"><a href="http://www.10010388.com/zh-CN/BettorLogic">足球情报</a></li><li id="submainMenu_Sportsbook_RacingGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Racing-Game">赛马</a></li><li id="submainMenu_Sportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&amp;language=zh" target="_blank">赛事数据分析</a></li></ul>
+<li id="submainMenu_Sportsbook_SoccerGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Soccer-Game">足球投注</a></li><li id="submainMenu_Sportsbook_BasketballGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Basketball-Game">篮球投注</a></li><li id="submainMenu_Sportsbook_ESports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/E-Sports">电子竞技</a></li><li id="submainMenu_Sportsbook_NumberGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Number-Game">百练赛</a></li><li id="submainMenu_Sportsbook_VirtualSports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Virtual-Sports">虚拟运动</a></li><li id="submainMenu_Sportsbook_SoccerFacts" class="dy-unit"><a href="http://www.10010388.com/zh-CN/BettorLogic">足球情报</a></li><li id="submainMenu_Sportsbook_RacingGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Racing-Game">赛马</a></li><li id="submainMenu_Sportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&language=zh" target="_blank">赛事数据分析</a></li></ul>
                         </div>
                     </td>
                 
@@ -1387,7 +1357,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                                 <div class="menuSeperator"></div>
                             </div>
                             <ul class="lsrSubMenu">
-<li id="submainMenu_IMSportsbook_IMSportsbookIntro" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Introduction">IM 投注攻略</a></li><li id="submainMenu_IMSportsbook_VirtualSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Soccer">虚拟足球</a></li><li id="submainMenu_IMSportsbook_VirtualBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Basketball">虚拟篮球</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_IMSportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&amp;language=zh" target="_blank">赛事数据分析</a></li></ul>
+<li id="submainMenu_IMSportsbook_IMSportsbookIntro" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Introduction">IM 投注攻略</a></li><li id="submainMenu_IMSportsbook_VirtualSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Soccer">虚拟足球</a></li><li id="submainMenu_IMSportsbook_VirtualBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Basketball">虚拟篮球</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_IMSportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&language=zh" target="_blank">赛事数据分析</a></li></ul>
                         </div>
                     </td>
                 
@@ -1943,7 +1913,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                 <!-- END Slider -->
 <script>  
 /*获取轮播图*/ 
-var AjaxURL = " "
+
  $(document).ready(function () {
         
 /*        getswiperpic();
@@ -1993,7 +1963,7 @@ var AjaxURL = " "
                 <!-- START: IM Keno -->
                 <div class="rowButton" style="width: 50%; float: left; text-align:center;">
                     <img id="imgIMKenoTitle" class="imageTitle" src="Keno/keno.png" width="205" height="47" alt="IM Keno">
-                    <a class="Btn zh-CNkenoBtn" href="javascript:void(0);" onclick="javascript:return EnterGameKeno(&#39;771&#39;, 0, memberCode, 0);">
+                    <a class="Btn zh-CNkenoBtn" href="javascript:void(0);" onclick="javascript:return EnterGameKeno('771', 0, memberCode, 0);">
                         <span class="btnKeno">
                             立刻下注</span>
                     </a>
@@ -2003,7 +1973,7 @@ var AjaxURL = " "
                 <!-- START: LB Keno -->
                 <div class="rowButton" style="width: 50%; float: left; text-align:center;">
                     <img id="imgLBKenoTitle" class="imageTitle" src="Keno/lbkeno.png" width="205" height="47" alt="LB Keno">
-                    <a class="Btn zh-CNkenoBtn" href="javascript:void(0);" onclick="javascript:return EnterGameLBKeno(&#39;1333&#39;, 0, memberCode, 0);">
+                    <a class="Btn zh-CNkenoBtn" href="javascript:void(0);" onclick="javascript:return EnterGameLBKeno('1333', 0, memberCode, 0);">
                         <span class="btnKeno">
                             立刻下注</span>
                     </a>
@@ -2027,7 +1997,7 @@ var AjaxURL = " "
                     </div>
 
                     <div id="trendmap_button">
-                        <a href="javascript: popUpTrendsMap(&#39;http://keno.10010388.com/trendsMap/keno.jsp?market=BJ&amp;language=zh_CN&amp;size=20&#39;);">
+                        <a href="javascript: popUpTrendsMap('http://keno.10010388.com/trendsMap/keno.jsp?market=BJ&language=zh_CN&size=20');">
                             <span id="BaseMainContent_MainContent_lblMoreDetails" class="Keno Button Text">走势详情</span></a>
                     </div>
 
@@ -2061,16 +2031,16 @@ var AjaxURL = " "
         
     </div>
     <div class="footer_middle1">
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Responsible-Gaming" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, &#39;ResponsibleGambling&#39;,1020); return false;">理性博彩</a>
+        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Responsible-Gaming" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'ResponsibleGambling',1020); return false;">理性博彩</a>
         |
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Terms-And-Conditions" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, &#39;TermsNCond&#39;,1020); return false;">规则与条款</a>
+        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Terms-And-Conditions" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'TermsNCond',1020); return false;">规则与条款</a>
         |
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Disclaimer" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, &#39;Disclaimer&#39;,1020); return false;">免责声明</a>
+        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Disclaimer" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'Disclaimer',1020); return false;">免责声明</a>
         |
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Privacy-Policy" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, &#39;PrivacyPolicy&#39;,1020); return false;">隐私权政策</a>
+        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Privacy-Policy" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'PrivacyPolicy',1020); return false;">隐私权政策</a>
         |
          
-        <a href="http://www.10010388.com/zh-CN/Info-Center/How-To-Play/Sports/Sportsbook/Rules/General-Rules" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, &#39;RulesAndRegulation&#39;,1020); return false;">一般规则</a>
+        <a href="http://www.10010388.com/zh-CN/Info-Center/How-To-Play/Sports/Sportsbook/Rules/General-Rules" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'RulesAndRegulation',1020); return false;">一般规则</a>
         
         |
         <a href="http://www.10010388.com/zh-CN/Sitemap" class="padding_space2 clickable">乐天堂导航</a>
@@ -2084,7 +2054,7 @@ var AjaxURL = " "
                 </div>
                 <div id="divLicense" class="divSprite">
                     
-                    <a id="footericon3" class="tooltip" title="First Cagayan" onclick="javascript:popUpWindowManager(&#39;http://www.firstcagayan.com/&#39;,&#39;firstcagayan&#39;, 1020); return false;"><span id="imgLicenses2" class="FooterSprite"></span></a>
+                    <a id="footericon3" class="tooltip" title="First Cagayan" onclick="javascript:popUpWindowManager('http://www.firstcagayan.com/','firstcagayan', 1020); return false;"><span id="imgLicenses2" class="FooterSprite"></span></a>
                     
                 </div>
             </div>
@@ -2093,7 +2063,7 @@ var AjaxURL = " "
                     赞助:
                 </div>
                 <div id="divsponsor" class="divSprite">
-                    <a id="footericon12" class="tooltip" title="赞助" onclick="javascript:popUpWindowManager(&#39;http://www.tottenhamhotspur.com/&#39;,&#39;sponsorship&#39;, 1020); return false;"><span id="imgsponsorship" class="FooterSprite"></span></a>
+                    <a id="footericon12" class="tooltip" title="赞助" onclick="javascript:popUpWindowManager('http://www.tottenhamhotspur.com/','sponsorship', 1020); return false;"><span id="imgsponsorship" class="FooterSprite"></span></a>
                 </div>
             </div>
             <div class="FooterDiv" style="width: 29%;">
@@ -2151,8 +2121,8 @@ var AjaxURL = " "
                     博彩责任:
                 </div>
                 <div id="divResponsibility" class="divSprite">
-                    <a id="footericon12" class="tooltip" title="GameCare" onclick="javascript:popUpWindowManager(&#39;http://www.gamcare.org.uk&#39;,&#39;gamecare&#39;, 1020); return false;"><span id="imgResponsibility2" class="FooterSprite"></span></a>
-                    <a id="footericon13" class="tooltip" title="18+" onclick="javascript:popUpWindowManager(&#39;/zh-CN/Info-Center/Gaming-Policy/Responsible-Gaming&#39;,&#39;18+&#39;, 1020); return false;"><span id="imgResponsibility3" class="FooterSprite"></span></a>
+                    <a id="footericon12" class="tooltip" title="GameCare" onclick="javascript:popUpWindowManager('http://www.gamcare.org.uk','gamecare', 1020); return false;"><span id="imgResponsibility2" class="FooterSprite"></span></a>
+                    <a id="footericon13" class="tooltip" title="18+" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/Gaming-Policy/Responsible-Gaming','18+', 1020); return false;"><span id="imgResponsibility3" class="FooterSprite"></span></a>
                 </div>
             </div>
             <div class="FooterDiv" style="width: 20%;">
@@ -2165,10 +2135,10 @@ var AjaxURL = " "
                     <a id="footericon16" class="tooltip" title="关注乐天堂微信">
                         <span id="dvMedia08" class="FooterSprite"></span>
                     </a>
-                    <a id="footericon17" class="tooltip" title="关注乐天堂微博" onclick="javascript:window.open(&#39;http://www.weibo.com/fun88angel&#39;, &#39;_blank&#39;);return false;">
+                    <a id="footericon17" class="tooltip" title="关注乐天堂微博" onclick="javascript:window.open('http://www.weibo.com/fun88angel', '_blank');return false;">
                         <span id="dvMedia03" class="FooterSprite"></span>
                     </a>
-                    <a id="footericon18" class="tooltip" title="观看乐天堂优酷视频" onclick="javascript:window.open(&#39;http://i.youku.com/Fun88Bliss&#39;, &#39;_blank&#39;);return false;">
+                    <a id="footericon18" class="tooltip" title="观看乐天堂优酷视频" onclick="javascript:window.open('http://i.youku.com/Fun88Bliss', '_blank');return false;">
                         <span id="dvMedia04" class="FooterSprite"></span>
                     </a>
                     
@@ -2346,7 +2316,7 @@ var AjaxURL = " "
         </div>
         <div class="PL_login_btn">
             <div class="PL_login_button">
-                <input type="submit" class="PL_signup" id="btnSignUp" onclick="javascript:newPage(&#39;/zh-CN/Registration    &#39;); return false;" value="立即开户">
+                <input type="submit" class="PL_signup" id="btnSignUp" onclick="javascript:newPage('/zh-CN/Registration    '); return false;" value="立即开户">
                 <input type="submit" class="PL_button" id="btnLogin" onclick="return PopupLogin(); " value="登入">
                 <div class="PL_cl">
                     &nbsp;
@@ -2571,111 +2541,9 @@ var AjaxURL = " "
         </div>
         <input type="hidden" name="ctl00$ctl00$hidblackbox" id="hidblackbox">
     
-<script type="text/javascript">
-//<![CDATA[
-var Page_Validators =  new Array(document.getElementById("BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator"), document.getElementById("BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator"), document.getElementById("ctl05_UserNamePopupValidator"), document.getElementById("ctl05_PasswordPopupValidator"));
-//]]>
-</script>
 
-<script type="text/javascript">
-//<![CDATA[
-var BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator = document.all ? document.all["BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator"] : document.getElementById("BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator");
-BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator.controltovalidate = "UserName";
-BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator.focusOnError = "t";
-BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
-BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator.clientvalidationfunction = "ValidateMemberExt";
-var BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator = document.all ? document.all["BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator"] : document.getElementById("BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator");
-BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator.controltovalidate = "Password";
-BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator.focusOnError = "t";
-BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
-BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator.clientvalidationfunction = "ValidateMemberExt";
-var ctl05_UserNamePopupValidator = document.all ? document.all["ctl05_UserNamePopupValidator"] : document.getElementById("ctl05_UserNamePopupValidator");
-ctl05_UserNamePopupValidator.controltovalidate = "txtUsn";
-ctl05_UserNamePopupValidator.focusOnError = "t";
-ctl05_UserNamePopupValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
-ctl05_UserNamePopupValidator.clientvalidationfunction = "ValidateLoginPopup";
-var ctl05_PasswordPopupValidator = document.all ? document.all["ctl05_PasswordPopupValidator"] : document.getElementById("ctl05_PasswordPopupValidator");
-ctl05_PasswordPopupValidator.controltovalidate = "txtPwd";
-ctl05_PasswordPopupValidator.focusOnError = "t";
-ctl05_PasswordPopupValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
-ctl05_PasswordPopupValidator.clientvalidationfunction = "ValidateLoginPopup";
-//]]>
-</script>
-
-<div class="aspNetHidden">
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A517977C">
-	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="f/nVXjngCvEFYtG6MslzJOaxDBQy6ziPOjTDxBDZw6y+Ngl808dXljobhT2qfa08TSKO4QfmxOZCIsDx+nrrBBL1PYfS4YCz7OQ8E5+o8bTk0KCrM2BnjJsyZ3Mkz8fFiRC3r+8xAeN9G5NzKaD7EgsfzdnHZNKxjnxDO+t+yIphdozdK9u7LLBYFMo4BbkLOyZKTFYl2NnGQtJnve594AzYIwFnvNQOSiesZXUCN5YxIWWMqZ370ewviPAhnWQS+e1k0/xs+3Q04oCgJwBfCVFhrKS16lPE1Sy4XBIAlXN6OaF5ycwTenf0uBKXvnoqBhA/P2S7pI29zVp/YwbGq7/ebYpU+bs9VcKHx5rWh39RLxhFkTysZ7sN5TquRHiNNg/7wcXsS2LPXDzUrjwkYFv9q0CAWgxVSoIwNhG8rZB8vByRo6Kqy7ieDzsC3EeXRfUBwhcYPSRGy0YBmOQNgQ==">
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-
-var Page_ValidationActive = false;
-if (typeof(ValidatorOnLoad) == "function") {
-    ValidatorOnLoad();
-}
-
-function ValidatorOnSubmit() {
-    if (Page_ValidationActive) {
-        return ValidatorCommonOnSubmit();
-    }
-    else {
-        return true;
-    }
-}
-        
-document.getElementById('BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator').dispose = function() {
-    Array.remove(Page_Validators, document.getElementById('BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator'));
-}
-
-document.getElementById('BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator').dispose = function() {
-    Array.remove(Page_Validators, document.getElementById('BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator'));
-}
-
-document.getElementById('ctl05_UserNamePopupValidator').dispose = function() {
-    Array.remove(Page_Validators, document.getElementById('ctl05_UserNamePopupValidator'));
-}
-
-document.getElementById('ctl05_PasswordPopupValidator').dispose = function() {
-    Array.remove(Page_Validators, document.getElementById('ctl05_PasswordPopupValidator'));
-}
-//]]>
-</script>
 <div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button type="button" id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></form><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important"></div>
     
-<script type="text/javascript">
-    window.lpTag = window.lpTag || {}; if (typeof window.lpTag._tagCount === 'undefined') { window.lpTag = { site: '77738374' || '', section: lpTag.section || '', autoStart: lpTag.autoStart === false ? false : true, ovr: lpTag.ovr || {}, _v: '1.5.1', _tagCount: 1, protocol: location.protocol, events: { bind: function (app, ev, fn) { lpTag.defer(function () { lpTag.events.bind(app, ev, fn); }, 0); }, trigger: function (app, ev, json) { lpTag.defer(function () { lpTag.events.trigger(app, ev, json); }, 1); } }, defer: function (fn, fnType) { if (fnType == 0) { this._defB = this._defB || []; this._defB.push(fn); } else if (fnType == 1) { this._defT = this._defT || []; this._defT.push(fn); } else { this._defL = this._defL || []; this._defL.push(fn); } }, load: function (src, chr, id) { var t = this; setTimeout(function () { t._load(src, chr, id); }, 0); }, _load: function (src, chr, id) { var url = src; if (!src) { url = this.protocol + '//' + ((this.ovr && this.ovr.domain) ? this.ovr.domain : 'lptag.liveperson.net') + '/tag/tag.js?site=' + this.site; } var s = document.createElement('script'); s.setAttribute('charset', chr ? chr : 'UTF-8'); if (id) { s.setAttribute('id', id); } s.setAttribute('src', url); document.getElementsByTagName('head').item(0).appendChild(s); }, init: function () { this._timing = this._timing || {}; this._timing.start = (new Date()).getTime(); var that = this; if (window.attachEvent) { window.attachEvent('onload', function () { that._domReady('domReady'); }); } else { window.addEventListener('DOMContentLoaded', function () { that._domReady('contReady'); }, false); window.addEventListener('load', function () { that._domReady('domReady'); }, false); } if (typeof (window._lptStop) == 'undefined') { this.load(); } }, start: function () { this.autoStart = true; }, _domReady: function (n) { if (!this.isDom) { this.isDom = true; this.events.trigger('LPT', 'DOM_READY', { t: n }); } this._timing[n] = (new Date()).getTime(); }, vars: lpTag.vars || [], dbs: lpTag.dbs || [], ctn: lpTag.ctn || [], sdes: lpTag.sdes || [], ev: lpTag.ev || [] }; lpTag.init(); } else { window.lpTag._tagCount += 1; }
-</script>
-
-    
-<script type="text/javascript">
-    var TrackingID =  'UA-4079383-8'; 
-    var GA_UserID = "0";
-    var testing = "";
-
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    if (getCookie("verifyform") == "1" && GA_UserID != "0") {
-        ga('create', TrackingID, 'none', { 'userId': GA_UserID, 'allowLinker': true });
-        ga('set', 'dimension1', GA_UserID);
-    } else
-        ga('create', TrackingID, 'none', { 'allowLinker': true });
-
-    ga('require', 'displayfeatures');
-    ga('send', 'pageview');
-</script>
-
-    
-    
-    
-
 
     <script type="text/javascript">
         var getUri = window.location.href.toLowerCase();
@@ -2857,6 +2725,6 @@ document.getElementById('ctl05_PasswordPopupValidator').dispose = function() {
     </script>
 
 
-<span style="position: absolute; top: -1000px;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1" height="1" id="stmgwb2" align="right"><param name="allowScriptAccess" value="always"><param name="movie" value="https://mpsnare.iesnare.com/stmgwb2.swf"><param name="swLiveConnect" value="true"><embed src="https://mpsnare.iesnare.com/stmgwb2.swf" width="1" height="1" name="stmgwb2" swliveconnect="true" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></object></span>
-<script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
+<span style="position: absolute; top: -1000px;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1" height="1" id="stmgwb2" align="right"><param name="allowScriptAccess" value="always"><param name="movie" value=""><param name="swLiveConnect" value="true"><embed src="" width="1" height="1" name="stmgwb2" swliveconnect="true" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></object></span>
+
 </body></html>
