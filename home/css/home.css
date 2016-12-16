@@ -380,7 +380,7 @@ html, body {
 	#TopAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
 	#TopAD ul li a { text-decoration:none; height: 34px;}
 /* 底部滚动广告 */
-	#BottomAD { float: left;width: 688px; height: 34px; position: relative;overflow: hidden }
+	#BottomAD { float: left;width: 794px; height: 34px; position: relative;overflow: hidden }
 	#BottomAD ul { width: 1000px; height: 34px; position: relative; }
 	#BottomAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
 	#BottomAD ul li a {line-height:34px;font-size:14px;text-decoration:none;  height: 34px;}

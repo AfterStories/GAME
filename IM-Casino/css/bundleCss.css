@@ -4494,7 +4494,7 @@ a.WelcomeBox.last {
 }
 
 #navMain td a.MenuImageHome {
-	background: url("../lib/images/allicons.png") no-repeat scroll -456px -29px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -456px -29px transparent;
 	margin-left: auto;
 	margin-right: auto;
 	width: 28px;
@@ -4508,7 +4508,7 @@ a.WelcomeBox.last {
 }
 
 #navMain td a.MenuImageMobile {
-	background: url("../lib/images/allicons.png") no-repeat scroll -486px -27px transparent;
+	background: url("../../lib/images/allicons.png") no-repeat scroll -486px -27px transparent;
 	margin-left: auto;
 	margin-right: auto;
 	width: 28px;
