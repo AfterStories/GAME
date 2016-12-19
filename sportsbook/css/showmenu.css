@@ -1,4 +1,4 @@
-/* Code tidied up by ScrapBook */
+
 @import url("frameForAll.css");
 .hide_menu, .show_menu { border-color: rgb(155, 167, 173); background-color: rgb(255, 255, 255); }
 .show_menu a, .hide_menu a { color: rgb(225, 234, 242); background-color: rgb(30, 110, 171); background-image: url("mask1.png"); background-repeat: repeat-x; background-position: 0px 0px; text-align: left; }

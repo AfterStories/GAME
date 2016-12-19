@@ -1,4 +1,4 @@
-/* Code tidied up by ScrapBook */
+
 .switch-view-tabs ul { display: table; width: 100%; }
 .switch-view-tabs ul > * { display: table-cell; vertical-align: middle; }
 .betslip-tabs a, .side-menu h3, .bulletin h3, .promotion h3 { box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5) inset; }

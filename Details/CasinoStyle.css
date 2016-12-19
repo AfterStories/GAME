@@ -1,0 +1,371 @@
+/* Code tidied up by ScrapBook */
+.bttn_b, .bttn_b a span, .infoC_myList_01 { display: block; }
+#but_reg_c, #sb, .cols { clear: both; }
+#dvBoard ul, #lblGameProduct_description_03 ul, #navPopup li, #navProv li, #slider ul li, #sub-nav ul li, #sub-nav-pro ul li, #sub-nav02 ul li { list-style-type: none; }
+.sub-nav-01, body.lang-th-TH #but_mtit .bttn03, body.lang-th-TH #nav_tit_detail, body.lang-th-TH .bttn, body.lang-th-TH .bttn_02, body.lang-th-TH .bttn_03, body.lang-th-TH .bttn_04, body.lang-th-TH .bttn_b, body.lang-th-TH .nav_tit_game, body.lang-th-TH .nav_tit_play { float: left; padding-left: 40px; }
+.sub-nav-06 { float: right; width: 500px; height: 31px; padding-top: 80px; }
+.nav_tit_game { height: 38px; width: 125px; float: left; font-size: 20px; text-align: center; line-height: 37px; }
+.nav_tit_play, .nav_tit_try { background-repeat: no-repeat; height: 31px; text-indent: 10px; }
+#nav_tit_detail, .nav_tit_play, .nav_tit_try { width: 125px; font-size: 13px; margin-bottom: 1px; float: left; text-align: center; }
+.nav_tit_play { background-image: url("c_but_play.png"); color: rgb(255, 255, 255); line-height: 29px; }
+.nav_tit_try { background-image: url("c_but_try.png"); color: rgb(61, 150, 197); line-height: 30px; }
+#nav_tit_detail { height: 27px; line-height: 28px; text-indent: 8px; }
+#nav_tit_detail a { text-decoration: underline; }
+#nav_tit_detail a:hover { text-decoration: none; }
+.pagination li a { display: block; width: 12px; height: 0px; padding-top: 12px; background-image: url("pagination.png"); background-position: 0px 0px; float: left; overflow: hidden; }
+.bttn_b, .bttn_b a span, .bttn_b a:hover, .bttn_b a:hover span { height: 31px; width: 125px; }
+.bttn_b { float: right; color: rgb(61, 150, 197); font-weight: 700; text-align: center; left: 0px; font-size: 1em; }
+.bttn a:hover, .bttn a:visited, .bttn_b a:link { float: right; height: 31px; width: 125px; text-decoration: none; color: rgb(61, 150, 197); background: transparent url("c_but_try.png") no-repeat scroll right top; }
+#casino_myContent02, #sb, #slider, #slider ul li, #slides, #sub-tit, .cols .col { float: left; }
+.bttn_b a span { padding: 7px 0px 0px 5px; }
+#casino_myContent02 { height: 30px; width: 941px; margin-top: 0px; z-index: 23; left: -19px; padding: 11px 0px 5px 30px; }
+#casino_myContent02_left { float: left; width: 775px; margin-top: 15px; text-align: center; z-index: 23; left: -19px; padding: 11px 0px 5px; }
+.casino_Txt01, .casino_TxtSub, .casino_TxtSub02 { margin-top: 0px; text-transform: uppercase; font-weight: 700; }
+.tblcolor_01 { background-color: rgb(164, 166, 165); height: 25px; padding-top: 7px; text-align: center; }
+.casino_TxtHdr { font-weight: 700; color: rgb(70, 66, 66); font-size: 33px; text-transform: uppercase; }
+.casino_TxtSub { color: rgb(247, 31, 22); font-size: 23px; }
+.casino_TxtSub02 { color: rgb(255, 255, 255); font-size: 17px; }
+.casino_Txt01 { color: rgb(35, 169, 225); font-size: 15px; bottom: 6px; position: relative; }
+#casino_myContent02_right { float: right; width: 156px; margin-top: 92px; text-align: center; background-repeat: no-repeat; font-size: 1em; left: 0px; padding: 13px 0px 5px; }
+.infoC_myContent { width: 902px; background-color: rgb(249, 250, 250); }
+#infoC_myList { font-size: 12px; padding: 29px 22px 22px; }
+#sub-nav-infoC ul li a { padding: 25px 0px; }
+.popup_Container { width: 268px; height: 80px; margin: 0px; }
+.btnBlue { margin: 19px 0px 0px 4px; height: 30px; padding: 8px 0px 0px 36px; color: rgb(255, 255, 255); }
+.btnWhite { margin: 0px; height: 25px; padding: 0px 0px 0px 36px; color: rgb(37, 170, 225); }
+#dvLnk { margin: 20px 0px 0px; float: right; }
+.lnk { padding: 0px; margin: 0px; height: 0px; }
+#slides, .slides_container { height: 400px; width: 960px; position: relative; }
+#slides { top: 0px; z-index: 10; opacity: 1; }
+.slides_container { overflow: hidden; display: none; }
+.slides_container a { width: 960px; height: 420px; display: block; }
+.slides_container a img { display: block; }
+#slider ul { width: 960px; height: 460px; position: relative; overflow: hidden; }
+#slider ul li { display: inline; height: 500px; width: 960px; padding: 0px; position: relative; overflow: hidden; }
+#slides .next, #slides .prev { position: absolute; top: 145px; left: 0px; width: 42px; height: 71px; display: block; z-index: 101; }
+#slides .next { left: 920px; }
+#header { padding-bottom: 10px; }
+#slider { height: 459px; background: transparent url("slider.gif") no-repeat scroll 0% 0%; position: relative; text-align: center; top: 39px; z-index: 10; }
+#slider .slider-nav a { display: block; width: 20px; height: 49px; font-size: 0px; line-height: 0; text-indent: -4000px; position: absolute; top: 129px; }
+#but_mtit, .three-cols .col { width: 295px; }
+#but_mtit .bttn01, #but_mtit .bttn02 { font-size: 19px; height: 41px; display: block; }
+#slider .slider-nav a.prev { left: 0px; background: transparent url("button-prev.png") no-repeat scroll 0% 0%; }
+#slider .slider-nav a.next { right: 0px; background: transparent url("button-next.png") no-repeat scroll 0% 0%; }
+#but_mtit .bttn01 a, #but_mtit .bttn01 a:hover { background: transparent url("p_but_01.png") no-repeat scroll center top; }
+.cols { z-index: 30; padding: 10px 0px 1px; }
+#slider_02, #slider_03, #slider_04 { top: 30px; z-index: 12; }
+#sub-nav, #sub-nav02 { z-index: 23; text-align: center; }
+.cols .buttonSpace { margin-left: 22px; }
+#but_mtit .bttn01 { line-height: 28px; text-align: center; margin-bottom: 7px; margin-top: 7px; }
+#but_mtit .bttn01 a { color: rgb(37, 170, 225); display: block; padding: 6px 0px 6px 12px; }
+#but_mtit .bttn02 a, #but_mtit .bttn02 a:hover { background: transparent url("p_but_02.png") no-repeat scroll center top; }
+#but_mtit .bttn02 { line-height: 26px; margin-bottom: 5px; text-align: center; margin-top: 5px; position: relative; }
+#sub-nav ul, #sub-nav02 ul { font-size: 14px; line-height: 30px; text-transform: capitalize; }
+.sb01, .sb03 { margin-top: -59px; }
+#but_reg_c, #but_reg_info, #lblGameProduct_description_02, .sb01, .sb02, .sb03, map area { position: absolute; }
+#but_mtit .bttn02 a { color: rgb(255, 255, 255); display: block; padding: 6px 0px 10px 8px; }
+#but_mtit { height: 41px; text-decoration: none; padding-right: 0px; background-position: center center; }
+#sub-tit { height: 60px; width: 900px; }
+.msg_bold { font-weight: 700; }
+#sb { position: relative; padding-left: 117px; z-index: 102; }
+.sb01 { width: 186px; height: 45px; padding-left: 0px; }
+.sb03 { width: 307px; height: 80px; padding-left: 499px; }
+.sb02 { width: 186px; height: 45px; padding-left: 190px; margin-top: -77px; }
+#but_reg_c { width: 960px; top: 583px; z-index: 200; }
+.but_reg01_c { width: 344px; float: right; height: 80px; padding-right: 179px; padding-top: 0px; }
+.but_reg02_c { width: 303px; float: right; height: 80px; padding-right: 13px; }
+#sub-nav ul li, #sub-nav ul li a span, #sub-nav02 ul li, #sub-nav02 ul li a span { display: inline; padding-right: 0px; }
+#slider-holder-casino { height: 679px; }
+#slider_02, #slider_02-holder { height: 480px; }
+#slider_02 { background: transparent url("slider.gif") no-repeat scroll 0% 0%; position: relative; float: left; text-align: center; }
+#slider_02-holder .jcarousel-clip { height: 480px; width: 960px; position: relative; overflow: hidden; }
+#slider_03, #slider_03-holder { height: 663px; }
+#slider_04, #slider_04-holder { height: 533px; }
+#slider_02-holder .slide-image { float: left; display: inline; }
+#slider_02-holder .slide-info { float: left; display: inline; width: 480px; padding-top: 20px; }
+#slider_02-holder ul, #slider_02-holder ul li { height: 480px; width: 960px; position: relative; overflow: hidden; }
+#slider_02-holder .slide-info p { padding-bottom: 8px; }
+#slider_02-holder ul li { list-style-type: none; float: left; display: inline; padding: 0px; }
+#slider_03 { position: relative; float: left; text-align: center; }
+#slider_04 { position: relative; float: left; text-align: center; }
+#sub-nav { float: left; height: 30px; width: 919px; margin-top: 1px; background-repeat: no-repeat; position: relative; padding: 11px 0px 5px; }
+#sub-nav ul li { float: left; }
+#sub-nav ul li a { float: left; display: inline; text-decoration: none; padding-left: 0px; }
+#sub-nav ul li a span { float: left; width: 95px; background-position: right 0px ! important; }
+#sub-nav ul li a.active, #sub-nav ul li a.active span, #sub-nav ul li a:hover, #sub-nav ul li a:hover span { color: rgb(255, 255, 255); height: 30px; width: 95px; background-image: url("C_subtit_bg.png"); background-repeat: no-repeat; }
+.sub-nav-02, .sub-nav-02A { width: 700px; float: right; }
+.sub-nav-01 { float: left; padding-left: 40px; }
+.sub-nav-02A { height: 31px; }
+.sub-nav-02B { float: right; padding-top: 3px; }
+.sub-nav-03A { float: left; padding-left: 6px; }
+.sub-nav-03B { float: left; width: 700px; }
+#sub-nav02 { float: left; height: 30px; width: 1010px; margin-top: 15px; background-repeat: no-repeat; position: relative; left: -19px; padding: 11px 0px 5px; }
+.cols_c, .cols_cs, .cols_infoC { z-index: 30; position: relative; clear: both; }
+#sub-nav02 ul li a, .sub-nav-05 { float: left; padding-left: 0px; }
+#sub-nav02 ul li { float: left; }
+#sub-nav02 ul li a { display: inline; text-decoration: none; }
+#sub-nav02 ul li a span { float: left; width: 86px; background-position: right 0px ! important; }
+#sub-nav02 ul li a.active, #sub-nav02 ul li a.active span, #sub-nav02 ul li a:hover, #sub-nav02 ul li a:hover span { color: rgb(255, 255, 255); height: 30px; width: 86px; background-repeat: no-repeat; }
+#but_mtit .bttn03 a, #but_mtit .bttn03 a:hover { background: transparent url("p_but_01.png") no-repeat scroll center top; }
+.sub-nav-04 { float: right; width: 737px; padding-top: 48px; }
+.sub-nav-04A { float: right; width: 737px; height: 31px; }
+.five-cols .col_c, .five-cols .col_cs, .five-cols .col_infoC { width: 125px; }
+.sub-nav-04B { float: right; padding-top: 3px; }
+.cols_c .col_c, .cols_cs .col_cs, .cols_infoC .col_infoC { float: left; }
+.space02 { padding-right: 63px; }
+.space03 { padding-right: 38px; }
+.space04 { padding-top: 6px; }
+.space05 { height: 28px; }
+#but_mtit .bttn03 { display: block; font-size: 19px; line-height: 28px; height: 41px; text-align: center; margin-bottom: 7px; margin-top: 7px; }
+.bttn, .bttn_02, .bttn_03, .bttn_04 { font-size: 1em; font-weight: 700; display: block; }
+#but_mtit .bttn03 a { color: rgb(37, 170, 225); display: block; padding: 6px 0px 6px 12px; }
+.cols_cs { padding: 54px 0px 1px 45px; }
+.cols_cs .space { padding-right: 25px; }
+.cols_infoC { padding: 54px 0px 1px 45px; }
+.cols_infoC .space { padding-right: 25px; }
+.cols_c { padding: 102px 0px 1px 45px; }
+.cols_c .space { padding-right: 25px; }
+.cols .col-last { margin-right: 0px ! important; }
+.cols .col h3.notext { width: 295px; height: 254px; margin-bottom: 5px; }
+.three-cols .col_m { width: 295px; }
+.cols .space { padding: 0px 12px; }
+.two-cols .col { width: 420px; margin-right: 34px; }
+.bttn, .bttn a span, .bttn a:hover, .bttn a:hover span, .bttn_02 { height: 31px; width: 125px; }
+.bttn { float: right; color: rgb(61, 150, 197); text-align: center; left: 0px; }
+.bttn a:hover, .bttn a:link, .bttn a:visited { float: right; height: 31px; width: 125px; text-decoration: none; color: rgb(61, 150, 197); background: transparent url("c_but_try.png") no-repeat scroll right top; }
+.bttn a span { display: block; padding: 7px 0px 0px 5px; }
+.bttn_02 { float: right; color: rgb(61, 150, 197); text-align: right; text-indent: 10px; }
+.bttn_02 a span, .bttn_02 a:hover, .bttn_02 a:hover span { height: 31px; width: 121px; }
+#sub-nav-pro, .bttn_03, .bttn_04 { text-align: center; }
+.bttn_02 a:hover, .bttn_02 a:link, .bttn_02 a:visited { float: right; height: 31px; width: 121px; text-decoration: none; color: rgb(61, 150, 197); padding: 7px 15px 0px 0px; margin: 0px; }
+.bttn_02 a span { display: block; padding: 7px 0px 0px 2px; }
+.bttn_03, .bttn_03 a span, .bttn_03 a:hover, .bttn_03 a:hover span { height: 31px; width: 125px; }
+.bttn_03 { float: right; color: rgb(255, 255, 255); left: 0px; }
+.bttn_03 a:hover, .bttn_03 a:link, .bttn_03 a:visited { float: right; height: 31px; width: 125px; text-decoration: none; color: rgb(255, 255, 255); background: transparent url("c_but_play.png") no-repeat scroll right top; }
+.bttn_03 a span { display: block; padding: 5px 0px 0px 5px; }
+.bttn_03 a:hover { background: transparent url("c_but_play_.png") no-repeat scroll right top; }
+.bttn_04, .bttn_04 a span, .bttn_04 a:hover, .bttn_04 a:hover span { height: 35px; width: 96px; }
+.bttn_04 { float: right; color: rgb(61, 150, 197); left: 0px; }
+.bttn_04 a:hover, .bttn_04 a:link, .bttn_04 a:visited { float: right; height: 35px; width: 96px; text-decoration: none; color: rgb(61, 150, 197); background: transparent url("c_but_close.png") no-repeat scroll right top; }
+.bttn_04 a span { display: block; padding: 9px 0px 0px 5px; }
+.bttn_04 a:hover { background: transparent url("c_but_close_.png") no-repeat scroll right top; }
+#sub-nav-pro, .bg_casino, .bg_casino_gp, .bg_pro { background-repeat: no-repeat; }
+#sub-nav-pro02 { float: left; clear: both; height: 30px; width: 960px; margin-top: -121px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px; position: relative; z-index: 22; }
+#sub-nav-pro { float: left; height: 30px; width: 900px; margin-top: -118px; position: relative; z-index: 24; padding: 20px 0px 5px; }
+#sub-nav-pro ul { font-size: 14px; line-height: 30px; text-transform: capitalize; }
+#sub-nav-pro ul li { float: left; display: inline; padding-right: 0px; }
+#sub-nav-pro ul li a { float: left; display: inline; text-decoration: none; padding-left: 0px; }
+#sub-nav-pro ul li a span { float: left; display: inline; width: 70px; padding-right: 0px; background-position: right 0px ! important; }
+#sub-nav-pro ul li a.active, #sub-nav-pro ul li a.active span, #sub-nav-pro ul li a:hover, #sub-nav-pro ul li a:hover span { color: rgb(255, 255, 255); height: 30px; width: 70px; background-image: url("C_subtit_bg70.png"); background-repeat: no-repeat; }
+.bg_casino, .bg_pro { background-position: center top; }
+.bg_casino_gp { background-position: center bottom; }
+#but_reg_info { clear: both; width: 325px; top: 83px; z-index: 200; }
+.but_reg01_info { width: 325px; padding-left: 578px; padding-top: 0px; }
+.infoC_myContent { background-repeat: repeat-y; }
+.infoC_terms { font-size: 12px; padding: 33px; }
+.infoC_myList { font-size: 12px; padding: 29px 22px 33px; }
+.infoC_termsTitle { font-weight: 700; color: rgb(70, 66, 66); font-size: 24px; text-transform: uppercase; }
+.infoC_termsHdr { font-size: 15px; color: rgb(37, 136, 185); font-weight: 700; }
+#sub-nav-infoC, #sub-nav-infoC-tit { font-size: 20px; font-weight: 700; text-align: center; }
+.infoC_myList_01 { width: 373px; float: left; }
+.infoC_myList_02 { width: 373px; float: right; }
+#sub-nav-infoC { color: rgb(9, 140, 184); }
+#sub-nav-infoC ul { display: block; float: left; color: rgb(37, 136, 185); width: 797px; height: 82px; background: transparent url("info_menu.png") no-repeat scroll 0% 0%; list-style: outside none none; position: relative; margin-top: -10px; margin-left: 92px; z-index: 23; }
+#sub-nav-infoC-tit { position: relative; top: 20px; }
+#sub-nav-infoC ul li { display: block; float: left; height: 82px; }
+#home { width: 180px; }
+#about { width: 245px; }
+#work { width: 171px; }
+#contact { width: 201px; }
+#sub-nav-infoC ul li a { display: block; color: rgb(37, 136, 185); width: 100%; height: 100%; }
+#home a:hover { background: transparent url("info_menu.png") no-repeat scroll 0px -102px; }
+#about a:hover { background: transparent url("info_menu.png") no-repeat scroll -180px -102px; }
+#work a:hover { background: transparent url("info_menu.png") no-repeat scroll -425px -102px; }
+#contact a:hover { background: transparent url("info_menu.png") no-repeat scroll -596px -102px; }
+.bg_casino_inner { background-position: center top; background-repeat: no-repeat; }
+#example { float: right; }
+.floaL { float: left; }
+#div-after, #div-before { background-color: rgb(136, 136, 221); color: rgb(0, 0, 0); }
+#main_Content { width: 938px; color: rgb(0, 0, 0); margin-top: 54px; margin-left: 15px; }
+#main_Content_padding { padding: 0px; }
+#lblGame { float: left; width: 773px; }
+#dvImgDealer { float: left; width: 176px; margin: 7px 0px -5px; }
+#lblGameProduct_description { height: 101px; float: right; width: 597px; margin: 18px 0px 0px; }
+#lblGameProduct_description_01 { height: 101px; margin: 0px 0px 0px 5px; }
+#lblGameProduct_description_02 { clear: both; height: 31px; margin-bottom: 13px; }
+#lblGP_d_03a_01 { float: left; padding-top: 18px; padding-left: 10px; width: 107px; }
+#lblGP_d_03a_02 { float: right; padding-top: 0px; padding-right: 5px; width: 422px; }
+#lblGP_description_03a { height: 145px; }
+#lblGP_description_03b { width: 585px; position: relative; }
+#lblGameProduct { color: rgb(255, 255, 255); height: 460px; margin: -40px 0px -50px; }
+#lblGameinfo { color: rgb(60, 59, 65); clear: both; margin: -90px 0px 0px; position: relative; }
+.dvRecommendedGames { text-align: center; width: 145px; margin-bottom: 0px; float: left; }
+#lblGame_random { float: right; width: 144px; margin-top: 79px; text-align: center; }
+#lblGame_random_right { float: left; width: 144px; position: relative; }
+#lblGame_random_sh { margin: 0px 0px 0px 800px; height: 50px; width: 144px; }
+#lblGame_random_title { height: 34px; color: rgb(255, 255, 255); font-size: 14px; font-weight: bolder; background-color: rgb(37, 170, 227); text-align: center; margin-bottom: 8px; }
+#lblGame_random_title .mid { padding: 7px 0px 0px 2px; }
+#lblGame_random_game { padding: 8px; color: rgb(90, 87, 89); }
+#lblGame_random_game_txt .mid { font-size: 14px; font-weight: bolder; padding: 3px 0px 1px 2px; }
+#lblGame_random_bg { width: 154px; background-image: url("tbl-bg-17.png"); background-repeat: repeat-y; padding: 4px; background-color: rgb(0, 0, 0); }
+#div-1c { color: rgb(255, 255, 255); clear: both; height: 31px; }
+.ProductName { color: rgb(20, 157, 201); font-size: 24px; font-weight: bolder; letter-spacing: 0px; padding-top: 15px; padding-bottom: 10px; }
+.Title { color: rgb(0, 0, 0); font-size: 20px; font-weight: bolder; padding-top: 5px; }
+.Description { color: grey; font-size: 12px; font-weight: 700; padding-top: 3px; }
+.btnWhiteBg, .lblGame_back { background: transparent url("button-animation.gif") no-repeat scroll -331px 0px; color: rgb(37, 170, 225); width: 122px; height: 30px; text-align: center; font-weight: 700; padding-left: 5px; padding-top: 10px; font-size: 12px; margin-top: 5px; float: right; position: relative; left: 626px; top: -60px; }
+.btnWhiteBg:hover, .lblGame_back:hover { background: transparent url("button-animation.gif") no-repeat scroll -331px -38px; }
+div.tbl, div.tbl02, div.tbl03 { border: 1px solid rgb(202, 202, 202); background: rgb(249, 250, 250) none repeat scroll 0% 0%; }
+.GameDetail { width: 134px; margin-left: 156px; position: relative; }
+#lblGameProduct_description_03 { height: 235px; width: 587px; clear: both; overflow-x: hidden; overflow-y: auto; }
+.content_list { width: 775px; }
+div.tbl, div.tbl02 { padding: 4px; }
+div.tbl03 { padding: 8px; }
+.menu_list { width: 757px; }
+.menu_head { height: 16px; cursor: pointer; position: relative; color: rgb(255, 255, 255); font-size: 16px; font-weight: 700; background: rgb(37, 170, 227) url("down.png") no-repeat scroll right center; margin: 1px; padding: 11px 10px; }
+.menu_body_content, .menu_body_photo { background-color: rgb(248, 249, 249); text-decoration: none; display: block; }
+.menu_body { margin: 5px 0px 3px; }
+.menu_body_photo { color: rgb(0, 102, 153); padding-left: 1px; font-weight: 700; }
+.menu_body_content { padding-left: 10px; padding-right: 35px; min-height: 254px; }
+.menu_body_content table tr td { padding: 4px; }
+.menu_body_content h4 { color: rgb(20, 157, 201); font-size: 15px; font-weight: bolder; }
+.menu_body a { display: block; color: rgb(0, 102, 153); background-color: rgb(249, 250, 250); padding-left: 10px; font-weight: 700; text-decoration: none; }
+#navPopup li, .menu_body_photo p { display: inline; }
+.menu_body a:hover { color: rgb(0, 0, 0); text-decoration: underline; }
+.imgTitle { position: relative; margin-top: 20px; }
+.dvMainBanner { margin-top: -233px; margin-left: auto; margin-right: auto; width: 83%; position: relative; z-index: 3; }
+#dvSpace, #dvTableCover { margin-left: auto; margin-right: auto; z-index: 20; position: relative; }
+#dvTableCover { margin-top: -104px; width: 83%; }
+#dvSpace { margin-top: -30px; width: 350px; }
+.dvSlotGameLinkTop { float: right; margin: -10px 40px 5px 0px; }
+#dvCasinoTitle { margin-top: -60px; width: 21%; margin-left: auto; margin-right: auto; position: relative; }
+#dvPlayNow { position: relative; margin: -15px 0px 0px; z-index: 10; }
+.uc { margin-bottom: -100px; }
+.dvlinkBanner { float: right; margin-top: 35px; width: 500px; text-align: right; margin-right: 73px; }
+#ulSlotGames, .btnDownloadGame { margin-top: 0px; float: right; font-weight: 700; }
+.btnDownloadGame { background: transparent url("button-anmation-green-download.gif") no-repeat scroll 0px -3px; color: rgb(255, 255, 255); width: 165px; height: 30px; text-align: center; padding-top: 10px; font-size: 12px; margin-bottom: 20px; }
+#navProvider_id, #navProvider_ko, #navProvider_vi, #navProvider_zh { width: 100%; display: table; }
+#dvGameArea1, #dvGameArea2, #dvGameArea3, #dvGameArea4 { z-index: 4; position: relative; height: 70px; width: 140px; }
+.btnDownloadGame:hover { background-position: 0px -47px; }
+#SpanBoard1, #SpanBoard2, #SpanBoard3 { background: rgb(0, 0, 0) none repeat scroll 0% 0%; opacity: 0.1; position: absolute; z-index: 9; width: 80px; height: 30px; cursor: pointer; margin: 70px 0px 0px -133px; }
+#sp1 { margin-left: -3px; font-size: 13px; font-weight: 400; }
+#dvOutterProvider { margin-top: 50px; }
+#navProvider_en, #navProvider_ja, #navProvider_th { width: 100%; display: table; padding: 0px; margin-top: -14px; margin-left: 22px; }
+#navProvider_zh { padding: 0px; margin-top: -14px; margin-left: 6px; }
+#navProvider_vi { padding: 0px; margin-top: -14px; margin-left: 17px; }
+#navProvider_id { padding: 0px; margin-top: -14px; margin-left: 20px; }
+#navProvider_ko { padding: 0px; margin-top: -14px; margin-left: 9px; }
+#navProv { padding: 0px; position: relative; margin: -15px auto 20px; }
+#navProv li { display: inline-block; margin: 10px 0px; width: 100px; padding: 0px; text-align: center; float: left; }
+#navProv li a { color: rgb(37, 170, 225); font-size: 15px; font-weight: bolder; float: right; }
+#navProv li:hover { text-shadow: 0px 0px 0.2em rgb(136, 255, 119); }
+#dvEnterLobby { height: 60px; margin-top: -140px; z-index: 21; position: relative; width: 190px; margin-left: auto; margin-right: auto; display: block; }
+#dvLogo { width: 150px; height: 60px; margin: -145px 0px 0px 145px; z-index: 4; position: relative; }
+#dvHotGames1 { width: 170px; height: 60px; margin: -15px 0px 0px 245px; z-index: 4; position: relative; }
+#dvHotGames2 { width: 170px; height: 60px; margin: -60px 0px 0px 560px; z-index: 4; position: relative; }
+#dvGameArea1 { margin: -50px 0px 0px 155px; }
+#dvGameArea2 { margin: -35px 0px 0px 244px; }
+#dvGameArea3 { margin: -67px 0px 0px 590px; }
+#dvGameArea4 { margin: -104px 0px 0px 695px; }
+map area { z-index: 5; margin-bottom: 100px; display: block; }
+.bannerMap { cursor: url("chip-top.png"), url("chip-top.cur"), default; z-index: 5; position: absolute; }
+#dvChiparea1, #dvChiparea11, #dvChiparea2, #dvChiparea21, #dvChiparea3, #dvChiparea31, #dvChiparea4, #dvChiparea41 { z-index: 4; position: absolute; }
+#dvBarTicker, #dvBoard, #dvPopupBody, #dvTopSlotBanner, #navCasino, #navCasino ul li, #navPopup li, #ulSlotGames li { position: relative; }
+#navPopup { text-align: center; padding: 0px; margin: 0px auto; width: 85%; }
+#navPopup a { float: left; padding: 0px; color: rgb(153, 153, 153); text-transform: uppercase; font: 700 12px/25px Arial,Helvetica; text-decoration: none; text-shadow: 0px 1px 0px rgb(0, 0, 0); }
+#navPopup li:hover > a, html #navPopup li a:hover { color: rgb(250, 250, 250); }
+#navPopup li:hover > ul { display: block; }
+#navPopup ul { list-style: outside none none; padding: 0px; display: none; position: absolute; top: 15px; left: 0px; z-index: 99999; background: transparent linear-gradient(rgb(68, 68, 68), rgb(17, 17, 17)) repeat scroll 0% 0%; border-radius: 5px; }
+#navPopup ul li { float: none; margin: 0px; padding: 0px; display: block; box-shadow: 0px 1px 0px rgb(17, 17, 17), 0px 2px 0px rgb(119, 119, 119); }
+#navPopup ul li:last-child { box-shadow: none; }
+#navPopup ul a { padding: 10px 10px 10px 0px; height: auto; line-height: 1; white-space: nowrap; text-transform: none; float: left; display: inline; color: rgb(37, 170, 225); }
+html #navPopup ul a { height: 10px; width: 150px; }
+#navPopup ul a:hover { background: transparent linear-gradient(rgb(4, 172, 236), rgb(1, 134, 186)) repeat scroll 0% 0%; }
+#navPopup ul li:first-child a, #navPopup ul li:last-child a { border-radius: 5px; }
+#navPopup ul li:first-child a::after { content: ""; position: absolute; left: 50px; top: -8px; width: 0px; height: 0px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid rgb(68, 68, 68); }
+#navPopup ul li:first-child a:hover::after { border-bottom-color: rgb(4, 172, 236); }
+#navPopup span { padding-left: 5px; }
+#navPopup ul a span { float: left; display: inline; width: 100px; padding-right: 0px; background-position: right 0px ! important; }
+#navPopup::after { visibility: hidden; display: block; font-size: 0px; content: " "; clear: both; height: 0px; }
+.chip { width: 50px; height: 35px; }
+#dvChiparea11 { margin: 130px 0px 0px 180px; }
+#dvChiparea1 { margin: -60px 0px 0px 180px; cursor: pointer; }
+#dvChiparea21 { margin: 70px 0px 0px 280px; }
+#dvChiparea2 { margin: -25px 0px 0px 280px; cursor: pointer; }
+#dvChiparea31 { margin: 170px 0px 0px 620px; }
+#dvChiparea3 { margin: -25px 0px 0px 620px; cursor: pointer; }
+#dvChiparea41 { margin: 130px 0px 100px 720px; }
+#dvChiparea4 { margin: -60px 0px 100px 720px; cursor: pointer; }
+#navCasino { z-index: 99; }
+#navCasino > table { margin-left: 14px; }
+#dvBoard, #tblSlotMachine { margin-left: auto; margin-right: auto; }
+#navCasino li { list-style: outside none none; text-align: center; width: 190px; }
+#navCasino li ul { display: none; width: 250px; }
+#navCasino .gameContainer:hover > ul, .btnPlay { display: block; }
+#navCasino ul { position: absolute; text-align: center; border-radius: 0px; padding: 0px; width: 100px; }
+#navCasino ul li { float: none; }
+#navCasino ul li img { padding-bottom: 0px; vertical-align: bottom; }
+#dvPopupBody { float: right; left: 14%; margin-top: -14px; width: 254px; height: 240px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-color: rgb(9, 118, 173); border-radius: 4px; border-width: 2px; border-style: double; padding: 4px 2px 2px; box-shadow: 5px 5px 5px rgb(188, 188, 188); }
+.btnPlayFun, .btnPlayReal { padding-top: 10px; padding-left: 10px; font-size: 12px; text-align: center; }
+#dvPopupBody #dvBtn { vertical-align: bottom; width: 254px; }
+#navCasino td:first-child #dvPopupBody { margin-right: -10px; }
+#navCasino td:last-child #dvPopupBody { margin-right: 8px; }
+#navCasino td #dvPopupBody { z-index: 200; }
+#gameSlotProvider td li ul .lnkProdNameCasino { text-overflow: ellipsis; overflow: hidden; display: block; white-space: nowrap; }
+.gameContainer { border: 3px none; width: 100px; }
+.btnPlayReal { background: transparent url("button-animation.gif") no-repeat scroll -202px 0px; color: rgb(255, 255, 255); height: 30px; font-weight: 700; }
+.btnPlayReal:hover { background: transparent url("button-animation.gif") no-repeat scroll -202px -38px; color: rgb(255, 255, 255); }
+.btnPlayFun { background: transparent url("button-animation.gif") no-repeat scroll -331px 0px; color: rgb(37, 170, 225); height: 30px; font-weight: 700; }
+#dvSlotGames:hover, .btnPlayFun:hover { background: transparent url("button-animation.gif") no-repeat scroll -331px -38px; color: rgb(37, 170, 225); }
+#buttonPlay { width: 250px; float: left; padding: 0px; }
+#dvTopSlotBanner { margin: -20px auto 0px; width: 375px; }
+#dvBoard { width: 560px; margin-top: -50px; z-index: 5; }
+#dvBoard ul { padding: 0px; margin: 0px; }
+#dvBoard ul li { display: inline; padding: 0px; }
+#dvBarTicker { margin: 0px auto; height: 45px; width: 767px; }
+.light { vertical-align: bottom; }
+#tblSlotMachine { text-align: center; margin-top: -25px; }
+#dvSlotGames { background: transparent url("button-animation.gif") no-repeat scroll -331px 0px; color: rgb(37, 170, 225); width: 120px; height: 30px; text-align: center; font-weight: 700; padding-left: 5px; padding-top: 9px; font-size: 12px; margin-top: -40px; }
+#dvSlotGames:hover { font-size: 12px; }
+#dvSlotGames a { color: rgb(37, 170, 225); }
+#ulSlotGames { height: 28px; font-size: 13px; line-height: 20px; color: rgb(37, 170, 225); padding: 2px 2px 0px; cursor: pointer; z-index: 99; }
+#ulSlotGames li { margin: 0px 5px; padding: 0px 0px 10px; float: left; list-style: outside none none; color: rgb(255, 255, 255); display: block; }
+#ulSlotGames li.menuItem .cssSelectedMenu { font-weight: 700; text-decoration: none; display: block; margin: 0px; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); color: rgb(255, 255, 255); background-color: rgb(37, 170, 225); border-radius: 4px; }
+#ulSlotGames li.menuItem a { font-weight: 700; color: rgb(37, 170, 225); text-decoration: none; display: block; padding: 2px; margin: 0px; }
+#navSlotGames li:hover > a, #ulSlotGames .current a { color: rgb(255, 255, 255); background-color: rgb(37, 170, 225); border-radius: 4px; }
+#navSlotGames { margin: 50px 32px 40px 0px; float: right; width: 100%; }
+#provMenu:hover { color: rgb(255, 255, 255); cursor: pointer; }
+#provMenu.active { background-image: url("C_subtit_bg.png"); background-repeat: no-repeat; }
+#providerMenu { margin: 89px 0px 20px 200px; height: 50px; padding-top: 5px; }
+.btnPlayLiveCasino, .lnkPlayDownload { background: transparent url("button-animation.gif") no-repeat scroll -202px 0px; color: rgb(255, 255, 255); height: 30px; text-align: center; font-weight: 700; padding-top: 10px; font-size: 12px; margin-top: 5px; width: 129px; }
+.lnkProdName, .lnkProdNameCasino { font-weight: 700; padding-top: 3px; }
+.btnPlayLiveCasino:hover, .lnkPlayDownload:hover { background: transparent url("button-animation.gif") no-repeat scroll -202px -38px; color: rgb(255, 255, 255); }
+.lnkProdName { color: rgb(87, 86, 86); font-size: 13px; cursor: pointer; width: 170px; display: inline-block; }
+.lnkProdNameCasino { color: rgb(37, 170, 225); font-size: 12px; cursor: default; }
+.imgProv { cursor: pointer; }
+.scroller2 { position: absolute; margin: 194px 0px 0px 194px; z-index: 99; height: 30px; background: transparent none repeat scroll 0px 0px; width: 570px; padding: 8px 0px 0px; color: rgb(255, 255, 255); font-size: 13px; font-weight: bolder; display: none; }
+.scroller, .scrollingtext { height: 25px; position: relative; font-size: 13px; }
+.scrollingtext a:hover { text-decoration: underline; }
+.scroller { top: -35px; margin-left: 194px; z-index: 100; width: 570px; color: rgb(231, 238, 244); overflow-x: hidden; }
+.scrollingtext { white-space: nowrap; }
+.tblJackpot { margin: -55px 0px 0px 203px; position: relative; z-index: 10; width: 177px; float: left; text-align: center; color: rgb(255, 255, 255); }
+.tblJackpot > tbody { height: 20px; }
+.tblJackpot2 { position: relative; z-index: 6; width: 155px; text-align: center; color: rgb(255, 255, 255); margin: -55px auto 18px; }
+.tdBoard { width: 50%; height: 40px; background: rgb(0, 0, 255) none repeat scroll 0% 0%; }
+#tdBoard2, #tdBoard3 { width: 160px; height: 30px; z-index: 9; position: relative; }
+.imgSlot { padding-bottom: 0px; padding-top: 0px; vertical-align: bottom; }
+#enterMachine1 { height: 60px; }
+.p2p-buttons { padding: 0px 37px; float: left; }
+#tdBoard1 { width: 160px; height: 10px; position: relative; margin: -50px 0px 0px 212px; z-index: 9; text-align: center; padding: 10px 0px; font-size: 13px; color: rgb(255, 255, 255); }
+#tdBoard2 { float: left; }
+#tdBoard3 { margin: -50px 0px 20px 398px; text-align: center; font-weight: 700; color: rgb(255, 255, 255); }
+.spAmount { font-weight: 400; font-size: 13px; position: relative; }
+.spTitle { font-weight: bolder; font-size: 12px; }
+.dvAmount { margin-top: -5px; }
+.LinkImgGame { text-align: center; display: inline; margin: 0px auto; }
+.arrow { border-style: dashed dashed solid; border-color: transparent; height: 0px; line-height: 0; vertical-align: middle; width: 0px; float: right; position: absolute; display: inline-block; border-width: 15px; left: 73px; }
+#bigarrow { border-bottom-color: rgb(9, 118, 173); z-index: 998; top: -43px; }
+#smallarrow { border-bottom-color: rgb(255, 255, 255); top: -40px; z-index: 999; }
+div#dvBtn a { width: 111px; margin-left: 3px; }
+#imgBarTicker { margin-left: 18px; margin-top: -5px; }
+.GameJackpot { font-size: 12px; float: left; width: 95px; margin-top: -99px; z-index: 180; color: rgb(255, 255, 255); position: relative; background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%; }
+#sunSlot { visibility: hidden; }

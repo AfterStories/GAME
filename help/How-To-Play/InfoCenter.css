@@ -1,0 +1,163 @@
+/* Code tidied up by ScrapBook */
+body { background-color: rgb(255, 255, 255); margin: 0px auto; }
+optgroup { font-weight: 400; font-style: normal; text-decoration: none; }
+h1, h2, h4, h5, h6, strong, b { font-size: 12px; color: rgb(0, 0, 0); margin-top: 0px; padding-left: 0px; }
+strong, b { font-size: 13px; }
+h3 { font-size: 14px; color: rgb(0, 0, 0); }
+a img { border: medium none; }
+a:link { color: rgb(37, 170, 225); text-decoration: none; }
+a:visited { color: rgb(37, 170, 225); text-decoration: none; }
+a:hover { color: rgb(204, 204, 204); }
+.fun88_logo { float: left; margin-top: 20px; }
+.container { float: none; width: 960px; margin: 0px auto; }
+.container_manageAcc { float: left; margin-top: 20px; margin-bottom: 50px; box-shadow: 0px 15px 19px rgb(230, 230, 230); }
+.acc_manage_menu > table { border-spacing: 0px; width: 960px; border-collapse: collapse; }
+.acc_manage_menu td { border: 1px solid rgb(204, 204, 204); width: 234px; }
+.selected, .acc_manage_menu td:hover { border-bottom: 0px none ! important; border-top: 3px solid rgb(37, 170, 225) ! important; }
+.acc_manage_content { border-bottom: 1px solid rgb(204, 204, 204); border-left: 1px solid rgb(204, 204, 204); border-right: 1px solid rgb(204, 204, 204); }
+.acc_manage_menu td:hover { border-bottom: 0px none; background-color: rgb(255, 255, 255); border-top: 2px solid rgb(37, 170, 225); }
+.nav_btn1 { background: transparent url("a_button_2.png") no-repeat scroll 0px 0px; cursor: pointer; float: left; height: 21px; margin-left: -25px; position: absolute; width: 23px; }
+.nav_btn2 { background: transparent url("b_button_2.png") no-repeat scroll 0px 0px; cursor: pointer; float: left; height: 21px; margin-left: -25px; position: absolute; width: 15px; }
+.nav_btn3 { background: transparent url("c_button_2.png") no-repeat scroll 0px 0px; cursor: pointer; float: left; height: 21px; margin-left: -25px; position: absolute; width: 23px; }
+.nav_btn4 { background: transparent url("d_button_2.png") no-repeat scroll 0px 0px; cursor: pointer; float: left; height: 21px; margin-left: -25px; position: absolute; width: 15px; }
+.nav_btn5 { background: transparent url("e_button_2.png") no-repeat scroll 0px 0px; cursor: pointer; float: left; height: 21px; margin-left: -28px; position: absolute; width: 23px; }
+.nav_btn_m { background: transparent url("f_button_2.png") no-repeat scroll 0px 0px; cursor: pointer; float: left; height: 21px; margin-left: -28px; position: absolute; width: 23px; }
+.ManageAcc_nav_text { color: rgb(37, 170, 225); font-size: 11px; margin-bottom: 0px; margin-left: 63px; margin-right: auto; width: 80px; padding: 13px; }
+.spacing0 { clear: both; height: 0px; }
+.blue_bar { width: 950px; height: 63px; background-color: rgb(37, 170, 225); margin: 4px auto 0px; }
+.cl { font-size: 0px; line-height: 0; clear: both; display: block; height: 0px; }
+.text_bluebar { font-size: 20px; color: rgb(255, 255, 255); float: left; text-transform: uppercase; margin: 23px 0px 0px 15px; }
+#divMsg { opacity: 0.4; text-align: center; display: none; width: 800px; margin: 15px auto 0px; padding: 9px; }
+.msg_success { background-color: rgb(144, 238, 144); border: 2px solid green; border-radius: 7px; color: rgb(0, 0, 0); font-size: 20px; text-transform: uppercase; padding: 11px; }
+.msg_failed { background-color: rgb(255, 182, 193); border: 2px solid red; border-radius: 7px; color: rgb(0, 0, 0); font-size: 20px; text-transform: uppercase; padding: 11px; }
+.Internal { float: right; margin-right: 6px; margin-top: 10px; padding-top: 8px; padding-left: 10px; margin-bottom: 7px; text-align: left; width: 705px; border: 1px solid rgb(219, 219, 219); }
+.text_normal { color: rgb(45, 45, 43); font-size: 11px; }
+.menu_a { float: left; margin-top: 10px; margin-bottom: 10px; margin-left: 5px; padding-top: 8px; width: 223px; border: 1px solid rgb(219, 219, 219); }
+.coolair { list-style: outside none none; max-width: 100%; width: 218px; margin: 0px; padding: 0px; }
+.coolair > li { margin-left: 7px; position: relative; padding: 0px; }
+.coolair > li > ul { list-style: outside none none; padding-left: 0px;margin: 0px; }
+.coolair > li > ul > li { margin-top: 0px; line-height: 25px; }
+.coolair > li > a { text-decoration: none; color: rgb(255, 255, 255); display: block; padding: 6px; }
+.coolair > li > ul > li > a { color: rgb(255, 255, 255); text-decoration: none; display: block; padding-left: 10px; }
+.caret { position: absolute; display: inline-block; width: 0px; height: 0px; vertical-align: top; border-top: 4px solid rgb(255, 255, 255); border-right: 4px solid transparent; border-left: 4px solid transparent; content: ""; right: 8px; top: 11px; }
+.caret1 { position: relative; display: inline-block; width: 0px; height: 0px; vertical-align: top; border-top: 4px solid rgb(255, 255, 255); border-right: 4px solid transparent; border-left: 4px solid transparent; content: ""; right: 8px; top: 10px; float: right; }
+.coolair.vs_codecanyon > li > a { background: rgb(239, 240, 240) none repeat scroll 0% 0%; border-bottom: 1px solid rgb(255, 255, 255); color: rgb(108, 108, 108); font-size: 12px; }
+.coolair.vs_codecanyon > li > ul > li > a { color: rgb(108, 108, 108); font-size: 12px; background-color: rgb(246, 247, 247); }
+.coolair.vs_codecanyon > li > a.Selected, .coolair.vs_codecanyon > li > a:hover { background-color: rgb(37, 170, 225) ! important; color: rgb(255, 255, 255) ! important; border-bottom: 1px solid rgb(238, 238, 238) ! important; }
+.coolair.vs_plain_black > li > a { background: rgb(153, 153, 153) none repeat scroll 0% 0%; color: rgb(108, 108, 108); font-size: 12px; border-bottom: 1px solid rgb(255, 255, 255); }
+.coolair.vs_plain_black > li > ul > li > a { color: rgb(108, 108, 108); font-size: 12px; }
+.coolair.vs_codecanyon > li > a.SelectedParent { background-color: rgb(37, 170, 225); color: rgb(255, 255, 255); border-bottom: 1px solid rgb(255, 255, 255); }
+ul.subSubMenu > li > a { color: rgb(108, 108, 108); }
+.coolair.vs_codecanyon > li > ul > li > a.Selected, .coolair.vs_codecanyon > li > ul > li > a.SelectedParent, .coolair.vs_codecanyon > li > ul > li > a:hover { color: rgb(37, 170, 225); font-weight: bold; }
+ul.subSubMenu > li > a.Selected, ul.subSubMenu > li:hover a, ul.specialList > li:hover a { color: rgb(37, 170, 225) ! important; }
+ul.subSubMenu > li:hover { cursor: pointer; }
+.tel_button_cn { width: 200px; height: 16px; }
+.tel_button_cn span { display: block; height: 16px; background: transparent url("logo_phone.png") no-repeat scroll 0px 0px; line-height: 16px; }
+.tel_button_cn span:link { background: transparent url("logo_phone.png") no-repeat scroll 0px 0px; }
+.tel_button_cn span:hover { background-position: 0px -16px; color: rgb(37, 170, 225) ! important; cursor: default; }
+.BBM_button_id { width: 200px; height: 16px; }
+.BBM_button_id span { display: block; height: 16px; background: transparent url("logo_BBM.jpg") no-repeat scroll 0px 0px; line-height: 16px; }
+.BBM_button_id span:link { background: transparent url("logo_BBM.jpg") no-repeat scroll 0px 0px; }
+.email_button_cn { width: 200px; height: 15px; }
+.email_button_cn a { display: block; height: 14px; background: transparent url("logo_email.png") no-repeat scroll 0px 0px; }
+.email_button_cn a:link { background: transparent url("logo_email.png") no-repeat scroll 0px 0px; }
+.email_button_cn a:hover { color: rgb(37, 170, 225) ! important; }
+.live_button_cn { width: 200px; height: 14px; }
+.live_button_cn a { display: block; height: 14px; background: transparent url("logo_chat.png") no-repeat scroll 0px 0px; }
+.live_button_cn a:link { background: transparent url("logo_chat.png") no-repeat scroll 0px 0px; }
+.live_button_cn a:hover { color: rgb(37, 170, 225) ! important; }
+.line_button span { display: block; height: 20px; background: transparent url("logo_line.png") no-repeat scroll 0px 0px; line-height: 16px; }
+.line_button span:hover { background-position: 0px -20px; color: rgb(37, 170, 225) ! important; cursor: default; }
+ul.coolair.vs_codecanyon > li > ul > li, .coolair.vs_plain_black > li > ul > li { background-color: white ! important; border-bottom: 1px solid rgb(255, 255, 255); }
+.coolair.vs_codecanyon > li.active > a { background-color: rgb(37, 170, 225); color: rgb(255, 255, 255); }
+.coolair.vs_codecanyon > li > .caret, .coolair.vs_plain_black > li > .caret { border-top: 4px solid rgb(204, 204, 204); }
+.coolair.vs_plain_black > li.active > a, .coolair.vs_plain_black > li > ul > li > a:hover { background-color: rgb(37, 170, 225); color: rgb(255, 255, 255); }
+.email_button_cn a:hover, .live_button_cn a:hover { background-position: 0px -14px; }
+.grey { color: grey ! important; }
+.sideMenuInfo { padding-left: 28px; font-size: 14px; }
+.telCN { padding-left: 15px; }
+.ManageAcc_nav_text { color: rgb(37, 170, 225); font-size: 11px; margin-bottom: 0px; margin-left: 50px; margin-right: auto; width: 68px; padding: 13px; }
+.selected, .acc_manage_menu td:hover { border-bottom: 0px none ! important; border-top: 3px solid rgb(37, 170, 225) ! important; }
+.hid { display: none; }
+.subSubMenu { font-size: 12px; margin-left: 20px; list-style: outside none none; }
+.standardBtn { border: medium none; border-radius: 0px; }
+.hidden a { color: black; }
+.hidden li { cursor: pointer; }
+.hidden li:hover { background-color: rgb(37, 170, 225); }
+.smallTitle { color: rgb(70, 70, 70) ! important; font-weight: bold; margin-top: 10px; text-transform: uppercase; font-size: 13px; }
+.content { margin-left: 17px; margin-top: 5px; padding-bottom: 20px; width: 640px; }
+.dropdownlist a { color: black; }
+.dropdownlist li { cursor: pointer; }
+.dropdownlist li:hover a { color: rgb(37, 170, 225); }
+.dropdownlist { background-color: rgb(204, 204, 204); border: 1px solid grey; color: rgb(0, 0, 0); display: none; font-size: 12px; line-height: 22px; margin-left: 20px; overflow: hidden ! important; padding: 12px 0px 20px 12px; float: left; list-style: outside none none; width: 236px; height: 174px; }
+#dropdownlist1 { overflow-y: scroll ! important; }
+.ddlMenu2EnUs { margin-left: 232px; }
+.ddlMenu3EnUs { margin-left: 437px; }
+.ddlMenu2ZhCn { margin-left: 90px; }
+.ddlMenu3ZhCn { margin-left: 214px; }
+.ddlMenu2ViVn { margin-left: 205px; }
+.ddlMenu3ViVn { margin-left: 496px; }
+.ddlMenu2ThTh { margin-left: 120px; }
+.ddlMenu3ThTh { margin-left: 345px; }
+.ddlMenu2IdId { margin-left: 232px; }
+.ddlMenu3IdId { margin-left: 437px; }
+.content li { margin-top: 9px; }
+.questions > table, .questions, .questions ul { margin-bottom: 15px; }
+.content > ul > li > div { color: rgb(0, 0, 0); font-size: 12px; font-weight: normal; margin-top: 0px; text-transform: none; }
+.faq-table2 { border-bottom: 1px solid rgb(210, 210, 210); border-left: 1px solid rgb(210, 210, 210); }
+.faq-table { border-bottom: 1px solid rgb(210, 210, 210); }
+.bigTitle { color: rgb(37, 170, 225); font-size: 2em; font-weight: bold; text-transform: uppercase; margin-bottom: 20px; line-height: 25px; }
+.innerUL { margin-left: 15px; }
+.specialHidden { width: 186px; height: 120px ! important; overflow: hidden ! important; }
+div.dropdownlist_container { position: absolute; margin-left: -22px; z-index: 200; max-width: 200px; }
+a.fg-button.fg-button-icon-right.ui-widget.ui-state-default.ui-corner-all.standardBtn { color: rgb(255, 255, 255); font-size: 12px; width: 200px; }
+.red, .question { color: red; }
+table.tableborder td, table.tableRules td { border-style: solid; border-color: black; }
+table.tableborder, table.tableRules { border-spacing: 0px; border-collapse: collapse; }
+table.tableRules thead { font-weight: bold; }
+table.tableRules tbody { color: red; }
+.zoneBac td { padding: 5px; }
+.zoneBac th { padding: 5px; }
+.tableheader { color: rgb(255, 255, 255); font-weight: bold; font-size: 14px; }
+.content table { width: 80%; }
+.content table table { width: 100%; }
+.Internal table, .Internal th, .Internal td { border: 1px solid black; text-align: center; background-color: rgb(255, 255, 255); }
+.tbldescription { padding: 20px 0px 0px 25px; }
+.larger { color: rgb(102, 102, 102); font-size: 1.4em; font-weight: bold; }
+table.tftable { color: rgb(51, 51, 51); border-width: 1px; border-color: rgb(114, 158, 165); border-collapse: collapse; font-size: 12px; width: 100%; }
+table.tftable th { font-size: 14px; background-color: rgb(37, 170, 225); border-width: 1px; padding: 8px; border-style: solid; border-color: rgb(114, 158, 165); text-align: center; }
+table.tftable th.SubHeader { font-size: 12px; background-color: rgb(255, 255, 255); border-width: 1px; padding: 8px; border-style: solid; border-color: rgb(114, 158, 165); text-align: center; }
+table.tftable tr { background-color: rgb(255, 255, 255); }
+table.tftable td { font-size: 12px; border-width: 1px; padding: 8px; border-style: solid; border-color: rgb(114, 158, 165); width: 100px; text-align: center; }
+table.tftable td.Subject { font-size: 12px; border-width: 1px; padding: 8px; border-style: solid; border-color: rgb(114, 158, 165); font-weight: bold; color: rgb(0, 63, 127); }
+table.tftable td.SubjectDataColumn { font-size: 12px; border-width: 1px; padding: 8px; border-style: solid; border-color: rgb(114, 158, 165); font-weight: bold; color: rgb(0, 63, 127); width: 100px; }
+table.tftable td.Span { font-size: 12px; border-width: 1px; padding: 8px; border-style: solid; border-color: rgb(114, 158, 165); text-align: center; width: 150px; }
+.menu_b { margin-left: 5px; padding-top: 8px; width: 223px; border: 1px solid rgb(219, 219, 219); margin-bottom: 8px; }
+.aff_icon1_cn span { height: 21px; background: transparent url("logo_qq.png") no-repeat scroll 0px 0px; line-height: 16px; }
+.aff_icon1_cn span:hover { background-position: 0px -22px; }
+.aff_icon1_th span { height: 20px; background: transparent url("logo_line.png") no-repeat scroll 0px 0px; line-height: 20px; }
+.aff_icon1_th span:hover { background-position: 0px -20px; }
+.aff_icon1_id span { height: 15px; background: transparent url("logo_blackberry.png") no-repeat scroll 0px 0px; line-height: 16px; }
+.aff_icon1_id span:hover { background-position: 0px -16px; }
+.aff_icon1_cn span, .aff_icon1_th span, .aff_icon1_id span { display: block; margin-left: 10px; }
+.aff_icon1_cn span:hover, .aff_icon1_th span:hover, .aff_icon1_id span:hover { color: rgb(37, 170, 225) ! important; cursor: default; }
+.aff_icon2_cn span { margin-top: 6px; }
+.aff_icon2_jp span, .aff_icon2_kr span { margin-top: -15px; }
+.aff_icon2_cn span, .aff_icon2_th span, .aff_icon2_vn span, .aff_icon2_id span, .aff_icon2_jp span, .aff_icon2_kr span { display: block; height: 18px; background: transparent url("logo_skype.png") no-repeat scroll 0px 0px; line-height: 16px; margin-left: 10px; }
+.aff_icon2_cn span:hover, .aff_icon2_th span:hover, .aff_icon2_vn span:hover, .aff_icon2_id span:hover, .aff_icon2_jp span:hover, .aff_icon2_kr span:hover { background-position: 0px -18px; color: rgb(37, 170, 225) ! important; cursor: default; }
+.aff_icon3_jp a, .aff_icon3_kr a { margin-top: -25px; }
+.aff_icon3_en a { margin-top: -50px; }
+.aff_icon3_cn a, .aff_icon3_th a, .aff_icon3_vn a, .aff_icon3_id a, .aff_icon3_jp a, .aff_icon3_kr a, .aff_icon3_en a { display: block; height: 14px; background: transparent url("logo_email.png") no-repeat scroll 0px 0px; margin-left: 10px; }
+.aff_icon3_cn a:hover, .aff_icon3_th a:hover, .aff_icon3_vn a:hover, .aff_icon3_id a:hover, .aff_icon3_jp a:hover, .aff_icon3_kr a:hover, .aff_icon3_en a:hover { background-position: 0px -14px; color: rgb(37, 170, 225) ! important; }
+.aff_icon1_vn { background: transparent url("logo_yahoo.png") no-repeat scroll 0px 30px; top: -36px; }
+.aff_icon2_vn { background: transparent url("logo_skype.png") no-repeat scroll 0px 33px; top: -34px; }
+.aff_icon3_vn { background: transparent url("logo_email.png") no-repeat scroll 0px 36px; top: -38px; }
+.aff_icon1_vn, .aff_icon2_vn, .aff_icon3_vn { left: 10px; position: relative; }
+.aff_icon1_vn a, .aff_icon2_vn a, .aff_icon3_vn a { margin-top: 22px; }
+.aff_icon1_vn a:hover, .aff_icon2_vn a:hover, .aff_icon3_vn a:hover { margin-top: 22px; }
+.aff_yahoo:hover .aff_icon1_vn { background-position: 0px -22px; top: -6px; }
+.aff_yahoo:hover .lbl_yahoo, .aff_email:hover .lbl_email { color: rgb(37, 170, 225) ! important; }
+.aff_skype:hover .aff_icon2_vn { background-position: 0px -18px; top: -1px; }
+.aff_skype:hover .lbl_skype { color: rgb(37, 170, 225) ! important; cursor: default; }
+.aff_email:hover .aff_icon3_vn { background-position: 0px -15px; top: -1px; }
+table.tftable th.blue { font-size: 12px; border-width: 1px; padding: 8px; border-style: solid; border-color: rgb(114, 158, 165); font-weight: bold; color: rgb(0, 63, 127) ! important; background-color: white; }

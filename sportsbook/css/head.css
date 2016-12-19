@@ -1,4 +1,4 @@
-/* Code tidied up by ScrapBook */
+
 @import url("frameForAll.css");
 body { font-family: Arial,Helvetica,sans-serif,Tahoma; margin: 0px; -moz-text-size-adjust: none; }
 body, .odd_manu, .odd_manu::before { background-color: rgb(50, 130, 190); }

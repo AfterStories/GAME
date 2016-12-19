@@ -614,10 +614,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl04', 'MainForm', [],
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
             function onlinealipayinmaintenance() {
-                emergencyAlert('在线支付宝存款维护中','欲使用在线支付宝存款支付，请联系在线客服。','http://helpcn.fun585.com','在线客服','关闭');
+                emergencyAlert('在线支付宝存款维护中','欲使用在线支付宝存款支付，请联系在线客服。','#','在线客服','关闭');
             }
             function wechatinmaintenance() {
-                emergencyAlert('微信存款维护中','欲使用微信存款支付，请联系在线客服。','http://helpcn.fun585.com','在线客服','关闭');
+                emergencyAlert('微信存款维护中','欲使用微信存款支付，请联系在线客服。','#','在线客服','关闭');
             }
             if(window.location.href.toLowerCase().indexOf("fun2008") > -1) {
                 $('#WC_Container #txtWCAmount').attr('disabled', 'disabled');
@@ -933,7 +933,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl04', 'MainForm', [],
             </a>
             <img src="Exchange/images/girl.png" style="width: 124px; height: 203px; margin: 10px 10px -4px 10px;" id="imgLiveChatGirl" width="124" height="203">
 
-            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('http://helpcn.fun585.com', 'newwindow', 'width=420, height=250'); return false;" href="http://helpcn.fun585.com/">
+            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('#', 'newwindow', 'width=420, height=250'); return false;" href="#/">
                 <div class="quickcontactbtn quickcontactbtn1">
                 </div>
             </a>
@@ -973,35 +973,22 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl04', 'MainForm', [],
         <div id="top_nav_left">
             
             <ul>
-                <li id="topBannerLogoContainer" style="display: none;"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="http://www.10010388.com/zh-CN/Home" style="display: none;"></a></li>
-                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/About-Us/About-Fun88', 'AboutUs',1020); return false;" style=""></a></li>
-                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/Help/General', 'Help',1020); return false;" style=""></a></li>
+                <li id="topBannerLogoContainer"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="../home/index.html"></a></li>
+                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('../help/About-Us/index.html', 'AboutUs',1020); return false;"></a></li>
+                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('../help/help/index.html', 'Help',1020); return false;"></a></li>
                 
-                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/How-To-Play/Sports/Sportsbook/Rules/General-Rules', 'GeneralRules','1020');">
+                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager('../help/How-To-Play/index.html', 'GeneralRules','1020');">
                     <div></div>
                     如何投注</a>
                 </li>
                 
-                <li id="dropdown">
+                <li><!-- id="dropdown" -->  <!-- 加入此id，ul下拉菜单生效 -->
                     <a id="hbtn4" class="top_nav_text" onclick="javascript:popUpWindowManager('#', 'LiveHelp',1020); return false;" title="">
                         <div></div>
                         在线客服
-                        <span id="arrow2"></span>
+                        <!--  -->
                     </a>
-                    <ul>
-                        <li class="livechat_zh-CN"><a id="hbtn7" class="top_nav_text" href="#">
-                            <div></div>
-                            客服下载版
-                        </a>
-                        </li>
-                        
-                        <li class="livechat_zh-CN"><a id="hbtn8" class="top_nav_text" onclick="javascript:open_new_window('/zh-CN/DNS/index.html'); return false;">
-                            <div></div>
-                            防劫持工具
-                        </a>
-                        </li>
-                        
-                    </ul>
+
                 </li>
             </ul>
         </div>
@@ -1322,7 +1309,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl04', 'MainForm', [],
 </div>
 <div id="top">
     <div id="logofun88InZh" class="logoLoc">
-        <a class="logo" href="http://www.10010388.com/zh-CN/Home">FUN88</a>
+        <a class="logo" href="../home/index.html">FUN88</a>
     </div>
 
     <div id="header_right">
@@ -2114,7 +2101,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl04', 'MainForm', [],
         <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Privacy-Policy" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'PrivacyPolicy',1020); return false;">隐私权政策</a>
         |
          
-        <a href="http://www.10010388.com/zh-CN/Info-Center/How-To-Play/Sports/Sportsbook/Rules/General-Rules" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'RulesAndRegulation',1020); return false;">一般规则</a>
+        <a href="http://www.10010388.com../help/index.html" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'RulesAndRegulation',1020); return false;">一般规则</a>
         
         |
         <a href="http://www.10010388.com/zh-CN/Sitemap" class="padding_space2 clickable">乐天堂导航</a>

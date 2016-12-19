@@ -1,4 +1,4 @@
-/* Code tidied up by ScrapBook */
+
 .ContainerLeft { width: 191px; float: left; }
 .menu_R a, .menu_gr a, .menu_R a span, .menu_gr a span { background-image: url("mutag.gif"); background-repeat: no-repeat; }
 .menu_R a span, .menu_gr a span { overflow: hidden; display: block; text-overflow: ellipsis; white-space: nowrap; }

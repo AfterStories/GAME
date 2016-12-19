@@ -1,4 +1,4 @@
-/* Code tidied up by ScrapBook */
+
 a.button-ref { height: 16px; line-height: 16px; color: rgb(33, 32, 33); text-decoration: none; font-weight: normal; font-size: 11px; padding: 0px 6px; display: inline-block; margin-left: 3px; cursor: pointer; border-radius: 4px; border-width: 1px; border-style: solid; border-color: rgb(181, 178, 181); background-color: rgb(255, 255, 255); background-image: url("mask2_001.png"); background-repeat: repeat-x; background-position: 0px 0px; }
 a.button-ref:hover { color: rgb(33, 32, 33); border-color: rgb(0, 195, 198); background-image: url("mask1.png"); background-repeat: repeat-x; background-position: 0px 0px; background-color: rgb(198, 255, 255); }
 a.buttons, .dropDown, .dropDown ul.submenu { height: 16px; line-height: 16px; color: rgb(33, 32, 33); text-decoration: none; font-weight: normal; font-size: 11px; padding: 0px 6px; display: inline-block; margin-left: 3px; cursor: pointer; border-radius: 4px; border-width: 1px; border-style: solid; border-color: rgb(191, 189, 189); background-color: rgb(255, 255, 255); background-image: url("mask2_001.png"); background-repeat: repeat-x; background-position: 0px 0px; }

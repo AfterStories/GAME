@@ -1,4 +1,4 @@
-/* Code tidied up by ScrapBook */
+
 .worldcup-scorebar { clear: both; padding: 2px 0px 2px 4px; width: 990px; height: 65px; color: rgb(255, 255, 255); line-height: 16px; font-size: 12px; font-family: Arial,PMingLiU,SimSun; }
 .worldcup-scorebar .image { float: left; width: 88px; height: 100%; background: transparent url("scorebar-image.png") repeat scroll 0% 0%; }
 .worldcup-scorebar [class^="arrow-"] { width: 16px; height: 100%; }

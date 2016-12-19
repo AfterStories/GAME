@@ -318,7 +318,7 @@
   
 </script>
 <style>
-/* Code tidied up by ScrapBook */
+
 .quickcontactbtn1 { background: transparent url("button-chat.png") no-repeat scroll 0% 0%; }
 .quickcontactbtn1:hover { background: transparent url("button-chat-r.png") no-repeat scroll 0% 0%; }
 .quickcontactbtn2 { background: transparent url("button-download.png") no-repeat scroll 0% 0%; }
@@ -385,7 +385,7 @@
 
 
 <style type="text/css">
-/* Code tidied up by ScrapBook */
+
 #leftSideBannerContainer { position: fixed; bottom: 0%; z-index: 9999; left: 3%; }
 .closeSideBannerBtn { right: 0px; width: 25px; height: 25px; position: absolute; cursor: pointer; background: transparent url("allicons.png") no-repeat scroll -641px -5px; }
 #imgSideBanner { cursor: url("Poke-Ball.png"), pointer; }
@@ -419,36 +419,25 @@
     <div id="top_header">
         <div id="top_nav_left">
             
-            <ul>
-                <li id="topBannerLogoContainer"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="http://www.10010388.com/zh-CN/Home"></a></li>
-                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/About-Us/About-Fun88', 'AboutUs',1020); return false;"></a></li>
-                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/Help/General', 'Help',1020); return false;"></a></li>
+                        <ul>
+                <li id="topBannerLogoContainer"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="#"></a></li>
+                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('../help/About-Us/index.html', 'AboutUs',1020); return false;"></a></li>
+                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('../help/help/index.html', 'Help',1020); return false;"></a></li>
                 
-                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/How-To-Play/Sports/Sportsbook/Rules/General-Rules', 'GeneralRules','1020');">
+                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager('../help/How-To-Play/index.html', 'GeneralRules','1020');">
                     <div></div>
                     如何投注</a>
                 </li>
                 
-                <li id="dropdown">
-                    <a id="hbtn4" class="top_nav_text" onclick="javascript:popUpWindowManager('http://helpcn.fun585.com', 'LiveHelp',1020); return false;" title="">
+                <li><!-- id="dropdown" -->  <!-- 加入此id，ul下拉菜单生效 -->
+                    <a id="hbtn4" class="top_nav_text" onclick="javascript:popUpWindowManager('#', 'LiveHelp',1020); return false;" title="">
                         <div></div>
                         在线客服
-                        <span id="arrow2"></span>
+                        <!--  -->
                     </a>
-                    <ul>
-                        <li class="livechat_zh-CN"><a id="hbtn7" class="top_nav_text" href="http://www.10010388.com/zh-CN/LiveChat">
-                            <div></div>
-                            客服下载版
-                        </a>
-                        </li>
-                        
-                        <li class="livechat_zh-CN"><a id="hbtn8" class="top_nav_text" onclick="javascript:open_new_window('/zh-CN/DNS/index.html'); return false;">
-                            <div></div>
-                            防劫持工具
-                        </a>
-                        </li>
-                        
-                    </ul>
+
+                </li>
+            </ul>
                 </li>
             </ul>
         </div>
@@ -575,7 +564,7 @@
                 
 
 <style type="text/css">
-/* Code tidied up by ScrapBook */
+
 .dropdown a.ja-JP { font-size: 12px; }
 table.tblMemberRewardLvl td { padding-left: 5px; }
 .RewardLvlTooltip { border: 1px solid; background-color: rgb(255, 255, 255); border-radius: 6px; position: absolute; margin-top: 10px; padding: 5px 0px 5px 5px; min-width: 145px; visibility: hidden; margin-left: 30px; }
@@ -731,7 +720,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 </div>
 <div id="top" style="margin-top:40px;">
     <div id="logofun88InZh" class="logoLoc">
-        <a class="logo" href="http://www.10010388.com/zh-CN/Home">FUN88</a>
+        <a class="logo" href="../home/index.html">FUN88</a>
     </div>
 
     <div id="header_right">
@@ -1461,7 +1450,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     <div class="BetradarSiteButton">
         
 <style type="text/css">
-/* Code tidied up by ScrapBook */
+
 #bg_container { background: transparent url("images/btnExpand.png") no-repeat scroll 0px 0px; cursor: pointer; height: 80px; z-index: -1; width: 58px; }
 #divbg_container { position: absolute; width: 57px; padding-left: 5px; display: none; z-index: 100; margin-top: 50px; }
 #bg_descko, #bg_descen, #bg_desczh, #bg_descid, #bg_descja { position: relative; width: 48px; height: 40px; text-align: center; color: white; line-height: 16px; overflow-wrap: break-word; padding-left: 5px; padding-top: 5px; }
@@ -1578,7 +1567,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                 <div id="quickButton" style="height: 41px; width: 153px; margin: auto auto 4px; display: block;"></div>
             </a>
 
-            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('http://helpcn.fun585.com', 'newwindow', 'width=420, height=250'); return false;" href="http://helpcn.fun585.com/">
+            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('#', 'newwindow', 'width=420, height=250'); return false;" href="#/">
                 <div class="quickcontactbtnSP quickcontactbtn1SP">
         
                 </div>
@@ -2076,7 +2065,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
 </script>
 <style type="text/css">
-/* Code tidied up by ScrapBook */
+
 #slides1 .pagination { float: right; margin-bottom: 0px; margin-right: 28px; margin-top: -37px; position: relative; z-index: 101; }
 #slidesCDC .pagination, #slidesPlayBoyTutorial .pagination { float: right; margin-bottom: 0px; margin-right: 28px; margin-top: -37px; position: relative; z-index: 101; }
 #CDC_popup_box .dvEmptyFrame { display: none; }

@@ -1,4 +1,4 @@
-/* Code tidied up by ScrapBook */
+
 .HalfTime, .LiveTime, .IsLive, .text_time font[color="red"] { color: rgb(255, 92, 92); font-size: 10px; }
 .text_time, .text_time a { color: rgb(42, 49, 72); font-size: 11px; text-align: center; }
 .text_time a:hover { font-weight: normal ! important; }

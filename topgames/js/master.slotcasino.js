@@ -318,7 +318,7 @@ function CGInitEvents() {
     });
 }
 
-function CGDisplayBox() {
+function CGDisplayBox() {   /*lazyload显示游戏*/
     $(".cggamedata > .cgbox").show();
     $(".cggamedata > .cglist").hide();
     $(".cggamedata").css("background-color", "#fff");
