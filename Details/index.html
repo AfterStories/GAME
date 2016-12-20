@@ -887,7 +887,7 @@ p { margin-bottom: 0px; }
 
                 url += extra;
 
-                window.parent.location = url;
+                window.parent.location ="../404/index.html";
             }
 
         });
@@ -911,7 +911,7 @@ p { margin-bottom: 0px; }
                 
                 <li class="leftBorder">
                     <div id="BaseMainContent_HeaderContent_divForgotPwd">
-                        <a id="hbtn5" class="tooltip" title="忘记密码" href="http://www.10010388.com/zh-CN/Forget-Password"></a>
+                        <a id="hbtn5" class="tooltip" title="忘记密码" href="../Forget/index.html"></a>
                     </div>
                 </li>
                 
@@ -1726,7 +1726,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     $("#dialog-message").html('您已经被封锁下注此游戏，请联系我们的线上客服以求帮助。谢谢');
             });
 
-            $(".menu_body_content").load('gamerules.html');
+            /*$(".menu_body_content").load('gamerules.html');*/
 
             $("#firstpane p.menu_head").click(function () {
                 var name = $(this).css('background-image');
@@ -1741,8 +1741,64 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                 }
             });
 
+        function GetQueryString(name)
+        {
+             var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+             var r = window.location.search.substr(1).match(reg);
+             if(r!=null)return  unescape(r[2]); return null;
+        }
+          var gameid = GetQueryString("gameid")
+          var AjaxGameUrl = AjaxURL+"fun/game/getgamedetailPage?gameid="+gameid;
+            
+          getGameDetail();
+            function getGameDetail(){
+                    $.ajax({
+                        dataType:'json',
+                        type:'GET',
+                        data:{},        
+                        url: AjaxGameUrl,
+                        success:function(data) { 
+                                  
+                        var modelImg = AjaxURL+data.data.modelImgUrl 
+
+                        $("#imgDealer").attr("src",modelImg);
+
+                        var titleImgUrl = AjaxURL+data.data.titleImgUrl 
+                       
+                        $("#imgProvLogo").attr("src",titleImgUrl);                        
+
+                        var GameName = data.data.name 
+                       
+                        $("#lblGameName").text(GameName);
+
+                        var GameImgUrl = AjaxURL+data.data.gameImgUrl 
+                       
+                        $("#imgGame").attr("src",GameImgUrl);
+
+                        var Gamedescribe = data.data.describe 
+                       
+                        $("#lblGameDesc").text(Gamedescribe);   
+
+                        var Gamephoto1 = AjaxURL+data.data.gameImg1Url
+                        var Gamephoto2 = AjaxURL+data.data.gameImg2Url
+                        var Gamephoto3 = AjaxURL+data.data.gameImg3Url
+                       
+                        $("#imgScreenshot_0").attr("src",Gamephoto1);
+                        $("#imgScreenshot_1").attr("src",Gamephoto2);
+                        $("#imgScreenshot_2").attr("src",Gamephoto3);     
+
+                        var GamedetailText = data.data.detailText 
+                       
+                        $(".menu_body_content").append(GamedetailText);                                        
+
+
+                    }
+            });
+
+            }
 
         });
+
     </script>
     <!-- Slider -->
     <span id="BaseMainContent_MainContent_CasinoMainContent_lblType"></span>
@@ -1751,34 +1807,34 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             <div id="lblGame">
                 <div id="lblGameProduct">
                     <div id="dvImgDealer">
-                        <img src="dealer-GD.png" id="BaseMainContent_MainContent_CasinoMainContent_imgDealer">
+                        <img  id="imgDealer" style="width:176px;height:363px;">   <!-- 模特图 -->
                     </div>
                     <div id="lblGameProduct_description">
                         <div id="lblGameProduct_description_01">
                             <div class="floaL">
-                                <img src="desc_logo.png" id="BaseMainContent_MainContent_CasinoMainContent_imgProvLogo">
+                                <img id="imgProvLogo" style="width:302px;height:92px;">
                             </div>
                         </div>
                         <div id="lblGameProduct_description_02">
                             <div class="lblGame_back">
-                                <a href="../Live-Casino/index.html"><span style="display: block; color: rgb(37, 170, 225);">
+                                <a href="javascript:getPreviousURL();"><span style="display: block; color: rgb(37, 170, 225);">
                                     返回</span></a>
                             </div>
                         </div>
                         <div id="lblGameProduct_description_03" class="tbl">
                             <div id="lblGP_description_03a">
                                 <div id="lblGP_d_03a_01">
-                                    <img src="gdsicbo.jpg" id="BaseMainContent_MainContent_CasinoMainContent_imgGame" width="131" height="130">
+                                    <img  id="imgGame" width="131" height="130">
                                 </div>
                                 <div id="lblGP_d_03a_02">
                                     <div class="ProductName">
-                                        <span id="BaseMainContent_MainContent_CasinoMainContent_lblGameName">骰宝</span>
+                                        <span id="lblGameName"></span>  <!-- 游戏名 -->
                                     </div>
                                     <div class="Title">
                                         游戏描述
                                     </div>
                                     <div class="Description">
-                                        <span id="BaseMainContent_MainContent_CasinoMainContent_lblGameDesc">骰宝是一套涉及猜测三个骰子总数大小的传统中国游戏。经过多年的演化，骰宝现在除了猜测大小，还有更多的投注选项供玩家选择如：三个骰子的总数和单/双等等！</span>
+                                        <span id="lblGameDesc"></span>   <!-- 游戏描述 -->
                                     </div>
                                 </div>
                             </div>
@@ -1801,14 +1857,14 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                                 游戏截图
                             </p>
                             <div class="menu_body first_pane">
-                                <div class="menu_body_photo">
+                                <div class="menu_body_photo">    <!-- 游戏截图 -->
                                     <table id="" style="border-collapse: collapse;" cellspacing="0" cellpadding="10">
 	<tbody><tr>
 		<td>
                                             <table>
                                                 <tbody><tr>
                                                     <td>
-                                                        <img src="SicBo1.png" id="imgScreenshot_0" width="248">
+                                                        <img id="imgScreenshot_0" width="248">
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -1816,7 +1872,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                                             <table>
                                                 <tbody><tr>
                                                     <td>
-                                                        <img src="SicBo2.png" id="imgScreenshot_1" width="248">
+                                                        <img id="imgScreenshot_1" width="248">
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -1824,7 +1880,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                                             <table>
                                                 <tbody><tr>
                                                     <td>
-                                                        <img src="SicBo3.png" id="imgScreenshot_2" width="248">
+                                                        <img id="imgScreenshot_2" width="248">
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -1840,8 +1896,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
 <div class="menu_body">
 	<div class="menu_body_content"> <!-- 详情图文 -->
-
-
 
 
 	</div>
@@ -2694,7 +2748,7 @@ document.getElementById('ctl05_PasswordPopupValidator').dispose = function() {
             } catch (err) {
             }
             
-            mobileRedirect("#");
+            /*mobileRedirect("#");*/
             
         });
     </script>

@@ -149,7 +149,7 @@
     </script>
     <script type="text/javascript">
         $('#top_header').scrollToFixed();
-        var strURLIovation = "https://mpsnare.iesnare.com/snare.js";
+        
         $(document).ready(function () {
             $("#colorbox, #cboxOverlay").appendTo('form:first');
             $("#uiHtmlBody").css("display", "block");
@@ -534,7 +534,7 @@
 
                 url += extra;
 
-                window.parent.location = url;
+                window.parent.location = "../404/index.html";
             }
 
         });
@@ -558,7 +558,7 @@
                 
                 <li class="leftBorder">
                     <div id="BaseMainContent_HeaderContent_divForgotPwd">
-                        <a id="hbtn5" class="tooltip" title="忘记密码" href="http://www.10010388.com/zh-CN/Forget-Password"></a>
+                        <a id="hbtn5" class="tooltip" title="忘记密码" href="../Forget/index.html"></a>
                     </div>
                 </li>
                 
@@ -697,11 +697,11 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 </script>
 <div id="login">
     <div class="field-holder">
-        <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$UserName" maxlength="20" id="UserName" tabindex="1" class="field" autocomplete="off" placeholder="用户名" type="text">
+        <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$UserName" maxlength="20" id="UserName" tabindex="1" class="field" autocomplete="off" placeholder="用户名" type="text" style="height:28px;">
         <span id="BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator" class="username-error" style="visibility: hidden;"></span>
     </div>
     <div class="field-holder">
-        <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$Password" maxlength="20" id="Password" tabindex="2" class="password" autocomplete="off" placeholder="用户密码" type="password">
+        <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$Password" maxlength="20" id="Password" tabindex="2" class="password" autocomplete="off" placeholder="用户密码" type="password" style="height:28px;">
         <span id="BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator" class="password-error" style="visibility: hidden;"></span>
     </div>
     <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$btnLogin" value="登入" onclick="return Login();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnLogin" tabindex="3" class="button" type="submit">

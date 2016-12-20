@@ -3045,7 +3045,7 @@ div#outer_top_header {
 }
 
 #login .button {
-	background: url("../lib/images/btn_login_.gif") no-repeat;
+	background: url("../../lib/images/btn_login_.gif") no-repeat;
 	background-position: 0 3px;
 	border: 0
 }
@@ -4609,7 +4609,7 @@ a.WelcomeBox.last {
 	float: left;
 	width: 92px;
 	height: 18px;
-	background-image: url(../lib/images/flagcombine_.png);
+	background-image: url(../../lib/images/flagcombine_.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
 	margin: 8px 0 0 6px

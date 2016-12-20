@@ -114,13 +114,7 @@
             font-weight: bold;
         }
 
-        .btnIMHelpDownload {
-            width: 185px;
-            height: 50px;
-            background: url(images/buttongreen.png) no-repeat;
-            -ms-background-size: 185px 48px;
-            background-size: 185px 48px;
-        }
+
 
         .btnIMHelpDownloadTH {
             width: 253px;
@@ -139,10 +133,6 @@
             cursor: pointer;
         }
 
-            .btnIMHelpDownload > ul {
-                height: 40px;
-                width: 200px;
-            }
 
             .btnIMHelpDownloadTH > ul {
                 height: 54px;
@@ -1623,7 +1613,7 @@
 
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
-        createDropDown();
+        
         $("#target dt").removeClass().addClass('zh-CN');
         var $dropTrigger = $(".dropdown dt a");
         var $dropTrigger2 = $(".dropdown dd span");
@@ -1700,13 +1690,13 @@
 
                 url += extra;
 
-                window.parent.location = url;
+                window.parent.location ="../404/index.html";
             }
 
         });
     });  
     function createDropDown() {
-        var $form = $("div.lang form");
+        var $form = $("div.lang ");
         $form.hide();
         var source = $("#BaseMainContent_HeaderContent_ascxLang_uiLanguages");
         source.removeAttr("autocomplete");
@@ -1724,7 +1714,7 @@
                 
                 <li class="leftBorder">
                     <div id="BaseMainContent_HeaderContent_divForgotPwd">
-                        <a id="hbtn5" class="tooltip" title="忘记密码" href="http://www.10010388.com/zh-CN/Forget-Password"></a>
+                        <a id="hbtn5" class="tooltip" title="忘记密码" href="../Forget/index.html"></a>
                     </div>
                 </li>
                 
@@ -2417,21 +2407,7 @@
                 <span id="slotclub2">独享精彩的优惠</span>
             </div>
             
-                <div class="btnIMHelpDownload ">
-            
-                <ul id="vertical-ticker1" style="overflow: hidden; list-style-type: none; position: relative;">
-                        
-                        
-                    <li style="margin-top: 0px;">
-                            <div class="tooltip btnDownloadIMCasino donwloadbtn1a" style="width: 185px; height: 40px; float: left;" title="下载及体验更精彩的游戏!" onclick="javascript:EnsureLogin(downloadURL); return false; ">
-                                一键登入游戏
-                            </div>
-                        </li><li style="margin-top: 0px;">
-                            <div class="tooltip btnDownloadIMCasino donwloadbtn1a" style="width: 185px; height: 40px; float: left;" title="下载及体验更精彩的游戏!" onclick="javascript:EnsureLogin(downloadURL); return false; ">
-                                下载客户端
-                            </div>
-                        </li></ul>
-            </div>
+
         </div>
     </div>
 

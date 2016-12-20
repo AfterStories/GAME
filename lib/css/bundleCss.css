@@ -564,7 +564,7 @@ div#outer_top_header { top: 0px; position: fixed; background-color: rgb(37, 170,
 .LoginAdjust { float: right; }
 #login { float: right; display: inline; padding-top: 2px; width: 375px; margin-right: 3px; }
 #login .field-holder { float: left; display: inline; width: 130px; height: 40px; padding: 1px; }
-#login .field, #login .password { width: 118px; background: rgb(255, 255, 255) none repeat scroll 0px 0px; color: rgb(50, 51, 51); }
+#login .field, #login .password { width: 118px; height: 18px;background: rgb(255, 255, 255) none repeat scroll 0px 0px; color: rgb(50, 51, 51); }
 #login .field:focus, #login .password:focus { border-color: rgb(37, 170, 226); }
 #login .button { float: right; display: inline; width: 107px; height: 36px; font-size: 9pt; font-weight: bold; color: rgb(37, 170, 225); text-indent: 8px; padding-top: 0px; margin-top: -2px; }
 #login .button { background: transparent url("../images/btn_login_.gif") no-repeat scroll 0px 3px; border: 0px none; }
