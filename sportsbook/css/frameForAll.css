@@ -30,7 +30,7 @@ th.tabthdwn-bg { background-position: left bottom ! important; }
 .ValueClass, .ValueClass a { font-size: 10px ! important; font-weight: bold; }
 .oddsTableTagArea { position: relative; }
 .oddsTableTag { list-style: outside none none; overflow: auto; margin: 0px 0px 1px; padding: 0px; }
-.oddsTableTagArea li { float: left; background: transparent url("mask3.png") repeat-x scroll 0px -22px; font-size: 11px; font-weight: bold; margin-right: 1px; padding: 0px 3px; text-align: center; width: 121px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 22px; cursor: pointer; }
+.oddsTableTagArea li { float: left; background: transparent url("../images/mask3.png") repeat-x scroll 0px -22px; font-size: 11px; font-weight: bold; margin-right: 1px; padding: 0px 3px; text-align: center; width: 121px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 22px; cursor: pointer; }
 .infoArea { position: absolute; top: 5px; right: 3px; }
 .more-win { border: 5px solid; min-width: 300px; }
 .more-win.info { position: absolute; right: -11px; width: 350px; z-index: 10; }

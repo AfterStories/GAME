@@ -1,5 +1,20 @@
-
-
+#header{
+    position: relative;
+    top:-400px;
+}
+#main{
+	margin-top:70px;
+}
+.picture {
+    background-image: url("../../lib/images/arrow-head-down.jpg");
+    background-position: -31px 1px;
+    cursor: pointer;
+    height: 19px;
+    margin: -19px 0 0 175px;
+    position: relative;
+    width: 10px;
+    z-index: 1000;
+}
 .ui-helper-clearfix::before, .ui-helper-clearfix::after { content: ""; display: table; border-collapse: collapse; }
 .ui-helper-clearfix::after { clear: both; }
 .ui-widget-overlay { position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; }
@@ -9,7 +24,7 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner { border: 
 .PL_field-holder { margin-right: -13px; }
 .lang-zh-CN input, .lang-zh-CN textarea, .lang-zh-CN select, .lang-zh-CN keygen, .lang-zh-CN button { font-family: "Microsoft YaHei",serif; }
 input, textarea, select, keygen, button { font-family: Arial,serif; font-size: 12px; }
-body { font-family: Arial,serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; font-size: 12px; line-height: 18px; color: rgb(0, 0, 0); border: 0px none; }
+body { font-family:"Microsoft YaHei",serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; font-size: 12px; line-height: 18px; color: rgb(0, 0, 0); border: 0px none; }
 body.lang-zh-CN { font-family: "Microsoft YaHei",serif; }
 html { border: 0px none; }
 select { -moz-appearance: none; border: 1px solid; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); border-radius: 3px; color: rgb(108, 108, 108); background-attachment: fixed; background-position: center center; cursor: pointer; }
@@ -48,7 +63,7 @@ p { padding-bottom: 18px; }
 
 #top_nav_right li a {left:3px; display: block; font-size: 12px; color: rgb(255, 255, 255); }
 #top_nav_right ul #languageSelect:hover { height: 33px; }
-#BaseMainContent_HeaderContent_divForgotPwd a { height: 33px; position: relative;top:-16px; }
+#BaseMainContent_HeaderContent_divForgotPwd a { height: 33px; position: relative;top:0px; }
 .top_nav_text { font-size: 11px; padding: 8px 10px 0px 28px; color: rgb(97, 95, 95); height: 26px; }
 .tooltip {  }
 div#fixed_header { background-color: rgb(37, 170, 225); width: 100%; position: fixed; height: 33px; top: 0px; z-index: 4998; left: 0px; }
@@ -131,7 +146,7 @@ div#outer_top_header { margin:0 atuo;top: 0px; position: absolute; background-co
 #SA_Setting { margin-top: -13px; }
 .nav_tit_right { color: rgb(0, 0, 0); float: left; font-size: 15px; height: 31px; line-height: 34px; text-align: center; width: 104px; border: 1px solid rgb(208, 206, 206); }
 #japan_email { display: block; margin-top: -134px; margin-left: 115px; width: 134px; height: 22px; position: absolute; cursor: pointer; }
-#navigation { width: 100%; height: 40px; margin-bottom: 20px; margin-top: 10px;position: absolute;top:-300px; }
+#navigation { width: 100%; height: 40px; margin-bottom: 20px; margin-top: 10px;position: absolute;}
 #navMain { width: 960px; z-index: 99; height: 43px; font-size: 16px; text-align: justify; padding: 0px; }
 #navMain td.on ul, #navMain td.off ul { margin: 0px; padding: 0px; }
 #navMain a { text-decoration: none; text-transform: uppercase; float: left; }
@@ -163,7 +178,7 @@ div#outer_top_header { margin:0 atuo;top: 0px; position: absolute; background-co
 .dropdown dt a { background: transparent none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 92px; height: 18px; padding: 0px; }
 .dropdown dd ul { width:114px;left:-1px;background-color: rgb(17, 145, 191); color: rgb(255, 255, 255); display: none; list-style: outside none none; position: absolute; z-index: 99999; border-left: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); margin: 32px 17px 0px 0px; padding: 0px; }
 .dropdown dd ul li a { width: 92px; height: 18px;}
-.dropdown dd ul li a span, .dropdown dt a span { float: left; width: 92px; height: 18px; background-image: url('../../lib/images/flagcombine_.png'); background-repeat: no-repeat; cursor: pointer; margin: 8px 0px 0px 10px; }
+.dropdown dd ul li a span, .dropdown dt a span { float: left; width: 92px; height: 18px; background-image:url('../../lib/images/flagcombine_.png'); background-repeat: no-repeat; cursor: pointer; margin: 8px 0px 0px 10px; }
 #dd1 ul li:hover { background: rgb(17, 145, 191) none repeat scroll 0% 0%; height: 36px; }
 
 
@@ -378,12 +393,12 @@ html, body {
 	#TopAD{ width: 680px; height: 34px; position: relative; top:-12px;left:114px;margin:2px auto;overflow: hidden;z-index: 1}
 	#TopAD ul { width: 680px; height: 34px; position: relative; }
 	#TopAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
-	#TopAD ul li a { text-decoration:none; height: 34px;}
+	#TopAD ul li a { text-decoration:none; height: 34px;font-size: 14px}
 /* 底部滚动广告 */
 	#BottomAD { float: left;width: 794px; height: 34px; position: relative;overflow: hidden }
 	#BottomAD ul { width: 1000px; height: 34px; position: relative; }
 	#BottomAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
-	#BottomAD ul li a {line-height:34px;font-size:14px;text-decoration:none;  height: 34px;}
+	#BottomAD ul li a {line-height:34px;font-size:14px;text-decoration:none;  height: 34px;font-size:14px;}
 
 /* 点击下载按钮 */
 #fun88apk_dl_zh{background: transparent url('../images/fun88-apk-sprite.png') no-repeat scroll -146px 0px;}
