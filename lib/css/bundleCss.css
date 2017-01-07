@@ -761,7 +761,7 @@ a.WelcomeBox.last { cursor: pointer; }
 #navMain.ko-KR { font-size: 15px; }
 #navMain td.on ul, #navMain td.off ul { margin: 0px; padding: 0px; }
 #navMain a { text-decoration: none; text-transform: uppercase; float: left; }
-#navMain td a.cssSelectedMenu { font-weight: 700; text-decoration: none; display: block; border-top: 3px solid rgb(37, 170, 225); margin: -3px 0px 0px; }
+#navMain td a.cssSelectedMenu { font-weight: 700; text-decoration: none; display: block; }
 #navMain td { white-space: nowrap; z-index: 999; text-align: center; margin: 0px auto; position: relative; width: auto; }
 #navMain td ul { display: none; position: absolute; left: 0px; min-width: 180px; width: 110%; }
 #navMain td a { color: rgb(37, 170, 225); display: block; z-index: 1999; position: relative; text-align: center; padding: 7px; }

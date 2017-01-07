@@ -1,0 +1,3 @@
+/* Code tidied up by ScrapBook */
+.Wdate { border: 1px solid rgb(153, 153, 153); height: 20px; background: rgb(255, 255, 255) url("datePicker.gif") no-repeat scroll right center; }
+.WdateFmtErr { font-weight: bold; color: red; }
