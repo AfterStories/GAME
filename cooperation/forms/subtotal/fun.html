@@ -439,19 +439,23 @@ $("#amountChart").css("display", "none");
         </tbody></table>
         <div id="divSelectDate" style="position: absolute; margin-left: -20px; background-color: rgb(238, 238, 238); width: 180px; display: none; z-index: 300; border-right: 1px solid rgb(51, 51, 51); border-left: 1px solid rgb(51, 51, 51); border-bottom: 1px solid rgb(51, 51, 51);">
             <center>
-                <div style="width: 100%; background-color: rgb(156, 202, 228); color: Black;">
-                    <span id="lblSelType">选择方式:</span><input value="rbDateType1" name="selDate" id="rbDateType1" style="border-style: none;" checked="checked" onclick="if (this.checked) { document.getElementById('divSelDateByDay').style.display = ''; document.getElementById('divSelDateByMonth').style.display = 'none'; }" type="radio"><label for="rbDateType1">按日</label><input value="rbDateType2" name="selDate" id="rbDateType2" style="border-style: none;" onclick="if (this.checked) { document.getElementById('divSelDateByDay').style.display = 'none'; document.getElementById('divSelDateByMonth').style.display = ''; }" type="radio"><label for="rbDateType2">按月</label>
-                </div>
+
                 <br>
                 <div style="width: 100%;">
                     <div id="divSelDateByDay">
-                        <input name="txtBeginDate" id="txtBeginDate" style="width: 70px;" readonly="readOnly" maxlength="20" onClick="WdatePicker({el:'demospan1'});" type="text">—<input name="txtEndDate" id="txtEndDate" onClick="WdatePicker({el:'demospan2'})" style="width: 70px;" readonly="readOnly" maxlength="20" type="text">
-                        <span id="demospan1" style="display: none"></span> 
-                        <span id="demospan2" style="display: none"></span>
+                        <input name="txtBeginDate" id="txtBeginDate" style="width: 70px;"  maxlength="20" onClick="WdatePicker({
+                        onpicking:function(dp){
+                       getdatepicker($dp.cal.getNewDateStr(),'txtBeginDate');
+                         }
+                        });" type="text">
+                        —
+                        <input name="txtEndDate" id="txtEndDate" onClick="WdatePicker({
+                        onpicking:function(dp){
+                       getdatepicker($dp.cal.getNewDateStr(),'txtEndDate');
+                         }
+                        });" style="width: 70px;" readonly="readOnly" maxlength="20" type="text">
                     </div>
-                    <div id="divSelDateByMonth" style="display: none;">
-                        <input name="txtBeginMonth" id="txtBeginMonth" style="width: 60px;" readonly="readOnly" maxlength="20"  onfocus="WdatePicker({onpicked:pickedFunc3,dateFmt:'yyyy-MM',lang:'zh-cn',maxDate:'2099-12-31'})" type="text">—<input name="txtEndMonth" id="txtEndMonth" style="width: 60px;" readonly="readOnly" maxlength="20"  onfocus="WdatePicker({onpicked:pickedFunc4,dateFmt:'yyyy-MM',lang:'zh-cn',maxDate:'2099-12-31'})" type="text">
-                    </div>
+
                 </div>
                 <br>
                 <div style="width: 100%;">
@@ -476,34 +480,10 @@ var LoginUserName =  $("#LoginUserName",parent.document).html();
         //按照月份
         var MonthBeginTime; 
         var MonthEndTime  
-$("#txtBeginDate").click(function(){
-  
-   var aaa  = $("#demospan1").html();
-   alert(aaa)
-  
-})
 
 
-function pickedFunc2(){
-DayEndtime = $dp.cal.getNewDateStr();
-alert(DayBegintime)
-return DayEndtime
-}
-function pickedFunc3(){
-MonthBeginTime = $dp.cal.getNewDateStr();
-
-}
-function pickedFunc4(){
-MonthEndTime = $dp.cal.getNewDateStr();
-
-}
-
-
-var PostBeginTime
-var PostEndTime
-var PostBeginTime
- var PostEndTime
-
+var PostBeginTime,DayBeginTime
+var PostEndTime,DayEndTime
 
 
 
@@ -528,12 +508,26 @@ var PostBeginTime
         list.push({date:s, betAmount:0});
     }
 
+function getdatepicker(time,inputid){
+	if (inputid=="txtBeginDate") {		
+		DayBeginTime = time
+		
+	}else if(inputid=="txtEndDate"){
+		DayEndTime = time
+		
+	}else if(inputid=="txtBeginMonth"){
+		MonthBeginTime = time
+	}else if(inputid=="txtEndMonth"){
+		MonthEndTime = time
+	}
+	
+}
 
 function posttime (){
           
 if ( $("#divSelDateByMonth").is(":hidden")) {
-    PostBeginTime =pickedFunc1();
-    PostEndTime = pickedFunc2();
+    PostBeginTime =DayBeginTime
+    PostEndTime = DayEndTime
 
 }else{
     PostBeginTime = MonthBeginTime
@@ -543,9 +537,6 @@ if ( $("#divSelDateByMonth").is(":hidden")) {
 
   alert(PostBeginTime);
   alert(PostEndTime)
-
-
-    return;
 
     };
 
