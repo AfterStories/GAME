@@ -14,7 +14,7 @@
 
     <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
 
-
+<script type="text/javascript" src="../lib/js/login.js"> </script>
 <script>
 
 	$(document).ready(function(){
@@ -411,7 +411,9 @@ var isLogin
 
 
     });
+    
 addRowHandlers();
+
         });     
 
 		});
@@ -738,9 +740,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     </div>
  
 </div>
-
-
-        
+    
         <!-- Footer -->
         
 <div id="footer">
@@ -750,9 +750,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     </div>  <!-- div#page -->
 
  
-
-
-
 <div id="uiPopupLogin" class="colorbox" style="display: none; width: 364px;">
     
     <div id="RewardsControlDIV" style="visibility: hidden; display: none;"></div>
@@ -1608,79 +1605,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         var nonHomepageBackground = getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('im-casino') != -1 ||
         ((getUri.indexOf("im-casino") !== -1) && getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('top-games') != -1) ||
         ((getUri.indexOf("worldcup") !== -1) && getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('worldcup') != -1);
-        function initiate_backgroundBanner(notDy) {
-            if (getUri.indexOf("/zh-cn/default") != -1 ||
-                    getUri.indexOf("/zh-cn/home") != -1 || nonHomepageBackground
-            ) {
-                var maximageObj = $("#maximage1");
-                if (typeof (notDy) == 'undefined') {
-                    for (var loop = 1; loop <= $(maximageObj).children().length; loop++)
-                        checks.push(loop);
-                }
-                if (typeof maximageObj !== 'undefined' && $(maximageObj).children().length == checks.length && checks.length != 0) {
-                    var tempButton = [];
-                    var tempLinks = [];
-                    for (var a = 0; a < checks.length; a++) {
-                        var n = checks[a] - 1;
-                        $($("#maximage1 > img")[n]).clone().appendTo($("#maximage"));
-                        tempButton[a] = SliderButtonName[n];
-                        tempLinks[a] = links[n];
-                    }
-                    SliderButtonName = tempButton;
-                    links = tempLinks;
-                    maximageObj.remove();
-                    maximageObj = $("#maximage");
-                    $(maximageObj).maximage({
-                        cycleOptions: {
-                            fx: 'scrollHorz',
-                            speed: 1000,
-                            timeout: 8000,
-                            prev: ".prev",
-                            next: ".next",
-                            pager: '#cycle-nav table tr',
-                            pagerAnchorBuilder: function (idx, slide) {
-                                var result = '<td id="homeBannerButton' + (idx + 1) + '" class="dy-unit" ><a href="javascript:void(0);">';
-                                if (getUri.indexOf("/zh-cn/home") != -1 || getUri.indexOf("/zh-cn/default") != -1) {
-                                    result += SliderButtonName[idx];
-                                }
-                                return result + '</a></td>';
-                            }
-                        },
-                        onFirstImageLoaded: function () {
-                            jQuery(maximageObj).fadeIn('fast');
 
-                        }
-                    });
-                    $('.toggle').bind('click', function (e) {
-                        e.preventDefault();
-                        $(maximageObj).cycle('toggle');
-                    });
-                    $('div#slides').on('click', function () {
-                        var num = $('td.activeSlide').attr('id').split('homeBannerButton').pop();
-                        if (typeof DY !== "undefined")
-                            DY.API('event', { name: 'HomeBannerClicked', properties: { BannerNumber: num } });
-                        sendDesktopGA("Home Banner " + getCookie("CultureInfo").toLowerCase(), "Click", SliderButtonName[num - 1] + (isLogin === "true" ? " Auth" : " Anon"));
-                        var func = new Function(links[--num]);
-                        func();
-                    });
-                }
-            }
-        }
-        $(function () {
-            if ($.browser.msie && $.browser.version < '8.0') {
-                $(window).ready(function () { initiate_backgroundBanner(); });
-            } else {
-                initiate_backgroundBanner();
-            }
-
-            $("#slides, #cursorDiv, .prev, .next").mouseleave(function () {
-                $("#cursorDiv .prev").css("visibility", "hidden");
-                $("#cursorDiv .next").css("visibility", "hidden");
-            }).mouseenter(function () {
-                $("#cursorDiv .prev").css("visibility", "visible");
-                $("#cursorDiv .next").css("visibility", "visible");
-            });
-        });
         function ClosePopupLiveStream() {
             $.colorbox.close();
             $("#PL_popup_box").css("display", "none");
@@ -1708,7 +1633,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             $("#Video_popup_box").css("display", "none");
         }
 
-        $(function () {
+/*        $(function () {
             if (typeof (Sys) !== 'undefined' && Sys.Browser.agent === Sys.Browser.InternetExplorer && Sys.Browser.version === 10) {
                 Sys.WebForms.PageRequestManager.getInstance()._onFormElementActive = function Sys$WebForms$PageRequestManager$_onFormElementActive(element, offsetX, offsetY) {
                     if (element.disabled) {
@@ -1731,7 +1656,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     }
                 };
             }
-        });
+        });*/
 
         function registerDeny() { PopupIovation('/zh-CN/Registration-Deny?width=573&height=310',1, '673', '410' ,'/zh-CN/Default'); }
 
@@ -1767,6 +1692,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     
 <script src="js/jquery-ui-caroufredsel-6.2.1.packed.js" type="text/javascript"> </script>
  <script type="text/javascript" src="../lib/js/scrollAd.js"> </script>
-<script type="text/javascript" src="../lib/js/login.js"> </script>
+
 
 </html>

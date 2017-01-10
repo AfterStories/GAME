@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" data-useragent="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>如何推广乐天堂FUN88| 乐天堂FUN88寻求代理合作</title>
     <meta name="description" content="#">
 
     <link type="image/x-icon" rel="icon" href="../lib/images/favicon.ico">
@@ -73,6 +72,184 @@
     <script type="text/javascript" src="js/master.videomanager.js"></script>
     <script type="text/javascript" src="js/jQuery Cookie.js"></script>
     <script type="text/javascript" src="js/master.cookie.js"></script>
+    <script type="text/javascript">
+        var g_Cookie_PopUpWelcome = "PopUpWelcome";
+        function getCookie(c_name) {
+            var c_value = document.cookie;
+            var c_start = c_value.indexOf(" " + c_name + "=");
+            if (c_start == -1) {
+                c_start = c_value.indexOf(c_name + "=");
+            }
+            if (c_start == -1) {
+                c_value = null;
+            }
+            else {
+                c_start = c_value.indexOf("=", c_start) + 1;
+                var c_end = c_value.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = c_value.length;
+                }
+                c_value = unescape(c_value.substring(c_start, c_end));
+            }
+            return c_value;
+        }
+        function setCookie(c_name, value, exdays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+            document.cookie = c_name + "=" + c_value;
+        }
+        function deleteCookie(cname) {
+            CreateCookie(cname, "", -1);
+            document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+        function isCookieExist(strCookieKey) {
+            var cookieValue = $.cookie(strCookieKey);
+            if ($.cookie(strCookieKey) == "" || $.cookie(strCookieKey) == null || $.cookie(strCookieKey) == "undefined") {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function createCookie(strCookieKey) {
+            $.cookie(strCookieKey, 1,
+            {
+                expires: 3650
+            });
+        }
+
+        function CreateCookie(name, value, days) {
+    if (days) {
+        var date = new Date;
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1E3);
+        var expires = "; expires=" + date.toGMTString()
+    } else var expires = "";
+    document.cookie = name + "=" + value + expires + "; path=/"
+
+}
+        function deleteCookie(strCookieKey) {
+            $.removeCookie(strCookieKey);
+        }
+        $(document).keypress(function (evt) {
+            evt = (evt) ? evt : ((event) ? event : null);
+            var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+            if ((evt.keyCode == 13) && (node.type == "text" || node.type == "password")) {
+                if (node.id == "UserName" && node.value) {
+                    if ($("#Password").val()) {
+                        $("#login .button").click();
+                    } else {
+                        $("#Password").focus();
+                    }
+                }
+                if (node.id == "Password" && node.value) {
+                    if ($("#UserName").val()) {
+                        $("#login .button").click();
+                    } else {
+                        $("#UserName").focus();
+                    }
+                }
+                if (node.id == "txtUsn" && node.value) {
+                    if ($("#txtPwd").val()) {
+                        $(".PL_login_btn .PL_button").click();
+                    } else {
+                        $("#txtPwd").focus();
+                    }
+                }
+                if (node.id == "txtPwd" && node.value) {
+                    if ($("#txtUsn").val()) {
+                        $(".PL_login_btn .PL_button").click();
+                    } else {
+                        $("#txtUsn").focus();
+                    }
+                }
+                return false;
+            }
+            return true;
+        });
+    </script>
+
+    <script>
+$(document).ready(function () {     
+    if (getCookie("Stories")==1) {
+ 
+            $("#login").css("display", "none");
+            $("#hbtn5").css("display,none")
+            $("#logout").css("display", "block");
+            $(".NoSubMenu1").css("display", "block");
+            $(".NoSubMenu2").css("display", "block");
+            $(".NoSubMenu3").css("display", "block");
+            $("#userInfo").attr("style","display:block");
+            var isLogin = true;
+   
+
+    }else{
+            $("#login").css("display", "block");
+            $("#hbtn5").css("display,block")
+            $("#logout").css("display", "none");
+            $(".NoSubMenu1").css("display", "none");
+            $(".NoSubMenu2").css("display", "none");
+            $(".NoSubMenu3").css("display", "none");
+            $("#userInfo").attr("style","display:none");
+            var isLogin =false;
+
+    }
+
+})
+        function Login(){
+            $ = jQuery;
+
+        var userName = $("#UserName").val();
+        var password = $("#Password").val();
+            if (!userName || !password) {
+                Alert('请输入您的用户名与密码。', true);
+                return false;
+            }
+
+            if(userName=="123" && password=="123"){    // ajax从后台判断后
+                alert("恭喜啊小伙砸，你登陆成功了！")
+                 CreateCookie("Stories", "1", 0);
+                $("#login").css("display", "none");
+                $("#hbtn5").css("display,none")
+                $("#logout").css("display", "block");
+                $(".NoSubMenu1").attr("style","display:block");
+                $(".NoSubMenu2").attr("style","display:block");
+                $(".NoSubMenu3").attr("style","display:block");
+                $("#userInfo").attr("style","display:block");
+                var isLogin = true;
+                var PokerRegister = "False";
+
+            }
+
+        }
+
+        function Logout(){
+            $ = jQuery;
+            var isLogin = false;
+
+            if (true) {//ajax返回退出结果
+                CreateCookie("Stories", "", -1);
+
+                        $("#login").css("display", "block");
+                        $("#hbtn5").css("display,block")
+                        $("#logout").css("display", "none");
+                        $(".NoSubMenu1").css("display", "none");
+                        $(".NoSubMenu2").css("display", "none");
+                        $(".NoSubMenu3").css("display", "none");
+                        $("#userInfo").attr("style","display:none");
+                         window.location.reload();
+                if (getCookie("VIPLogin") == "1") {
+                    CreateCookie("VIPLogin", "", -1);
+
+                }
+            }else{
+                alert("操作失败请稍后重试");
+            }
+        
+    }
+</script>
+
+
 
 
     <script type="text/javascript">
@@ -366,23 +543,7 @@ jQuery(document).ready(function () {
 
 <script src="js/jquery-watermark.js" type="text/javascript"></script>
 
-<script language="javascript" type="text/javascript">
-    function DropDown(el) {
-        this.dd = el;
-        this.initEvents();
-    }
 
-    jQuery(document).ready(function () {
-        var uiUN = jQuery("#UserName");
-        uiUN.watermark('用户名');
-
-        var uiPwd = jQuery("#Password");
-        uiPwd.watermark('用户密码');
-
-//        var d1 = new DropDown(jQuery('#ddlSettings'));
-//        var d2 = new DropDown(jQuery('#ddlWallets'));
-    });
-</script>
 <link href="css/MemberAuthentication.css" rel="stylesheet" type="text/css">
 <style type="text/css">
     .logintextbox
@@ -392,23 +553,28 @@ jQuery(document).ready(function () {
         width: 130px;
     }
 </style>
-<div id="HeaderContent_ascxMbrAuth_pnl_nologin" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'HeaderContent_ascxMbrAuth_btnLogin')">
+<div id="nologin">
 	
  
             <div id="login">
                 <div class="field-holder">
-                    <input name="HeaderContent$ascxMbrAuth$UserName" maxlength="20" id="UserName" tabindex="1" class="logintextbox" autocomplete="off" style="width:130px;" placeholder="用户名" value="Bkmyxif" type="text">                        
+                    <input name="UserName" maxlength="20" id="UserName" tabindex="1" class="logintextbox" autocomplete="off" style="width:130px;" placeholder="用户名" value="" type="text">                        
                 </div>
                 <div class="field-holder">      
-                    <input name="HeaderContent$ascxMbrAuth$Password" maxlength="20" id="Password" tabindex="2" class="logintextbox" autocomplete="off" style="width:130px;" placeholder="用户密码" type="password">
+                    <input name="Password" maxlength="20" id="Password" tabindex="2" class="logintextbox" autocomplete="off" style="width:130px;" placeholder="用户密码" type="password">
                 </div>
-                    <input name="HeaderContent$ascxMbrAuth$btnLogin" value="登入" id="HeaderContent_ascxMbrAuth_btnLogin" tabindex="3" class="button" type="submit">
+                 <input name="btnLogin" value="登入" onclick="Login()" id="btnLogin" tabindex="3" class="button" readonly="readonly" style="vertical-align:middle;text-align:center;padding:0px;font-size:14px; height:32px">
                    
                 <div class="cl">&nbsp;</div>
             </div>
        
-
+    <div id="logout" style="display:none;">
+        <input name="HeaderContent$ascxMbrAuth$divLogout" value="     退出" id="HeaderContent_ascxMbrAuth_divLogout" tabindex="3" class="button" onclick="Logout()" style="vertical-align:middle;text-align:left;">
+        <span class="topmenu">
+            <a href="http://www.10010688.com/lm/AffiliateEdit.aspx?mid=60" target="mainFrame" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration ='none'" style="text-decoration: none;">账户管理</a> &nbsp; | &nbsp; <a href="http://www.10010688.com/lm/Account/BalanceLog.aspx?mid=69" target="mainFrame" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration ='none'" style="text-decoration: none;">帐户明细</a> &nbsp; | &nbsp; <a href="http://www.10010688.com/lm/payment/Withdrawal_EP.aspx?mid=106" target="mainFrame" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration ='none'" style="text-decoration: none;">取款</a> &nbsp; &nbsp; &nbsp;</span>        
+    </div>
 </div>
+
 
 
                     </div>
@@ -428,6 +594,22 @@ jQuery(document).ready(function () {
         
         <a class="logocn" href="../home/index.html ">Logo</a>
         
+    </div>
+    <div id="userInfo" style="display: none;">
+        <div  style="text-align: right; position: relative;">
+        
+        <span>欢迎您,</span>
+        <span id="LoginUserName" style="font-weight: bold;">
+            zhanghaihong77(321399)
+        </span>
+        &nbsp;&nbsp;&nbsp; 
+        主账户 :
+        <span style="color: rgb(46, 154, 254);">0.00</span>
+        
+                       &nbsp;&nbsp;&nbsp;本月盈利 :
+        <span style="color: rgb(46, 154, 254);">0.00</span>
+         &nbsp;&nbsp;&nbsp;
+    </div>
     </div>
     <div style="text-align: right; position: relative;">
          &nbsp;&nbsp;&nbsp;
@@ -508,24 +690,57 @@ jQuery(document).ready(function () {
         <li class="menuSeperator menuInCS"><img src="images/nav-space.png" alt="" height="43"></li>
         
             
-            <li id="联系我们" class="off menuInCS">                    
+            <li id="NoSubMenu0" class="off menuInCS">                    
                 <a href="BlankPage/index.html" id="HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" target="mainFrame">首页</a>
                 <ul class="SubMenu">
                 <li class="menuInCS"><a href="about/index.html" id="provider" class="menuChild" target="mainFrame">关于我们</a></li>
                 <li class="menuInCS"><a href="help/index.html" target="mainFrame" id="provider" class="menuChild">帮助/常见问题</a></li>
-                <li class="menuInCS"><a href="contact/index.html" target="mainFrame" id="provider" class="menuChild">联系我们</a></li></ul> 
+                <li class="menuInCS"><a href="contact/index.html" target="mainFrame" id="provider" class="menuChild">联系我们</a></li>
+                </ul> 
             </li>
         
-                <li class="menuSeperator menuInEn"><img src="images/nav-space.png" alt="" height="43"></li>
+                <li class="menuSeperator menuInEn NoSubMenu1 menuInCS" style="display: none;"><img src="images/nav-space.png" alt="" height="43"></li>
+
+                <li class="NoSubMenu1  menuInCS" style="display: none;">                    
+                    <a href="curriculum/index.html" id="HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" target="mainFrame">收入大纲</a>
+                     
+                </li>         
+
+                <li class="menuSeperator menuInEn NoSubMenu2 menuInCS" style="display: none;"><img src="images/nav-space.png" alt="" height="43"></li>
             
-                <li id="NoSubMenu2" class="off menuInCS">                    
+                <li class="NoSubMenu2 menuInCS" style="display: none;">                    
+                    <a href="http://www.10010688.com/lm/Report/AffiliateApply.aspx?mid=65&amp;mver=5" id="HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" target="mainFrame">介绍人</a>
+                     
+                </li>
+            
+                <li class="menuSeperator menuInEn NoSubMenu3 menuInCS" style="display: none;"><img src="images/nav-space.png" alt="" height="43"></li>
+            
+            <li id="NoSubMenu3" class="NoSubMenu3 off menuInCS" style="display: none;">                    
+                <a href="forms/subtotal/fun.html" id="HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" target="mainFrame">报表</a>
+                <ul class="SubMenu">
+                <li class="menuInCS"><a href="forms/subtotal/fun.html" id="provider" class="menuChild" target="mainFrame">乐天堂汇总报表</a></li>
+                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">产品汇总报表</a></li>
+                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">体育博彩详情</a></li>
+                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">BF交易</a></li>
+                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">娱乐场详情</a></li>
+                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">快乐彩详情</a></li>
+                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">老虎机详情</a></li>
+                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">会员汇总报表</a></li>
+                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">运营汇总报表</a></li>
+                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">捕鱼游戏</a></li>
+                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">运营报表</a></li>                                                                                
+                </ul> 
+            </li>
+                <li class="menuSeperator menuInEn NoSubMenu4 menuInCS" ><img src="images/nav-space.png" alt="" height="43"></li>
+            
+                <li class="NoSubMenu4  menuInCS">                    
                     <a href="how/index.html" id="HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" target="mainFrame">如何运作</a>
                      
                 </li>
             
-                <li class="menuSeperator menuInEn"><img src="images/nav-space.png" alt="" height="43"></li>
+                <li class="menuSeperator menuInEn NoSubMenu5 menuInCS"><img src="images/nav-space.png" alt="" height="43"></li>
             
-                <li id="NoSubMenu3" class="off menuInCS">                    
+                <li class="NoSubMenu5 menuInCS">                    
                     <a href="earn/index.html" id="HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_2" target="mainFrame">赚取佣金</a>
                      
                 </li>
@@ -533,7 +748,6 @@ jQuery(document).ready(function () {
             
     </ul>
    
-    
 </div>
 
 
@@ -972,4 +1186,9 @@ jQuery(document).ready(function () {
 
 
 
-<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button type="button" id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button type="button" id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+
+</body>
+
+
+</html>

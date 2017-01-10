@@ -1093,20 +1093,20 @@ div#top {
     }
 
     #logout .button {
-        background: url("../Images/header/btn_login_.gif") no-repeat;
+        background: url("../Images/btn_login_.gif") no-repeat;
         background-position: 0px 3px;
         border: 0;
     }
 
         #logout .button:hover {
-            background: url("../Images/header/btn_login_.gif") no-repeat;
+            background: url("../Images/btn_login_.gif") no-repeat;
             background-position: 0px -33px;
         }
 /* added by khairil - endof */
 
 #top_nav_shadow {
     height: 5px;
-    background-image: url(../Images/header/header-shadow.png);
+    background-image: url(../Images/header-shadow.png);
     background-repeat: no-repeat;
     background-position: center;
 }

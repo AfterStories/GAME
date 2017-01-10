@@ -1,6 +1,6 @@
 #header{
     position: relative;
-    top:-400px;
+    top:-380px;
 }
 #main{
 	margin-top:70px;
@@ -10,7 +10,7 @@
     background-position: -31px 1px;
     cursor: pointer;
     height: 19px;
-    margin: -19px 0 0 175px;
+    margin: -23px 0 0 177px;
     position: relative;
     width: 10px;
     z-index: 1000;
@@ -33,7 +33,7 @@ select { -moz-appearance: none; border: 1px solid; box-shadow: 0px 1px 3px rgba(
 #arrow2 { border-style: solid dashed dashed; border-color: rgb(255, 255, 255) transparent transparent; border-width: 1em 6px 6px; display: inline-block; font-size: 8px; height: 0px; line-height: 0; position: relative; vertical-align: middle; width: 0px; margin-left: 2px; cursor: pointer; top: 2px; }
 .blackArrow_right { background: transparent url('../../lib/images/arrow_allicons.png') no-repeat scroll -107px -23px; width: 26px; height: 31px; display: block; float: right; }
 #target a { width: 113px; height: 34px; margin-top: 2px; }
-.field, .password { padding: 4px 5px; border: 1px solid rgb(183, 183, 183); color: rgb(150, 150, 150); height: 18px; }
+.field, .password { border: 1px solid rgb(183, 183, 183); color: rgb(150, 150, 150); height: 18px; }
 input.button { padding: 4px 5px; cursor: pointer; }
 a { color: rgb(78, 80, 80); text-decoration: none; cursor: pointer; }
 a:hover { text-decoration: none; }
@@ -61,7 +61,7 @@ p { padding-bottom: 18px; }
 #top_nav_right { height: 25px; }
 #top_nav_right li { float: right;list-style: none;}
 
-#top_nav_right li a {left:3px; display: block; font-size: 12px; color: rgb(255, 255, 255); }
+#top_nav_right li a {display: block; font-size: 12px; color: rgb(255, 255, 255); }
 #top_nav_right ul #languageSelect:hover { height: 33px; }
 #BaseMainContent_HeaderContent_divForgotPwd a { height: 33px; position: relative;top:0px; }
 .top_nav_text { font-size: 11px; padding: 8px 10px 0px 28px; color: rgb(97, 95, 95); height: 26px; }
@@ -93,7 +93,7 @@ div#outer_top_header { margin:0 atuo;top: 0px; position: absolute; background-co
 .cl { font-size: 0px; line-height: 0; clear: both; display: block; height: 0px; }
 #login { float: right; display: inline; padding-top: 2px; width: 375px; margin-right: 3px; }
 #login .field-holder { float: left; display: inline; width: 130px; height: 40px; padding: 1px; }
-#login .field, #login .password { width: 118px; background: rgb(255, 255, 255) none repeat scroll 0px 0px; color: rgb(50, 51, 51); }
+#login .field, #login .password { width: 118px;height: 17px; background: rgb(255, 255, 255) none repeat scroll 0px 0px; color: rgb(50, 51, 51); }
 #login .field:focus, #login .password:focus { border-color: rgb(37, 170, 226); }
 #login .button { float: right; display: inline; width: 107px; height: 36px; font-size: 9pt; font-weight: bold; color: rgb(37, 170, 225); text-indent: 8px; padding-top: 0px; margin-top: -2px; }
 #login .button { background: transparent url('../../lib/images/btn_login_.gif') no-repeat scroll 0px 3px; border: 0px none; }
