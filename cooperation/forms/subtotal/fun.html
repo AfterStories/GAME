@@ -7,7 +7,11 @@
     <link href="yunStyle.css" rel="stylesheet" type="text/css">
     <link href="btnStyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="../../../lib/js/jquery-1.12.2.min.js"></script>
-    <script type="text/javascript" src="../datapicker/WdatePicker.js"></script><link href="../datapicker/WdatePicker.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../datapicker/WdatePicker.js"></script>
+
+
+
+    <link href="../datapicker/WdatePicker.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="main.js"></script>
 <script type="text/javascript" src="../ECharts/echarts.js"></script>
@@ -29,6 +33,7 @@ a:hover { color: rgb(235, 137, 35); }
 
     <script type="text/javascript">
         var objDivZ;
+        var Pagename = "fun"
     </script>
     <link href="P3TableStyles.css" rel="stylesheet" type="text/css">
     <style type="text/css">
@@ -146,7 +151,7 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
 amountChartoption = {
     title: {
         text: '乐天堂汇总报表',
-        subtext: '纯属虚构'
+        subtext: '折线图'
     },
     tooltip: {
         trigger: 'axis'
@@ -440,36 +445,138 @@ $("#amountChart").css("display", "none");
                 <br>
                 <div style="width: 100%;">
                     <div id="divSelDateByDay">
-                        <input name="txtBeginDate" id="txtBeginDate" style="width: 70px;" readonly="readOnly" maxlength="20" value="2017-01-01" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:'2017-01-09'})" type="text">—<input name="txtEndDate" id="txtEndDate" style="width: 70px;" readonly="readOnly" maxlength="20" value="2017-01-09" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:'2017-01-09'})" type="text">
+                        <input name="txtBeginDate" id="txtBeginDate" style="width: 70px;" readonly="readOnly" maxlength="20" onClick="WdatePicker({el:'demospan1'});" type="text">—<input name="txtEndDate" id="txtEndDate" onClick="WdatePicker({el:'demospan2'})" style="width: 70px;" readonly="readOnly" maxlength="20" type="text">
+                        <span id="demospan1" style="display: none"></span> 
+                        <span id="demospan2" style="display: none"></span>
                     </div>
                     <div id="divSelDateByMonth" style="display: none;">
-                        <input name="txtBeginMonth" id="txtBeginMonth" style="width: 60px;" readonly="readOnly" maxlength="20" value="2016-12" onfocus="WdatePicker({dateFmt:'yyyy-MM',lang:'zh-cn',maxDate:'2016-12-09'})" type="text">—<input name="txtEndMonth" id="txtEndMonth" style="width: 60px;" readonly="readOnly" maxlength="20" value="2016-12" onfocus="WdatePicker({dateFmt:'yyyy-MM',lang:'zh-cn',maxDate:'2016-12-09'})" type="text">
+                        <input name="txtBeginMonth" id="txtBeginMonth" style="width: 60px;" readonly="readOnly" maxlength="20"  onfocus="WdatePicker({onpicked:pickedFunc3,dateFmt:'yyyy-MM',lang:'zh-cn',maxDate:'2099-12-31'})" type="text">—<input name="txtEndMonth" id="txtEndMonth" style="width: 60px;" readonly="readOnly" maxlength="20"  onfocus="WdatePicker({onpicked:pickedFunc4,dateFmt:'yyyy-MM',lang:'zh-cn',maxDate:'2099-12-31'})" type="text">
                     </div>
                 </div>
                 <br>
                 <div style="width: 100%;">
-                    <input name="btnDataOk" value="确定" id="btnDataOk" type="button">
+                    <input name="btnDataOk" value="确定" id="btnDataOk" type="button" onclick="posttime();">
                     <input name="btnDateCancel" value="取消" onclick="showDivDate(document.getElementById('tdSelTab'));return false;" id="btnDateCancel" type="button">
                 </div>
-            </center>
+            </center>  
         </div>
         <br>
         <br>
     </form>
+
 <script>
 
-    $("#btnDataOk").click(function(){
-        var Begintime = $("#txtBeginDate").val();
-        var Endtime = $("#txtEndDate").val();
-        alert(Begintime +Endtime)
 
-        var MonthBeginTime = $("#txtBeginMonth").val();
-        var MonthEndTime = $("#txtEndMonth").val();
-        var LoginUserName =  $("#LoginUserName",parent.document).html(); 
-             
-        alert(LoginUserName)
+var LoginUserName =  $("#LoginUserName",parent.document).html(); 
 
-});
+        //按照日期
+        var DayBegintime 
+        var DayEndtime 
+
+        //按照月份
+        var MonthBeginTime; 
+        var MonthEndTime  
+$("#txtBeginDate").click(function(){
+  
+   var aaa  = $("#demospan1").html();
+   alert(aaa)
+  
+})
+
+
+function pickedFunc2(){
+DayEndtime = $dp.cal.getNewDateStr();
+alert(DayBegintime)
+return DayEndtime
+}
+function pickedFunc3(){
+MonthBeginTime = $dp.cal.getNewDateStr();
+
+}
+function pickedFunc4(){
+MonthEndTime = $dp.cal.getNewDateStr();
+
+}
+
+
+var PostBeginTime
+var PostEndTime
+var PostBeginTime
+ var PostEndTime
+
+
+
+
+    function cc(dd, dadd) {
+        var a = new Date(dd)
+        a = a.valueOf()
+        a = a + dadd * 24 * 60 * 60 * 1000
+        a = new Date(a)
+
+        return a;
+    }
+
+
+    var date1 = new Date("2017-01-01");
+    var date2 = new Date("2017-01-10");
+
+    var list = [];
+
+    for (var d = date1; d.valueOf() <= date2.valueOf() ; d = cc(d, 1)) {
+        //console.log(d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate());
+        var s = d.getFullYear() + "-" + ("00" + (d.getMonth() + 1)).slice(-2) + "-" + ("00" + d.getDate()).slice(-2);
+        list.push({date:s, betAmount:0});
+    }
+
+
+function posttime (){
+          
+if ( $("#divSelDateByMonth").is(":hidden")) {
+    PostBeginTime =pickedFunc1();
+    PostEndTime = pickedFunc2();
+
+}else{
+    PostBeginTime = MonthBeginTime
+    PostEndTime =MonthEndTime
+}
+
+
+  alert(PostBeginTime);
+  alert(PostEndTime)
+
+
+    return;
+
+    };
+
+
+
+
+
+ /*   $("#btnDataOk").click(function(){*/
+
+
+
+
+//发送 用户名LoginUserName 报表名Pagename  时间范围 开始Begintime 结束Endtime
+/*       $.post(" ",{
+            UserName:LoginUserName,
+            url:Pagename,
+            Begintime:PostBeginTime,
+            Endtime:PostEndTime
+        },
+        function(time,value){
+            amountChart.setOption({
+                series: [{
+                    data: data
+                }]
+            });
+
+
+
+        });*/
+
+/*});*/
 </script>
 
 </body>
