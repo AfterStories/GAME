@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<meta charset="UTF-8">
+
+    <title>Affilate Management</title>
+
+<script type="text/javascript" src="../../lib/js/jquery-1.12.2.min.js"></script>
+    <script src="Common.js" language="javascript" type="text/javascript"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript" language="javascript">
+
+        function ChangeNation(obj) {
+            for (var i = 0; i < obj.length; i++) {
+                if (obj.options[i].selected) {
+
+                    if (obj.options[i].value == 'CN') {
+                        document.getElementById("trProvince").style.display = '';
+                        ResetHeight();
+                        return true;
+                    }
+                }
+            }
+
+            document.getElementById("trProvince").style.display = 'none';
+            ResetHeight();
+            return false;
+        }
+
+        function ConfirmDelete() {
+            return confirm("您确认要删除一条记录吗？");
+        }
+
+        function isPhoneFormat(id) {
+            var tmp
+            var z = "0123456789+-"
+            //var nab=id.value.lenght-1;  
+            for (var i = 0; i < id.value.length; i++) {
+                tmp = id.value.substr(i, 1)
+                if (z.indexOf(tmp) == -1) { return false; }
+            }
+            if (id.value != "0") return true;
+            else return false;
+        }
+
+        function ValidateInput(type) {
+            if (!IsNotEmpty(document.getElementById("txtFullName").value)) {
+                
+                alert('Name is empty, please check!');
+                    
+                document.getElementById("txtFullName").focus();
+                return false;
+            }
+
+            if (!IsNotEmpty(document.getElementById("txtTelphone").value)) {
+                
+                alert('Telephone is empty, please check!');
+                    
+                document.getElementById("txtTelphone").focus();
+                return false;
+            }
+
+            if (!isPhoneFormat(document.getElementById("txtTelphone"))) {
+                
+                alert('Telephone format error,please check!');
+                    
+                document.getElementById("txtTelphone").focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        function ValidatePassword()
+        {
+            if (!IsNotEmpty(document.getElementById("txtPwd").value)) {    
+                
+                alert('Password is empty, please check!');
+                    
+            document.getElementById("txtPwd").focus();
+            return false;
+            }
+         
+            if (!IsNotEmpty(document.getElementById("txtConfirmPwd").value)) {    
+                
+                alert('Confirm Password is empty, please check!');
+                    
+            document.getElementById("txtConfirmPwd").focus();
+            return false;
+            }         
+         
+            if (document.getElementById("txtConfirmPwd").value.length < 6) {
+                
+                alert('Password at least 6 letter.');
+                    
+            document.getElementById("txtConfirmPwd").focus();
+            return false;
+            }
+            if (document.getElementById("txtPwd").value != document.getElementById("txtConfirmPwd").value ){
+                
+                alert('Password not same!');
+                    
+            return false;
+            }
+        }
+
+        function VaildateWebSite()
+        {
+            var objWeb=document.getElementById("txtWebUrl");
+            if(IsNotEmpty(objWeb.value) && isURL(objWeb.value))
+            {
+                objWeb.style.borderColor="";
+                return true;
+            }
+            else
+            {
+                alert('格式错误.');
+
+                objWeb.style.borderColor="Red";
+                objWeb.focus();
+                return false;
+            }
+        }
+
+        function ValidateWebsite()
+        {
+            var errorMessage = '格式错误.';
+            var objWeb = jQuery("[id*=txtWebs]");
+            var myRegExp = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!127(?:\.\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/i;
+            var urlToValidate = objWeb.val();
+            if (!myRegExp.test(urlToValidate)) {
+                alert(errorMessage);
+            }
+        }
+    </script>
+
+    <link href="mainStyleCS.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+/* Code tidied up by ScrapBook */
+.tblMain td { height: 33px; width: 500px; }
+input { border-color: rgb(127, 157, 185); color: rgb(102, 102, 102); }
+textarea { color: rgb(102, 102, 102); }
+select { border-color: rgb(127, 157, 185); }
+span { color: rgb(102, 102, 102); }
+.tblScheme { background-color: rgb(153, 153, 153); }
+.tblScheme td { height: 30px; background-color: white; }
+.tblScheme input { border: 0px none; }
+</style>
+    <link href="P3TableStyles.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ?document.body.scrollHeight+10:700;">
+    <form id="frmMenuManager">
+
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td style="height: 660px;" colspan="3" valign="top">
+                    <table id="tblContent" style="width: 100%;">
+                        <tbody><tr>
+                            <td colspan="4">
+                                <br>
+                                <span class="P3PageTitle" style="margin-left: 20px;">
+                                <span id="Label9" class="P3PageTitle">账户管理</span>
+                                &nbsp;|&nbsp;<a href="http://www.10010688.com/lm/Payment/UpdateBankDetail.aspx" class="P3PageTitle">更新资料</a>
+                                    <br></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="100%">
+                                    <tbody><tr>
+                                        <td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">
+                                            &nbsp;&nbsp;联系信息</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table class="tblMain" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                <tbody><tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label17">姓名</span></td>
+                                                    <td style="height: 24px;">
+                                                        <span id="txtFullName">张海红</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label4">电子邮箱</span></td>
+                                                    <td style="height: 14px;" colspan="1">
+                                                        <span id="txtEmail" style="display: inline-block; width: 480px;">244148300@qq.com</span></td>
+                                                </tr>
+                                                
+                                                <tr id="trWebsiteType">
+	<td style="width: 130px;">
+                                                        <span id="Label18">网站类型</span></td>
+	<td colspan="1">
+                                                        <select name="ddlWebType" id="ddlWebType">
+		<option selected="selected" value="0">请选择</option>
+		<option value="3">体育资讯网</option>
+		<option value="4">即时比分网</option>
+		<option value="5">赔率网</option>
+		<option value="6">体育论坛网</option>
+		<option value="7">体育博彩评论网</option>
+		<option value="8">娱乐场评论网</option>
+		<option value="9">娱乐网</option>
+		<option value="10">其它</option>
+
+	</select></td>
+</tr>
+
+                                                <tr id="trLanguage">
+	<td style="width: 130px;">
+                                                        <span id="Label6">语言</span></td>
+	<td>
+                                                        <select name="ddlLanguage" id="ddlLanguage">
+		<option value="en">English</option>
+		<option value="ko">한국어</option>
+		<option value="th">ภาษาไทย</option>
+		<option selected="selected" value="cs">中文</option>
+		<option value="id">Indonesia</option>
+		<option value="vi">Tiếng Việt</option>
+		<option value="ja">Japanese</option>
+
+	</select>                                                        
+                                                    </td>
+</tr>
+
+                                                <tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label12">联系电话</span></td>
+                                                    <td colspan="1">
+                                                        <input name="txtTelphone" value="13149918921" id="txtTelphone" style="width: 160px;" type="text">
+                                                        <span id="Label1" style="color: Red;">*</span>
+                                                    </td>
+                                                </tr>
+                                                <tr id="trWebsite">
+	<td style="width: 130px;" valign="top">
+                                                        <span id="Label8">网站</span></td>
+	<td id="tdWeb" colspan="1">
+                                                        <div>
+
+	</div>
+                                                        <input name="txtWebUrl" value="http://" id="txtWebUrl" style="width: 300px;" type="text">
+                                                        <input name="btnAddWebSite" id="btnAddWebSite" src="sizeplus.gif" onclick="if (!VaildateWebSite()) return false;" style="cursor: pointer; border-width: 0px;" type="image">
+                                                        </td>
+</tr>
+
+                                                 <tr id="trGender">
+	<td style="width: 130px;">
+                                                        <span id="Label10">性别 : </span></td>
+	<td colspan="1">
+                                                        <table id="rblGender" style="width: 130px;">
+		<tbody><tr>
+			<td><input id="rblGender_0" name="rblGender" value="0" checked="checked" type="radio"><label for="rblGender_0">男</label></td><td><input id="rblGender_1" name="rblGender" value="1" type="radio"><label for="rblGender_1">女</label></td>
+		</tr>
+	</tbody></table>
+                                                    </td>
+</tr>
+
+                                               <tr id="trPlayerAccount">
+	<td style="width: 130px;">
+                                                        <span id="Label11">乐天堂玩家账户名<br>
+(如果有的话）</span></td>
+	<td colspan="1">
+                                                        <input name="txtPlayerAcctName" id="txtPlayerAcctName" type="text"></td>
+</tr>
+
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr id="trTargetMarketsCaption">
+	<td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">
+                                            &nbsp;&nbsp;其他信息
+                                        </td>
+</tr>
+
+                                    <tr id="trTargetMarketsNation">
+	<td>
+                                            <table class="tblMain" align="center">
+                                                <tbody><tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label7">国家</span></td>
+                                                    <td colspan="1">
+                                                        <select size="4" name="ddlNation" multiple="multiple" id="ddlNation" onchange="ChangeNation(this)" style="height: 90px; width: 282px;">
+		<option selected="selected" value="CN">中国</option>
+		<option value="HK">中国香港</option>
+		<option value="JP">日本</option>
+		<option value="KR">韩国</option>
+		<option value="ID">印度尼西亚</option>
+		<option value="IN">印度</option>
+		<option value="BN">文莱</option>
+		<option value="LA">老挝</option>
+		<option value="VN">越南</option>
+		<option value="KH">柬埔寨</option>
+		<option value="TH">泰国</option>
+		<option value="OT">其他国家</option>
+
+	</select></td>
+                                                </tr>
+                                                <tr id="trProvince">
+		<td style="width: 130px;">
+                                                        <span id="Label15">省份</span></td>
+		<td colspan="1">
+                                                        <select size="4" name="ddlProvince" multiple="multiple" id="ddlProvince" style="height: 90px; width: 282px;">
+			<option value="北京市">北京市</option>
+			<option value="上海市">上海市</option>
+			<option value="广东省">广东省</option>
+			<option value="安徽省">安徽省</option>
+			<option value="重庆市">重庆市</option>
+			<option value="福建省">福建省</option>
+			<option value="甘肃省">甘肃省</option>
+			<option value="广西自治区">广西自治区</option>
+			<option value="贵州省">贵州省</option>
+			<option value="海南省">海南省</option>
+			<option value="河北省">河北省</option>
+			<option value="河南省">河南省</option>
+			<option value="黑龙江省">黑龙江省</option>
+			<option value="湖北省">湖北省</option>
+			<option value="湖南省">湖南省</option>
+			<option value="江苏省">江苏省</option>
+			<option selected="selected" value="江西省">江西省</option>
+			<option value="吉林省">吉林省</option>
+			<option value="辽宁省">辽宁省</option>
+			<option value="内蒙古自治区">内蒙古自治区</option>
+			<option value="宁夏自治区">宁夏自治区</option>
+			<option value="青海省">青海省</option>
+			<option value="山东省">山东省</option>
+			<option value="山西省">山西省</option>
+			<option value="陕西省">陕西省</option>
+			<option value="四川省">四川省</option>
+			<option value="天津市">天津市</option>
+			<option value="新疆自治区">新疆自治区</option>
+			<option value="西藏自治区">西藏自治区</option>
+			<option value="云南省">云南省</option>
+			<option value="浙江省">浙江省</option>
+
+		</select></td>
+	</tr>
+	
+                                            </tbody></table>
+                                        </td>
+</tr>
+
+                                    <tr>
+                                        <td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">
+                                            &nbsp;&nbsp;账号信息
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table class="tblMain" align="center">
+                                                <tbody><tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label2">用户名</span></td>
+                                                    <td style="height: 24px;">
+                                                        <span id="txtUsername" style="display: inline-block; width: 160px;">zhanghaihong77</span></td>
+                                                </tr>
+                                                <tr id="Tr1">
+	<td style="width: 130px;">
+                                                        <span id="Label5">密码</span></td>
+	<td>
+                                                        <a id="lnkChangePwd" href="javascript:__doPostBack('lnkChangePwd','')">修改</a></td>
+</tr>
+
+                                                <tr id="trPwd" style="display: none;">
+	<td style="width: 130px;">
+                                                        <span id="Label3">新密码</span></td>
+	<td>
+                                                        <input name="txtPwd" id="txtPwd" style="width: 160px;" type="password"></td>
+</tr>
+
+                                                <tr id="trConfirmPwd" style="display: none;">
+	<td style="width: 130px;">
+                                                        <span id="Label14">确认新密码</span></td>
+	<td>
+                                                        <input name="txtConfirmPwd" id="txtConfirmPwd" style="width: 160px;" type="password">&nbsp;
+                                                        <input name="btnChangePwd" value="修改密码" onclick="return ValidatePassword();" id="btnChangePwd" type="submit"></td>
+</tr>
+
+                                                <tr style="display: none;">
+                                                    <td style="width: 130px; height: 22px;">
+                                                        <span id="Label21">安全码</span></td>
+                                                    <td colspan="1" style="height: 22px;">
+                                                        <span id="lblSecretKey">i1pshd</span></td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="50" align="center">
+                                            <input name="btnEdit" value="编辑" onclick="return  ValidateInput('edit');" id="btnEdit" class="Txt" style="height: 22px; width: 65px;" type="submit"></td>
+                                    </tr>
+                                    <tr id="trEarningSchemeCaption">
+	<td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">
+                                            &nbsp;&nbsp;优厚佣金及计划
+                                        </td>
+</tr>
+
+                                    <tr id="trEarningScheme">
+	<td style="padding-top: 5px; padding-bottom: 6px;" align="center">
+                                            <table class="tblScheme" id="tblScheme" width="98%" cellspacing="1" cellpadding="0" border="0">
+                                                <tbody><tr>
+                                                    <td style="height: 30px;" colspan="4">
+                                                        &nbsp;<span id="Label13" style="display: inline-block; border-style: none;">产品类型:</span>&nbsp;
+                                                        <span id="lblProductType">体育博彩,娱乐场,老虎机,彩票,4,7</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        级别
+                                                    </td>
+                                                    <td align="center">
+                                                        公司本月总盈利
+                                                        (<span id="lblCurrency">CNY</span>)</td>
+                                                    <td align="center">
+                                                        活跃玩家数最低要求
+                                                    </td>
+                                                    <td align="center">
+                                                        佣金百分比
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        1</td>
+                                                    <td align="center">
+                                                        <span id="lblEaring1">0.00</span>-<span id="lblEaring11">40,000.00</span></td>
+                                                    <td align="center">
+                                                        <span id="lblActiveMembers1">5</span></td>
+                                                    <td align="center">
+                                                        <span id="lblCommission1">25.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        2</td>
+                                                    <td align="center">
+                                                        <span id="lblEaring2">40,000.00</span>-<span id="lblEaring22">300,000.00</span></td>
+                                                    <td align="center">
+                                                        <span id="lblActiveMembers2">5</span></td>
+                                                    <td align="center">
+                                                        <span id="lblCommission2">35.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        3</td>
+                                                    <td align="center">
+                                                        <span id="lblEaring3">300,000.00</span>-<span id="lblEarning33">0.00</span></td>
+                                                    <td align="center">
+                                                        <span id="lblActiveMembers3">25</span></td>
+                                                    <td align="center">
+                                                        <span id="lblCommission3">40.00%</span></td>
+                                                </tr>
+                                                
+                                                
+                                            </tbody></table>
+                                        </td>
+</tr>
+
+                                </tbody></table>
+                            </td>
+                            <td style="width: 2px;">
+                            </td>
+                            <td style="width: 236px;" valign="top" align="center">
+                                <br>
+                                
+                                  <a href="http://www.10010688.com/lm/html/CS/Contact.html">
+                                    <img style="border: 0px none;" src="right_pic1.jpg" alt=""></a>
+                                  
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+        </tbody></table>
+        <br><br>
+    </form>
+
+    <script type="text/javascript">
+        function AddInputUrl()
+        {
+            document.getElementById("tdWeb").innerHTML+='<BR><input name="txtWebUrl" type="text" value="http://" style="width: 227px" />';
+            ResetHeight();
+        }
+
+        function MinusInputUrl()
+        {
+            var objTDWeb=document.getElementById("tdWeb");
+            var strTemp=objTDWeb.innerHTML;
+            var iTemp=strTemp.toUpperCase().lastIndexOf("<BR>");
+            if(iTemp!=-1)
+            {
+                objTDWeb.innerHTML=strTemp.slice(0,iTemp);
+                ResetHeight();
+            }
+        }
+
+        function ResetHeight()
+        {
+            parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ?document.body.scrollHeight+10:700;
+        }                
+        
+        function CheckUser(obj)
+        {
+            if(isEmpty(obj.value)) return true;
+            if(GetAjaxText("UserControl/AjaxService.aspx?ctype=1&ctext="+obj.value+"&vid="+(new Date().getTime()))=="1")
+            {
+                alert('用户名已经注册请选择其它名称！');
+
+                obj.style.borderColor="Red";
+                obj.focus();
+            }
+            else
+            {
+                obj.style.borderColor="";
+            }
+        }
+
+        function CheckAffCode(obj)
+        {
+            if(isEmpty(obj.value)) return true;
+            if(GetAjaxText("UserControl/AjaxService.aspx?ctype=2&ctext="+obj.value+"&vid="+(new Date().getTime()))=="0")
+            {
+                alert('推荐人编号不存在,请重新填写.');
+
+                obj.style.borderColor="Red";
+                obj.focus();
+            }
+            else
+            {
+                obj.style.borderColor="";
+            }
+        }
+
+        function CheckEMail(obj)
+        {
+            if(isEmpty(obj.value)) return true;
+            if(GetAjaxText("UserControl/AjaxService.aspx?ctype=3&ctext="+obj.value+"&vid="+(new Date().getTime()))=="1")
+            {
+                alert('Email已经存在！');
+
+                obj.style.borderColor="Red";
+                obj.focus();
+            }
+            else
+            {
+                obj.style.borderColor="";
+            }
+        }
+       
+        function reloadcode()
+        { 
+           document.getElementById('SafeCode').src = 'UserControl/code.aspx?rType=1&rnd=' + Math.random();
+        }
+        
+        
+         try
+        {
+             ChangeNation(document.getElementById("ddlNation").value);
+             ResetHeight();
+        }
+        catch(e)
+        {
+        
+        }
+        
+    </script>
+
+
+
+</body>
+</html>

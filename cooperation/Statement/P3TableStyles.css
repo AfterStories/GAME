@@ -1,0 +1,36 @@
+/* Code tidied up by ScrapBook */
+.P3mainDiv { padding: 8px 8px 15px; margin-top: 2px; }
+.P3outertable { width: 100%; padding: 15px 0px 0px 15px; }
+.P3PageTitle, .P3PageTitle a, .P3PageTitle a:visited { font-weight: 700; font-size: 15px; text-transform: uppercase; color: rgb(37, 170, 225); text-decoration: none; }
+.P3PageTitle a:hover { text-decoration: underline; }
+.P3CodeLinkHeader { font-size: 16px; font-weight: 700; text-transform: uppercase; color: rgb(132, 132, 132); }
+.P3innerheader { background-color: rgb(219, 219, 219); height: 24px; background-repeat: no-repeat; color: Black; font-weight: bold; font-size: 14px; text-transform: uppercase; text-indent: 10px; width: 930px; }
+.P3innertable { background-color: rgb(255, 255, 255); width: 930px; padding: 10px 0px 30px 15px; }
+.P3innertable td { color: Black; text-indent: 10px; }
+input { font-size: 14px; color: rgb(102, 102, 102); border: 1px solid Silver; padding-left: 3px; }
+input:hover { color: rgb(255, 255, 255); }
+select { font-size: 14px; color: rgb(102, 102, 102); border: 1px solid Silver; padding-left: 3px; }
+.P3dropdownmenu { width: 884px; position: relative; font-size: 11px; margin: 5px 0px; text-align: center; top: 0px; left: 0px; }
+.P3dropdownmenu ul li a, .P3dropdownmenu ul li a:visited { display: block; text-decoration: none; width: 170px; text-align: center; border: 1px solid rgb(214, 231, 242); line-height: 20px; overflow: hidden; font-size: 14px; background-color: rgb(51, 130, 189); color: rgb(255, 255, 255); height: 20px; font-weight: bold; }
+.P3dropdownmenu ul { padding: 0px; margin: 0px; list-style-type: none; }
+.P3dropdownmenu ul li { float: left; margin-right: 1px; position: relative; }
+.P3dropdownmenu ul li ul { display: none; }
+.P3dropdownmenu ul li:hover ul { display: block; position: absolute; top: 21px; left: 0px; width: 105px; }
+.P3dropdownmenu ul li:hover ul li a.hide { background: rgb(102, 170, 51) none repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.P3dropdownmenu ul li:hover ul li:hover a.hide { background: rgb(102, 255, 204) none repeat scroll 0% 0%; color: rgb(0, 0, 0); }
+.P3dropdownmenu ul li:hover ul li ul { display: none; }
+.P3dropdownmenu ul li:hover ul li a { display: block; background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(85, 85, 85); font-weight: normal; }
+.P3dropdownmenu ul li:hover ul li a:hover { background: rgb(36, 171, 226) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-weight: 700; }
+.P3dropdownmenu ul li:hover ul li:hover ul { display: block; position: absolute; left: 105px; top: 0px; }
+.P3dropdownmenu ul li:hover ul li:hover ul.left { left: -105px; }
+.P3dropdownmenu .P3selectedItem { background-color: rgb(255, 255, 255); color: rgb(85, 85, 85); font-size: 13px; font-weight: normal; }
+.P3inner2table { padding: 0px; margin: 0px; text-align: left; border-width: 1px; border-style: solid; }
+.P3inner2table td { border-spacing: 0px; text-align: left; }
+.P3inner2table .headerblue { color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(51, 130, 189); }
+.P3_gridHeader { border: 1px solid rgb(255, 255, 255); color: Black; font-weight: bold; font-size: 14px; text-transform: uppercase; text-indent: 10px; vertical-align: middle; background-color: rgb(219, 219, 219); height: 24px; padding: 2px 8px; }
+.P3_gridCell { border: 1px solid rgb(214, 231, 241); background-color: rgb(255, 255, 255); padding: 3px 8px; }
+.P3_grid450 { width: 450px; }
+.P3DatePickerLeft { border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid; }
+.P3DatePickerMiddle { border-top: 1px solid; border-bottom: 1px solid; }
+.P3DatePickerRight { border-right: 1px solid; border-top: 1px solid; border-bottom: 1px solid; }
+input:hover { color: rgb(102, 102, 102); }

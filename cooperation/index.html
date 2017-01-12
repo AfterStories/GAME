@@ -58,7 +58,7 @@
 
     <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"></script>
     <script type="text/javascript" src="../lib/js/jQueryUI.js"></script>
-    <script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
+
     <script type="text/javascript" src="js/dropdown.js"></script>
     <script type="text/javascript" src="js/jquery-migrate.js"></script>
     <script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.min.js"></script>
@@ -72,6 +72,7 @@
     <script type="text/javascript" src="js/master.videomanager.js"></script>
     <script type="text/javascript" src="js/jQuery Cookie.js"></script>
     <script type="text/javascript" src="js/master.cookie.js"></script>
+        <script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
     <script type="text/javascript">
         var g_Cookie_PopUpWelcome = "PopUpWelcome";
         function getCookie(c_name) {
@@ -571,7 +572,7 @@ jQuery(document).ready(function () {
     <div id="logout" style="display:none;">
         <input name="HeaderContent$ascxMbrAuth$divLogout" value="     退出" id="HeaderContent_ascxMbrAuth_divLogout" tabindex="3" class="button" onclick="Logout()" style="vertical-align:middle;text-align:left;">
         <span class="topmenu">
-            <a href="http://www.10010688.com/lm/AffiliateEdit.aspx?mid=60" target="mainFrame" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration ='none'" style="text-decoration: none;">账户管理</a> &nbsp; | &nbsp; <a href="http://www.10010688.com/lm/Account/BalanceLog.aspx?mid=69" target="mainFrame" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration ='none'" style="text-decoration: none;">帐户明细</a> &nbsp; | &nbsp; <a href="http://www.10010688.com/lm/payment/Withdrawal_EP.aspx?mid=106" target="mainFrame" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration ='none'" style="text-decoration: none;">取款</a> &nbsp; &nbsp; &nbsp;</span>        
+            <a href="Management/index.html" target="mainFrame" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration ='none'" style="text-decoration: none;">账户管理</a> &nbsp; | &nbsp; <a href="Statement/index.html" target="mainFrame" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration ='none'" style="text-decoration: none;">帐户明细</a> &nbsp; | &nbsp; <a href="withdraw/index.html" target="mainFrame" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration ='none'" style="text-decoration: none;">取款</a> &nbsp; &nbsp; &nbsp;</span>        
     </div>
 </div>
 
@@ -600,8 +601,8 @@ jQuery(document).ready(function () {
         
         <span>欢迎您,</span>
         <span id="LoginUserName" style="font-weight: bold;">
-            zhanghaihong77(321399)
-        </span>
+            zhanghaihong77  
+        </span>-ID:<span id="LoginUserId" style="font-weight: bold;">1</span>
         &nbsp;&nbsp;&nbsp; 
         主账户 :
         <span style="color: rgb(46, 154, 254);">0.00</span>
@@ -709,7 +710,7 @@ jQuery(document).ready(function () {
                 <li class="menuSeperator menuInEn NoSubMenu2 menuInCS" style="display: none;"><img src="images/nav-space.png" alt="" height="43"></li>
             
                 <li class="NoSubMenu2 menuInCS" style="display: none;">                    
-                    <a href="http://www.10010688.com/lm/Report/AffiliateApply.aspx?mid=65&amp;mver=5" id="HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" target="mainFrame">介绍人</a>
+                    <a href="proposer/index.html" target="mainFrame">介绍人</a>
                      
                 </li>
             
@@ -971,28 +972,23 @@ jQuery(document).ready(function () {
         });
 
         jQuery("a.jQueryBookmark").click(function (e) {
-            e.preventDefault(); // this will prevent the anchor tag from going the user off to the link
+
             var bookmarkUrl = window.location;
-            var bookmarkTitle = jQuery(document).find("title").text();
-            if (window.sidebar) { // For Mozilla Firefox Bookmark
-                window.sidebar.addPanel(bookmarkTitle, bookmarkUrl, "");
-                return false;
-            } else if (document.all) { // For IE Favorite
+            var bookmarkTitle = document.title;
+            if (document.all) { // For IE Favorite
                 window.external.AddFavorite(bookmarkUrl, bookmarkTitle);
                 return false;
-            } else if (window.external) { //For Chrome
-                alert(getBookmarkAlert('CS'));
-                //alert('BookmarkNotSupport');
-                return false;
-            } else if (window.opera) { // For Opera Browsers
+            } else if (window.opera || window.sidebar) { // For Opera Browsers and For Mozilla Firefox Bookmark
                 jQuery("a.jQueryBookmark").attr("href", bookmarkUrl);
                 jQuery("a.jQueryBookmark").attr("title", bookmarkTitle);
                 jQuery("a.jQueryBookmark").attr("rel", "sidebar");
+            } else if (window.external) { //For Chrome
+                alert('您的浏览器不支持此书签行动，请手动');
+                return false;
             } else { // for other browsers which does not support
-                alert(getBookmarkAlert('CS'));
-                //alert('BookmarkNotSupport');
-                    return false;
-                }
+                alert('您的浏览器不支持此书签行动，请手动');
+                return false;
+            }
         });
 
         jQuery("#dvMedia08").click(function () {

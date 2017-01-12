@@ -4,20 +4,24 @@
 <meta charset="UTF-8">
 
     <title></title>
+    
     <link href="yunStyle.css" rel="stylesheet" type="text/css">
     <link href="btnStyle.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="../../../lib/js/jquery-1.12.2.min.js"></script>
-    <script type="text/javascript" src="../datapicker/WdatePicker.js"></script>
-
-
-
     <link href="../datapicker/WdatePicker.css" rel="stylesheet" type="text/css">
-
-    <script type="text/javascript" src="main.js"></script>
-<script type="text/javascript" src="../ECharts/echarts.js"></script>
     <link href="mainStyleCS_001.css" rel="stylesheet" type="text/css">
+    <link href="../../../lib/pulg/h-ui/css/H-ui.css" rel="stylesheet" type="text/css">
 
-    <style type="text/css">
+    <script type="text/javascript" src="../../../lib/js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="../datapicker/WdatePicker.js"></script>
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="../../../lib/pulg/DataTables/css/jquery.dataTables.css">
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="../../../lib/pulg/DataTables/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="../ECharts/echarts.js"></script>
+
+
+<style type="text/css">
 
 #rbtnMN input { border: 0px none; }
 #GridView1 input { border: 0px none; }
@@ -33,7 +37,7 @@ a:hover { color: rgb(235, 137, 35); }
 
     <script type="text/javascript">
         var objDivZ;
-        var Pagename = "fun"
+        var Pagename = 1
     </script>
     <link href="P3TableStyles.css" rel="stylesheet" type="text/css">
     <style type="text/css">
@@ -59,12 +63,12 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                                         <td class="mainTopTitle">
                                             <span class="P3PageTitle">
                                                 <br>
-                                                <span id="lblTitle">乐天堂汇总报表</span>
+                                                <span id="lblTitle">乐天堂汇总报表 请选择日期范围后显示报表</span>
                                                 <br>
                                                 <br>
                                             </span>
                                         </td>
-                                        <td align="right">
+                                        <td align="right" style="width:200px">
                                             <br>
                                             <table style="height: 22px; background-color: White;" cellspacing="0" cellpadding="0">
                                                 <tbody><tr>
@@ -88,7 +92,7 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
 
 
                                             <div id="UpdatePanel1">
-	
+    
                                                     <span id="lb_DataLastUpdate">报告数据最后更新时间 ： <b>2017-01-09 12:11</b></span>
                                                 
 </div>
@@ -100,7 +104,7 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                         </tr>
 
                         <tr id="trempty">
-	<td colspan="3"></td>
+    <td colspan="3"></td>
 </tr>
 
                         <tr>
@@ -116,10 +120,10 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                             <td valign="top" align="center">
                                 <table class="main_bg" style="width: 100%;" cellspacing="0" border="0">
                                     <tbody><tr id="trlist">
-	<td colspan="3" valign="top" align="center">
+    <td colspan="3" valign="top" align="center">
                                             <div>
 
-	</div>
+                                        </div>
                                             
                                             
                                         </td>
@@ -139,9 +143,7 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
 
 
  </tbody></table>
-                            </td>
-                            <td>&nbsp;&nbsp;&nbsp;</td>
-                        </tr>
+
 <script>
 
 
@@ -150,14 +152,14 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
 
 amountChartoption = {
     title: {
-        text: '乐天堂汇总报表',
+        text: '乐天堂汇总报表 ',
         subtext: '折线图'
     },
     tooltip: {
         trigger: 'axis'
     },
     legend: {
-        data:['注册人数','首次存款会员','活跃会员'],
+        data:['注册人数','首次存款会员'],
         bottom:320
     },
     toolbox: {
@@ -175,7 +177,7 @@ amountChartoption = {
     xAxis:  {
         type: 'time',
         boundaryGap: false,
-        data: []
+        data:[]
     },
     yAxis: {
         type: 'value',
@@ -187,65 +189,14 @@ amountChartoption = {
         {
             name:'注册人数',
             type:'line',
-            data:[11, 11, 15, 13, 12, 13, 10],
+            data:[],
 
-            markLine: {
-                data: [
-                    {type: 'average', name: '平均值'}
-                ]
-            }
         },
         {
             name:'首次存款会员',
             type:'line',
-            data:[10, 2, 8, 5, 4, 7, 5],
+            data:[],
 
-            markLine: {
-                data: [
-                    {type: 'average', name: '平均值'},
-                    [{
-                        symbol: 'none',
-                        x: '90%',
-                        yAxis: 'max'
-                    }, {
-                        symbol: 'circle',
-                        label: {
-                            normal: {
-                                position: 'start',
-                                formatter: '最大值'
-                            }
-                        },
-                        type: 'max',
-                        name: '最高点'
-                    }]
-                ]
-            }
-        },
-        {
-            name:'活跃会员',
-            type:'line',
-            data:[4, 8, 4, 2, 5, 11, 3],
-
-            markLine: {
-                data: [
-                    {type: 'average', name: '平均值'},
-                    [{
-                        symbol: 'none',
-                        x: '90%',
-                        yAxis: 'max'
-                    }, {
-                        symbol: 'circle',
-                        label: {
-                            normal: {
-                                position: 'start',
-                                formatter: '最大值'
-                            }
-                        },
-                        type: 'max',
-                        name: '最高点'
-                    }]
-                ]
-            }
         }
 
     ]
@@ -261,7 +212,7 @@ moneyChartoption = {
         trigger: 'axis'
     },
     legend: {
-        data:['存款总额','下注金额','公司输赢'],
+        data:['存款总额','下注金额'],
         bottom:320
     },
     toolbox: {
@@ -284,73 +235,21 @@ moneyChartoption = {
     yAxis: {
         type: 'value',
         axisLabel: {
-            formatter: '{value} 个'
+            formatter: '{value} 元'
         }
     },
     series: [
         {
             name:'存款总额',
             type:'line',
-            data:[2, 4, 9, 14, 18, 15, 4],
+            data:[],
 
-            markLine: {
-                data: [
-                    {type: 'average', name: '平均值'}
-                ]
-            }
         },
         {
             name:'下注金额',
             type:'line',
-            data:[10, 2, 8, 5, 4, 7, 5],
-
-            markLine: {
-                data: [
-                    {type: 'average', name: '平均值'},
-                    [{
-                        symbol: 'none',
-                        x: '90%',
-                        yAxis: 'max'
-                    }, {
-                        symbol: 'circle',
-                        label: {
-                            normal: {
-                                position: 'start',
-                                formatter: '最大值'
-                            }
-                        },
-                        type: 'max',
-                        name: '最高点'
-                    }]
-                ]
-            }
+            data:[],
         },
-        {
-            name:'公司输赢',
-            type:'line',
-            data:[4, 8, 4, 2, 5, 11, 3],
-
-            markLine: {
-                data: [
-                    {type: 'average', name: '平均值'},
-                    [{
-                        symbol: 'none',
-                        x: '90%',
-                        yAxis: 'max'
-                    }, {
-                        symbol: 'circle',
-                        label: {
-                            normal: {
-                                position: 'start',
-                                formatter: '最大值'
-                            }
-                        },
-                        type: 'max',
-                        name: '最高点'
-                    }]
-                ]
-            }
-        }
 
     ]
 };
@@ -389,67 +288,38 @@ $("#amountChart").css("display", "none");
 </script>
 
                         <tr>
-                            <td></td>
-                            <td colspan="2">
-                                <input name="btnLine" value="线图" id="btnLine" class="Line_Css" style="font-size: 12px; height: 22px; width: 120px;" type="submit">
-                                <input name="btnDetailed" value="报表详情" id="btnDetailed" class="Detail_Css" style="height: 22px; width: 137px;" type="submit"></td>
+                           
                         </tr>
                         <tr style="border: 0px none;">
                             <td>&nbsp;</td>
                             <td class="titleGray" valign="baseline">
                                 <br>
 
-                                <div>
-	<table class="GV_Row" rules="all" id="GridView1" style="width: 100%; border-collapse: collapse;" cellspacing="0" border="1">
-		<tbody><tr class="GV_Header" style="height: 25px;" align="center">
-			<th scope="col" style="font-size: 10px;">产品</th><th scope="col" style="font-size: 10px;">点击量</th><th scope="col" style="font-size: 10px;">注册人数</th><th scope="col" style="font-size: 10px;">首次存款会员数</th><th scope="col" style="font-size: 10px;">活跃会员</th><th scope="col" style="font-size: 10px;">首次存款额</th><th scope="col" style="font-size: 10px;">存款总额</th><th scope="col" style="font-size: 10px;">下注量</th><th scope="col" style="font-size: 10px;">下注金额</th><th scope="col" style="font-size: 10px;">公司输赢</th>
-		</tr><tr class="GV_Row" style="font-weight: normal; height: 26px;">
-			<td align="center">
-                                                <a id="GridView1_linkbtnFun88_0" href="javascript:__doPostBack('GridView1$ctl02$linkbtnFun88','')">乐天堂</a>
-                                            </td><td style="width: 50px;" align="center">
-                                                0
-                                            </td><td style="width: 80px;" align="center">
-                                                0
-                                            </td><td style="width: 80px;" align="center">
-                                                0
-                                            </td><td align="center">
-                                                0
-                                            </td><td align="right">
-                                                0.00
-                                            </td><td align="right">
-                                                0.00
-                                            </td><td align="center">
-                                                0
-                                            </td><td align="right">
-                                                0.00
-                                            </td><td align="right">
-                                                0.00
+                                <div id="SubtotalDetail" style="width:980px;">
+                            <table id="example" class="display" width="100%"></table>
+                                                </div>
                                             </td>
-		</tr>
-	</tbody></table>
-</div>
-                            </td>
-                            <td>&nbsp;
-                            </td>
-                        </tr>
-                    </tbody></table>
-                    &nbsp; &nbsp; &nbsp;
-                </td>
-            </tr>
-        </tbody></table>
-        <div id="divSelectDate" style="position: absolute; margin-left: -20px; background-color: rgb(238, 238, 238); width: 180px; display: none; z-index: 300; border-right: 1px solid rgb(51, 51, 51); border-left: 1px solid rgb(51, 51, 51); border-bottom: 1px solid rgb(51, 51, 51);">
+                                            <td>&nbsp;
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    &nbsp; &nbsp; &nbsp;
+                                </td>
+                            </tr>
+                        </tbody></table>
+        <div id="divSelectDate" style="position: absolute; margin-left: -40px; background-color: rgb(238, 238, 238); width: 180px; display: none; z-index: 300; border-right: 1px solid rgb(51, 51, 51); border-left: 1px solid rgb(51, 51, 51); border-bottom: 1px solid rgb(51, 51, 51);">
             <center>
 
                 <br>
                 <div style="width: 100%;">
                     <div id="divSelDateByDay">
-                        <input name="txtBeginDate" id="txtBeginDate" style="width: 70px;"  maxlength="20" onClick="WdatePicker({
+                        <input value="起始时间" name="txtBeginDate" id="txtBeginDate" style="width: 70px;"  maxlength="20" onClick="WdatePicker({
                         onpicking:function(dp){
                        getdatepicker($dp.cal.getNewDateStr(),'txtBeginDate');
                          }
                         });" type="text">
                         —
-                        <input name="txtEndDate" id="txtEndDate" onClick="WdatePicker({
+                        <input value="截止时间" name="txtEndDate" id="txtEndDate" onClick="WdatePicker({
                         onpicking:function(dp){
                        getdatepicker($dp.cal.getNewDateStr(),'txtEndDate');
                          }
@@ -471,20 +341,32 @@ $("#amountChart").css("display", "none");
 <script>
 
 
-var LoginUserName =  $("#LoginUserName",parent.document).html(); 
+var LoginUserId =  $("#LoginUserId",parent.document).html(); 
 
         //按照日期
         var DayBegintime 
         var DayEndtime 
 
-        //按照月份
-        var MonthBeginTime; 
-        var MonthEndTime  
-
-
 var PostBeginTime,DayBeginTime
 var PostEndTime,DayEndTime
 
+function getdatepicker(time,inputid){
+    if (inputid=="txtBeginDate") {  
+   
+        DayBeginTime = time
+           $("#lblBeginDate").html(DayBeginTime);
+    }else if(inputid=="txtEndDate"){
+
+        DayEndTime = time
+        $("#lblEndDate").html(DayEndTime);
+    }
+ 
+
+}
+
+
+
+function posttime (){
 
 
     function cc(dd, dadd) {
@@ -497,77 +379,121 @@ var PostEndTime,DayEndTime
     }
 
 
-    var date1 = new Date("2017-01-01");
-    var date2 = new Date("2017-01-10");
+    var date1 = new Date(DayBeginTime);
+    var date2 = new Date(DayEndTime);
+  //alert(DayBeginTime);
+  //alert(DayEndTime)
 
-    var list = [];
 
+(function(){
+       var list1 = [];   var list2 = [];  var list3 =[];
+    list1.length = 0;
+    list2.length = 0;
+    list3.length = 0;
     for (var d = date1; d.valueOf() <= date2.valueOf() ; d = cc(d, 1)) {
-        //console.log(d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate());
         var s = d.getFullYear() + "-" + ("00" + (d.getMonth() + 1)).slice(-2) + "-" + ("00" + d.getDate()).slice(-2);
-        list.push({date:s, betAmount:0});
+        list1.push({date:s, betUserCount:0});
+        list2.push({date:s, betTimes:0});
+        list3.push({date:s, betAmount:0});
     }
 
-function getdatepicker(time,inputid){
-	if (inputid=="txtBeginDate") {		
-		DayBeginTime = time
-		
-	}else if(inputid=="txtEndDate"){
-		DayEndTime = time
-		
-	}else if(inputid=="txtBeginMonth"){
-		MonthBeginTime = time
-	}else if(inputid=="txtEndMonth"){
-		MonthEndTime = time
-	}
-	
-}
 
-function posttime (){
-          
-if ( $("#divSelDateByMonth").is(":hidden")) {
-    PostBeginTime =DayBeginTime
-    PostEndTime = DayEndTime
+    var eChartsData
+/*-------------------获取图表数据-------------------*/
+        $.ajax({   
+            url: AjaxURL+"Fun/Agent/getDailyBetReport",
+            type: "GET",
+            dataType: "json",
+            data: {agentId:LoginUserId, platformId:Pagename,minBetTime:DayBeginTime, maxBetTime:DayEndTime},
+            success:function(data){
 
-}else{
-    PostBeginTime = MonthBeginTime
-    PostEndTime =MonthEndTime
-}
+               /*------------------- list1-------------------*/
+                var t = data.data.dataList;
+                for (var i = 0; i < t.length; i++) {
 
+                    var d1 = new Date(t[i].date);
 
-  alert(PostBeginTime);
-  alert(PostEndTime)
+                    var a = parseInt((d1.valueOf() - date1.valueOf()) / (1000 * 60 * 60 * 24));
 
-    };
+                    list1[a].date = t[i].date;
+                    list1[a].betUserCount = t[i].betUserCount;
 
+                    list2[a].date = t[i].date;
+                    list2[a].betTimes = t[i].betTimes;
 
+                    list3[a].date = t[i].date;
+                    list3[a].betAmount = t[i].betAmount;
+                }
 
+                var listA = [];
+                var listB = [];
+                var listC = [];
+                for (var j = 0; j < list1.length; j++) {
+                    listA.push({name:list1[j].date, value:[list1[j].date, list1[j].betUserCount]});
+                    listB.push({name:list2[j].date, value:[list2[j].date, list2[j].betTimes]});
+                    listC.push({name:list3[j].date, value:[list3[j].date, list3[j].betAmount]});
+                }
 
+                amountChart.setOption({
+                    series: [{data: listA}, {data:listB}]
+                });
+                moneyChart.setOption({
+                    series: [{data: listC}]
+                });
 
- /*   $("#btnDataOk").click(function(){*/
+                var dataSet = [];
+                for (var k = 0; k < t.length; k++) {
+                dataSet.push([k+1,t[k].date,t[k].betUserCount,t[k].betTimes,t[k].betAmount])
+                }
 
+/*-----------表格-----------*/
 
-
-
-//发送 用户名LoginUserName 报表名Pagename  时间范围 开始Begintime 结束Endtime
-/*       $.post(" ",{
-            UserName:LoginUserName,
-            url:Pagename,
-            Begintime:PostBeginTime,
-            Endtime:PostEndTime
+    var table = $('#example').DataTable({
+    language: {
+        "sProcessing": "处理中...",
+        "sLengthMenu": "显示 _MENU_ 项结果",
+        "sZeroRecords": "没有匹配结果",
+        "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+        "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+        "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+        "sInfoPostFix": "",
+        "sSearch": "在报表中搜索:",
+        "sUrl": "",
+        "sEmptyTable": "表中数据为空",
+        "sLoadingRecords": "载入中...",
+        "sInfoThousands": ",",
+        "oPaginate": {
+            "sFirst": "首页",
+            "sPrevious": "上页",
+            "sNext": "下页",
+            "sLast": "末页"
         },
-        function(time,value){
-            amountChart.setOption({
-                series: [{
-                    data: data
-                }]
-            });
+        "oAria": {
+            "sSortAscending": ": 以升序排列此列",
+            "sSortDescending": ": 以降序排列此列"
+        }
+    },
+    data: dataSet,
+    columns: [
+            { "title": "序号" ,"class": "center"},
+            { "title": "日期" ,"class": "center"},
+            { "title": "注册会员数" ,"class": "center"},
+            { "title": "存款次数" ,"class": "center"},
+            { "title": "首次存款额." ,"class": "center"}
+        ]
+    });
 
 
 
-        });*/
+            }
+        });
 
-/*});*/
+})();
+
+
+};
+
+
 </script>
 
 </body>
