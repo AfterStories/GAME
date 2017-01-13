@@ -171,7 +171,10 @@
     </script>
 
     <script>
-$(document).ready(function () {     
+$(document).ready(function () { 
+
+
+
     if (getCookie("Stories")==1) {
  
             $("#login").css("display", "none");
@@ -318,7 +321,7 @@ $(document).ready(function () {
      $.noConflict();
  </script> -->
 
-<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+<style id="style-1-cropbar-clipper">
 .en-markup-crop-options {
     top: 18px !important;
     left: 50% !important;
@@ -530,7 +533,7 @@ jQuery(document).ready(function () {
                 <li style="width: 25px;">
                     <div id="HeaderContent_divForgotPwd">
                         <!-- forgot password -->
-                        <a id="hbtn5" class="tooltip" href="http://www.10010388.com/lm/Forget.aspx" target="mainFrame" title="忘记密码?"></a>
+                        <a id="hbtn5" class="tooltip" href="../Forget/index.html" target="mainFrame" title="忘记密码?"></a>
                     </div>
                 </li>
                 
@@ -605,10 +608,10 @@ jQuery(document).ready(function () {
         </span>-ID:<span id="LoginUserId" style="font-weight: bold;">1</span>
         &nbsp;&nbsp;&nbsp; 
         主账户 :
-        <span style="color: rgb(46, 154, 254);">0.00</span>
+        <span id="UserMainyue" style="color: rgb(46, 154, 254);">0.00</span>
         
                        &nbsp;&nbsp;&nbsp;本月盈利 :
-        <span style="color: rgb(46, 154, 254);">0.00</span>
+        <span id="Usermonthyue" style="color: rgb(46, 154, 254);">0.00</span>
          &nbsp;&nbsp;&nbsp;
     </div>
     </div>
@@ -720,16 +723,14 @@ jQuery(document).ready(function () {
                 <a href="forms/subtotal/fun.html" id="HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" target="mainFrame">报表</a>
                 <ul class="SubMenu">
                 <li class="menuInCS"><a href="forms/subtotal/fun.html" id="provider" class="menuChild" target="mainFrame">乐天堂汇总报表</a></li>
-                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">产品汇总报表</a></li>
-                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">体育博彩详情</a></li>
-                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">BF交易</a></li>
-                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">娱乐场详情</a></li>
-                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">快乐彩详情</a></li>
-                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">老虎机详情</a></li>
-                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">会员汇总报表</a></li>
-                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">运营汇总报表</a></li>
-                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">捕鱼游戏</a></li>
-                <li class="menuInCS"><a href="forms/index.html" target="mainFrame" id="provider" class="menuChild">运营报表</a></li>                                                                                
+
+                <li class="menuInCS"><a href="forms/sportsbook/fun.html" target="mainFrame" id="provider" class="menuChild">体育博彩详情</a></li>
+                <li class="menuInCS"><a href="forms/BF/fun.html" target="mainFrame" id="provider" class="menuChild">BF交易</a></li>
+                <li class="menuInCS"><a href="forms/Casino/fun.html" target="mainFrame" id="provider" class="menuChild">娱乐场详情</a></li>
+                <li class="menuInCS"><a href="forms/Keno/fun.html" target="mainFrame" id="provider" class="menuChild">快乐彩详情</a></li>
+                <li class="menuInCS"><a href="forms/Slot/fun.html" target="mainFrame" id="provider" class="menuChild">老虎机详情</a></li>
+                <li class="menuInCS"><a href="forms/Fishing/fun.html" target="mainFrame" id="provider" class="menuChild">捕鱼游戏</a></li>
+                                                                               
                 </ul> 
             </li>
                 <li class="menuSeperator menuInEn NoSubMenu4 menuInCS" ><img src="images/nav-space.png" alt="" height="43"></li>
@@ -921,6 +922,15 @@ jQuery(document).ready(function () {
     }
 
     jQuery(document).ready(function () {
+//获取UserInfo
+/*        $.ajax({url:"demo_test.txt",success:function(result){
+        $("#LoginUserName").html(data.data.agentName);        
+        $("#LoginUserId").html(data.data.agentId);
+        $("#UserMainyue").html(data.data.UserMainyue);        
+        $("#UserMainyue").html(data.data.UserMainyue);
+
+    }});*/
+
         //var lang = 'EN';
         //debugger;
         //languages = CS,EN,TH,ID,VI,KO

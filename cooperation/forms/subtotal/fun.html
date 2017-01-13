@@ -37,7 +37,7 @@ a:hover { color: rgb(235, 137, 35); }
 
     <script type="text/javascript">
         var objDivZ;
-        var Pagename = 1
+        var Pagename = 1  //subtotal
     </script>
     <link href="P3TableStyles.css" rel="stylesheet" type="text/css">
     <style type="text/css">
@@ -91,11 +91,6 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                                         <td colspan="2">
 
 
-                                            <div id="UpdatePanel1">
-    
-                                                    <span id="lb_DataLastUpdate">报告数据最后更新时间 ： <b>2017-01-09 12:11</b></span>
-                                                
-</div>
                                         </td>
                                     </tr>
                                 </tbody></table>
@@ -111,7 +106,7 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                             <td>&nbsp;</td>
                             <td class="titleGray" valign="bottom">
                         <input name="btnNumbers" value="数量" id="btnNumbers" class="Btn_Cls" style="height: 22px; width: 63px;" type="button">
-                                <input name="btnMoney" value="金额" id="btnMoney" class="Money_Css" style="height: 22px;" type="button">
+                                <input name="btnMoney" value="金额" id="btnMoney" class="Money_Css" style="height: 22px;width:60px;border: none;" type="button">
                             </td>
                             <td>&nbsp;</td>
                         </tr>
@@ -325,13 +320,14 @@ $("#amountChart").css("display", "none");
                          }
                         });" style="width: 70px;" readonly="readOnly" maxlength="20" type="text">
                     </div>
-
-                </div>
-                <br>
-                <div style="width: 100%;">
+                                  <div style="width: 100%;">
                     <input name="btnDataOk" value="确定" id="btnDataOk" type="button" onclick="posttime();">
                     <input name="btnDateCancel" value="取消" onclick="showDivDate(document.getElementById('tdSelTab'));return false;" id="btnDateCancel" type="button">
                 </div>
+                    <br>
+  
+                </div>
+
             </center>  
         </div>
         <br>

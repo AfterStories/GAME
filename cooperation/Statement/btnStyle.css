@@ -13,7 +13,7 @@
 .Line_Css { background-image: url("Line_1.jpg"); border: 0px none; background-repeat: no-repeat; font-size: 12px; padding-left: 20px; }
 .Num_Css { background-image: url("Num_1.jpg"); border: 0px none; font-size: 12px; }
 .Money_Css { font-size: 12px; background-color: white; }
-.Btn_Cls { font-size: 12px; border: 1px none ! important; background: transparent linear-gradient(to bottom, rgb(153, 153, 153) 0%, rgb(170, 170, 170) 19%, rgb(201, 201, 201) 49%, rgb(201, 201, 201) 49%, rgb(229, 229, 229) 85%) repeat scroll 0% 0%; }
+.Btn_Cls { font-size: 12px; border: 1px none ! important;  }
 .Apply_Css { background-image: url("apply.jpg"); border: 0px none; font-size: 12px; }
 .CC1_Css { background-image: url("CC_1.jpg"); border: 0px none; font-size: 12px; }
 .CC2_Css { background-image: url("CC_2.jpg"); border: 0px none; font-size: 12px; }

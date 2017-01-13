@@ -5,8 +5,9 @@
 
     <title></title>
 
-<script type="text/javascript" src="jquery-1.12.4.js"></script>
-<link type="text/css" rel="stylesheet" href="dropdown.css">
+<script type="text/javascript" src="../../lib/js/jquery-1.12.2.min.js"></script>
+<link type="text/css" rel="stylesheet" href="dro
+.pdown.css">
 <link id="mainStyle" type="text/css" rel="stylesheet" href="mainStyleCS.css">
 <link type="text/css" rel="stylesheet" href="style.css">
 
@@ -30,11 +31,11 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
 </head>
     <script type="text/javascript">
      var objDivZ;
-        {
+        var Pagename = 1  //curriculum 
             $(document).ready(function () {
                 $(".WdatePicker").css("font-family", "Microsoft Yahei");
             });
-        }
+   
     </script>
 <body onload="parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 500 ?document.body.scrollHeight+10:700;">
     <form method="post" id="form1">
@@ -46,13 +47,10 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                         <tbody><tr>
                             <td>
                                 <span class="P3PageTitle">
-                                    收入大纲
+                                    选取时间，查看收入大纲
                                 </span>
                             </td>
-                            <td style="width: 400px;" align="right">
 
-                                <input name="btnRefresh" value="刷新" id="btnRefresh" class="btnWhite_Css" style="border-color: Black; border-width: 1px; border-style: solid; font-weight: bold; height: 20px; width: 85px;" type="submit">
-                            </td>
                             <td align="right">
                                 <table style="height: 22px; background-color: White;" cellspacing="0" cellpadding="0">
                                     <tbody><tr>
@@ -126,7 +124,7 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                             <td rowspan="2" valign="top" align="left">
                                 <table class="dashboardTable" style="width: 440px;" cellspacing="0" border="1">
                                     <tbody><tr>
-                                        <td colspan="3" class="tableReportTitle">&nbsp;<a id="lbMemberList" class="titleBlue" href="javascript:__doPostBack('lbMemberList','')">新注册会员</a>
+                                        <td colspan="3" class="tableReportTitle">&nbsp;<a id="lbMemberList" class="titleBlue" href="#">新注册会员</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -153,11 +151,11 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                                             <table width="500px" border="0">
                                                 <tbody><tr>
                                                     <td>
-                                                        <a id="lbFun88" class="titleBlue" href="javascript:__doPostBack('lbFun88','')">乐天堂</a>
+                                                        <a id="lbFun88" class="titleBlue" href="#">乐天堂</a>
                                                     </td>
                                                     <td align="right">
                                                         盈利
-                                                        <a id="lblFun88Enring" class="sumYellow" href="javascript:__doPostBack('lblFun88Enring','')">CNY 0.00</a>
+                                                        <a id="lblFun88Enring" class="sumYellow" href="#">CNY 0.00</a>
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -204,11 +202,11 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                                                 <table width="100%" border="0">
                                                     <tbody><tr>
                                                         <td>
-                                                            <a id="lbSB" class="titleBlue" href="javascript:__doPostBack('lbSB','')">体育博彩</a>
+                                                            <a id="lbSB" class="titleBlue" href="#">体育博彩</a>
                                                         </td>
                                                         <td align="right">
                                                             <span id="lblIncomeTxt2">输赢</span>
-                                                            <a id="lblSBWin" class="sumYellow" href="javascript:__doPostBack('lblSBWin','')">CNY 0.00</a>
+                                                            <a id="lblSBWin" class="sumYellow" href="#">CNY 0.00</a>
                                                         </td>
                                                     </tr>
                                                 </tbody></table>
@@ -255,11 +253,11 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                                             <table width="100%" border="0">
                                                 <tbody><tr>
                                                     <td>
-                                                        <a id="lbCasino" class="titleBlue" href="javascript:__doPostBack('lbCasino','')">娱乐场</a>
+                                                        <a id="lbCasino" class="titleBlue" href="">娱乐场</a>
                                                     </td>
                                                     <td align="right">
                                                         <span id="lblIncomeTxt3">输赢</span>
-                                                        <a id="lblCasinoWin" class="sumYellow" href="javascript:__doPostBack('lblCasinoWin','')">CNY 0.00</a>
+                                                        <a id="lblCasinoWin" class="sumYellow" href="">CNY 0.00</a>
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -309,11 +307,11 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                                                 <table width="100%" border="0">
                                                     <tbody><tr>
                                                         <td>
-                                                            <a id="lbKeno" class="titleBlue" href="javascript:__doPostBack('lbKeno','')">快乐彩</a>
+                                                            <a id="lbKeno" class="titleBlue" href="#">快乐彩</a>
                                                         </td>
                                                         <td align="right">
                                                             <span id="lblIncomeTxt4">输赢</span>
-                                                            <a id="lblKenoWin" class="sumYellow" href="javascript:__doPostBack('lblKenoWin','')">CNY 0.00</a>
+                                                            <a id="lblKenoWin" class="sumYellow" href="#">CNY 0.00</a>
                                                         </td>
                                                     </tr>
                                                 </tbody></table>
@@ -360,11 +358,11 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                                             <table width="100%" border="0">
                                                 <tbody><tr>
                                                     <td>
-                                                        <a id="lbSlot" class="titleBlue" href="javascript:__doPostBack('lbSlot','')">老虎机</a>
+                                                        <a id="lbSlot" class="titleBlue" href="#">老虎机</a>
                                                     </td>
                                                     <td align="right">
                                                         <span id="lblSlotIncome">输赢</span>
-                                                        <a id="lblSlotWin" class="sumYellow" href="javascript:__doPostBack('lblSlotWin','')">CNY 0.00</a>
+                                                        <a id="lblSlotWin" class="sumYellow" href="#">CNY 0.00</a>
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -400,11 +398,11 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                                             <table width="100%" border="0">
                                                 <tbody><tr>
                                                     <td>
-                                                        <a id="lbFishing" class="titleBlue" href="javascript:__doPostBack('lbFishing','')">捕鱼游戏</a>
+                                                        <a id="lbFishing" class="titleBlue" href="#">捕鱼游戏</a>
                                                     </td>
                                                     <td align="right">
                                                         <span id="lblFishing">输赢</span>
-                                                        <a id="lbFishingWin" class="sumYellow" href="javascript:__doPostBack('lbFishingWin','')">CNY 0.00</a>
+                                                        <a id="lbFishingWin" class="sumYellow" href="#">CNY 0.00</a>
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -441,11 +439,11 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                                             <table width="100%" border="0">
                                                 <tbody><tr>
                                                     <td>
-                                                        <a id="lbbetfair" class="titleBlue" href="javascript:__doPostBack('lbbetfair','')">BF交易</a>
+                                                        <a id="lbbetfair" class="titleBlue" href="#">BF交易</a>
                                                     </td>
                                                     <td align="right">
                                                         <span id="lblbetfair">输赢</span>
-                                                        <a id="lbbetfairWin" class="sumYellow" href="javascript:__doPostBack('lbbetfairWin','')">CNY 0.00</a>
+                                                        <a id="lbbetfairWin" class="sumYellow" href="#">CNY 0.00</a>
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -481,7 +479,7 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                                             <table width="100%" border="0">
                                                 <tbody><tr>
                                                     <td>
-                                                        <a id="lbTotal" class="titleBlue" href="javascript:__doPostBack('lbTotal','')">共计</a>
+                                                        <a id="lbTotal" class="titleBlue" href="#">共计</a>
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -553,31 +551,74 @@ input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; pa
                 </td>
             </tr>
         </tbody></table>
-        <div id="divSelectDate" style="position: absolute; background-color: rgb(238, 238, 238); width: 160px; display: none; z-index: 300; border-right: 1px solid rgb(51, 51, 51); border-left: 1px solid rgb(51, 51, 51); border-bottom: 1px solid rgb(51, 51, 51);">
+        <div id="divSelectDate" style="position: absolute; margin-left: -40px; background-color: rgb(238, 238, 238); width: 180px; display: none; z-index: 300; border-right: 1px solid rgb(51, 51, 51); border-left: 1px solid rgb(51, 51, 51); border-bottom: 1px solid rgb(51, 51, 51);">
             <center>
-                <div style="width: 100%; background-color: rgb(156, 202, 228); color: Black;">
-                    <span id="lblSelType">选择方式:</span><input value="rbDateType1" name="selDate" id="rbDateType1" style="border-style: none;" checked="checked" onclick="if (this.checked) { document.getElementById('divSelDateByDay').style.display = ''; document.getElementById('divSelDateByMonth').style.display = 'none'; }" type="radio"><label for="rbDateType1">按日</label><input value="rbDateType2" name="selDate" id="rbDateType2" style="border-style: none;" onclick="if (this.checked) { document.getElementById('divSelDateByDay').style.display = 'none'; document.getElementById('divSelDateByMonth').style.display = ''; }" type="radio"><label for="rbDateType2">按月</label>
-                </div>
+
                 <br>
                 <div style="width: 100%;">
-                    <div id="divSelDateByDay" style="display:;">
-                        <input name="txtBeginDate" id="txtBeginDate" style="width: 60px;" readonly="readOnly" maxlength="20" value="2017-01-01" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:'2017-01-06'})" type="text">—<input name="txtEndDate" id="txtEndDate" style="width: 60px;" readonly="readOnly" maxlength="20" value="2017-01-06" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:'2017-01-06'})" type="text">
+                    <div id="divSelDateByDay">
+                        <input value="起始时间" name="txtBeginDate" id="txtBeginDate" style="width: 70px;"  maxlength="20" onClick="WdatePicker({
+                        onpicking:function(dp){
+                       getdatepicker($dp.cal.getNewDateStr(),'txtBeginDate');
+                         }
+                        });" type="text">
+                        —
+                        <input value="截止时间" name="txtEndDate" id="txtEndDate" onClick="WdatePicker({
+                        onpicking:function(dp){
+                       getdatepicker($dp.cal.getNewDateStr(),'txtEndDate');
+                         }
+                        });" style="width: 70px;" readonly="readOnly" maxlength="20" type="text">
                     </div>
-                    <div id="divSelDateByMonth" style="display: none;">
-                        <input name="txtBeginMonth" id="txtBeginMonth" style="width: 60px;" readonly="readOnly" maxlength="20" value="2016-12" onfocus="WdatePicker({dateFmt:'yyyy-MM',lang:'zh-cn',maxDate:'2016-12-06'})" type="text">—<input name="txtEndMonth" id="txtEndMonth" style="width: 60px;" readonly="readOnly" maxlength="20" value="2016-12" onfocus="WdatePicker({dateFmt:'yyyy-MM',lang:'zh-cn',maxDate:'2016-12-06'})" type="text">
-                    </div>
+                                  <div style="width: 100%;">
+                    <input name="btnDataOk" value="确定" id="btnDataOk" type="button" onclick="posttime();">
+                    <input name="btnDateCancel" value="取消" onclick="showDivDate(document.getElementById('tdSelTab'));return false;" id="btnDateCancel" type="button">
                 </div>
-                <br>
-                <div style="width: 100%;">
-                    <input name="btnDataOk" value="确定" id="btnDataOk" type="submit">
-                    <input name="btnDateCancel" value="取消" onclick="showDivDate(document.getElementById('tdSelTab'));return false;" id="btnDateCancel" type="submit">
+                    <br>
+  
                 </div>
-            </center>
+
+            </center>  
         </div>
         <br>
         <br>
     </form>
+<script>
+var DayBegintime,DayEndtime,PostBeginTime,DayBeginTime,PostEndTime,DayEndTime
+function getdatepicker(time,inputid){
+    if (inputid=="txtBeginDate") {  
+   
+        DayBeginTime = time
+           $("#lblBeginDate").html(DayBeginTime);
+    }else if(inputid=="txtEndDate"){
 
+        DayEndTime = time
+        $("#lblEndDate").html(DayEndTime);
+    }
+ 
+
+}
+
+
+function posttime (){
+
+        $.ajax({   
+            url: AjaxURL+"Fun/Agent/getDailyBetReport",
+            type: "GET",
+            dataType: "json",
+            data: {agentId:LoginUserId, platformId:Pagename,minBetTime:DayBeginTime, maxBetTime:DayEndTime},
+            success:function(data){
+               $('#lblFun88Enring').html(data.data.dataList.Enring) //盈利
+               $('#lblFun88Impression').html(data.data.dataList.Impression)//访客
+               $('#lblFun88Click').html(data.data.dataList.Click)//点击量
+               $('#lblFun88Reg').html(data.data.dataList.Reg)//注册量
+               $('#lblFun88Deposit').html(data.data.dataList.Deposit) // 首存会员
+               $('#lblFun88DepositUser').html(data.data.dataList.DepositUser)//存款会员
+            }
+
+    });
+}
+
+</script>
 
 </body>
 <div id="_my97DP" style="position: absolute; top: -1970px; left: -1970px; display: none;"><iframe style="width: 186px; height: 198px;" src="My97DatePicker.htm" border="0" scrolling="no" frameborder="0"></iframe></div></body>
