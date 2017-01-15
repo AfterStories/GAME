@@ -29,7 +29,7 @@ span { color: rgb(102, 102, 102); }
 </style>
     <link href="P3TableStyles.css" rel="stylesheet" type="text/css">
 </head>
-<body onload="var $jParent = window.parent.jQuery.noConflict(); var splashbox = $jParent('#splashbox'); splashbox.hide(1); parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ?document.body.scrollHeight+10:700;">
+<body onload="parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ?document.body.scrollHeight+10:700;">
     <form id="frmMenuManager">
 
 
@@ -212,8 +212,8 @@ span { color: rgb(102, 102, 102); }
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
-                                            <table class="tblMain" align="left" style="padding-left:20px;">
+<tr>
+                                        <td>                                         <table class="tblMain" style="padding-left:20px;" align="left">
                                                 <tbody>
                                                 <tr>
                                                     <td style="width: 130px;">
@@ -227,28 +227,30 @@ span { color: rgb(102, 102, 102); }
                                                 </tr>
                                                     <tr>
                                                     <td style="width: 130px;">
-                                                        <span id="Label2">原密码</span></td>
-                                                    <td style="height: 24px;"><input name="txtWebUrl" value="" id="oldpsw" style="width: 300px;" type="text">
+                                                        <span id="Label2">原密码</span>
+                                                   </td>
+                                                    <td style="height: 24px;">
+                                                    <input name="txtWebUrl" value="" id="oldpsw" style="width: 300px;" type="text">
                                                     </td>
                                                 </tr>
-                                                <tr><td></td><td><br/></td></tr>
+                                                <tr><td></td><td><br></td></tr>
                                                 <tr id="Tr1">
                                                         <td style="width: 130px;">
                                                         <span id="Label5">修改密码</span>
                                                         </td>
                                                         <td>
-                                                        <input name="txtWebUrl" value="输入新密码" id="newpsw" style="width: 300px;" type="text"></br></br>
-                                                        <input name="txtWebUrl" value="重复输入新密码以确认" id="reoldpsw" style="width: 300px;" type="text" onclick="return ValidatePassword();">
+                                                        <input name="txtWebUrl" value="输入新密码" id="newpsw" style="width: 300px;" type="text"><br><br>
+                                                        <input name="txtWebUrl" value="重复输入新密码以确认" id="renewpsw" style="width: 300px;"  type="text">
                                                         </td>
                                                 </tr>
                                                      <tr>
-                                                    <td style="width: 130px;">
+                                                    <td style="width: 130px;" >
                                                         </td>
                                                     <td style="height: 24px;">
-                                                        <button onclick="return ValidatePassword();">修改</button></td>
-                                                </tr>>
-                                            </tbody></table>
+                                                        <button onclick="changepsw()">修改</button></td>
+                                                </tr></tbody></table>
                                         </td>
+                                    </tr>
                                     </tr>
 
                                     <tr id="bankinfo">
@@ -457,9 +459,22 @@ span { color: rgb(102, 102, 102); }
     </form>
 
     <script type="text/javascript">
+
+
             function changepsw(){
-            $("#txtUsername").value()
-            $("#txtPwd").value()
+            	var oldpsw = $("#oldpsw").value()
+            	var newpsw = $("#newpsw").value()
+            if ( $("#newpsw").value()!==$("#renewpsw").value() ) {
+            	alert("两次输入密码不同，请确认输入！")
+            }else{
+            	$.post("url",{oldpsw:oldpsw,newpsw:newpsw},function(){
+            		alert("修改成功")
+            	})
+            	}
+
+            };
+
+
     }
 
 
