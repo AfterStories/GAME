@@ -9,189 +9,15 @@
     <script src="Common.js" language="javascript" type="text/javascript"></script>
     <script type="text/javascript" src="main.js"></script>
 
-    <script type="text/javascript" language="javascript">
-
 <script type="text/javascript" src="../../lib/js/jquery-1.12.2.min.js"></script>
 
 
-        function VaildateWebSite()
-        {
-            var objWeb=document.getElementById("txtWebUrl");
-            if(IsNotEmpty(objWeb.value) && isURL(objWeb.value))
-            {
-                objWeb.style.borderColor="";
-                var inputbox = '<tr ><td></td><td style="height:10px;font-size:14px"><span id="gvWebSite_txtLabel_0">'+objWeb.value+'</span><button onclick="delthisinputbox(this)" style="margin-left:30px;">删除</button></td></tr>'
-               $("#trWebsite").after(inputbox);
-            }
-            else
-            {
-                alert('格式错误.');
 
-                objWeb.style.borderColor="Red";
-                objWeb.focus();
-                return false;
-            }
-        }
-
-
-
-
-            function changepsw(){
-            txtUsername 
-            txtPwd
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        function ChangeNation(obj) {
-            for (var i = 0; i < obj.length; i++) {
-                if (obj.options[i].selected) {
-
-                    if (obj.options[i].value == 'CN') {
-                        document.getElementById("trProvince").style.display = '';
-                        ResetHeight();
-                        return true;
-                    }
-                }
-            }
-
-            document.getElementById("trProvince").style.display = 'none';
-            ResetHeight();
-            return false;
-        }
-
-        function ConfirmDelete() {
-            return confirm("您确认要删除一条记录吗？");
-        }
-
-        function isPhoneFormat(id) {
-            var tmp
-            var z = "0123456789+-"
-            //var nab=id.value.lenght-1;  
-            for (var i = 0; i < id.value.length; i++) {
-                tmp = id.value.substr(i, 1)
-                if (z.indexOf(tmp) == -1) { return false; }
-            }
-            if (id.value != "0") return true;
-            else return false;
-        }
-
-        function ValidateInput(type) {
-            if (!IsNotEmpty(document.getElementById("txtFullName").value)) {
-                
-                alert('Name is empty, please check!');
-                    
-                document.getElementById("txtFullName").focus();
-                return false;
-            }
-
-            if (!IsNotEmpty(document.getElementById("txtTelphone").value)) {
-                
-                alert('Telephone is empty, please check!');
-                    
-                document.getElementById("txtTelphone").focus();
-                return false;
-            }
-
-            if (!isPhoneFormat(document.getElementById("txtTelphone"))) {
-                
-                alert('Telephone format error,please check!');
-                    
-                document.getElementById("txtTelphone").focus();
-                return false;
-            }
-
-            return true;
-        }
-
-        function ValidatePassword()
-        {
-            if (!IsNotEmpty(document.getElementById("txtPwd").value)) {    
-                
-                alert('Password is empty, please check!');
-                    
-            document.getElementById("txtPwd").focus();
-            return false;
-            }
-         
-            if (!IsNotEmpty(document.getElementById("txtConfirmPwd").value)) {    
-                
-                alert('Confirm Password is empty, please check!');
-                    
-            document.getElementById("txtConfirmPwd").focus();
-            return false;
-            }         
-         
-            if (document.getElementById("txtConfirmPwd").value.length < 6) {
-                
-                alert('Password at least 6 letter.');
-                    
-            document.getElementById("txtConfirmPwd").focus();
-            return false;
-            }
-            if (document.getElementById("txtPwd").value != document.getElementById("txtConfirmPwd").value ){
-                
-                alert('Password not same!');
-                    
-            return false;
-            }
-        }
-
-        function VaildateWebSite()
-        {
-            var objWeb=document.getElementById("txtWebUrl");
-            if(IsNotEmpty(objWeb.value) && isURL(objWeb.value))
-            {
-                objWeb.style.borderColor="";
-                return true;
-            }
-            else
-            {
-                alert('格式错误.');
-
-                objWeb.style.borderColor="Red";
-                objWeb.focus();
-                return false;
-            }
-        }
-
-        function ValidateWebsite()
-        {
-            var errorMessage = '格式错误.';
-            var objWeb = jQuery("[id*=txtWebs]");
-            var myRegExp = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!127(?:\.\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/i;
-            var urlToValidate = objWeb.val();
-            if (!myRegExp.test(urlToValidate)) {
-                alert(errorMessage);
-            }
-        }
-    </script>
 
     <link href="mainStyleCS_001.css" rel="stylesheet" type="text/css">
     <style type="text/css">
 /* Code tidied up by ScrapBook */
-.tblMain td { height: 33px; width: 500px; }
+
 input { border-color: rgb(127, 157, 185); color: rgb(102, 102, 102); }
 textarea { color: rgb(102, 102, 102); }
 select { border-color: rgb(127, 157, 185); }
@@ -205,21 +31,7 @@ span { color: rgb(102, 102, 102); }
 </head>
 <body onload="var $jParent = window.parent.jQuery.noConflict(); var splashbox = $jParent('#splashbox'); splashbox.hide(1); parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ?document.body.scrollHeight+10:700;">
     <form id="frmMenuManager">
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['frmMenuManager'];
-if (!theForm) {
-    theForm = document.frmMenuManager;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
+
 
         <table width="100%" cellspacing="0" cellpadding="0" border="0">
             <tbody><tr>
@@ -230,20 +42,19 @@ function __doPostBack(eventTarget, eventArgument) {
                                 <br>
                                 <span class="P3PageTitle" style="margin-left: 20px;">
                                 <span id="Label9" class="P3PageTitle">账户管理</span>
-                                &nbsp;|&nbsp;<a href="http://www.10010688.com/lm/Payment/UpdateBankDetail.aspx" class="P3PageTitle">更新资料</a>
-                                    <br></span>
+                               </span>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <table width="100%">
-                                    <tbody><tr>
+                                <table width="100%" >
+                                    <tbody ><tr>
                                         <td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">
                                             &nbsp;&nbsp;联系信息</td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <table class="tblMain" cellspacing="0" cellpadding="0" border="0" align="center">
+                                            <table class="tblMain" cellspacing="0" cellpadding="0" border="0" align="left" style="padding-left:20px;">
                                                 <tbody><tr>
                                                     <td style="width: 130px;">
                                                         <span id="Label17">姓名</span></td>
@@ -280,13 +91,8 @@ function __doPostBack(eventTarget, eventArgument) {
                                                         <span id="Label6">语言</span></td>
     <td>
                                                         <select name="ddlLanguage" id="ddlLanguage">
-        <option value="en">English</option>
-        <option value="ko">한국어</option>
-        <option value="th">ภาษาไทย</option>
+
         <option selected="selected" value="cs">中文</option>
-        <option value="id">Indonesia</option>
-        <option value="vi">Tiếng Việt</option>
-        <option value="ja">Japanese</option>
 
     </select>                                                        
                                                     </td>
@@ -296,7 +102,7 @@ function __doPostBack(eventTarget, eventArgument) {
                                                     <td style="width: 130px;">
                                                         <span id="Label12">联系电话</span></td>
                                                     <td colspan="1">
-                                                        <input name="txtTelphone" value="13149918921" id="txtTelphone" style="width: 160px;" type="text">
+                                                        <input name="txtTelphone" value="" id="txtTelphone" style="width: 160px;" type="text">
                                                         <span id="Label1" style="color: Red;">*</span>
                                                     </td>
                                                 </tr>
@@ -306,15 +112,8 @@ function __doPostBack(eventTarget, eventArgument) {
     <td id="tdWeb" colspan="1">
                                                         <div>
         <table rules="all" id="gvWebSite" style="border-color: rgb(153, 153, 153); width: 450px; border-collapse: collapse;" cellspacing="0" border="1">
-            <tbody><tr onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#dbecfc';" onmouseout="this.style.backgroundColor=currentcolor;" style="">
-                <td style="height: 10px;">
-                                                                        <span id="gvWebSite_txtLabel_0">http://www.baidu.com</span>
-                                                                    </td><td style="height: 10px; width: 100px;" align="center">
-                                                                        <input name="gvWebSite$ctl02$btnEditWebSite" id="gvWebSite_btnEditWebSite_0" src="act.gif" style="cursor: pointer; border-width: 0px;" type="image">
-                                                                        <input name="gvWebSite$ctl02$btnDeleteWebSite" id="gvWebSite_btnDeleteWebSite_0" src="sizeminus.gif" onclick="return ConfirmDelete();" style="cursor: pointer; border-width: 0px;" type="image">
+            <tbody>
 
-                                                                    </td>
-            </tr>
         </tbody></table>
     </div>
                                                         <input name="txtWebUrl" value="http://" id="txtWebUrl" style="width: 300px;" type="text">
@@ -353,24 +152,13 @@ function __doPostBack(eventTarget, eventArgument) {
 
                                     <tr id="trTargetMarketsNation">
     <td>
-                                            <table class="tblMain" align="center">
+                                            <table class="tblMain" align="left" style="padding-left:20px;">
                                                 <tbody><tr>
                                                     <td style="width: 130px;">
                                                         <span id="Label7">国家</span></td>
                                                     <td colspan="1">
                                                         <select size="4" name="ddlNation" multiple="multiple" id="ddlNation" onchange="ChangeNation(this)" style="height: 90px; width: 282px;">
         <option selected="selected" value="CN">中国</option>
-        <option value="HK">中国香港</option>
-        <option value="JP">日本</option>
-        <option value="KR">韩国</option>
-        <option value="ID">印度尼西亚</option>
-        <option value="IN">印度</option>
-        <option value="BN">文莱</option>
-        <option value="LA">老挝</option>
-        <option value="VN">越南</option>
-        <option value="KH">柬埔寨</option>
-        <option value="TH">泰国</option>
-        <option value="OT">其他国家</option>
 
     </select></td>
                                                 </tr>
@@ -425,41 +213,40 @@ function __doPostBack(eventTarget, eventArgument) {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <table class="tblMain" align="center">
-                                                <tbody><tr>
+                                            <table class="tblMain" align="left" style="padding-left:20px;">
+                                                <tbody>
+                                                <tr>
                                                     <td style="width: 130px;">
-                                                        <span id="Label2">用户名</span></td>
+                                                        <span id="Label2">用户名</span>
+                                                    </td>
                                                     <td style="height: 24px;">
-                                                        <span id="txtUsername" style="display: inline-block; width: 160px;">zhanghaihong77</span></td>
+                                                        <span id="txtUsername" style="display: inline-block; width: 160px;">
+                                                        stories
+                                                        </span>
+                                                    </td>
                                                 </tr>
+                                                    <tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label2">原密码</span></td>
+                                                    <td style="height: 24px;"><input name="txtWebUrl" value="" id="oldpsw" style="width: 300px;" type="text">
+                                                    </td>
+                                                </tr>
+                                                <tr><td></td><td><br/></td></tr>
                                                 <tr id="Tr1">
-    <td style="width: 130px;">
-                                                        <span id="Label5">密码</span></td>
-    <td>
-                                                        <a id="lnkChangePwd" href="javascript:__doPostBack('lnkChangePwd','')">修改</a></td>
-</tr>
-
-                                                <tr id="trPwd" style="display: none;">
-    <td style="width: 130px;">
-                                                        <span id="Label3">新密码</span></td>
-    <td>
-                                                        <input name="txtPwd" id="txtPwd" style="width: 160px;" type="password"></td>
-</tr>
-
-                                                <tr id="trConfirmPwd" style="display: none;">
-    <td style="width: 130px;">
-                                                        <span id="Label14">确认新密码</span></td>
-    <td>
-                                                        <input name="txtConfirmPwd" id="txtConfirmPwd" style="width: 160px;" type="password">&nbsp;
-                                                        <input name="btnChangePwd" value="修改密码" onclick="return ValidatePassword();" id="btnChangePwd" type="submit"></td>
-</tr>
-
-                                                <tr style="display: none;">
-                                                    <td style="width: 130px; height: 22px;">
-                                                        <span id="Label21">安全码</span></td>
-                                                    <td colspan="1" style="height: 22px;">
-                                                        <span id="lblSecretKey">i1pshd</span></td>
+                                                        <td style="width: 130px;">
+                                                        <span id="Label5">修改密码</span>
+                                                        </td>
+                                                        <td>
+                                                        <input name="txtWebUrl" value="输入新密码" id="newpsw" style="width: 300px;" type="text"></br></br>
+                                                        <input name="txtWebUrl" value="重复输入新密码以确认" id="reoldpsw" style="width: 300px;" type="text" onclick="return ValidatePassword();">
+                                                        </td>
                                                 </tr>
+                                                     <tr>
+                                                    <td style="width: 130px;">
+                                                        </td>
+                                                    <td style="height: 24px;">
+                                                        <button onclick="return ValidatePassword();">修改</button></td>
+                                                </tr>>
                                             </tbody></table>
                                         </td>
                                     </tr>
@@ -471,7 +258,7 @@ function __doPostBack(eventTarget, eventArgument) {
                                     </tr>
                                                                         <tr>
                                         <td>
-                                            <table class="tblMain" cellspacing="0" cellpadding="0" border="0" align="center">
+                                            <table class="tblMain" cellspacing="0" cellpadding="0" border="0" align="left" style="padding-left:20px;">
                                                 <tbody><tr>
                                                     <td style="width: 130px;">
                                                         <span id="Label17">国家</span><span class="cont12oe" width="5">*</span>
@@ -592,7 +379,7 @@ function __doPostBack(eventTarget, eventArgument) {
                                     <tr id="trEarningScheme">
     <td style="padding-top: 5px; padding-bottom: 6px;" align="center">
                                             <table class="tblScheme" id="tblScheme" width="98%" cellspacing="1" cellpadding="0" border="0">
-                                                <tbody><tr>
+                                                <tbody style="padding-left:20px;"><tr align="center">
                                                     <td style="height: 30px;" colspan="4">
                                                         &nbsp;<span id="Label13" style="display: inline-block; border-style: none;">产品类型:</span>&nbsp;
                                                         <span id="lblProductType">体育博彩,娱乐场,老虎机,彩票,4,7</span></td>
@@ -670,6 +457,36 @@ function __doPostBack(eventTarget, eventArgument) {
     </form>
 
     <script type="text/javascript">
+            function changepsw(){
+            $("#txtUsername").value()
+            $("#txtPwd").value()
+    }
+
+
+            function VaildateWebSite()
+        {
+            var objWeb=document.getElementById("txtWebUrl");
+            if(IsNotEmpty(objWeb.value) && isURL(objWeb.value))
+            {
+                objWeb.style.borderColor="";
+                var inputbox = '<tr ><td></td><td style="height:10px;font-size:14px"><span id="gvWebSite_txtLabel_0">'+objWeb.value+'</span><button onclick="delthisinputbox(this)" style="margin-left:30px;">删除</button></td></tr>'
+               $("#trWebsite").after(inputbox);
+            }
+            else
+            {
+                alert('格式错误.');
+
+                objWeb.style.borderColor="Red";
+                objWeb.focus();
+                return false;
+            }
+        }
+
+        function delthisinputbox(n){
+               $(n).parent().parent().remove(); 
+        }
+
+
         function AddInputUrl()
         {
             document.getElementById("tdWeb").innerHTML+='<BR><input name="txtWebUrl" type="text" value="http://" style="width: 227px" />';
