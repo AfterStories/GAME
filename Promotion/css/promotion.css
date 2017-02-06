@@ -63,7 +63,7 @@ p { padding-bottom: 18px; }
 .S15 { height: 44px; width: 100px; }
 body.lang-zh-CN #MainForm { background-image: url("../images/promo_banner_bg_.jpg"); }
 #MainForm { background-position: center top; background-repeat: no-repeat; }
-#header { position: relative; z-index: 99; }
+#header { position: relative; z-index: 99;margin-top:60px }
 #sub-nav-pro { float: left; height: 30px; padding-bottom: 5px; padding-right: 0px; position: relative; top:40px;text-align: center; width: 952px; margin-left: 8px; z-index: 24; }
 .spacing0 { clear: both; height: 50px; }
 .spacing { clear: both; height: 10px; }

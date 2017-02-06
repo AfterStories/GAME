@@ -4,15 +4,12 @@
 <title>
 	真人娱乐场
 </title>
-    <link href="css/bundleCss.css" rel="stylesheet" type="text/css">
+    <link href="../lib/css/bundleCss.css" rel="stylesheet" type="text/css">
     
 <meta name="keywords" content="真人娱乐场，轮盘，百家乐，超级21点，3D真人百家乐，免佣金百家乐，最佳真人娱乐场，乐天堂，乐天堂官网">
 <meta name="description" content="最佳真人娱乐场专业提供真人娱乐包括轮盘、百家乐、超级21点、3D真人百家乐、免佣金百家乐等最佳真人娱乐上乐天堂官网">
 <link rel="canonical" href="#">
         
-
-
-    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="content-language" content="zh-CN">
     <meta name="revisit-after" content="7 days">
@@ -25,41 +22,7 @@
     
     <link rel="stylesheet" href="css/CasinoStyle.css" type="text/css" media="all">
 
-    <script type="text/javascript">
-        function boyAlert() {
-            Alert("抱歉!<br/><br/>由于您的用户名多过15个字符,您将无法登入波音堂<br/><br/>若您想在波音堂游戏, 请您注册一个新的用户名<br/>");
-            return false;
-        }
-        function Is_TS_User(memberCode, provider) {
-
-            var re = new RegExp("^[a-zA-Z0-9]+$");
-            if(!re.test(memberCode) && provider == 'TS')
-            {
-                Alert("利盈堂(泰山) 无法支持拥有特别数字或符号的用户名,您将无法转账或进行游。");
-                return false;
-            }
-            return true;
-        }
-
-        function Is_AB_User(memberCode, provider) {
-
-            var re = new RegExp("^[a-zA-Z0-9]+$");
-            if(!re.test(memberCode) && provider == 'AB')
-            {
-                Alert("“隆运堂（欧博）”无法支持拥有特别数字用户名，您将无法转账或进行游戏。");
-                return false;
-            }
-
-            if(memberCode.length > 16 && provider == 'AB'){
-                Alert("“隆运堂（欧博）”无法支持拥有特别数字用户名，您将无法转账或进行游戏。");
-                return false;
-            }
-            return true;
-        }
-    </script>
-    
-
-
+ 
     <style type="text/css">
         #MainForm {
             background-image: url("images/bg.jpg");
@@ -361,143 +324,7 @@
             right: 5px;
             cursor:pointer;
         }
-    </style>
-
-
-<style id="style-1-cropbar-clipper">
-.en-markup-crop-options {
-    top: 18px !important;
-    left: 50% !important;
-    margin-left: -100px !important;
-    width: 200px !important;
-    border: 2px rgba(255,255,255,.38) solid !important;
-    border-radius: 4px !important;
-}
-
-.en-markup-crop-options div div:first-of-type {
-    margin-left: 0px !important;
-}
-</style>
-
-</head>
-<body id="uiHtmlBody" style="display: block;" class=" lang-zh-CN" lang="zh-CN">
-    
-    
-    
-    <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
-    <script type="text/javascript" src="../lib/js/scrollAd.js"> </script>
-    <script type="text/javascript" src="../lib/js/jquery-qrcode-0.14.0.min.js" async=""></script>
-    <script src="js/bundleJquery.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/master.yui.js" async=""></script>
-    <script type="text/javascript" src="js/master.js" async=""></script>
-    <script type="text/javascript" src="../lib/js/master.payment.crawler.js" async=""></script>
-    <script type="text/javascript">
-        var g_Cookie_PopUpWelcome = "PopUpWelcome";
-        function getCookie(c_name) {
-            var c_value = document.cookie;
-            var c_start = c_value.indexOf(" " + c_name + "=");
-            if (c_start == -1) {
-                c_start = c_value.indexOf(c_name + "=");
-            }
-            if (c_start == -1) {
-                c_value = null;
-            }
-            else {
-                c_start = c_value.indexOf("=", c_start) + 1;
-                var c_end = c_value.indexOf(";", c_start);
-                if (c_end == -1) {
-                    c_end = c_value.length;
-                }
-                c_value = unescape(c_value.substring(c_start, c_end));
-            }
-            return c_value;
-        }
-        function setCookie(c_name, value, exdays) {
-            var exdate = new Date();
-            exdate.setDate(exdate.getDate() + exdays);
-            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
-            document.cookie = c_name + "=" + c_value;
-        }
-        function deleteCookie(cname) {
-            CreateCookie(cname, "", -1);
-            document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-        }
-        function isCookieExist(strCookieKey) {
-            var cookieValue = $.cookie(strCookieKey);
-            if ($.cookie(strCookieKey) == "" || $.cookie(strCookieKey) == null || $.cookie(strCookieKey) == "undefined") {
-                return false;
-            }
-            else {
-                return true;
-            }
-        }
-        function createCookie(strCookieKey) {
-            $.cookie(strCookieKey, 1, 
-            {
-                expires: 3650          
-            });
-        }
-        function deleteCookie(strCookieKey) {
-            $.removeCookie(strCookieKey);
-        }
-        $(document).keypress(function (evt) {
-            evt = (evt) ? evt : ((event) ? event : null);
-            var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
-            if ((evt.keyCode == 13) && (node.type == "text" || node.type == "password")) {
-                if (node.id == "UserName" && node.value) {
-                    if ($("#Password").val()) {
-                        $("#login .button").click();
-                    } else {
-                        $("#Password").focus();
-                    }
-                }
-                if (node.id == "Password" && node.value) {
-                    if ($("#UserName").val()) {
-                        $("#login .button").click();
-                    } else {
-                        $("#UserName").focus();
-                    }
-                }
-                if (node.id == "txtUsn" && node.value) {
-                    if ($("#txtPwd").val()) {
-                        $(".PL_login_btn .PL_button").click();
-                    } else {
-                        $("#txtPwd").focus();
-                    }
-                }
-                if (node.id == "txtPwd" && node.value) {
-                    if ($("#txtUsn").val()) {
-                        $(".PL_login_btn .PL_button").click();
-                    } else {
-                        $("#txtUsn").focus();
-                    }
-                }
-                return false;
-            }
-            return true;
-        });
-    </script>
-<!--     <script type="text/javascript">
-    $('#top_header').scrollToFixed();
-    var strURLIovation = "https://mpsnare.iesnare.com/snare.js";
-    $(document).ready(function () {
-        $("#colorbox, #cboxOverlay").appendTo('form:first');
-        $("#uiHtmlBody").css("display", "block");
-        $(".ui-dialog").css({ "position": "absolute", "top": "50%", "left": "50%", "margin-left": -$('.ui-dialog').width() / 2, "margin-top": -$('.ui-dialog').height() / 2 });
-    });
-    var PokerRegister = "False";
-    var isLogin = "false";
-</script>
- -->
-    <form  id="MainForm">
- 
-    <div id="fixed_header"></div>
-    <div id="page" class="shell">
-        <!-- Logo + Search + Navigation -->
-        
-
-<style type="text/css">
-    #slotLeaderboard {
+           #slotLeaderboard {
         position: absolute;
         z-index: 9999;
         margin-left: 85px;
@@ -656,86 +483,7 @@
         width:310px;
         background-image: url("images/fun88-leaderboard-banner-img.png");
     }
-</style>
-
-
-
-
-<script type="text/javascript" language="javascript">
-   
-
-
-    function generateAffiliateApk() {   
-        $.ajax({
-            type: "POST",
-            url: "/Services/AndroidAffiliate.ashx",
-            data: { AffiliateCode: affiliateCode, ProductType: "Fun88_Gaming" },
-            dataType: "json",
-            success: function (data) {
-                if (data.Success && data.ResponseUrl != null && data.ResponseUrl != "") {
-                        $('#fun88apk_dl_btn a').attr('href', data.ResponseUrl).css("display", "block");
-                        $('#qr_generator').empty();
-                        $('#qr_generator').qrcode({
-                            "render": "image",
-                            "size": 110,
-                            "color": "#3a3",
-                            "text": window.location.host + data.ResponseUrl
-                        });
-                        $('#qr_generator img').css("margin", "10px 15px 10px 18px");
-                } else {
-                    $('#fun88apk_dl_btn a').attr('href', "http://media.10010388.com/Download/Android/android-fun88.apk").css("display", "block");
-                    $('#qr_generator').empty();
-                    $('#qr_generator').qrcode({
-                        "render": "image",
-                        "size": 110,
-                        "color": "#3a3",
-                        "text": "http://media.10010388.com/Download/Android/android-fun88.apk"
-                    });
-                    $('#qr_generator img').css("margin", "10px 15px 10px 18px");
-                }
-            }
-        });          
-    }
-
-    var apkGenerated = false;
-    function genereteApkQr() {
-        if (!apkGenerated) {
-            generateAffiliateApk();
-            
-            $("#fun88APK_Container").css({'height':'342px'});
-            $("#fun88apk_dl_btn").css({'margin-top':'77px'});
-            $("#fun88apk_dl_btn").css({'margin-right':'1px'});
-            
-            apkGenerated = true;
-        }
-    }
-
-    function quickchatopenclose() {
-        if ($("#quickcontact").attr('class') == 'quickcontactcontainerbeforehover') {
-            $("#quickcontact").removeClass('quickcontactcontainerbeforehover');
-            $("#quickcontact").addClass('quickcontactcontainer');
-            $("#SOSBonuszh").css("bottom", "405px");
-            $("#SOSBonuszh").css("bottom", "446px");
-            $("#PTButton").css("bottom", "405px");
-        }
-        else {
-            $("#quickcontact").removeClass('quickcontactcontainer');
-            $("#quickcontact").addClass('quickcontactcontainerbeforehover');
-            $("#SOSBonuszh").css("bottom", "41px");
-            $("#SOSBonuszh").css("bottom", "81px");
-            $("#PTButton").css("bottom", "40px");
-        }
-    }
-  
-    $(document).ready(function() {
-        
-        $("#imgLiveChatGirl").attr("style","width: 124px; height: 203px; margin: 10px 10px -4px 10px;");
-        
-    });
-  
-</script>
-<style>
-    .quickcontactbtn1 {
+        .quickcontactbtn1 {
         background: url("../lib/images/button-chat.png") no-repeat;
     }
 
@@ -910,7 +658,618 @@
         #BtnAliSubmit{
             background: url("../lib/images/Ali_button.png") no-repeat;
         }
+        #floatmenu { position: fixed; bottom: 0%; z-index: 999; right: 8%; }
+    </style>
+
+
+<style id="style-1-cropbar-clipper">
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
 </style>
+    <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
+    <script type="text/javascript" src="../lib/js/scrollAd.js"> </script>
+    <script type="text/javascript" src="../lib/js/jquery-qrcode-0.14.0.min.js" async=""></script>
+    <script src="js/bundleJquery.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="js/master.js" async=""></script>
+    <script type="text/javascript" src="../lib/js/master.payment.crawler.js" async=""></script>
+    <script type="text/javascript" src="../lib/js/login.js"> </script>
+</head>
+<body id="uiHtmlBody" style="display: block;" class=" lang-zh-CN" lang="zh-CN">
+<script>
+
+    $(document).ready(function(){
+        $("#floatmenu").load("../lib/Publicdoms/quickMenu.html")
+
+        $("#footer").load("../lib/Publicdoms/footer.html",function(){
+        var lang = 'zh-CN';
+        var twitterUrl = 'http://www.twitter.com/fun88';
+        var krtwitterUrl = 'http://www.twitter.com/fun88kr';
+        var jptwitterUrl = 'https://twitter.com/fun88japan';
+        var fbUrl = 'http://www.facebook.com/fun88.';
+        var fbIndoUrl = 'http://www.facebook.com/Fun88ID/';
+        var fbkrUrl = 'http://www.facebook.com/fun88kr';
+        var fbjpUrl = 'https://www.facebook.com/fun88.japan';
+        var fbthUrl = 'https://www.facebook.com/Fun88ThaiOfficial/'
+        var linklang;
+        var twittlinklang = 'sea';
+        if (lang.toLowerCase() == 'zh-cn') {
+            $('.mediaCN').show();
+            $('.mediaAll').hide();$(".tooltip").tooltip();
+            $('.mediaTH').hide();
+            $('.mediaID').hide();
+        }
+        else if (lang.toLowerCase() == 'th-th') {
+            $('.mediaCN').hide();
+            $('.mediaTH').show();
+            $('.mediaID').hide();
+            $('.mediaAll').show();
+            linklang = 'thai';
+            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbthUrl, '_blank'); return false; });
+        }
+        else if (lang.toLowerCase() == 'vi-vn') {
+            $('.mediaCN').hide();
+            $('.mediaTH').show();
+            $('.mediaID').hide();
+            $('.mediaAll').show();
+            linklang = 'viet';
+            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
+        }
+        else if (lang.toLowerCase() == 'id-id') {
+            $('.mediaCN').hide();
+            $('.mediaTH').hide();
+            $('.mediaID').show();
+            $('.mediaAll').show();
+            linklang = 'indo';
+            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbIndoUrl, '_blank'); return false; });
+        } else {
+            $('.mediaCN').hide();
+            $('.mediaTH').hide();
+            $('.mediaID').hide();
+            $('.mediaAll').show();
+            if (lang.toLowerCase() == 'en-us') {
+                linklang = 'eng';
+            } else if (lang.toLowerCase() == 'ja-jp') {
+                $('.mediaTH').show();
+                linklang = 'eng';
+            } else if (lang.toLowerCase() == 'ko-kr') {
+                linklang = 'korea';
+            }
+
+            
+            $("#dvMedia06").click(function () { window.open(twitterUrl + linklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
+            
+        }
+
+        $(".tooltip").tooltip();
+
+        $("#hbtn3,#hbtn4").hover(function () {
+            $(this).next().css('color', '#25AAE1');
+        }, function () {
+            $(this).next().css('color', '#615F5F');
+        });
+
+        $("a.jQueryBookmark").click(function (e) {
+
+            var bookmarkUrl = window.location;
+            var bookmarkTitle = document.title;
+            if (document.all) { // For IE Favorite
+                window.external.AddFavorite(bookmarkUrl, bookmarkTitle);
+                return false;
+            } else if (window.opera || window.sidebar) { // For Opera Browsers and For Mozilla Firefox Bookmark
+                $("a.jQueryBookmark").attr("href", bookmarkUrl);
+                $("a.jQueryBookmark").attr("title", bookmarkTitle);
+                $("a.jQueryBookmark").attr("rel", "sidebar");
+            } else if (window.external) { //For Chrome
+                alert('您的浏览器不支持此书签行动，请手动');
+                return false;
+            } else { // for other browsers which does not support
+                alert('您的浏览器不支持此书签行动，请手动');
+                return false;
+            }
+        });
+
+        $("#dvMedia08").click(function () {
+            $("#wechat-dialog img").attr("src", "../lib/images/wechat-qr.jpg");
+            $("#wechat-dialog").dialog({
+                modal: true,
+                draggable: false,
+                resizable: false,
+                width: 260
+            });
+            $(".ui-dialog-titlebar").hide();
+        });
+
+        $("#dvMedia09").click(function () {
+            $("#line-dialog").dialog({
+                modal: true,
+                draggable: false,
+                resizable: false
+            });
+            $(".ui-dialog-titlebar").hide();
+        });
+
+        $("#dvMedia10").click(function () {
+            $("#BBM-dialog").dialog({
+                modal: true,
+                draggable: false,
+                resizable: false,
+                width: 260
+            });
+            $(".ui-dialog-titlebar").hide();
+        });
+
+        $("#wechat-dialog").click(function () {
+            $(this).dialog("close");
+        });
+
+        $("#line-dialog").click(function () {
+            $(this).dialog("close");
+        });
+
+        $("#BBM-dialog").click(function () {
+            $(this).dialog("close");
+        });
+
+        $("#wechat-dialog").hover(function () {
+            $(".close-message").slideDown("fast");
+        }, function () {
+            $(".close-message").slideUp("fast");
+        }
+        );
+
+        $("#line-dialog").hover(function () {
+            $(".close-message").slideDown("fast");
+        }, function () {
+            $(".close-message").slideUp("fast");
+        }
+        );
+
+        $("#BBM-dialog").hover(function () {
+            $(".close-message").slideDown("fast");
+        }, function () {
+            $(".close-message").slideUp("fast");
+        })
+
+        })
+        
+
+
+
+
+
+
+        $("#header").load("../lib/Publicdoms/header.html", function(){
+        
+            createDropDown();
+            $("#target dt").removeClass().addClass('zh-CN');
+            var $dropTrigger = $(".dropdown dt a");
+            var $dropTrigger2 = $(".dropdown dd span");
+            var $languageList = $(".dropdown dd ul");
+
+            // open and close list when button is clicked
+            $dropTrigger.toggle(function () {
+                $languageList.slideDown(200);
+                $dropTrigger.addClass("active");
+            }, function () {
+                $languageList.slideUp(200);
+                $(this).removeAttr("class");
+            });
+
+            $("span#arrow").click(function() {
+                $dropTrigger.click();
+            });
+
+
+        $(document).bind('click', function (e) {
+
+            var $clicked = $(e.target);
+            if (!$clicked.parents().hasClass("dropdown") && $clicked.attr('id') !== 'arrow') {
+
+                if ($dropTrigger.hasClass("active")) {
+                    $dropTrigger.click();
+                }
+            }
+        });
+
+        // when a language is clicked, make the selection and then hide the list
+        $(".dropdown dd ul li a").click(function () {
+            var clickedValue = $(this).parent().attr("class");
+            var clickedTitle = $(this).find("em").html();
+            $("#target dt").removeClass().addClass(clickedValue);
+            $("#target dt em").html(clickedTitle);
+            $languageList.hide();
+            $dropTrigger.removeAttr("class");
+
+
+            var getLang = $(this).parent().attr("class");
+           
+            if (getLang == null) return;
+
+            if (getLang.toLowerCase() != 'zh-cn') {
+                var url = window.parent.location.href;
+                var startIdx = 3;
+                var urlPath = url;
+                var extra = "";
+
+                var parts = url.split('/'); // 0 = protocol, 1 = protocol-separator, 2 = domain, 3...
+                if (parts.length > 3) {
+                    var chk = parts[3];
+
+                    if (chk.charAt(chk.length - 1) == '#') {
+                        extra = '#';
+                        chk = chk.substr(0, chk.length - 1);
+                    }
+
+                    if ((chk.length == 5) && (chk.charAt(2) == '-')) startIdx = 4;
+                }
+
+                url = "/" + getLang;
+                for (var i = startIdx; i < parts.length; i++) {
+                    var part = parts[i];
+                    if (part.length > 0) url += "/" + part;
+                }
+
+                url += extra;
+
+                window.parent.location ="../404/index.html";
+            }
+
+
+        });
+
+    function createDropDown() {
+  
+        var $form = $("div.lang form");
+        $form.hide();
+        var source = $("#BaseMainContent_HeaderContent_ascxLang_uiLanguages");
+        source.removeAttr("autocomplete");
+        var selected = source.find("option:selected");
+        var options = $("option", source);
+
+        $(".lang").append('<dl id="target" class="dropdown"></dl>');
+        $("#target").append('<dt class=""><a><span class="flag"></span></a></dt>');
+        $("#target").append('<dd id="dd1"><ul></ul></dd>');
+        options.each(function () {
+            $("#target dd ul").append('<li class="' + $(this).val() + '" ><a><span class="flag"></span></a></li>');   
+                     
+        });
+    }
+
+
+
+
+
+    var getUri = window.location.href.toLowerCase();
+    var isSlotLobby = getUri.indexOf("slotlobby") !== -1;
+    var depositDefaultLink = '';
+    function ValidateMemberExt(sender, args) {
+        sender.innerHTML = "仅可使用字母 'A-Z', 'a-z', 数字 '0-9', '.', '_' 和 '-'。";
+        return ValidateMember(sender, args);
+    }
+
+    function DropDown(el) {
+        this.dd = el;
+        this.initEvents();
+    }
+
+/*    function bankDetails() {
+        if (isSlotLobby) {
+            OpenInNewTab("/zh-CN/Bank-Details");
+        }
+        else {
+            window.location.href = "/zh-CN/Bank-Details";
+        }
+    }*/
+
+        DropDown.prototype = {
+        initEvents: function () {
+            var obj = this;
+
+            obj.dd.on('mouseover', function (event) {
+                $(this).toggleClass('active');
+                event.stopPropagation();
+            });
+        }
+    };
+    $(document).ready(function () {  
+
+
+        //银行菜单
+        var uiUN = $("#UserName");
+
+        var d1 = new DropDown($('#ddlSettings'));
+        var d2 = new DropDown($('#ddlWallets'));
+
+        $(document).click(function () {
+            $('.wrapper-dropdown-5').removeClass('active');
+        });
+
+        $("#ddlWallets").mouseover(function () {
+            if (!("ontouchstart" in window)) {
+                $('#ddlSettings').removeClass('active');
+                $("#ddlWallets").addClass('active');
+            }
+        });
+        $("#ddlSettings").mouseover(function () {
+            if (!("ontouchstart" in window)) {
+                $('#ddlWallets').removeClass('active');
+                $("#ddlSettings").addClass('active');
+            }
+        });
+
+        $("#divWelMember").mouseover(function () {
+            var memberLvl = document.getElementById("tooltipsRewardLvl");
+
+            if (memberLvl != null && memberLvl != "")
+                memberLvl.style.visibility = 'visible';
+        });
+
+        $("#divWelMember").mouseleave(function () {
+            var memberLvl = document.getElementById("tooltipsRewardLvl");
+
+            if (memberLvl != null && memberLvl != "")
+                memberLvl.style.visibility = 'hidden';
+        });
+
+
+
+    /*$(document.body).ready(function () {*/
+
+        UIObjRefreshBtn = $("#uiRefreshBalance");
+
+        /*setTimeout(function () { BalancesQuickView.Init(); }, 1250);*/
+
+        $(".walletList").css("display", "none");
+
+        $("#dropdownlist").click(function (event) {
+
+            if ($('.walletList').css('display') == 'none') {
+                $(".walletList").show();
+            } else {
+                $(".walletList").hide();
+            }
+
+            event.stopPropagation();
+
+        });
+
+        $("#walletTable").click(function () {
+            
+            $(".walletList").hide();
+        });
+
+        $(document).click(function () {
+            $(".walletList").hide();
+        });
+
+var isLogin 
+    if (getCookie("verifyform")==1) {
+    
+            
+            $("#login").css("display", "none");
+            $(".leftBorder").css("display,none")
+            $("#logined-header").css("display", "block");
+            var isLogin = true;
+            if(isLogin){       
+            $("#dy_RegistrationChgWording").html("立即存款") 
+            }
+        
+
+    }else{
+        $("#login").css("display", "block");
+            $(".leftBorder").css("display,block")
+            $("#logined-header").css("display", "none");
+            var isLogin =false;
+            if(isLogin){           
+            $("#dy_RegistrationChgWording").html("立即开户") 
+            }
+    }
+
+
+    });
+    
+addRowHandlers();
+
+        });     
+
+        });
+        
+
+
+</script>
+
+
+    <script type="text/javascript">
+        var g_Cookie_PopUpWelcome = "PopUpWelcome";
+        function getCookie(c_name) {
+            var c_value = document.cookie;
+            var c_start = c_value.indexOf(" " + c_name + "=");
+            if (c_start == -1) {
+                c_start = c_value.indexOf(c_name + "=");
+            }
+            if (c_start == -1) {
+                c_value = null;
+            }
+            else {
+                c_start = c_value.indexOf("=", c_start) + 1;
+                var c_end = c_value.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = c_value.length;
+                }
+                c_value = unescape(c_value.substring(c_start, c_end));
+            }
+            return c_value;
+        }
+        function setCookie(c_name, value, exdays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+            document.cookie = c_name + "=" + c_value;
+        }
+        function deleteCookie(cname) {
+            CreateCookie(cname, "", -1);
+            document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+        function isCookieExist(strCookieKey) {
+            var cookieValue = $.cookie(strCookieKey);
+            if ($.cookie(strCookieKey) == "" || $.cookie(strCookieKey) == null || $.cookie(strCookieKey) == "undefined") {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function createCookie(strCookieKey) {
+            $.cookie(strCookieKey, 1, 
+            {
+                expires: 3650          
+            });
+        }
+        function deleteCookie(strCookieKey) {
+            $.removeCookie(strCookieKey);
+        }
+        $(document).keypress(function (evt) {
+            evt = (evt) ? evt : ((event) ? event : null);
+            var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+            if ((evt.keyCode == 13) && (node.type == "text" || node.type == "password")) {
+                if (node.id == "UserName" && node.value) {
+                    if ($("#Password").val()) {
+                        $("#login .button").click();
+                    } else {
+                        $("#Password").focus();
+                    }
+                }
+                if (node.id == "Password" && node.value) {
+                    if ($("#UserName").val()) {
+                        $("#login .button").click();
+                    } else {
+                        $("#UserName").focus();
+                    }
+                }
+                if (node.id == "txtUsn" && node.value) {
+                    if ($("#txtPwd").val()) {
+                        $(".PL_login_btn .PL_button").click();
+                    } else {
+                        $("#txtPwd").focus();
+                    }
+                }
+                if (node.id == "txtPwd" && node.value) {
+                    if ($("#txtUsn").val()) {
+                        $(".PL_login_btn .PL_button").click();
+                    } else {
+                        $("#txtUsn").focus();
+                    }
+                }
+                return false;
+            }
+            return true;
+        });
+    </script>
+
+    <form  id="MainForm">
+ 
+
+    <div id="page" class="shell" style="top:0px">
+        <!-- Logo + Search + Navigation -->
+        
+    <div id="header">
+        
+    </div>   
+
+
+    <div id="floatmenu">  <!-- quickMenu -->
+    
+    </div>
+
+
+<script type="text/javascript" language="javascript">
+   
+
+    function generateAffiliateApk() {   
+        $.ajax({
+            type: "POST",
+            url: "/Services/AndroidAffiliate.ashx",
+            data: { AffiliateCode: affiliateCode, ProductType: "Fun88_Gaming" },
+            dataType: "json",
+            success: function (data) {
+                if (data.Success && data.ResponseUrl != null && data.ResponseUrl != "") {
+                        $('#fun88apk_dl_btn a').attr('href', data.ResponseUrl).css("display", "block");
+                        $('#qr_generator').empty();
+                        $('#qr_generator').qrcode({
+                            "render": "image",
+                            "size": 110,
+                            "color": "#3a3",
+                            "text": window.location.host + data.ResponseUrl
+                        });
+                        $('#qr_generator img').css("margin", "10px 15px 10px 18px");
+                } else {
+                    $('#fun88apk_dl_btn a').attr('href', "http://media.10010388.com/Download/Android/android-fun88.apk").css("display", "block");
+                    $('#qr_generator').empty();
+                    $('#qr_generator').qrcode({
+                        "render": "image",
+                        "size": 110,
+                        "color": "#3a3",
+                        "text": "http://media.10010388.com/Download/Android/android-fun88.apk"
+                    });
+                    $('#qr_generator img').css("margin", "10px 15px 10px 18px");
+                }
+            }
+        });          
+    }
+
+    var apkGenerated = false;
+    function genereteApkQr() {
+        if (!apkGenerated) {
+            generateAffiliateApk();
+            
+            $("#fun88APK_Container").css({'height':'342px'});
+            $("#fun88apk_dl_btn").css({'margin-top':'77px'});
+            $("#fun88apk_dl_btn").css({'margin-right':'1px'});
+            
+            apkGenerated = true;
+        }
+    }
+
+    function quickchatopenclose() {
+        if ($("#quickcontact").attr('class') == 'quickcontactcontainerbeforehover') {
+            $("#quickcontact").removeClass('quickcontactcontainerbeforehover');
+            $("#quickcontact").addClass('quickcontactcontainer');
+            $("#SOSBonuszh").css("bottom", "405px");
+            $("#SOSBonuszh").css("bottom", "446px");
+            $("#PTButton").css("bottom", "405px");
+        }
+        else {
+            $("#quickcontact").removeClass('quickcontactcontainer');
+            $("#quickcontact").addClass('quickcontactcontainerbeforehover');
+            $("#SOSBonuszh").css("bottom", "41px");
+            $("#SOSBonuszh").css("bottom", "81px");
+            $("#PTButton").css("bottom", "40px");
+        }
+    }
+  
+    $(document).ready(function() {
+        
+        $("#imgLiveChatGirl").attr("style","width: 124px; height: 203px; margin: 10px 10px -4px 10px;");
+        
+    });
+  
+</script>
+
 
 <div id="quickMenu">
     
@@ -1116,311 +1475,11 @@
     <!--Start: Quick WechatPay OnlineAlipay-->
     <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxQuickContact$hidblackbox" id="BaseMainContent_HeaderContent_ascxQuickContact_hidblackbox" type="hidden">
     <span class="hidBankCode">WC</span>
-    <div>            
-        <div>
-            <a href="javascript:void(0)" id="OpenWCP" class="dy-unit" onclick="$('#WCP_Container').show(); 
-                         $('#OpenWCP').hide(); 
-                         HideShowWCOn9AliContainer();
-                         $('#quickContactContainer').hide(); 
-                         $('#quickContact_OpenMenu').show(); 
-                         $('#fun88APK_Container').hide(); 
-                         $('#fun88APK_OpenMenu').show();
-                         resetWCP_ContainerImg();" style="display: none;">
-                <div class="button_layout WCP_OpenMenu"></div>
-            </a>
-        </div>  
-        <div id="WCP_Container" style="display: block;">
-            <a href="javascript:void(0)" id="CloseWCP" class="dy-unit" onclick="$('#WCP_Container').hide(); 
-                            $('#OpenWCP').show();">
-                <div class="button_layout CloseWCP"></div>
-            </a>
-            <div style="margin-top: 10px; margin-left: 5px;">
-                <div>
-                    <a id="BtnWCOpen" style="display: block; width: 135px; height: 32px; cursor: pointer;" href="javascript:void(0)" onclick="$('#WC_Container').show(); 
-                                 $('#BtnWCOpen').hide(); 
-                                 HideShowOn9AliContainer();
-                                 chgWCP_ContainerImg();">
-                    </a>
-                </div>
-                <div id="WC_Container" style="display: none;">
-                    <a href="javascript:void(0)" id="CloseWC" class="dy-unit" onclick="$('#WC_Container').hide(); 
-                                 $('#BtnWCOpen').show();
-                                 resetWCP_ContainerImg();">
-                        <div class="button_layout_WC_ALI CloseWC"></div>
-                    </a>
-                    <div style="margin-left: 6px;">
-                        <div id="divWCAmount">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxQuickContact$txtWCAmount" maxlength="7" id="txtWCAmount" class="signup_input" oncopy="return false;" onpaste="return false" placeholder="请输入整数金额" style="height: 25px; width: 120px;" type="text">
-                            <div id="divWCMsg">
-                                <span id="lblWCTranMsg"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-top: 2px; margin-left: 15px;">
-                        <div>
-                            <a id="BtnWCSubmit" style="display: block; width: 109px; height: 29px; cursor: pointer;"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="margin-top: 5px; margin-left: 5px;">
-                <div style="display: none;">
-                    <a id="BtnAliOpen" style="display: block; width: 135px; height: 32px; cursor: pointer;" href="javascript:void(0)" onclick="$('#Ali_Container').show(); 
-                                 $('#BtnAliOpen').hide();
-                                 HideShowWCContainer();
-                                 chgWCP_ContainerImg();"></a>
-                </div>
-                <div id="Ali_Container" style="display: none;">
-                    <a href="javascript:void(0)" id="CloseAli" class="dy-unit" onclick="$('#Ali_Container').hide(); 
-                                 $('#BtnAliOpen').show();
-                                 resetWCP_ContainerImg();">
-                        <div class="button_layout_WC_ALI CloseAli"></div>
-                    </a>
-                    <div style="margin-left: 6px;">
-                        <div id="divAliAmount">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxQuickContact$txtAliAmount" maxlength="7" id="txtAliAmount" class="signup_input" oncopy="return false;" onpaste="return false" placeholder="请输入整数金额" style="height: 25px; width: 120px;" type="text">
-                            <div id="divAliMsg">
-                                <span id="lblAliTransMsg"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-top: 2px; margin-left: 15px;">
-                        <div>
-                            <a id="BtnAliSubmit" style="display: block; width: 109px; height: 29px; cursor: pointer;"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End: Quick WechatPay OnlineAlipay-->
-    
-    <!--Start: Fun88 APK Download-->
-    <div>            
-        <div>
-            <a href="javascript:void(0)" id="fun88APK_OpenMenu" class="dy-unit" onclick="genereteApkQr(); $('#fun88APK_Container').show(); $('#fun88APK_OpenMenu').hide(); $('#quickContactContainer').hide(); $('#quickContact_OpenMenu').show();$('#WCP_Container').hide(); $('#OpenWCP').show()">
-                <div class="button_layout fun88APK_OpenMenu_zh"></div>
-            </a>
-        </div>     
-        <div id="fun88APK_Container" style="display: none;">
-            <a href="javascript:void(0)" id="fun88APK_CloseMenu" class="dy-unit" onclick="$('#fun88APK_Container').hide(); $('#fun88APK_OpenMenu').show();">
-                <div class="button_layout fun88APK_CloseMenu"></div>
-            </a>
-            <div style="margin-top: 13px;">
-                <div id="qr_generator">
-                    <img id="fun88apk_QR" src="../lib/images/QR.png" style="margin: 10px 15px 10px 18px;" alt="apkQrCode" width="110" height="110">
-                </div>
-            </div>
-            <div id="fun88apk_dl_btn" style="margin-top: 144px;">
-                <div>
-                    <a id="fun88apk_dl_zh" style="margin: -5px auto 5px;  width: 135px; height: 32px; cursor: pointer;display: block;" onclick="sendAndroidApkGA('Mobile APK','Desktop'); window.open(this.href, 'newwindow', 'width=420, height=250'); return false;" href="http://media.10010388.com/Download/Android/android-fun88.apk"> </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <!--END: Fun88 APK Download-->
+ 
 
-    
-
-   
-
-    <!--Start: Quick Contact-->
-    <div> 
-        <div>
-            <a href="javascript:void(0);" id="quickContact_OpenMenu" class="dy-unit" onclick="$('#quickContact_OpenMenu').hide(); $('#quickContactContainer').show(); $('#fun88APK_Container').hide(); $('#fun88APK_OpenMenu').show();$('#WCP_Container').hide(); $('#OpenWCP').show();">
-                <div class="button_layout quickContact_OpenMenu"></div>
-            </a>
-        </div> 
-        <div id="quickContactContainer" style="display: none;">
-            <a href="javascript:void(0);" id="quickContact_CloseMenu" onclick="$('#quickContact_OpenMenu').show(); $('#quickContactContainer').hide();" class="dy-unit">
-                <div class="button_layout"></div>
-            </a>
-            <img src="images/girl.png" style="width: 124px; height: 203px; margin: 10px 10px -4px;" id="imgLiveChatGirl" width="124" height="203">
-
-            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('#', 'newwindow', 'width=420, height=250'); return false;" href="#/">
-                <div class="quickcontactbtn quickcontactbtn1">
-                </div>
-            </a>
-
-            <a id="quickContactDownload" class="dy-unit" target="_blank" href="http://www.10010388.com/zh-CN/LiveChat" onclick="sendQuickContactGA('QuickContactDownload');">
-                <div class="quickcontactbtn quickcontactbtn2">
-                </div>
-            </a>
-
-            <div class="quickcontacttext" style="padding-bottom: 4px;">
-                
-                <b>客服热线</b>
-                
-                <br>
-                +86 400 890 0398
-            </div>
-            <div class="quickcontacttext" id="quickContactSelId">
-                
-                <b>客服邮箱</b>
-                <br>
-                
-                <a id="quickContactMail" class="quickcontactemailtext dy-unit" href="mailto:cs@fun88.com" onclick="sendQuickContactGA('QuickContactMail');">
-                    cs@fun88.com
-                </a>
-            </div>
-        </div>
-	</div>
-    <!--END: Quick Contact-->
 </div>
 
 
-<div id="outer_top_header">
-    <div id="sp_logo" style="display: none;">
-        <a id="A2" href="#" onclick="javascript:newPage(this.href); return false;"></a>
-    </div>
-    <div id="top_header">
-        <div id="top_nav_left">
-            
-            <ul>
-                <li id="topBannerLogoContainer"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="../home/index.html"></a></li>
-                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('../help/About-Us/index.html', 'AboutUs',1020); return false;"></a></li>
-                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('../help/help/index.html', 'Help',1020); return false;"></a></li>
-                
-                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager('../help/How-To-Play/index.html', 'GeneralRules','1020');">
-                    <div></div>
-                    如何投注</a>
-                </li>
-                
-                <li><!-- id="dropdown" -->  <!-- 加入此id，ul下拉菜单生效 -->
-                    <a id="hbtn4" class="top_nav_text" onclick="javascript:popUpWindowManager('#', 'LiveHelp',1020); return false;" title="">
-                        <div></div>
-                        在线客服
-                        <!--  -->
-                    </a>
-
-                </li>
-            </ul>
-
-                </li>
-            </ul>
-        </div>
-        <div id="top_nav_right">
-            <ul>
-                <li id="languageSelect">
-                    
-<div class="lang">
-    <select name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxLang$uiLanguages" id="BaseMainContent_HeaderContent_ascxLang_uiLanguages" onchange="" style="display: none;">
-	<option value="en-US">English</option>
-	<option value="vi-VN">Tiếng Việt</option>
-	<option value="th-TH">ภาษาไทย</option>
-	<option value="id-ID">Bahasa Indonesia</option>
-	<option value="ja-JP">Japan</option>
-
-</select> 
-</div>
-<script type="text/javascript" language="javascript">
-    $(document).ready(function () {
-        createDropDown();
-        $("#target dt").removeClass().addClass('zh-CN');
-        var $dropTrigger = $(".dropdown dt a");
-        var $dropTrigger2 = $(".dropdown dd span");
-        var $languageList = $(".dropdown dd ul");
-
-        // open and close list when button is clicked
-        $dropTrigger.toggle(function () {
-            $languageList.slideDown(200);
-            $dropTrigger.addClass("active");
-        }, function () {
-            $languageList.slideUp(200);
-            $(this).removeAttr("class");
-        });
-
-        $("span#arrow").click(function() {
-            $dropTrigger.click();
-        });
-
-
-        /*$("#dd1 ul li").hover(function () {
-        $(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine_.png)");
-        },
-        function () {
-        $(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine.png)");
-        });*/
-
-        // close list when anywhere else on the screen is clicked
-        $(document).bind('click', function (e) {
-            var $clicked = $(e.target);
-            if (!$clicked.parents().hasClass("dropdown") && $clicked.attr('id') !== 'arrow') {
-                if ($dropTrigger.hasClass("active")) {
-                    $dropTrigger.click();
-                }
-            }
-        });
-
-        // when a language is clicked, make the selection and then hide the list
-        $(".dropdown dd ul li a").click(function () {
-            var clickedValue = $(this).parent().attr("class");
-            var clickedTitle = $(this).find("em").html();
-            $("#target dt").removeClass().addClass(clickedValue);
-            $("#target dt em").html(clickedTitle);
-            $languageList.hide();
-            $dropTrigger.removeAttr("class");
-
-
-            var getLang = $(this).parent().attr("class");
-            //alert();
-            if (getLang == null) return;
-
-            if (getLang.toLowerCase() != 'zh-cn') {
-                var url = window.parent.location.href;
-                var startIdx = 3;
-                var urlPath = url;
-                var extra = "";
-
-                var parts = url.split('/'); // 0 = protocol, 1 = protocol-separator, 2 = domain, 3...
-                if (parts.length > 3) {
-                    var chk = parts[3];
-
-                    if (chk.charAt(chk.length - 1) == '#') {
-                        extra = '#';
-                        chk = chk.substr(0, chk.length - 1);
-                    }
-
-                    if ((chk.length == 5) && (chk.charAt(2) == '-')) startIdx = 4;
-                }
-
-                url = "/" + getLang;
-                for (var i = startIdx; i < parts.length; i++) {
-                    var part = parts[i];
-                    if (part.length > 0) url += "/" + part;
-                }
-
-                url += extra;
-
-                window.parent.location = "../404/index.html";
-            }
-
-        });
-    });  
-    function createDropDown() {
-        var $form = $("div.lang form");
-        $form.hide();
-        var source = $("#BaseMainContent_HeaderContent_ascxLang_uiLanguages");
-        source.removeAttr("autocomplete");
-        var selected = source.find("option:selected");
-        var options = $("option", source);
-        $(".lang").append('<dl id="target" class="dropdown"></dl>');
-        $("#target").append('<dt class=""><a><span class="flag"></span></a></dt>');
-        $("#target").append('<dd id="dd1"><ul></ul></dd>');
-        options.each(function () {
-            $("#target dd ul").append('<li class="' + $(this).val() + '" ><a><span class="flag"></span></a></li>');                
-        });
-    }
-</script>
-                    <span id="arrow"></span></li>
-                
-                <li class="leftBorder">
-                    <div id="BaseMainContent_HeaderContent_divForgotPwd">
-                        <a id="hbtn5" class="tooltip" title="忘记密码" href="../Forget/index.html"></a>
-                    </div>
-                </li>
-                
 
 <style type="text/css">
     .dropdown a.ja-JP {
@@ -1467,405 +1526,68 @@
             border-width: 7px;
         margin-left:-7px;
         }
-</style>
-<script language="javascript" type="text/javascript">
-    var getUri = window.location.href.toLowerCase();
-    var isSlotLobby = getUri.indexOf("slotlobby") !== -1;
-    var depositDefaultLink = '';
-    function ValidateMemberExt(sender, args) {
-        sender.innerHTML = "仅可使用字母 'A-Z', 'a-z', 数字 '0-9', '.', '_' 和 '-'。";
-        return ValidateMember(sender, args);
-    }
-
-    function DropDown(el) {
-        this.dd = el;
-        this.initEvents();
-    }
-
-    function bankDetails() {
-        if (isSlotLobby) {
-            OpenInNewTab("/zh-CN/Bank-Details");
+            .btnSide{
+            width: 140px;
+            height: 30px;
+            border: 1px solid #C3C3C3;
+            margin-bottom: 4px;
+            border-radius: 5px;
+            color: #25aae1;
+            font-size: 15px;
+            text-align: center;
+            line-height: 28px;
+            cursor: pointer;
         }
-        else {
-            window.location.href = "/zh-CN/Bank-Details";
+        .btnSide:hover{
+            background-color: #25AAE1;
+            color: white;
         }
-    }
-
-    DropDown.prototype = {
-        initEvents: function () {
-            var obj = this;
-
-            obj.dd.on('mouseover', function (event) {
-                $(this).toggleClass('active');
-                event.stopPropagation();
-            });
+         .btnSidePlay{
+            background-color: #90C811;
+            color: white !important;
+            height: 37px !important;
+            line-height: 35px !important;
+            width: 140px;
+            border: 1px solid #C3C3C3;
+            margin-bottom: 4px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align:center;
+            font-size: 15px;
         }
-    };
-
-
-    $(document).ready(function () {
-        var uiUN = $("#UserName");
-
-        var d1 = new DropDown($('#ddlSettings'));
-        var d2 = new DropDown($('#ddlWallets'));
-
-        $(document).click(function () {
-            $('.wrapper-dropdown-5').removeClass('active');
-        });
-
-        $("#ddlWallets").mouseover(function () {
-            if (!("ontouchstart" in window)) {
-                $('#ddlSettings').removeClass('active');
-                $("#ddlWallets").addClass('active');
-            }
-        });
-        $("#ddlSettings").mouseover(function () {
-            if (!("ontouchstart" in window)) {
-                $('#ddlWallets').removeClass('active');
-                $("#ddlSettings").addClass('active');
-            }
-        });
-
-        $("#divWelMember").mouseover(function () {
-            var memberLvl = document.getElementById("tooltipsRewardLvl");
-
-            if (memberLvl != null && memberLvl != "")
-                memberLvl.style.visibility = 'visible';
-        });
-
-        $("#divWelMember").mouseleave(function () {
-            var memberLvl = document.getElementById("tooltipsRewardLvl");
-
-            if (memberLvl != null && memberLvl != "")
-                memberLvl.style.visibility = 'hidden';
-        });
-    });
-</script>
-
-<div id="RewardsDIV" style="visibility: hidden; display: none;"></div>
-
-
-<script type="text/javascript">
-    function Login() {
-        var userName = $("#UserName").val();
-        var password = $("#Password").val();
-
-        // Variable for Login source checking
-        var url404 = 'http://www.fun88.com/zh-CN/404';
-        var url500 = 'http://www.fun88.com/zh-CN/500';
-        var accDenied = 'http://www.fun88.com/zh-CN/Access-Denied';
-
-        if (!userName || !password) {
-            Alert('请输入您的用户名与密码。', true);
-            return false;
+        .btnSidePlay:hover{
+            background-color: #75A00E !important;
         }
-        getLoginLoading();   /*登陆动画*/
-       
-        $.post("/Services/Login.ashx?action=login",
-                { login: userName, password: password, blackbox: $('input[id$=hidblackbox]').val() },
-                function (data) {
-                    if (data.Description === 'Success') {
-                        CreateCookie("verifyform", "1", 0);   /*创建缓存*/
-                        $("#RewardsDIV").html("<iframe id='RewardsOuterDIV' src='/Reward/zh-CN?Fun88Login=true' style='visibility:hidden;display:none;'></iframe>");
 
-                     $("#RewardsOuterDIV").load(function () {
-                         $(".loadingLoginGif").css("display", "none");
-                         $("#RewardsDIV").html('');
-                         if (window.location.href == url404 || window.location.href == url500 || window.location.href == accDenied) {
-                             window.location.href = "/zh-CN/Default";
-                            } else {
-                                var location = window.location.href.indexOf('#');
-                                window.location.href = (window.location.href.indexOf("/zh-CN/Home") != -1) ? "/zh-CN/Default" : ((location > 0) ? window.location.href.substring(0, location) : window.location.href);
-                            }
-                        });
-                         window.gender = data.g;
-                        
-                 } else {
-                     $(".loadingLoginGif").css("display", "none");
-                     if (data.u === "registrationDeny") {
-                         registerDeny();
-                     } else
-                         Alert(data.Description);
-                 }
-             },
-                "json");
-             return false;
-         }
-</script>
-<div id="login">
-    <div class="field-holder">
-        <input name="$UserName" maxlength="20" id="UserName" tabindex="1" class="field" autocomplete="off" placeholder="用户名" type="text">
-        <span id="BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator" class="username-error" style="visibility: hidden;"></span>
-    </div>
-    <div class="field-holder">
-        <input name="$Password" maxlength="20" id="Password" tabindex="2" class="password" autocomplete="off" placeholder="用户密码" type="password">
-        <span id="BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator" class="password-error" style="visibility: hidden;"></span>
-    </div>
-    <input name="$btnLogin" value="登入" onclick="return Login();" id="btnLogin"  class="button" type="button">
-    <div class="cl">
-        &nbsp;
-    </div>
-</div>
+        #dvUCGD div.gamelist{
+            float: left;
+            display: inline;
+            margin-bottom: 40px;
+        }
+        #tutorialFK{
+            margin-left: -9px;
+        }
+        #divGDTutorialPopup .pagination{
+            display: none;
+        }
 
-            </ul>
-            <div class="cl">
-                &nbsp;
-            </div>
-        </div>
-    </div>
-    
-</div>
-<div id="top">
-    <div id="logofun88InZh" class="logoLoc">
-        <a class="logo" href="../home/index.html">FUN88</a>
-    </div>
-
-    <div id="header_right">
-        <div id="BaseMainContent_HeaderContent_divBtnRegister" class="dy-unit">
-                
-                    <div class="btnRegisterAlignmentCN">
-                        <a id="btnRegisterCN" href="../Registration/index.html" style="position: absolute;" onclick="sendHomeContentGA('HeaderRegistration', 'BtnHomeRegistration');">
-                            <div id="dy_RegistrationChgWording">立即开户</div>
-                            <script type="text/javascript">
-                                function RegistrationChgWording() {
-                                    try {
-                                        DYO.smartObject("RegistrationChgWording", { target: "dy_RegistrationChgWording", inline: true });
-                                    } catch (e) {
-                                        window.setTimeout(function () { RegistrationChgWording(); }, 2000);
-                                    }
-                                }
-                                RegistrationChgWording();
-                            </script>
-                        </a>
-                    </div>
-                </div>
-        
-
-    </div>
-    <div class="cl">
-        &nbsp;
-    </div>
-    <!--MaintenanceCountdown, it is only for maintenance countdown only-->
-    
-
-    <!--The slider above navigation bar-->
-    <div id="TopAD">
-    		<ul>
-
-
-			</ul>	
-    </div>
-<style>
-	/* 顶部滚动广告 */
+        .closeTutorialPopup{
+            background: url("../lib/images/allicons.png") no-repeat;
+            background-position: -641px -5px;
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            top: 5px;
+            right: 13px;
+            cursor:pointer;
+            z-index: 100;
+        }
+            /* 顶部滚动广告 */
     #TopAD{ width: 680px; height: 34px; position: relative; top:-15px;margin:2px auto;overflow: hidden;z-index: 1 ;float:right;}
     #TopAD ul { width: 680px; height: 34px; position: relative; }
     #TopAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
     #TopAD ul li a { text-decoration:none; height: 34px;}
 </style>
-</div>
-
-
-<div id="navigation">
-    <table id="navMain" class="zh-CN" ">
-        <tbody><tr>
-            <td class="menuStatic off">
-                <div id="mainMenu-Home" class="dy-unit">
-                    <a href="../home/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiHomeIcon" class="MenuImageHome" onclick="window.location=this.href;"></a>
-                    <div class="menuSeperator"></div>
-                </div>
-            </td>
-
-            
-                
-                    <td id="Sportsbook" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Sportsbook">
-                                <a href="../sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="" onclick="">体育博彩</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="spSubMenu">
-<li id="submainMenu_Sportsbook_SoccerGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Soccer-Game">足球投注</a></li><li id="submainMenu_Sportsbook_BasketballGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Basketball-Game">篮球投注</a></li><li id="submainMenu_Sportsbook_ESports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/E-Sports">电子竞技</a></li><li id="submainMenu_Sportsbook_NumberGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Number-Game">百练赛</a></li><li id="submainMenu_Sportsbook_VirtualSports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Virtual-Sports">虚拟运动</a></li><li id="submainMenu_Sportsbook_SoccerFacts" class="dy-unit"><a href="http://www.10010388.com/zh-CN/BettorLogic">足球情报</a></li><li id="submainMenu_Sportsbook_RacingGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Racing-Game">赛马</a></li><li id="submainMenu_Sportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&amp;language=zh" target="_blank">赛事数据分析</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="IMSportsbook" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_IMSportsbook">
-                                <a href="../IM-sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" class="" onclick="">IM 体育</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_IMSportsbook_IMSportsbookIntro" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Introduction">IM 投注攻略</a></li><li id="submainMenu_IMSportsbook_VirtualSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Soccer">虚拟足球</a></li><li id="submainMenu_IMSportsbook_VirtualBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Basketball">虚拟篮球</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_IMSportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&amp;language=zh" target="_blank">赛事数据分析</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="Sportsbook Exchange" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Exchange">
-                                <a href="../exchange/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_2" class="" onclick="">必发交易</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_Exchange_SportsbookExchangeSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange/sport/1" onclick="javascript: sendMainMenuGA('Exchange Soccer');">足球投注</a></li><li id="submainMenu_Exchange_SportsbookExchangeBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange/sport/7522" onclick="javascript: sendMainMenuGA('Exchange Basketball');">篮球投注</a></li><li id="submainMenu_Exchange_SportsbookExchangeIntroduction" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange-Introduction" onclick="sendMainMenuGA('Exchange Introduction');">交易攻略</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="LiveCasinoImperial" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_LiveCasino">
-                                <a href="../Live-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="cssSelectedMenu" onclick="">真人娱乐场</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lcSubMenu">
-<li id="mainMenu_LiveCasino_GD" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Imperial-Palace" id="providerGD" class="menuChild">北方堂 (gd)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 10px; text-transform: uppercase;">推荐!</sup></li><li id="mainMenu_LiveCasino_AG" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Royal-Palace" id="providerAG" class="menuChild">至尊堂 (ag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="mainMenu_LiveCasino_SAG" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Sky-Palace" id="providerSAG" class="menuChild">沙龙厅 (sag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 11px; text-transform: uppercase; margin-left: -4px;">新!</sup></li><li id="mainMenu_LiveCasino_AB" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Dragon-Palace" id="providerAB" class="menuChild">隆运堂 (欧博)</a></li><li id="mainMenu_LiveCasino_SUN" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Sun-Palace" id="providerSUN" class="menuChild">太阳厅 (申博太阳)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">首家!</sup></li><li id="mainMenu_LiveCasino_EA" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Oriental-Palace" id="providerEA" class="menuChild">东方堂 (ea)</a></li><li id="mainMenu_LiveCasino_OPUS" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/M-Palace" id="providerOPUS" class="menuChild">凯旋堂 (opus)</a></li><li id="mainMenu_LiveCasino_BOY" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Fortune-Palace" id="providerBOY" class="menuChild">波音堂 (波音)</a></li><li id="mainMenu_LiveCasino_CP" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Crown-Palace" id="providerCP" class="menuChild">南方堂 (cp)</a></li><li id="mainMenu_LiveCasino_PT" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Casino/Live-Dealers" id="PT" class="menuChild">百乐城 (PT)</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="SlotCasino Default" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Games">
-                                <a href="../topgames/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_4" class="" onclick="">乐游戏</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="casSubMenu">
-<li id="submainMenu_Games_FishingGames" class="dy-unit"><a href="http://www.10010388.com/zh-CN/FishingGames" onclick="sendMainMenuGA('SlotCasino Fishing Games');">捕鱼游戏</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_Games_Top-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Top-Games">热门游戏</a></li><li id="submainMenu_Games_New-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/New-Games">新游戏</a></li><li id="submainMenu_Games_Video-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Video-Slots">视频老虎机</a></li><li id="submainMenu_Games_3D-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/3D-Slots">3D老虎机</a></li><li id="submainMenu_Games_Classic-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Classic-Slots">经典老虎机</a></li><li id="submainMenu_Games_Progressive-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Progressive-Slots">大奖老虎机</a></li><li id="submainMenu_Games_Multiplayer-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Multiplayer-Slots">多人游戏</a></li><li id="submainMenu_Games_Chinese-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Chinese-Slots">中式老虎机</a></li><li id="submainMenu_Games_Table-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Table-Games">桌面游戏</a></li><li id="submainMenu_Games_Other-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Other-Games">其它游戏</a></li><li id="submainMenu_Games_Cold-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Cold-Games">冷门游戏</a></li><li id="submainMenu_Games_All-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/All-Games">全部游戏</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="StarCasino" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_IMCasino">
-                                <a href="../IM-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" class="" onclick="">PT百乐城</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            
-                        </div>
-                    </td>
-                
-                
-                    <td id="Keno" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Keno">
-                                <a href="../FunKeno/Keno.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_6" class="" onclick="">快乐彩</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="kenSubMenu">
-<li id="submainMenu_Keno_IMKeno" class="dy-unit"><a href="#" onclick="javascript:return EnterGameKeno(&quot;771&quot;, 0, kenoMember, isGameLock);">IM欢乐彩</a></li><li id="submainMenu_Keno_LBK" class="dy-unit"><a href="#" onclick="javascript:return EnterGameLBKeno(&quot;1333&quot;, 0, kenoMember, isGameLock);">LB优乐彩</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="Promo Default" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Promotion">
-                                <a href="../Promotion/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_7" class="" onclick="">促销</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="proSubMenu">
-<li id="submainMenu_Promotion_NewMembers" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/NewMembers">会员迎新礼</a></li><li id="submainMenu_Promotion_Sportsbook" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Sportsbook">体育投注</a></li><li id="submainMenu_Promotion_LiveCasino" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/LiveCasino">真人娱乐场</a></li><li id="submainMenu_Promotion_Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Games">老虎机</a></li><li id="submainMenu_Promotion_Keno" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Keno">快乐彩</a></li><li id="submainMenu_Promotion_VIP" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/VIP">钻石会员</a></li><li id="submainMenu_Promotion_TottenhamHotspur" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/TottenhamHotspur">热刺</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_Promotion_Exclusive" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Exclusive">独家订制</a></li><li id="submainMenu_Promotion_All" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/All">全部</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="TheLounge" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_LifeStyleRewards">
-                                <a href="../TheLounge/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_8" class="" onclick="">天上人间</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_LifeStyleRewards_ArticleAll" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Bliss/All" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">天使之吻</a></li><li id="submainMenu_LifeStyleRewards_Rewards" class="dy-unit"><a href="http://www.10010388.com/Reward/zh-CN" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">天王俱乐部</a></li><li id="submainMenu_LifeStyleRewards_VIPAll" class="dy-unit"><a href="http://www.10010388.com/zh-CN/VIP/All" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">钻石俱乐部</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="AffiliateLM" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_AffiliateMenu">
-                                <a href="../cooperation/index.html " id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_9" class="" onclick="" target="_blank">联盟合作</a>
-
-                                <div class="menuSeperator" id="MenuSeparatorLast"></div>
-                            </div>
-                            
-                        </div>
-                    </td>
-                
-                
-        </tr>
-    </tbody></table>
-</div>
-<script type="text/javascript">
-    var gameLockMessage = "您已经被封锁下注此游戏，请联系我们的线上客服以求帮助。谢谢";
-    var koreaMessage = "Game access has been blocked as Korea service will be terminated by 30/9/2016, please proceed to withdraw your balance.";
-    $(document).ready(function () {
-        
-        $(".MenuImageMobile").removeAttr("title");
-        
-
-        $("#mainMenu_Exchange a").click(function (event) {
-            sendMainMenuGA('Exchange');
-            
-});
-
-        
-
-        $("ul.kenSubMenu , ul.pokSubMenu").each(function () {
-
-            $(".tooltip").tooltip();
-
-            $(this).click(function () {
-                if (Boolean(0))
-                    $("#dialog-message").html('您已经被封锁下注此游戏，请联系我们的线上客服以求帮助。谢谢');
-            });
-        });
-        $("#navMain").hover(function() {
-            if ($(".dy-unit:not(.dyMonitor)").length > 0) {
-                if (document.addEventListener) {
-                    
-                }
-            } else {
-                this.unbind('mouseenter mouseleave');
-            }
-        });
-    });
-
-    function Is_TS_User(memberCode, provider) {
-        var re = new RegExp("^[a-zA-Z0-9]+$");
-        if (!re.test(memberCode) && provider == 'TS') {
-            Alert("利盈堂(泰山) 无法支持拥有特别数字或符号的用户名,您将无法转账或进行游。");
-            return false;
-        }
-        return true;
-    }
-
-    function Is_AB_User(memberCode, provider) {
-        var re = new RegExp("^[a-zA-Z0-9]+$");
-        if (!re.test(memberCode) && provider == 'AB') {
-            Alert("“隆运堂（欧博）”无法支持拥有特别数字用户名，您将无法转账或进行游戏。");
-            return false;
-        }
-
-        if (memberCode.length > 16 && provider == 'AB') {
-            Alert("“隆运堂（欧博）”无法支持拥有特别数字用户名，您将无法转账或进行游戏。");
-            return false;
-        }
-        return true;
-    }
-</script>
 
 
 <!-- Modal popup message no postback -->
@@ -1889,368 +1611,8 @@
     
 </div>
 
-<script type="text/javascript">
-    function DropDown(el) {
-        this.dd = el;
-        this.initEvents();
-    }
 
-    DropDown.prototype = {
-        initEvents: function () {
-            var obj = this;
-
-            obj.dd.on('click', function (event) {
-                $(this).toggleClass('active');
-                event.stopPropagation();
-            });
-
-            obj.dd.on('mouseleave', function (event) {
-                $(this).removeClass('active');
-                event.stopPropagation();
-            });
-        }
-    };
-
-    $(document).ready(function () {
-        var lang = 'zh-CN';
-        var twitterUrl = 'http://www.twitter.com/fun88';
-        var krtwitterUrl = 'http://www.twitter.com/fun88kr';
-        var jptwitterUrl = 'https://twitter.com/fun88japan';
-        var fbUrl = 'http://www.facebook.com/fun88.';
-        var fbIndoUrl = 'http://www.facebook.com/Fun88ID/';
-        var fbkrUrl = 'http://www.facebook.com/fun88kr';
-        var fbjpUrl = 'https://www.facebook.com/fun88.japan';
-        var fbthUrl = 'https://www.facebook.com/Fun88ThaiOfficial/'
-        var linklang;
-        var twittlinklang = 'sea';
-        if (lang.toLowerCase() == 'zh-cn') {
-            $('.mediaCN').show();
-            $('.mediaAll').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-        }
-        else if (lang.toLowerCase() == 'th-th') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'thai';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbthUrl, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'vi-vn') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'viet';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'id-id') {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').show();
-            $('.mediaAll').show();
-            linklang = 'indo';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbIndoUrl, '_blank'); return false; });
-        } else {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            if (lang.toLowerCase() == 'en-us') {
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ja-jp') {
-                $('.mediaTH').show();
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ko-kr') {
-                linklang = 'korea';
-            }
-
-            
-            $("#dvMedia06").click(function () { window.open(twitterUrl + linklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-            
-        }
-
-        $(".tooltip").tooltip();
-
-        $("#hbtn3,#hbtn4").hover(function () {
-            $(this).next().css('color', '#25AAE1');
-        }, function () {
-            $(this).next().css('color', '#615F5F');
-        });
-
-        $("a.jQueryBookmark").click(function (e) {
-
-            var bookmarkUrl = window.location;
-            var bookmarkTitle = document.title;
-            if (document.all) { // For IE Favorite
-                window.external.AddFavorite(bookmarkUrl, bookmarkTitle);
-                return false;
-            } else if (window.opera || window.sidebar) { // For Opera Browsers and For Mozilla Firefox Bookmark
-                $("a.jQueryBookmark").attr("href", bookmarkUrl);
-                $("a.jQueryBookmark").attr("title", bookmarkTitle);
-                $("a.jQueryBookmark").attr("rel", "sidebar");
-            } else if (window.external) { //For Chrome
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            } else { // for other browsers which does not support
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            }
-        });
-
-        $("#dvMedia08").click(function () {
-            $("#wechat-dialog img").attr("src", "/Images/wechat-qr.jpg");
-            $("#wechat-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia09").click(function () {
-            $("#line-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia10").click(function () {
-            $("#BBM-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#wechat-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#line-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#BBM-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#wechat-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
-        }, function () {
-            $(".close-message").slideUp("fast");
-        }
-        );
-
-        $("#line-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
-        }, function () {
-            $(".close-message").slideUp("fast");
-        }
-        );
-
-        $("#BBM-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
-        }, function () {
-            $(".close-message").slideUp("fast");
-        }
-        );
-    });
-</script>
-
-<script type="text/javascript">
-    var kenoMember = "";
-    var memberCode = '';
-    var isGameLock = '0';
-
-    $(document).ready(function () {
-        var lang = 'zh-CN';
-        var twitterUrl = 'http://www.twitter.com/fun88';
-        var krtwitterUrl = 'http://www.twitter.com/fun88kr';
-        var jptwitterUrl = 'https://twitter.com/fun88japan';
-        var fbUrl = 'http://www.facebook.com/fun88.';
-        var fbkrUrl = 'http://www.facebook.com/fun88kr';
-        var fbjpUrl = 'https://www.facebook.com/fun88.japan';
-        var fbthUrl = 'https://www.facebook.com/thailand.fun88'
-        var linklang;
-        var twittlinklang = 'sea';
-        if (lang.toLowerCase() == 'zh-cn') {
-            $('.mediaCN').show();
-            $('.mediaAll').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-        }
-        else if (lang.toLowerCase() == 'th-th') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'thai';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbthUrl, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'vi-vn') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'viet';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'id-id') {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').show();
-            $('.mediaAll').show();
-            linklang = 'indo';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-        } else {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            if (lang.toLowerCase() == 'en-us') {
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ja-jp') {
-                $('.mediaTH').show();
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ko-kr') {
-                linklang = 'korea';
-            }
-
-            
-            $("#dvMedia06").click(function () { window.open(twitterUrl + linklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-            
-        }
-
-        $(".tooltip").tooltip();
-
-        $("#hbtn3,#hbtn4").hover(function () {
-            $(this).next().css('color', '#25AAE1');
-        }, function () {
-            $(this).next().css('color', '#615F5F');
-        });
-
-        $("a.jQueryBookmark").click(function (e) {
-
-            var bookmarkUrl = window.location;
-            var bookmarkTitle = document.title;
-            if (document.all) { // For IE Favorite
-                window.external.AddFavorite(bookmarkUrl, bookmarkTitle);
-                return false;
-            } else if (window.opera || window.sidebar) { // For Opera Browsers and For Mozilla Firefox Bookmark
-                $("a.jQueryBookmark").attr("href", bookmarkUrl);
-                $("a.jQueryBookmark").attr("title", bookmarkTitle);
-                $("a.jQueryBookmark").attr("rel", "sidebar");
-            } else if (window.external) { //For Chrome
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            } else { // for other browsers which does not support
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            }
-        });
-
-        $("#dvMedia08").click(function () {
-            $("#wechat-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia09").click(function () {
-            $("#line-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia10").click(function () {
-            $("#BBM-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#wechat-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#line-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#BBM-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#wechat-dialog").hover(function () {
-                $(".close-message").slideDown("fast");
-        },function () {
-                $(".close-message").slideUp("fast");
-            }
-        );
-
-        $("#line-dialog").hover(function () {
-                $(".close-message").slideDown("fast");
-            }, function () {
-                $(".close-message").slideUp("fast");
-            }
-        );
-
-        $("#BBM-dialog").hover(function () {
-                $(".close-message").slideDown("fast");
-            }, function () {
-                $(".close-message").slideUp("fast");
-            }
-        );
-        jQuery(function ($) {
-            var topLink = $('#topBannerLogoContainer, #topBannerLogo');
-            var existing = $('.topBannerExisting');
-            var hidden = false;
-            $(window).scroll(function () {
-                if ($(window).scrollTop() >= 70 || (document.documentElement && document.documentElement.scrollTop >= 70)) {
-                    if (!hidden) {
-                        existing.css("display", "none");
-                        topLink.fadeIn(80).css("display", "inline-block");
-                        hidden = true;
-                    }
-                } else if (hidden) {
-                    topLink.css("display", "none");
-                    existing.fadeIn(80);
-                    hidden = false;
-                }
-            });
-        });
-    });
-</script>
-
-
-
-
-        <!-- Content -->
+ <!-- Content -->
         
     <script src="js/jquery.maphilight.min.js" type="text/javascript"> </script>
     <script src="js/master.casino.js" type="text/javascript"> </script>
@@ -2494,64 +1856,6 @@
     <div style="background: transparent none repeat scroll 0% 0%; margin: -180px 0px 100px;">
         
 
-<style>
-    .btnSide{
-            width: 140px;
-            height: 30px;
-            border: 1px solid #C3C3C3;
-            margin-bottom: 4px;
-            border-radius: 5px;
-            color: #25aae1;
-            font-size: 15px;
-            text-align: center;
-            line-height: 28px;
-            cursor: pointer;
-        }
-        .btnSide:hover{
-            background-color: #25AAE1;
-            color: white;
-        }
-         .btnSidePlay{
-	        background-color: #90C811;
-	        color: white !important;
-            height: 37px !important;
-	        line-height: 35px !important;
-            width: 140px;
-            border: 1px solid #C3C3C3;
-            margin-bottom: 4px;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align:center;
-            font-size: 15px;
-        }
-        .btnSidePlay:hover{
-	        background-color: #75A00E !important;
-        }
-
-        #dvUCGD div.gamelist{
-            float: left;
-            display: inline;
-            margin-bottom: 40px;
-        }
-        #tutorialFK{
-            margin-left: -9px;
-        }
-        #divGDTutorialPopup .pagination{
-            display: none;
-        }
-
-        .closeTutorialPopup{
-            background: url("../lib/images/allicons.png") no-repeat;
-            background-position: -641px -5px;
-            height: 25px;
-            width: 25px;
-            position: absolute;
-            top: 5px;
-            right: 13px;
-            cursor:pointer;
-            z-index: 100;
-        }
-</style>
 <div id="dvUC" style="margin: 240px 0px 10px 80px;">
     <div id="dvUCMGSQF" class="uc" style="display: none;">
         <div id="BaseMainContent_MainContent_CasinoMainContent_MenuProvider2_ucMGSQF_providerImg" style="margin: 10px 0px 30px -20px;">
@@ -2666,9 +1970,9 @@
             <input id="hdnGameProvider_GD_RNG75608" class="hdnGameProvider" value="GD" type="hidden">
 
             <div class="btnSide" onclick="javascript:PopupTutorial('GD', 1); return false;">游戏介绍</div>
-            <div class="btnSide" onclick="javascript:PopupTutorial('GD', 2); return false;">等级</div>
-            <div class="btnSide" onclick="javascript:PopupTutorial('GD', 3); return false;">游戏界面</div>
-            <div class="btnSide" onclick="javascript:GDTutorialPopup();">鱼类目录</div>
+            <div class="btnSide" onclick="javascript:PopupTutorial('GD', 1); return false;">等级</div>
+            <div class="btnSide" onclick="javascript:PopupTutorial('GD', 1); return false;">游戏界面</div>
+            <div class="btnSide" onclick="javascript:PopupTutorial('GD', 2)">鱼类目录</div>
             <div class="btnSidePlay" onclick="javascript:return EnterGame(this, memberCode, isLockedGame);" id="GD_FishHunter">开始捕鱼</div>
           </div>  
             <div class="gamelist">
@@ -4944,10 +4248,28 @@
     <div class="GDTutorialPopup" style="display: none;">
         <!-- Slider -->
         <div id="divGDTutorialPopup" style="display: block; overflow: hidden; position: relative;">
-            <div class="slides_container" style="width: 1000px; height: 780px; overflow: hidden; position: relative; display: block;">
-                <div class="slides_control" style="position: relative; width: 3000px; height: 780px; left: -1000px;"><div style="background-repeat: no-repeat; background-image: url(&quot;images/GDBannerTutorial4.jpg&quot;); height: 780px; width: 1000px; position: absolute; top: 0px; left: 1000px; z-index: 0;"></div><div style="display: none; background-repeat: no-repeat; background-image: url(&quot;GDBannerTutorial5.jpg&quot;); height: 780px; width: 1000px; position: absolute; top: 0px; left: 1000px; z-index: 0;"></div></div>
+            <div class="slides_container" >
+                <div class="slides_control">
+                    <div class="control_div"></div>
+                    <div class="control_div2"></div>
+                </div>
                 
             </div>
+
+            <style>
+                .slides_container{
+                    width: 1000px; height: 780px; overflow: hidden; position: relative; display: block;
+                }
+                .slides_control{
+                    position: relative; width: 3000px; height: 780px; left: -1000px;
+                }
+                .control_div{
+                    background-repeat: no-repeat; background-image: url("images/GDBannerTutorial4.jpg"); height: 780px; width: 1000px; position: absolute; top: 0px; left: 1000px; z-index: 0;
+                }
+                .control_div2{
+                    display: none; background-repeat: no-repeat; background-image: url("images/GDBannerTutorial5.jpg"); height: 780px; width: 1000px; position: absolute; top: 0px; left: 1000px; z-index: 0;
+                }
+            </style>
             <div class="closeTutorialPopup" onclick="CloseGDTutorialPopup(); return false;"></div>
             <a href="javascript:void(0);" class="slides_GDT prev" style="margin-top: -500px; display: none; position: absolute; z-index: 999;">
                 <img src="../lib/images/arrow-prev.png" alt="Arrow Prev" width="42" height="71">
@@ -4958,7 +4280,7 @@
         <ul class="pagination"><li class="current"><a href="#0">1</a></li><li><a href="#1">2</a></li></ul></div>
         <!-- END Slider -->
     </div>
-</div>
+
 
 <script type="text/javascript">
     var isLockedGame = '0';
@@ -5002,7 +4324,7 @@
         $.colorbox({
             top: 84,
             href: ".GDTutorialPopup",
-            innerWidth: 1000,
+            innerWidth: 800,
             innerHeight: 830,
             scrolling: false,
             inline: true,
@@ -5212,148 +4534,11 @@
         });
     </script>
 
-
-
         
         <!-- Footer -->
         
 <div id="footer">
-    <div class="footer_middle">
-        <a class="padding_space" href="http://www.10010388.com/zh-CN/About-Us">联系我们</a>
-        |
-        
-        <a class="padding_space" href="http://www.10010388.com/lm" target="_blank">加入联盟</a>
-        
-        |
-        <span class="padding_space">客服热线: (+86) 400 890 0398</span>
-        
-    </div>
-    <div class="footer_middle1">
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Responsible-Gaming" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'ResponsibleGambling',1020); return false;">理性博彩</a>
-        |
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Terms-And-Conditions" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'TermsNCond',1020); return false;">规则与条款</a>
-        |
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Disclaimer" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'Disclaimer',1020); return false;">免责声明</a>
-        |
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Privacy-Policy" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'PrivacyPolicy',1020); return false;">隐私权政策</a>
-        |
-         
-        <a href="http://www.10010388.com../help/index.html" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'RulesAndRegulation',1020); return false;">一般规则</a>
-        
-        |
-        <a href="http://www.10010388.com/zh-CN/Sitemap" class="padding_space2 clickable">乐天堂导航</a>
 
-    </div>
-    <div id="footer_icon">
-        <div id="divFooterLogo">
-            <div class="FooterDiv" style="width: 11%;">
-                <div class="spnTitle">
-                    运营监管:
-                </div>
-                <div id="divLicense" class="divSprite">
-                    
-                    <a id="footericon3" class="tooltip" title="First Cagayan" onclick="javascript:popUpWindowManager('http://www.firstcagayan.com/','firstcagayan', 1020); return false;"><span id="imgLicenses2" class="FooterSprite"></span></a>
-                    
-                </div>
-            </div>
-            <div class="FooterDiv" style="width: 9%;">
-                <div class="spnTitle">
-                    赞助:
-                </div>
-                <div id="divsponsor" class="divSprite">
-                    <a id="footericon12" class="tooltip" title="赞助" onclick="javascript:popUpWindowManager('http://www.tottenhamhotspur.com/','sponsorship', 1020); return false;"><span id="imgsponsorship" class="FooterSprite"></span></a>
-                </div>
-            </div>
-            <div class="FooterDiv" style="width: 29%;">
-                <div class="spnTitle">
-                    支付方式:
-                </div>
-                <div id="divPaymentOption" class="divSprite">
-                    
-                    <div style="width: 100%; float: left;">
-
-                        
-                        <span id="footericon4CN" class="tooltip" title="Visa">
-                            <span id="imgPaymentOption1CN" class="FooterSprite"></span>
-                        </span>
-                        <span id="footericon5CN" class="tooltip" title="MasterCard">
-                            <span id="imgPaymentOption2CN" class="FooterSprite"></span>
-                        </span>
-                        
-
-                        <span id="footericon6" class="tooltip" title="银联">
-                            <span id="imgPaymentOption3" class="FooterSprite"></span>
-                        </span>
-
-                        
-                        <span id="footericon7CN" class="tooltip" title="本地银行转帐">
-                            <span id="imgPaymentOption4" class="FooterSprite"></span>
-                        </span>
-                        
-                    </div>
-                    
-                    <div style="width: 100%;">
-                        
-                        <span id="footericon8" class="tooltip" title="易支付">
-                            <span id="imgPaymentOption5" class="FooterSprite"></span>
-                        </span>
-                        <span id="footericon9CN" class="tooltip" title="支付宝">
-                            <span id="imgPaymentOptionAP" class="FooterSprite"></span>
-                        </span>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="FooterDiv" style="width: 16%;">
-                <div class="spnTitleSecurity">
-                    信息安全:
-                </div>
-                <div id="divSecurity" class="divSprite">
-                    <span id="footericon10" class="tooltip" title="Iovation">
-                        <span id="imgSecurity1" class="FooterSprite"></span>
-                    </span>
-                </div>
-            </div>
-            <div class="FooterDiv" style="width: 15%;">
-                <div class="spnTitle">
-                    博彩责任:
-                </div>
-                <div id="divResponsibility" class="divSprite">
-                    <a id="footericon12" class="tooltip" title="GameCare" onclick="javascript:popUpWindowManager('http://www.gamcare.org.uk','gamecare', 1020); return false;"><span id="imgResponsibility2" class="FooterSprite"></span></a>
-                    <a id="footericon13" class="tooltip" title="18+" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/Gaming-Policy/Responsible-Gaming','18+', 1020); return false;"><span id="imgResponsibility3" class="FooterSprite"></span></a>
-                </div>
-            </div>
-            <div class="FooterDiv" style="width: 20%;">
-                <div class="spnTitle">
-                    关注我们:
-                </div>
-                <div id="divSocial" class="divSprite">
-
-                    
-                    <a id="footericon16" class="tooltip" title="关注乐天堂微信">
-                        <span id="dvMedia08" class="FooterSprite"></span>
-                    </a>
-                    <a id="footericon17" class="tooltip" title="关注乐天堂微博" onclick="javascript:window.open('http://www.weibo.com/fun88angel', '_blank');return false;">
-                        <span id="dvMedia03" class="FooterSprite"></span>
-                    </a>
-                    <a id="footericon18" class="tooltip" title="观看乐天堂优酷视频" onclick="javascript:window.open('http://i.youku.com/Fun88Bliss', '_blank');return false;">
-                        <span id="dvMedia04" class="FooterSprite"></span>
-                    </a>
-                    
-
-                    <a id="footericon22" class="jQueryBookmark tooltip mediaicon media02" title="添加乐天堂FUN88至收藏夹">
-                        <span id="dvMedia01" class="FooterSprite"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="footer_middle2">
-        FUN88 属于WELTON HOLDINGS LTD。由曼岛（IOM）授权和监管。所有版权归FUN88所有，违者必究<br>
-        Suite 8/9, West House, West Street, Ramsey. Isle of Man IM8 1AE所拥有，由Isle of Man，British Isles管理与正式注册
-    </div>
-    <input name="ctl00$ctl00$ctl00$BaseMainContent$FooterContent$FooterGenerated" id="BaseMainContent_FooterContent_FooterGenerated" value="11/17/2016 11:32:48" type="hidden">
 </div>
 
     </div>
@@ -5401,62 +4586,6 @@
         
         
         <input name="ctl00$ctl00$ctl00$ctl05$ProceedNextUrl" id="ctl05_ProceedNextUrl" type="hidden">
-
-<script type="text/javascript">
-    $(document.body).ready(function() {
-        
-    });
-
-    function PopupLogin(Username, Password) {
-        var userName = $("#txtUsn").val();
-        var password = $("#txtPwd").val();
-        var quickRegLogin = false;
-        //Login overriding for quick registration
-        if(Username && Password ) {
-            userName = Username;
-            password = Password;
-            quickRegLogin = true;
-        }
-
-        if (!userName || !password || !window.Page_IsValid) {
-            if (!userName || !password) {
-                ClosePopupLogin();
-                Alert('请输入您的用户名与密码。', true);
-            }
-            return false;
-        }
-
-        ClosePopupLogin();
-        getLoginLoading();
-        $.post("/Services/Login.ashx?action=login",
-            { login: userName, password: password, blackbox: $('input[id$=hidblackbox]').val(), QuickRegLogin: quickRegLogin },
-            function(data) {
-
-                $(".loadingLoginGif").hide();
-                if (data.Description === 'Success') {
-                    CreateCookie("verifyform", "1", 0);
-
-                    $("#RewardsControlDIV").html("<iframe id='RewardsOuterDIV' src='/Reward/zh-CN?Fun88Login=true' style='visibility:hidden;display:none;'></iframe>");
-
-                    $("#RewardsOuterDIV").load(function(){
-                        $("#RewardsControlDIV").html('');
-                        if(getParameterByName("isRegSuccess"))  /*注册成功*/
-                            window.location.href = '/zh-CN/Registration-Success' + '?IsQuickReg=1';
-                        else
-                            window.location.href = (window.location.href.toLowerCase().indexOf("/zh-cn/home") != -1) ? "/zh-CN/Default" : window.location.href.substring(0, window.location.href.indexOf('#'));
-                    });
-                } else {
-                    if (data.u === "registrationDeny") {
-                        registerDeny();
-                    } else
-                        Alert(data.Description);
-                }
-            }, "json");
-
-            return false;
-        }
-</script>
-
 
 
 <div id="uiPopupLogin" class="colorbox" style="display: none; width: 364px;">
@@ -5596,10 +4725,7 @@
 
         
         
-<div class="loadingGif" style="background-color: rgb(170, 170, 170); display: none; height: 100%; opacity: 0.6; position: fixed; text-align: center; top: 0px; width: 100%; z-index: 999;">
-    
-    <img alt="" src="images/loading.gif" width="32" height="32">
-</div>
+
 <script type="text/javascript">
     function isleap() {
         var yr = $('#ddlYearQR').val();
@@ -5797,7 +4923,7 @@
        
         
         <div class="loadingLoginGif" style="background-color: rgb(170, 170, 170); display: none; height: 100%; opacity: 0.6; position: fixed; text-align: center; top: 0px; width: 100%; z-index: 5999; left: 0px;">
-            <img alt="" src="images/loading.gif" width="32" height="32">
+            <img alt="" src="../lib/images/loading.gif" width="32" height="32">
         </div>
         <input name="ctl00$ctl00$ctl00$hidblackbox" id="hidblackbox" type="hidden">
     

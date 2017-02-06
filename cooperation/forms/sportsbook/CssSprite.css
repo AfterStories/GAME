@@ -1,0 +1,99 @@
+/* Code tidied up by ScrapBook */
+body {  }
+#divFooterLogo { border-width: 1px 0px; border-style: solid dashed; border-color: rgb(201, 202, 203) red; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; width: 1023px; height: 105px; text-align: center; vertical-align: top; padding-top: 20px; }
+.FooterDiv { border: 0px solid green; float: left; vertical-align: top; text-align: center; margin: 0px; padding: 0px; width: 100px; height: 100%; }
+.spnTitle { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); }
+.spnTitleSecurity { text-align: center; font-size: 11px; font-weight: bold; color: rgb(78, 78, 78); margin-left: -55px; }
+.divSprite { border: 0px dotted red; text-align: center; width: 100%; height: 83%; margin-left: 20%; margin-right: 20%; }
+.FooterSprite { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 64px; height: 40px; background: transparent url("urn:scrapbook-download-error:http://www.10010688.com/LM/css/images/footerlogo-list.jpg") no-repeat scroll 0% 0%; }
+.FooterSprite2 { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 64px; height: 40px; background: transparent url("footerlogo-list2.jpg") no-repeat scroll 0% 0%; }
+.FooterSprite:hover { cursor: default; }
+.FooterSprite2:hover { cursor: default; }
+#divPartner { position: relative; left: 24px; }
+#imgPartner1 { background-position: -26px -1px; }
+#imgPartner1:hover { cursor: pointer; }
+#divLicenses { position: relative; left: 17px; }
+#divLicense { position: relative; left: 33px; }
+#imgLicenses1 { background-position: -116px -2px; }
+#imgLicenses1:hover { background-position: -116px -48px; cursor: pointer; }
+#imgLicenses2 { background-position: -206px -2px; }
+#imgLicenses2:hover { background-position: -206px -48px; cursor: pointer; }
+#divPaymentOption { position: relative; left: -10px; }
+#imgPaymentOption1 { width: 55px; background-position: -293px -2px; }
+#imgPaymentOption1:hover { background-position: -293px -48px; }
+#imgPaymentOption2 { width: 55px; background-position: -384px -2px; }
+#imgPaymentOption2:hover { background-position: -384px -48px; }
+#imgPaymentOption3 { width: 77px; background-position: -464px -2px; }
+#imgPaymentOption3:hover { background-position: -464px -48px; }
+#imgPaymentOption4 { width: 67px; background-position: -561px -2px; }
+#imgPaymentOption4:hover { background-position: -561px -48px; }
+#imgPaymentOption5 { width: 67px; background-position: -648px -2px; }
+#imgPaymentOption5:hover { background-position: -648px -48px; }
+#imgPaymentOption6 { width: 50px; background-position: -749px -2px; }
+#imgPaymentOption6:hover { background-position: -749px -48px; }
+#imgPaymentOption7 { width: 67px; background-position: -665px -2px; }
+#imgPaymentOption7:hover { background-position: -665px -45px; }
+#imgPaymentOption8 { width: 67px; background-position: -747px -2px; }
+#imgPaymentOption8:hover { background-position: -747px -48px; }
+#divSecurity { position: relative; left: -7px; }
+#imgSecurity1 { width: 90px; background-position: -820px -2px; margin-left: -25px; }
+#imgSecurity1:hover { background-position: -820px -48px; }
+#divResponsibility { position: relative; left: -14px; }
+#imgResponsibility1 { width: 73px; background-position: -920px -2px; }
+#imgResponsibility1:hover { background-position: -920px -48px; cursor: pointer; }
+#imgResponsibility2 { width: 30px; background-position: -1031px -2px; }
+#imgResponsibility2:hover { background-position: -1031px -48px; cursor: pointer; }
+#imgResponsibility3 { width: 34px; background-position: -1119px -2px; }
+#imgResponsibility3:hover { background-position: -1119px -48px; cursor: pointer; }
+.Keno {  }
+.Keno.LandingPage {  }
+.Keno.VideoPage {  }
+.Keno.Button { cursor: pointer; border: 0px dashed purple; float: left; padding: 0px; margin: 0px; }
+.Keno.Button:hover { cursor: default; }
+.Keno.Button.Text { margin-left: 34px; position: relative; top: 8px; }
+.LandingPage.Button { width: 212px; height: 56px; }
+.LandingPage.Button.en-US { background: transparent url("urn:scrapbook-download-error:http://www.10010688.com/images/en-US/PK/button-keno-sprite.gif") no-repeat scroll 0% 0%; }
+.LandingPage.Button.id-ID { background: transparent url("urn:scrapbook-download-error:http://www.10010688.com/images/id-ID/PK/button-keno-sprite.gif") no-repeat scroll 0% 0%; }
+.LandingPage.Button.th-TH { background: transparent url("urn:scrapbook-download-error:http://www.10010688.com/images/th-TH/PK/button-keno-sprite.gif") no-repeat scroll 0% 0%; }
+.LandingPage.Button.vi-VN { background: transparent url("button-keno-sprite_003.gif") no-repeat scroll 0% 0%; }
+.LandingPage.Button.zh-CN { background: transparent url("button-keno-sprite_004.gif") no-repeat scroll 0% 0%; }
+#btnKenoPlayReal { background-position: -6px -7px; }
+#btnKenoPlayReal:hover { cursor: pointer; background-position: -6px -63px; }
+#btnILottoPlayReal { background-position: -6px -7px; }
+#btnILottoPlayReal:hover { cursor: pointer; background-position: -6px -63px; }
+#btnKenoPlayFree { background-position: -220px -7px; }
+#btnKenoPlayFree:hover { cursor: pointer; background-position: -220px -63px; }
+#btnILottoPlayFree { background-position: -220px -7px; }
+#btnILottoPlayFree:hover { cursor: pointer; background-position: -220px -63px; }
+#btnVideoTutorial { background-position: -435px -7px; }
+#btnVideoTutorial:hover { cursor: pointer; background-position: -435px -63px; }
+#btnPromotion { background-position: -650px -7px; }
+#btnPromotion:hover { cursor: pointer; background-position: -650px -63px; }
+#btnMoreDetails { background-position: 0px 0px; background-repeat: no-repeat; font-weight: normal; }
+#btnMoreDetails:hover { cursor: pointer; font-weight: bold; }
+.VideoPage.Button { width: 174px; height: 47px; }
+.VideoPage.Button.en-US { background: transparent url("button-kenovideo-sprite.gif") no-repeat scroll 0% 0%; }
+.VideoPage.Button.id-ID { background: transparent url("button-kenovideo-sprite_001.gif") no-repeat scroll 0% 0%; }
+.VideoPage.Button.th-TH { background: transparent url("button-kenovideo-sprite_002.gif") no-repeat scroll 0% 0%; }
+.VideoPage.Button.vi-VN { background: transparent url("button-kenovideo-sprite_003.gif") no-repeat scroll 0% 0%; }
+.VideoPage.Button.zh-CN { background: transparent url("button-kenovideo-sprite_004.gif") no-repeat scroll 0% 0%; }
+#btnKenoSingleView { background-position: -6px -7px; }
+#btnKenoSingleView:hover { cursor: pointer; background-position: -6px -57px; }
+#btnKenoMultipleView { background-position: -179px -7px; }
+#btnKenoMultipleView:hover { cursor: pointer; background-position: -179px -57px; }
+#btnILottoSingleView { background-position: -363px -7px; }
+#btnILottoSingleView:hover { cursor: pointer; background-position: -363px -57px; }
+#btnILottoMultipleView { background-position: -537px -7px; }
+#btnILottoMultipleView:hover { cursor: pointer; background-position: -537px -57px; }
+#btnParlay { background-position: -716px -7px; }
+#btnParlay:hover { cursor: pointer; background-position: -716px -57px; }
+#btnTips { background-position: -892px -7px; }
+#btnTips:hover { cursor: pointer; background-position: -892px -57px; }
+.P2P_Button { border: 0px dashed purple; float: left; padding: 0px; margin: 0px; width: 246px; height: 61px; background: transparent url("button_p2p_sprite.gif") no-repeat scroll 0% 0%; }
+.P2P_Button:hover { cursor: default; }
+#imgGameIntro { background-position: -4px -4px; }
+#imgGameIntro:hover { cursor: pointer; background-position: -4px -74px; }
+#imgGameDownload { background-position: -258px -4px; }
+#imgGameDownload:hover { cursor: pointer; background-position: -258px -74px; }
+#imgGameFAQ { background-position: -511px -4px; }
+#imgGameFAQ:hover { cursor: pointer; background-position: -511px -74px; }

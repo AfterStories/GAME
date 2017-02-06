@@ -44,14 +44,7 @@
 */
 
 
-           
-    
-   #header
-    {
-      display:block;      
-      height:476px;
-    }    
-       
+
     
     .rowButton
     { 
@@ -134,7 +127,7 @@
 	width: 960px;
 	height: 500px;/*100%;*/
 	background-repeat: no-repeat;
-	margin: 50px auto 0px auto;
+	margin: 100px auto 0px auto;
 	background-color: #fafbfb;
 	border: thin solid #cecece;
 	display:block;

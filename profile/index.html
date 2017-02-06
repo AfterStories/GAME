@@ -42,11 +42,11 @@
     <script src="../lib/js/bundleJquery.js" type="text/javascript"></script>
     <script type="text/javascript" src="../lib/js/jQueryUI.js"> </script>
     <script type="text/javascript" src="../lib/pulg/My97DatePicker/WdatePicker.js"></script> 
-    <script type="text/javascript" src="./lib/js/jquery-qrcode-0.14.0.min.js" async=""></script>
+    <script type="text/javascript" src="../lib/js/jquery-qrcode-0.14.0.min.js" async=""></script>
 
-    <script type="text/javascript" src="./lib/js/master.yui.js" async=""></script>
-    <script type="text/javascript" src="master.js" async=""></script>
-    <script type="text/javascript" src="./lib/js/master.payment.crawler.js" async=""></script>
+    <script type="text/javascript" src="../lib/js/master.yui.js" async=""></script>
+    <script type="text/javascript" src="../lib/js/master.js" async=""></script>
+    <script type="text/javascript" src="../lib/js/master.payment.crawler.js" async=""></script>
     <script type="text/javascript">
         var g_Cookie_PopUpWelcome = "PopUpWelcome";
         function getCookie(c_name) {
@@ -392,7 +392,7 @@
 
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
-        createDropDown();
+        /*createDropDown();*/
         $("#target dt").removeClass().addClass('zh-CN');
         var $dropTrigger = $(".dropdown dt a");
         var $dropTrigger2 = $(".dropdown dd span");
@@ -617,7 +617,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             <div id="ddlSettings" class="wrapper-dropdown-5">
                 <div></div>
                 <span class="arrow_setting"></span>
-                <ul class="dropdown">
+                <ul class="dropdown" id="SettingUl">
                     <li id="chgPW"><a class="zh-CN" href="#">
                         更换密码</a></li>
                     <li id="UpdateProfile"><a class="zh-CN" href="http://www.10010388.com/zh-CN/Update-Profile">
@@ -638,7 +638,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     <li>
                         <a id="BaseMainContent_HeaderContent_ascxMbrAuth_LoginStatus1" onclick="return Logout();" href="javascript:__doPostBack('ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$LoginStatus1$ctl00','')">退出</a>
                     </li>
-                    <iframe class="dvEmptyFrame" src="index_13.html"></iframe>
+                   
                 </ul>
             </div>
         </li>
@@ -681,7 +681,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                             SOS救援金
                         </a></li>
                         
-                        <iframe class="dvEmptyFrame" src="index_14.html"></iframe>
+                       
                     </ul>
                 </div>
         </li>
@@ -808,50 +808,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         }
     }
 
-    $(document.body).ready(function () {
 
-        UIObjRefreshBtn = $("#uiRefreshBalance");
-
-        setTimeout(function () { BalancesQuickView.Init(); }, 1250);
-
-        //        if ($.browser.msie && $.browser.version <= '8.0') {
-        //            $("#ddlAccountBalance").mousedown(function () {
-        //                $(this).css("width", "auto");
-        //            });
-        //            $("#ddlAccountBalance").select(function () {
-        //                $(this).width(190);
-        //            });
-        //            $("#ddlAccountBalance").change(function () {
-        //                $(this).width(190);
-        //            });
-        //            $("#ddlAccountBalance").blur(function () {
-        //                $(this).width(190);
-        //            });
-        //        }
-
-        $(".walletList").css("display", "none");
-
-        $(".dropdownlist").click(function (event) {
-
-            if ($('.walletList').css('display') == 'none') {
-                $(".walletList").show();
-            } else {
-                $(".walletList").hide();
-            }
-
-            event.stopPropagation();
-
-        });
-
-        $("#walletTable").click(function () {
-            $(".walletList").hide();
-        });
-
-        $(document).click(function () {
-            $(".walletList").hide();
-        });
-
-    });
 
 </script>
 
@@ -951,27 +908,12 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
 
     <!--The slider above navigation bar-->
-    <div id="marquee1">
+    <div id="TopAD">
 			<ul>
-				<li><a href="#">【广告1广告1】</a></li>
-				<li><a href="#">【广告2广告2】</a></li>
-				<li><a href="#">【广告3广告3】</a></li>
-				<li><a href="#">【广告4广告4】</a></li>
-				<li><a href="#">【广告5广告5】</a></li>
-				<li><a href="#">【广告6广告6】</a></li>
-				<li><a href="#">【广告7广告7】</a></li>
+
 			</ul>	
 
     </div>
-    <style>
-	/* 顶部滚动广告 */
-    #marquee1{ width: 680px; height: 34px; position: relative; top:-15px;margin:2px auto;overflow: hidden;z-index: 1 ;float:right;}
-    #marquee1 ul { width: 680px; height: 34px; position: relative; }
-    #marquee1 ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
-    #marquee1 ul li a { text-decoration:none; height: 34px;}
-</style>
-
-<script type="text/javascript" src="master.payment.crawler.js"></script>
  
 
 </div>
@@ -1121,62 +1063,49 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     </tbody></table>
 </div>
 <script type="text/javascript">
-    var gameLockMessage = "您已经被封锁下注此游戏，请联系我们的线上客服以求帮助。谢谢";
-    var koreaMessage = "Game access has been blocked as Korea service will be terminated by 30/9/2016, please proceed to withdraw your balance.";
     $(document).ready(function () {
-        
-        $(".MenuImageMobile").removeAttr("title");
-        
 
-        $("#mainMenu_Exchange a").click(function (event) {
-            sendMainMenuGA('Exchange');
+        getTab();
+
+        function getTab(){
+            var tabid = GetQueryString("tab");                         
+            if(tabid == "chgPW"){ 
+                $(".acc_manage_menu td").eq(0).addClass('selected').siblings().removeClass('selected')
             
-});
+                $('.acc_manage_content').eq(0).show().siblings('.acc_manage_content').hide();
 
-        
+            }else if(tabid == "UpdateProfile"){                 
+                $(".acc_manage_menu td").eq(1).addClass('selected').siblings().removeClass('selected')
+            
+                $('.acc_manage_content').eq(1).show().siblings('.acc_manage_content').hide();
 
-        $("ul.kenSubMenu , ul.pokSubMenu").each(function () {
-
-            $(".tooltip").tooltip();
-
-            $(this).click(function () {
-                if (Boolean(0))
-                    $("#dialog-message").html('您已经被封锁下注此游戏，请联系我们的线上客服以求帮助。谢谢');
-            });
-        });
-        $("#navMain").hover(function() {
-            if ($(".dy-unit:not(.dyMonitor)").length > 0) {
-                if (document.addEventListener) {
-                    
-                }
-            } else {
-                this.unbind('mouseenter mouseleave');
+            }else if(tabid == "IMacc"){                 
+                $(".acc_manage_menu td").eq(2).addClass('selected').siblings().removeClass('selected')
+            
+                $('.acc_manage_content').eq(2).show().siblings('.acc_manage_content').hide();
+            }else if(tabid == "bankDetails"){                 
+                $(".acc_manage_menu td").eq(3).addClass('selected').siblings().removeClass('selected')
+            
+                $('.acc_manage_content').eq(3).show().siblings('.acc_manage_content').hide();
+            }else if(tabid == "SelfExclusion"){                 
+                $(".acc_manage_menu td").eq(4).addClass('selected').siblings().removeClass('selected')
+            
+                $('.acc_manage_content').eq(4).show().siblings('.acc_manage_content').hide();
+            }else if(tabid == "RebateCalculator"){                 
+                $(".acc_manage_menu td").eq(5).addClass('selected').siblings().removeClass('selected')
+            
+                $('.acc_manage_content').eq(5).show().siblings('.acc_manage_content').hide();
             }
-        });
+
+
+
+            function GetQueryString(name){
+                 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                 var r = window.location.search.substr(1).match(reg);
+                 if(r!=null)return  unescape(r[2]); return null;
+            }
+        }
     });
-
-    function Is_TS_User(memberCode, provider) {
-        var re = new RegExp("^[a-zA-Z0-9]+$");
-        if (!re.test(memberCode) && provider == 'TS') {
-            Alert("利盈堂(泰山) 无法支持拥有特别数字或符号的用户名,您将无法转账或进行游。");
-            return false;
-        }
-        return true;
-    }
-
-    function Is_AB_User(memberCode, provider) {
-        var re = new RegExp("^[a-zA-Z0-9]+$");
-        if (!re.test(memberCode) && provider == 'AB') {
-            Alert("“隆运堂（欧博）”无法支持拥有特别数字用户名，您将无法转账或进行游戏。");
-            return false;
-        }
-
-        if (memberCode.length > 16 && provider == 'AB') {
-            Alert("“隆运堂（欧博）”无法支持拥有特别数字用户名，您将无法转账或进行游戏。");
-            return false;
-        }
-        return true;
-    }
 </script>
 
 
@@ -1602,7 +1531,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     </div>
     <div class="container_manageAcc">
     <!-- 导航栏 -->
-        <div class="acc_manage_menu">
+        <div class="acc_manage_menu" >
             <table>
                 <tbody><tr>
                     <td class="selected">
@@ -1665,7 +1594,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
  <!-- 切换内容区 -->
  <!-- 修改密码 -->
-		<div class="acc_manage_content" >
+		<div class="acc_manage_content" id="chgPW">
 
 	<div id="BaseMainContent_MainContent_MemberMainContent_UpdatePasswordUpdatePanel">
 	
@@ -1789,7 +1718,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
 
   <!-- 更新个人资料 -->
-<div class="acc_manage_content" style="display: none;">
+<div id="UpdateProfile" class="acc_manage_content" style="display: none;">
             
 
 
@@ -2447,7 +2376,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 </div>
 
 <!-- 百乐城帐号修改 -->
- <div class="acc_manage_content" style="display: none;">
+ <div id="IMacc" class="acc_manage_content" style="display: none;">
             
             
  
@@ -2597,7 +2526,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 }
 </style>
 <!-- 银行资料 -->
-        <div class="acc_manage_content" style="display: none;">
+        <div id="bankDetails" class="acc_manage_content" style="display: none;">
             
     <div id="BaseMainContent_MainContent_MemberMainContent_div1" class="searchLoadingImg">
                 <img alt="" src="../lib/images/loading.gif" width="32" height="32">
@@ -2734,7 +2663,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     </div>
 <!-- 自我限制 -->
 
-        <div class="acc_manage_content" style="display: none;">
+        <div id="SelfExclusion" class="acc_manage_content" style="display: none;">
 		<div id="BaseMainContent_MainContent_MemberMainContent_UpdateSelfExclusionUpdatePanel">
     
             <div id="BaseMainContent_MainContent_MemberMainContent_divSearchLoading" class="searchLoadingImg">
@@ -2890,7 +2819,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 		</div>
 
    <!-- 反水查询 -->
- <div class="acc_manage_content" style="display: none;">
+ <div id="RebateCalculator" class="acc_manage_content" style="display: none;">
     <div id="BaseMainContent_MainContent_MemberMainContent_divSearchLoading" class="searchLoadingImg">
         <img alt="" src="../lib/images/loading.gif" width="32" height="32">
     </div>
@@ -4028,7 +3957,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
 
 
-      <script src="jquery.ui.datepicker-zh-CN.js" type="text/javascript"> </script>
+     <!--  <script src="jquery.ui.datepicker-zh-CN.js" type="text/javascript"> </script> -->
 
     <script type="text/javascript">
         $(document).ready(function () {

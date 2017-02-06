@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title>
+    <link rel="Stylesheet" type="text/css" href="/LM/css/ErrorPages.css" />
+</head>
+<body>
+    <a href="/LM/Default.aspx">
+        <img src="/LM/images/CS/Affiliate_Logo_CN.gif" /></a>
+    <div class="error_bg error_bg_404">
+        <div class="error_head_photo error_head_photo_404">
+            <img src="/LM/images/ErrorPages/CS/error_head.gif" /></div>
+        <div class="error_email"><a href="mailto:Daili@fun88.com">
+            <img src="/LM/images/ErrorPages/CS/email_icon.png" /></a></div>
+        <div class="error_a_txt">
+            <h2>
+                <span id="lblName">亲爱的会员，</span></h2>
+        </div>
+        <div class="error_txt">
+            <p>
+                <span id="lblErrMsg">系统暂时无法打开您寻找的页面。如果您依然无法打开您要的页面，请马上联系我们的在线客服人员。</span></p>
+        </div>
+    </div>
+</body>
+</html>

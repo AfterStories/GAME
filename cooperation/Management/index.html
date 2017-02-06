@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<meta charset="UTF-8">
+
+    <title>Affilate Management</title>
+
+    <script src="jquery-1.11.3.min_001.js" type="text/javascript"></script>
+    <script src="Common.js" language="javascript" type="text/javascript"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+<script type="text/javascript" src="../../lib/js/jquery-1.12.2.min.js"></script>
+
+
+
+
+    <link href="mainStyleCS_001.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+/* Code tidied up by ScrapBook */
+
+input { border-color: rgb(127, 157, 185); color: rgb(102, 102, 102); }
+textarea { color: rgb(102, 102, 102); }
+select { border-color: rgb(127, 157, 185); }
+span { color: rgb(102, 102, 102); }
+.tblScheme { background-color: rgb(153, 153, 153); }
+.tblScheme td { height: 30px; background-color: white; }
+.tblScheme input { border: 0px none; }
+.cont12oe{color: red;}
+</style>
+    <link href="P3TableStyles.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="var $jParent = window.parent.jQuery.noConflict(); var splashbox = $jParent('#splashbox'); splashbox.hide(1); parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ?document.body.scrollHeight+10:700;">
+    <form id="frmMenuManager">
+
+
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td style="height: 660px;" colspan="3" valign="top">
+                    <table id="tblContent" style="width: 100%;">
+                        <tbody><tr>
+                            <td colspan="4">
+                                <br>
+                                <span class="P3PageTitle" style="margin-left: 20px;">
+                                <span id="Label9" class="P3PageTitle">账户管理</span>
+                               </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="100%" >
+                                    <tbody ><tr>
+                                        <td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">
+                                            &nbsp;&nbsp;联系信息</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table class="tblMain" cellspacing="0" cellpadding="0" border="0" align="left" style="padding-left:20px;">
+                                                <tbody><tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label17">姓名</span></td>
+                                                    <td style="height: 24px;">
+                                                        <span id="txtFullName">张海红</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label4">电子邮箱</span></td>
+                                                    <td style="height: 14px;" colspan="1">
+                                                        <span id="txtEmail" style="display: inline-block; width: 480px;">244148300@qq.com</span></td>
+                                                </tr>
+                                                
+                                                <tr id="trWebsiteType">
+    <td style="width: 130px;">
+                                                        <span id="Label18">网站类型</span></td>
+    <td colspan="1">
+                                                        <select name="ddlWebType" id="ddlWebType">
+        <option selected="selected" value="0">请选择</option>
+        <option value="3">体育资讯网</option>
+        <option value="4">即时比分网</option>
+        <option value="5">赔率网</option>
+        <option value="6">体育论坛网</option>
+        <option value="7">体育博彩评论网</option>
+        <option value="8">娱乐场评论网</option>
+        <option value="9">娱乐网</option>
+        <option value="10">其它</option>
+
+    </select></td>
+</tr>
+
+                                                <tr id="trLanguage">
+    <td style="width: 130px;">
+                                                        <span id="Label6">语言</span></td>
+    <td>
+                                                        <select name="ddlLanguage" id="ddlLanguage">
+
+        <option selected="selected" value="cs">中文</option>
+
+    </select>                                                        
+                                                    </td>
+</tr>
+
+                                                <tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label12">联系电话</span></td>
+                                                    <td colspan="1">
+                                                        <input name="txtTelphone" value="" id="txtTelphone" style="width: 160px;" type="text">
+                                                        <span id="Label1" style="color: Red;">*</span>
+                                                    </td>
+                                                </tr>
+                                                <tr id="trWebsite">
+    <td style="width: 130px;" valign="top">
+                                                        <span id="Label8">网站</span></td>
+    <td id="tdWeb" colspan="1">
+                                                        <div>
+        <table rules="all" id="gvWebSite" style="border-color: rgb(153, 153, 153); width: 450px; border-collapse: collapse;" cellspacing="0" border="1">
+            <tbody>
+
+        </tbody></table>
+    </div>
+                                                        <input name="txtWebUrl" value="http://" id="txtWebUrl" style="width: 300px;" type="text">
+                                                        <input name="btnAddWebSite" id="btnAddWebSite" src="sizeplus.gif" onclick="if (!VaildateWebSite()) return false;" style="cursor: pointer; border-width: 0px;" type="image">
+                                                        </td>
+</tr>
+
+                                                 <tr id="trGender">
+    <td style="width: 130px;">
+                                                        <span id="Label10">性别 : </span></td>
+    <td colspan="1">
+                                                        <table id="rblGender" style="width: 130px;">
+        <tbody><tr>
+            <td><input id="rblGender_0" name="rblGender" value="0" checked="checked" type="radio"><label for="rblGender_0">男</label></td><td><input id="rblGender_1" name="rblGender" value="1" type="radio"><label for="rblGender_1">女</label></td>
+        </tr>
+    </tbody></table>
+                                                    </td>
+</tr>
+
+                                               <tr id="trPlayerAccount">
+    <td style="width: 130px;">
+                                                        <span id="Label11">乐天堂玩家账户名<br>
+(如果有的话）</span></td>
+    <td colspan="1">
+                                                        <input name="txtPlayerAcctName" id="txtPlayerAcctName" type="text"></td>
+</tr>
+
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr id="trTargetMarketsCaption">
+    <td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">
+                                            &nbsp;&nbsp;其他信息
+                                        </td>
+</tr>
+
+                                    <tr id="trTargetMarketsNation">
+    <td>
+                                            <table class="tblMain" align="left" style="padding-left:20px;">
+                                                <tbody><tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label7">国家</span></td>
+                                                    <td colspan="1">
+                                                        <select size="4" name="ddlNation" multiple="multiple" id="ddlNation" onchange="ChangeNation(this)" style="height: 90px; width: 282px;">
+        <option selected="selected" value="CN">中国</option>
+
+    </select></td>
+                                                </tr>
+                                                <tr id="trProvince">
+        <td style="width: 130px;">
+                                                        <span id="Label15">省份</span></td>
+        <td colspan="1">
+                                                        <select size="4" name="ddlProvince" multiple="multiple" id="ddlProvince" style="height: 90px; width: 282px;">
+            <option value="北京市">北京市</option>
+            <option value="上海市">上海市</option>
+            <option value="广东省">广东省</option>
+            <option value="安徽省">安徽省</option>
+            <option value="重庆市">重庆市</option>
+            <option value="福建省">福建省</option>
+            <option value="甘肃省">甘肃省</option>
+            <option value="广西自治区">广西自治区</option>
+            <option value="贵州省">贵州省</option>
+            <option value="海南省">海南省</option>
+            <option value="河北省">河北省</option>
+            <option value="河南省">河南省</option>
+            <option value="黑龙江省">黑龙江省</option>
+            <option value="湖北省">湖北省</option>
+            <option value="湖南省">湖南省</option>
+            <option value="江苏省">江苏省</option>
+            <option selected="selected" value="江西省">江西省</option>
+            <option value="吉林省">吉林省</option>
+            <option value="辽宁省">辽宁省</option>
+            <option value="内蒙古自治区">内蒙古自治区</option>
+            <option value="宁夏自治区">宁夏自治区</option>
+            <option value="青海省">青海省</option>
+            <option value="山东省">山东省</option>
+            <option value="山西省">山西省</option>
+            <option value="陕西省">陕西省</option>
+            <option value="四川省">四川省</option>
+            <option value="天津市">天津市</option>
+            <option value="新疆自治区">新疆自治区</option>
+            <option value="西藏自治区">西藏自治区</option>
+            <option value="云南省">云南省</option>
+            <option value="浙江省">浙江省</option>
+
+        </select></td>
+    </tr>
+    
+                                            </tbody></table>
+                                        </td>
+</tr>
+
+                                    <tr>
+                                        <td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">
+                                            &nbsp;&nbsp;账号信息
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table class="tblMain" align="left" style="padding-left:20px;">
+                                                <tbody>
+                                                <tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label2">用户名</span>
+                                                    </td>
+                                                    <td style="height: 24px;">
+                                                        <span id="txtUsername" style="display: inline-block; width: 160px;">
+                                                        stories
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                    <tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label2">原密码</span></td>
+                                                    <td style="height: 24px;"><input name="txtWebUrl" value="" id="oldpsw" style="width: 300px;" type="text">
+                                                    </td>
+                                                </tr>
+                                                <tr><td></td><td><br/></td></tr>
+                                                <tr id="Tr1">
+                                                        <td style="width: 130px;">
+                                                        <span id="Label5">修改密码</span>
+                                                        </td>
+                                                        <td>
+                                                        <input name="txtWebUrl" value="输入新密码" id="newpsw" style="width: 300px;" type="text"></br></br>
+                                                        <input name="txtWebUrl" value="重复输入新密码以确认" id="reoldpsw" style="width: 300px;" type="text" onclick="return ValidatePassword();">
+                                                        </td>
+                                                </tr>
+                                                     <tr>
+                                                    <td style="width: 130px;">
+                                                        </td>
+                                                    <td style="height: 24px;">
+                                                        <button onclick="return ValidatePassword();">修改</button></td>
+                                                </tr>>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+
+                                    <tr id="bankinfo">
+    <td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">
+                                            &nbsp;&nbsp;银行信息
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>
+                                            <table class="tblMain" cellspacing="0" cellpadding="0" border="0" align="left" style="padding-left:20px;">
+                                                <tbody><tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label17">国家</span><span class="cont12oe" width="5">*</span>
+                                                        </td>
+                                                    <td style="height: 24px;">
+                                                     <select name="ddlCountryCode" id="ddlCountryCode">
+                                                        <option value="CN">中国</option>
+                                                      </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 130px;">
+                                                        <span id="Label4">银行名称</span><span class="cont12oe" width="5">*</span></td>
+                                                    <td style="height: 14px;" colspan="1">
+                                                        <select name="ddlBankID" id="ddlBankID">
+                                                        <option value="招商银行">招商银行</option>
+                                                        <option value="中国工商银行">中国工商银行</option>
+                                                        <option value="中国农业银行">中国农业银行</option>
+                                                        <option value="中国银行">中国银行</option>
+                                                        <option value="中国建设银行">中国建设银行</option>
+                                                        <option value="交通银行">交通银行</option>
+                                                        <option value="广东发展银行">广东发展银行</option>
+                                                        <option value="兴业银行">兴业银行</option>
+                                                        <option value="中国民生银行">中国民生银行</option>
+                                                        <option value="深圳发展银行">深圳发展银行</option>
+                                                        <option value="中国光大银行">中国光大银行</option>
+                                                        <option value="中国邮政储蓄">中国邮政储蓄</option>
+                                                        <option value="深圳平安银行">深圳平安银行</option>
+                                                        <option value="上海浦东发展银行">上海浦东发展银行</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr id="banknametr">
+                                                        <td style="width: 130px;">
+                                                        <span id="Label18">银行账户的名称<span class="cont12oe" width="5">*</span></span>
+                                                        </td>
+                                                        <td colspan="1">
+
+                                                        <input name="bankname"  id="bankname" style="width: 260px;" type="text">
+
+                                                        </td>                  
+                                                </tr>
+                                                <tr id="banknumtr">
+                                                        <td style="width: 130px;">
+                                                        <span id="Label18">银行账户的号码<span class="cont12oe" width="5">*</span></span>
+                                                        </td>
+                                                        <td colspan="1">
+
+                                                        <input name="banknum"  id="banknum" style="width: 260px;" type="text">
+
+                                                        </td>                  
+                                                </tr>                                                
+                                                <tr id="bankdrstr">
+                                                        <td style="width: 130px;">
+                                                        <span id="Label18">银行地址<span class="cont12oe" width="5">*</span></span>
+                                                        </td>
+                                                        <td colspan="1">
+
+                                                        <input name="bankdrs"  id="bankdrs" style="width: 260px;" type="text">
+
+                                                        </td>                  
+                                                </tr>
+                                                <tr id="banknametr">
+                                                        <td style="width: 130px;">
+                                                        <span id="Label18">银行账户的名称<span class="cont12oe" width="5">*</span></span>
+                                                        </td>
+                                                        <td colspan="1">
+
+                                                        <input name="bankname"  id="bankname" style="width: 260px;" type="text">
+
+                                                        </td>                  
+                                                </tr>
+                                                <tr id="shengtr">
+                                                        <td style="width: 130px;">
+                                                        <span id="Label18">省</span>
+                                                        </td>
+                                                        <td colspan="1">
+
+                                                        <input name="sheng"  id="sheng" style="width: 260px;" type="text">
+
+                                                        </td>                  
+                                                </tr>
+                                                <tr id="citytr">
+                                                        <td style="width: 130px;">
+                                                        <span id="Label18">城市/城镇</span>
+                                                        </td>
+                                                        <td colspan="1">
+
+                                                        <input name="city"  id="city" style="width: 260px;" type="text">
+
+                                                        </td>                  
+                                                </tr>
+                                                 <tr id="brcbanktr">
+                                                        <td style="width: 130px;">
+                                                        <span id="Label18">分行<span class="cont12oe" width="5">*</span></span>
+                                                        </td>
+                                                        <td colspan="1">
+
+                                                        <input name="brcbank"  id="brcbank" style="width: 260px;" type="text">
+
+                                                        </td>                  
+                                                </tr>                                               
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="50" align="center">
+                                            <input name="btnEdit" value="保存提交" onclick="return  ValidateInput('edit');" id="btnEdit" class="Txt" style="height: 22px; width: 65px;" type="submit"></td>
+                                    </tr>
+                                    <tr id="trEarningSchemeCaption">
+    <td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">
+                                            &nbsp;&nbsp;优厚佣金及计划
+                                        </td>
+</tr>
+
+                                    <tr id="trEarningScheme">
+    <td style="padding-top: 5px; padding-bottom: 6px;" align="center">
+                                            <table class="tblScheme" id="tblScheme" width="98%" cellspacing="1" cellpadding="0" border="0">
+                                                <tbody style="padding-left:20px;"><tr align="center">
+                                                    <td style="height: 30px;" colspan="4">
+                                                        &nbsp;<span id="Label13" style="display: inline-block; border-style: none;">产品类型:</span>&nbsp;
+                                                        <span id="lblProductType">体育博彩,娱乐场,老虎机,彩票,4,7</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        级别
+                                                    </td>
+                                                    <td align="center">
+                                                        公司本月总盈利
+                                                        (<span id="lblCurrency">CNY</span>)</td>
+                                                    <td align="center">
+                                                        活跃玩家数最低要求
+                                                    </td>
+                                                    <td align="center">
+                                                        佣金百分比
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        1</td>
+                                                    <td align="center">
+                                                        <span id="lblEaring1">0.00</span>-<span id="lblEaring11">40,000.00</span></td>
+                                                    <td align="center">
+                                                        <span id="lblActiveMembers1">5</span></td>
+                                                    <td align="center">
+                                                        <span id="lblCommission1">25.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        2</td>
+                                                    <td align="center">
+                                                        <span id="lblEaring2">40,000.00</span>-<span id="lblEaring22">300,000.00</span></td>
+                                                    <td align="center">
+                                                        <span id="lblActiveMembers2">5</span></td>
+                                                    <td align="center">
+                                                        <span id="lblCommission2">35.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        3</td>
+                                                    <td align="center">
+                                                        <span id="lblEaring3">300,000.00</span>-<span id="lblEarning33">0.00</span></td>
+                                                    <td align="center">
+                                                        <span id="lblActiveMembers3">25</span></td>
+                                                    <td align="center">
+                                                        <span id="lblCommission3">40.00%</span></td>
+                                                </tr>
+                                                
+                                                
+                                            </tbody></table>
+                                        </td>
+</tr>
+
+
+
+                                </tbody></table>
+                            </td>
+                            <td style="width: 2px;">
+                            </td>
+                            <td style="width: 236px;" valign="top" align="center">
+                                <br>
+                                
+                                  <a href="http://www.10010688.com/lm/html/CS/Contact.html">
+                                    <img style="border: 0px none;" src="right_pic1.jpg" alt=""></a>
+                                  
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+        </tbody></table>
+        <br><br>
+    </form>
+
+    <script type="text/javascript">
+            function changepsw(){
+            $("#txtUsername").value()
+            $("#txtPwd").value()
+    }
+
+
+            function VaildateWebSite()
+        {
+            var objWeb=document.getElementById("txtWebUrl");
+            if(IsNotEmpty(objWeb.value) && isURL(objWeb.value))
+            {
+                objWeb.style.borderColor="";
+                var inputbox = '<tr ><td></td><td style="height:10px;font-size:14px"><span id="gvWebSite_txtLabel_0">'+objWeb.value+'</span><button onclick="delthisinputbox(this)" style="margin-left:30px;">删除</button></td></tr>'
+               $("#trWebsite").after(inputbox);
+            }
+            else
+            {
+                alert('格式错误.');
+
+                objWeb.style.borderColor="Red";
+                objWeb.focus();
+                return false;
+            }
+        }
+
+        function delthisinputbox(n){
+               $(n).parent().parent().remove(); 
+        }
+
+
+        function AddInputUrl()
+        {
+            document.getElementById("tdWeb").innerHTML+='<BR><input name="txtWebUrl" type="text" value="http://" style="width: 227px" />';
+            ResetHeight();
+        }
+
+        function MinusInputUrl()
+        {
+            var objTDWeb=document.getElementById("tdWeb");
+            var strTemp=objTDWeb.innerHTML;
+            var iTemp=strTemp.toUpperCase().lastIndexOf("<BR>");
+            if(iTemp!=-1)
+            {
+                objTDWeb.innerHTML=strTemp.slice(0,iTemp);
+                ResetHeight();
+            }
+        }
+
+        function ResetHeight()
+        {
+            parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ?document.body.scrollHeight+10:700;
+        }                
+        
+        function CheckUser(obj)
+        {
+            if(isEmpty(obj.value)) return true;
+            if(GetAjaxText("UserControl/AjaxService.aspx?ctype=1&ctext="+obj.value+"&vid="+(new Date().getTime()))=="1")
+            {
+                alert('用户名已经注册请选择其它名称！');
+
+                obj.style.borderColor="Red";
+                obj.focus();
+            }
+            else
+            {
+                obj.style.borderColor="";
+            }
+        }
+
+        function CheckAffCode(obj)
+        {
+            if(isEmpty(obj.value)) return true;
+            if(GetAjaxText("UserControl/AjaxService.aspx?ctype=2&ctext="+obj.value+"&vid="+(new Date().getTime()))=="0")
+            {
+                alert('推荐人编号不存在,请重新填写.');
+
+                obj.style.borderColor="Red";
+                obj.focus();
+            }
+            else
+            {
+                obj.style.borderColor="";
+            }
+        }
+
+        function CheckEMail(obj)
+        {
+            if(isEmpty(obj.value)) return true;
+            if(GetAjaxText("UserControl/AjaxService.aspx?ctype=3&ctext="+obj.value+"&vid="+(new Date().getTime()))=="1")
+            {
+                alert('Email已经存在！');
+
+                obj.style.borderColor="Red";
+                obj.focus();
+            }
+            else
+            {
+                obj.style.borderColor="";
+            }
+        }
+       
+        function reloadcode()
+        { 
+           document.getElementById('SafeCode').src = 'UserControl/code.aspx?rType=1&rnd=' + Math.random();
+        }
+        
+        
+         try
+        {
+             ChangeNation(document.getElementById("ddlNation").value);
+             ResetHeight();
+        }
+        catch(e)
+        {
+        
+        }
+        
+    </script>
+
+
+
+</body>
+</html>

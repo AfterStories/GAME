@@ -772,6 +772,7 @@ table#tblGame {
     margin-left: 1px;
     position: absolute;
     float: left;
+    top: 130px;
 }
 
 #jackpotsgame_box {

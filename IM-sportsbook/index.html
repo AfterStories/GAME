@@ -1,29 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb" class="yui3-js-enabled responsejs "><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
-	领先全球的IM体育平台—虚拟足球|足球角球|虚拟篮球|美式足球|高尔夫球|虚拟运动|IM投注|投注攻略|赛事数据|乐天堂Fun88官网
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb" class="yui3-js-enabled responsejs ">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
+	领先全球的IM体育平台—虚拟足球|足球角球|虚拟篮球|美式足球|高尔夫球|虚拟运动|IM投注|投注攻略|赛事数据|
 </title>
-    <link href="IM-sportsbook/css/bundleCss.css" rel="stylesheet" type="text/css">
-    
-<meta name="keywords" content="IN体育，虚拟足球，足球角球，虚拟篮球，美式足球，高尔夫球，IM投注，投注攻略，乐天堂，乐天堂Fun88官网">
-<meta name="description" content="领先全球的IM体育平台专业从事虚拟足球、足球角球、虚拟篮球、美式足球、高尔夫球、IM投注、投注攻略、虚拟运动上领先全球的IM体育平台乐天堂，乐天堂Fun88官网。">
-<link rel="canonical" href="http://www.10010388.com/zh-CN/IM-Sportsbook">
-    
+    <link href="../lib/css/bundleCss.css" rel="stylesheet" type="text/css">
      
+<script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js">
+</script>
+<script type="text/javascript" src="../lib/js/login.js"> </script>
 
-
-    
+       
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="content-language" content="zh-CN">
     <meta name="revisit-after" content="7 days">
     <meta name="robots" content="index">  
-    <link rel="icon" href="http://www.10010388.com/Images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="http://www.10010388.com/Images/favicon.ico" type="image/x-icon">
+
     <noscript>
         <meta HTTP-EQUIV="REFRESH" content="0; url=/zh-CN/JavaScript-Not-Enabled">
     </noscript>
     
-    
-    <script async="" src="IM-sportsbook/gtm.js"></script><script async="" src="IM-sportsbook/analytics.js"></script><script type="text/javascript" src="IM-sportsbook/jquery-1.js"> </script>
     <style type="text/css">
         .BetradarSiteButton {
             position: fixed;
@@ -105,6 +101,408 @@
         }
     </style>
 
+<script>
+
+    $(document).ready(function(){
+
+        $("#footer").load("../lib/Publicdoms/footer.html",function(){
+        var lang = 'zh-CN';
+        var twitterUrl = 'http://www.twitter.com/fun88';
+        var krtwitterUrl = 'http://www.twitter.com/fun88kr';
+        var jptwitterUrl = 'https://twitter.com/fun88japan';
+        var fbUrl = 'http://www.facebook.com/fun88.';
+        var fbIndoUrl = 'http://www.facebook.com/Fun88ID/';
+        var fbkrUrl = 'http://www.facebook.com/fun88kr';
+        var fbjpUrl = 'https://www.facebook.com/fun88.japan';
+        var fbthUrl = 'https://www.facebook.com/Fun88ThaiOfficial/'
+        var linklang;
+        var twittlinklang = 'sea';
+        if (lang.toLowerCase() == 'zh-cn') {
+            $('.mediaCN').show();
+            $('.mediaAll').hide();$(".tooltip").tooltip();
+            $('.mediaTH').hide();
+            $('.mediaID').hide();
+        }
+        else if (lang.toLowerCase() == 'th-th') {
+            $('.mediaCN').hide();
+            $('.mediaTH').show();
+            $('.mediaID').hide();
+            $('.mediaAll').show();
+            linklang = 'thai';
+            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbthUrl, '_blank'); return false; });
+        }
+        else if (lang.toLowerCase() == 'vi-vn') {
+            $('.mediaCN').hide();
+            $('.mediaTH').show();
+            $('.mediaID').hide();
+            $('.mediaAll').show();
+            linklang = 'viet';
+            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
+        }
+        else if (lang.toLowerCase() == 'id-id') {
+            $('.mediaCN').hide();
+            $('.mediaTH').hide();
+            $('.mediaID').show();
+            $('.mediaAll').show();
+            linklang = 'indo';
+            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbIndoUrl, '_blank'); return false; });
+        } else {
+            $('.mediaCN').hide();
+            $('.mediaTH').hide();
+            $('.mediaID').hide();
+            $('.mediaAll').show();
+            if (lang.toLowerCase() == 'en-us') {
+                linklang = 'eng';
+            } else if (lang.toLowerCase() == 'ja-jp') {
+                $('.mediaTH').show();
+                linklang = 'eng';
+            } else if (lang.toLowerCase() == 'ko-kr') {
+                linklang = 'korea';
+            }
+
+            
+            $("#dvMedia06").click(function () { window.open(twitterUrl + linklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
+            
+        }
+
+        $(".tooltip").tooltip();
+
+        $("#hbtn3,#hbtn4").hover(function () {
+            $(this).next().css('color', '#25AAE1');
+        }, function () {
+            $(this).next().css('color', '#615F5F');
+        });
+
+        $("a.jQueryBookmark").click(function (e) {
+
+            var bookmarkUrl = window.location;
+            var bookmarkTitle = document.title;
+            if (document.all) { // For IE Favorite
+                window.external.AddFavorite(bookmarkUrl, bookmarkTitle);
+                return false;
+            } else if (window.opera || window.sidebar) { // For Opera Browsers and For Mozilla Firefox Bookmark
+                $("a.jQueryBookmark").attr("href", bookmarkUrl);
+                $("a.jQueryBookmark").attr("title", bookmarkTitle);
+                $("a.jQueryBookmark").attr("rel", "sidebar");
+            } else if (window.external) { //For Chrome
+                alert('您的浏览器不支持此书签行动，请手动');
+                return false;
+            } else { // for other browsers which does not support
+                alert('您的浏览器不支持此书签行动，请手动');
+                return false;
+            }
+        });
+
+        $("#dvMedia08").click(function () {
+            $("#wechat-dialog img").attr("src", "../lib/images/wechat-qr.jpg");
+            $("#wechat-dialog").dialog({
+                modal: true,
+                draggable: false,
+                resizable: false,
+                width: 260
+            });
+            $(".ui-dialog-titlebar").hide();
+        });
+
+        $("#dvMedia09").click(function () {
+            $("#line-dialog").dialog({
+                modal: true,
+                draggable: false,
+                resizable: false
+            });
+            $(".ui-dialog-titlebar").hide();
+        });
+
+        $("#dvMedia10").click(function () {
+            $("#BBM-dialog").dialog({
+                modal: true,
+                draggable: false,
+                resizable: false,
+                width: 260
+            });
+            $(".ui-dialog-titlebar").hide();
+        });
+
+        $("#wechat-dialog").click(function () {
+            $(this).dialog("close");
+        });
+
+        $("#line-dialog").click(function () {
+            $(this).dialog("close");
+        });
+
+        $("#BBM-dialog").click(function () {
+            $(this).dialog("close");
+        });
+
+        $("#wechat-dialog").hover(function () {
+            $(".close-message").slideDown("fast");
+        }, function () {
+            $(".close-message").slideUp("fast");
+        }
+        );
+
+        $("#line-dialog").hover(function () {
+            $(".close-message").slideDown("fast");
+        }, function () {
+            $(".close-message").slideUp("fast");
+        }
+        );
+
+        $("#BBM-dialog").hover(function () {
+            $(".close-message").slideDown("fast");
+        }, function () {
+            $(".close-message").slideUp("fast");
+        })
+
+        })
+        
+
+
+        $("#header").load("../lib/Publicdoms/header.html", function(){
+        
+            createDropDown();
+            $("#target dt").removeClass().addClass('zh-CN');
+            var $dropTrigger = $(".dropdown dt a");
+            var $dropTrigger2 = $(".dropdown dd span");
+            var $languageList = $(".dropdown dd ul");
+
+            // open and close list when button is clicked
+            $dropTrigger.toggle(function () {
+                $languageList.slideDown(200);
+                $dropTrigger.addClass("active");
+            }, function () {
+                $languageList.slideUp(200);
+                $(this).removeAttr("class");
+            });
+
+            $("span#arrow").click(function() {
+                $dropTrigger.click();
+            });
+
+
+        $(document).bind('click', function (e) {
+
+            var $clicked = $(e.target);
+            if (!$clicked.parents().hasClass("dropdown") && $clicked.attr('id') !== 'arrow') {
+
+                if ($dropTrigger.hasClass("active")) {
+                    $dropTrigger.click();
+                }
+            }
+        });
+
+        // when a language is clicked, make the selection and then hide the list
+        $(".dropdown dd ul li a").click(function () {
+            var clickedValue = $(this).parent().attr("class");
+            var clickedTitle = $(this).find("em").html();
+            $("#target dt").removeClass().addClass(clickedValue);
+            $("#target dt em").html(clickedTitle);
+            $languageList.hide();
+            $dropTrigger.removeAttr("class");
+
+
+            var getLang = $(this).parent().attr("class");
+           
+            if (getLang == null) return;
+
+            if (getLang.toLowerCase() != 'zh-cn') {
+                var url = window.parent.location.href;
+                var startIdx = 3;
+                var urlPath = url;
+                var extra = "";
+
+                var parts = url.split('/'); // 0 = protocol, 1 = protocol-separator, 2 = domain, 3...
+                if (parts.length > 3) {
+                    var chk = parts[3];
+
+                    if (chk.charAt(chk.length - 1) == '#') {
+                        extra = '#';
+                        chk = chk.substr(0, chk.length - 1);
+                    }
+
+                    if ((chk.length == 5) && (chk.charAt(2) == '-')) startIdx = 4;
+                }
+
+                url = "/" + getLang;
+                for (var i = startIdx; i < parts.length; i++) {
+                    var part = parts[i];
+                    if (part.length > 0) url += "/" + part;
+                }
+
+                url += extra;
+
+                window.parent.location ="../404/index.html";
+            }
+
+
+        });
+
+    function createDropDown() {
+  
+        var $form = $("div.lang form");
+        $form.hide();
+        var source = $("#BaseMainContent_HeaderContent_ascxLang_uiLanguages");
+        source.removeAttr("autocomplete");
+        var selected = source.find("option:selected");
+        var options = $("option", source);
+
+        $(".lang").append('<dl id="target" class="dropdown"></dl>');
+        $("#target").append('<dt class=""><a><span class="flag"></span></a></dt>');
+        $("#target").append('<dd id="dd1"><ul></ul></dd>');
+        options.each(function () {
+            $("#target dd ul").append('<li class="' + $(this).val() + '" ><a><span class="flag"></span></a></li>');   
+                     
+        });
+    }
+
+
+
+
+
+    var getUri = window.location.href.toLowerCase();
+    var isSlotLobby = getUri.indexOf("slotlobby") !== -1;
+    var depositDefaultLink = '';
+    function ValidateMemberExt(sender, args) {
+        sender.innerHTML = "仅可使用字母 'A-Z', 'a-z', 数字 '0-9', '.', '_' 和 '-'。";
+        return ValidateMember(sender, args);
+    }
+
+    function DropDown(el) {
+        this.dd = el;
+        this.initEvents();
+    }
+
+/*    function bankDetails() {
+        if (isSlotLobby) {
+            OpenInNewTab("/zh-CN/Bank-Details");
+        }
+        else {
+            window.location.href = "/zh-CN/Bank-Details";
+        }
+    }*/
+
+        DropDown.prototype = {
+        initEvents: function () {
+            var obj = this;
+
+            obj.dd.on('mouseover', function (event) {
+                $(this).toggleClass('active');
+                event.stopPropagation();
+            });
+        }
+    };
+    $(document).ready(function () {  
+
+
+        //银行菜单
+        var uiUN = $("#UserName");
+
+        var d1 = new DropDown($('#ddlSettings'));
+        var d2 = new DropDown($('#ddlWallets'));
+
+        $(document).click(function () {
+            $('.wrapper-dropdown-5').removeClass('active');
+        });
+
+        $("#ddlWallets").mouseover(function () {
+            if (!("ontouchstart" in window)) {
+                $('#ddlSettings').removeClass('active');
+                $("#ddlWallets").addClass('active');
+            }
+        });
+        $("#ddlSettings").mouseover(function () {
+            if (!("ontouchstart" in window)) {
+                $('#ddlWallets').removeClass('active');
+                $("#ddlSettings").addClass('active');
+            }
+        });
+
+        $("#divWelMember").mouseover(function () {
+            var memberLvl = document.getElementById("tooltipsRewardLvl");
+
+            if (memberLvl != null && memberLvl != "")
+                memberLvl.style.visibility = 'visible';
+        });
+
+        $("#divWelMember").mouseleave(function () {
+            var memberLvl = document.getElementById("tooltipsRewardLvl");
+
+            if (memberLvl != null && memberLvl != "")
+                memberLvl.style.visibility = 'hidden';
+        });
+
+
+
+    /*$(document.body).ready(function () {*/
+
+        UIObjRefreshBtn = $("#uiRefreshBalance");
+
+        /*setTimeout(function () { BalancesQuickView.Init(); }, 1250);*/
+
+        $(".walletList").css("display", "none");
+
+        $("#dropdownlist").click(function (event) {
+
+            if ($('.walletList').css('display') == 'none') {
+                $(".walletList").show();
+            } else {
+                $(".walletList").hide();
+            }
+
+            event.stopPropagation();
+
+        });
+
+        $("#walletTable").click(function () {
+            
+            $(".walletList").hide();
+        });
+
+        $(document).click(function () {
+            $(".walletList").hide();
+        });
+
+var isLogin 
+    if (getCookie("verifyform")==1) {
+    
+            
+            $("#login").css("display", "none");
+            $(".leftBorder").css("display,none")
+            $("#logined-header").css("display", "block");
+            var isLogin = true;
+            if(isLogin){       
+            $("#dy_RegistrationChgWording").html("立即存款") 
+            }
+        
+
+    }else{
+        $("#login").css("display", "block");
+            $(".leftBorder").css("display,block")
+            $("#logined-header").css("display", "none");
+            var isLogin =false;
+            if(isLogin){           
+            $("#dy_RegistrationChgWording").html("立即开户") 
+            }
+    }
+
+
+    });
+    
+addRowHandlers();
+
+        });     
+
+        });
+        
+
+
+</script>
+
     <script type="text/javascript">
         function quickchatopencloseSP() {
             if ($("#quickcontact").attr('class') == 'quickcontactcontainerbeforehoverSP') {
@@ -143,11 +541,10 @@
 
 
 </head>
-<body id="uiHtmlBody" style="display: block; background-size: 1903px 922px;" class="ipspbg lang-zh-CN" lang="zh-CN">
+
+
     
-    
-    
-    <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
+
      <script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
     <script type="text/javascript" src="IM-sportsbook/jquery-qrcode-0.js" async=""></script>
     <script src="IM-sportsbook/bundleJquery.js" type="text/javascript"></script>
@@ -252,57 +649,15 @@
         var isLogin = "false";
     </script>
     
-    <form method="post" action="IM-Sportsbook" onsubmit="javascript:return WebForm_OnSubmit();" id="MainForm">
-<div class="aspNetHidden">
-<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
-<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
-<input name="__VIEWSTATE" id="__VIEWSTATE" type="hidden">
-</div>
+   
 
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['MainForm'];
-if (!theForm) {
-    theForm = document.MainForm;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
 
 
 <script src="IM-sportsbook/WebResource.js" type="text/javascript"></script>
 
-
 <script src="IM-sportsbook/ScriptResource_003.js" type="text/javascript"></script>
 <script src="IM-sportsbook/ScriptResource.js" type="text/javascript"></script>
 <script src="IM-sportsbook/ScriptResource_002.js" type="text/javascript"></script>
-<script type="text/javascript">
-//<![CDATA[
-function WebForm_OnSubmit() {
-if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
-return true;
-}
-//]]>
-</script>
-
-
-        <script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ctl04', 'MainForm', [], [], [], 90, 'ctl00$ctl00$ctl00');
-//]]>
-</script>
-
-        
-    <div id="fixed_header"></div>
-    <div id="page" class="shell">
-        <!-- Logo + Search + Navigation -->
-        
 
 
 <style type="text/css">
@@ -468,600 +823,68 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ctl04', 'MainForm
 </style>
 
 
-<script type="text/javascript">
-    var leaderboardData = "";
-    var weeklyWinnerAvaliable = false;
-    var monthlyWinnerAvaliable = false;
+    <!--The slider above navigation bar-->
 
-    function showSlotLeaderboard(type) {
-        var rawDataCount = 0;
-
-        weeklyWinnerAvaliable = false;
-        monthlyWinnerAvaliable = false;
-
-        if ("False" != "True")
-        {
-            try {
-                leaderboardData = JSON.parse('[{"week":"3","month":"9","year":"2016","category":"1","type":"1","html":"<br /><span>&lt;table id=\\\"leaderboard-table-1\\\" class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;</span><span>初级场</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;di******99</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;k******ea</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;ti******81</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;s******45</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;d******hao</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;c******00</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;ki******89</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;ks******ga</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;le******74</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;li******14</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;m******yy</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;No******g</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;de******u86</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;ha******999</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;mo******ow1</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;p******44</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;b******28</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;no******13</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;tha******73</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;3******5</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span><br /><span>&lt;table id=\\\"leaderboard-table-2\\\" </span><span>class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;</span><span>高级场</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;Co*****t7</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;dj*****09</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;A*****7</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;f*****00</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;ng*****an</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;b*****aoa</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;ji*****19</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;wi*****ng</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;w*****y8</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;1l*****nn</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;ba*****gan</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;m*****10</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;p*****9</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;xi*****uo</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;sh*****er</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;Bin*****da25</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;n*****88</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;qq*****558</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;zh*****b</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;za*****d2</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span><br />","title":"老虎机锦标赛9月第三期排名","subtitle":"比赛时间9月26日-10月2日","message":"恭喜以上的赢家!!"},{"week":"4","month":"9","year":"2016","category":"1","type":"1","html":"<span>&lt;table id=\\\"leaderboard-table-1\\\" class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;</span><span>初级场</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***rijohn</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;d***pro1985</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;G***eg</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***o12345</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***23456</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;j***18</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;f***81819</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;w***uolin</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;l***oginiz4</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***ophip</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***97877</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;t***edfun</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;b***14</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;c***xian001</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;a***18503878</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;y***gf</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***01</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;c***wei88</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***aelzuo</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;j***hjm888</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span><br /><span>&lt;table id=\\\"leaderboard-table-2\\\" </span><span>class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;</span><span>高级场</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;n***ee</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;p***49889</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;R***mank</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;z***iaojun</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;a***147147</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;d***ong2009</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;x***anjian</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***6</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;l***78888065</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;c***hen888</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***13513</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***o12345</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;A***7</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;n***baotran</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;p***i2121</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***tluanfei</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***i87</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;l***an9999</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;E***on_xu</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;w***esday008</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span>","title":"老虎机锦标赛9月第四期排名","subtitle":"比赛时间10月03日-10月09日","message":"恭喜以上的赢家!!!"},{"week":"1","month":"10","year":"2016","category":"1","type":"1","html":"<span>&lt;table id=\\\"leaderboard-table-1\\\" class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;</span><span>初级场</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>t***210</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>s***ue11</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***1323</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;w***wut1994</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;p***i2121</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;y***65</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***likang</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***11</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;n***y25231</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;z***yrr1</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;k***hung92</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***aow</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;q***0517778</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;j***haoai</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;c***ahaomama</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;t***f</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***tspeed888</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;b***1096</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***i</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;a***lub</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span><br /><span>&lt;table id=\\\"leaderboard-table-2\\\" </span><span>class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;</span><span>高级场</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;i***ream</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;n***990</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;b***88444</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;n***baotran</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;c***t88</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;k***ii</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;n***1</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;v***ee88</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***tluanfei</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***o12345</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***031988</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;q***778181</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;j***sparow</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;d***n1990</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;r***ianto</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;r***n88</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;d***dd</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;1***car</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;n***13</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;Z***ua453008</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span>","title":"老虎机锦标赛10月第一期排名","subtitle":"比赛时间10月10日-10月16日","message":"恭喜以上的赢家!!!"},{"week":"2","month":"10","year":"2016","category":"1","type":"1","html":"<span>&lt;table id=\\\"leaderboard-table-1\\\" class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;</span><span>初级场</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;a***o2908</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***ermail</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;s*****5</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;p***a</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;t***ttaa</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;m****n</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;p***0099</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;s******920</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;f***ca</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***chit</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;t***ayama</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;a***sit</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;z***heart</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;g***lys</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***ded1984</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;p***ngsak15</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***wua</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;n***s</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***o711</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***ruke</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span><br /><span>&lt;table id=\\\"leaderboard-table-2\\\" </span><span>class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;</span><span>高级场</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;d***a</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***ma11</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***y99</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;h*******ei</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;y*******3</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;bu******oa</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;le*******9</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;y*******ue</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;l0***115781</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***on1982</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;9***33</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;a***hist</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;f***a_por</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***58702914</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;a***18503878</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;l***o</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***2512</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***mao</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;0***50711</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;b***tm</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span>","title":"老虎机锦标赛10月第二期排名","subtitle":"比赛时间10月17日-10月23日","message":"恭喜以上的赢家!!!"},{"week":"3","month":"10","year":"2016","category":"1","type":"1","html":"<span>&lt;table id=\\\"leaderboard-table-1\\\" class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;初级赛</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;s***seed</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;t***hchitan</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;w***i1018</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;hz****56</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;s******03</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;jj*****8</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;ww****po</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;x***dgg03</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;b***abe</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;E***530</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;k***11</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***nelytk10</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;R***apoom001</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;g***lys</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;r***aby</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;u***27</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;U***iorra</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;d******288</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***quan718</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;m***xiangyu</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span><br /><span>&lt;table id=\\\"leaderboard-table-2\\\" </span><span>class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;高级赛</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;T***111</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;v***001</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;b***yuanshuai</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;siy***5</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;he***fei</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;ng***ran</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;w***66</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;xyx***4</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;O***006</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;t***a001</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;t***aporn2521</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;t***gky91</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;z***ll9</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;B***ijaya</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;c***na</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;T***ob2533</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;w*****521</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;a***pone</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;b***in13</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;b***nd520</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span>","title":"老虎机锦标赛10月第三期排名","subtitle":"比赛时间10月24日-10月30日","message":"恭喜以上的赢家!!!"},{"week":"4","month":"10","year":"2016","category":"1","type":"1","html":"<span>&lt;table id=\\\"leaderboard-table-1\\\" class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;初级赛</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;r***1979</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;a***90995</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;k***kaze</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;p***oom</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;z***ziohzioh</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;b***op</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;t***song</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;a***holism</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***goanhmk</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;p***40506</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;t***990</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;d***nddu</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;q***hhieu113</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;9***875</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;x***hanhtinh65</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;0***792939</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;p***ou123</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;k***bailayk**</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;l***im</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;z***g168</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span><br /><span>&lt;table id=\\\"leaderboard-table-2\\\" </span><span>class=\\\"</span><span>large-6 medium-12 small-12 columns\\\"</span><span>&gt;</span><br /><span>&lt;thead&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;th colspan=\\\"3\\\"&gt;高级赛</span><span>&lt;/th&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;/thead&gt;</span><br /><span>&lt;tbody&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td width=\\\"50\\\"&gt;1.&lt;/td&gt;</span><br /><span>&lt;td&gt;A***DDDDDDD</span><span>&lt;/td&gt;</span><br /><span>&lt;td width=\\\"150\\\"&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;2.&lt;/td&gt;</span><br /><span>&lt;td&gt;h***gweif123</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;3.&lt;/td&gt;</span><br /><span>&lt;td&gt;n***kaza</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;4.&lt;/td&gt;</span><br /><span>&lt;td&gt;h******6</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;5.&lt;/td&gt;</span><br /><span>&lt;td&gt;he***fei</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;6.&lt;/td&gt;</span><br /><span>&lt;td&gt;si******2345</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;7.&lt;/td&gt;</span><br /><span>&lt;td&gt;s1******9999</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;8.&lt;/td&gt;</span><br /><span>&lt;td&gt;he******nfei</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;9.&lt;/td&gt;</span><br /><span>&lt;td&gt;jj******18</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;10.&lt;/td&gt;</span><br /><span>&lt;td&gt;w******i1</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;td&gt;11.&lt;/td&gt;</span><br /><span>&lt;td&gt;le******99</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;12.&lt;/td&gt;</span><br /><span>&lt;td&gt;n******ran</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;13.&lt;/td&gt;</span><br /><span>&lt;td&gt;x******14</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;14.&lt;/td&gt;</span><br /><span>&lt;td&gt;Z******533</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;15.&lt;/td&gt;</span><br /><span>&lt;td&gt;18******wan</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;16.&lt;/td&gt;</span><br /><span>&lt;td&gt;xy******28</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;17.&lt;/td&gt;</span><br /><span>&lt;td&gt;c***h1981</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;18.&lt;/td&gt;</span><br /><span>&lt;td&gt;1***22359</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;</span><br /><span>&lt;/tr&gt;</span><br /><span>&lt;tr&gt;</span><br /><span>&lt;td&gt;19.&lt;/td&gt;</span><br /><span>&lt;td&gt;y***chen36</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br /><span>&lt;td&gt;20.&lt;/td&gt;</span><br /><span>&lt;td&gt;r***ldofw</span><span>&lt;/td&gt;</span><br /><span>&lt;td&gt;</span><span>&lt;/td&gt;<br />&lt;/tr&gt;</span></span><br /><span>&lt;/tbody&gt;</span><br /><span>&lt;/table&gt;</span>","title":"老虎机锦标赛10月第四期排名","subtitle":"比赛时间10月31日-11月06日","message":"恭喜以上的赢家!!!"}]');
-                rawDataCount = leaderboardData.length;
-            }
-            catch (err) {
-            }
-        }
-
-        switch (type) {
-            case "3": $("#banner_img").css("background-position", "0px 85px"); break;
-            default : $("#banner_img").css("background-position", "0px 0px");
-        }
-        
-            
-
-        for (var i = rawDataCount - 1; i >= 0; i--)
-            if (leaderboardData[i].type != type)
-                leaderboardData.splice(i, 1);
-
-        $('#slotLeaderboard_ddlWeek option, #slotLeaderboard_ddlMonth option, #slotLeaderboard_ddlMonthly option').remove();
-        $('#leaderboard_msg, #banner_title, #banner_subtitle').empty();
-        $('#slotLeaderboard_ddlWeek, #slotLeaderboard_nav_weekly, #slotLeaderboard_ddlMonth, #slotLeaderboard_nav_monthly, #slotLeaderboard_ddlMonthly').css('color', '').css('border', '');
-        $('#slotLeaderboard_ddlMonth, #slotLeaderboard_ddlWeek, #slotLeaderboard_ddlMonthly').prop("disabled", true);
-        $("#leaderboard_body").html($("<div class='comingSoon'>即将到来</div>"));
-
-        if (leaderboardData.length != 0)
-        {
-            var monthsJSON = JSON.parse('["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"]');
-            for (var i = leaderboardData.length-1; i >= 0; i--) {
-                if ($("#slotLeaderboard_ddlMonth option[value='" + leaderboardData[i].month + "']").length == 0 && leaderboardData[i].category == 1) {
-                    weeklyWinnerAvaliable = true;
-                    $("#slotLeaderboard_ddlMonth").append(($("<option></option>").attr("value", leaderboardData[i].month).text(monthsJSON[leaderboardData[i].month-1])));
-                }
-                if ($("#slotLeaderboard_ddlMonthly option[value='" + leaderboardData[i].month + "']").length == 0 && leaderboardData[i].category == 2) {
-                    monthlyWinnerAvaliable = true;
-                    $("#slotLeaderboard_ddlMonthly").append(($("<option></option>").attr("value", leaderboardData[i].month).text(monthsJSON[leaderboardData[i].month - 1])));
-                }
-            }
-            if (weeklyWinnerAvaliable)
-            {
-                $("#slotLeaderboard_ddlMonth").attr("onchange", "getWeek()");
-                $("#slotLeaderboard_ddlWeek").attr("onchange", "setLeaderboard('week')");
-                $('#slotLeaderboard_ddlMonth, #slotLeaderboard_ddlWeek').prop("disabled", false);
-                getWeek();
-            }
-            else {
-                $('#slotLeaderboard_ddlMonth, #slotLeaderboard_ddlWeek').css({ cursor: "default", color: "#C5C5C5" });
-                $('#slotLeaderboard_nav_weekly').css({ border: "#C5C5C5 1px solid", color: "#C5C5C5" });
-                $("#slotLeaderboard_ddlWeek, #slotLeaderboard_ddlMonth").append(($("<option>即将到来</option>")));
-                toggleSlotsLeaderboardContainer('monthly');
-                setLeaderboard('month');
-            }
-
-            if (monthlyWinnerAvaliable)
-            {
-                $("#slotLeaderboard_ddlMonthly").attr("onchange", "setLeaderboard('month')");
-                $('#slotLeaderboard_ddlMonthly').prop("disabled", false);
-            }
-            else {
-                $('#slotLeaderboard_ddlMonthly').css({ cursor: "default", color: "#C5C5C5" });
-                $('#slotLeaderboard_nav_monthly').css({ border: "#C5C5C5 1px solid", color: "#C5C5C5" });
-                $("#slotLeaderboard_ddlMonthly").append(($("<option>即将到来</option>")));
-            }
-        }
-        else {
-            $("#slotLeaderboard_ddlWeek, #slotLeaderboard_ddlMonth, #slotLeaderboard_ddlMonthly").append(($("<option>即将到来</option>")));
-            $("#slotLeaderboard_ddlWeek, #slotLeaderboard_ddlMonth, #slotLeaderboard_ddlMonthly").css({ cursor: "default", color: "#C5C5C5" });
-            $('#slotLeaderboard_nav_weekly, #slotLeaderboard_nav_monthly').css({ border: "#C5C5C5 1px solid", color: "#C5C5C5" });
-        }
-        $("#slotLeaderboard, #slotLeaderboard_overlay").show();
-    }
-
-    function getWeek() {
-        $('#slotLeaderboard_ddlWeek option').remove();
-        for (var i = leaderboardData.length - 1; i >= 0; i--) {
-            if (leaderboardData[i].month == $('#slotLeaderboard_ddlMonth').val() && leaderboardData[i].category == "1")
-                if ($("#slotLeaderboard_ddlWeek option[value='" + leaderboardData[i].week + "']").length == 0)
-                    $("#slotLeaderboard_ddlWeek").append(($("<option></option>").attr("value", leaderboardData[i].week).text('周 ' + leaderboardData[i].week)));
-        }
-        setLeaderboard('week');
-    };
-
-    function setLeaderboard(category) {
-        if (category == 'week') {
-            for (var i = leaderboardData.length - 1; i >= 0; i--) {
-                if (leaderboardData[i].month == $('#slotLeaderboard_ddlMonth').val() && leaderboardData[i].week == $('#slotLeaderboard_ddlWeek').val() && leaderboardData[i].category == 1)
-                {
-                    $("#leaderboard_body, #leaderboard_msg, #banner_title, #banner_subtitle").empty();
-                    $("#leaderboard_body").html($("<div />").html(leaderboardData[i].html).text());
-                    $("#leaderboard_msg").html($("<div />").html(leaderboardData[i].message));
-                    $("#banner_title").html($("<div />").html(leaderboardData[i].title));
-                    $("#banner_subtitle").html($("<div />").html(leaderboardData[i].subtitle));
-                }
-            }
-        }
-        else {
-            for (var i = leaderboardData.length - 1; i >= 0; i--) {
-                if (leaderboardData[i].month == $('#slotLeaderboard_ddlMonthly').val() && leaderboardData[i].category == 2)
-                {
-                    $("#leaderboard_body, #leaderboard_msg, #banner_title, #banner_subtitle").empty();
-                    $("#leaderboard_body").html($("<div />").html(leaderboardData[i].html).text());
-                    $("#leaderboard_msg").html($("<div />").html(leaderboardData[i].message));
-                    $("#banner_title").html($("<div />").html(leaderboardData[i].title));
-                    $("#banner_subtitle").html($("<div />").html(leaderboardData[i].subtitle));
-                }
-            }
-        }
-    };
-    
-    function toggleSlotsLeaderboardContainer(category)
-    {
-        if (category == 'weekly' && weeklyWinnerAvaliable) {
-            $('#slotLeaderboard_nav_weekly').css({ border: "#45AAE2 1px solid", color: "#45AAE2" });
-            $('#slotLeaderboard_ddlWeek, #slotLeaderboard_ddlMonth').css({ color: "#45AAE2" });
-            if (monthlyWinnerAvaliable) {
-                $('#slotLeaderboard_nav_monthly').css({ border: "grey 1px solid", color: "grey" });
-                $('#slotLeaderboard_ddlMonthly').css({ color: "grey" });
-            }
-        }
-        if (category == 'monthly') {
-            if (weeklyWinnerAvaliable) {
-                $('#slotLeaderboard_nav_weekly').css({ border: "grey 1px solid", color: "grey" });
-                $('#slotLeaderboard_ddlWeek, #slotLeaderboard_ddlMonth').css({ color: "grey" });
-            }
-            $('#slotLeaderboard_nav_monthly').css({ border: "#45AAE2 1px solid", color: "#45AAE2" });
-            $('#slotLeaderboard_ddlMonthly').css({ color: "#45AAE2" });
-        }
-    }
-
-    function hideSlotLeaderboard() {
-        $("#slotLeaderboard, #slotLeaderboard_overlay").hide();
-    }
-</script>
-<div id="slotLeaderboard" style="display:none">
-    <div id="slotLeaderboard_body">
-        <div id="slotLeaderboard_nav">
-            <div id="slotLeaderboard_nav_weekly">
-                <p>竞标赛赢家</p>
-                <select id="slotLeaderboard_ddlWeek" style="width:100px; height:30px" onclick="toggleSlotsLeaderboardContainer('weekly'); setLeaderboard('week');" disabled="disabled">
-                </select>
-                <select id="slotLeaderboard_ddlMonth" style="width:100px; height:30px" onclick="toggleSlotsLeaderboardContainer('weekly'); setLeaderboard('week');" disabled="disabled">
-                </select>
-            </div>
-            <div id="slotLeaderboard_nav_monthly">
-                <p>抽奖赢家</p>
-                <select id="slotLeaderboard_ddlMonthly" style="width:100px; height:30px" onclick="toggleSlotsLeaderboardContainer('monthly'); setLeaderboard('month');" disabled="disabled">
-                </select>
-            </div>
-        </div>
-        <div style="position: absolute">
-            <div id="slotLeaderboard_html">
-                <div id="top_container">
-                    <div id="banner_body">
-                        <div style="float: left; margin-left: 20px;">
-                            <p id="banner_title">
-                            </p>
-                            <p id="banner_subtitle">
-                            </p>
-                        </div>
-                        <div id="banner_img"></div>
-                    </div>
-                </div>
-                <div id="btm_container">
-                    <div id="leaderboard_body">
-                        <div class="comingSoon">
-                            即将到来
-                        </div>
-                    </div>
-                    <div id="leaderboard_msg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="slotLeaderboard_close" onclick="hideSlotLeaderboard(); return false;"></div>
-    </div>
-</div>
-<div id="slotLeaderboard_overlay" class="ui-widget-overlay" style="z-index:9998; display:none;" onclick="hideSlotLeaderboard()"></div>
-
-<script type="text/javascript" language="javascript">
-   
-
-
-    function generateAffiliateApk() {   
-        $.ajax({
-            type: "POST",
-            url: "/Services/AndroidAffiliate.ashx",
-            data: { AffiliateCode: affiliateCode, ProductType: "Fun88_Gaming" },
-            dataType: "json",
-            success: function (data) {
-                if (data.Success && data.ResponseUrl != null && data.ResponseUrl != "") {
-                        $('#fun88apk_dl_btn a').attr('href', data.ResponseUrl).css("display", "block");
-                        $('#qr_generator').empty();
-                        $('#qr_generator').qrcode({
-                            "render": "image",
-                            "size": 110,
-                            "color": "#3a3",
-                            "text": window.location.host + data.ResponseUrl
-                        });
-                        $('#qr_generator img').css("margin", "10px 15px 10px 18px");
-                } else {
-                    $('#fun88apk_dl_btn a').attr('href', "http://media.10010388.com/Download/Android/android-fun88.apk").css("display", "block");
-                    $('#qr_generator').empty();
-                    $('#qr_generator').qrcode({
-                        "render": "image",
-                        "size": 110,
-                        "color": "#3a3",
-                        "text": "http://media.10010388.com/Download/Android/android-fun88.apk"
-                    });
-                    $('#qr_generator img').css("margin", "10px 15px 10px 18px");
-                }
-            }
-        });          
-    }
-
-    var apkGenerated = false;
-    function genereteApkQr() {
-        if (!apkGenerated) {
-            generateAffiliateApk();
-            
-            $("#fun88APK_Container").css({'height':'342px'});
-            $("#fun88apk_dl_btn").css({'margin-top':'77px'});
-            $("#fun88apk_dl_btn").css({'margin-right':'1px'});
-            
-            apkGenerated = true;
-        }
-    }
-
-    function quickchatopenclose() {
-        if ($("#quickcontact").attr('class') == 'quickcontactcontainerbeforehover') {
-            $("#quickcontact").removeClass('quickcontactcontainerbeforehover');
-            $("#quickcontact").addClass('quickcontactcontainer');
-            $("#SOSBonuszh").css("bottom", "405px");
-            $("#SOSBonuszh").css("bottom", "446px");
-            $("#PTButton").css("bottom", "405px");
-        }
-        else {
-            $("#quickcontact").removeClass('quickcontactcontainer');
-            $("#quickcontact").addClass('quickcontactcontainerbeforehover');
-            $("#SOSBonuszh").css("bottom", "41px");
-            $("#SOSBonuszh").css("bottom", "81px");
-            $("#PTButton").css("bottom", "40px");
-        }
-    }
-  
-    $(document).ready(function() {
-        
-        $("#imgLiveChatGirl").attr("style","width: 124px; height: 203px; margin: 10px 10px -4px 10px;");
-        
-    });
-  
-</script>
-<style>
-    .quickcontactbtn1 {
-        background: url("IM-sportsbook/images/button-chat.png") no-repeat;
-    }
-
-        .quickcontactbtn1:hover {
-        background: url("IM-sportsbook/images/button-chat-r.png") no-repeat;
-    }
-
-    .quickcontactbtn2 {
-        background: url("IM-sportsbook/images/button-download.png") no-repeat;
-    }
-
-        .quickcontactbtn2:hover {
-        background: url("IM-sportsbook/images/button-download-r.png") no-repeat;
-    }
-
-    .quickcontactbtn {
-        width: 135px;
-        height: 32px;
-        margin: auto;
-        padding-bottom: 4px;
-    }
-
-    .quickcontacttext {
-        font-size: 12px;
-        text-align: center;
-    }
-
-    .quickcontactemailtext {
-        font-size: 12px;
-        text-align: center;
-    }
-
-        .quickcontactemailtext:hover {
-        color: #25aae1;
-    }
-
-    #SOSBonusvi, #SOSBonusid, #SOSBonusen,
-    #SOSBonusth, #SOSBonusko, #SOSBonuszh,
-    #SOSBonusja {
-        background-image: url("/Images/CasinoGames/btnblue.png");
-        right: 8%;
-        color: white;
-        font-size: 18px;
-    }
-
-    #fun88APK_Container {
-        display: none;
-        height: 403px;
-        background: url("/Images/header/AndroidAPK/zh-CN/fun88-apk-main.png") no-repeat;
-    }
-
-    #fun88apk_dl_zh{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -146px 0; }
-    #fun88apk_dl_vi{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -146px -84px; }
-    #fun88apk_dl_th{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -146px -168px; }
-    #fun88apk_dl_en{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -146px -42px; }
-    #fun88apk_dl_ko{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -146px -210px; }
-    #fun88apk_dl_ja{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -146px -252px; }
-    #fun88apk_dl_id{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -146px -126px; }
-
-    #fun88apk_dl_id:hover {
-        background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -282px -126px;
-    }
-
-    #fun88apk_livechat_zh{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -418px 0;  }
-    #fun88apk_livechat_vi{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -418px -84px;  }
-    #fun88apk_livechat_th{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -418px -168px; }
-    #fun88apk_livechat_en{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -418px -41px; }
-    #fun88apk_livechat_ko{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -418px -210px; }
-    #fun88apk_livechat_ja{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -418px -252px; }
-    #fun88apk_livechat_id{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -418px -126px; }
-   
-    #fun88apk_dl_zh:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -282px 0; }
-    #fun88apk_dl_vi:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -282px -84px; }
-    #fun88apk_dl_th:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -282px -168px; }
-    #fun88apk_dl_en:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -282px -42px; }
-    #fun88apk_dl_ko:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -282px -210px; }
-    #fun88apk_dl_ja:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -282px -252px; }
-    #fun88apk_dl_id:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -282px -126px; }
-    
-    #fun88apk_livechat_zh:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -554px 0; }
-    #fun88apk_livechat_vi:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -554px -84px; }
-    #fun88apk_livechat_th:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -554px -168px; }
-    #fun88apk_livechat_en:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -554px -41px; }
-    #fun88apk_livechat_ko:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -554px -210px; }
-    #fun88apk_livechat_ja:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -554px -252px; }
-    #fun88apk_livechat_id:hover{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -554px -126px; }
-
-    .fun88APK_OpenMenu_zh{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat 0 0; }
-    .fun88APK_OpenMenu_vi{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -1px -84px; }
-    .fun88APK_OpenMenu_th{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat 0 -168px; }
-    .fun88APK_OpenMenu_en{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -1px -41px; }
-    .fun88APK_OpenMenu_ko{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat 0 -210px; }
-    .fun88APK_OpenMenu_ja{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat -1px -252px; }
-    .fun88APK_OpenMenu_id{ background: url("/Images/header/AndroidAPK/fun88-apk-sprite.png") no-repeat 0 -125px; }
-
-    .button_layout {
-        height: 41px;
-        width: 145px;
-        display: block;
-    }
-
-    .button_layout_WC_ALI{
-        height: 41px;
-        width: 135px;
-        display: block;
-    }
-
-    #quickMenu {
-        position: fixed;
-        bottom: 0%;
-        z-index: 999;
-        
-        right: 8%;
-        
-    }
-    #quickContact_OpenMenu{
-        background-image: url("IM-sportsbook/images/button-a.png");
-        float: right;
-    }
-
-    #quickContactContainer {
-        height: 405px;
-        background: url("IM-sportsbook/images/button-b.png") no-repeat;
-    }
-
-    #PTButton {
-        background-image: url("IM-sportsbook/images/DL1.png");
-    }
-
-    #PTButton:hover {
-        background-image: url("IM-sportsbook/images/DL2.png");
-    }
-          .WCP_OpenMenu{
-            display: block;
-            height: 41px;
-            background: url("IM-sportsbook/images/WCALI_off.png") no-repeat;
-        }
-
-        #WCP_Container{
-            display: none;
-            height: 95px;
-            background: url("IM-sportsbook/images/WCALI_on.png") no-repeat;
-        }
-
-        #WC_Container{
-            display: none;
-            height: 108px;
-            background: url("IM-sportsbook/images/WechatPay_on.png") no-repeat;
-        }
-
-        #BtnWCOpen{
-            background: url("IM-sportsbook/images/WechatPay.png") no-repeat;
-        }
-        #BtnWCOpen:hover{
-            background: url("IM-sportsbook/images/WechatPay_hover.png") no-repeat;
-        }
-        #BtnWCSubmit{
-            background: url("IM-sportsbook/images/Wechat_button.png") no-repeat;
-        }
-
-        #Ali_Container{
-            display: none;
-            height: 106px;
-            background: url("IM-sportsbook/images/Alipay_on.png") no-repeat;
-        }
-        #BtnAliOpen{
-            background: url("IM-sportsbook/images/Alipay.png") no-repeat;
-        }
-        #BtnAliOpen:hover{
-            background: url("IM-sportsbook/images/Alipay_hover.png") no-repeat;
-        }
-        #BtnAliSubmit{
-            background: url("IM-sportsbook/images/Ali_button.png") no-repeat;
-        }
-</style>
-
-
-<div id="outer_top_header">
-    <div id="sp_logo" style="display: none;">
-        <a id="A2" href="http://www.10010388.com/zh-CN/IM-Sportsbook" onclick="javascript:newPage(this.href); return false;"></a>
-    </div>
-    <div id="top_header">
-        <div id="top_nav_left">
-            
-            <ul>
-                <li id="topBannerLogoContainer"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="../home/index.html"></a></li>
-                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('../help/About-Us/index.html', 'AboutUs',1020); return false;"></a></li>
-                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('../help/help/index.html', 'Help',1020); return false;"></a></li>
-                
-                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager('../help/How-To-Play/index.html', 'GeneralRules','1020');">
-                    <div></div>
-                    如何投注</a>
-                </li>
-                
-                <li><!-- id="dropdown" -->  <!-- 加入此id，ul下拉菜单生效 -->
-                    <a id="hbtn4" class="top_nav_text" onclick="javascript:popUpWindowManager('#', 'LiveHelp',1020); return false;" title="">
-                        <div></div>
-                        在线客服
-                        <!--  -->
-                    </a>
-
-                </li>
-            </ul>
-        </div>
-        <div id="top_nav_right">
-            <ul>
-                <li id="languageSelect">
-                    
-<div class="lang">
-    <select name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxLang$uiLanguages" id="BaseMainContent_HeaderContent_ascxLang_uiLanguages" onchange="" style="display:none;">
-	<option value="en-US" selected="selected">English</option>
-	<option value="vi-VN">Tiếng Việt</option>
-	<option value="th-TH">ภาษาไทย</option>
-	<option value="id-ID">Bahasa Indonesia</option>
-	<option value="ja-JP">Japan</option>
-
-</select> 
-
-</div>
-<script type="text/javascript" language="javascript">
-    $(document).ready(function () {
-        createDropDown();
-        $("#target dt").removeClass().addClass('zh-CN');
-        var $dropTrigger = $(".dropdown dt a");
-        var $dropTrigger2 = $(".dropdown dd span");
-        var $languageList = $(".dropdown dd ul");
-
-        // open and close list when button is clicked
-        $dropTrigger.toggle(function () {
-            $languageList.slideDown(200);
-            $dropTrigger.addClass("active");
-        }, function () {
-            $languageList.slideUp(200);
-            $(this).removeAttr("class");
-        });
-
-        $("span#arrow").click(function() {
-            $dropTrigger.click();
-        });
-
-
-        /*$("#dd1 ul li").hover(function () {
-        $(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine_.png)");
-        },
-        function () {
-        $(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine.png)");
-        });*/
-
-        // close list when anywhere else on the screen is clicked
-        $(document).bind('click', function (e) {
-            var $clicked = $(e.target);
-            if (!$clicked.parents().hasClass("dropdown") && $clicked.attr('id') !== 'arrow') {
-                if ($dropTrigger.hasClass("active")) {
-                    $dropTrigger.click();
-                }
-            }
-        });
-
-        // when a language is clicked, make the selection and then hide the list
-        $(".dropdown dd ul li a").click(function () {
-            var clickedValue = $(this).parent().attr("class");
-            var clickedTitle = $(this).find("em").html();
-            $("#target dt").removeClass().addClass(clickedValue);
-            $("#target dt em").html(clickedTitle);
-            $languageList.hide();
-            $dropTrigger.removeAttr("class");
-
-
-            var getLang = $(this).parent().attr("class");
-            //alert();
-            if (getLang == null) return;
-
-            if (getLang.toLowerCase() != 'zh-cn') {
-                var url = window.parent.location.href;
-                var startIdx = 3;
-                var urlPath = url;
-                var extra = "";
-
-                var parts = url.split('/'); // 0 = protocol, 1 = protocol-separator, 2 = domain, 3...
-                if (parts.length > 3) {
-                    var chk = parts[3];
-
-                    if (chk.charAt(chk.length - 1) == '#') {
-                        extra = '#';
-                        chk = chk.substr(0, chk.length - 1);
-                    }
-
-                    if ((chk.length == 5) && (chk.charAt(2) == '-')) startIdx = 4;
-                }
-
-                url = "/" + getLang;
-                for (var i = startIdx; i < parts.length; i++) {
-                    var part = parts[i];
-                    if (part.length > 0) url += "/" + part;
-                }
-
-                url += extra;
-
-                window.parent.location = "../404/index.html";
-            }
-
-        });
-    });  
-    function createDropDown() {
-        var $form = $("div.lang form");
-        $form.hide();
-        var source = $("#BaseMainContent_HeaderContent_ascxLang_uiLanguages");
-        source.removeAttr("autocomplete");
-        var selected = source.find("option:selected");
-        var options = $("option", source);
-        $(".lang").append('<dl id="target" class="dropdown"></dl>');
-        $("#target").append('<dt class=""><a><span class="flag"></span></a></dt>');
-        $("#target").append('<dd id="dd1"><ul></ul></dd>');
-        options.each(function () {
-            $("#target dd ul").append('<li class="' + $(this).val() + '" ><a><span class="flag"></span></a></li>');                
-        });
-    }
-</script>
-                    <span id="arrow"></span></li>
-                
-                <li class="leftBorder">
-                    <div id="BaseMainContent_HeaderContent_divForgotPwd">
-                        <a id="hbtn5" class="tooltip" title="忘记密码" href="../Forget/index.html"></a>
-                    </div>
-                </li>
-                
+<script type="text/javascript" src="IM-sportsbook/master_002.js"></script>
 
 <style type="text/css">
+
+/* 顶部滚动广告 */
+    #TopAD{ width: 680px; height: 34px; position: relative; top:-15px;margin:2px auto;overflow: hidden;z-index: 1 ;float:right;}
+    #TopAD ul { width: 680px; height: 34px; position: relative; }
+    #TopAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
+    #TopAD ul li a { text-decoration:none; height: 34px;}
+
+</style>
+
+<body id="uiHtmlBody" style="display: block; background-size: 1903px 922px;" class="ipspbg lang-zh-CN" lang="zh-CN">
+
+ <form id="MainForm" style="margin:0 auto;width:1024px;height:874px;">
+   
+
+    <div id="header">
+        
+    </div>  
+
+
+
+
+
+<div id="dialog-message" title="Alert" style="display: none; width: 259px;">
+    <p>
+        Please login first before enter the game lobby.
+    </p>
+</div>
+
+
+<!-- Modal popup message no postback -->
+
+<div id="wechat-dialog" style="display: none;">
+    <img alt="" width="258" height="390">
+    <div class="close-message">
+        点击关闭
+    </div>
+</div>
+
+<div id="line-dialog" style="display: none;">
+    
+</div>
+        <script type="text/javascript" src="IM-sportsbook/jquery.js"></script>
+
+        <script type="text/javascript">
+            var label = "IMSportsbook";     
+                $(document).ready(function () {
+                var viewportH = 58;
+                var height = 56;
+                $('#sp').height(Response.viewportH() - viewportH);
+                $('#sp_content').height($('#sp').height() + height);
+                $(window).resize(function () {
+                    $('#sp').height(Response.viewportH() - viewportH);
+                    $('#sp_content').height($('#sp').height() + height);
+                });
+            });
+        </script>
+         <style type="text/css">
     .dropdown a.ja-JP {
         font-size: 12px;
     }
@@ -1106,865 +929,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ctl04', 'MainForm
             border-width: 7px;
         margin-left:-7px;
         }
-</style>
-<script language="javascript" type="text/javascript">
-    var getUri = window.location.href.toLowerCase();
-    var isSlotLobby = getUri.indexOf("slotlobby") !== -1;
-    var depositDefaultLink = '';
-    function ValidateMemberExt(sender, args) {
-        sender.innerHTML = "仅可使用字母 'A-Z', 'a-z', 数字 '0-9', '.', '_' 和 '-'。";
-        return ValidateMember(sender, args);
-    }
-
-    function DropDown(el) {
-        this.dd = el;
-        this.initEvents();
-    }
-
-    function bankDetails() {
-        if (isSlotLobby) {
-            OpenInNewTab("/zh-CN/Bank-Details");
-        }
-        else {
-            window.location.href = "/zh-CN/Bank-Details";
-        }
-    }
-
-    DropDown.prototype = {
-        initEvents: function () {
-            var obj = this;
-
-            obj.dd.on('mouseover', function (event) {
-                $(this).toggleClass('active');
-                event.stopPropagation();
-            });
-        }
-    };
-
-
-    $(document).ready(function () {
-        var uiUN = $("#UserName");
-
-        var d1 = new DropDown($('#ddlSettings'));
-        var d2 = new DropDown($('#ddlWallets'));
-
-        $(document).click(function () {
-            $('.wrapper-dropdown-5').removeClass('active');
-        });
-
-        $("#ddlWallets").mouseover(function () {
-            if (!("ontouchstart" in window)) {
-                $('#ddlSettings').removeClass('active');
-                $("#ddlWallets").addClass('active');
-            }
-        });
-        $("#ddlSettings").mouseover(function () {
-            if (!("ontouchstart" in window)) {
-                $('#ddlWallets').removeClass('active');
-                $("#ddlSettings").addClass('active');
-            }
-        });
-
-        $("#divWelMember").mouseover(function () {
-            var memberLvl = document.getElementById("tooltipsRewardLvl");
-
-            if (memberLvl != null && memberLvl != "")
-                memberLvl.style.visibility = 'visible';
-        });
-
-        $("#divWelMember").mouseleave(function () {
-            var memberLvl = document.getElementById("tooltipsRewardLvl");
-
-            if (memberLvl != null && memberLvl != "")
-                memberLvl.style.visibility = 'hidden';
-        });
-    });
-</script>
-
-<div id="RewardsDIV" style="visibility: hidden; display: none;"></div>
-
-
-<script type="text/javascript">
-    function Login() {
-        var userName = $("#UserName").val();
-        var password = $("#Password").val();
-
-        // Variable for Login source checking
-        var url404 = 'http://www.sport788.com/zh-CN/404';
-        var url500 = 'http://www.sport788.com/zh-CN/500';
-        var accDenied = 'http://www.sport788.com/zh-CN/Access-Denied';
-
-        if (!userName || !password) {
-            Alert('请输入您的用户名与密码。', true);
-            return false;
-        }
-        getLoginLoading();
-        $.post("/Services/Login.ashx?action=login",
-                { login: userName, password: password, blackbox: $('input[id$=hidblackbox]').val() },
-                function (data) {
-                    if (data.Description === 'Success') {
-                        CreateCookie("verifyform", "1", 0);
-                        $("#RewardsDIV").html("<iframe id='RewardsOuterDIV' src='/Reward/zh-CN?Fun88Login=true' style='visibility:hidden;display:none;'></iframe>");
-
-                     $("#RewardsOuterDIV").load(function () {
-                         $(".loadingLoginGif").css("display", "none");
-                         $("#RewardsDIV").html('');
-                         if (window.location.href == url404 || window.location.href == url500 || window.location.href == accDenied) {
-                             window.location.href = "/zh-CN/Default";
-                            } else {
-                                var location = window.location.href.indexOf('#');
-                                window.location.href = (window.location.href.indexOf("/zh-CN/Home") != -1) ? "/zh-CN/Default" : ((location > 0) ? window.location.href.substring(0, location) : window.location.href);
-                            }
-                        });
-                        window.gender = data.g;
-                        
-                 } else {
-                     $(".loadingLoginGif").css("display", "none");
-                     if (data.u === "registrationDeny") {
-                         registerDeny();
-                     } else
-                         Alert(data.Description);
-                 }
-             },
-                "json");
-             return false;
-         }
-</script>
-<div id="login">
-    <div class="field-holder">
-        <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$UserName" maxlength="20" id="UserName" tabindex="1" class="field" autocomplete="off" placeholder="用户名" value="Bkmyxif" type="text">
-        <span id="BaseMainContent_HeaderContent_ascxMbrAuth_UserNameValidator" class="username-error" style="visibility:hidden;"></span>
-    </div>
-    <div class="field-holder">
-        <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$Password" maxlength="20" id="Password" tabindex="2" class="password" autocomplete="off" placeholder="用户密码" type="password">
-        <span id="BaseMainContent_HeaderContent_ascxMbrAuth_PasswordValidator" class="password-error" style="visibility:hidden;"></span>
-    </div>
-    <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$btnLogin" value="登入" onclick='return Login();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$btnLogin", "", true, "", "", false, false))' id="btnLogin" tabindex="3" class="button" type="submit">
-    <div class="cl">
-        &nbsp;
-    </div>
-</div>
-
-            </ul>
-            <div class="cl">
-                &nbsp;
-            </div>
-        </div>
-    </div>
-    
-</div>
-<div id="top">
-    <div id="logofun88InZh" class="logoLoc">
-        <a class="logo" href="../home/index.html">FUN88</a>
-    </div>
-
-    <div id="header_right">
-        <div id="BaseMainContent_HeaderContent_divBtnRegister" class="dy-unit">
-                
-                    <div class="btnRegisterAlignmentCN">
-                        <a id="btnRegisterCN" href="../Registration/index.html" style="position:absolute;" onclick="sendHomeContentGA('HeaderRegistration', 'BtnHomeRegistration');">
-                            <div id="dy_RegistrationChgWording">立即开户</div>
-                            <script type="text/javascript">
-                                function RegistrationChgWording() {
-                                    try {
-                                        DYO.smartObject("RegistrationChgWording", { target: "dy_RegistrationChgWording", inline: true });
-                                    } catch (e) {
-                                        window.setTimeout(function () { RegistrationChgWording(); }, 2000);
-                                    }
-                                }
-                                RegistrationChgWording();
-                            </script>
-                        </a>
-                    </div>
-                </div>
-        
-
-    </div>
-    <div class="cl">
-        &nbsp;
-    </div>
-    <!--MaintenanceCountdown, it is only for maintenance countdown only-->
-    
-    
-
-<script type="text/javascript">
-
-    $(document).ready(function () { 
-        $.ajax({
-            type: "POST",
-            url: "/Services/SpecialAnnouncement.asmx/GetSpecialAnnouncement",
-            data: "{'newsType':'true','lng':'zh-CN'}",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (data) {
-                var text = "";
-                for (var i = 0; i < data.d.length; i++) {
-                    text += data.d[i]  + "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;";
-                }
-                
-                $("#s_announcement").append(text);
-            }
-        });
-    })
-</script>
-
-    <!--The slider above navigation bar-->
-    <div id="TopAD">
-            <ul>
-
-            </ul>
-    </div>
-<script type="text/javascript" src="IM-sportsbook/master_002.js"></script>
-
-<style type="text/css">
-
-/* 顶部滚动广告 */
-    #TopAD{ width: 680px; height: 34px; position: relative; top:-15px;margin:2px auto;overflow: hidden;z-index: 1 ;float:right;}
-    #TopAD ul { width: 680px; height: 34px; position: relative; }
-    #TopAD ul li { height: 34px; float: left; list-style: none; padding-right:20px;}
-    #TopAD ul li a { text-decoration:none; height: 34px;}
-
-</style>
-
-<script type="text/javascript">
-    $(function () {
-        if ($("div#marquee-with-options").length > 0) {
-
-            $("#SA_Setting").css("width", 2362 + "px");
-            $("#SA_Setting").css("float", "left");
-
-            marqueeInit({
-                uniqueid: 'marquee-with-options',
-                style: {
-                    'height': '34px',
-                    'width': '660px',
-                    'float': 'left'
-                },
-                inc: 1, //speed - pixel increment for each iteration of this marquee's movement
-                mouse: 'pause', //mouseover behavior ('pause' 'cursor driven' or false)
-                moveatleast: 2,
-                neutral: 150,
-                savedirection: true
-            });
-        }
-    });
-</script>
-</div>
-
-
-<div id="navigation">
-    <table id="navMain" class="zh-CN">
-        <tbody><tr>
-            <td class="menuStatic off">
-                <div id="mainMenu-Home" class="dy-unit">
-                    <a href="../home/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiHomeIcon" class="MenuImageHome" onclick="window.location=this.href;"></a>
-                    <div class="menuSeperator"></div>
-                </div>
-            </td>
-
-            
-                
-                    <td id="Sportsbook" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Sportsbook">
-                                <a href="../sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="" onclick="">体育博彩</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="spSubMenu">
-<li id="submainMenu_Sportsbook_SoccerGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Soccer-Game">足球投注</a></li><li id="submainMenu_Sportsbook_BasketballGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Basketball-Game">篮球投注</a></li><li id="submainMenu_Sportsbook_ESports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/E-Sports">电子竞技</a></li><li id="submainMenu_Sportsbook_NumberGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Number-Game">百练赛</a></li><li id="submainMenu_Sportsbook_VirtualSports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Virtual-Sports">虚拟运动</a></li><li id="submainMenu_Sportsbook_SoccerFacts" class="dy-unit"><a href="http://www.10010388.com/zh-CN/BettorLogic">足球情报</a></li><li id="submainMenu_Sportsbook_RacingGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Racing-Game">赛马</a></li><li id="submainMenu_Sportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&amp;language=zh" target="_blank">赛事数据分析</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="IMSportsbook" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_IMSportsbook">
-                                <a href="../IM-sportsbook/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" class="cssSelectedMenu" onclick="">IM 体育</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_IMSportsbook_IMSportsbookIntro" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Introduction">IM 投注攻略</a></li><li id="submainMenu_IMSportsbook_VirtualSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Soccer">虚拟足球</a></li><li id="submainMenu_IMSportsbook_VirtualBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Basketball">虚拟篮球</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_IMSportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&amp;language=zh" target="_blank">赛事数据分析</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="Sportsbook Exchange" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Exchange">
-                                <a href="../exchange/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_2" class="" onclick="">必发交易</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_Exchange_SportsbookExchangeSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange/sport/1" onclick="javascript: sendMainMenuGA('Exchange Soccer');">足球投注</a></li><li id="submainMenu_Exchange_SportsbookExchangeBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange/sport/7522" onclick="javascript: sendMainMenuGA('Exchange Basketball');">篮球投注</a></li><li id="submainMenu_Exchange_SportsbookExchangeIntroduction" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange-Introduction" onclick="sendMainMenuGA('Exchange Introduction');">交易攻略</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="LiveCasinoImperial" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_LiveCasino">
-                                <a href="../Live-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="" onclick="">真人娱乐场</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lcSubMenu">
-<li id="mainMenu_LiveCasino_GD" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Imperial-Palace" id="providerGD" class="menuChild">北方堂 (gd)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 10px; text-transform: uppercase;">推荐!</sup></li><li id="mainMenu_LiveCasino_AG" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Royal-Palace" id="providerAG" class="menuChild">至尊堂 (ag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="mainMenu_LiveCasino_SAG" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Sky-Palace" id="providerSAG" class="menuChild">沙龙厅 (sag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 11px; text-transform: uppercase; margin-left: -4px;">新!</sup></li><li id="mainMenu_LiveCasino_AB" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Dragon-Palace" id="providerAB" class="menuChild">隆运堂 (欧博)</a></li><li id="mainMenu_LiveCasino_SUN" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Sun-Palace" id="providerSUN" class="menuChild">太阳厅 (申博太阳)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">首家!</sup></li><li id="mainMenu_LiveCasino_EA" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Oriental-Palace" id="providerEA" class="menuChild">东方堂 (ea)</a></li><li id="mainMenu_LiveCasino_OPUS" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/M-Palace" id="providerOPUS" class="menuChild">凯旋堂 (opus)</a></li><li id="mainMenu_LiveCasino_BOY" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Fortune-Palace" id="providerBOY" class="menuChild">波音堂 (波音)</a></li><li id="mainMenu_LiveCasino_CP" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Crown-Palace" id="providerCP" class="menuChild">南方堂 (cp)</a></li><li id="mainMenu_LiveCasino_PT" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Casino/Live-Dealers" id="PT" class="menuChild">百乐城 (PT)</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="SlotCasino Default" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Games">
-                                <a href="../topgames/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_4" class="" onclick="">乐游戏</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="casSubMenu">
-<li id="submainMenu_Games_FishingGames" class="dy-unit"><a href="http://www.10010388.com/zh-CN/FishingGames" onclick="sendMainMenuGA('SlotCasino Fishing Games');">捕鱼游戏</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_Games_Top-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Top-Games">热门游戏</a></li><li id="submainMenu_Games_New-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/New-Games">新游戏</a></li><li id="submainMenu_Games_Video-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Video-Slots">视频老虎机</a></li><li id="submainMenu_Games_3D-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/3D-Slots">3D老虎机</a></li><li id="submainMenu_Games_Classic-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Classic-Slots">经典老虎机</a></li><li id="submainMenu_Games_Progressive-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Progressive-Slots">大奖老虎机</a></li><li id="submainMenu_Games_Multiplayer-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Multiplayer-Slots">多人游戏</a></li><li id="submainMenu_Games_Chinese-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Chinese-Slots">中式老虎机</a></li><li id="submainMenu_Games_Table-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Table-Games">桌面游戏</a></li><li id="submainMenu_Games_Other-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Other-Games">其它游戏</a></li><li id="submainMenu_Games_Cold-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Cold-Games">冷门游戏</a></li><li id="submainMenu_Games_All-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/All-Games">全部游戏</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="StarCasino" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_IMCasino">
-                                <a href="../IM-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" class="" onclick="">PT百乐城</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            
-                        </div>
-                    </td>
-                
-                
-                    <td id="Keno" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Keno">
-                                <a href="../FunKeno/Keno.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_6" class="" onclick="">快乐彩</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="kenSubMenu">
-<li id="submainMenu_Keno_IMKeno" class="dy-unit"><a href="#" onclick="javascript:return EnterGameKeno(&quot;771&quot;, 0, kenoMember, isGameLock);">IM欢乐彩</a></li><li id="submainMenu_Keno_LBK" class="dy-unit"><a href="#" onclick="javascript:return EnterGameLBKeno(&quot;1333&quot;, 0, kenoMember, isGameLock);">LB优乐彩</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="Promo Default" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Promotion">
-                                <a href="../Promotion/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_7" class="" onclick="">促销</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="proSubMenu">
-<li id="submainMenu_Promotion_NewMembers" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/NewMembers">会员迎新礼</a></li><li id="submainMenu_Promotion_Sportsbook" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Sportsbook">体育投注</a></li><li id="submainMenu_Promotion_LiveCasino" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/LiveCasino">真人娱乐场</a></li><li id="submainMenu_Promotion_Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Games">老虎机</a></li><li id="submainMenu_Promotion_Keno" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Keno">快乐彩</a></li><li id="submainMenu_Promotion_VIP" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/VIP">钻石会员</a></li><li id="submainMenu_Promotion_TottenhamHotspur" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/TottenhamHotspur">热刺</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_Promotion_Exclusive" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Exclusive">独家订制</a></li><li id="submainMenu_Promotion_All" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/All">全部</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="TheLounge" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_LifeStyleRewards">
-                                <a href="../TheLounge/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_8" class="" onclick="">天上人间</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_LifeStyleRewards_ArticleAll" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Bliss/All" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">天使之吻</a></li><li id="submainMenu_LifeStyleRewards_Rewards" class="dy-unit"><a href="http://www.10010388.com/Reward/zh-CN" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">天王俱乐部</a></li><li id="submainMenu_LifeStyleRewards_VIPAll" class="dy-unit"><a href="http://www.10010388.com/zh-CN/VIP/All" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">钻石俱乐部</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="AffiliateLM" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_AffiliateMenu">
-                                <a href="../cooperation/index.html " id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_9" class="" onclick="" target="_blank">联盟合作</a>
-
-                                <div class="menuSeperator" id="MenuSeparatorLast"></div>
-                            </div>
-                            
-                        </div>
-                    </td>
-                
-                
-        </tr>
-    </tbody></table>
-</div>
-<script type="text/javascript">
-    var gameLockMessage = "您已经被封锁下注此游戏，请联系我们的线上客服以求帮助。谢谢";
-    var koreaMessage = "Game access has been blocked as Korea service will be terminated by 30/9/2016, please proceed to withdraw your balance.";
-    $(document).ready(function () {
-        
-        $(".MenuImageMobile").removeAttr("title");
-        
-
-        $("#mainMenu_Exchange a").click(function (event) {
-            sendMainMenuGA('Exchange');
-            
-});
-
-        
-
-        $("ul.kenSubMenu , ul.pokSubMenu").each(function () {
-
-            $(".tooltip").tooltip();
-
-            $(this).click(function () {
-                if (Boolean(0))
-                    $("#dialog-message").html('您已经被封锁下注此游戏，请联系我们的线上客服以求帮助。谢谢');
-            });
-        });
-        $("#navMain").hover(function() {
-            if ($(".dy-unit:not(.dyMonitor)").length > 0) {
-                if (document.addEventListener) {
-                    
-                }
-            } else {
-                this.unbind('mouseenter mouseleave');
-            }
-        });
-    });
-
-    function Is_TS_User(memberCode, provider) {
-        var re = new RegExp("^[a-zA-Z0-9]+$");
-        if (!re.test(memberCode) && provider == 'TS') {
-            Alert("利盈堂(泰山) 无法支持拥有特别数字或符号的用户名,您将无法转账或进行游。");
-            return false;
-        }
-        return true;
-    }
-
-    function Is_AB_User(memberCode, provider) {
-        var re = new RegExp("^[a-zA-Z0-9]+$");
-        if (!re.test(memberCode) && provider == 'AB') {
-            Alert("“隆运堂（欧博）”无法支持拥有特别数字用户名，您将无法转账或进行游戏。");
-            return false;
-        }
-
-        if (memberCode.length > 16 && provider == 'AB') {
-            Alert("“隆运堂（欧博）”无法支持拥有特别数字用户名，您将无法转账或进行游戏。");
-            return false;
-        }
-        return true;
-    }
-</script>
-
-
-<!-- Modal popup message no postback -->
-<div id="dialog-message" title="Alert" style="display: none; width: 259px;">
-    <p>
-        Please login first before enter the game lobby.
-    </p>
-</div>
-
-
-<!-- Modal popup message no postback -->
-
-<div id="wechat-dialog" style="display: none;">
-    <img alt="" width="258" height="390">
-    <div class="close-message">
-        点击关闭
-    </div>
-</div>
-
-<div id="line-dialog" style="display: none;">
-    
-</div>
-
-<script type="text/javascript">
-    function DropDown(el) {
-        this.dd = el;
-        this.initEvents();
-    }
-
-    DropDown.prototype = {
-        initEvents: function () {
-            var obj = this;
-
-            obj.dd.on('click', function (event) {
-                $(this).toggleClass('active');
-                event.stopPropagation();
-            });
-
-            obj.dd.on('mouseleave', function (event) {
-                $(this).removeClass('active');
-                event.stopPropagation();
-            });
-        }
-    };
-
-    $(document).ready(function () {
-        var lang = 'zh-CN';
-        var twitterUrl = 'http://www.twitter.com/fun88';
-        var krtwitterUrl = 'http://www.twitter.com/fun88kr';
-        var jptwitterUrl = 'https://twitter.com/fun88japan';
-        var fbUrl = 'http://www.facebook.com/fun88.';
-        var fbIndoUrl = 'http://www.facebook.com/Fun88ID/';
-        var fbkrUrl = 'http://www.facebook.com/fun88kr';
-        var fbjpUrl = 'https://www.facebook.com/fun88.japan';
-        var fbthUrl = 'https://www.facebook.com/Fun88ThaiOfficial/'
-        var linklang;
-        var twittlinklang = 'sea';
-        if (lang.toLowerCase() == 'zh-cn') {
-            $('.mediaCN').show();
-            $('.mediaAll').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-        }
-        else if (lang.toLowerCase() == 'th-th') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'thai';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbthUrl, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'vi-vn') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'viet';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'id-id') {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').show();
-            $('.mediaAll').show();
-            linklang = 'indo';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbIndoUrl, '_blank'); return false; });
-        } else {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            if (lang.toLowerCase() == 'en-us') {
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ja-jp') {
-                $('.mediaTH').show();
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ko-kr') {
-                linklang = 'korea';
-            }
-
-            
-            $("#dvMedia06").click(function () { window.open(twitterUrl + linklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-            
-        }
-
-        $(".tooltip").tooltip();
-
-        $("#hbtn3,#hbtn4").hover(function () {
-            $(this).next().css('color', '#25AAE1');
-        }, function () {
-            $(this).next().css('color', '#615F5F');
-        });
-
-        $("a.jQueryBookmark").click(function (e) {
-
-            var bookmarkUrl = window.location;
-            var bookmarkTitle = document.title;
-            if (document.all) { // For IE Favorite
-                window.external.AddFavorite(bookmarkUrl, bookmarkTitle);
-                return false;
-            } else if (window.opera || window.sidebar) { // For Opera Browsers and For Mozilla Firefox Bookmark
-                $("a.jQueryBookmark").attr("href", bookmarkUrl);
-                $("a.jQueryBookmark").attr("title", bookmarkTitle);
-                $("a.jQueryBookmark").attr("rel", "sidebar");
-            } else if (window.external) { //For Chrome
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            } else { // for other browsers which does not support
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            }
-        });
-
-        $("#dvMedia08").click(function () {
-            $("#wechat-dialog img").attr("src", "/Images/header/wechat-qr.jpg");
-            $("#wechat-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia09").click(function () {
-            $("#line-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia10").click(function () {
-            $("#BBM-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#wechat-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#line-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#BBM-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#wechat-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
-        }, function () {
-            $(".close-message").slideUp("fast");
-        }
-        );
-
-        $("#line-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
-        }, function () {
-            $(".close-message").slideUp("fast");
-        }
-        );
-
-        $("#BBM-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
-        }, function () {
-            $(".close-message").slideUp("fast");
-        }
-        );
-    });
-</script>
-
-<script type="text/javascript">
-    var kenoMember = "";
-    var memberCode = '';
-    var isGameLock = '0';
-
-    $(document).ready(function () {
-        var lang = 'zh-CN';
-        var twitterUrl = 'http://www.twitter.com/fun88';
-        var krtwitterUrl = 'http://www.twitter.com/fun88kr';
-        var jptwitterUrl = 'https://twitter.com/fun88japan';
-        var fbUrl = 'http://www.facebook.com/fun88.';
-        var fbkrUrl = 'http://www.facebook.com/fun88kr';
-        var fbjpUrl = 'https://www.facebook.com/fun88.japan';
-        var fbthUrl = 'https://www.facebook.com/thailand.fun88'
-        var linklang;
-        var twittlinklang = 'sea';
-        if (lang.toLowerCase() == 'zh-cn') {
-            $('.mediaCN').show();
-            $('.mediaAll').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-        }
-        else if (lang.toLowerCase() == 'th-th') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'thai';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbthUrl, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'vi-vn') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'viet';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'id-id') {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').show();
-            $('.mediaAll').show();
-            linklang = 'indo';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-        } else {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            if (lang.toLowerCase() == 'en-us') {
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ja-jp') {
-                $('.mediaTH').show();
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ko-kr') {
-                linklang = 'korea';
-            }
-
-            
-            $("#dvMedia06").click(function () { window.open(twitterUrl + linklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-            
-        }
-
-        $(".tooltip").tooltip();
-
-        $("#hbtn3,#hbtn4").hover(function () {
-            $(this).next().css('color', '#25AAE1');
-        }, function () {
-            $(this).next().css('color', '#615F5F');
-        });
-
-        $("a.jQueryBookmark").click(function (e) {
-
-            var bookmarkUrl = window.location;
-            var bookmarkTitle = document.title;
-            if (document.all) { // For IE Favorite
-                window.external.AddFavorite(bookmarkUrl, bookmarkTitle);
-                return false;
-            } else if (window.opera || window.sidebar) { // For Opera Browsers and For Mozilla Firefox Bookmark
-                $("a.jQueryBookmark").attr("href", bookmarkUrl);
-                $("a.jQueryBookmark").attr("title", bookmarkTitle);
-                $("a.jQueryBookmark").attr("rel", "sidebar");
-            } else if (window.external) { //For Chrome
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            } else { // for other browsers which does not support
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            }
-        });
-
-        $("#dvMedia08").click(function () {
-            $("#wechat-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia09").click(function () {
-            $("#line-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia10").click(function () {
-            $("#BBM-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#wechat-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#line-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#BBM-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#wechat-dialog").hover(function () {
-                $(".close-message").slideDown("fast");
-        },function () {
-                $(".close-message").slideUp("fast");
-            }
-        );
-
-        $("#line-dialog").hover(function () {
-                $(".close-message").slideDown("fast");
-            }, function () {
-                $(".close-message").slideUp("fast");
-            }
-        );
-
-        $("#BBM-dialog").hover(function () {
-                $(".close-message").slideDown("fast");
-            }, function () {
-                $(".close-message").slideUp("fast");
-            }
-        );
-        jQuery(function ($) {
-            var topLink = $('#topBannerLogoContainer, #topBannerLogo');
-            var existing = $('.topBannerExisting');
-            var hidden = false;
-            $(window).scroll(function () {
-                if ($(window).scrollTop() >= 70 || (document.documentElement && document.documentElement.scrollTop >= 70)) {
-                    if (!hidden) {
-                        existing.css("display", "none");
-                        topLink.fadeIn(80).css("display", "inline-block");
-                        hidden = true;
-                    }
-                } else if (hidden) {
-                    topLink.css("display", "none");
-                    existing.fadeIn(80);
-                    hidden = false;
-                }
-            });
-        });
-    });
-</script>
-
-
-
-
-        <!-- Content -->
-        
-    <!-- Main -->
-    <div id="main">
-        <script type="text/javascript" src="IM-sportsbook/jquery.js"></script>
-
-        
-
-
-        <script type="text/javascript">
-            var label = "IMSportsbook";            $(document).ready(function () {
-                var viewportH = 58;
-                var height = 20;
-                $('#sp').height(Response.viewportH() - viewportH);
-                $('#sp_content').height($('#sp').height() + height);
-                $(window).resize(function () {
-                    $('#sp').height(Response.viewportH() - viewportH);
-                    $('#sp_content').height($('#sp').height() + height);
-                });
-            });
-        </script>
-        <!-- Content + Sub Navigation-->
-        <!-- Six Column Content -->
-        <div id="sp" style="padding-top: 0px; height: 864px;">
-            <div id="sp_content" style="height: 884px;">
-                
-    <div class="BetradarSiteButton">
-        
+</style>       
 <style type="text/css">
     #bg_container {
         background: url("IM-sportsbook/images/btnExpand.png") no-repeat scroll 0 0 transparent;
@@ -2152,6 +1117,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ctl04', 'MainForm
         document.cookie = c_name + "=" + c_value + "; path=" + path;
     }
 </script>
+
+    <!-- Content -->
+        
+    <!-- Main -->
+    <div id="main" style="width:1025px;height:896px;margin:45px auto 0;">
+
+        <!-- Content + Sub Navigation-->
+        <!-- Six Column Content -->
+        <div id="sp" style="padding-top: 0px; height:926px;">
+            <div id="sp_content">
+                
+    <div class="BetradarSiteButton">
+
 <div id="divbg_container">
     <div id="bg_whiteL" class="viewInLarge"></div>
     <div id="bg_navyBlueL" class="viewInLarge"></div>
@@ -2228,119 +1206,31 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ctl04', 'MainForm
         </div>
         <!-- END Slider -->
     </div>
-    <iframe id="iframeContent" name="iframeContent" src="IM-sportsbook/Home.htm" class="myframe" style="border: none;" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
-    <script>
-        $(document).ready(function () {
-            $(".ui-dialog").css({ "position": "absolute", "top": "50%", "left": "50%", "margin-left": -$('.ui-dialog').width() / 2, "margin-top": -$('.ui-dialog').height() / 2 });
-        });
-    </script>
+
+
 
             </div>
         </div>
-    </div>
 
+
+    </div>  <!-- main#div -->
+<div id="footer">
+
+</div>
         
         <!-- Footer -->
         
     </div>
     <!-- Loading -->
-    
-    <script type="text/javascript">
+    <script>
         $(document).ready(function () {
-            var _affiliateCode = getParameterByName('aff');
-
-
-            if (_affiliateCode != null && _affiliateCode != "") {
-                CreateCookie("CO_affiliate", "affiliate=" + _affiliateCode, 2);
-            }
-
-            //pass to registration page
-            var _affiliateCode_1;
-            try {
-                _affiliateCode_1 = localStorage.setItem('_AffiliateCode', _affiliateCode);
-            }
-            catch (err) {
-
-            }
-
+            $(".ui-dialog").css({ "position": "absolute", "top": "50%", "left": "50%", "margin-left": -$('.ui-dialog').width() / 2, "margin-top": -$('.ui-dialog').height() / 2 });
         });
-
-        function getParameterByName(name) {
-            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                results = regex.exec(parent.location.search);
-            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-        }
-
-        window.onload = function () {
-            if (!$("#loadingCover").length) {
-                //loading gif
-                $("#loadingOverlay").hide();
-            } else {
-                //fun88 loading logo
-                $("#loadingCover").hide();
-            }
-        }
     </script>
-
-        
         
         <input name="ctl00$ctl00$ctl00$ctl05$ProceedNextUrl" id="ctl05_ProceedNextUrl" type="hidden">
 
-<script type="text/javascript">
-    $(document.body).ready(function() {
-        
-    });
 
-    function PopupLogin(Username, Password) {
-        var userName = $("#txtUsn").val();
-        var password = $("#txtPwd").val();
-        var quickRegLogin = false;
-        //Login overriding for quick registration
-        if(Username && Password ) {
-            userName = Username;
-            password = Password;
-            quickRegLogin = true;
-        }
-
-        if (!userName || !password || !window.Page_IsValid) {
-            if (!userName || !password) {
-                ClosePopupLogin();
-                Alert('请输入您的用户名与密码。', true);
-            }
-            return false;
-        }
-
-        ClosePopupLogin();
-        getLoginLoading();
-        $.post("/Services/Login.ashx?action=login",
-            { login: userName, password: password, blackbox: $('input[id$=hidblackbox]').val(), QuickRegLogin: quickRegLogin },
-            function(data) {
-
-                $(".loadingLoginGif").hide();
-                if (data.Description === 'Success') {
-                    CreateCookie("verifyform", "1", 0);
-
-                    $("#RewardsControlDIV").html("<iframe id='RewardsOuterDIV' src='/Reward/zh-CN?Fun88Login=true' style='visibility:hidden;display:none;'></iframe>");
-
-                    $("#RewardsOuterDIV").load(function(){
-                        $("#RewardsControlDIV").html('');
-                        if(getParameterByName("isRegSuccess"))
-                            window.location.href = '/zh-CN/Registration-Success' + '?IsQuickReg=1';
-                        else
-                            window.location.href = (window.location.href.toLowerCase().indexOf("/zh-cn/home") != -1) ? "/zh-CN/Default" : window.location.href.substring(0, window.location.href.indexOf('#'));
-                    });
-                } else {
-                    if (data.u === "registrationDeny") {
-                        registerDeny();
-                    } else
-                        Alert(data.Description);
-                }
-            }, "json");
-
-            return false;
-        }
-</script>
 
 
 
@@ -2426,65 +1316,46 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ctl04', 'MainForm
     </div>
 </div>
 
-<script type="text/javascript">
-    function CBPopupLogin(url) {
-        $("#ctl05_ProceedNextUrl").val(url);
-        $.colorbox({
-            inline: true,
-            href: "#PL_notification_box",
-            innerWidth: 364,
-            innerHeight: 350
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var _affiliateCode = getParameterByName('aff');
+
+
+            if (_affiliateCode != null && _affiliateCode != "") {
+                CreateCookie("CO_affiliate", "affiliate=" + _affiliateCode, 2);
+            }
+
+            //pass to registration page
+            var _affiliateCode_1;
+            try {
+                _affiliateCode_1 = localStorage.setItem('_AffiliateCode', _affiliateCode);
+            }
+            catch (err) {
+
+            }
+
         });
-        $('#cboxClose').remove();
-    }
 
-    function ClosePopupLogin() {
-        if($('#SU_notification_box').parent().css('display') == "none" || 
-            $('#FI_notification_box').parent().css('display' == "none")){
-            $('#SlotGameFakeContainer').hide();
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(parent.location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
-        $.colorbox.close();
-    }
 
-    function EnsureLogin(url) {
-        var isLogin = false;
-        if (isLogin) {
-            window.location.href = url;
-            return;
+        window.onload = function () {
+            if (!$("#loadingCover").length) {
+                //loading gif
+                $("#loadingOverlay").hide();
+            } else {
+                //fun88 loading logo
+                $("#loadingCover").hide();
+            }
         }
-        CBPopupLogin(url);
-    }
-
-    function EnsureSlotLogin(url) {
-        var isLogin = false;
-        if (isLogin) {
-            window.location.href = url;
-            return;
-        }
-        SlotPopupLogin(url);
-    }
-
-    function SlotPopupLogin(url) {
-        $('#SlotGameFakeContainer').show();
-        $("#ctl05_ProceedNextUrl").val(url);
-        $.colorbox({
-            inline: true,
-            href: "#PL_notification_box",
-            innerWidth: 364,
-            innerHeight: 350,
-            escKey: false,
-            overlayClose: false
-        });
-        $('#cboxClose').remove();
-    }
-</script>
+    </script>
 
         
-        
-<div class="loadingGif" style="background-color: #aaa; display: none; height: 100%; opacity: 0.6; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60); filter: alpha(opacity=60); position: fixed; text-align: center; top: 0; width: 100%; z-index: 999;">
-    
-    <img alt="" src="IM-sportsbook/loading.gif" width="32" height="32">
-</div>
+
 <script type="text/javascript">
     function isleap() {
         var yr = $('#ddlYearQR').val();
@@ -2685,15 +1556,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ctl04', 'MainForm
     <iframe id="videoframe" src="" width="640px" height="480px"></iframe>
 </div>
 
-        
-        
-        <div class="loadingLoginGif" style="background-color: #aaa; display: none; height: 100%; -ms-opacity: 0.6; opacity: 0.6; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60); filter: alpha(opacity=60); position: fixed; text-align: center; top: 0; width: 100%; z-index: 5999; left: 0;">
-            <img alt="" src="IM-sportsbook/loading.gif" width="32" height="32">
-        </div>
+
         <input name="ctl00$ctl00$ctl00$hidblackbox" id="hidblackbox" type="hidden">
     
 
-<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button type="button" id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></form><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important"></div>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button type="button" id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div>
+</form>
+
+
+<div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important"></div>
 
     
 
@@ -2906,4 +1777,5 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ctl04', 'MainForm
         }
     </script>
 
-</body></html>
+</body>
+</html>

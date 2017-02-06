@@ -1,0 +1,658 @@
+
+<div id="Menu" style="width:145px;">
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            function onlinealipayinmaintenance() {
+                emergencyAlert('在线支付宝存款维护中','欲使用在线支付宝存款支付，请联系在线客服。','#','在线客服','关闭');
+            }
+            function wechatinmaintenance() {
+                emergencyAlert('微信存款维护中','欲使用微信存款支付，请联系在线客服。','#','在线客服','关闭');
+            }
+            if(window.location.href.toLowerCase().indexOf("fun2008") > -1) {
+                $('#WC_Container #txtWCAmount').attr('disabled', 'disabled');
+            }
+            $("#OpenWCP").hide();
+            $("#WCP_Container").show();
+            HideShowWCOn9AliContainer();
+
+            $.support.placeholder = ('placeholder' in document.createElement('input'));
+           
+            
+                $('#WC_Container #txtWCAmount').attr("placeholder", "请输入整数金额");
+                $('#Ali_Container #txtAliAmount').attr("placeholder", "请输入整数金额");
+            
+
+            if (!$.support.placeholder && $('#WC_Container #txtWCAmount').val() == "") {
+                $('#WC_Container #txtWCAmount').val($('#WC_Container #txtWCAmount').attr("placeholder")).css({ color: "#A0A0A0" });
+            }
+            if (!$.support.placeholder && $('#Ali_Container #txtAliAmount').val() == "") {
+                $('#Ali_Container #txtAliAmount').val($('#Ali_Container #txtAliAmount').attr("placeholder")).css({ color: "#A0A0A0" });
+            }
+                        
+            $('#WC_Container #txtWCAmount').focus(function () {
+                if (!$.support.placeholder && $(this).val() == $(this).attr("placeholder")) {
+                    $('#WC_Container #txtWCAmount').val("").css({ color: "#000" });
+                }
+            });
+            $('#Ali_Container #txtAliAmount').focus(function () {
+                if (!$.support.placeholder && $(this).val() == $(this).attr("placeholder")) {
+                    $('#Ali_Container #txtAliAmount').val("").css({ color: "#000" });
+                }
+            });
+
+            $('#WC_Container #txtWCAmount').blur(function () {
+                if (!$.support.placeholder) {
+                    if ($('#WC_Container #txtWCAmount').val() == "") {
+                        $('#WC_Container #txtWCAmount').val($('#WC_Container #txtWCAmount').attr("placeholder")).css({ color: "#A0A0A0" });
+                    }
+                }
+            });
+            $('#Ali_Container #txtAliAmount').blur(function () {
+                if (!$.support.placeholder) {
+                    if ($('#Ali_Container #txtAliAmount').val() == "") {
+                        $('#Ali_Container #txtAliAmount').val($('#Ali_Container #txtAliAmount').attr("placeholder")).css({ color: "#A0A0A0" });
+                    }
+                }
+            });
+
+            $('#WC_Container #txtWCAmount').keypress(function (e) {
+                //if the letter is not digit then display error and don't type anything
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+            });
+            $('#Ali_Container #txtAliAmount').keypress(function (e) {
+                //if the letter is not digit then display error and don't type anything
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+            });
+
+            $('#WC_Container #txtWCAmount').keyup(function () {
+                trimZero("#WC_Container #txtWCAmount");
+            });
+            $('#Ali_Container #txtAliAmount').keyup(function () {
+                trimZero("#WC_Container #txtWCAmount");
+            });
+
+            $("#BtnWCSubmit").click(function () {
+                
+                EnsureLogin(window.location.href);
+                
+            });
+
+            $("#BtnAliSubmit").click(function () {
+                
+                EnsureLogin(window.location.href);
+                
+            });
+        });
+
+        function callOn9Ali() {
+            getLoading();
+            var amount = $('#Ali_Container #txtAliAmount').val();
+            $.post("/Services/On9Alipay.ashx",
+                { depositAmount: amount },
+                    function (data) {
+                        if (data != null) {
+                            if (data.result === "success") {
+                                On9AliPaySuccess();
+                                $('#Ali_Container #txtAliAmount').val("");
+                                $(".loadingGif").css("display", "none");
+                                $('#Ali_Container').hide(); 
+                                $('#BtnAliOpen').show();
+                                resetWCP_ContainerImg();
+                                popUpWindowManager('/zh-CN/Deposit-AlipayOnlinePopUp', 'OnlineAlipay', 1020);
+                            } else {
+                                $('#Ali_Container #txtAliAmount').val("");
+                                $('#Ali_Container #txtAliAmount').focus();
+                                $(".loadingGif").css("display", "none");
+                                Alert(data.description, true);
+                            }
+                        }
+                    }, "json").fail(function(){
+                        $('#Ali_Container #txtAliAmount').val("");
+                        $('#Ali_Container #txtAliAmount').focus();
+                        $(".loadingGif").css("display", "none");
+                        Alert(data.description, true);
+                    });
+        }
+
+       function callWeChat() {
+           getLoading();
+           var amount = $('#WC_Container #txtWCAmount').val();
+            $.post("/Services/WeChat.ashx",
+                { depositAmount: amount },
+                    function (data) {
+                        if (data != null) {
+                            if (data.result === "success") {
+                                WCPaySuccess();
+                                $('#WC_Container #txtWCAmount').val("");
+                                $(".loadingGif").css("display", "none");
+                                $('#WC_Container').hide(); 
+                                $('#BtnWCOpen').show();
+                                resetWCP_ContainerImg();
+                                popUpWindowManager('/zh-CN/Deposit-WeChatPopUp', 'WeChatPay', 1020);
+                            } else {
+                                $('#WC_Container #txtWCAmount').val("");
+                                $('#WC_Container #txtWCAmount').focus();
+                                $(".loadingGif").css("display", "none");
+                                Alert(data.description, true);
+                            }
+                    }
+                    }, "json").fail(function(){
+                        $('#WC_Container #txtWCAmount').val("");
+                        $('#WC_Container #txtWCAmount').focus();
+                        $(".loadingGif").css("display", "none");
+                        Alert(data.description, true);
+                    });
+       }
+
+        function On9AliPaySuccess(){
+            var amountdeposited = $('#Ali_Container #txtAliAmount').val();
+            var Famountdeposited = amountdeposited * 3;
+            ga('send', 'event', 'Deposit_CNY', 'Quick Online Alipay', 'Transaction', amountdeposited);
+        }
+
+        function WCPaySuccess(){
+            var amountdeposited = $('#WC_Container #txtWCAmount').val();
+            var Famountdeposited = amountdeposited * 3;
+            ga('send', 'event', 'Deposit_CNY', 'Quick WeChat Pay', 'Transaction', amountdeposited);
+        }
+
+        function chgWCP_ContainerImg(){
+            var string = '../lib/images/WCALI_long.png';
+            document.getElementById("WCP_Container").style.backgroundImage = "url('" + string + "')";
+            document.getElementById("WCP_Container").style.height = "170px";
+        }
+        function resetWCP_ContainerImg(){
+            var string = '../lib/images/WCALI_on.png';
+            document.getElementById("WCP_Container").style.backgroundImage = "url('" + string + "')";
+            document.getElementById("WCP_Container").style.height = "95px";
+        }
+        function HideShowWCOn9AliContainer(){
+            
+                $('#BtnAliOpen').show();
+                $('#Ali_Container').hide();
+
+                $('#BtnWCOpen').show();
+                $('#WC_Container').hide();
+            
+        }
+        function HideShowWCContainer(){
+            
+                $('#BtnWCOpen').show();
+                $('#WC_Container').hide();
+            
+        }
+        function HideShowOn9AliContainer(){
+            
+                $('#BtnAliOpen').show();
+                $('#Ali_Container').hide();
+            
+        }
+    </script>
+    <style type="text/css">
+        .hidVal, .hidBankCode{
+            display: none;
+        }
+    </style>
+    <!--Start: Quick WechatPay OnlineAlipay-->
+    <input type="hidden" name="ctl00$ctl00$BaseMainContent$HeaderContent$ascxQuickContact$hidblackbox" id="BaseMainContent_HeaderContent_ascxQuickContact_hidblackbox" ">
+    <span class="hidBankCode">WC</span>
+    <div>            
+        <div>
+            <a href="javascript:void(0)" id="OpenWCP" class="dy-unit" onclick="$('#WCP_Container').show(); 
+                         $('#OpenWCP').hide(); 
+                         HideShowWCOn9AliContainer();
+                         $('#quickContactContainer').hide(); 
+                         $('#quickContact_OpenMenu').show(); 
+                         $('#fun88APK_Container').hide(); 
+                         $('#fun88APK_OpenMenu').show();
+                         resetWCP_ContainerImg();" style="display: none;">
+                <div class="button_layout WCP_OpenMenu"></div>
+            </a>
+        </div>  
+        <div id="WCP_Container" style="display: block;">
+            <a href="javascript:void(0)" id="CloseWCP" class="dy-unit" onclick="$('#WCP_Container').hide(); 
+                            $('#OpenWCP').show();">
+                <div class="button_layout CloseWCP"></div>
+            </a>
+            <div style="margin-top: 10px;  margin-left:5px;">
+                <div>
+                    <a id="BtnWCOpen" style="display: block; width: 135px; height: 32px; cursor: pointer;" href="javascript:void(0)" onclick="$('#WC_Container').show(); 
+                                 $('#BtnWCOpen').hide(); 
+                                 HideShowOn9AliContainer();
+                                 chgWCP_ContainerImg();">
+                    </a>
+                </div>
+                <div id="WC_Container" style="display: none;">
+                    <a href="javascript:void(0)" id="CloseWC" class="dy-unit" onclick="$('#WC_Container').hide(); 
+                                 $('#BtnWCOpen').show();
+                                 resetWCP_ContainerImg();">
+                        <div class="button_layout_WC_ALI CloseWC"></div>
+                    </a>
+                    <div style="margin-left:6px;">
+                        <div id="divWCAmount">
+                            <input name="ctl00$ctl00$BaseMainContent$HeaderContent$ascxQuickContact$txtWCAmount" type="text" maxlength="7" id="txtWCAmount" class="signup_input" oncopy="return false;" onpaste="return false" placeholder="请输入整数金额" style="height:25px;width:120px;">
+                            <div id="divWCMsg">
+                                <span id="lblWCTranMsg"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2px; margin-left:15px;">
+                        <div>
+                            <a id="BtnWCSubmit" style="display: block; width: 109px; height: 29px; cursor: pointer;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 5px;  margin-left:5px;">
+                <div style="display: none;">
+                    <a id="BtnAliOpen" style="display: block; width: 135px; height: 32px; cursor: pointer;" href="javascript:void(0)" onclick="$('#Ali_Container').show(); 
+                                 $('#BtnAliOpen').hide();
+                                 HideShowWCContainer();
+                                 chgWCP_ContainerImg();"></a>
+                </div>
+                <div id="Ali_Container" style="display: none;">
+                    <a href="javascript:void(0)" id="CloseAli" class="dy-unit" onclick="$('#Ali_Container').hide(); 
+                                 $('#BtnAliOpen').show();
+                                 resetWCP_ContainerImg();">
+                        <div class="button_layout_WC_ALI CloseAli"></div>
+                    </a>
+                    <div style="margin-left:6px;">
+                        <div id="divAliAmount">
+                            <input name="ctl00$ctl00$BaseMainContent$HeaderContent$ascxQuickContact$txtAliAmount" type="text" maxlength="7" id="txtAliAmount" class="signup_input" oncopy="return false;" onpaste="return false" placeholder="请输入整数金额" style="height:25px;width:120px;">
+                            <div id="divAliMsg">
+                                <span id="lblAliTransMsg"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2px; margin-left:15px;">
+                        <div>
+                            <a id="BtnAliSubmit" style="display: block; width: 109px; height: 29px; cursor: pointer;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End: Quick WechatPay OnlineAlipay-->
+    
+    <!--Start: Fun88 APK Download-->
+    <div>            
+        <div>
+            <a href="javascript:void(0)" id="fun88APK_OpenMenu" class="dy-unit" onclick="genereteApkQr(); $('#fun88APK_Container').show(); $('#fun88APK_OpenMenu').hide(); $('#quickContactContainer').hide(); $('#quickContact_OpenMenu').show();$('#WCP_Container').hide(); $('#OpenWCP').show()">
+                <div class="button_layout fun88APK_OpenMenu_zh"></div>
+            </a>
+        </div>     
+        <div id="fun88APK_Container" style="display: none;">
+            <a href="javascript:void(0)" id="fun88APK_CloseMenu" class="dy-unit" onclick="$('#fun88APK_Container').hide(); $('#fun88APK_OpenMenu').show();">
+                <div class="button_layout fun88APK_CloseMenu"></div>
+            </a>
+            <div style="margin-top: 13px;">
+                <div id="qr_generator">
+                    <img id="fun88apk_QR" src="../lib/images/QR.png" style="margin: 10px 15px 10px 18px" width="110" height="110" alt="apkQrCode">
+                </div>
+            </div>
+            <div id="fun88apk_dl_btn" style="margin-top: 144px;">
+                <div>
+                    <a id="fun88apk_dl_zh" style="margin: -5px auto 5px auto;display:block; width: 135px; height: 32px; cursor: pointer;" onclick="sendAndroidApkGA('Mobile APK','Desktop'); window.open(this.href, 'newwindow', 'width=420, height=250'); return false;"> </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--END: Fun88 APK Download-->
+
+    
+
+   
+
+    <!--Start: Quick Contact-->
+    <div> 
+        <div>
+            <a href="javascript:void(0);" id="quickContact_OpenMenu" class="dy-unit" onclick="$('#quickContact_OpenMenu').hide(); $('#quickContactContainer').show(); $('#fun88APK_Container').hide(); $('#fun88APK_OpenMenu').show();$('#WCP_Container').hide(); $('#OpenWCP').show();">
+                <div class="button_layout quickContact_OpenMenu"></div>
+            </a>
+        </div> 
+        <div id="quickContactContainer" style="display: none;">
+            <a href="javascript:void(0);" id="quickContact_CloseMenu" onclick="$('#quickContact_OpenMenu').show(); $('#quickContactContainer').hide();" class="dy-unit">
+                <div class="button_layout"></div>
+            </a>
+            <img src="../lib/images/girl.png" style="width: 124px; height: 203px; margin: 10px 10px 0px 10px;"  id="imgLiveChatGirl">
+
+            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('#', 'newwindow', 'width=420, height=250'); return false;" href="#/">
+                <div class="quickcontactbtn quickcontactbtn1">
+                </div>
+            </a>
+
+            <a id="quickContactDownload" class="dy-unit" target="_blank" href="http://www.10010388.com/zh-CN/LiveChat" onclick="sendQuickContactGA('QuickContactDownload');">
+                <div class="quickcontactbtn quickcontactbtn2">
+                </div>
+            </a>
+
+            <div class="quickcontacttext" style="padding-bottom: 4px;">
+                
+                <b>客服热线</b>
+                
+                <br>
+                +86 400 890 0398
+            </div>
+            <div class="quickcontacttext" id="quickContactSelId">
+                
+                <b>客服邮箱</b>
+                <br>
+                
+                <a id="quickContactMail" class="quickcontactemailtext dy-unit" href="mailto:cs@fun88.com" onclick="sendQuickContactGA('QuickContactMail');">
+                    cs@fun88.com
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--END: Quick Contact-->
+   <script type="text/javascript">
+        var g_Cookie_PopUpWelcome = "PopUpWelcome";
+        function getCookie(c_name) {
+            var c_value = document.cookie;
+            var c_start = c_value.indexOf(" " + c_name + "=");
+            if (c_start == -1) {
+                c_start = c_value.indexOf(c_name + "=");
+            }
+            if (c_start == -1) {
+                c_value = null;
+            }
+            else {
+                c_start = c_value.indexOf("=", c_start) + 1;
+                var c_end = c_value.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = c_value.length;
+                }
+                c_value = unescape(c_value.substring(c_start, c_end));
+            }
+            return c_value;
+        }
+        function setCookie(c_name, value, exdays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+            document.cookie = c_name + "=" + c_value;
+        }
+        function deleteCookie(cname) {
+            CreateCookie(cname, "", -1);
+            document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+        function isCookieExist(strCookieKey) {
+            var cookieValue = $.cookie(strCookieKey);
+            if ($.cookie(strCookieKey) == "" || $.cookie(strCookieKey) == null || $.cookie(strCookieKey) == "undefined") {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function createCookie(strCookieKey) {
+            $.cookie(strCookieKey, 1,
+            {
+                expires: 3650
+            });
+        }
+        function deleteCookie(strCookieKey) {
+            $.removeCookie(strCookieKey);
+        }
+        $(document).keypress(function (evt) {
+            evt = (evt) ? evt : ((event) ? event : null);
+            var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+            if ((evt.keyCode == 13) && (node.type == "text" || node.type == "password")) {
+                if (node.id == "UserName" && node.value) {
+                    if ($("#Password").val()) {
+                        $("#login .button").click();
+                    } else {
+                        $("#Password").focus();
+                    }
+                }
+                if (node.id == "Password" && node.value) {
+                    if ($("#UserName").val()) {
+                        $("#login .button").click();
+                    } else {
+                        $("#UserName").focus();
+                    }
+                }
+                if (node.id == "txtUsn" && node.value) {
+                    if ($("#txtPwd").val()) {
+                        $(".PL_login_btn .PL_button").click();
+                    } else {
+                        $("#txtPwd").focus();
+                    }
+                }
+                if (node.id == "txtPwd" && node.value) {
+                    if ($("#txtUsn").val()) {
+                        $(".PL_login_btn .PL_button").click();
+                    } else {
+                        $("#txtUsn").focus();
+                    }
+                }
+                return false;
+            }
+            return true;
+        });
+    </script>
+        <script type="text/javascript">
+        var getUri = window.location.href.toLowerCase();
+        var SliderButtonName = [];
+        var checks = [];
+        var affiliateCode = getCookie("CO_affiliate") == null ? "" : getCookie("CO_affiliate").replace("affiliate=", "");
+        if (getUri.substr(getUri.lastIndexOf('/') + 1) == "") { getUri = getUri.substring(0, getUri.length - 1); }
+        var nonHomepageBackground = getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('im-casino') != -1 ||
+        ((getUri.indexOf("im-casino") !== -1) && getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('top-games') != -1) ||
+        ((getUri.indexOf("worldcup") !== -1) && getUri.substr(getUri.lastIndexOf('/') + 1).indexOf('worldcup') != -1);
+        function initiate_backgroundBanner(notDy) {
+            if (getUri.indexOf("/zh-cn/default") != -1 ||
+                    getUri.indexOf("/zh-cn/home") != -1 || nonHomepageBackground
+            ) {
+                var maximageObj = $("#maximage1");
+                if (typeof (notDy) == 'undefined') {
+                    for (var loop = 1; loop <= $(maximageObj).children().length; loop++)
+                        checks.push(loop);
+                }
+                if (typeof maximageObj !== 'undefined' && $(maximageObj).children().length == checks.length && checks.length != 0) {
+                    var tempButton = [];
+                    var tempLinks = [];
+                    for (var a = 0; a < checks.length; a++) {
+                        var n = checks[a] - 1;
+                        $($("#maximage1 > img")[n]).clone().appendTo($("#maximage"));
+                        tempButton[a] = SliderButtonName[n];
+                        tempLinks[a] = links[n];
+                    }
+                    SliderButtonName = tempButton;
+                    links = tempLinks;
+                    maximageObj.remove();
+                    maximageObj = $("#maximage");
+                    $(maximageObj).maximage({
+                        cycleOptions: {
+                            fx: 'scrollHorz',
+                            speed: 1000,
+                            timeout: 8000,
+                            prev: ".prev",
+                            next: ".next",
+                            pager: '#cycle-nav table tr',
+                            pagerAnchorBuilder: function (idx, slide) {
+                                var result = '<td id="homeBannerButton' + (idx + 1) + '" class="dy-unit" ><a href="javascript:void(0);">';
+                                if (getUri.indexOf("/zh-cn/home") != -1 || getUri.indexOf("/zh-cn/default") != -1) {
+                                    result += SliderButtonName[idx];
+                                }
+                                return result + '</a></td>';
+                            }
+                        },
+                        onFirstImageLoaded: function () {
+                            jQuery(maximageObj).fadeIn('fast');
+
+                        }
+                    });
+                    $('.toggle').bind('click', function (e) {
+                        e.preventDefault();
+                        $(maximageObj).cycle('toggle');
+                    });
+                    $('div#slides').on('click', function () {
+                        var num = $('td.activeSlide').attr('id').split('homeBannerButton').pop();
+                        if (typeof DY !== "undefined")
+                            DY.API('event', { name: 'HomeBannerClicked', properties: { BannerNumber: num } });
+                        sendDesktopGA("Home Banner " + getCookie("CultureInfo").toLowerCase(), "Click", SliderButtonName[num - 1] + (isLogin === "true" ? " Auth" : " Anon"));
+                        var func = new Function(links[--num]);
+                        func();
+                    });
+                }
+            }
+        }
+        $(function () {
+            if ($.browser.msie && $.browser.version < '8.0') {
+                $(window).ready(function () { initiate_backgroundBanner(); });
+            } else {
+                initiate_backgroundBanner();
+            }
+
+
+        });
+        function ClosePopupLiveStream() {
+            $.colorbox.close();
+            $("#PL_popup_box").css("display", "none");
+        }
+
+        function PopupVideo(video_link) {
+            video_frame = document.getElementById('videoframe');
+            video_frame.setAttribute('src', video_link);
+            $("#Video_popup_box").css("display", "block");
+            $.colorbox({
+                top: 84,
+                href: "#Video_popup_box",
+                innerWidth: 700,
+                innerHeight: 550,
+                inline: true,
+                onClosed: function () {
+                    ClosePopupVideo();
+                }
+            });
+            $("#cboxClose").css("display", "none");
+        }
+
+        function ClosePopupVideo() {
+            $.colorbox.close();
+            $("#Video_popup_box").css("display", "none");
+        }
+
+        $(function () {
+            if (typeof (Sys) !== 'undefined' && Sys.Browser.agent === Sys.Browser.InternetExplorer && Sys.Browser.version === 10) {
+                Sys.WebForms.PageRequestManager.getInstance()._onFormElementActive = function Sys$WebForms$PageRequestManager$_onFormElementActive(element, offsetX, offsetY) {
+                    if (element.disabled) {
+                        return;
+                    }
+                    this._activeElement = element;
+                    this._postBackSettings = this._getPostBackSettings(element, element.name);
+                    if (element.name) {
+                        var tagName = element.tagName.toUpperCase();
+                        if (tagName === 'INPUT') {
+                            var type = element.type;
+                            if (type === 'submit') {
+                                this._additionalInput = encodeURIComponent(element.name) + '=' + encodeURIComponent(element.value);
+                            } else if (type === 'image') {
+                                this._additionalInput = encodeURIComponent(element.name) + '.x=' + Math.floor(offsetX) + '&' + encodeURIComponent(element.name) + '.y=' + Math.floor(offsetY);
+                            }
+                        } else if ((tagName === 'BUTTON') && (element.name.length !== 0) && (element.type === 'submit')) {
+                            this._additionalInput = encodeURIComponent(element.name) + '=' + encodeURIComponent(element.value);
+                        }
+                    }
+                };
+            }
+        });
+
+        function registerDeny() { PopupIovation('/zh-CN/Registration-Deny?width=573&height=310',1, '673', '410' ,'/zh-CN/Default'); }
+
+        var ptUrl = window.location.href.toLowerCase().indexOf("/zh-cn/im-casino") !== -1 || window.location.href.toLowerCase().indexOf("/zh-cn/update-im-account") !== -1;
+        $(document).ready(function () {
+            try {
+                if (ptUrl && Boolean(true)) {
+                    EnsurePTAuth('', Boolean(false));
+                }
+            } catch (err) {
+            }
+            
+            
+        });
+
+
+    </script>
+    <script type="text/javascript" language="javascript">
+   
+
+
+    function generateAffiliateApk() {   
+        $.ajax({
+            type: "POST",
+            url: "/Services/AndroidAffiliate.ashx",
+            data: { AffiliateCode: affiliateCode, ProductType: "Fun88_Gaming" },
+            dataType: "json",
+            success: function (data) {
+                if (data.Success && data.ResponseUrl != null && data.ResponseUrl != "") {
+                        $('#fun88apk_dl_btn a').attr('href', data.ResponseUrl).css("display", "block");
+                        $('#qr_generator').empty();
+                        $('#qr_generator').qrcode({
+                            "render": "image",
+                            "size": 110,
+                            "color": "#3a3",
+                            "text": window.location.host + data.ResponseUrl
+                        });
+                        $('#qr_generator img').css("margin", "10px 15px 10px 18px");
+                } else {
+                    $('#fun88apk_dl_btn a').attr('href', "http://media.10010388.com/Download/Android/android-fun88.apk").css("display", "block");
+                    $('#qr_generator').empty();
+                    $('#qr_generator').qrcode({
+                        "render": "image",
+                        "size": 110,
+                        "color": "#3a3",
+                        "text": "http://media.10010388.com/Download/Android/android-fun88.apk"
+                    });
+                    $('#qr_generator img').css("margin", "10px 15px 10px 18px");
+                }
+            }
+        });          
+    }
+
+    var apkGenerated = false;
+    function genereteApkQr() {
+        if (!apkGenerated) {
+            generateAffiliateApk();
+            
+            $("#fun88APK_Container").css({'height':'342px'});
+            $("#fun88apk_dl_btn").css({'margin-top':'77px'});
+            $("#fun88apk_dl_btn").css({'margin-right':'1px'});
+            
+            apkGenerated = true;
+        }
+    }
+
+    function quickchatopenclose() {
+        if ($("#quickcontact").attr('class') == 'quickcontactcontainerbeforehover') {
+            $("#quickcontact").removeClass('quickcontactcontainerbeforehover');
+            $("#quickcontact").addClass('quickcontactcontainer');
+            $("#SOSBonuszh").css("bottom", "405px");
+            $("#SOSBonuszh").css("bottom", "446px");
+            $("#PTButton").css("bottom", "405px");
+        }
+        else {
+            $("#quickcontact").removeClass('quickcontactcontainer');
+            $("#quickcontact").addClass('quickcontactcontainerbeforehover');
+            $("#SOSBonuszh").css("bottom", "41px");
+            $("#SOSBonuszh").css("bottom", "81px");
+            $("#PTButton").css("bottom", "40px");
+        }
+    }
+  
+    $(document).ready(function() {
+        
+        $("#imgLiveChatGirl").attr("style","width: 124px; height: 203px; margin: 10px 10px 0px 10px;");
+        
+    });
+  
+</script>
+</div>

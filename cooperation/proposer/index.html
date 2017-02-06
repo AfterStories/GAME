@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+
+    <title>Referer </title>
+    <link href="btnStyle.css" rel="stylesheet" type="text/css">
+    <link href="mainStyleCS.css" rel="stylesheet" type="text/css">
+    <link href="yunStyle.css" rel="stylesheet" type="text/css">
+    <link href="P3TableStyles.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../../../lib/js/jquery-1.12.2.min.js"></script>
+  
+    <style type="text/css">
+
+input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; padding-left: 3px; }
+</style>
+    <style type="text/css">
+
+img { border: 0px none; }
+</style>
+
+    <script type="text/javascript">
+
+        try {
+            var pageTracker = _gat._getTracker("UA-4079383-8");
+            pageTracker._trackPageview();
+        } catch (err) { }
+
+
+        function checkContent() {
+            if (document.getElementById("txtReq").value == "" || document.getElementById("txtMail").value == "") {
+                alert("Presentee and Email can not be empty ! ");
+                return false;
+            }
+            var mReg = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+
+            if (!mReg.test(document.getElementById("txtMail").value)) {
+                alert("Email is invalid !");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body onload="parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ?document.body.scrollHeight+10:700;">
+    <form  id="form1">
+
+        <table class="P3outertable">
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <span class="P3PageTitle">
+                            <span id="lblTitle">介绍人申请</span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    
+                    <td rowspan="3" style="width: 270px; text-align: center;">
+                        <a href="http://www.10010688.com/lm/Register.aspx" target="_self">
+                            <img id="Image1" src="Presentee.jpg">
+                        </a>
+                    </td>
+                </tr>
+                <tr id="trCh">
+    <td valign="top" align="left">
+                        <div class="STYLE9" style="text-align: justify; line-height: 20px; font-weight: normal; margin-right: 10px;">
+                            推荐您的朋友来加入乐天堂合营事业，一起把合营事业做大、做强！无论您是否有相关的合营经验，也无论您是行业内的新手还是资历丰富的合营专家，只要您注册成为乐天堂合营计划的合作伙伴，专注于合营事业的发展，乐天堂将会全力帮助您发展合营事业，并最终帮您实现财富的终极梦想！
+
+
+                    有了如此之多的优势以及无限的前景，您还有什么后顾之忧呢？赶快邀请您的朋友一起来加入乐天堂合营伙伴，发展下级合营伙伴，赢取更多佣金吧！
+
+
+                    选择加入乐天堂，选择加入一个成功的团队！
+                        </div>
+                    </td>
+</tr>
+
+           
+                
+                <tr>
+                    <td>
+                        <table id="tblReferral" class="P3inner2table" style="width: 600px;">
+    <tbody><tr>
+        <td style="width: 126px;" align="left">
+                                    <span id="lReq">我要介绍的合作伙伴:</span></td>
+        <td>
+                                    <input name="txtReq" id="txtReq" type="text">
+                                </td>
+    </tr>
+    <tr>
+        <td style="width: 126px;">
+                                    <span id="lMail" style="display: inline-block; width: 84px;">合作伙伴邮箱:</span></td>
+        <td>
+                                    <input name="txtMail" id="txtMail" style="width: 261px;" type="text"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="margin-right: 10px;" align="right">
+                                    <input name="btnSubmit" value="提交" onclick="return checkContent();" id="btnSubmit" class="Apply_Css" style="height: 24px; width: 63px;" type="submit">
+                                </td>
+    </tr>
+</tbody></table>
+
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+        <br>
+        <br>
+    </form>
+
+
+</body>
+</html>

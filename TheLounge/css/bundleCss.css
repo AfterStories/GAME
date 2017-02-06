@@ -752,12 +752,12 @@ a.WelcomeBox.last { cursor: pointer; }
 #outer_top_header .dvEmptyFrame { border: 0px none; width: 0px; height: 0px; }
 #outer_top_header #ddlWallets .dvEmptyFrame, #outer_top_header #ddlSettings .dvEmptyFrame { border: 0px none; width: 0px; height: 0px; display: none; }
 #japan_email { display: block; margin-top: -134px; margin-left: 115px; width: 134px; height: 22px; position: absolute; cursor: pointer; }
-#navigation { width: 100%; height: 40px; margin-bottom: 20px; margin-top: 10px; }
+#navigation { width: 100%; margin-bottom: 20px; margin-top: 10px; }
 #navMain { width: 960px; z-index: 99; height: 43px; font-size: 16px; text-align: justify; padding: 0px; }
 #navMain.ko-KR { font-size: 15px; }
 #navMain td.on ul, #navMain td.off ul { margin: 0px; padding: 0px; }
 #navMain a { text-decoration: none; text-transform: uppercase; float: left; }
-#navMain td a.cssSelectedMenu { font-weight: 700; text-decoration: none; display: block; border-top: 3px solid rgb(37, 170, 225); margin: -3px 0px 0px; }
+#navMain td a.cssSelectedMenu { font-weight: 700; text-decoration: none; display: block; margin: -3px 0px 0px; }
 #navMain td { white-space: nowrap; z-index: 999; text-align: center; margin: 0px auto; position: relative; width: auto; }
 #navMain td ul { display: none; position: absolute; left: 0px; min-width: 180px; width: 110%; }
 #navMain td a { color: rgb(37, 170, 225); display: block; z-index: 1999; position: relative; text-align: center; padding: 7px; }
@@ -967,10 +967,10 @@ div.wrapper-dropdown-5 span.bank { line-height: 0; width: 25px; border-top-width
 .walletShadow { background-color: rgb(174, 174, 166); height: 91px; padding: 5px; width: 193px; position: relative; }
 .walletStyle > table { border: 2px solid rgb(219, 219, 219); background-color: rgb(255, 255, 255); border-collapse: collapse; width: 200px; }
 .walletStyle > table td, th { border: 2px solid rgb(219, 219, 219); }
-.picture { background-image: url("images/arrow-head-down.jpg"); background-position: -31px 1px; height: 19px; position: relative; margin: -21px 0px 0px 175px; width: 10px; z-index: 1000; cursor: pointer; }
+.picture { background-image: url("../../lib/images/arrow-head-down.jpg"); background-position: -31px 1px; height: 19px; position: relative; margin: -21px 0px 0px 175px; width: 10px; z-index: 1000; cursor: pointer; }
 .dropdownlist { width: 190px; }
 .dropdownlist > input[type="text"] { z-index: 999; position: relative; width: 188px; height: 20px; cursor: pointer; }
-.walletList, .CityList { padding: 23px; position: absolute; left: -23px; cursor: pointer; }
+.walletList, .CityList { padding: 23px; position: absolute; top: 32px; cursor: pointer; }
 .arrowImg { border-width: 5px 3px 0px; border-style: solid solid none; border-color: rgb(0, 0, 0) transparent -moz-use-text-color; cursor: pointer; height: 13px; left: 9px; position: absolute; top: 11px; width: 0px; }
 #arrowCityList { bottom: -32px; height: 24px; position: absolute; right: 2px; width: 21px; }
 .CityList { left: -23px; bottom: -399px; height: 344px; width: 337px; overflow: auto; padding: 0px; margin: 23px; }
@@ -978,9 +978,9 @@ div.wrapper-dropdown-5 span.bank { line-height: 0; width: 25px; border-top-width
 #CityListTable tbody { overflow: scroll; }
 #CityListTable tr td { width: 295px; display: block; padding: 0px 0px 0px 3px; }
 #RegisterCity { position: relative; }
-.walletList > table, .CityList > table { background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0); width: 263px; border-collapse: collapse; cursor: pointer; }
-.walletList > table td, th, .CityList > table td, th { padding: 1px; font-size: 100%; }
-.walletList > table tr:hover td, .CityList > table tr:hover td { background-color: rgb(30, 144, 255); color: rgb(255, 255, 255); }
+#walletTable, .CityList > table { background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0); width: 263px; border-collapse: collapse; cursor: pointer; }
+#balanceTable> table td, th, .CityList > table td, th { padding: 1px; font-size: 100%; }
+#balanceTable> table tr:hover td, .CityList > table tr:hover td { background-color: rgb(30, 144, 255); color: rgb(255, 255, 255); }
 #colorbox, #cboxOverlay, #cboxWrapper { position: absolute; top: 0px; left: 0px; z-index: 9999; overflow: hidden; }
 #cboxOverlay { width: 100%; height: 100%; }
 #cboxMiddleLeft, #cboxBottomLeft { clear: left; }

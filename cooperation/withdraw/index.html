@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<meta charset="UTF-8">
+
+    <title>Affilate Management</title>
+    <link href="mainStyleCS_001.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+
+Body { font-weight: normal; }
+#tblMain td { height: 33px; }
+input { color: rgb(102, 102, 102); border: 1px solid rgb(127, 157, 185); }
+textarea { color: rgb(102, 102, 102); }
+select { color: rgb(102, 102, 102); border: 1px solid rgb(127, 157, 185); }
+span { color: rgb(102, 102, 102); }
+#rdlWithdrawal input { border: 0px none; }
+.cont12oe { color: red; }
+</style>
+    <style type="text/css">
+
+.P3PageTitle { font-family: HiraginoSansGB3,Helvetica,Arial,sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase; color: rgb(37, 170, 225); }
+.style1 { color: rgb(255, 0, 0); }
+</style>
+    <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"></script>
+    <script src="common.js" type="text/javascript"></script>
+    <script src="CallBackObject.js" type="text/javascript" language="javascript"></script>
+
+    <script type="text/JavaScript">
+
+        // Input Validation
+        function callSubmit() {
+            var IsAccountNumberFormat = /(?!^.*^[\-]*$.*$)(?!^.*^[\s]*$.*$)(?!^.*-[\s]*-.*$)(?!^.*\s\s.*$)(?!^.*\-\s.*$)(?!^.*\s\-.*$)(^[\d\s\-]+$)/; //Only numbers, space and dash allowed
+            var decimalOnly = /^\s*-?[1-9]\d*(\.\d{1,2})?\s*$/;
+            var isNotSymbol = /(?!^.*^[\-]*$.*$)(?!^.*-[\s]*-.*$)(?!^.*\s\s.*$)(?!^.*\s\-.*$)(?!^.*\-\s.*$)(^[^\?*.\?!\@#\%\&\~`\$\^_\,()\//]*$)/; // Only '-' and space allowed
+            var isAllowedSymbol = /(?!^.*\/[\s]*\/.*$)(?!^.*\,[\s]*\,.*$)(?!^.*\.[\s]*\.*$)(?!^.*\-[\s]*\-.*$)(?!^.*\s\s.*$)(?!^.*^[\s]*$.*$)(?!^.*^[\/]*$.*$)(?!^.*^[\,]*$.*$)(?!^.*^[\.]*$.*$)(?!^.*^[\-]*$.*$)(^[^\?*\?!\@#\%\&\~`\$\^_()]*$)/; // '/', ',', '.', '-' and space allowed
+            var isNotSymbolOrSpace = /^[^\?*.\?!\@#\%\&\~`\$\^_\s-\,()\//]*$/; // No symbols allowed
+            var isPhoneFormat = /(?!^.*^[-]*$.*$)(?!^.*\+@[\s]*-.*$)(?!^.*-[\s]*\+.*$)(?!^.*\([\s]*\).*$)(?!^.*\)[\s]*\).*$)(?!^.*\([\s]*\(.*$)(?!^.*-[\s]*-.*$)(?!^.*\+[\s]*\+.*$)(?!^.*\+[\s]*-.*$)(^(\(?\+-?[0-9]*\)?)?[0-9\- \(\)]{1,20}$)/;
+            var NotAllowTagsAndSymbols = /<\/?[a-z][a-z0-9]*[^<>]*>|<!--.*?--> |[~!@#$%^&*()_+,.\/:";'\[\]\|{}=-]/; // This regex recognize any languages (letters and numbers), and not allow any tags and symbols
+
+            var MinNum = 0;
+            var MaxNum = 0;
+            var strCurrency = '';
+            var getCurrency = 'CNY';
+            switch (getCurrency) {
+                //Khairil change to new Withdrawal Limit for all brands 
+                case 'THB':
+                    MinNum = 2000;
+                    MaxNum = 1200000;
+                    strCurrency = 'THB';
+                    break;
+                case 'CNY':
+                case 'RMB':
+                    MinNum = 300;
+                    MaxNum = 500000;
+                    strCurrency = 'CNY';
+                    break;
+                case 'USD':
+                    MinNum = 50;
+                    MaxNum = 40000;
+                    strCurrency = 'USD';
+                    break;
+                case 'IDR':
+                    MinNum = 1000;
+                    MaxNum = 400000; //not yet state, just a sample
+                    strCurrency = 'IDR';
+                    break;
+                case 'VND':
+                    MinNum = 1500;
+                    MaxNum = 850000;
+                    strCurrency = 'VND';
+                    break;
+                case 'KRW':
+                    MinNum = 500;
+                    MaxNum = 50000000;
+                    strCurrency = 'KRW';
+                    break;
+            }
+
+            // Withdrawal Amount Validation (txtamount)
+            {
+                if (!IsNotEmpty(document.getElementById('txtamount').value)) {
+                    alert('取款金额 未输入请确认！');
+                    document.getElementById('txtamount').focus();
+                    return false;
+                }
+                if (!decimalOnly.test(document.getElementById('txtamount').value)) {
+                    alert('存款金额请输入整数（不带小数点）！');
+                    document.getElementById('txtamount').focus();
+                    return false;
+                }
+                if (!IsNumeric(document.getElementById('txtamount').value)) {
+                    alert('存款金额请输入整数（不带小数点）！');
+                    document.getElementById('txtamount').focus();
+                    return false;
+                }
+                if (document.getElementById('txtamount').value < MinNum) {
+                    alert('最低提款金额！' + ' (' + strCurrency + ' ' + MinNum + ')');
+                    document.getElementById('txtamount').focus();
+                    return false;
+                }
+                if (document.getElementById('txtamount').value > MaxNum) {
+                    alert('最高提款金额！' + ' (' + strCurrency + ' ' + MaxNum + ')');
+                    document.getElementById('txtamount').focus();
+                    return false;
+                }
+            }
+
+            var rdWithdrawal = document.getElementById("rdlWithdrawal_0");
+            if (rdWithdrawal && rdWithdrawal.checked) {
+                //Email_address  
+                if (!IsNotEmpty(document.getElementById("txtEmail").value)) {
+                    alert('电子邮箱地址 未输入请确认!');
+                    document.getElementById("txtEmail").focus();
+                    return false;
+                }
+                if (!IsEmail(document.getElementById("txtEmail").value)) {
+                    alert('电子邮箱地址 错误格式请确认!');
+                    document.getElementById("txtEmail").select();
+                    return false;
+                }
+                return true;
+            }
+
+            // Bank Account Number Validation (ddlYourBankCount)
+            {
+                if (document.getElementById('divBankAccount').style.display == "none") {
+                    if (!IsNotEmpty(document.getElementById('txtAtmcard').value)) {
+                        alert('银行账户号码 未输入请确认!');
+                       document.getElementById('txtAtmcard').focus();
+                       return false;
+                   }
+                   /*if (!IsAccountNumberFormat.test(document.getElementById('txtAtmcard.ClientID').value)) {
+                        alert('AlertMessage.InvalidAccountNumber');
+                        document.getElementById('txtAtmcard.ClientID').focus();
+                        return false;
+                    }*/
+                } else {
+                    var BankCount = document.getElementById('ddlYourBankCount');
+                    if (BankCount.options[BankCount.selectedIndex].text == '请选择') {
+                        alert('银行账户号码 未输入请确认!');
+                       document.getElementById('ddlYourBankCount').focus();
+                       return false;
+                   }
+               }
+           }
+
+            // Bank Account Holder Name Validation (txtAccount)
+           {
+               if (!IsNotEmpty(document.getElementById('txtAccount').value)) {
+                    alert('银行账户的户名 未输入请确认!');
+                    document.getElementById('txtAccount').focus();
+                    return false;
+                }
+
+               if (NotAllowTagsAndSymbols.test(document.getElementById('txtAccount').value)) {
+                   alert('银行账户的户名无效！');
+                    document.getElementById('txtAccount').focus();
+                    return false;
+                }
+            }
+
+            // Bank Name Validation (txtBankName)
+            {
+                try {
+                    if (!IsNotEmpty(document.getElementById('txtBankName').value)) {
+                        alert('银行名称 未输入请确认!');
+                        document.getElementById('txtBankName').focus();
+                        return false;
+                    }
+                    
+                    if (NotAllowTagsAndSymbols.test(document.getElementById('txtBankName').value)) {
+                        alert('银行名称无效！');
+                        document.getElementById('txtBankName').focus();
+                        return false;
+                    }
+                } catch (e) { }
+            }
+
+            // Bank Address	Validation (txtBankAddress)
+            {
+                try {
+                    if (!IsNotEmpty(document.getElementById('txtBankAddress').value)) {
+                        alert('银行地址 未输入请确认!');
+                        document.getElementById('txtBankAddress').focus();
+                        return false;
+                    }
+
+                    if (NotAllowTagsAndSymbols.test(document.getElementById('txtBankAddress').value)) {
+                        alert('银行地址无效！');
+                        document.getElementById('txtBankAddress').focus();
+                        return false;
+                    }
+                } catch (e) { }
+            }
+
+            // Bank Swift / IBAN/ABA Code Number Validation (txtBankswift)
+            {
+                try {
+                    if (IsNotEmpty(document.getElementById('txtBankswift').value)) {
+                        if (!isNotSymbolOrSpace.test(document.getElementById('txtBankswift').value)) {
+                            alert('银行swift / IBAN/ABA 代码号码无效！');
+                            document.getElementById('txtBankswift').focus();
+                            return false;
+                        }
+                    }
+                } catch (e) { }
+            }
+
+            // Bank Telephone Number Validation(txtBankTelNo)
+            {
+                try {
+                    if (IsNotEmpty(document.getElementById('txtBankTelNo').value)) {
+                        if (!isPhoneFormat.test(document.getElementById('txtBankTelNo').value)) {
+                            alert('银行电话无效！');
+                            document.getElementById('txtBankTelNo').focus();
+                            return false;
+                        }
+                    }
+                } catch (e) { }
+            }
+
+            // Province Validation (txtProvince)
+            {
+                if (IsNotEmpty(document.getElementById('txtProvince').value)) {
+                    if (NotAllowTagsAndSymbols.test(document.getElementById('txtProvince').value)) {
+                        alert('请输入正确的省份！');
+                        document.getElementById('txtProvince').focus();
+                        return false;
+                    }
+                }
+            }
+
+            // City Validation (txtCity)
+            {
+                if (IsNotEmpty(document.getElementById('txtCity').value)) {
+                    if (NotAllowTagsAndSymbols.test(document.getElementById('txtCity').value)) {
+                        alert('请输入正确的城市/城镇名称！');
+                        document.getElementById('txtCity').focus();
+                        return false;
+                    }
+                }
+            }
+
+            // Branch Validation (txtBranch)
+            {
+                if (!IsNotEmpty(document.getElementById('txtBranch').value)) {
+                    alert('分行 未输入请确认！');
+                    document.getElementById('txtBranch').focus();
+                    return false;
+                }
+
+                if (NotAllowTagsAndSymbols.test(document.getElementById('txtBranch').value)) {
+                    alert('请输入正确的分行！');
+                    document.getElementById('txtBranch').focus();
+                    return false;
+                }
+            }
+
+            // Country Validation (txtCountryName)
+            {
+                try {
+                    if (!IsNotEmpty(document.getElementById('txtCountryName').value)) {
+                        alert('国家 未输入请确认!');
+                        document.getElementById('txtCountryName').focus();
+                        return false;
+                    }
+
+                    if (NotAllowTagsAndSymbols.test(document.getElementById('txtCountryName').value)) {
+                        alert('格式错误.');
+                        document.getElementById('txtCountryName').focus();
+                        return false;
+                    }
+                } catch (e) { }
+                
+            }
+
+            return confirm('您发送了一条提款请求，请确认！');
+        }
+
+
+        function IsNumeric(strString)
+            //  check for valid numeric strings	
+        {
+            var strValidChars = "0123456789.";
+            var strChar;
+            var blnResult = true;
+
+            if (strString.length == 0) return false;
+
+            //  test strString consists of valid characters listed above
+            for (i = 0; i < strString.length && blnResult == true; i++) {
+                strChar = strString.charAt(i);
+                if (strValidChars.indexOf(strChar) == -1) {
+                    blnResult = false;
+                }
+            }
+            return blnResult;
+        }
+
+        function getBankAccountInfomation(bankAccountID) {
+            if (bankAccountID == '0')
+                return;
+            //alert(bankAccountID)
+            var cbo = new CallBackObject();
+            cbo.OnComplete = setBankAccountInfomation;
+            cbo.DoCallBack("GetBankAccountInfo.aspx?id=" + bankAccountID);
+        }
+
+        function setBankAccountInfomation(responseText, responseXml) {
+            var xmlDom;
+            if (window.ActiveXObject) {
+                xmlDom = new ActiveXObject("MSXML2.DOMDOCUMENT.3.0");
+                xmlDom.loadXML(responseText);
+            }
+            else {
+                var domParser = new window.DOMParser();
+                xmlDom = domParser.parseFromString(responseText, 'text/xml');
+            }
+            //window.alert(responseText);
+            var rows = xmlDom.getElementsByTagName("NewDataSet");
+            //AccountHolderName	    
+            var _txtAccount = document.getElementById("txtAccount");
+            var _txtProvince = document.getElementById("txtProvince");
+            var _txtCity = document.getElementById("txtCity");
+            var _txtBranch = document.getElementById("txtBranch");
+            var _ddlBankID = document.getElementById("ddlBankID");
+            var _ddlCountryCode = document.getElementById("ddlCountryCode");
+
+            try {
+                var _txtBankName = document.getElementById("txtBankName");
+                var _txtBankAddress = document.getElementById("txtBankAddress");
+                var _txtBankswift = document.getElementById("txtBankswift");
+                var _txtBankTelNo = document.getElementById("txtBankTelNo");
+            } catch (e) { }
+
+
+            _txtAccount.value = rows[0].getElementsByTagName("AccountHolderName")[0].childNodes[0].data;
+            if (rows[0].getElementsByTagName("Province")[0].childNodes[0])
+                _txtProvince.value = rows[0].getElementsByTagName("Province")[0].childNodes[0].data;
+            else
+                _txtProvince.value = '';
+            if (rows[0].getElementsByTagName("City")[0].childNodes[0])
+                _txtCity.value = rows[0].getElementsByTagName("City")[0].childNodes[0].data;
+            else
+                _txtCity.value = '';
+            if (rows[0].getElementsByTagName("Branch")[0].childNodes[0])
+                _txtBranch.value = rows[0].getElementsByTagName("Branch")[0].childNodes[0].data;
+            else
+                _txtBranch.value = ''
+            if (rows[0].getElementsByTagName("NationCode")[0].childNodes[0])
+                _ddlCountryCode.value = rows[0].getElementsByTagName("NationCode")[0].childNodes[0].data;
+            else
+                _ddlCountryCode.value = ''
+
+            try {
+                if (rows[0].getElementsByTagName("BankName")[0].childNodes[0]) {
+                    var bankName = rows[0].getElementsByTagName("BankName")[0].childNodes[0].data;
+
+                    _txtBankName.value = bankName;
+                }
+                else
+                    _txtBankName.value = '';
+            } catch (e) { }
+
+            try {
+                if (rows[0].getElementsByTagName("BankAddress")[0].childNodes[0]) {
+                    var bankAddress = rows[0].getElementsByTagName("BankAddress")[0].childNodes[0].data;
+
+                    _txtBankAddress.value = bankAddress;
+                } else
+                    _txtBankAddress.value = '';
+            } catch (e) { }
+
+            try {
+                if (rows[0].getElementsByTagName("SWIFTCode")[0].childNodes[0]) {
+                    var Bankswift = rows[0].getElementsByTagName("SWIFTCode")[0].childNodes[0].data;
+
+                    _txtBankswift.value = Bankswift;
+                } else
+                    _txtBankswift.value = '';
+            } catch (e) { }
+
+            try {
+                _txtBankTelNo.value = '';
+                if (rows[0].getElementsByTagName("BankTelNo")[0].childNodes[0]) {
+                    var BankTelNo = rows[0].getElementsByTagName("BankTelNo")[0].childNodes[0].data;
+
+                    _txtBankTelNo.value = BankTelNo;
+                } else {
+                    _txtBankTelNo.value = '';
+                }
+            } catch (e) { }
+
+
+            if (_ddlBankID) {
+                for (var i = 0; i < _ddlBankID.options.length; i++) {
+                    if (_ddlBankID.options[i].innerHTML == bankName)
+                        _ddlBankID.value = _ddlBankID.options[i].value;
+                }
+            }
+            //alert(rows[0].getElementsByTagName("IIDD")[0].childNodes[0].data);		
+
+        }
+        function confirmDelete() {
+            return window.confirm('您确认要删除一条记录吗？');
+        }
+        //-->
+    </script>
+</head>
+<body onload="parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ?document.body.scrollHeight+10:700;">
+<form id="frmMenuManager" style="height: 100%;">
+
+
+<input name="hidblackbox" id="hidblackbox" type="hidden">
+<table style="height: 700px;" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td colspan="3" style="font-size: 2px;">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="3" valign="Top">
+<table id="tblContent" style="width: 100%; height: 665px;">
+<tbody><tr>
+<td>
+<br>
+<span style="margin-left: 15px;">
+<span id="Label1" class="P3PageTitle">最近的提款</span>
+</span>
+<br>
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+<div class="padl5">
+
+<!-- BEGIN WITHDRAWALTLIST -->
+
+<!-- END WITHDRAWALTLIST -->
+<img src="spacer.gif" width="10" height="5"><br>
+<div class="txtright mgdon5">
+<input name="btnhistory" value="历史纪录" id="btnhistory" class="buttonOut" onmouseover="this.className='button-ovr'" onmouseout="this.className='buttonOut'" type="submit">
+</div>
+<div>
+所有合營伙伴的取款我们都是透过安全且严谨的出款方式，建议您可以使用以下银行申请。
+*若您取款银行不在以下列表中，请您联系合营专员
+</div>
+<div id="divWithdrawal">
+<div id="divAddWithdrawal">
+<div class="pad15">
+<div id="divBank" class="tabframe">
+<br>
+<table id="dtlBank" class="tabstyle03" cellspacing="1">
+<tbody><tr>
+<td>
+招商银行
+</td><td>
+中国银行
+</td><td>
+广东发展银行
+</td><td>
+深圳发展银行
+</td><td>
+深圳平安银行
+</td>
+</tr><tr>
+<td>
+中国工商银行
+</td><td>
+中国建设银行
+</td><td>
+兴业银行
+</td><td>
+中国光大银行
+</td><td>
+上海浦东发展银行
+</td>
+</tr><tr>
+<td>
+中国农业银行
+</td><td>
+交通银行
+</td><td>
+中国民生银行
+</td><td>
+中国邮政储蓄
+</td><td></td>
+</tr>
+</tbody></table>
+</div>
+<br>
+<span class="style1">
+通知：为了更有效提供合营伙伴防护性更安全的提款途径，合营部于2014年2月起，合营伙伴的提款一并于10号结算，而您可以在10号之后申请取款，到帐日于申请后3-7天(不含假日)自动存入您所申请的银行帐户里，造成不便之处，请多多见谅</span>
+<p>
+请按下列要求填写详细的资料，当您正确填写完成后，点击“要求提款”
+</p>
+</div>
+<table>
+<tbody><tr>
+<td width="530">
+<fieldset>
+<legend>
+提款资料</legend>
+<div class="pay-control">
+<table style="width: 475px;">
+<tbody><tr>
+<td style="width: 110px;" class="tabcontbk" height="30">
+    提款金额 :</td>
+<td class="cont12oe" style="width: 5px;" height="30">*</td>
+<td style="width: 355px; font-size: 12px;" height="30">
+    ￥人民币
+    <input name="txtamount" id="txtamount" size="21" type="text">
+</td>
+</tr>
+</tbody></table>
+
+<div id="pnlBank">
+
+<table style="width: 475px;">
+<tbody><tr>
+    <td class="tabcontbk" style="width: 110px;" height="25">
+        银行账户号码 :</td>
+    <td class="cont12oe" style="width: 10px;" height="25">*</td>
+    <td style="width: 355px;" height="25">
+        <div id="divBankAccount" style="display: none;">
+            <select name="ddlYourBankCount" id="ddlYourBankCount" onchange="getBankAccountInfomation(this.value)">
+
+</select>
+        </div>
+        <input name="txtAtmcard" id="txtAtmcard" size="50" maxlength="50" type="text">
+    </td>
+</tr>
+
+<tr>
+    <td class="tabcontbk" height="30">
+        银行账户的户名 :</td>
+    <td class="cont12oe" height="30">*</td>
+    <td height="30">
+        <input name="txtAccount" id="txtAccount" size="50" maxlength="100" type="text"></td>
+</tr>
+<tr>
+    <td class="tabcontbk" height="25">
+        银行名称 :</td>
+    <td class="cont12oe" height="25">*</td>
+    <td height="25">
+        <div id="divBankID">
+            <select name="ddlBankID" id="ddlBankID">
+<option value="招商银行">招商银行</option>
+<option value="中国工商银行">中国工商银行</option>
+<option value="中国农业银行">中国农业银行</option>
+<option value="中国银行">中国银行</option>
+<option value="中国建设银行">中国建设银行</option>
+<option value="交通银行">交通银行</option>
+<option value="广东发展银行">广东发展银行</option>
+<option value="兴业银行">兴业银行</option>
+<option value="中国民生银行">中国民生银行</option>
+<option value="深圳发展银行">深圳发展银行</option>
+<option value="中国光大银行">中国光大银行</option>
+<option value="中国邮政储蓄">中国邮政储蓄</option>
+<option value="深圳平安银行">深圳平安银行</option>
+<option value="上海浦东发展银行">上海浦东发展银行</option>
+
+</select>
+        </div>
+        </td>
+</tr>
+
+<tr id="country">
+<td class="tabcontbk" height="25">
+        国家 :</td>
+<td class="cont12oe" height="25">*</td>
+<td height="25">
+        <div id="divCountryCode">
+            <select name="ddlCountryCode" id="ddlCountryCode">
+<option value="CN">中国</option>
+<option value="HK">中国香港</option>
+<option value="JP">日本</option>
+<option value="KR">韩国</option>
+<option value="ID">印度尼西亚</option>
+<option value="IN">印度</option>
+<option value="BN">文莱</option>
+<option value="LA">老挝</option>
+<option value="VN">越南</option>
+<option value="KH">柬埔寨</option>
+<option value="TH">泰国</option>
+<option value="OT">其他国家</option>
+
+</select>
+        </div>
+        
+    </td>
+</tr>
+
+<tr id="Province">
+<td class="tabcontbk" height="25">
+        省 :</td>
+<td class="cont12oe" height="25"></td>
+<td valign="top" height="25">
+        <input name="txtProvince" id="txtProvince" size="50" maxlength="20" type="text"></td>
+</tr>
+
+<tr id="City">
+<td class="tabcontbk" height="25">
+        市 :</td>
+<td class="cont12oe" height="25"></td>
+<td valign="top" height="25">
+        <input name="txtCity" id="txtCity" size="50" maxlength="20" type="text"></td>
+</tr>
+
+<tr id="Branch">
+<td class="tabcontbk">
+        分行 :</td>
+<td class="cont12oe">*</td>
+<td style="height: 8px;" valign="top">
+        <input name="txtBranch" id="txtBranch" size="50" maxlength="20" type="text"></td>
+</tr>
+
+</tbody></table>
+                                                                
+</div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                            </tbody></table>
+                                            <div class="submit-bar pad15">
+                                                <div align="right">
+                                                    <input name="Payout" value="要求提款" onclick="return callSubmit();" id="Payout" class="buttonOut" onmouseover="this.className='button-ovr'" onmouseout="this.className='buttonOut'" type="submit">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </td>
+                            <td style="width: 2px;"></td>
+                            
+                            <td style="width: 236px;" valign="top" align="center">
+                                <br>
+                                
+                                <a href="http://www.10010688.com/lm/html/CS/Contact.html" target="mainFrame">
+                                    <br>
+                                    <img src="right_pic1.jpg" style="border: 0px none;" alt=""></a>
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+        </tbody></table>
+        <br>
+        <br>
+    </form>
+
+    </body>
+</html>

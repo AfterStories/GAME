@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+
+    <title>Account Statement</title>
+    <link href="mainStyleCS_001.css" rel="stylesheet" type="text/css">
+    <link href="yunStyle.css" rel="stylesheet" type="text/css">
+    <link href="btnStyle.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="WdatePicker.js"></script><link href="WdatePicker.css" rel="stylesheet" type="text/css">
+
+	
+    <style type="text/css">
+/* Code tidied up by ScrapBook */
+.mainDiv { padding: 8px 8px 0px; margin-top: 2px; }
+</style>
+
+    <script type="text/javascript">
+        function checkContent() {
+            if (document.getElementById("txtFrom").value == "" || document.getElementById("txtTo").value == "") {
+                alert("请填写日期 !");
+                return false;
+            }
+
+            if (document.getElementById("txtFrom").value > document.getElementById("txtTo").value) {
+                alert("日期格式不正确! ");
+                return false;
+            }
+        }
+    </script>
+
+    <link href="P3TableStyles.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+/* Code tidied up by ScrapBook */
+.GV_Header th { font-weight: normal; }
+</style>
+
+</head>
+<body onload="parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ?document.body.scrollHeight+10:700;">
+    <form  id="form1">
+
+
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td colspan="2" align="center">
+                    <div id="mainDiv" class="mainDiv" style="text-align: center; height: 660px;">
+                        <br>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tbody><tr>
+                                <td class="mainTopTitle" valign="bottom" align="left">
+                                    <span class="P3PageTitle" style="margin-left: 15px;">
+                                        <span id="lblTitle">账户明细</span>
+                                    </span>
+                                </td>
+                                <td align="right"></td>
+                            </tr>
+                        </tbody></table>
+                        <br>
+                        <table style="width: 100%;" cellspacing="0" cellpadding="0" border="0">
+                            <tbody><tr>
+                                
+                                
+                                
+                            </tr>
+                            <tr>
+                                
+                                <td>
+                                    <span id="Label5" style="font-size: 16px; font-weight: bold;">账户明细</span>
+                                    <br>
+                                    <br>
+                                    <table style="width: 432px; text-align: center; margin-top: 10px;" cellspacing="8" border="0" align="center">
+                                        <tbody><tr>
+                                            <td style="width: 96px;" align="left">
+                                                <span id="lDeno">账户:</span></td>
+                                            <td colspan="3" align="left">
+                                                <select name="ddlWallet" id="ddlWallet">
+	<option selected="selected" value="1">主账户</option>
+	<option value="2">现金卡账户</option>
+	<option value="4">信用账户</option>
+
+</select></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="width: 96px;" align="left">
+                                                <span id="Label4" style="display: inline-block; width: 105px;">开始时间:</span></td>
+                                            <td align="left">
+                                                <input name="txtFrom" value="2017-01-01" id="txtFrom" onclick="SelectDate(this)" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:'2017-01-11'})" style="width: 119px;" type="text">
+                                            </td>
+                                            <td align="left">
+                                                <span id="Label1" style="display: inline-block; width: 90px;">结束时间:</span></td>
+                                            <td align="right">
+                                                <input name="txtTo" value="2017-01-11" id="txtTo" onclick="SelectDate(this)" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:'2017-01-11'})" style="width: 119px;" type="text"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="4" align="center">
+                                                <br>
+                                                <input name="btnSearch" value="查询" onclick="return checkContent();" id="btnSearch" class="btnWhite_Css" style="height: 18px; width: 54px;" type="submit"></td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                
+                            </tr>
+                        </tbody></table>
+                        <br>
+                        
+                        <div>
+
+</div>
+                        
+                        <span id="lblMsg"></span>
+
+
+
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+        <br>
+        <br>
+    </form>
+
+
+</body>
+</html>
