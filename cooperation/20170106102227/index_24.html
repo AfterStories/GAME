@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+
+    <title></title>
+    <link href="mainStyleCS_001.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="jquery-1.11.3.min_001.js"></script>
+    <script type="text/javascript" src="WdatePicker.js"></script><link href="WdatePicker.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="main.js"></script>
+
+    <style type="text/css">
+/* Code tidied up by ScrapBook */
+.lbtn { font-weight: bold; }
+</style>
+
+    <script type="text/javascript">
+        var objDivZ;
+    </script>
+    <style type="text/css">
+/* Code tidied up by ScrapBook */
+.btnWhite_Css { border: 0px none; font-size: 12px; background-repeat: repeat-x; }
+</style>
+    <link href="P3TableStyles.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+/* Code tidied up by ScrapBook */
+input { font-size: 10px; color: rgb(102, 102, 102); border: 1px solid Silver; padding-left: 3px; }
+.dashboardTable, .dashboardTable tbody, .dashboardTable td { border: 1px solid rgb(255, 255, 255); }
+.auto-style7 { width: 19%; }
+.auto-style8 { width: 20%; }
+.auto-style9 { width: 23%; }
+</style>
+    <script type="text/javascript">
+        {
+            $(document).ready(function () {
+                $(".WdatePicker").css("font-family", "Microsoft Yahei");
+            });
+        }
+    </script>
+</head>
+<body onload="parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 500 ?document.body.scrollHeight+10:700;">
+    <form method="post" id="form1">
+
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td colspan="3" style="padding: 8px 10px;">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                            <td>
+                                <span class="P3PageTitle">
+                                    收入大纲
+                                </span>
+                            </td>
+                            <td style="width: 400px;" align="right">
+
+                                <input name="btnRefresh" value="刷新" id="btnRefresh" class="btnWhite_Css" style="border-color: Black; border-width: 1px; border-style: solid; font-weight: bold; height: 18px; width: 85px;" type="submit">
+                            </td>
+                            <td align="right">
+                                <table style="height: 22px; background-color: White;" cellspacing="0" cellpadding="0">
+                                    <tbody><tr>
+                                        <td style="width: 85px; border-top: 1px solid; border-bottom: 1px solid; border-left: 1px solid;" align="center">
+                                            <span id="lblBeginDate">2017-01-01</span>
+                                        </td>
+                                        <td style="border-top: 1px solid; border-bottom: 1px solid;">&nbsp;—&nbsp;</td>
+                                        <td style="width: 85px; border-top: 1px solid; border-bottom: 1px solid; border-right: 1px solid;" align="center">
+                                            <span id="lblEndDate">2017-01-06</span>
+                                        </td>
+                                        <td id="tdSelTab" style="width: 15px; background-color: rgb(238, 238, 238); cursor: pointer; font-weight: normal; font-size: 14px;" onclick="showDivDate(this)" align="center">↓
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+                    <table width="100%" cellspacing="2" cellpadding="2" border="0">
+                        <tbody><tr>
+                            <td class="titleYellow" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <table class="dashboardTable" style="width: 460px; height: 135px; color: rgb(51, 51, 51); font-size: 14px; font-weight: bold;" cellspacing="0" cellpadding="4" border="1">
+                                    <tbody><tr>
+                                        <td rowspan="4" align="center">
+                                            <table cellspacing="0" cellpadding="0" border="0">
+                                                <tbody><tr>
+                                                    <td colspan="3">
+                                                        <img id="imgViewSubAff" src="MemberTop.gif" style="cursor: pointer;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left">
+                                                        <span id="lblSubMember" style="font-size: 11px;">1</span>
+                                                    </td>
+                                                    <td style="width: 15px;">&nbsp;
+                                                    </td>
+                                                    <td align="center">
+                                                        <span id="lblSubAff" style="font-size: 11px;">0</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                        <td style="padding-left: 20px;" align="left">
+                                            一线会员：
+                                            <span id="lblSubMember2">1</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 20px;" align="left">
+                                            一线伙伴：
+                                            <span id="lblSubAff2">0</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 20px;" align="left">
+                                            二线会员：
+                                            <span id="lblSubMember21">0</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 20px;" align="left">
+                                            二线伙伴：
+                                            <span id="lblSubAff21">0</span>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                            <td rowspan="2" valign="top" align="left">
+                                <table class="dashboardTable" style="width: 440px;" cellspacing="0" border="1">
+                                    <tbody><tr>
+                                        <td colspan="3" class="tableReportTitle">&nbsp;<a id="lbMemberList" class="titleBlue" href="javascript:__doPostBack('lbMemberList','')">新注册会员</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            
+                                            
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td style="font-weight: bold;" colspan="2">
+                                            暂未开放
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody></table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                <table class="tableReport" cellspacing="0" border="1">
+                                    <tbody><tr>
+                                        <td colspan="5" class="tableReportTitle">
+                                            <table width="500px" border="0">
+                                                <tbody><tr>
+                                                    <td>
+                                                        <a id="lbFun88" class="titleBlue" href="javascript:__doPostBack('lbFun88','')">乐天堂</a>
+                                                    </td>
+                                                    <td align="right">
+                                                        盈利
+                                                        <a id="lblFun88Enring" class="sumYellow" href="javascript:__doPostBack('lblFun88Enring','')">CNY 0.00</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-weight: bold;">
+                                        <td class="tableReporttd" style="width: 15%;" align="center">
+                                            访客
+                                            <br>
+                                            <span id="lblFun88Impression">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 15%;" align="center">
+                                            点击量
+                                            <br>
+                                            <span id="lblFun88Click">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            注册量
+                                            <br>
+                                            <span id="lblFun88Reg">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            首次存款会员
+                                            <br>
+                                            <span id="lblFun88Deposit">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            存款会员
+                                            <br>
+                                            <span id="lblFun88DepositUser">0</span>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left">
+                                
+                                
+                                    <table bordercolorlight="#999999" class="tableReport" style="width: 930px;" cellspacing="0" bordercolor="white" border="1">
+                                        
+                                        <tbody><tr>
+                                            <td colspan="6" class="tableReportTitle">
+                                                <table width="100%" border="0">
+                                                    <tbody><tr>
+                                                        <td>
+                                                            <a id="lbSB" class="titleBlue" href="javascript:__doPostBack('lbSB','')">体育博彩</a>
+                                                        </td>
+                                                        <td align="right">
+                                                            <span id="lblIncomeTxt2">输赢</span>
+                                                            <a id="lblSBWin" class="sumYellow" href="javascript:__doPostBack('lblSBWin','')">CNY 0.00</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </td>
+                                        </tr>
+                                        <tr style="font-weight: bold;">
+                                            <!--<td class="tableReporttd" align="center" style="width:auto">
+                                            新下注会员<br />
+                                            <span id="lblSBNewUser"></span>
+                                        </td>-->
+                                            <td class="tableReporttd" style="width: 25%;" align="center">
+                                                活跃会员<br>
+                                                <span id="lblSBActiveUser">0</span>
+                                            </td>
+                                            <td class="tableReporttd" style="width: 25%;" align="center">
+                                                下注会员<br>
+                                                <span id="lblSBBettingUser">0</span>
+                                            </td>
+                                            <td class="tableReporttd" style="width: 25%;" align="center">
+                                                未存款会员<br>
+                                                <span id="lblSBNoDepositUser">0</span>
+                                            </td>
+                                            <!--<td class="tableReporttd" align="center" style="width:20%">
+                                            存款会员<br />
+                                            <span id="lblSBDepositUser">0</span>
+                                        </td>-->
+                                            <!--<td class="tableReporttd" align="center" style="width:auto" >
+                                            下注量<br />
+                                            <span id="lblSBBetsCount"></span>
+                                        </td>-->
+                                            <td class="tableReporttd" style="width: 25%;" align="center">
+                                                下注额<br>
+                                                <span id="lblSBBetsSum">CNY 0.00</span>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left">
+                                <table bordercolorlight="#999999" class="tableReport" style="width: 930px;" cellspacing="0" bordercolor="white" border="1">
+                                    <tbody><tr>
+                                        <td colspan="6" class="tableReportTitle">
+                                            <table width="100%" border="0">
+                                                <tbody><tr>
+                                                    <td>
+                                                        <a id="lbCasino" class="titleBlue" href="javascript:__doPostBack('lbCasino','')">娱乐场</a>
+                                                    </td>
+                                                    <td align="right">
+                                                        <span id="lblIncomeTxt3">输赢</span>
+                                                        <a id="lblCasinoWin" class="sumYellow" href="javascript:__doPostBack('lblCasinoWin','')">CNY 0.00</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-weight: bold;">
+                                        <!--<td class="tableReporttd" align="center" style="width:auto">
+                                            新下注会员<br />
+                                            <span id="lblCasinoNewUser"></span>
+                                        </td>-->
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            活跃会员<br>
+                                            <span id="lblCasinoActiveUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            下注会员<br>
+                                            <span id="lblCasinoBettingUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            未存款会员<br>
+                                            <span id="lblCasinoNoDepositUser">0</span>
+                                        </td>
+                                        <!--<td class="tableReporttd" align="center" style="width:20%">
+                                            存款会员<br />
+                                            <span id="lblCasinoDepositUser">0</span>
+                                        </td>-->
+                                        <!--<td class="tableReporttd" align="center" style="width:auto">                                        
+   下注量<br />
+                                            <span id="lblCasinoBetsCount"></span>
+                                       </td>-->
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            下注额<br>
+                                            <span id="lblCasinoBetsSum">CNY 0.00</span>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left">
+                                
+                                
+                                    <table bordercolorlight="#999999" class="tableReport" style="width: 930px;" cellspacing="0" bordercolor="white" border="1">
+                                        
+                                        <tbody><tr>
+                                            <td colspan="6" class="tableReportTitle">
+                                                <table width="100%" border="0">
+                                                    <tbody><tr>
+                                                        <td>
+                                                            <a id="lbKeno" class="titleBlue" href="javascript:__doPostBack('lbKeno','')">快乐彩</a>
+                                                        </td>
+                                                        <td align="right">
+                                                            <span id="lblIncomeTxt4">输赢</span>
+                                                            <a id="lblKenoWin" class="sumYellow" href="javascript:__doPostBack('lblKenoWin','')">CNY 0.00</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </td>
+                                        </tr>
+                                        <tr style="font-weight: bold;">
+                                            <!--<td class="tableReporttd" align="center" style="width:auto">
+                                            新下注会员<br />
+                                            <span id="lblKenoNewUser"></span>
+                                        </td>-->
+                                            <td class="tableReporttd" style="width: 25%;" align="center">
+                                                活跃会员<br>
+                                                <span id="lblKenoActiveUser">0</span>
+                                            </td>
+                                            <td class="tableReporttd" style="width: 25%;" align="center">
+                                                下注会员<br>
+                                                <span id="lblKenoBettingUser">0</span>
+                                            </td>
+                                            <td class="tableReporttd" style="width: 25%;" align="center">
+                                                未存款会员<br>
+                                                <span id="lblKenoNoDepositUser">0</span>
+                                            </td>
+                                            <!--<td class="tableReporttd" align="center" style="width:20%">
+                                            存款会员<br />
+                                            <span id="lblKenoDepositUser">0</span>
+                                        </td>-->
+                                            <!--<td class="tableReporttd" align="center" style="width:auto">
+                                            下注量<br />
+                                            <span id="lblKenoBetsCount"></span>                             
+                                        </td>-->
+                                            <td class="tableReporttd" style="width: 25%;" align="center">
+                                                下注额<br>
+                                                <span id="lblKenoBetsSum">CNY 0.00</span>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left">
+                                <table bordercolorlight="#999999" class="tableReport" style="width: 930px;" cellspacing="0" bordercolor="white" border="1">
+                                    <tbody><tr>
+                                        <td colspan="6" class="tableReportTitle">
+                                            <table width="100%" border="0">
+                                                <tbody><tr>
+                                                    <td>
+                                                        <a id="lbSlot" class="titleBlue" href="javascript:__doPostBack('lbSlot','')">老虎机</a>
+                                                    </td>
+                                                    <td align="right">
+                                                        <span id="lblSlotIncome">输赢</span>
+                                                        <a id="lblSlotWin" class="sumYellow" href="javascript:__doPostBack('lblSlotWin','')">CNY 0.00</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-weight: bold;">
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            活跃会员<br>
+                                            <span id="lblSlotActiveUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            下注会员<br>
+                                            <span id="lblSlotBettingUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            未存款会员<br>
+                                            <span id="lblSlotNoDepositUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            下注额<br>
+                                            <span id="lblSlotBetsSum">CNY 0.00</span>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="2" align="left">
+                                <table bordercolorlight="#999999" class="tableReport" style="width: 930px;" cellspacing="0" bordercolor="white" border="1">
+                                    <tbody><tr>
+                                        <td colspan="6" class="tableReportTitle">
+                                            <table width="100%" border="0">
+                                                <tbody><tr>
+                                                    <td>
+                                                        <a id="lbFishing" class="titleBlue" href="javascript:__doPostBack('lbFishing','')">捕鱼游戏</a>
+                                                    </td>
+                                                    <td align="right">
+                                                        <span id="lblFishing">输赢</span>
+                                                        <a id="lbFishingWin" class="sumYellow" href="javascript:__doPostBack('lbFishingWin','')">CNY 0.00</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-weight: bold;">
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            活跃会员<br>
+                                            <span id="lblFishingActiveUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            下注会员<br>
+                                            <span id="lblFishingBettingUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            未存款会员<br>
+                                            <span id="lblFishingNoDepositUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            下注额<br>
+                                            <span id="lblFishingBetsSum">CNY 0.00</span>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td colspan="2" align="left">
+                                <table bordercolorlight="#999999" class="tableReport" style="width: 930px;" cellspacing="0" bordercolor="white" border="1">
+                                    <tbody><tr>
+                                        <td colspan="6" class="tableReportTitle">
+                                            <table width="100%" border="0">
+                                                <tbody><tr>
+                                                    <td>
+                                                        <a id="lbbetfair" class="titleBlue" href="javascript:__doPostBack('lbbetfair','')">BF交易</a>
+                                                    </td>
+                                                    <td align="right">
+                                                        <span id="lblbetfair">输赢</span>
+                                                        <a id="lbbetfairWin" class="sumYellow" href="javascript:__doPostBack('lbbetfairWin','')">CNY 0.00</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-weight: bold;">
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            活跃会员<br>
+                                            <span id="lblbetfairActiveUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            下注会员<br>
+                                            <span id="lblbetfairBettingUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            未存款会员<br>
+                                            <span id="lblbetfairNoDepositUser">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            下注额<br>
+                                            <span id="lblbetfairBetsSum">CNY 0.00</span>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                                           
+                        <tr>
+                            <td colspan="2" align="left">
+                                <table bordercolorlight="#999999" class="tableReport" style="width: 930px;" cellspacing="0" bordercolor="white" border="1">
+                                    <tbody><tr>
+                                        <td colspan="6" class="tableReportTitle">
+                                            <table width="100%" border="0">
+                                                <tbody><tr>
+                                                    <td>
+                                                        <a id="lbTotal" class="titleBlue" href="javascript:__doPostBack('lbTotal','')">共计</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-weight: bold;">
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            活跃会员
+                                            <br>
+                                            <span id="lblFun88ActiveUser2">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            下注会员
+                                            <br>
+                                            <span id="lblFun88BettingUser2">0</span>
+                                        </td>
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            未存款会员
+                                            <br>
+                                            <span id="lblFun88NoDepositUser2">0</span>
+                                        </td>
+                                        <!--<td class="tableReporttd" align="center" style="width:20%">
+                                            存款会员
+                                            <br />
+                                            <span id="lblFun88DepositUser2">0</span>
+                                        </td>-->
+                                        <td class="tableReporttd" style="width: 25%;" align="center">
+                                            下注额
+                                            <br>
+                                            <span id="lblKenoBetsSum2">CNY 0.00</span>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td class="titleYellow" colspan="2">
+                                <br>
+                                &nbsp;&nbsp;
+                                您近期的消息
+                            </td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td colspan="2" align="center">
+                                <table bordercolorlight="#c5d3e0" class="tableNews" cellspacing="0" bordercolor="white" border="1">
+                                    <tbody><tr style="background-image: url(&quot;titleBG.gif&quot;); color: White;" class="titleGray2">
+                                        <td style="width: 8%;">
+                                            序号
+                                        </td>
+                                        <td style="width: 11%; text-align: center;" align="left">
+                                            状态
+                                        </td>
+                                        <td style="width: 40%;" align="left">
+                                            标题
+                                        </td>
+                                        <td style="width: 20%;">
+                                            发信人
+                                        </td>
+                                        <td style="width: 32%;">
+                                            日期
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    
+                </td>
+            </tr>
+        </tbody></table>
+        <div id="divSelectDate" style="position: absolute; background-color: rgb(238, 238, 238); width: 160px; display: none; z-index: 300; border-right: 1px solid rgb(51, 51, 51); border-left: 1px solid rgb(51, 51, 51); border-bottom: 1px solid rgb(51, 51, 51);">
+            <center>
+                <div style="width: 100%; background-color: rgb(156, 202, 228); color: Black;">
+                    <span id="lblSelType">选择方式:</span><input value="rbDateType1" name="selDate" id="rbDateType1" style="border-style: none;" checked="checked" onclick="if (this.checked) { document.getElementById('divSelDateByDay').style.display = ''; document.getElementById('divSelDateByMonth').style.display = 'none'; }" type="radio"><label for="rbDateType1">按日</label><input value="rbDateType2" name="selDate" id="rbDateType2" style="border-style: none;" onclick="if (this.checked) { document.getElementById('divSelDateByDay').style.display = 'none'; document.getElementById('divSelDateByMonth').style.display = ''; }" type="radio"><label for="rbDateType2">按月</label>
+                </div>
+                <br>
+                <div style="width: 100%;">
+                    <div id="divSelDateByDay" style="display:;">
+                        <input name="txtBeginDate" id="txtBeginDate" style="width: 60px;" readonly="readOnly" maxlength="20" value="2017-01-01" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:'2017-01-06'})" type="text">—<input name="txtEndDate" id="txtEndDate" style="width: 60px;" readonly="readOnly" maxlength="20" value="2017-01-06" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',lang:'zh-cn',maxDate:'2017-01-06'})" type="text">
+                    </div>
+                    <div id="divSelDateByMonth" style="display: none;">
+                        <input name="txtBeginMonth" id="txtBeginMonth" style="width: 60px;" readonly="readOnly" maxlength="20" value="2016-12" onfocus="WdatePicker({dateFmt:'yyyy-MM',lang:'zh-cn',maxDate:'2016-12-06'})" type="text">—<input name="txtEndMonth" id="txtEndMonth" style="width: 60px;" readonly="readOnly" maxlength="20" value="2016-12" onfocus="WdatePicker({dateFmt:'yyyy-MM',lang:'zh-cn',maxDate:'2016-12-06'})" type="text">
+                    </div>
+                </div>
+                <br>
+                <div style="width: 100%;">
+                    <input name="btnDataOk" value="确定" id="btnDataOk" type="button" onclick="changedata()">
+                    <input name="btnDateCancel" value="取消" onclick="showDivDate(document.getElementById('tdSelTab'));return false;" id="btnDateCancel" type="submit">
+                </div>
+            </center>
+        </div>
+        <br>
+        <br>
+    </form>
+
+
+</body>
+</html>
