@@ -44,7 +44,7 @@
 #slider ul li { display: inline; height: 500px; width: 960px; padding: 0px; position: relative; overflow: hidden; }
 #slides .next, #slides .prev { position: absolute; top: 145px; left: 0px; width: 42px; height: 71px; display: block; z-index: 101; }
 #slides .next { left: 920px; }
-#header { padding-bottom: 50px; margin-top: 80px;}
+#header { padding-bottom: 10px; }
 #slider { height: 459px; background: transparent url("../images/slider.gif") no-repeat scroll 0% 0%; position: relative; text-align: center; top: 39px; z-index: 10; }
 #slider .slider-nav a { display: block; width: 20px; height: 49px; font-size: 0px; line-height: 0; text-indent: -4000px; position: absolute; top: 129px; }
 #but_mtit, .three-cols .col { width: 295px; }

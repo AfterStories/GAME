@@ -11,7 +11,7 @@
 .banneritem { height: 220px; width: 100%; display: block; background-repeat: no-repeat; background-position: center center; }
 .tdLatestWinnerName img { width: 175px; height: 2px; }
 #RecentWinnerBorder { background-image: url("../images/recentwinner-border.gif"); height: 202px; width: 203px; margin-left: 754px; position: absolute; display: none; }
-#RecentWinnerContainer { position: absolute; margin-top: 2px; float: right; height: 202px; width: 203px; border-radius: 18px; margin-left: 754px; background-image: url("../images/recentwinner-border.gif"); }
+#RecentWinnerContainer { position: absolute;top:135px; float: right; height: 202px; width: 203px; border-radius: 18px; margin-left: 760px; background-image: url("../images/recentwinner-border.gif"); }
 #RecentWinner { height: 140px; overflow: hidden; margin-top: 8px; }
 #RecentWinner > ul { list-style: outside none none; margin: 0px; padding: 0px; }
 #RecentWinner > ul > li {  }
