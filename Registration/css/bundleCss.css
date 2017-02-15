@@ -504,8 +504,8 @@ h3.txt-247 { background-image: url("images/txt-247.gif"); }
 .tooltip {  }
 div#fixed_header { background-color: rgb(37, 170, 225); width: 100%; position: fixed; height: 33px; top: 0px; z-index: 4998; left: 0px; }
 div#outer_top_header { top: 0px; position: fixed; background-color: rgb(37, 170, 225); height: 33px; z-index: 4999; }
-#top_nav_left #topBannerLogo.CN { background: transparent url("images/fun88_logo_cn.png") no-repeat scroll 0px 6px; }
-#top_nav_left #topBannerLogo.EN { background: transparent url("images/fun88_logo_EN.png") no-repeat scroll 2px 10px; }
+#top_nav_left #topBannerLogo.CN { background: transparent url("../images/fun88_logo_cn.png") no-repeat scroll 0px 6px; }
+#top_nav_left #topBannerLogo.EN { background: transparent url("../images/fun88_logo_EN.png") no-repeat scroll 2px 10px; }
 #top_nav_left #topBannerLogo { height: 28px; width: 56px; cursor: pointer; display: none; }
 #top_nav_left #topBannerLogoContainer { display: none; }
 #hbtn1 { background: transparent url("../../lib/images/allicons.png") no-repeat scroll -2px 2px; width: 28px; height: 33px; }

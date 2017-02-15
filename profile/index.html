@@ -47,6 +47,417 @@
     <script type="text/javascript" src="../lib/js/master.yui.js" async=""></script>
     <script type="text/javascript" src="../lib/js/master.js" async=""></script>
     <script type="text/javascript" src="../lib/js/master.payment.crawler.js" async=""></script>
+    <script type="text/javascript" src="../lib/js/login.js"> </script>
+
+
+<script>
+
+    $(document).ready(function(){
+        $("#floatmenu").load("../lib/Publicdoms/quickMenu.html")
+
+        $("#footer").load("../lib/Publicdoms/footer.html",function(){
+        var lang = 'zh-CN';
+        var twitterUrl = 'http://www.twitter.com/fun88';
+        var krtwitterUrl = 'http://www.twitter.com/fun88kr';
+        var jptwitterUrl = 'https://twitter.com/fun88japan';
+        var fbUrl = 'http://www.facebook.com/fun88.';
+        var fbIndoUrl = 'http://www.facebook.com/Fun88ID/';
+        var fbkrUrl = 'http://www.facebook.com/fun88kr';
+        var fbjpUrl = 'https://www.facebook.com/fun88.japan';
+        var fbthUrl = 'https://www.facebook.com/Fun88ThaiOfficial/'
+        var linklang;
+        var twittlinklang = 'sea';
+        if (lang.toLowerCase() == 'zh-cn') {
+            $('.mediaCN').show();
+            $('.mediaAll').hide();$(".tooltip").tooltip();
+            $('.mediaTH').hide();
+            $('.mediaID').hide();
+        }
+        else if (lang.toLowerCase() == 'th-th') {
+            $('.mediaCN').hide();
+            $('.mediaTH').show();
+            $('.mediaID').hide();
+            $('.mediaAll').show();
+            linklang = 'thai';
+            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbthUrl, '_blank'); return false; });
+        }
+        else if (lang.toLowerCase() == 'vi-vn') {
+            $('.mediaCN').hide();
+            $('.mediaTH').show();
+            $('.mediaID').hide();
+            $('.mediaAll').show();
+            linklang = 'viet';
+            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
+        }
+        else if (lang.toLowerCase() == 'id-id') {
+            $('.mediaCN').hide();
+            $('.mediaTH').hide();
+            $('.mediaID').show();
+            $('.mediaAll').show();
+            linklang = 'indo';
+            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbIndoUrl, '_blank'); return false; });
+        } else {
+            $('.mediaCN').hide();
+            $('.mediaTH').hide();
+            $('.mediaID').hide();
+            $('.mediaAll').show();
+            if (lang.toLowerCase() == 'en-us') {
+                linklang = 'eng';
+            } else if (lang.toLowerCase() == 'ja-jp') {
+                $('.mediaTH').show();
+                linklang = 'eng';
+            } else if (lang.toLowerCase() == 'ko-kr') {
+                linklang = 'korea';
+            }
+
+            
+            $("#dvMedia06").click(function () { window.open(twitterUrl + linklang, '_blank'); return false; });
+            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
+            
+        }
+
+        $(".tooltip").tooltip();
+
+        $("#hbtn3,#hbtn4").hover(function () {
+            $(this).next().css('color', '#25AAE1');
+        }, function () {
+            $(this).next().css('color', '#615F5F');
+        });
+
+        $("a.jQueryBookmark").click(function (e) {
+
+            var bookmarkUrl = window.location;
+            var bookmarkTitle = document.title;
+            if (document.all) { // For IE Favorite
+                window.external.AddFavorite(bookmarkUrl, bookmarkTitle);
+                return false;
+            } else if (window.opera || window.sidebar) { // For Opera Browsers and For Mozilla Firefox Bookmark
+                $("a.jQueryBookmark").attr("href", bookmarkUrl);
+                $("a.jQueryBookmark").attr("title", bookmarkTitle);
+                $("a.jQueryBookmark").attr("rel", "sidebar");
+            } else if (window.external) { //For Chrome
+                alert('您的浏览器不支持此书签行动，请手动');
+                return false;
+            } else { // for other browsers which does not support
+                alert('您的浏览器不支持此书签行动，请手动');
+                return false;
+            }
+        });
+
+        $("#dvMedia08").click(function () {
+            $("#wechat-dialog img").attr("src", "../lib/images/wechat-qr.jpg");
+            $("#wechat-dialog").dialog({
+                modal: true,
+                draggable: false,
+                resizable: false,
+                width: 260
+            });
+            $(".ui-dialog-titlebar").hide();
+        });
+
+        $("#dvMedia09").click(function () {
+            $("#line-dialog").dialog({
+                modal: true,
+                draggable: false,
+                resizable: false
+            });
+            $(".ui-dialog-titlebar").hide();
+        });
+
+        $("#dvMedia10").click(function () {
+            $("#BBM-dialog").dialog({
+                modal: true,
+                draggable: false,
+                resizable: false,
+                width: 260
+            });
+            $(".ui-dialog-titlebar").hide();
+        });
+
+        $("#wechat-dialog").click(function () {
+            $(this).dialog("close");
+        });
+
+        $("#line-dialog").click(function () {
+            $(this).dialog("close");
+        });
+
+        $("#BBM-dialog").click(function () {
+            $(this).dialog("close");
+        });
+
+        $("#wechat-dialog").hover(function () {
+            $(".close-message").slideDown("fast");
+        }, function () {
+            $(".close-message").slideUp("fast");
+        }
+        );
+
+        $("#line-dialog").hover(function () {
+            $(".close-message").slideDown("fast");
+        }, function () {
+            $(".close-message").slideUp("fast");
+        }
+        );
+
+        $("#BBM-dialog").hover(function () {
+            $(".close-message").slideDown("fast");
+        }, function () {
+            $(".close-message").slideUp("fast");
+        })
+
+        })
+        
+
+
+
+
+
+
+        $("#header").load("../lib/Publicdoms/header.html", function(){
+        
+            createDropDown();
+            $("#target dt").removeClass().addClass('zh-CN');
+            var $dropTrigger = $(".dropdown dt a");
+            var $dropTrigger2 = $(".dropdown dd span");
+            var $languageList = $(".dropdown dd ul");
+
+            // open and close list when button is clicked
+            $dropTrigger.toggle(function () {
+                $languageList.slideDown(200);
+                $dropTrigger.addClass("active");
+            }, function () {
+                $languageList.slideUp(200);
+                $(this).removeAttr("class");
+            });
+
+            $("span#arrow").click(function() {
+                $dropTrigger.click();
+            });
+
+
+        $(document).bind('click', function (e) {
+
+            var $clicked = $(e.target);
+            if (!$clicked.parents().hasClass("dropdown") && $clicked.attr('id') !== 'arrow') {
+
+                if ($dropTrigger.hasClass("active")) {
+                    $dropTrigger.click();
+                }
+            }
+        });
+
+        // when a language is clicked, make the selection and then hide the list
+        $(".dropdown dd ul li a").click(function () {
+            var clickedValue = $(this).parent().attr("class");
+            var clickedTitle = $(this).find("em").html();
+            $("#target dt").removeClass().addClass(clickedValue);
+            $("#target dt em").html(clickedTitle);
+            $languageList.hide();
+            $dropTrigger.removeAttr("class");
+
+
+            var getLang = $(this).parent().attr("class");
+           
+            if (getLang == null) return;
+
+            if (getLang.toLowerCase() != 'zh-cn') {
+                var url = window.parent.location.href;
+                var startIdx = 3;
+                var urlPath = url;
+                var extra = "";
+
+                var parts = url.split('/'); // 0 = protocol, 1 = protocol-separator, 2 = domain, 3...
+                if (parts.length > 3) {
+                    var chk = parts[3];
+
+                    if (chk.charAt(chk.length - 1) == '#') {
+                        extra = '#';
+                        chk = chk.substr(0, chk.length - 1);
+                    }
+
+                    if ((chk.length == 5) && (chk.charAt(2) == '-')) startIdx = 4;
+                }
+
+                url = "/" + getLang;
+                for (var i = startIdx; i < parts.length; i++) {
+                    var part = parts[i];
+                    if (part.length > 0) url += "/" + part;
+                }
+
+                url += extra;
+
+                window.parent.location ="../404/index.html";
+            }
+
+
+        });
+
+    function createDropDown() {
+  
+        var $form = $("div.lang form");
+        $form.hide();
+        var source = $("#BaseMainContent_HeaderContent_ascxLang_uiLanguages");
+        source.removeAttr("autocomplete");
+        var selected = source.find("option:selected");
+        var options = $("option", source);
+
+        $(".lang").append('<dl id="target" class="dropdown"></dl>');
+        $("#target").append('<dt class=""><a><span class="flag"></span></a></dt>');
+        $("#target").append('<dd id="dd1"><ul></ul></dd>');
+        options.each(function () {
+            $("#target dd ul").append('<li class="' + $(this).val() + '" ><a><span class="flag"></span></a></li>');   
+                     
+        });
+    }
+
+
+
+
+
+    var getUri = window.location.href.toLowerCase();
+    var isSlotLobby = getUri.indexOf("slotlobby") !== -1;
+    var depositDefaultLink = '';
+    function ValidateMemberExt(sender, args) {
+        sender.innerHTML = "仅可使用字母 'A-Z', 'a-z', 数字 '0-9', '.', '_' 和 '-'。";
+        return ValidateMember(sender, args);
+    }
+
+    function DropDown(el) {
+        this.dd = el;
+        this.initEvents();
+    }
+
+/*    function bankDetails() {
+        if (isSlotLobby) {
+            OpenInNewTab("/zh-CN/Bank-Details");
+        }
+        else {
+            window.location.href = "/zh-CN/Bank-Details";
+        }
+    }*/
+
+        DropDown.prototype = {
+        initEvents: function () {
+            var obj = this;
+
+            obj.dd.on('mouseover', function (event) {
+                $(this).toggleClass('active');
+                event.stopPropagation();
+            });
+        }
+    };
+    $(document).ready(function () {  
+
+
+        //银行菜单
+        var uiUN = $("#UserName");
+
+        var d1 = new DropDown($('#ddlSettings'));
+        var d2 = new DropDown($('#ddlWallets'));
+
+        $(document).click(function () {
+            $('.wrapper-dropdown-5').removeClass('active');
+        });
+
+        $("#ddlWallets").mouseover(function () {
+            if (!("ontouchstart" in window)) {
+                $('#ddlSettings').removeClass('active');
+                $("#ddlWallets").addClass('active');
+            }
+        });
+        $("#ddlSettings").mouseover(function () {
+            if (!("ontouchstart" in window)) {
+                $('#ddlWallets').removeClass('active');
+                $("#ddlSettings").addClass('active');
+            }
+        });
+
+        $("#divWelMember").mouseover(function () {
+            var memberLvl = document.getElementById("tooltipsRewardLvl");
+
+            if (memberLvl != null && memberLvl != "")
+                memberLvl.style.visibility = 'visible';
+        });
+
+        $("#divWelMember").mouseleave(function () {
+            var memberLvl = document.getElementById("tooltipsRewardLvl");
+
+            if (memberLvl != null && memberLvl != "")
+                memberLvl.style.visibility = 'hidden';
+        });
+
+
+
+    /*$(document.body).ready(function () {*/
+
+        UIObjRefreshBtn = $("#uiRefreshBalance");
+
+        /*setTimeout(function () { BalancesQuickView.Init(); }, 1250);*/
+
+        $(".walletList").css("display", "none");
+
+        $("#dropdownlist").click(function (event) {
+
+            if ($('.walletList').css('display') == 'none') {
+                $(".walletList").show();
+            } else {
+                $(".walletList").hide();
+            }
+
+            event.stopPropagation();
+
+        });
+
+        $("#walletTable").click(function () {
+            
+            $(".walletList").hide();
+        });
+
+        $(document).click(function () {
+            $(".walletList").hide();
+        });
+
+var isLogin 
+    if (getCookie("verifyform")==1) {
+    
+            
+            $("#login").css("display", "none");
+            $(".leftBorder").css("display,none")
+            $("#logined-header").css("display", "block");
+            var isLogin = true;
+            if(isLogin){       
+            $("#dy_RegistrationChgWording").html("立即存款") 
+            }
+        
+
+    }else{
+        $("#login").css("display", "block");
+            $(".leftBorder").css("display,block")
+            $("#logined-header").css("display", "none");
+            var isLogin =false;
+            if(isLogin){           
+            $("#dy_RegistrationChgWording").html("立即开户") 
+            }
+    }
+
+
+    });
+    
+addRowHandlers();
+
+        });     
+
+        });
+        
+
+
+</script>
+
+
     <script type="text/javascript">
         var g_Cookie_PopUpWelcome = "PopUpWelcome";
         function getCookie(c_name) {
@@ -146,52 +557,26 @@
         var isLogin = "true";
     </script>
     
+
+
+
     <form  id="MainForm">
 
 
-
-
-        
-    <div id="fixed_header"></div>
-    <div id="page" class="shell">
+    <div id="page" class="shell" style="top:0">
         <!-- Logo + Search + Navigation -->
+        <div id="header">
         
+    </div>   
 
 
-<style type="text/css">
+<div id="floatmenu">  <!-- quickMenu -->
+    
+</div>
+    
 
-#slotLeaderboard { position: absolute; z-index: 9999; margin-left: 85px; }
-#slotLeaderboard_body { background-color: white; border: 1px solid rgb(69, 170, 226); border-radius: 10px; height: 600px; width: 800px; z-index: 9999; }
-#slotLeaderboard_html { margin: 75px 50px 15px; }
-#slotLeaderboard_nav { position: absolute; height: 75px; margin-left: 50px; z-index: 9999; max-width: 800px; }
-#slotLeaderboard_close { width: 25px; height: 25px; top: 18px; right: 18px; position: absolute; cursor: pointer; background: transparent url("../lib/images/allicons.png") no-repeat scroll -641px -5px; }
-#slotLeaderboard_nav_weekly { border: 1px solid rgb(69, 170, 226); float: left; color: rgb(69, 170, 226); }
-#slotLeaderboard_nav_weekly select { color: rgb(69, 170, 226); }
-#slotLeaderboard_nav_monthly { border: 1px solid grey; margin-left: 15px; float: right; }
-#slotLeaderboard_nav_monthly select { color: grey; }
-#slotLeaderboard_nav_monthly, #slotLeaderboard_nav_weekly { padding: 5px; margin-top: 10px; border-radius: 5px; }
-#slotLeaderboard_nav_weekly > p, #slotLeaderboard_nav_monthly > p { padding: 0px; margin-bottom: 0px; }
-#top_container { height: 100px; width: 700px; }
-#btm_container { height: 400px; width: 700px; padding-top: 15px; }
-#banner_body { background-color: rgb(37, 170, 226); border: 1px solid rgb(71, 142, 170); border-radius: 5px; display: inline-block; height: 85px; margin-top: 11px; width: 697px; }
-#banner_title { padding-bottom: 0px ! important; margin-top: 10px; color: white; font-size: 18px; line-height: 20px; margin-bottom: 0px ! important; }
-#banner_subtitle { color: white; font-size: 14px; padding: 0px; margin-top: 5px; font-weight: bold; margin-bottom: 0px ! important; }
-#leaderboard_msg { margin-top: 15px; display: inline-block; width: 700px; font-size: 16px; text-align: center; color: rgb(69, 170, 226); font-weight: bold; }
-.list-div { height: 325px; border: 1px solid rgb(71, 142, 170); border-radius: 5px; float: left; }
-.list-col-4 { width: 157px; margin-right: 20px; }
-.list-col-3 { width: 211px; margin-right: 29px; }
-.list-col-2 { width: 333px; }
-.list-col-1 { width: 697px; margin-right: 30px; }
-.list-col-1 .leaderboard_list ul, .list-col-1 .leaderboard_list ol { margin: auto; float: none; }
-.margin-right-0 { margin-right: 0px; float: right; }
-.leaderboard_title { height: 28px; background-color: rgb(29, 135, 177); text-align: center; font-size: 18px; color: white; line-height: 25px; }
-.leaderboard_list { font-size: 14px; line-height: 29px; color: rgb(69, 170, 226); font-weight: bold; }
-.leaderboard_list ol { margin-left: 40px; float: left; width: 121px; }
-.leaderboard_list ol > li { padding-left: 10px; }
-.leaderboard_list ul { float: right; list-style: outside none none; margin-right: 10px; text-align: right; }
-.comingSoon { text-align: center; font-size: 26px; line-height: 250px; color: rgb(69, 170, 226); }
-#banner_img { float: right; height: 85px; width: 310px; background-image: url("../lib/images/fun88-leaderboard-banner-img.png"); }
-</style>
+
+
 
 
 <div id="slotLeaderboard_overlay" class="ui-widget-overlay" style="z-index: 9998; display: none;" onclick="hideSlotLeaderboard()"></div>
@@ -267,7 +652,40 @@
     });
   
 </script>
-<style>
+
+<style type="text/css">
+
+#slotLeaderboard { position: absolute; z-index: 9999; margin-left: 85px; }
+#slotLeaderboard_body { background-color: white; border: 1px solid rgb(69, 170, 226); border-radius: 10px; height: 600px; width: 800px; z-index: 9999; }
+#slotLeaderboard_html { margin: 75px 50px 15px; }
+#slotLeaderboard_nav { position: absolute; height: 75px; margin-left: 50px; z-index: 9999; max-width: 800px; }
+#slotLeaderboard_close { width: 25px; height: 25px; top: 18px; right: 18px; position: absolute; cursor: pointer; background: transparent url("../lib/images/allicons.png") no-repeat scroll -641px -5px; }
+#slotLeaderboard_nav_weekly { border: 1px solid rgb(69, 170, 226); float: left; color: rgb(69, 170, 226); }
+#slotLeaderboard_nav_weekly select { color: rgb(69, 170, 226); }
+#slotLeaderboard_nav_monthly { border: 1px solid grey; margin-left: 15px; float: right; }
+#slotLeaderboard_nav_monthly select { color: grey; }
+#slotLeaderboard_nav_monthly, #slotLeaderboard_nav_weekly { padding: 5px; margin-top: 10px; border-radius: 5px; }
+#slotLeaderboard_nav_weekly > p, #slotLeaderboard_nav_monthly > p { padding: 0px; margin-bottom: 0px; }
+#top_container { height: 100px; width: 700px; }
+#btm_container { height: 400px; width: 700px; padding-top: 15px; }
+#banner_body { background-color: rgb(37, 170, 226); border: 1px solid rgb(71, 142, 170); border-radius: 5px; display: inline-block; height: 85px; margin-top: 11px; width: 697px; }
+#banner_title { padding-bottom: 0px ! important; margin-top: 10px; color: white; font-size: 18px; line-height: 20px; margin-bottom: 0px ! important; }
+#banner_subtitle { color: white; font-size: 14px; padding: 0px; margin-top: 5px; font-weight: bold; margin-bottom: 0px ! important; }
+#leaderboard_msg { margin-top: 15px; display: inline-block; width: 700px; font-size: 16px; text-align: center; color: rgb(69, 170, 226); font-weight: bold; }
+.list-div { height: 325px; border: 1px solid rgb(71, 142, 170); border-radius: 5px; float: left; }
+.list-col-4 { width: 157px; margin-right: 20px; }
+.list-col-3 { width: 211px; margin-right: 29px; }
+.list-col-2 { width: 333px; }
+.list-col-1 { width: 697px; margin-right: 30px; }
+.list-col-1 .leaderboard_list ul, .list-col-1 .leaderboard_list ol { margin: auto; float: none; }
+.margin-right-0 { margin-right: 0px; float: right; }
+.leaderboard_title { height: 28px; background-color: rgb(29, 135, 177); text-align: center; font-size: 18px; color: white; line-height: 25px; }
+.leaderboard_list { font-size: 14px; line-height: 29px; color: rgb(69, 170, 226); font-weight: bold; }
+.leaderboard_list ol { margin-left: 40px; float: left; width: 121px; }
+.leaderboard_list ol > li { padding-left: 10px; }
+.leaderboard_list ul { float: right; list-style: outside none none; margin-right: 10px; text-align: right; }
+.comingSoon { text-align: center; font-size: 26px; line-height: 250px; color: rgb(69, 170, 226); }
+#banner_img { float: right; height: 85px; width: 310px; background-image: url("../lib/images/fun88-leaderboard-banner-img.png"); }
 
 .quickcontactbtn1 { background: transparent url("../lib/images/button-chat.png") no-repeat scroll 0% 0%; }
 .quickcontactbtn1:hover { background: transparent url("../lib/images/button-chat-r.png") no-repeat scroll 0% 0%; }
@@ -325,743 +743,54 @@
 .WCP_OpenMenu { display: block; height: 41px; background: transparent url("../lib/images/WCALI_off.png") no-repeat scroll 0% 0%; }
 #WCP_Container { display: none; height: 95px; background: transparent url("../lib/images/WCALI_on.png") no-repeat scroll 0% 0%; }
 #WC_Container { display: none; height: 108px; background: transparent url("../lib/images/WechatPay_on.png") no-repeat scroll 0% 0%; }
-#BtnWCOpen { background: transparent url("../lib/WechatPay.png") no-repeat scroll 0% 0%; }
+
 #BtnWCOpen:hover { background: transparent url("../lib/WechatPay_hover.png") no-repeat scroll 0% 0%; }
 #BtnWCSubmit { background: transparent url("../lib/Wechat_button.png") no-repeat scroll 0% 0%; }
 #Ali_Container { display: none; height: 106px; background: transparent url("../lib/Alipay_on.png") no-repeat scroll 0% 0%; }
 #BtnAliOpen { background: transparent url("../lib/Alipay.png") no-repeat scroll 0% 0%; }
 #BtnAliOpen:hover { background: transparent url("../lib/Alipay_hover.png") no-repeat scroll 0% 0%; }
 #BtnAliSubmit { background: transparent url("../lib/Ali_button.png") no-repeat scroll 0% 0%; }
-</style>
-
-
-<div id="outer_top_header">
-    <div id="sp_logo" style="display: none;">
-        <a id="A2" href="#" onclick="javascript:newPage(this.href); return false;"></a>
-    </div>
-    <div id="top_header">
-        <div id="top_nav_left">
-            
-            <ul>
-                <li id="topBannerLogoContainer"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="http://www.10010388.com/zh-CN/Default"></a></li>
-                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('../help/index.html', 'AboutUs',1020); return false;"></a></li>
-                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('../help/index.html', 'Help',1020); return false;"></a></li>
-                
-                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager('../help/index.html', 'GeneralRules','1020');">
-                    <div></div>
-                    如何投注</a>
-                </li>
-                
-                <li>
-                    <a id="hbtn4" class="top_nav_text" onclick="javascript:popUpWindowManager('#', 'LiveHelp',1020); return false;" title="">
-                        <div></div>
-                        在线客服
-                        
-                    </a>
-                    <ul style="color: rgb(97, 95, 95);">
-                        <li class="livechat_zh-CN"><a id="hbtn7" class="top_nav_text" href="http://www.10010388.com/zh-CN/LiveChat">
-                            <div></div>
-                            客服下载版
-                        </a>
-                        </li>
-                        
-                        <li class="livechat_zh-CN"><a id="hbtn8" class="top_nav_text" onclick="javascript:open_new_window('/zh-CN/DNS/index.html'); return false;">
-                            <div></div>
-                            防劫持工具
-                        </a>
-                        </li>
-                        
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div id="top_nav_right">
-            <ul>
-                <li id="languageSelect">
-                    
-<div class="lang">
-    <select name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxLang$uiLanguages" id="BaseMainContent_HeaderContent_ascxLang_uiLanguages" onchange="" style="display: none;">
-	<option value="en-US">English</option>
-	<option value="vi-VN">Tiếng Việt</option>
-	<option value="th-TH">ภาษาไทย</option>
-	<option value="id-ID">Bahasa Indonesia</option>
-	<option value="ja-JP">Japan</option>
-
-</select> 
-</div>
-
-<script type="text/javascript" language="javascript">
-    $(document).ready(function () {
-        /*createDropDown();*/
-        $("#target dt").removeClass().addClass('zh-CN');
-        var $dropTrigger = $(".dropdown dt a");
-        var $dropTrigger2 = $(".dropdown dd span");
-        var $languageList = $(".dropdown dd ul");
-
-        // open and close list when button is clicked
-        $dropTrigger.toggle(function () {
-            $languageList.slideDown(200);
-            $dropTrigger.addClass("active");
-        }, function () {
-            $languageList.slideUp(200);
-            $(this).removeAttr("class");
-        });
-
-        $("span#arrow").click(function() {
-            $dropTrigger.click();
-        });
-
-
-        /*$("#dd1 ul li").hover(function () {
-        $(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine_.png)");
-        },
-        function () {
-        $(this).find("span").css("background-image", "url(/Images/LanguageSelector/flagcombine.png)");
-        });*/
-
-        // close list when anywhere else on the screen is clicked
-        $(document).bind('click', function (e) {
-            var $clicked = $(e.target);
-            if (!$clicked.parents().hasClass("dropdown") && $clicked.attr('id') !== 'arrow') {
-                if ($dropTrigger.hasClass("active")) {
-                    $dropTrigger.click();
-                }
-            }
-        });
-
-        // when a language is clicked, make the selection and then hide the list
-        $(".dropdown dd ul li a").click(function () {
-            var clickedValue = $(this).parent().attr("class");
-            var clickedTitle = $(this).find("em").html();
-            $("#target dt").removeClass().addClass(clickedValue);
-            $("#target dt em").html(clickedTitle);
-            $languageList.hide();
-            $dropTrigger.removeAttr("class");
-
-
-            var getLang = $(this).parent().attr("class");
-            //alert();
-            if (getLang == null) return;
-
-            if (getLang.toLowerCase() != 'zh-cn') {
-                var url = window.parent.location.href;
-                var startIdx = 3;
-                var urlPath = url;
-                var extra = "";
-
-                var parts = url.split('/'); // 0 = protocol, 1 = protocol-separator, 2 = domain, 3...
-                if (parts.length > 3) {
-                    var chk = parts[3];
-
-                    if (chk.charAt(chk.length - 1) == '#') {
-                        extra = '#';
-                        chk = chk.substr(0, chk.length - 1);
-                    }
-
-                    if ((chk.length == 5) && (chk.charAt(2) == '-')) startIdx = 4;
-                }
-
-                url = "/" + getLang;
-                for (var i = startIdx; i < parts.length; i++) {
-                    var part = parts[i];
-                    if (part.length > 0) url += "/" + part;
-                }
-
-                url += extra;
-
-                window.parent.location ="../404/index.html";
-            }
-
-        });
-    });  
-    function createDropDown() {
-        var $form = $("div.lang form");
-        $form.hide();
-        var source = $("#BaseMainContent_HeaderContent_ascxLang_uiLanguages");
-        source.removeAttr("autocomplete");
-        var selected = source.find("option:selected");
-        var options = $("option", source);
-        $(".lang").append('<dl id="target" class="dropdown"></dl>');
-        $("#target").append('<dt class=""><a><span class="flag"></span></a></dt>');
-        $("#target").append('<dd id="dd1"><ul></ul></dd>');
-        options.each(function () {
-            $("#target dd ul").append('<li class="' + $(this).val() + '" ><a><span class="flag"></span></a></li>');                
-        });
-    }
-</script>
-                    <span id="arrow"></span></li>
-                
-                <li class="leftBorder">
-                    <div id="BaseMainContent_HeaderContent_divForgotPwd" style="display: none;">
-                        <a id="hbtn5" class="tooltip" title="忘记密码" href="../Forget/index.html"></a>
-                    </div>
-                </li>
-                
-
-<style type="text/css">
-
 .dropdown a.ja-JP { font-size: 12px; }
 table.tblMemberRewardLvl td { padding-left: 5px; }
 .RewardLvlTooltip { border: 1px solid; background-color: rgb(255, 255, 255); border-radius: 6px; position: absolute; margin-top: 10px; padding: 5px 0px 5px 5px; min-width: 145px; visibility: hidden; margin-left: 30px; }
 .RewardLvlTooltip::after, .RewardLvlTooltip::before { bottom: 100%; left: 50%; border: 1px solid rgb(0, 0, 0); content: " "; height: 0px; width: 0px; position: absolute; pointer-events: none; }
 .RewardLvlTooltip::after { border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgb(255, 255, 255); border-width: 6px; margin-left: -6px; }
 .RewardLvlTooltip::before { border-color: transparent transparent rgb(0, 0, 0); border-width: 7px; margin-left: -7px; }
-</style>
-<script language="javascript" type="text/javascript">
-    var getUri = window.location.href.toLowerCase();
-    var isSlotLobby = getUri.indexOf("slotlobby") !== -1;
-    var depositDefaultLink = '/zh-CN/Deposit-Yeepay';
-    function ValidateMemberExt(sender, args) {
-        sender.innerHTML = "仅可使用字母 'A-Z', 'a-z', 数字 '0-9', '.', '_' 和 '-'。";
-        return ValidateMember(sender, args);
-    }
-
-    function DropDown(el) {
-        this.dd = el;
-        this.initEvents();
-    }
-
-    function bankDetails() {
-        if (isSlotLobby) {
-            OpenInNewTab("/zh-CN/Bank-Details");
-        }
-        else {
-            window.location.href = "/zh-CN/Bank-Details";
-        }
-    }
-
-    DropDown.prototype = {
-        initEvents: function () {
-            var obj = this;
-
-            obj.dd.on('mouseover', function (event) {
-                $(this).toggleClass('active');
-                event.stopPropagation();
-            });
-        }
-    };
-
-
-    $(document).ready(function () {
-        var uiUN = $("#UserName");
-
-        var d1 = new DropDown($('#ddlSettings'));
-        var d2 = new DropDown($('#ddlWallets'));
-
-        $(document).click(function () {
-            $('.wrapper-dropdown-5').removeClass('active');
-        });
-
-        $("#ddlWallets").mouseover(function () {
-            if (!("ontouchstart" in window)) {
-                $('#ddlSettings').removeClass('active');
-                $("#ddlWallets").addClass('active');
-            }
-        });
-        $("#ddlSettings").mouseover(function () {
-            if (!("ontouchstart" in window)) {
-                $('#ddlWallets').removeClass('active');
-                $("#ddlSettings").addClass('active');
-            }
-        });
-
-        $("#divWelMember").mouseover(function () {
-            var memberLvl = document.getElementById("tooltipsRewardLvl");
-
-            if (memberLvl != null && memberLvl != "")
-                memberLvl.style.visibility = 'visible';
-        });
-
-        $("#divWelMember").mouseleave(function () {
-            var memberLvl = document.getElementById("tooltipsRewardLvl");
-
-            if (memberLvl != null && memberLvl != "")
-                memberLvl.style.visibility = 'hidden';
-        });
-    });
-</script>
-
-<div id="RewardsDIV" style="visibility: hidden; display: none;"></div>
-
-
-<script type="text/javascript">
-
-    function Logout() {
-
-        $.post("/Services/Login.ashx?action=logout",
-                { dbLogout: true },
-                function (data) {
-                    if (data.IsLogout) {
-                        CreateCookie("verifyform", "", -1);
-                        if (getCookie("VIPLogin") == "1") {
-                            CreateCookie("VIPLogin", "", -1);
-                            window.location.href = "/zh-CN/Index";
-                        } else {
-                            window.location.href = "/zh-CN/Default";
-                        }
-                    }
-                }, "json");
-
-                $.post("/Rewards/RewardService/Logins.ashx?action=logout",
-                        { dbLogout: true },
-                        function (data) {
-                        }, "json");
-
-                return false;
-            }
-
-</script>
-<div>
-    <ul>
-        <li>
-            <div id="ddlSettings" class="wrapper-dropdown-5">
-                <div></div>
-                <span class="arrow_setting"></span>
-                <ul class="dropdown" id="SettingUl">
-                    <li id="chgPW"><a class="zh-CN" href="#">
-                        更换密码</a></li>
-                    <li id="UpdateProfile"><a class="zh-CN" href="http://www.10010388.com/zh-CN/Update-Profile">
-                        更新个人资料</a></li>
-                    
-                    <li id="IMacc"><a class="zh-CN" href="http://www.10010388.com/zh-CN/Update-IM-Account">
-                        百乐城账户</a></li>
-                    
-                    <li><a class="zh-CN" onclick="javascript:bankDetails();">
-                        银行资料</a></li>
-                    
-                    <li id="SelfExclusion"><a class="zh-CN" href="http://www.10010388.com/zh-CN/Self-Exclusion">
-                        自我限制</a></li>
-                    <li id="RebateCalculator"><a class="zh-CN" style="color: yellow;" href="http://www.10010388.com/zh-CN/Rebate-Calculator">
-                        返水查询</a></li>
-                    <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/Announcement', 'popUpWin', 800);">
-                        最新通告</a></li>
-                    <li>
-                        <a id="BaseMainContent_HeaderContent_ascxMbrAuth_LoginStatus1" onclick="return Logout();" href="javascript:__doPostBack('ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$LoginStatus1$ctl00','')">退出</a>
-                    </li>
-                   
-                </ul>
-            </div>
-        </li>
-        <li>
-            <img src="images/top_navigation_line.png"></li>
-        <li>
-
-            
-            <div id="ddlWallets" class="wrapper-dropdown-5 ddlWalletsBank">
-                <div></div>
-                <span class="bank">
-                    银行</span>
-
-                
-
-                    <span class="arrow_setting"></span>
-                    <ul class="dropdown">
-                        <li><a id="depositLink" class="zh-CN" style="color: yellow;" onclick="javascript:popUpWindowManager('/zh-CN/Deposit-Yeepay','popUpWindow','1350');">
-                            存款充值
-                        </a></li>
-                        
-                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/Deposit-Yeepay','popUpWindow','1350');">
-                            点卡充值
-                            
-                        </a></li><li id="CDCPopup"><a class="zh-CN" onclick="javascript:PopupMobileCDC();">
-                            手机在线存款
-                        </a></li>
-                        
-                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/Withdrawal-Local-Bank','popUpWindow','1350');">
-                            提款
-                        </a></li>
-                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/Transfer','popUpWindow','1350');">
-                            转账
-                        </a></li>
-                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/Bonus','popUpWindow','793');">
-                            红利记录
-                        </a></li>
-                        
-                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('/zh-CN/SOS-Bonus','popUpWindow','793');">
-                            SOS救援金
-                        </a></li>
-                        
-                       
-                    </ul>
-                </div>
-        </li>
-        <li>
-            <img src="images/top_navigation_line.png"></li>
-        <li>
-            
-
-<style type="text/css">
-
 .balanceQuickView { float: left; padding-top: 5px; position: relative; right: 0px; top: 0px; width: 220px; }
 .balanceQuickView .refresh { width: 22px; }
 .balanceQuickView div { float: left; padding: 0px 3px 0px 0px; }
 .balanceQuickView balanceTable.zh-cn { color: rgb(148, 45, 38); font-size: 1em; font-weight: 400; width: 192px; }
 .balanceQuickView a img { cursor: pointer; height: 20px; }
 .balanceQuickView balanceTable.en-us, .balanceQuickView balanceTable.id-id, .balanceQuickView balanceTable.vi-vn, .balanceQuickView balanceTable.th-th { color: rgb(148, 45, 38); font-size: 0.8em; width: 192px; }
-</style>
-
-<!--<![if gte IE 8]>-->
-    <style type="text/css">
-
 .picture { margin: -19px 0px 0px 177px; top: -2px; left: -1px; }
+#slides1 .pagination { float: right; margin-bottom: 0px; margin-right: 28px; margin-top: -37px; position: relative; z-index: 101; }
+#slidesCDC .pagination, #slidesPlayBoyTutorial .pagination { float: right; margin-bottom: 0px; margin-right: 28px; margin-top: -37px; position: relative; z-index: 101; }
+#CDC_popup_box .dvEmptyFrame { display: none; }
+.ui-datepicker-trigger { margin: 2px 6px; position: absolute; cursor: pointer; }
+.RebateSummary tr:first-child td { background-color: rgb(232, 232, 232); color: rgb(37, 170, 225); }
+.RebateSummary, .RebateSummary th, .RebateSummary td, .RebateDetails, .RebateDetails th, .RebateDetails td { border: 1px solid white; border-collapse: collapse; }
+.RebateSummary td, .RebateDetails td { font-weight: bold; background-color: rgb(249, 250, 250); padding: 5px 0px 5px 11px; }
+.selfCheck_girl { background: transparent url("images/self-girl.png") no-repeat scroll 0px -4px; width: 235px; height: 259px; position: absolute; right: 0px; bottom: -19px; padding-right: 23px; }
+.summary_container { min-height: 167px; position: relative; }
+.RebateDetails tr td:first-child { background-color: rgb(232, 232, 232); color: rgb(37, 170, 225); }
+.RebateDetails { margin-top: 12px; }
+.detailsDate { padding: 20px 0px 0px; }
+.RebateLoading { position: absolute; top: 8px; height: 15px; width: 15px; display: none; }
+.InfoButton { cursor: pointer; position: absolute; top: -1px; height: 30px; width: 30px; background: transparent url("images/info_icon.jpg") no-repeat scroll 3px 3px; }
+.InfoSummary { width: 739px; left: -430px; top: 37px; position: absolute; display: none; z-index: 10; background-color: White; height: auto; border: 2px solid rgb(192, 192, 192); box-shadow: 0px 0px 5px rgb(192, 192, 192); }
+.InfoSummary .RebateSummary, .InfoSummary .RebateSummary th, .InfoSummary .RebateSummary td { width: 720px; margin: 10px 10px -10px; }
+.InfoSummary .RebateSummary td { padding: 4px ! important; width: 0px; font-weight: normal; }
+.InfoSummary .FirstChildTR { font-weight: bold ! important; }
+.InfoSummary .GrayData { background-color: rgb(232, 232, 232); }
+.InfoSummary .RebateSummary tr:first-child td { background-color: rgb(37, 170, 225); color: white; }
+/* .acc_manage_content a { color: rgb(37, 170, 225); font-weight: bold; }
+ */#liveChatBtn { font-weight: normal; }
+ #floatmenu { position: fixed; bottom: 0%; z-index: 999; right: 8%; }
 </style>
-<!--<![endif]>-->
-
-<script type="text/javascript">
-
-    var BalancesQuickView = {};
-    var UIObjRefreshBtn = null;
-    var UIObjBalancesList = null;
-    var UIObjBalancesListOptionsRef = "#BaseMainContent_HeaderContent_ascxMbrAuth_Balances1_QuickBalance>";
-
-    BalancesQuickView.Init = function () {
-        UIObjRefreshBtn.click(function () {
-            BalancesQuickView.RefreshBalance(false);
-        });
-
-        if ($("#BaseMainContent_HeaderContent_ascxMbrAuth_Balances1_QuickBalance>").length == 0) BalancesQuickView.RefreshBalance(true);
-    };
-
-    BalancesQuickView.RefreshBalance = function (useCachedData) {
-        UIObjRefreshBtn.attr("disabled", true);
-
-        $(UIObjBalancesListOptionsRef).remove();
-
-        document.getElementById("BaseMainContent_HeaderContent_ascxMbrAuth_Balances1_QuickBalance").value = '总数额:RMB 807.87';
-
-        $("#balanceTable").html('<table id="walletTable"><tbody><tr><td><div class="walletTOTAL BALANCE">&nbsp;</div></td><td style="width: 40%;">总数额</td><td>:</td><td>RMB 807.87</td></tr><tr><td><div class="walletMAIN">&nbsp;</div></td><td style="width: 40%;">主账户</td><td>:</td><td>RMB 510.00</td></tr><tr><td><div class="walletSP">&nbsp;</div></td><td style="width: 40%;">体育博彩</td><td>:</td><td>RMB 104.05</td></tr><tr><td><div class="walletIPSB">&nbsp;</div></td><td style="width: 40%;">IM 体育</td><td>:</td><td>N/A</td></tr><tr><td><div class="walletBFR">&nbsp;</div></td><td style="width: 40%;">必发交易</td><td>:</td><td>N/A</td></tr><tr><td><div class="walletGD">&nbsp;</div></td><td style="width: 40%;">北方堂 (GD)</td><td>:</td><td>维护中</td></tr><tr><td><div class="walletAG">&nbsp;</div></td><td style="width: 40%;">至尊堂 (AG)</td><td>:</td><td>RMB 69.00</td></tr><tr><td><div class="walletSAG">&nbsp;</div></td><td style="width: 40%;">沙龙厅 (SAG)</td><td>:</td><td>N/A</td></tr><tr><td><div class="walletAB">&nbsp;</div></td><td style="width: 40%;">隆运堂 (欧博)</td><td>:</td><td>N/A</td></tr><tr><td><div class="walletSUN">&nbsp;</div></td><td style="width: 40%;">太阳厅(申博太阳)</td><td>:</td><td>N/A</td></tr><tr><td><div class="walletEA">&nbsp;</div></td><td style="width: 40%;">东方堂 (EA)</td><td>:</td><td>N/A</td></tr><tr><td><div class="walletOPUS">&nbsp;</div></td><td style="width: 40%;">凯旋堂 (OPUS)</td><td>:</td><td>N/A</td></tr><tr><td><div class="walletBOY2">&nbsp;</div></td><td style="width: 40%;">波音堂 (波音)</td><td>:</td><td>N/A</td></tr><tr><td><div class="walletCP">&nbsp;</div></td><td style="width: 40%;">南方堂 (CP)</td><td>:</td><td>N/A</td></tr><tr><td><div class="walletPT">&nbsp;</div></td><td style="width: 40%;">百乐城 (PT)</td><td>:</td><td>RMB 0.82</td></tr><tr><td><div class="walletSLOT">&nbsp;</div></td><td style="width: 40%;">乐游戏</td><td>:</td><td>RMB 24.00</td></tr><tr><td><div class="walletPK">&nbsp;</div></td><td style="width: 40%;">欢乐彩 (IM)</td><td>:</td><td>RMB 100.00</td></tr><tr><td><div class="walletLBK">&nbsp;</div></td><td style="width: 40%;">优乐彩 (LB)</td><td>:</td><td>N/A</td></tr></tbody></table>');
-
-        var struseCachedData = "false";
-        if (useCachedData) struseCachedData = "true";
-/*        $.ajax({
-            type: "POST",
-            url: "/Services/AllBalance.ashx",
-            data: { culture: 'zh-CN', useCachedData: struseCachedData },
-            dataType: "json",
-            success: BalancesQuickView.OnSuccess,
-            error: BalancesQuickView.OnError
-        });*/
-    };
-    BalancesQuickView.OnSuccess = function (data, status) {
-        switch (data) {
-            case 'timeout':
-                window.location = '/zh-CN/Session-Timed-Out';
-                break;
-            case 'multi':
-                window.location = '/zh-CN/Multiple-Login-Detected';
-                break;
-        }
-
-        $(UIObjBalancesListOptionsRef).remove();
-
-        var theTable = '';
-
-/*        for (var i = 0; i <= data.length - 1; i++) {
-
-            if (data[i]["Name"] == "BOY2" && memberCode.length > 15) continue;
-            if (data[i]["Name"] == "MGSQF")  {
-                 
-                continue;
-                
-            } 
-            if (data[i]["Name"] == "MJ") continue;
-            var text = data[i]["LocalizedName"] + ":" + data[i]["FormattedBalance"];
-            if (data[i]["Name"] == "TOTAL BALANCE") {
-                document.getElementById("BaseMainContent_HeaderContent_ascxMbrAuth_Balances1_QuickBalance").value = text;
-            }
-            var text1 = '<tr><td><div class="wallet' + data[i]["Name"] + '">&nbsp;</div></td><td style="width:40%;">' + data[i]["LocalizedName"] +
-                    '</td><td>:</td><td>' + data[i]["FormattedBalance"] + "</td></tr>";
-            theTable += text1;
-        }
-
-        theTable += "</table><iframe class='dvEmptyFrame' src=''></iframe>";
-*/
-        $("#balanceTable").html(theTable);
-
-        UIObjRefreshBtn.attr("disabled", false);
-
-        /*addRowHandlers();*/
-
-
-    };
-
-    BalancesQuickView.OnError = function (request, status, error) {
-
-    };
-
-    function addRowHandlers() {
-        var table = document.getElementById("walletTable");
-        var rows = table.getElementsByTagName("tr");
-        for (i = 0; i < rows.length; i++) {
-            var currentRow = table.rows[i];
-            var createClickHandler =
-            function (row) {
-                return function () {
-                    document.getElementById("BaseMainContent_HeaderContent_ascxMbrAuth_Balances1_QuickBalance").value =
-                    row.getElementsByTagName("td")[1].innerHTML +
-                    row.getElementsByTagName("td")[2].innerHTML +
-                    row.getElementsByTagName("td")[3].innerHTML;
-                };
-            };
-
-            currentRow.onclick = createClickHandler(currentRow);
-        }
-    }
 
 
 
-</script>
 
-<div class="balanceQuickView">
-    <div class="dropdownlist">
-        <input name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxMbrAuth$Balances1$QuickBalance" readonly="readonly" id="BaseMainContent_HeaderContent_ascxMbrAuth_Balances1_QuickBalance" type="text">
-        <div class="picture">&nbsp;</div>
-    </div>
-
-    <div class="refresh">
-        
-        <img src="images/RefreshBalances.png" id="uiRefreshBalance" alt="Refresh" class="hoverImg">
-    </div>
-    <p id="balanceTable" class="walletList" style="display: none;">
-  <!--   <iframe class="dvEmptyFrame" src="index_17.html"></iframe> -->
-    </p>
-</div>
-        </li>
-        <li>
-            
-            <div id="divWelMember" style="min-width: 160px;">
-                    
-                <div style="float: right;">
-                <span id="BaseMainContent_HeaderContent_ascxMbrAuth_Label1">您好</span>
-                        <span>,</span>
-                        <span id="BaseMainContent_HeaderContent_ascxMbrAuth_LoginName">Bkmyxif</span>
-                    </div>
-                </div>
-
-            
-                <div id="tooltipsRewardLvl" class="RewardLvlTooltip">
-                    <table class="tblMemberRewardLvl">
-                        <tbody><tr>
-                            <td>当前等级 </td>
-                            <td>:</td>
-                        <td>银</td>
-                            <td>
-                            <span id="dvRewardL001" class="rewardIcon"></span>
-                            </td>
-                        </tr>
-                    
-                        <tr>
-                            <td>下一等级 </td>
-                            <td>:</td>
-                        
-                        <td>金</td>
-                        <td><span id="dvRewardL002" class="rewardIcon"></span></td>
-                        
-                        </tr>
-                    
-                       </tbody></table>
-            </div> 
-            
-        </li>
-    </ul>
-</div>
-
-            </ul>
-            <div class="cl">
-                &nbsp;
-            </div>
-        </div>
-    </div>
-    
-</div>
-<div id="top">
-    <div id="logofun88InZh" class="logoLoc">
-        <a class="logo" href="../home/index.html">FUN88</a>
-    </div>
-
-    <div id="header_right">
-        <div id="BaseMainContent_HeaderContent_divBtnHomeDeposit" class="dy-unit">
-                
-                    <div class="btnRegisterAlignmentCN">
-                        <a id="btnDepositCN" onclick="popUpWindowManager('/zh-CN/Deposit-Yeepay','popUpWindow',1350); sendHomeContentGA('HeaderDeposit', 'BtnHomeDeposit');" style="position: absolute;">
-                            <div id="dy_Home_Deposit_Button">立即存款</div>
-                            <script type="text/javascript">
-                                function dy_Home_Deposit_Button() {
-                                    try {
-                                        DYO.smartObject("Home Deposit Button", { target: "dy_Home_Deposit_Button", inline: true });
-                                    } catch (e) {
-                                        window.setTimeout(function () { dy_Home_Deposit_Button(); }, 2000);
-                                    }
-                                }
-                                dy_Home_Deposit_Button();
-                            </script>
-                        </a>
-                    </div>
-                </div>
-        
-
-    </div>
-    <div class="cl">
-        &nbsp;
-    </div>
-    <!--MaintenanceCountdown, it is only for maintenance countdown only-->
-
-
-    <!--The slider above navigation bar-->
-    <div id="TopAD">
-			<ul>
-
-			</ul>	
-
-    </div>
- 
-
-</div>
-
-
-<div id="navigation">
-    <table id="navMain" class="zh-CN">
-        <tbody><tr>
-            <td class="menuStatic off">
-                <div id="mainMenu-Home" class="dy-unit">
-                    <a href="http://www.10010388.com/zh-CN/Default" id="BaseMainContent_HeaderContent_ascxMainMenu_uiHomeIcon" class="MenuImageHome" onclick="window.location=this.href;"></a>
-                    <div class="menuSeperator"></div>
-                </div>
-            </td>
-
-            
-                
-                    <td id="Sportsbook" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Sportsbook">
-                                <a href="http://www.10010388.com/zh-CN/Sportsbook" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_0" class="" onclick="">体育博彩</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="spSubMenu">
-<li id="submainMenu_Sportsbook_SoccerGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Soccer-Game">足球投注</a></li><li id="submainMenu_Sportsbook_BasketballGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Basketball-Game">篮球投注</a></li><li id="submainMenu_Sportsbook_ESports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/E-Sports">电子竞技</a></li><li id="submainMenu_Sportsbook_NumberGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Number-Game">百练赛</a></li><li id="submainMenu_Sportsbook_VirtualSports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Virtual-Sports">虚拟运动</a></li><li id="submainMenu_Sportsbook_SoccerFacts" class="dy-unit"><a href="http://www.10010388.com/zh-CN/BettorLogic">足球情报</a></li><li id="submainMenu_Sportsbook_RacingGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Racing-Game">赛马</a></li><li id="submainMenu_Sportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&amp;language=zh" target="_blank">赛事数据分析</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="IMSportsbook" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_IMSportsbook">
-                                <a href="http://www.10010388.com/zh-CN/IM-Sportsbook" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_1" class="" onclick="">IM 体育</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_IMSportsbook_IMSportsbookIntro" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Introduction">IM 投注攻略</a></li><li id="submainMenu_IMSportsbook_VirtualSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Soccer">虚拟足球</a></li><li id="submainMenu_IMSportsbook_VirtualBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Basketball">虚拟篮球</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_IMSportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&amp;language=zh" target="_blank">赛事数据分析</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="Sportsbook Exchange" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Exchange">
-                                <a href="http://www.10010388.com/zh-CN/Exchange" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_2" class="" onclick="">必发交易</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_Exchange_SportsbookExchangeSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange/sport/1" onclick="javascript: sendMainMenuGA('Exchange Soccer');">足球投注</a></li><li id="submainMenu_Exchange_SportsbookExchangeBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange/sport/7522" onclick="javascript: sendMainMenuGA('Exchange Basketball');">篮球投注</a></li><li id="submainMenu_Exchange_SportsbookExchangeIntroduction" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange-Introduction" target="_blank" onclick="sendMainMenuGA('Exchange Introduction');">交易攻略</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="LiveCasinoImperial" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_LiveCasino">
-                                <a href="http://www.10010388.com/zh-CN/Live-Casino/Imperial-Palace" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="" onclick="">真人娱乐场</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lcSubMenu">
-<li id="mainMenu_LiveCasino_GD" class="dy-unit"><a href="javascript:void(0);" onclick="javascript:return EnterGameTable(&quot;GD&quot;, 0, memberCode,  isGameLock, false)" id="providerGD" class="menuChild" target="_blank">北方堂 (gd)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 10px; text-transform: uppercase;">推荐!</sup></li><li id="mainMenu_LiveCasino_AG" class="dy-unit"><a href="javascript:void(0);" onclick="javascript:return EnterGameTable(&quot;AG&quot;, 0, memberCode,  isGameLock, false)" id="providerAG" class="menuChild" target="_blank">至尊堂 (ag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="mainMenu_LiveCasino_SAG" class="dy-unit"><a href="javascript:void(0);" onclick="javascript:return EnterGameTable(&quot;SAG&quot;, 0, memberCode,  isGameLock, false)" id="providerSAG" class="menuChild" target="_blank">沙龙厅 (sag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 11px; text-transform: uppercase; margin-left: -4px;">新!</sup></li><li id="mainMenu_LiveCasino_AB" class="dy-unit"><a href="javascript:void(0);" onclick="javascript:return EnterGameTable(&quot;AB&quot;, 0, memberCode,  isGameLock, false)" id="providerAB" class="menuChild" target="_blank">隆运堂 (欧博)</a></li><li id="mainMenu_LiveCasino_SUN" class="dy-unit"><a href="javascript:void(0);" onclick="javascript:return EnterGameTable(&quot;SUN&quot;, 0, memberCode,  isGameLock, false)" id="providerSUN" class="menuChild" target="_blank">太阳厅 (申博太阳)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">首家!</sup></li><li id="mainMenu_LiveCasino_EA" class="dy-unit"><a href="javascript:void(0);" onclick="javascript:return EnterGameTable(&quot;EA&quot;, 0, memberCode,  isGameLock, false)" id="providerEA" class="menuChild" target="_blank">东方堂 (ea)</a></li><li id="mainMenu_LiveCasino_OPUS" class="dy-unit"><a href="javascript:void(0);" onclick="javascript:return EnterGameTable(&quot;OPUS&quot;, 0, memberCode,  isGameLock, false)" id="providerOPUS" class="menuChild" target="_blank">凯旋堂 (opus)</a></li><li id="mainMenu_LiveCasino_BOY" class="dy-unit"><a href="javascript:void(0);" onclick="javascript:return EnterGameTable(&quot;BOY&quot;, 846, memberCode,  isGameLock, false)" id="providerBOY" class="menuChild" target="_blank">波音堂 (波音)</a></li><li id="mainMenu_LiveCasino_CP" class="dy-unit"><a href="javascript:void(0);" onclick="javascript:return EnterGameTable(&quot;CP&quot;, 0, memberCode,  isGameLock, false)" id="providerCP" class="menuChild" target="_blank">南方堂 (cp)</a></li><li id="mainMenu_LiveCasino_PT" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Casino" id="PT" class="menuChild">百乐城 (PT)</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="SlotCasino Default" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Games">
-                                <a href="http://www.10010388.com/zh-CN/Slot-Casino/Top-Games" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_4" class="" onclick="">乐游戏</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="casSubMenu">
-<li id="submainMenu_Games_FishingGames" class="dy-unit"><a href="http://www.10010388.com/zh-CN/FishingGames" onclick="sendMainMenuGA('SlotCasino Fishing Games');">捕鱼游戏</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_Games_Top-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Top-Games">热门游戏</a></li><li id="submainMenu_Games_New-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/New-Games">新游戏</a></li><li id="submainMenu_Games_Video-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Video-Slots">视频老虎机</a></li><li id="submainMenu_Games_3D-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/3D-Slots">3D老虎机</a></li><li id="submainMenu_Games_Classic-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Classic-Slots">经典老虎机</a></li><li id="submainMenu_Games_Progressive-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Progressive-Slots">大奖老虎机</a></li><li id="submainMenu_Games_Multiplayer-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Multiplayer-Slots">多人游戏</a></li><li id="submainMenu_Games_Chinese-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Chinese-Slots">中式老虎机</a></li><li id="submainMenu_Games_Table-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Table-Games">桌面游戏</a></li><li id="submainMenu_Games_Other-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Other-Games">其它游戏</a></li><li id="submainMenu_Games_Cold-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Cold-Games">冷门游戏</a></li><li id="submainMenu_Games_All-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/All-Games">全部游戏</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="StarCasino" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_IMCasino">
-                                <a href="http://www.10010388.com/zh-CN/IM-Casino" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_5" class="" onclick="">PT百乐城</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            
-                        </div>
-                    </td>
-                
-                
-                    <td id="Keno" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Keno">
-                                <a href="http://www.10010388.com/zh-CN/Keno" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_6" class="" onclick="">快乐彩</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="kenSubMenu">
-<li id="submainMenu_Keno_IMKeno" class="dy-unit"><a href="#" onclick="javascript:return EnterGameKeno(&quot;771&quot;, 0, kenoMember, isGameLock);">IM欢乐彩</a></li><li id="submainMenu_Keno_LBK" class="dy-unit"><a href="#" onclick="javascript:return EnterGameLBKeno(&quot;1333&quot;, 0, kenoMember, isGameLock);">LB优乐彩</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="Promo Default" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_Promotion">
-                                <a href="http://www.10010388.com/zh-CN/Promotion/TottenhamHotspur" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_7" class="" onclick="">促销</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="proSubMenu">
-<li id="submainMenu_Promotion_TottenhamHotspur" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/TottenhamHotspur">热刺</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_Promotion_Sportsbook" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Sportsbook">体育投注</a></li><li id="submainMenu_Promotion_LiveCasino" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/LiveCasino">真人娱乐场</a></li><li id="submainMenu_Promotion_Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Games">老虎机</a></li><li id="submainMenu_Promotion_Keno" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Keno">快乐彩</a></li><li id="submainMenu_Promotion_VIP" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/VIP">钻石会员</a></li><li id="submainMenu_Promotion_NewMembers" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/NewMembers">会员迎新礼</a></li><li id="submainMenu_Promotion_Exclusive" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Exclusive">独家订制</a></li><li id="submainMenu_Promotion_All" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/All">全部</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="TheLounge" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_LifeStyleRewards">
-                                <a href="http://www.10010388.com/zh-CN/The-Lounge" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_8" class="" onclick="">天上人间</a>
-
-                                <div class="menuSeperator"></div>
-                            </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_LifeStyleRewards_ArticleAll" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Bliss/All" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">天使之吻</a></li><li id="submainMenu_LifeStyleRewards_Rewards" class="dy-unit"><a href="http://www.10010388.com/Reward/zh-CN" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">天王俱乐部</a></li><li id="submainMenu_LifeStyleRewards_VIPAll" class="dy-unit"><a href="http://www.10010388.com/zh-CN/VIP/All" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">钻石俱乐部</a></li></ul>
-                        </div>
-                    </td>
-                
-                
-                    <td id="AffiliateLM" class="off">
-                        <div>
-                            <div class="dy-unit" id="mainMenu_AffiliateMenu">
-                                <a href="http://www.10010388.com/lm" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_9" class="" onclick="" target="_blank">联盟合作</a>
-
-                                <div class="menuSeperator" id="MenuSeparatorLast"></div>
-                            </div>
-                            
-                        </div>
-                    </td>
-                
-                
-        </tr>
-    </tbody></table>
-</div>
 <script type="text/javascript">
     $(document).ready(function () {
 
@@ -1129,364 +858,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 <div id="line-dialog" style="display: none;">
     
 </div>
-
-<script type="text/javascript">
-    function DropDown(el) {
-        this.dd = el;
-        this.initEvents();
-    }
-
-    DropDown.prototype = {
-        initEvents: function () {
-            var obj = this;
-
-            obj.dd.on('click', function (event) {
-                $(this).toggleClass('active');
-                event.stopPropagation();
-            });
-
-            obj.dd.on('mouseleave', function (event) {
-                $(this).removeClass('active');
-                event.stopPropagation();
-            });
-        }
-    };
-
-    $(document).ready(function () {
-        var lang = 'zh-CN';
-        var twitterUrl = 'http://www.twitter.com/fun88';
-        var krtwitterUrl = 'http://www.twitter.com/fun88kr';
-        var jptwitterUrl = 'https://twitter.com/fun88japan';
-        var fbUrl = 'http://www.facebook.com/fun88.';
-        var fbIndoUrl = 'http://www.facebook.com/Fun88ID/';
-        var fbkrUrl = 'http://www.facebook.com/fun88kr';
-        var fbjpUrl = 'https://www.facebook.com/fun88.japan';
-        var fbthUrl = 'https://www.facebook.com/Fun88ThaiOfficial/'
-        var linklang;
-        var twittlinklang = 'sea';
-        if (lang.toLowerCase() == 'zh-cn') {
-            $('.mediaCN').show();
-            $('.mediaAll').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-        }
-        else if (lang.toLowerCase() == 'th-th') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'thai';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbthUrl, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'vi-vn') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'viet';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'id-id') {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').show();
-            $('.mediaAll').show();
-            linklang = 'indo';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbIndoUrl, '_blank'); return false; });
-        } else {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            if (lang.toLowerCase() == 'en-us') {
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ja-jp') {
-                $('.mediaTH').show();
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ko-kr') {
-                linklang = 'korea';
-            }
-
-            
-            $("#dvMedia06").click(function () { window.open(twitterUrl + linklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-            
-        }
-
-        $(".tooltip").tooltip();
-
-        $("#hbtn3,#hbtn4").hover(function () {
-            $(this).next().css('color', '#25AAE1');
-        }, function () {
-            $(this).next().css('color', '#615F5F');
-        });
-
-        $("a.jQueryBookmark").click(function (e) {
-
-            var bookmarkUrl = window.location;
-            var bookmarkTitle = document.title;
-            if (document.all) { // For IE Favorite
-                window.external.AddFavorite(bookmarkUrl, bookmarkTitle);
-                return false;
-            } else if (window.opera || window.sidebar) { // For Opera Browsers and For Mozilla Firefox Bookmark
-                $("a.jQueryBookmark").attr("href", bookmarkUrl);
-                $("a.jQueryBookmark").attr("title", bookmarkTitle);
-                $("a.jQueryBookmark").attr("rel", "sidebar");
-            } else if (window.external) { //For Chrome
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            } else { // for other browsers which does not support
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            }
-        });
-
-        $("#dvMedia08").click(function () {
-            $("#wechat-dialog img").attr("src", "images/wechat-qr.jpg");
-            $("#wechat-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia09").click(function () {
-            $("#line-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia10").click(function () {
-            $("#BBM-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#wechat-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#line-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#BBM-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#wechat-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
-        }, function () {
-            $(".close-message").slideUp("fast");
-        }
-        );
-
-        $("#line-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
-        }, function () {
-            $(".close-message").slideUp("fast");
-        }
-        );
-
-        $("#BBM-dialog").hover(function () {
-            $(".close-message").slideDown("fast");
-        }, function () {
-            $(".close-message").slideUp("fast");
-        }
-        );
-    });
-</script>
-
-<script type="text/javascript">
-    var kenoMember = "Bkmyxif";
-    var memberCode = 'Bkmyxif';
-    var isGameLock = '0';
-
-    $(document).ready(function () {
-        var lang = 'zh-CN';
-        var twitterUrl = 'http://www.twitter.com/fun88';
-        var krtwitterUrl = 'http://www.twitter.com/fun88kr';
-        var jptwitterUrl = 'https://twitter.com/fun88japan';
-        var fbUrl = 'http://www.facebook.com/fun88.';
-        var fbkrUrl = 'http://www.facebook.com/fun88kr';
-        var fbjpUrl = 'https://www.facebook.com/fun88.japan';
-        var fbthUrl = 'https://www.facebook.com/thailand.fun88'
-        var linklang;
-        var twittlinklang = 'sea';
-        if (lang.toLowerCase() == 'zh-cn') {
-            $('.mediaCN').show();
-            $('.mediaAll').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-        }
-        else if (lang.toLowerCase() == 'th-th') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'thai';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbthUrl, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'vi-vn') {
-            $('.mediaCN').hide();
-            $('.mediaTH').show();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            linklang = 'viet';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-        }
-        else if (lang.toLowerCase() == 'id-id') {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').show();
-            $('.mediaAll').show();
-            linklang = 'indo';
-            $("#dvMedia06").click(function () { window.open(twitterUrl + twittlinklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-        } else {
-            $('.mediaCN').hide();
-            $('.mediaTH').hide();
-            $('.mediaID').hide();
-            $('.mediaAll').show();
-            if (lang.toLowerCase() == 'en-us') {
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ja-jp') {
-                $('.mediaTH').show();
-                linklang = 'eng';
-            } else if (lang.toLowerCase() == 'ko-kr') {
-                linklang = 'korea';
-            }
-
-            
-            $("#dvMedia06").click(function () { window.open(twitterUrl + linklang, '_blank'); return false; });
-            $("#dvMedia07").click(function () { window.open(fbUrl + linklang, '_blank'); return false; });
-            
-        }
-
-        $(".tooltip").tooltip();
-
-        $("#hbtn3,#hbtn4").hover(function () {
-            $(this).next().css('color', '#25AAE1');
-        }, function () {
-            $(this).next().css('color', '#615F5F');
-        });
-
-        $("a.jQueryBookmark").click(function (e) {
-
-            var bookmarkUrl = window.location;
-            var bookmarkTitle = document.title;
-            if (document.all) { // For IE Favorite
-                window.external.AddFavorite(bookmarkUrl, bookmarkTitle);
-                return false;
-            } else if (window.opera || window.sidebar) { // For Opera Browsers and For Mozilla Firefox Bookmark
-                $("a.jQueryBookmark").attr("href", bookmarkUrl);
-                $("a.jQueryBookmark").attr("title", bookmarkTitle);
-                $("a.jQueryBookmark").attr("rel", "sidebar");
-            } else if (window.external) { //For Chrome
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            } else { // for other browsers which does not support
-                alert('您的浏览器不支持此书签行动，请手动');
-                return false;
-            }
-        });
-
-        $("#dvMedia08").click(function () {
-            $("#wechat-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia09").click(function () {
-            $("#line-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#dvMedia10").click(function () {
-            $("#BBM-dialog").dialog({
-                modal: true,
-                draggable: false,
-                resizable: false,
-                width: 260
-            });
-            $(".ui-dialog-titlebar").hide();
-        });
-
-        $("#wechat-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#line-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#BBM-dialog").click(function () {
-            $(this).dialog("close");
-        });
-
-        $("#wechat-dialog").hover(function () {
-                $(".close-message").slideDown("fast");
-        },function () {
-                $(".close-message").slideUp("fast");
-            }
-        );
-
-        $("#line-dialog").hover(function () {
-                $(".close-message").slideDown("fast");
-            }, function () {
-                $(".close-message").slideUp("fast");
-            }
-        );
-
-        $("#BBM-dialog").hover(function () {
-                $(".close-message").slideDown("fast");
-            }, function () {
-                $(".close-message").slideUp("fast");
-            }
-        );
-        jQuery(function ($) {
-            var topLink = $('#topBannerLogoContainer, #topBannerLogo');
-            var existing = $('.topBannerExisting');
-            var hidden = false;
-            $(window).scroll(function () {
-                if ($(window).scrollTop() >= 70 || (document.documentElement && document.documentElement.scrollTop >= 70)) {
-                    if (!hidden) {
-                        existing.css("display", "none");
-                        topLink.fadeIn(80).css("display", "inline-block");
-                        hidden = true;
-                    }
-                } else if (hidden) {
-                    topLink.css("display", "none");
-                    existing.fadeIn(80);
-                    hidden = false;
-                }
-            });
-        });
-    });
-</script>
 
 
 
@@ -3262,143 +2633,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         <!-- Footer -->
         
 <div id="footer">
-    <div class="footer_middle">
-        <a class="padding_space" href="http://www.10010388.com/zh-CN/About-Us">联系我们</a>
-        |
-        
-        <a class="padding_space" href="http://www.10010388.com/lm" target="_blank">加入联盟</a>
-        
-        |
-        <span class="padding_space">客服热线: (+86) 400 890 0398</span>
-        
-    </div>
-    <div class="footer_middle1">
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Responsible-Gaming" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'ResponsibleGambling',1020); return false;">理性博彩</a>
-        |
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Terms-And-Conditions" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'TermsNCond',1020); return false;">规则与条款</a>
-        |
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Disclaimer" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'Disclaimer',1020); return false;">免责声明</a>
-        |
-        <a href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Privacy-Policy" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'PrivacyPolicy',1020); return false;">隐私权政策</a>
-        |
-         
-        <a href="http://www.10010388.com../help/index.html" class="padding_space2 clickable" onclick="javascript:popUpWindowManager(this.href, 'RulesAndRegulation',1020); return false;">一般规则</a>
-        
-        |
-        <a href="http://www.10010388.com/zh-CN/Sitemap" class="padding_space2 clickable">乐天堂导航</a>
-
-    </div>
-    <div id="footer_icon">
-        <div id="divFooterLogo">
-            <div class="FooterDiv" style="width: 11%;">
-                <div class="spnTitle">
-                    运营监管:
-                </div>
-                <div id="divLicense" class="divSprite">
-                    
-                    <a id="footericon3" class="tooltip" title="First Cagayan" onclick="javascript:popUpWindowManager('http://www.firstcagayan.com/','firstcagayan', 1020); return false;"><span id="imgLicenses2" class="FooterSprite"></span></a>
-                    
-                </div>
-            </div>
-            <div class="FooterDiv" style="width: 9%;">
-                <div class="spnTitle">
-                    赞助:
-                </div>
-                <div id="divsponsor" class="divSprite">
-                    <a id="footericon12" class="tooltip" title="赞助" onclick="javascript:popUpWindowManager('http://www.tottenhamhotspur.com/','sponsorship', 1020); return false;"><span id="imgsponsorship" class="FooterSprite"></span></a>
-                </div>
-            </div>
-            <div class="FooterDiv" style="width: 29%;">
-                <div class="spnTitle">
-                    支付方式:
-                </div>
-                <div id="divPaymentOption" class="divSprite">
-                    
-                    <div style="width: 100%; float: left;">
-
-                        
-                        <span id="footericon4CN" class="tooltip" title="Visa">
-                            <span id="imgPaymentOption1CN" class="FooterSprite"></span>
-                        </span>
-                        <span id="footericon5CN" class="tooltip" title="MasterCard">
-                            <span id="imgPaymentOption2CN" class="FooterSprite"></span>
-                        </span>
-                        
-
-                        <span id="footericon6" class="tooltip" title="银联">
-                            <span id="imgPaymentOption3" class="FooterSprite"></span>
-                        </span>
-
-                        
-                        <span id="footericon7CN" class="tooltip" title="本地银行转帐">
-                            <span id="imgPaymentOption4" class="FooterSprite"></span>
-                        </span>
-                        
-                    </div>
-                    
-                    <div style="width: 100%;">
-                        
-                        <span id="footericon8" class="tooltip" title="易支付">
-                            <span id="imgPaymentOption5" class="FooterSprite"></span>
-                        </span>
-                        <span id="footericon9CN" class="tooltip" title="支付宝">
-                            <span id="imgPaymentOptionAP" class="FooterSprite"></span>
-                        </span>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="FooterDiv" style="width: 16%;">
-                <div class="spnTitleSecurity">
-                    信息安全:
-                </div>
-                <div id="divSecurity" class="divSprite">
-                    <span id="footericon10" class="tooltip" title="Iovation">
-                        <span id="imgSecurity1" class="FooterSprite"></span>
-                    </span>
-                </div>
-            </div>
-            <div class="FooterDiv" style="width: 15%;">
-                <div class="spnTitle">
-                    博彩责任:
-                </div>
-                <div id="divResponsibility" class="divSprite">
-                    <a id="footericon12" class="tooltip" title="GameCare" onclick="javascript:popUpWindowManager('http://www.gamcare.org.uk','gamecare', 1020); return false;"><span id="imgResponsibility2" class="FooterSprite"></span></a>
-                    <a id="footericon13" class="tooltip" title="18+" onclick="javascript:popUpWindowManager('/zh-CN/Info-Center/Gaming-Policy/Responsible-Gaming','18+', 1020); return false;"><span id="imgResponsibility3" class="FooterSprite"></span></a>
-                </div>
-            </div>
-            <div class="FooterDiv" style="width: 20%;">
-                <div class="spnTitle">
-                    关注我们:
-                </div>
-                <div id="divSocial" class="divSprite">
-
-                    
-                    <a id="footericon16" class="tooltip" title="关注乐天堂微信">
-                        <span id="dvMedia08" class="FooterSprite"></span>
-                    </a>
-                    <a id="footericon17" class="tooltip" title="关注乐天堂微博" onclick="javascript:window.open('http://www.weibo.com/fun88angel', '_blank');return false;">
-                        <span id="dvMedia03" class="FooterSprite"></span>
-                    </a>
-                    <a id="footericon18" class="tooltip" title="观看乐天堂优酷视频" onclick="javascript:window.open('http://i.youku.com/Fun88Bliss', '_blank');return false;">
-                        <span id="dvMedia04" class="FooterSprite"></span>
-                    </a>
-                    
-
-                    <a id="footericon22" class="jQueryBookmark tooltip mediaicon media02" title="添加乐天堂FUN88至收藏夹">
-                        <span id="dvMedia01" class="FooterSprite"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="footer_middle2">
-        FUN88 属于WELTON HOLDINGS LTD。由曼岛（IOM）授权和监管。所有版权归FUN88所有，违者必究<br>
-        Suite 8/9, West House, West Street, Ramsey. Isle of Man IM8 1AE所拥有，由Isle of Man，British Isles管理与正式注册
-    </div>
-    <input name="ctl00$ctl00$ctl00$BaseMainContent$FooterContent$FooterGenerated" id="BaseMainContent_FooterContent_FooterGenerated" value="11/29/2016 12:47:52" type="hidden">
-</div>
 
     </div>
     <!-- Loading -->
@@ -3449,113 +2683,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         
         <input name="ctl00$ctl00$ctl00$ctl05$ProceedNextUrl" id="ctl05_ProceedNextUrl" type="hidden">
 
-<script type="text/javascript">
-    $(document.body).ready(function() {
-        
-    });
 
-    function PopupLogin(Username, Password) {
-        var userName = $("#txtUsn").val();
-        var password = $("#txtPwd").val();
-        var quickRegLogin = false;
-        //Login overriding for quick registration
-        if(Username && Password ) {
-            userName = Username;
-            password = Password;
-            quickRegLogin = true;
-        }
-
-        if (!userName || !password || !window.Page_IsValid) {
-            if (!userName || !password) {
-                ClosePopupLogin();
-                Alert('请输入您的用户名与密码。', true);
-            }
-            return false;
-        }
-
-        ClosePopupLogin();
-        getLoginLoading();
-        $.post("/Services/Login.ashx?action=login",
-            { login: userName, password: password, blackbox: $('input[id$=hidblackbox]').val(), QuickRegLogin: quickRegLogin },
-            function(data) {
-
-                $(".loadingLoginGif").hide();
-                if (data.Description === 'Success') {
-                    CreateCookie("verifyform", "1", 0);
-
-                    $("#RewardsControlDIV").html("<iframe id='RewardsOuterDIV' src='/Reward/zh-CN?Fun88Login=true' style='visibility:hidden;display:none;'></iframe>");
-
-                    $("#RewardsOuterDIV").load(function(){
-                        $("#RewardsControlDIV").html('');
-                        if(getParameterByName("isRegSuccess"))
-                            window.location.href = '/zh-CN/Registration-Success' + '?IsQuickReg=1';
-                        else
-                            window.location.href = (window.location.href.toLowerCase().indexOf("/zh-cn/home") != -1) ? "/zh-CN/Default" : window.location.href.substring(0, window.location.href.indexOf('#'));
-                    });
-                } else {
-                    if (data.u === "registrationDeny") {
-                        registerDeny();
-                    } else
-                        Alert(data.Description);
-                }
-            }, "json");
-
-            return false;
-        }
-</script>
-
-<script type="text/javascript">
-    function CBPopupLogin(url) {
-        $("#ctl05_ProceedNextUrl").val(url);
-        $.colorbox({
-            inline: true,
-            href: "#PL_notification_box",
-            innerWidth: 364,
-            innerHeight: 350
-        });
-        $('#cboxClose').remove();
-    }
-
-    function ClosePopupLogin() {
-        if($('#SU_notification_box').parent().css('display') == "none" || 
-            $('#FI_notification_box').parent().css('display' == "none")){
-            $('#SlotGameFakeContainer').hide();
-        }
-        $.colorbox.close();
-    }
-
-    function EnsureLogin(url) {
-        var isLogin = true;
-        if (isLogin) {
-            window.location.href = url;
-            return;
-        }
-        CBPopupLogin(url);
-    }
-
-    function EnsureSlotLogin(url) {
-        var isLogin = true;
-        if (isLogin) {
-            window.location.href = url;
-            return;
-        }
-        SlotPopupLogin(url);
-    }
-
-    function SlotPopupLogin(url) {
-        $('#SlotGameFakeContainer').show();
-        $("#ctl05_ProceedNextUrl").val(url);
-        $.colorbox({
-            inline: true,
-            href: "#PL_notification_box",
-            innerWidth: 364,
-            innerHeight: 350,
-            escKey: false,
-            overlayClose: false
-        });
-        $('#cboxClose').remove();
-    }
-</script>
 
         
         
@@ -3696,14 +2824,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             });
 </script>
         
-
-<style type="text/css">
-
-#slides1 .pagination { float: right; margin-bottom: 0px; margin-right: 28px; margin-top: -37px; position: relative; z-index: 101; }
-#slidesCDC .pagination, #slidesPlayBoyTutorial .pagination { float: right; margin-bottom: 0px; margin-right: 28px; margin-top: -37px; position: relative; z-index: 101; }
-#CDC_popup_box .dvEmptyFrame { display: none; }
-</style>
-
 
 
 <div id="CDC_popup_box" style="height: 440px; width: 600px; display: none;">
@@ -3897,64 +3017,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             };
         }</script>
 
-   
-    <script type="text/javascript">
-        var isLogin = 'True'.toLowerCase();
-        var language = 'zh-CN'.toLowerCase();
-        var currency = 'CNY'.toLowerCase();
-
-        $(document).ready(function () {
-            if (Boolean(isLogin) && currency == "krw" && getCookie("SkipKoreaNotice") != "true") {
-                $("#dialog-message").html('Fun88 Korea will be shut down by 30/9/2016, please proceed to withdraw your balance. Thank you for support.');
-                $("#dialog-message").dialog({
-                    title: " ",
-                    modal: true,
-                    closeOnEscape: false,
-                    open: function (event, ui) {
-                        $(".ui-dialog-titlebar-close", ui.dialog | ui).hide();
-                    },
-                    buttons: {
-                        Ok: function () {
-                            $(this).dialog("close");
-                            setSkipKoreaCookie('SkipKoreaNotice', 'true', 365, '/');
-                        }
-                    }
-                });
-                $(".ui-dialog-titlebar").css('height', '15px');
-            }
-        });
-
-        function setSkipKoreaCookie(c_name, value, exdays, path) {
-            var exdate = new Date();
-            exdate.setDate(exdate.getDate() + exdays);
-            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
-            document.cookie = c_name + "=" + c_value + "; path=" + path;
-        }
-    </script>
-
-    <style type="text/css">
-
-.ui-datepicker-trigger { margin: 2px 6px; position: absolute; cursor: pointer; }
-.RebateSummary tr:first-child td { background-color: rgb(232, 232, 232); color: rgb(37, 170, 225); }
-.RebateSummary, .RebateSummary th, .RebateSummary td, .RebateDetails, .RebateDetails th, .RebateDetails td { border: 1px solid white; border-collapse: collapse; }
-.RebateSummary td, .RebateDetails td { font-weight: bold; background-color: rgb(249, 250, 250); padding: 5px 0px 5px 11px; }
-.selfCheck_girl { background: transparent url("images/self-girl.png") no-repeat scroll 0px -4px; width: 235px; height: 259px; position: absolute; right: 0px; bottom: -19px; padding-right: 23px; }
-.summary_container { min-height: 167px; position: relative; }
-.RebateDetails tr td:first-child { background-color: rgb(232, 232, 232); color: rgb(37, 170, 225); }
-.RebateDetails { margin-top: 12px; }
-.detailsDate { padding: 20px 0px 0px; }
-.RebateLoading { position: absolute; top: 8px; height: 15px; width: 15px; display: none; }
-.InfoButton { cursor: pointer; position: absolute; top: -1px; height: 30px; width: 30px; background: transparent url("images/info_icon.jpg") no-repeat scroll 3px 3px; }
-.InfoSummary { width: 739px; left: -430px; top: 37px; position: absolute; display: none; z-index: 10; background-color: White; height: auto; border: 2px solid rgb(192, 192, 192); box-shadow: 0px 0px 5px rgb(192, 192, 192); }
-.InfoSummary .RebateSummary, .InfoSummary .RebateSummary th, .InfoSummary .RebateSummary td { width: 720px; margin: 10px 10px -10px; }
-.InfoSummary .RebateSummary td { padding: 4px ! important; width: 0px; font-weight: normal; }
-.InfoSummary .FirstChildTR { font-weight: bold ! important; }
-.InfoSummary .GrayData { background-color: rgb(232, 232, 232); }
-.InfoSummary .RebateSummary tr:first-child td { background-color: rgb(37, 170, 225); color: white; }
-/* .acc_manage_content a { color: rgb(37, 170, 225); font-weight: bold; }
- */#liveChatBtn { font-weight: normal; }
-</style>
-
+ 
 
 
      <!--  <script src="jquery.ui.datepicker-zh-CN.js" type="text/javascript"> </script> -->

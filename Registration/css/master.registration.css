@@ -4,7 +4,7 @@
 #slides div { height: 320px; width: 960px; }
 #slides div img { width: 909px; height: 311px; }
 #slides div a { cursor: default; }
-#content_TR { clear: both; width: 949px; }
+#content_TR { clear: both; width: 949px;margin-top: 20px; }
 .terms { font-size: 12px; }
 #content_register { background-color: rgb(249, 250, 250); border: 1px solid rgb(197, 197, 197); margin-bottom: 20px; width: 100%; padding: 5px; }
 .termsTitle2 { background-color: rgb(37, 170, 226); font-size: 24px; text-transform: uppercase; height: 43px; padding: 13px 0px 0px 15px; }
