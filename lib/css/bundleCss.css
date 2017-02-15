@@ -1057,9 +1057,9 @@ color: #6c6c6c;
 .PokerMainAmount { z-index: 100; overflow: hidden; height: 67px; position: absolute; width: 466px; left: 262px; top: -10px; }
 .PokerMainAmount div { display: none; }
 .PokerJackpotFrame { width: 30px; height: 80px; float: right; padding: 0px 5px; background: transparent url("jackpot-box-bg.jpg") no-repeat scroll 0% 0%; }
-.JackpotDot { width: 3px; height: 80px; float: right; padding: 0px 3.5px; background: transparent url("dot.png") no-repeat scroll 0px 61px; }
+.JackpotDot { width: 3px; height: 80px; float: right; padding: 0px 3.5px; background: transparent url("../images/dot.png") no-repeat scroll 0px 61px; }
 .PokerMainJackpot { width: 466px; z-index: 100; height: 81px; overflow: hidden; position: absolute; left: 264px; top: -14px; }
-.JackpotComma1, .JackpotComma2, .JackpotComma3 { padding: 0px 3.3px; width: 3px; height: 80px; float: right; background: transparent url("comma.png") no-repeat scroll 0px 61px; }
+.JackpotComma1, .JackpotComma2, .JackpotComma3 { padding: 0px 3.3px; width: 3px; height: 80px; float: right; background: transparent url("../images/comma.png") no-repeat scroll 0px 61px; }
 #pokerAuthenticationBox { width: 689px; height: 253px; background-image: url("poker_bg.png"); margin: 0px auto; padding-top: 5px; background-repeat: no-repeat; }
 #pokerAuthenticationBox .PL_header { width: 679px; }
 #pokerAuthenticationBox .PL_content { float: right; height: 97px; margin-right: 10px; padding-top: 38px; width: 323px; }

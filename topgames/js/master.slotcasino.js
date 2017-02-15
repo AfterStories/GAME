@@ -9,6 +9,68 @@ var IsChangeSort = 0;
 
 //New Items
 $(document).ready(function () {
+
+
+
+
+       $.ajax({
+       dataType:'json',
+       type:'GET',
+       data:{},
+       url:AjaxURL+'fun/game/getgamelist?districtId=1',//topgame接口
+       success:function(data) {
+
+        
+            var gametypeClass
+
+            for (var i = 0;i<data.data.length;i++) {
+            
+                var gametype = data.data[i].gameGroup                
+
+                var gametypeClass = gametype.join(" ");
+
+                if ($.inArray("新游戏",gametype)==-1) {
+                    var newgame = 'none'
+                }else{
+                    var newgame = 'block'
+                }            
+
+
+var gamebox = '<li class="cggamedata '+gametypeClass+'" data-dbid='+data.data[i].id+' data-sort="'+data.data[i].name_en+'" data-vendor='+data.data[i].platformName+' data-theme='+data.data[i].subtitle+' data-i='+data.data[i].sortWeight+' data-demo="1" data-i0='+data.data[i].gameAttrib.axis+' data-i1='+data.data[i].gameAttrib.sumBonusPool+' data-i2='+data.data[i].gameAttrib.autoGame+' data-i3='+data.data[i].gameAttrib.payLine+' data-i4='+data.data[i].gameAttrib.picture+' data-i5='+data.data[i].gameAttrib.multipleCompensate+' data-i6='+data.data[i].gameAttrib.bonusGame+' data-i7='+data.data[i].gameAttrib.scatterPicture+' data-ca='+data.data[i].gameRating.picture+' data-cb='+data.data[i].gameRating.music+' data-cc='+data.data[i].gameRating.originality+' data-cd='+data.data[i].gameRating.bonus+' data-ce='+data.data[i].gameRating.bigBonusPercent+' data-cf='+data.data[i].gameRating.playability+' data-miphone="0" data-mandroid="0" style="background-color: rgb(255, 255, 255);"><div class="cgdesc">'+data.data[i].describe+'</div><div class="cgbox" style="display: block;"><div class="cgboxhover" style="display: none;"><a id="cgbox'+data.data[i].id+'" onclick="javascript:return EnterGame(this, memberCode, isGameLock);" class="btnPlayReal" style="opacity: 1;">开始游戏</a><a class="btnGameInfo">游戏信息</a></div><div class="cgboxven"><img src="images/'+data.data[i].platformName+'.png"></div><div class="cgimg"><img class="lazy" data-original="'+data.data[i].gameImgUrl+'" src="'+data.data[i].gameImgUrl+'" style="display: inline;"></div><div class="cgjackpot"><span class="cgjackpotcur">¥</span><span class="cgjackpotamt MGSQF" id="cgjp'+data.data[i].id+'"></span></div><div class="cgboxheader"><div class="cgboxfav"><img src="images/favourite-star-before.png" alt="Fav"></div><div class="cgboxtitle"><div class="cgboxlocalname" style="font-size: 1.2em;">'+data.data[i].name_ch+'</div><div class="cgboxenname">'+data.data[i].name_en+'</div><div class="cgboxcat">热门游戏</div></div><div class="cgboxnew" style="display:'+newgame+'">NEW</div></div></div><div class="cglist" style="display: none;"><div class="cglisthover" style="display: none;"><a id="cglist'+data.data[i].id+'" onclick="javascript:return EnterGame(this, memberCode, isGameLock);" class="btnPlayReal" style="opacity: 1;">开始游戏</a>&nbsp; <a id="cglist'+data.data[i].id+'demo" href="../Details/index.html?id='+data.data[i].id+'" class="btnPlayDemo">游戏介绍</a></div><div class="cglistfav"><img src="images/favourite-star-before.png" alt="Fav"></div><div class="cglisttitle"><div class="cglistlocalname" style="font-size: 1.2em;">'+data.data[i].name_ch+'</div><div class="cglistenname">'+data.data[i].name_en+'</div></div><div class="cglistven"><img src="images/'+data.data[i].platformName+'.png"></div><div class="cglistcat">热门游戏</div></div><div class="cginfoempty" style="display: none; height: 329px;"><div>&nbsp;</div></div></li>'
+
+
+
+
+              $('.cggamelist').append(gamebox);
+
+          }
+
+/*
+游戏信息
+
+ data-i0="8"    轴
+ data-i1="0"   积累奖池奖金
+ data-i2="0"   自动游戏
+ data-i3=   支付线    //数字
+ i4   百搭图案
+ i5  多倍赔付
+ i6  红利游戏
+ i7  分散图案
+
+
+
+ data-ca=    游戏画面
+ data-cb音乐音效
+ data-cc=    游戏创意
+ data-ce   红利奖金
+ data-cf   中大奖率
+ data-cg   游戏可玩性
+
+data-miphone="1"  不支持iphone手机
+data-miphone="0"  支持iphone手机
+
+*/
+
     CGInitEvents();
     CGInitData();
     CGSorting("");   /*游戏列表排序*/
@@ -26,6 +88,32 @@ $(document).ready(function () {
 
     // Hide LX Journey to the west game
     $("#cgbox396").parent().parent().parent().hide();
+
+       }
+       })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 
@@ -130,6 +218,7 @@ function CGInitData() {
 
 function CGInitEvents() {
      /*收藏游戏*/
+     //alert();
     $(".cgboxfav, .cglistfav").click(function () {
         CGToggleFavo($(this));
     });
@@ -505,7 +594,7 @@ function CGDisplayGameInfo(ctrl) {
     cginfo.attr("data-dbid", ctrl.attr("data-dbid"));
     cginfo.find(".cginfoheadertitle").text(gamelocalname);
     cginfo.find(".cginfoheadertheme").text(gametheme);
-    cginfo.find(".cginfoheaderven > img").attr("src", gameven + ".png").attr("alt", gameven);
+    cginfo.find(".cginfoheaderven > img").attr("src", "images/"+gameven + ".png").attr("alt", gameven);
     cginfo.find(".cginfodetaildesc").text(ctrl.find(".cgdesc").html());
     cginfo.find(".cginfodetailbtmbtn > a.btnPlayReal").attr("id", "cginfo" + ctrl.attr("data-dbid") + "play");
     cginfo.find(".cginfodetailbtmbtn > a.btnPlayDemo").attr("id", "cginfo" + ctrl.attr("data-dbid") + "demo");

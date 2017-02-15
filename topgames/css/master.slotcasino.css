@@ -1,7 +1,7 @@
 
 #MainForm {  }
 #SliderLatestWinner { height: 204px; width: 100%; }
-.bannertop { position: absolute; margin-top: -17px; overflow: hidden; width: 100%; margin-left: auto; margin-right: auto; left: 0px; z-index: 0; }
+.bannertop { position: absolute; margin-top: 80px; overflow: hidden; width: 100%; margin-left: auto; margin-right: auto; left: 0px; z-index: 0; }
 .bannertop:hover .prev, .bannertop:hover .next { display: block; }
 .bannertop > .prev { position: relative; right: 45%; float: right; z-index: 10; margin-top: -134px; margin-right: 540px; display: none; }
 .bannertop > .next { position: relative; right: 47%; float: right; z-index: 10; margin-top: -134px; margin-right: -480px; display: none; }
@@ -138,7 +138,7 @@ a.Vendor > img { vertical-align: middle; height: 30px; }
 #slider04.stick { position: fixed; top: 33px; z-index: 500; width: 960px; }
 #cate { margin-top: 0px; }
 #cate.stick { position: fixed; top: 86px; z-index: 501; width: 173px; background-color: white; }
-.BoxView { background-image: url("box_before.png"); background-position: center center; background-repeat: no-repeat; width: 34px; height: 32px; cursor: pointer; float: left; margin-right: 5px; }
+.BoxView { background-image: url("../images/box_before.png"); background-position: center center; background-repeat: no-repeat; width: 34px; height: 32px; cursor: pointer; float: left; margin-right: 5px; }
 .BoxView:hover { background-image: url("../images/box_After.png"); }
 .boxViewChecked { background-image: url("../images/box_After.png"); }
 .ListView { background-image: url("../images/list_before.png"); background-position: center center; background-repeat: no-repeat; width: 34px; height: 32px; cursor: pointer; float: left; margin-right: 5px; }
@@ -208,7 +208,7 @@ a.Vendor > img { vertical-align: middle; height: 30px; }
 .cggamelist .cglist > .cglistven { float: right; z-index: 5; }
 .cggamelist .cglist > .cglisthover { width: 382px; height: 46px; border-radius: 4px; z-index: 2; position: absolute; display: none; text-align: center; margin-left: -4px; margin-top: -4px; }
 .cggamelist .cglist > .cglisthover > a:nth-child(1) { margin-top: 5px; }
-.cggamelist > .cggamedata > .cgdesc { display: none; }
+.cgdesc { display: none; }
 #cginfo { z-index: 10; width: 762px; position: absolute; background-color: white; border: 1px solid rgb(153, 153, 153); border-radius: 4px; margin-top: 150px; display: none; }
 .cginfoempty { z-index: 0; height: 320px; display: none; position: relative; }
 .cginfoempty > div { position: absolute; bottom: 0px; }
