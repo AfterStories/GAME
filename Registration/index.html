@@ -184,6 +184,9 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     <script type="text/javascript" src="../lib/js/master.payment.crawler.js" async=""></script>
     <script src="../lib/js/jquery.validate.js" type="text/javascript" async=""></script>
     <script src="../lib/js/jquery.numeric.js" type="text/javascript" async=""></script>
+
+
+    
 <script type="text/javascript" src="../lib/js/login.js"> </script>
 
 <script>
@@ -557,7 +560,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             $(".walletList").hide();
         });
 
-var isLogin 
+    var isLogin 
     if (getCookie("verifyform")==1) {
     
             
@@ -581,9 +584,99 @@ var isLogin
     }
 
 
+
+    var havebottom = document.getElementById('BottomAD');
+   if (havebottom) {
+    
+    getMarqueeTop()/*顶部滚动文字*/
+    getMarqueeBottom()/*底部滚动文字*/
+    }else{    
+ 
+    getMarqueeTop()/*底部滚动文字*/
+    }             
+
+                   function getMarqueeTop(){
+                    $.ajax({
+                        dataType:'json',
+                        type:'GET',
+                        data:{},        
+                        url: AjaxURL+'fun/websiteInfo/getTextAdList?key=TopAD',
+                        success:function(d) {    
+
+                            for (var i = 0;i<d.data.adList.length; i++) {
+                                var TopADContent = '<li><a href="#">'+d.data.adList[i]+'</a></li>'
+                                $("#TopAD>ul").append(TopADContent);
+                                }
+                                    
+                                var odiv = document.getElementById('TopAD');                                
+                                var oul = odiv.getElementsByTagName('ul')[0];
+                                var ali = oul.getElementsByTagName('li');
+                                var spa = -2;               
+                                oul.innerHTML=oul.innerHTML+oul.innerHTML;
+                                oul.style.width=ali[0].offsetWidth*ali.length+'px';
+                                function move(){
+                                    if(oul.offsetLeft<-oul.offsetWidth/2){
+                                        oul.style.left='0';
+                                    }
+                                    if(oul.offsetLeft>0){
+                                        oul.style.left=-oul.offsetWidth/2+'px'
+                                    }
+                                    oul.style.left=oul.offsetLeft+spa+'px';
+                                }
+                                var timer = setInterval(move,60)
+                                
+                                odiv.onmousemove=function(){clearInterval(timer);}
+                                odiv.onmouseout=function(){timer = setInterval(move,60)}
+                            }
+                                });
+                                };
+
+
+
+                   function getMarqueeBottom(){
+                    $.ajax({
+                        dataType:'json',
+                        type:'GET',
+                        data:{},        
+                        url: AjaxURL+'fun/websiteInfo/getTextAdList?key=BottomAD',
+                        success:function(d) {    
+
+                            for (var i = 0;i<d.data.adList.length; i++) {
+                                var BottomContent = '<li><a href="#">'+d.data.adList[i]+'</a></li>'
+                                $("#BottomAD>ul").append(BottomContent);
+                                }
+                                    
+                                var odiv2 = document.getElementById('BottomAD');                                
+                                var oul2 = odiv2.getElementsByTagName('ul')[0];
+                                var ali2 = oul2.getElementsByTagName('li');
+                                var spa2 = -2;              
+                                oul2.innerHTML=oul2.innerHTML+oul2.innerHTML;
+                                oul2.style.width=ali2[0].offsetWidth*ali2.length+'px';
+
+                            function move2(){
+                                if(oul2.offsetLeft<-oul2.offsetWidth/2){
+                                    oul2.style.left='0';
+                                }
+                                if(oul2.offsetLeft>0){
+                                    oul2.style.left=-oul2.offsetWidth/2+'px'
+                                }
+                                oul2.style.left=oul2.offsetLeft+spa2+'px';
+                            }
+
+                                var timer2 = setInterval(move2,60)
+                                
+                            odiv2.onmousemove=function(){clearInterval(timer2);}
+                            odiv2.onmouseout=function(){timer2 = setInterval(move2,60)};
+                            }
+                                });
+                                };
+
+
+
+
     });
     
-addRowHandlers();
+/*addRowHandlers();*/
 
         });     
 
@@ -686,9 +779,9 @@ addRowHandlers();
     
     <form  id="MainForm" >
 
-
-    <div id="page" class="shell" style="top:0">
+    <div id="page" class="shell" >
         <!-- Logo + Search + Navigation -->
+
        <div id="header">
         
     </div>   
@@ -880,7 +973,7 @@ addRowHandlers();
             var isError = popUpObj.find(".error").html();
             if (typeof isError == "undefined") {
                 var posTop = uiObj.offset().top;
-
+                
                 popUpObj.css("background", "url(../lib/images/bluebox.png) no-repeat 0 0");
                 popUpObj.css("top", posTop - 20);
                 popUpObj.find(".popup_tip").css("display", "block");
@@ -1110,13 +1203,13 @@ lastFirstName();
 
     $(document).ready(function() {
       
-        $(".CityList").css("display", "none");
+  /*      $(".CityList").css("display", "none");
         GetCities();
 
         $("#ddlCountry").change(function() {
             GetCities();
         });
-
+*/
 
         $(".popup").css("display", "none");
             
@@ -1228,6 +1321,7 @@ lastFirstName();
 
             if (typeof isError == "undefined") {
                 var posTop = $("#txtPersonalDOB").offset().top;
+                alert(posTop)
                 $("#txtPersonalDOB").parent().next().next().find(".popup").css("background", "url(../lib/images/bluebox.png) no-repeat 0 0");
                 $("#txtPersonalDOB").parent().next().next().find(".popup").css("top", posTop - 20);
                 $("#txtPersonalDOB").parent().next().next().find(".popup").find(".popup_tip").css("display", "block");
@@ -1807,7 +1901,7 @@ lastFirstName();
 
     
 
-    <div id="content_TR">
+    <div id="content_TR" style="margin-top:46px;">
 
         <div class="terms" id="content_register">
             
@@ -1828,8 +1922,8 @@ lastFirstName();
                             <input name="txtLastName" maxlength="50" id="txtLastName" tabindex="1" class="signup_input fullname error" placeholder="姓：陈" style="width: 150px;" type="text"><span id="lastNameRequired" class="red">*</span><input name="txtFirstName" maxlength="50" id="txtFirstName" tabindex="1" class="signup_input fullname error" placeholder="名：大明" style="width: 150px;" type="text">
                             
                         </td>
-                        <td width="3%">
-                            <div class="qMsg" style="background: transparent url('../lib/images/Invalid.gif') no-repeat scroll 0px 0px; top: 269px;">
+                         <td width="3%" >
+                            <div class="qMsg" style="background: transparent url('../lib/images/Invalid.gif') no-repeat scroll 0px 0px; top:-10px">
                                 <span>&nbsp;&nbsp;</span>
                             </div>
                         </td>
@@ -1873,7 +1967,7 @@ lastFirstName();
                             <input name="hfPersonalBOB" id="hfPersonalBOB" type="hidden">
                         </td>
                         <td width="5%">
-                            <div class="qMsg" style="background: transparent url('../lib/images/Invalid.gif') no-repeat scroll 0px 0px; top: 365px;">
+                            <div class="qMsg" style="background: transparent url('../lib/images/Invalid.gif') no-repeat scroll 0px 0px; top: -10px;">
                                 <span>&nbsp;&nbsp;</span>
                             </div>
                         </td>
@@ -1898,7 +1992,7 @@ lastFirstName();
                             <span id="rbtnGender"><input id="rbtnGender_0" name="rbtnGender" value="0" checked="checked" tabindex="3" type="radio"><label for="rbtnGender_0">男性</label><input id="rbtnGender_1" name="rbtnGender" value="1" tabindex="3" type="radio"><label for="rbtnGender_1">女性</label></span>
                         </td>
                         <td width="5%">
-                            <div class="qMsg">
+                            <div class="qMsg" >
                                 <span>&nbsp;&nbsp;</span>
                             </div>
                         </td>
@@ -2448,7 +2542,7 @@ lastFirstName();
                                     <td>
                                         <input id="chkAgree" name="chkAgree" type="checkbox">
                                         &nbsp;
-                                        <span id="BaseMainContent_MainContent_Label21" class="">我理解且接受乐天堂相关KYC(身份验证过程)、 <a id="linkTC" href="http://www.10010388.com/zh-CN/Info-Center/Gaming-Policy/Terms-And-Conditions" onclick="popUpWindowManager(this.href, 'popupwindow', 1020); return false;">条款 、 条件、规则及私隐</a>声明的所有政策。</span>
+                                        <span id="BaseMainContent_MainContent_Label21" class="">我理解且接受乐天堂相关KYC(身份验证过程)、 <a id="linkTC" href="../help/Gaming-Policy/index.html" onclick="popUpWindowManager(this.href, 'popupwindow', 1020); return false;">条款 、 条件、规则及私隐</a>声明的所有政策。</span>
                                     </td>
                                 </tr>
                             </tbody></table>
@@ -2476,7 +2570,7 @@ lastFirstName();
                         </td>
                         <td class="red">&nbsp;
                         </td>
-                        <td>
+                        <td>  
                             <div class="Btn_med_width">
                                 <a id="BtnSubmit" class="Btn Btn_floatLeft regblueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions('BtnSubmit', '', true, '', '', false, true))">提交</a>
                                 <a id="BtnReset" class="Btn regwhiteMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions('BtnReset', '', true, '', '', false, true))">取消</a>
@@ -3097,7 +3191,39 @@ document.getElementById('ctl05_PasswordPopupValidator').dispose = function() {
         }</script>
 
    
+<style>
+    #logofun88InZh{
+        position: relative;
+        top:36px;
+    }
 
+#header_right {
+    display: inline;
+    float: right;
+    margin-right: 15px;
+    padding: 10px 0 0;
+    position: relative;
+    top: 36px;
+}
+#TopAD {
+    height: 34px;
+    left: 114px;
+    margin: 2px auto;
+    overflow: hidden;
+    position: relative;
+    top: 18px;
+    width: 680px;
+    z-index: 1;
+}
+#navigation{
+        height: 40px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: absolute;
+    top: 130px;
+    width: 100%;
+}
+</style>
     
 
 </body>

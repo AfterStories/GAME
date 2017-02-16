@@ -291,7 +291,9 @@ $("#amountChart").css("display", "none");
                                 <br>
 
                                 <div id="SubtotalDetail" style="width:980px;">
-                            <table id="example" class="display" width="100%"></table>
+                            <table id="example" class="display" width="100%">
+                                
+                            </table>
                                                 </div>
                                             </td>
                                             <td>&nbsp;
@@ -458,6 +460,7 @@ function posttime (){
         "sEmptyTable": "表中数据为空",
         "sLoadingRecords": "载入中...",
         "sInfoThousands": ",",
+
         "oPaginate": {
             "sFirst": "首页",
             "sPrevious": "上页",
@@ -470,6 +473,8 @@ function posttime (){
         }
     },
     data: dataSet,
+    
+    "destroy": true,   /*销毁之前查表创建的实例，重新创建显示新查询的数据*/
     columns: [
             { "title": "序号" ,"class": "center"},
             { "title": "日期" ,"class": "center"},

@@ -1,3 +1,0 @@
-/* Code tidied up by ScrapBook */
-.username-error, .password-error { background: rgba(255, 255, 255, 0.8) none repeat scroll 0px 0px; border: 1px solid rgb(255, 136, 136); display: block; margin-top: 4px; padding: 2px 4px; position: absolute; width: 120px; }
-.login_message { display: none; font-weight: bold; color: rgb(255, 0, 0); height: 0px; }

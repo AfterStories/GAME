@@ -1,5 +1,0 @@
-/* Code tidied up by ScrapBook */
-.mc-hide-scrolls { overflow: hidden; }
-body .mc-cycle { height: 100%; left: 0px; overflow: hidden; position: fixed; top: 0px; width: 100%; z-index: -1; }
-div.mc-image { transition: opacity 1s ease-in-out 0s; background-size: cover; background-position: center center; background-repeat: no-repeat; height: 100%; overflow: hidden; width: 100%; }
-.mc-old-browser .mc-image { overflow: hidden; }
