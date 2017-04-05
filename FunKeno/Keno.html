@@ -736,62 +736,11 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
 
 
-    /*$(document.body).ready(function () {*/
-
-        UIObjRefreshBtn = $("#uiRefreshBalance");
-
-        /*setTimeout(function () { BalancesQuickView.Init(); }, 1250);*/
-
-        $(".walletList").css("display", "none");
-
-        $("#dropdownlist").click(function (event) {
-
-            if ($('.walletList').css('display') == 'none') {
-                $(".walletList").show();
-            } else {
-                $(".walletList").hide();
-            }
-
-            event.stopPropagation();
-
-        });
-
-        $("#walletTable").click(function () {
-            
-            $(".walletList").hide();
-        });
-
-        $(document).click(function () {
-            $(".walletList").hide();
-        });
-
-var isLogin 
-    if (getCookie("verifyform")==1) {
-    
-            
-            $("#login").css("display", "none");
-            $(".leftBorder").css("display,none")
-            $("#logined-header").css("display", "block");
-            var isLogin = true;
-            if(isLogin){       
-            $("#dy_RegistrationChgWording").html("立即存款") 
-            }
-        
-
-    }else{
-        $("#login").css("display", "block");
-            $(".leftBorder").css("display,block")
-            $("#logined-header").css("display", "none");
-            var isLogin =false;
-            if(isLogin){           
-            $("#dy_RegistrationChgWording").html("立即开户") 
-            }
-    }
 
 
     });
     
-addRowHandlers();
+
 
         });     
 

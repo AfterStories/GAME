@@ -25,6 +25,7 @@
     <script async="" src="Introduction_files/gtm.js"></script><script async="" src="Introduction_files/analytics.js"></script><script src="Introduction_files/modernizr.js" charset="UTF-8"></script>
     <script src="Introduction_files/sockjs.js" charset="UTF-8"></script>
     <script src="Introduction_files/Exchange.js"></script>
+      <script src="../lib/login.js"></script>
     <script>
         window.RefreshCalled = false;
         var requirejs = { waitSeconds: 0 };
@@ -1722,50 +1723,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl04', 'MainForm', [],
         }
     }
 
-    $(document.body).ready(function () {
-
-        UIObjRefreshBtn = $("#uiRefreshBalance");
-
-        setTimeout(function () { BalancesQuickView.Init(); }, 1250);
-
-        //        if ($.browser.msie && $.browser.version <= '8.0') {
-        //            $("#ddlAccountBalance").mousedown(function () {
-        //                $(this).css("width", "auto");
-        //            });
-        //            $("#ddlAccountBalance").select(function () {
-        //                $(this).width(190);
-        //            });
-        //            $("#ddlAccountBalance").change(function () {
-        //                $(this).width(190);
-        //            });
-        //            $("#ddlAccountBalance").blur(function () {
-        //                $(this).width(190);
-        //            });
-        //        }
-
-        $(".walletList").css("display", "none");
-
-        $(".dropdownlist").click(function (event) {
-
-            if ($('.walletList').css('display') == 'none') {
-                $(".walletList").show();
-            } else {
-                $(".walletList").hide();
-            }
-
-            event.stopPropagation();
-
-        });
-
-        $("#walletTable").click(function () {
-            $(".walletList").hide();
-        });
-
-        $(document).click(function () {
-            $(".walletList").hide();
-        });
-
-    });
+  
 
 </script>
 
