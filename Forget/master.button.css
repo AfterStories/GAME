@@ -14,8 +14,8 @@
 .skrill_tooltip { width: 433px; padding: 6px 7px; position: absolute; background-color: rgb(242, 241, 241); top: 36px; font-weight: bold; border: 1px solid rgb(219, 219, 219); display: none; }
 .greenMedBtn { background: transparent url("button-anmation-green-short.gif") no-repeat scroll 0px 0px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 121px; margin: 0px auto; padding: 8px; }
 .greenMedBtn:hover { background: transparent url("button-anmation-green-short.gif") no-repeat scroll 0px -38px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 121px; margin: 0px auto; padding: 8px; }
-.blueMedBtn { background: transparent url("button-animation_001.gif") no-repeat scroll -202px -1px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 128px; margin: 0px auto; padding: 8px; }
-.blueMedBtn:hover { background: transparent url("button-animation_001.gif") no-repeat scroll -202px -39px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 112px; margin: 0px auto; padding: 8px; }
+
+.blueMedBtn { background: transparent url("button-animation_001.gif") no-repeat scroll -202px -39px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 112px; margin: 0px auto; padding: 8px; }
 .blueMedBtn_USD { background: transparent url("button-animation_001.gif") no-repeat scroll -202px -1px; border: 0px none; color: rgb(255, 255, 255); display: block; width: 112px; margin: 0px auto; padding: 8px; }
 .whiteMedBtn { background: transparent url("button-animation_001.gif") no-repeat scroll -330px -1px; border: 0px none; color: rgb(37, 170, 226); display: block; width: 112px; margin: 0px auto; padding: 8px; }
 .whiteMedBtn:hover { background: transparent url("button-animation_001.gif") no-repeat scroll -330px -39px; border: 0px none; color: rgb(37, 170, 226); display: block; width: 112px; margin: 0px auto; padding: 8px; }

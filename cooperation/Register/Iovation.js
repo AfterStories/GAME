@@ -1,17 +1,6 @@
-﻿//For live https://mpsnare.iesnare.com/snare.js
-//For Testing https://ci-mpsnare.iovation.com/snare.js
+﻿
 
 var blackbox = '';
-$.getScript("https://ci-mpsnare.iovation.com/snare.js", function () {
-    setTimeout(function () {
-        var bb_info = ioGetBlackbox();
-        if (bb_info)
-            blackbox = bb_info.blackbox;
-            if ($('input[id$=hidblackbox]').length)
-                $('input[id$=hidblackbox]').val(blackbox)
-    }, 2000);
-
-});
 
 
 var sent = false;

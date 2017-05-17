@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb" data-livestyle-extension="available" class="yui3-js-enabled">
 
@@ -18,39 +18,34 @@
             
             <ul>
                 <li id="topBannerLogoContainer"><a id="topBannerLogo" class="tooltip CN" title="乐天堂首页" href="#"></a></li>
-                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('../Game/help/About-Us/index.html', 'AboutUs',1020); return false;"></a></li>
-                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('../Game/help/help/index.html', 'Help',1020); return false;"></a></li>
+                <li><a id="hbtn1" class="tooltip topBannerExisting" title="关于乐天堂" onclick="javascript:popUpWindowManager('../help/About-Us/index.html', 'AboutUs',1020); return false;"></a></li>
+                <li><a id="hbtn2" class="tooltip topBannerExisting" title="帮助与常见问题" onclick="javascript:popUpWindowManager('../help/help/index.html', 'Help',1020); return false;"></a></li>
                 
-                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager('../Game/help/How-To-Play/index.html', 'GeneralRules','1020');">
+                <li><a id="hbtn3" class="tooltip top_nav_text" title="乐天堂投注指南" onclick="javascript:popUpWindowManager('../help/How-To-Play/index.html', 'GeneralRules','1020');">
                     <div></div>
                     如何投注</a>
                 </li>
                 
                 <li><!-- id="dropdown" -->  <!-- 加入此id，ul下拉菜单生效 -->
-                    <a id="hbtn4" class="top_nav_text" onclick="javascript:popUpWindowManager('#', 'LiveHelp',1020); return false;" title="">
+                    <a id="hbtn4" class="top_nav_text" href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" title="">
                         <div></div>
                         在线客服
                         <!--  -->
                     </a>
-
                 </li>
+                <li id="UserNameBox" style="display:none;border:none;color: #fff;line-height: 32px;padding-left: 10px;">
+                <div >
+                <span>您好，</span><span id="HeaderShowUserName"></span>
+                </div>
+                </li>                
+             
             </ul>
         </div>
 <div id="top_nav_right" style="float:right width:700px;">
 <ul>
 <li id="languageSelect">
-                    
-<div class="lang">
-<select name="ctl00$ctl00$ctl00$BaseMainContent$HeaderContent$ascxLang$uiLanguages" id="BaseMainContent_HeaderContent_ascxLang_uiLanguages" onchange="" style="display: none;">
-    <option value="en-US">English</option>
-    <option value="vi-VN">Tiếng Việt</option>
-    <option value="th-TH">ภาษาไทย</option>
-    <option value="id-ID">Bahasa Indonesia</option>
-    <option value="ja-JP">Japan</option>
+ 
 
-</select> 
-</div>     
- <span id="arrow"></span>
                 <li class="leftBorder">
                     <div id="BaseMainContent_HeaderContent_divForgotPwd">
                         <a id="hbtn5" class="tooltip" title="忘记密码" href="../Forget/index.html"></a>
@@ -88,18 +83,10 @@
                     <li id="UpdateProfile"><a class="zh-CN" href="../profile/index.html?tab=UpdateProfile">
                         更新个人资料</a></li>
                     
-                    <li id="IMacc"><a class="zh-CN" href="../profile/index.html?tab=IMacc">
-                        百乐城账户</a></li>
-                    
                     <li><a class="zh-CN" href="../profile/index.html?tab=bankDetails">
                     <!-- onclick="javascript:bankDetails();" -->
                         银行资料</a></li>
                     
-                    <li id="SelfExclusion"><a class="zh-CN" href="../profile/index.html?tab=SelfExclusion">
-                        自我限制</a></li>
-                    <li id="RebateCalculator"><a class="zh-CN" style="color: yellow;" href="../profile/index.html?tab=RebateCalculator"">
-                        返水查询</a></li>
-
                     <li>
                         <a id="BaseMainContent_HeaderContent_ascxMbrAuth_LoginStatus1" onclick="return Logout();" >退出</a>
                     </li>
@@ -121,32 +108,23 @@
 
                     <span class="arrow_setting"></span>
                     <ul class="dropdown">
-                        <li><a id="depositLink" class="zh-CN" style="color: yellow;" onclick="javascript:popUpWindowManager('../Game/Bank/index.html?tab=Yeepay','popUpWindow','1350');">
+                        <li><a id="depositLink" class="zh-CN" style="color: yellow;" onclick="javascript:popUpWindowManager('../Bank/index.html?tab=Yeepay');"><!-- 'window','1350' -->
                             存款充值
                         </a></li>
                         
-                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('../Game/Bank/index.html?tab=Debit-Card','popUpWindow','1350');">
+                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('../Bank/index.html?tab=Debit-Card','popUpWindow','1350');">
                             点卡充值
                             
-                        </a></li><li id="CDCPopup"><a class="zh-CN" onclick="javascript:PopupMobileCDC();">
-                            手机在线存款
                         </a></li>
                         
-                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('../Game/Bank/index.html?tab=Yeepay','popUpWindow','1350');">
+                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('../Bank/index.html?tab=Yeepay','popUpWindow','1350');">
                             提款
                         </a></li>
-                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('../Game/Bank/index.html?tab=Yeepay','popUpWindow','1350');">
+                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('../Bank/index.html?tab=Yeepay','popUpWindow','1350');">
                             转账
                         </a></li>
-                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('../Game/Bank/index.html?tab=Yeepay','popUpWindow','793');">
-                            红利记录
-                        </a></li>
-                        
-                        <li><a class="zh-CN" onclick="javascript:popUpWindowManager('../Game/Bank/index.html?tab=Yeepay','popUpWindow','793');">
-                            SOS救援金
-                        </a></li>
-                        
-                        
+
+                
                     </ul>
             </div>
         </li>
@@ -160,11 +138,29 @@
         <div class="picture">&nbsp;</div>
     </div>
 
-    <div class="refresh">
+    <div class="refresh" onclick="ReloadF5()">
         
         <img src="../lib/images/RefreshBalances.png" id="uiRefreshBalance" alt="Refresh" class="hoverImg">
     </div>
 <div id="balanceTable" class="walletList" style="display: block;">
+<table id="walletTable">
+<tbody id="balanceTableTR">
+<tr>
+<td>
+<div class="walletTOTAL BALANCE">&nbsp;</div>
+</td><td style="width:40%;">总数额</td>
+<td>:</td>
+<td id="zongsue"></td>
+</tr>
+
+<tr>
+
+<td><div class="walletMAIN">&nbsp;</div></td>
+<td style="width:40%;">主账户</td>
+<td>:</td>
+<td id="zhuzhanghu"></td>
+
+</tr>
 
 
 
@@ -172,14 +168,14 @@
 
 </div>
         </li>
-        <li>
+        <li style="display: none">
             
             <div id="divWelMember" style="min-width: 160px;">
                     
                 <div style="float: right;">
                 <span id="BaseMainContent_HeaderContent_ascxMbrAuth_Label1">您好</span>
                         <span>,</span>
-                        <span id="BaseMainContent_HeaderContent_ascxMbrAuth_LoginName">Bkmyxif</span>
+                        <span id="BaseMainContent_HeaderContent_ascxMbrAuth_LoginName"></span>
                     </div>
                 </div>
 
@@ -236,6 +232,7 @@
         
 
     </div>
+
     <div class="cl">
         &nbsp;
     </div>
@@ -273,8 +270,8 @@
 
                                 <div class="menuSeperator"></div>
                             </div>
-                            <ul class="spSubMenu">
-<li id="submainMenu_Sportsbook_SoccerGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Soccer-Game">足球投注</a></li><li id="submainMenu_Sportsbook_BasketballGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Basketball-Game">篮球投注</a></li><li id="submainMenu_Sportsbook_ESports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/E-Sports">电子竞技</a></li><li id="submainMenu_Sportsbook_NumberGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Number-Game">百练赛</a></li><li id="submainMenu_Sportsbook_VirtualSports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Virtual-Sports">虚拟运动</a></li><li id="submainMenu_Sportsbook_SoccerFacts" class="dy-unit"><a href="http://www.10010388.com/zh-CN/BettorLogic">足球情报</a></li><li id="submainMenu_Sportsbook_RacingGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Racing-Game">赛马</a></li><li id="submainMenu_Sportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&language=zh" target="_blank">赛事数据分析</a></li></ul>
+<!--                             <ul class="spSubMenu">
+<li id="submainMenu_Sportsbook_SoccerGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Soccer-Game">足球投注</a></li><li id="submainMenu_Sportsbook_BasketballGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Basketball-Game">篮球投注</a></li><li id="submainMenu_Sportsbook_ESports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/E-Sports">电子竞技</a></li><li id="submainMenu_Sportsbook_NumberGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Number-Game">百练赛</a></li><li id="submainMenu_Sportsbook_VirtualSports" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Virtual-Sports">虚拟运动</a></li><li id="submainMenu_Sportsbook_SoccerFacts" class="dy-unit"><a href="http://www.10010388.com/zh-CN/BettorLogic">足球情报</a></li><li id="submainMenu_Sportsbook_RacingGame" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Sportsbook/Racing-Game">赛马</a></li><li id="submainMenu_Sportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&language=zh" target="_blank">赛事数据分析</a></li></ul> -->
                         </div>
                     </td>
                 
@@ -286,8 +283,9 @@
 
                                 <div class="menuSeperator"></div>
                             </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_IMSportsbook_IMSportsbookIntro" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Introduction">IM 投注攻略</a></li><li id="submainMenu_IMSportsbook_VirtualSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Soccer">虚拟足球</a></li><li id="submainMenu_IMSportsbook_VirtualBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Basketball">虚拟篮球</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_IMSportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&language=zh" target="_blank">赛事数据分析</a></li></ul>
+<!--                             <ul class="lsrSubMenu">
+<li id="submainMenu_IMSportsbook_IMSportsbookIntro" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Introduction">IM 投注攻略</a></li><li id="submainMenu_IMSportsbook_VirtualSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Soccer">虚拟足球</a></li><li id="submainMenu_IMSportsbook_VirtualBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Sportsbook/Virtual-Basketball">虚拟篮球</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_IMSportsbook_SportsStatistics" class="dy-unit"><a href="http://stats.betradar.com/s4/?clientid=662&language=zh" target="_blank">赛事数据分析</a></li>
+</ul> -->
                         </div>
                     </td>
                 
@@ -299,8 +297,7 @@
 
                                 <div class="menuSeperator"></div>
                             </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_Exchange_SportsbookExchangeSoccer" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange/sport/1" onclick="javascript: sendMainMenuGA('Exchange Soccer');">足球投注</a></li><li id="submainMenu_Exchange_SportsbookExchangeBasketball" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange/sport/7522" onclick="javascript: sendMainMenuGA('Exchange Basketball');">篮球投注</a></li><li id="submainMenu_Exchange_SportsbookExchangeIntroduction" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Exchange-Introduction" onclick="sendMainMenuGA('Exchange Introduction');">交易攻略</a></li></ul>
+
                         </div>
                     </td>
                 
@@ -308,12 +305,14 @@
                     <td id="LiveCasinoImperial" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_LiveCasino">
-                                <a href="../Live-Casino/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="" onclick="">真人娱乐场</a>
+                                <a href="../Live-Casino/index.html?plat=0" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_3" class="" onclick="">真人娱乐场</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
-                            <ul class="lcSubMenu">
-<li id="mainMenu_LiveCasino_GD" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Imperial-Palace" id="providerGD" class="menuChild">北方堂 (gd)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 10px; text-transform: uppercase;">推荐!</sup></li><li id="mainMenu_LiveCasino_AG" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Royal-Palace" id="providerAG" class="menuChild">至尊堂 (ag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="mainMenu_LiveCasino_SAG" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Sky-Palace" id="providerSAG" class="menuChild">沙龙厅 (sag)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; font-size: 11px; text-transform: uppercase; margin-left: -4px;">新!</sup></li><li id="mainMenu_LiveCasino_AB" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Dragon-Palace" id="providerAB" class="menuChild">隆运堂 (欧博)</a></li><li id="mainMenu_LiveCasino_SUN" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Sun-Palace" id="providerSUN" class="menuChild">太阳厅 (申博太阳)</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">首家!</sup></li><li id="mainMenu_LiveCasino_EA" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Oriental-Palace" id="providerEA" class="menuChild">东方堂 (ea)</a></li><li id="mainMenu_LiveCasino_OPUS" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/M-Palace" id="providerOPUS" class="menuChild">凯旋堂 (opus)</a></li><li id="mainMenu_LiveCasino_BOY" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Fortune-Palace" id="providerBOY" class="menuChild">波音堂 (波音)</a></li><li id="mainMenu_LiveCasino_CP" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Live-Casino/Crown-Palace" id="providerCP" class="menuChild">南方堂 (cp)</a></li><li id="mainMenu_LiveCasino_PT" class="dy-unit"><a href="http://www.10010388.com/zh-CN/IM-Casino/Live-Dealers" id="PT" class="menuChild">百乐城 (PT)</a></li></ul>
+                            <ul class="lcSubMenu" id="Live-Casino-ul">
+
+                            </ul>
+
                         </div>
                     </td>
                 
@@ -325,8 +324,21 @@
 
                                 <div class="menuSeperator"></div>
                             </div>
-                            <ul class="casSubMenu">
-<li id="submainMenu_Games_FishingGames" class="dy-unit"><a href="http://www.10010388.com/zh-CN/FishingGames" onclick="sendMainMenuGA('SlotCasino Fishing Games');">捕鱼游戏</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_Games_Top-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Top-Games">热门游戏</a></li><li id="submainMenu_Games_New-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/New-Games">新游戏</a></li><li id="submainMenu_Games_Video-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Video-Slots">视频老虎机</a></li><li id="submainMenu_Games_3D-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/3D-Slots">3D老虎机</a></li><li id="submainMenu_Games_Classic-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Classic-Slots">经典老虎机</a></li><li id="submainMenu_Games_Progressive-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Progressive-Slots">大奖老虎机</a></li><li id="submainMenu_Games_Multiplayer-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Multiplayer-Slots">多人游戏</a></li><li id="submainMenu_Games_Chinese-Slots" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Chinese-Slots">中式老虎机</a></li><li id="submainMenu_Games_Table-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Table-Games">桌面游戏</a></li><li id="submainMenu_Games_Other-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Other-Games">其它游戏</a></li><li id="submainMenu_Games_Cold-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/Cold-Games">冷门游戏</a></li><li id="submainMenu_Games_All-Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Slot-Casino/All-Games">全部游戏</a></li></ul>
+<ul class="casSubMenu">
+
+    <li id="submainMenu_Games_Top-Games" class="dy-unit"><a href="../topgames/index.html?i=0">热门游戏</a></li>
+    <li id="submainMenu_Games_New-Games" class="dy-unit"><a href="../topgames/index.html?i=2">新游戏</a></li>
+    <li id="submainMenu_Games_Video-Slots" class="dy-unit"><a href="../topgames/index.html?i=4">视频老虎机</a></li>
+    <li id="submainMenu_Games_3D-Slots" class="dy-unit"><a href="../topgames/index.html?i=6">3D老虎机</a></li>
+    <li id="submainMenu_Games_Classic-Slots" class="dy-unit"><a href="../topgames/index.html?i=8">经典老虎机</a></li>
+    <li id="submainMenu_Games_Progressive-Slots" class="dy-unit"><a href="../topgames/index.html?i=10">大奖老虎机</a></li>
+    <li id="submainMenu_Games_Multiplayer-Slots" class="dy-unit"><a href="../topgames/index.html?i=12">多人游戏</a></li>
+    <li id="submainMenu_Games_Chinese-Slots" class="dy-unit"><a href="../topgames/index.html?i=14">中式老虎机</a></li>
+    <li id="submainMenu_Games_Table-Games" class="dy-unit"><a href="../topgames/index.html?i=16">桌面游戏</a></li>
+    <li id="submainMenu_Games_Other-Games" class="dy-unit"><a href="../topgames/index.html?i=18">其它游戏</a></li>
+    <li id="submainMenu_Games_Cold-Games" class="dy-unit"><a href="../topgames/index.html?i=20">冷门游戏</a></li>
+    <li id="submainMenu_Games_All-Games" class="dy-unit"><a href="../topgames/index.html?i=22">全部游戏</a></li>
+</ul>
                         </div>
                     </td>
                 
@@ -350,25 +362,24 @@
 
                                 <div class="menuSeperator"></div>
                             </div>
-                            <ul class="kenSubMenu">
-<li id="submainMenu_Keno_IMKeno" class="dy-unit"><a href="#" onclick="javascript:return EnterGameKeno(&quot;771&quot;, 0, kenoMember, isGameLock);">IM欢乐彩</a></li><li id="submainMenu_Keno_LBK" class="dy-unit"><a href="#" onclick="javascript:return EnterGameLBKeno(&quot;1333&quot;, 0, kenoMember, isGameLock);">LB优乐彩</a></li></ul>
+                            <ul class="kenSubMenu" id="funcai">
+
+
+                            </ul>
                         </div>
                     </td>
-                
-                
                     <td id="Promo Default" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_Promotion">
-                                <a href="../Promotion/index.html" id="BaseMainContent_HeaderContent_ascxMainMenu_uiMenuList_uiMenuText_7" class="" onclick="">促销</a>
+                                <a href="../Promotion/index.html" id="promotions" class="" onclick="">促销</a>
 
                                 <div class="menuSeperator"></div>
                             </div>
-                            <ul class="proSubMenu">
-<li id="submainMenu_Promotion_NewMembers" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/NewMembers">会员迎新礼</a></li><li id="submainMenu_Promotion_Sportsbook" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Sportsbook">体育投注</a></li><li id="submainMenu_Promotion_LiveCasino" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/LiveCasino">真人娱乐场</a></li><li id="submainMenu_Promotion_Games" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Games">老虎机</a></li><li id="submainMenu_Promotion_Keno" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Keno">快乐彩</a></li><li id="submainMenu_Promotion_VIP" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/VIP">钻石会员</a></li><li id="submainMenu_Promotion_TottenhamHotspur" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/TottenhamHotspur">热刺</a><sup style="color: red; position: relative; z-index: 9999; float: left; font-weight: 700; text-transform: uppercase;">热门!</sup></li><li id="submainMenu_Promotion_Exclusive" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/Exclusive">独家订制</a></li><li id="submainMenu_Promotion_All" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Promotion/All">全部</a></li></ul>
+                            <ul class="proSubMenu" id="promotionUl">
+
+							</ul>
                         </div>
                     </td>
-                
-                
                     <td id="TheLounge" class="off">
                         <div>
                             <div class="dy-unit" id="mainMenu_LifeStyleRewards">
@@ -376,8 +387,7 @@
 
                                 <div class="menuSeperator"></div>
                             </div>
-                            <ul class="lsrSubMenu">
-<li id="submainMenu_LifeStyleRewards_ArticleAll" class="dy-unit"><a href="http://www.10010388.com/zh-CN/Bliss/All" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">天使之吻</a></li><li id="submainMenu_LifeStyleRewards_Rewards" class="dy-unit"><a href="http://www.10010388.com/Reward/zh-CN" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">天王俱乐部</a></li><li id="submainMenu_LifeStyleRewards_VIPAll" class="dy-unit"><a href="http://www.10010388.com/zh-CN/VIP/All" onclick="javascript:window.open(this.href, &quot;_blank&quot;); return false;">钻石俱乐部</a></li></ul>
+
                         </div>
                     </td>
                 
@@ -400,6 +410,151 @@
 
 
 
+    <script>
 
+//header动态Nav
+ $(document).ready(function () {
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getImgAdList?key=logo',
+         data: {},
+         success: function(data) {
+            var IMGurl = 'http://59.110.10.115'+data.data.adList[0].imgUrl;
+          
+
+        $("#logofun88InZh").find(".logo").css("background-image", "url(" + IMGurl + ")");
+
+         },
+         error: function() {
+
+         }
+     });
+
+//真人娱乐场浮动菜单
+
+       $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/game/getgamelist',
+         data: {
+                districtId:"1"
+         },
+         success: function(data) {
+
+                var gameTypes = [];
+
+                for (var i = 0; i < data.data.length; i++) {
+                        var gameType = data.data[i].platformName;
+
+                        if(!gameTypes[gameType]){
+                            gameTypes[gameType] = [];
+                        }
+                        gameTypes[gameType].push(data.data[i]);
+
+                }
+                for (var o in gameTypes){
+    /*游戏中文*/     var GamenameCH = gameTypes[o][0].platformNameCh;
+    /*游戏英文*/     var platName = "dvUC" + o;
+  
+    /*浮动导航栏*/    var navli = '<li id="mainMenu_LiveCasino_'+o+'" class="dy-unit"><a href="../Live-Casino/index.html?plat='+o+'">'+GamenameCH+' ('+o+')</a></li>'
+                      $("#Live-Casino-ul").append(navli); 
+
+                }
+
+
+
+
+
+/*第一个游戏容器显示*/
+            $("#dvUC").children("div:first-child").css("display","block");
+
+
+/*tab切换控制*/
+
+        $(".imgProv").click(function () {
+            var objId = $(this).attr('id');
+            showGameListTable(objId);
+            $(".imgProv").removeClass("clicked");
+            $(this).addClass("clicked");
+        } );        
+
+        
+                                              
+         },
+         error: function(data){
+            
+         }
+     })   //真人娱乐场AJAX结束
+
+
+
+//欢乐彩浮动菜单
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getImgAdList?key=欢乐彩按钮图',
+         data: {},
+         success: function(data) {
+            var PicJul1 = data.data.adList[0].jmpUrl;
+            var IMTtitle = data.data.adList[0].title;
+            var huanlecai = '<li class="dy-unit"><a href="'+PicJul1+'">'+IMTtitle+'</a></li>'
+            $("#funcai").append(huanlecai)
+         },
+         error: function() {
+
+         }
+     });
+
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getImgAdList?key=优乐彩按钮图',
+         data: {},
+         success: function(data) {
+        var PicJul2 = data.data.adList[0].jmpUrl;
+        var LBTtitle = data.data.adList[0].title;
+        var youlecai = '<li class="dy-unit"><a href="'+PicJul2+'">'+LBTtitle+'</a></li>'
+        $("#funcai").append(youlecai)
+         },
+         error: function() {
+
+         }
+     });    
+
+
+/*促销浮动菜单*/
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteinfo/getPreferentialInfoList',
+         data: {},
+         success: function(data) {
+         	for (var i = 0 ; i < data.data.preferentialInfoList.length; i++) {
+         		 var kindName = data.data.preferentialInfoList[i].kindName;
+         		 var kindId = data.data.preferentialInfoList[i].kindId;
+
+        var chuxiaoli = '<li id="'+kindId+'" class="dy-unit"><a href="../Promotion/index.html?pronavtab='+kindId+'">'+kindName+'</a></li>'
+        $("#promotionUl").append(chuxiaoli)         		 
+         	}
+
+
+
+
+
+
+
+
+
+         },
+         error: function() {
+
+         }
+     });    
+
+
+
+
+
+
+     })//ready function 结束
+
+
+    </script>
 </body>
 </html>

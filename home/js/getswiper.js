@@ -3,6 +3,24 @@
 
 
  $(document).ready(function () {
+
+
+/*Title*/
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getWebsitesetting',
+         data: {},
+         success: function(data) {
+            var titlename = data.data.title;
+            $("title").html(titlename);
+         },
+         error: function() {
+
+         }
+     });
+
+
+
         getswiperpic();//*获取轮播图 
         getfourpic1();getfourpic2();getfourpic3();getfourpic4();/*获取首页广告图*/
 
@@ -96,6 +114,9 @@
                     }
             });
             }
+
+
+
 
 
 }); 

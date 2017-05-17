@@ -77,7 +77,7 @@ label.error { color: red; font-size: 11px; }
 .deposit_msgs { margin-bottom: 25px; }
 .paymentNoticeMsg { font-weight: bold; margin-top: 5px; }
 .btm_navigation, #gvResult table { float: right; }
-.tempPos { margin-left: 118px; margin-top: 20px; }
+.tempPos { margin-left: 42%; margin-top: 20px; }
 .aspNetDisabled { cursor: auto; color: rgb(108, 108, 108); }
 .BalAmt { padding-right: 10px; text-align: right; }
 .sGrid td { height: 0px ! important; }

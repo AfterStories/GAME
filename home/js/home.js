@@ -326,6 +326,8 @@
             
 
         });
+
+window.location.reload; 
         
 
 

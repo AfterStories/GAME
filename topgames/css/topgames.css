@@ -121,7 +121,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 #cboxClose { width: 25px; height: 25px; top: -5px; right: 20px; position: absolute; cursor: pointer; background: transparent none repeat scroll 0% 0%; }
 .closeBtnSlotClub { width: 25px; height: 25px; top: 18px; right: 18px; position: absolute; cursor: pointer; }
 
-.SlotMainJackpot, .SlotMainAmountja, .SlotMainAmountvi, .SlotMainAmountid, .SlotMainAmountzh, .SlotMainAmounten, .SlotMainAmountth, .SlotMainAmountko { z-index: 100; float: right; height: 81px; overflow: hidden; position: relative; }
+.SlotMainJackpot, .SlotMainAmountja, .SlotMainAmountvi, .SlotMainAmountid, .SlotMainAmountzh, .SlotMainAmounten, .SlotMainAmountth, .SlotMainAmountko { z-index: 1; float: right; height: 81px; overflow: hidden; position: relative; }
 .SlotMainAmountzh, .SlotMainAmounten, .SlotMainAmountja { height: 67px; margin: 5px 0px 0px; position: absolute; width: 527px; right: 4px; }
 .SlotMainAmountvi, .SlotMainAmountid, .SlotMainAmountth, .SlotMainAmountko { height: 67px; margin: 5px 0px 0px; position: absolute; width: 527px; right: 1px; }
 .SlotJackpotFrame { width: 30px; height: 80px; float: right; padding: 0px 5px; background: transparent url("../images/jackpot-box-bg.jpg") no-repeat scroll 0% 0%; }

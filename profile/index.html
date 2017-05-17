@@ -43,12 +43,11 @@
     <script type="text/javascript" src="../lib/js/jQueryUI.js"> </script>
     <script type="text/javascript" src="../lib/pulg/My97DatePicker/WdatePicker.js"></script> 
     <script type="text/javascript" src="../lib/js/jquery-qrcode-0.14.0.min.js" async=""></script>
-
     <script type="text/javascript" src="../lib/js/master.yui.js" async=""></script>
     <script type="text/javascript" src="../lib/js/master.js" async=""></script>
     <script type="text/javascript" src="../lib/js/master.payment.crawler.js" async=""></script>
     <script type="text/javascript" src="../lib/js/login.js"> </script>
-
+    <script type="text/javascript" src="js/profile.js"> </script>
 
 <script>
 
@@ -871,14 +870,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         </a>
                     </td>
                     
-                    <td>
-                        <a id="BaseMainContent_MainContent_btnUpdPlayTech">
-                            <div class="ManageAcc_nav_text">
-                                <span class="nav_btn5"></span>
-                                百乐城账户
-                            </div>
-                        </a>
-                    </td>
                     
                     <td>
                         <a id="BaseMainContent_MainContent_btnBank">
@@ -889,23 +880,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         </a>
                     </td>
                     
-                    <td>
-                        <a id="BaseMainContent_MainContent_btnSelfExl">
-                            <div class="ManageAcc_nav_text">
-                                <span class="nav_btn4"></span>
-                                自我限制
-                            </div>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a id="BaseMainContent_MainContent_btnSelfCheck">
-                            <div class="ManageAcc_nav_text">
-                                <span class="nav_btn6"></span>
-                                返水查询
-                            </div>
-                        </a>
-                    </td>
                     
                 </tr>
             </tbody></table>
@@ -941,13 +915,13 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                     <tbody><tr>
                         <td class="textfield_text" width="32%">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblCurrentPassword">当前密码:</span>
+                            <span id="Password">当前密码:</span>
                         </td>
                         <td class="redtext_normal " width="2%">
                             *
                         </td>
                         <td class="splForChrome" width="35%">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtCurrentPassword" maxlength="20" id="txtCurrentPassword" tabindex="1" class="signup_input" type="password">
+                            <input name="$txtCurrentPassword" maxlength="20" id="txtCurrentPassword" tabindex="1" class="signup_input" type="password">
                         </td>
                         <td width="3%">
                             <div class="qMsg">
@@ -966,7 +940,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     </tr>
                     <tr>
                         <td class="textfield_text">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblNewPassword">新的密码:</span>
+                            <span id="BNewPassword">新的密码:</span>
                         </td>
                         <td class="redtext_normal">
                             *
@@ -991,13 +965,13 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     </tr>
                     <tr>
                         <td class="textfield_text">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblConfirmPassword">确认密码:</span>
+                            <span id="ConfirmPassword">确认密码:</span>
                         </td>
                         <td class="redtext_normal">
                             *
                         </td>
                         <td class="splForChrome">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtConfirmPassword" maxlength="20" id="txtConfirmPassword" tabindex="3" class="signup_input" type="password">
+                            <input name="$txtConfirmPassword" maxlength="20" id="txtConfirmPassword" tabindex="3" class="signup_input" type="password">
                         </td>
                         <td>
                             <div class="qMsg">
@@ -1022,7 +996,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                             &nbsp;
                         </td>
                         <td>
-                            <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" >提交</a>
+                            <a id="changepasswordBTN" onclick="changepassword()" class="Btn Btn_floatLeft blueMedBtn" >提交</a>
                         </td>
                     </tr>
                 </tbody></table>
@@ -1049,7 +1023,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             <div class="cl">
                 &nbsp;
             </div>
-            <div class="blue_bar">
+<!--             <div class="blue_bar">
                 <div class="text_bluebar">
                     更新个人资料
                 </div>
@@ -1058,7 +1032,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         在线客服
                     </div>
                 </a>
-            </div>
+            </div> -->
             <div class="cl">
                 &nbsp;
             </div>
@@ -1068,14 +1042,14 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             <div class="divInfo">
                 <span class="text_normal"></span>
             </div>
-            <div style="display: inline-block; padding-left: 10px; padding-top: 10px;">
+<!--             <div style="display: inline-block; padding-left: 10px; padding-top: 10px;">
                 <div style="display: inline-block; text-align: center;">
                     
                     <img alt="icon_email" src="images/icon-email.jpg" style="position: relative; width: 190px; height: 139px; float: left;">
                     <a class="Btn Btn_floatLeft blueLongBtn" onclick="return SendVerificationEmail()" style="top: 95px; left: -177px; position: relative;">邮箱验证</a>
                     
                 </div>
-            </div>
+            </div> -->
             <div class="blue_Header">
                 <div class="text_blueHeader">
                     登入与账户安全信息
@@ -1086,11 +1060,11 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                     <tbody><tr>
                         <td class="textfield_text" width="18%">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblFirstName">姓名:</span>
+                            <span id="FirstName">姓名:</span>
                         </td>
                         <td class="redtext_normal" width="2%"></td>
                         <td width="35%">
-                            <input name="txtFirstName" value="朱 博伦" maxlength="50" id="txtFirstName" disabled="disabled" class="aspNetDisabled" style="height: 26px; width: 322px;" type="text">
+                            <input name="txtFirstName" value="" maxlength="50" id="txtFirstName" disabled="disabled" class="aspNetDisabled" style="height: 26px; width: 322px;" type="text">
                         </td>
                         <td width="5%">&nbsp;&nbsp;
                         </td>
@@ -1103,7 +1077,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         </td>
                         <td class="redtext_normal" width="2%"></td>
                         <td>
-                            <input name="txtLoginID" value="Bkmyxif" maxlength="14" id="txtLoginID" disabled="disabled" class="aspNetDisabled" style="height: 26px; width: 322px;" type="text">
+                            <input name="txtLoginID" value="" maxlength="14" id="txtLoginID" disabled="disabled" class="aspNetDisabled" style="height: 26px; width: 322px;" type="text">
                         </td>
                         <td width="5%">&nbsp;&nbsp;
                         </td>
@@ -1119,8 +1093,8 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         <td>
                             
                             <span id="lblPlus">+</span>
-                            <input name="txtCountryCode" value="86" maxlength="3" id="txtCountryCode" tabindex="11" class="country_input" onkeypress="return checkCountryCodeField(event)" readonly="true" style="height: 26px; width: 21px;" type="text">
-                            <input name="txtMobile" value="15942679123" maxlength="15" id="txtMobile" class="signup_input" onkeypress="return NoPlusMinus(event)" onblur=" return blurFunction(event)" style="height: 26px; width: 283px;" type="text">
+                            <input name="txtCountryCode" value="86" maxlength="3" id="txtCountryCode" tabindex="11" class="country_input"  readonly="true" style="height: 26px; width: 21px;" type="text">
+                            <input name="txtMobile" value="" maxlength="15" id="txtMobile" class="signup_input"  style="height: 26px; width: 283px;" type="text">
                         </td>
                         <td width="5%">
                             <div class="qMsg">
@@ -1144,7 +1118,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         </td>
                         <td class="redtext_normal" width="2%"></td>
                         <td width="35%">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtEmail" value="appledev@anttutor.com" maxlength="50" id="txtEmail" disabled="disabled" class="aspNetDisabled" style="height: 26px; width: 322px;" type="text">
+                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtEmail" value="" maxlength="50" id="txtEmail" disabled="disabled" class="aspNetDisabled" style="height: 26px; width: 322px;" type="text">
                         </td>
                         <td width="5%">&nbsp;&nbsp;
                         </td>
@@ -1167,108 +1141,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             <div class="requiredInfo">
                 <span class="redtext_normal">*</span>必须填写所有信息。
             </div>
-            <div class="blue_Header">
-                <div class="text_blueHeader">
-                    偏好设定
-                </div>
 
-            </div>
-
-            <div class="table">
-                <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                    <tbody><tr>
-                        <td class="textfield_text" width="18%">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblCurrency">首选货币:</span>
-                        </td>
-                        <td class="redtext_normal" width="2%"></td>
-                        <td width="35%">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtCurrency" value="RMB" id="txtCurrency" disabled="disabled" class="aspNetDisabled" style="height: 26px; width: 322px;" type="text">
-                        </td>
-                        <td width="5%">&nbsp;&nbsp;
-                        </td>
-                        <td>&nbsp;&nbsp;
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textfield_text" width="18%">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblLanguage">首选语言:</span>
-                        </td>
-                        <td class="redtext_normal" width="2%">*
-                        </td>
-                        <td>
-                            <select name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$ddlLanguage" id="ddlLanguage" class="signup_input" style="height: 26px; width: 324px;">
-		<option value="en-us">English</option>
-		<option selected="selected" value="zh-cn">中文</option>
-		<option value="th-th">ภาษาไทย</option>
-		<option value="vi-vn">Tiếng Việt</option>
-		<option value="id-id">Indonesia</option>
-		<option value="ja-jp">Japan</option>
-
-	</select>
-                        </td>
-                        <td width="5%">
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="Label14" class="popup_tip" style="display: none;">请选择您的首选语言。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textfield_text" width="18%">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblPreferredWallet">首选账户:</span>
-                        </td>
-                        <td class="redtext_normal" width="2%">&nbsp;
-                        </td>
-                        <td>
-                            <select name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$ddlPreferredWallet" id="ddlPreferredWallet" class="signup_input" style="height: 26px; width: 324px;">
-		<option value="MAIN" class="walletMAIN">主账户</option>
-		<option selected="selected" value="SP" class="walletSP">体育博彩</option>
-		<option value="IPSB" class="walletIPSB">IM 体育</option>
-		<option value="BFR" class="walletBFR">必发交易</option>
-		<option value="GD" class="walletGD">北方堂 (GD)</option>
-		<option value="AG" class="walletAG">至尊堂 (AG)</option>
-		<option value="SAG" class="walletSAG">沙龙厅 (SAG)</option>
-		<option value="AB" class="walletAB">隆运堂 (欧博)</option>
-		<option value="SUN" class="walletSUN">太阳厅(申博太阳)</option>
-		<option value="EA" class="walletEA">东方堂 (EA)</option>
-		<option value="OPUS" class="walletOPUS">凯旋堂 (OPUS)</option>
-		<option value="BOY2" class="walletBOY2">波音堂 (波音)</option>
-		<option value="CP" class="walletCP">南方堂 (CP)</option>
-		<option value="PT" class="walletPT">百乐城 (PT)</option>
-		<option value="SLOT" class="walletSLOT">乐游戏</option>
-		<option value="PK" class="walletPK">欢乐彩 (IM)</option>
-		<option value="LBK" class="walletLBK">优乐彩 (LB)</option>
-
-	</select>
-                        </td>
-                        <td width="5%">
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="Label13" class="popup_tip" style="display: none;">请选择您的首选账户。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody></table>
-
-            </div>
             <div class="requiredInfo">
                 <span class="redtext_normal">*</span>必须填写所有信息。
             </div>
@@ -1284,286 +1157,9 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 
 
-                    <tbody><tr>
-                        <td class="textfield_text">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblNickname">昵称:</span>
-                        </td>
-                        <td class="redtext_normal"></td>
-                        <td>
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtNickname" maxlength="50" id="txtNickname" class="signup_input" type="text">
-                        </td>
-                        <td>
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="Label2" class="popup_tip" style="display: none;">请输入您喜爱的昵称。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+                    <tbody>
 
-                    <tr>
-                        <td class="textfield_text">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblGender">性別:</span>
-                        </td>
-                        <td class="redtext_normal">&nbsp;
-                        </td>
-                        <td>
-                            <span id="BaseMainContent_MainContent_MemberMainContent_txtGender">男性</span>
-                            
-                        </td>
-                        <td>
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="Label3" class="popup_tip" style="display: none;">请选择您的性别。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="textfield_text">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblMessenger">首选聊天软件:</span>
-                        </td>
-                        <td class="redtext_normal"></td>
-                        <td>
-                            <select name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$ddlMessenger" id="ddlMessenger" class="signup_input" style="height: 26px; width: 324px;">
-		<option value="-1">请选择</option>
-		<option value="1">QQ</option>
-		<option value="2">MSN</option>
-		<option value="3">Yahoo Messenger</option>
 
-	</select>
-                        </td>
-                        <td>
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="label" class="popup_tip" style="display: none;">请输入您常用的通讯软件账号。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textfield_text"></td>
-                        <td class="redtext_normal"></td>
-                        <td>
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtMessenger" maxlength="50" id="txtMessenger" class="signup_input" disabled="" type="text">
-                        </td>
-                        <td>
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="Label5" class="popup_tip" style="display: none;">请输入您常用的通讯软件账号。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="textfield_text">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblCountry">国家:</span>
-                        </td>
-                        <td class="redtext_normal">*
-                        </td>
-                        <td>
-                            <select name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$ddlCountry" id="ddlCountry" class="signup_input" style="height: 26px; width: 324px;">
-		<option selected="selected" value="1">中国</option>
-		<option value="150">泰国</option>
-		<option value="169">越南</option>
-		<option value="76">印度尼西亚</option>
-		<option value="86">韩国</option>
-		<option value="3">阿尔巴尼亚</option>
-		<option value="4">阿尔及利亚</option>
-		<option value="5">安哥拉</option>
-		<option value="6">安圭拉</option>
-		<option value="7">阿根廷</option>
-		<option value="8">亚美尼亚</option>
-		<option value="9">阿路巴</option>
-		<option value="10">澳大利亚</option>
-		<option value="11">奥地利</option>
-		<option value="12">阿塞拜疆</option>
-		<option value="13">巴哈马</option>
-		<option value="14">巴林</option>
-		<option value="15">孟加拉国</option>
-		<option value="16">巴巴多斯</option>
-		<option value="17">白俄罗斯</option>
-		<option value="18">比利时</option>
-		<option value="19">伯利兹</option>
-		<option value="20">贝宁</option>
-		<option value="21">百慕大</option>
-		<option value="22">不丹</option>
-		<option value="23">玻利维亚</option>
-		<option value="24">波西尼亚及黑塞哥维那</option>
-		<option value="25">博茨瓦纳</option>
-		<option value="26">巴西</option>
-		<option value="27">文莱</option>
-		<option value="28">保加利亚</option>
-		<option value="29">布基纳法索</option>
-		<option value="30">布隆迪</option>
-		<option value="31">柬埔寨</option>
-		<option value="32">喀麦隆</option>
-		<option value="33">加拿大</option>
-		<option value="34">维德角岛</option>
-		<option value="35">开曼群岛</option>
-		<option value="36">中非共和国</option>
-		<option value="37">乍得</option>
-		<option value="38">智利</option>
-		<option value="39">哥伦比亚</option>
-		<option value="40">刚果</option>
-		<option value="41">库克群岛</option>
-		<option value="42">哥斯达黎加</option>
-		<option value="43">特科迪瓦</option>
-		<option value="44">克罗地亚</option>
-		<option value="45">塞浦路斯</option>
-		<option value="46">捷克</option>
-		<option value="47">刚果</option>
-		<option value="49">多米尼克</option>
-		<option value="50">多明尼加</option>
-		<option value="51">厄瓜多尔</option>
-		<option value="52">埃及</option>
-		<option value="53">萨尔瓦多</option>
-		<option value="54">厄利垂亚</option>
-		<option value="55">爱沙尼亚</option>
-		<option value="56">埃塞俄比亚</option>
-		<option value="57">斐济</option>
-		<option value="58">芬兰</option>
-		<option value="60">法属波利尼西亚</option>
-		<option value="61">加蓬</option>
-		<option value="62">格鲁吉亚</option>
-		<option value="64">加纳</option>
-		<option value="65">直布罗陀</option>
-		<option value="66">希腊</option>
-		<option value="67">格瑞纳达</option>
-		<option value="68">瓜地马拉</option>
-		<option value="69">几内亚</option>
-		<option value="70">瓜亚那</option>
-		<option value="71">海地</option>
-		<option value="72">洪都拉斯</option>
-		<option value="73">匈牙利</option>
-		<option value="74">冰岛</option>
-		<option value="75">印度</option>
-		<option value="82">牙买加</option>
-		<option value="83">日本</option>
-		<option value="84">约旦</option>
-		<option value="85">肯尼亚</option>
-		<option value="87">科威特</option>
-		<option value="89">拉脱维亚</option>
-		<option value="90">莱索托</option>
-		<option value="91">列支敦士登</option>
-		<option value="92">卢森堡</option>
-		<option value="93">澳门</option>
-		<option value="94">马其顿</option>
-		<option value="95">马达加斯加</option>
-		<option value="96">马拉维</option>
-		<option value="97">马尔代夫</option>
-		<option value="98">马里</option>
-		<option value="99">马耳他</option>
-		<option value="100">毛里塔尼亚</option>
-		<option value="101">毛里求斯</option>
-		<option value="102">墨西哥</option>
-		<option value="103">摩尔多瓦</option>
-		<option value="104">蒙古</option>
-		<option value="105">摩洛哥</option>
-		<option value="107">纳米比亚</option>
-		<option value="108">瑙鲁</option>
-		<option value="109">尼泊尔</option>
-		<option value="111">新喀里多尼亚</option>
-		<option value="112">新西兰</option>
-		<option value="113">尼日尔</option>
-		<option value="114">尼日利亚</option>
-		<option value="115">挪威</option>
-		<option value="116">阿曼</option>
-		<option value="117">巴基斯坦</option>
-		<option value="118">巴拿马</option>
-		<option value="120">巴拉圭</option>
-		<option value="121">秘鲁</option>
-		<option value="122">波兰</option>
-		<option value="123">葡萄牙</option>
-		<option value="124">卡塔尔</option>
-		<option value="125">罗马尼亚</option>
-		<option value="126">俄罗斯</option>
-		<option value="127">卢旺达</option>
-		<option value="128">圣克里斯多夫和纳维斯</option>
-		<option value="129">圣卢西亚</option>
-		<option value="130">圣文森及格瑞纳丁</option>
-		<option value="131">圣多美及普林西比</option>
-		<option value="132">沙特阿拉伯</option>
-		<option value="133">塞内加尔</option>
-		<option value="134">塞舌尔</option>
-		<option value="135">塞拉利昂</option>
-		<option value="136">斯洛伐克</option>
-		<option value="137">斯洛文尼亚</option>
-		<option value="138">所罗门群岛</option>
-		<option value="139">索马里</option>
-		<option value="140">南非</option>
-		<option value="141">西班牙</option>
-		<option value="142">斯里兰卡</option>
-		<option value="143">苏丹</option>
-		<option value="144">苏里南</option>
-		<option value="145">斯威士兰</option>
-		<option value="146">瑞典</option>
-		<option value="149">坦桑尼亚</option>
-		<option value="151">多哥</option>
-		<option value="152">特立尼达和多巴哥</option>
-		<option value="153">突尼斯</option>
-		<option value="155">乌干达</option>
-		<option value="156">乌克兰</option>
-		<option value="157">阿拉伯联合酋长国</option>
-		<option value="159">乌拉圭</option>
-		<option value="160">委内瑞拉</option>
-		<option value="161">西萨摩亚</option>
-		<option value="164">赞比亚</option>
-		<option value="165">津巴布韦</option>
-		<option value="172">曼岛</option>
-
-	</select>
-                        </td>
-                        <td>
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="Label18" class="popup_tip" style="display: none;">请选择您的国家。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
                     <tr>
                         <td class="textfield_text">
                             <span id="BaseMainContent_MainContent_MemberMainContent_lblAddress">联系地址:</span>
@@ -1571,7 +1167,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         <td class="redtext_normal">*
                         </td>
                         <td>
-                            <textarea name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtAddress" rows="2" cols="20" id="txtAddress" class="signup_input" style="height: 85px; resize: none;">北京市昌平区府学路18号</textarea>
+                            <textarea name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtAddress" rows="2" cols="20" id="txtAddress" class="signup_input" style="height: 85px; resize: none;"></textarea>
                         </td>
                         <td>
                             <div class="qMsg">
@@ -1589,97 +1185,44 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="textfield_text">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblCity">省市/自治区:</span>
-                        </td>
-                        <td class="redtext_normal">*
-                        </td>
-                        <td>
-                            <div id="RegisterCity" style="line-height: 18px;">
-                                <div id="CityListDropDown" class="CityList" style="display: none;"><table id="CityListTable"><tbody><tr><td>北京</td></tr><tr><td>天津</td></tr><tr><td>河北</td></tr><tr><td>山西</td></tr><tr><td>内蒙古</td></tr><tr><td>辽宁</td></tr><tr><td>吉林</td></tr><tr><td>黑龙江</td></tr><tr><td>上海</td></tr><tr><td>江苏</td></tr><tr><td>浙江</td></tr><tr><td>安徽</td></tr><tr><td>福建</td></tr><tr><td>江西</td></tr><tr><td>山东</td></tr><tr><td>河南</td></tr><tr><td>湖北</td></tr><tr><td>湖南</td></tr><tr><td>广东</td></tr><tr><td>广西</td></tr><tr><td>海南</td></tr><tr><td>重庆</td></tr><tr><td>四川</td></tr><tr><td>贵州</td></tr><tr><td>云南</td></tr><tr><td>西藏</td></tr><tr><td>陕西</td></tr><tr><td>甘肃</td></tr><tr><td>青海</td></tr><tr><td>宁夏</td></tr><tr><td>新疆</td></tr><tr><td>香港</td></tr><tr><td>澳门</td></tr><tr><td>其它</td></tr></tbody></table></div>
-                                <div id="arrowCityList"><div class="arrowImg"></div></div>
-                            </div>
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtCity" value="北京" maxlength="200" id="txtCity" class="signup_input" style="width: 318px;" readonly="readonly" type="text">
-                        </td>
-                        <td>
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="Label16" class="popup_tip" style="display: none;">请选择您所在的省市或自治区。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                          <td class="textfield_text" width="18%">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblNationality">国籍</span>
-                        </td>
-                        
-                        <td class="redtext_normal" width="2%"></td>
-                        <td width="35%">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtNationality" value="中国" maxlength="50" id="txtNationality" disabled="disabled" class="aspNetDisabled" style="height: 26px; width: 322px;" type="text">
-                        </td>
-                        <td width="5%">&nbsp;&nbsp;
-                        </td>
-                        <td>&nbsp;&nbsp;
-                        </td>
-                        
-                    </tr>
+<!--                     <tr>
+    <td class="textfield_text">
+        <span id="BaseMainContent_MainContent_MemberMainContent_lblCity">省市/自治区:</span>
+    </td>
+    <td class="redtext_normal">*
+    </td>
+    <td>
+        <div id="RegisterCity" style="line-height: 18px;">
+            <div id="CityListDropDown" class="CityList" style="display: none;"><table id="CityListTable"><tbody><tr><td>北京</td></tr><tr><td>天津</td></tr><tr><td>河北</td></tr><tr><td>山西</td></tr><tr><td>内蒙古</td></tr><tr><td>辽宁</td></tr><tr><td>吉林</td></tr><tr><td>黑龙江</td></tr><tr><td>上海</td></tr><tr><td>江苏</td></tr><tr><td>浙江</td></tr><tr><td>安徽</td></tr><tr><td>福建</td></tr><tr><td>江西</td></tr><tr><td>山东</td></tr><tr><td>河南</td></tr><tr><td>湖北</td></tr><tr><td>湖南</td></tr><tr><td>广东</td></tr><tr><td>广西</td></tr><tr><td>海南</td></tr><tr><td>重庆</td></tr><tr><td>四川</td></tr><tr><td>贵州</td></tr><tr><td>云南</td></tr><tr><td>西藏</td></tr><tr><td>陕西</td></tr><tr><td>甘肃</td></tr><tr><td>青海</td></tr><tr><td>宁夏</td></tr><tr><td>新疆</td></tr><tr><td>香港</td></tr><tr><td>澳门</td></tr><tr><td>其它</td></tr></tbody></table></div>
+            <div id="arrowCityList"><div class="arrowImg"></div></div>
+        </div>
+        <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtCity" value="北京" maxlength="200" id="txtCity" class="signup_input" style="width: 318px;" readonly="readonly" type="text">
+    </td>
+    <td>
+        <div class="qMsg">
+            <span>&nbsp;&nbsp;</span>
+        </div>
+    </td>
+    <td>
+        <div class="popup" style="display: none;">
+            <div class="divTitleLiveHelp">注意</div>
+            <span id="Label16" class="popup_tip" style="display: none;">请选择您所在的省市或自治区。</span>
+            <div class="divLiveHelp">
+                <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
+                    需要帮助吗？</a>
+            </div>
+        </div>
+    </td>
+</tr>
+ -->
                     
-                    <tr>
-                        <td class="textfield_text" width="18%">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblPlaceOfBirth">出生地</span>:
-                        </td>
-                        <td class="redtext_normal" width="2%"></td>
-                        <td width="35%">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtPlaceOfBirth" value="中国" maxlength="50" id="txtPlaceOfBirth" disabled="disabled" class="aspNetDisabled" style="height: 26px; width: 322px;" type="text">
-                            
-                        </td>
-                        <td width="5%">&nbsp;&nbsp;
-                        </td>
-                        <td>&nbsp;&nbsp;
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textfield_text">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblZipCode">邮编:</span>
-                        </td>
-                        <td class="redtext_normal">*
-                        </td>
-                        <td>
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtZipCode" value="100000" maxlength="6" id="txtZipCode" class="signup_input" type="text">
-                        </td>
-                        <td>
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="Label17" class="popup_tip" style="display: none;">请输入您的邮编。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
                     <tr>
                         <td class="textfield_text">&nbsp;
                         </td>
                         <td>&nbsp;
                         </td>
                         <td>
-                            <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" >保存</a>
+                            <a id="ChangeInfo" onclick="ChangeInfo()" class="Btn Btn_floatLeft blueMedBtn" >保存</a>
                         </td>
                     </tr>
                 </tbody></table>
@@ -1695,142 +1238,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 </div>
 
 <!-- 百乐城帐号修改 -->
- <div id="IMacc" class="acc_manage_content" style="display: none;">
-            
-            
- 
 
-    <div id="BaseMainContent_MainContent_MemberMainContent_UpdatePasswordUpdatePanel">
-	
-            <div id="BaseMainContent_MainContent_MemberMainContent_divSearchLoading" class="searchLoadingImg">
-                <img alt="" src="../lib/images/loading.gif" width="32" height="32">
-            </div>
-            <div class="cl">
-                &nbsp;</div>
-            <div class="blue_bar">
-                <div class="text_bluebar">
-                    百乐城账户</div>
-                <a class="Btn" id="liveChatBtn" href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp',
-1020); return false;">
-                    <div class="liveChatMedBtn">
-                        在线客服
-                    </div>
-                </a>
-            </div>
-            <div class="cl">
-                &nbsp;</div>
-            <div id="divMsg">
-                <span id="currentMsg"></span>
-            </div>
-            <div class="table">
-
-                <table width="100%" cellspacing="0" cellpadding="0" border="0">
-
-                    <tbody><tr>
-                        <td class="textfield_text" width="32%">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblIMCasinoUsername">百乐城用户名:</span>
-                        </td>
-                        <td class="redtext_normal " width="2%">
-                            &nbsp;
-                        </td>
-                        <td class="splForChrome" width="35%">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtIMCasinoUsername" value="Bkmyxif" maxlength="20" id="txtIMCasinoUsername" disabled="disabled" class="aspNetDisabled signup_input" type="text">
-                        </td>
-                        <td width="3%">
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td width="28%">
-                            <div class="popup" style="display: none;">
-                                <div class="divTitleLiveHelp">&nbsp;</div>
-                                &nbsp;
-                                <div class="divLiveHelp">&nbsp;</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textfield_text">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblNewPassword">新的密码:</span>
-                        </td>
-                        <td class="redtext_normal">
-                            *
-                        </td>
-                        <td class="splForChrome">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtNewPassword" maxlength="20" id="txtNewPassword" class="signup_input" type="password">
-                        </td>
-                        <td>
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none; background: transparent url(&quot;images/bluebox.png&quot;) no-repeat scroll 0px 0px; top: 358px;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="Label3" class="popup_tip" style="display: block;">请输入您要设置的新密码。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a></div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textfield_text">
-                            <span id="BaseMainContent_MainContent_MemberMainContent_lblConfirmPassword">确认百乐城密码:</span>
-                        </td>
-                        <td class="redtext_normal">
-                            *
-                        </td>
-                        <td class="splForChrome">
-                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtConfirmPassword" maxlength="20" id="txtConfirmPassword" class="signup_input" type="password">
-                        </td>
-                        <td>
-                            <div class="qMsg">
-                                <span>&nbsp;&nbsp;</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="popup" style="display: none; background: transparent url(&quot;images/bluebox.png&quot;) no-repeat scroll 0px 0px; top: 398px;">
-                                <div class="divTitleLiveHelp">注意</div>
-                                <span id="Label5" class="popup_tip" style="display: block;">请再次输入您的新密码。</span>
-                                <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a></div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            &nbsp;
-                        </td>
-                        <td>
-                            &nbsp;
-                        </td>
-                        <td>
-                            <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" >提交</a>
-                        </td>
-                    </tr>
-                </tbody></table>
-                <div class="reminder">
-                    <span style="font-size: 22px; font-weight: bold; display: block; padding-top: 24px; text-align: center;">
-                        温馨提示
-                    </span>
-                    <span style="width: 211px; display: block; padding-left: 27px; padding-top: 12px; height: 90px;">
-                        若您的PT账户被锁于PT客户端下载版，请及时联系在线客服解锁，并在解锁后重置密码.
-                    </span>
-                    <div style="text-align: left; padding-left: 35px; padding-top: 15px;">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;" style="color: white;">
-                                        需要帮助吗？</a></div>
-                </div>
-            </div>
-            <div class="requiredInfo">
-                <span class="redtext_normal">*</span>必须填写所有信息。
-            </div>
-        
-</div>
-
-
-</div>
 
 <style>
 .lang-zh-CN .reminder {
@@ -1844,6 +1252,110 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     width: 255px;
 }
 </style>
+<!-- 查看银行资料 -->
+
+<div id="LookbankDetails" style="display: none;">
+        <table class="myform" style="padding-top: 20px;">
+                                <tbody><tr>
+                                    <td class="textfield_text" width="33%">
+                                        <span id="BaseMainContent_MainContent_MemberMainContent_lblBankName">银行名称</span>:
+                                    </td>
+                                    <td width="2%">
+                                    </td>
+                                    <td width="50%">
+                                        <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$lblDisplayBankName" value="" id="DisplayBankName" disabled="disabled" class="aspNetDisabled" style="height:30px;width:318px;" type="text">
+                                    </td>
+                                </tr>
+                                  
+                                <tr>
+                                    <td class="textfield_text">
+                                        <span id="BaseMainContent_MainContent_MemberMainContent_lblBankAddress">银行地址</span>:
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$lblDisplayBankAddress" id="DisplayBankAddress" disabled="disabled" class="aspNetDisabled" style="height:30px;width:318px;" type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="textfield_text">
+                                        <span id="BaseMainContent_MainContent_MemberMainContent_lblCountry">国家</span>:
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$lblDisplayCountry" id="DisplayCountry" disabled="disabled" class="aspNetDisabled" style="height:30px;width:318px;" type="text">
+                                    </td>
+                                </tr>       
+                                <tr>
+                                    <td class="textfield_text">
+                                        <span id="BaseMainContent_MainContent_MemberMainContent_lblProvince">省/自治区</span>:
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$lblDisplayProvince" value="" id="DisplayProvince" disabled="disabled" class="aspNetDisabled" style="height:30px;width:318px;" type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="textfield_text">
+                                        <span id="lblCity">城市／城镇</span>:
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$lblDisplayCity" value="" id="DisplayCity" disabled="disabled" class="aspNetDisabled" style="height:30px;width:318px;" type="text">
+                                    </td>
+                                </tr>
+                                  
+                                <tr>
+                                    <td class="textfield_text">
+                                        <span id="BankAccountNumber">银行账号</span>:
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$lblDisplayBankAccountNumber" value="" id="BankAccountNumber" disabled="disabled" class="aspNetDisabled" style="height:30px;width:318px;" type="text">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="textfield_text">
+                                        <span id="BankBranch">分行</span>:
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$lblDisplayBankBranch" value="" id="BaseMainContent_MainContent_MemberMainContent_lblDisplayBankBranch" disabled="disabled" class="aspNetDisabled" style="height:30px;width:318px;" type="text">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <div class="Btn_med_width">
+                                            
+                                                <button type="button" class="blueMedBtn" id="removeaccount" onclick="RemoveBank()">
+                                                    移除账户
+                                                </button type="button">
+
+                                            
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                    </td>
+                                </tr>
+</tbody></table>
+   </div>
+
+
+
 <!-- 银行资料 -->
         <div id="bankDetails" class="acc_manage_content" style="display: none;">
             
@@ -1894,23 +1406,19 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                                     </td>
                                     <td class="tdWidthCN" style="padding-left: 10px;">
                                         <a id="BaseMainContent_MainContent_MemberMainContent_btnSetDefaultDeposit" class="Btn Btn_floatLeft_special" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$btnSetDefaultDeposit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                                                <div class="blueMedBtn">
+                                                <button class="blueMedBtn">
                                                     设置默认
-                                                </div>
+                                                </button>
                                         </a>
                                     </td>
                                     <td style="padding-left: 0px; text-align: left;" width="15%">
                                         <a id="BaseMainContent_MainContent_MemberMainContent_btnViewDeposit" class="Btn Btn_floatLeft_special" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$btnViewDeposit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                                                <div class="whiteMedBtn">
+                                                <button class="whiteMedBtn">
                                                     查看
-                                                </div>
+                                                </button>
                                         </a>
                                     </td>
-                                        
-                                            
-                                            
-                                        
-                                   
+                     
                                 </tr>
                                 <tr>
                                     <td class="textfield_text">
@@ -1920,56 +1428,56 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                                         :
                                     </td>
                                     <td>
-                                        <select name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$ddlWithdrawalAccountList" id="BaseMainContent_MainContent_MemberMainContent_ddlWithdrawalAccountList" class="signup_input" style="height: 26px; width: 350px;">
-			<option value="-1">请选择</option>
-			<option selected="selected" value="478698">中国民生银行-6226220705449832</option>
+                                        <select name="AccountList" id="AccountList" class="signup_input" style="height: 26px; width: 350px;">
+			                             <option value="-1">请选择</option>
+			
 
 		</select>
                                     </td>
                                     <td style="padding-left: 10px;">
-                                        <a id="BaseMainContent_MainContent_MemberMainContent_btnSetDefaultWithdrawal" class="Btn Btn_floatLeft_special" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$btnSetDefaultWithdrawal&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                                                <div class="blueMedBtn">
+                                        
+                                                <button type="button" class="blueMedBtn" onclick="btnSetDefault()">
                                                     设置默认
-                                                </div>
-                                        </a>
+                                                </button type="button">
+                                        
                                     </td>
                                     <td>
-                                        <a id="BaseMainContent_MainContent_MemberMainContent_btnViewWithdrawal" class="Btn Btn_floatLeft_special" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$btnViewWithdrawal&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                                                <div class="whiteMedBtn">
+                                        
+                                                <button type="button" style="margin:0" class="whiteMedBtn" id="chakan" onclick="LookUserBakeInfo()">
                                                     查看
-                                                </div>
-                                        </a>
+                                                </button type="button">
+                                        
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="textfield_text">
-                                        <span id="BaseMainContent_MainContent_MemberMainContent_lblSDWithdrawalAccList" align="left">大额快速提款账户列表</span>
-                                    </td>
-                                    <td>
-                                        :
-                                    </td>
-                                    <td>
-                                        <select name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$ddlSDWithdrawalAccountList" id="BaseMainContent_MainContent_MemberMainContent_ddlSDWithdrawalAccountList" class="signup_input" style="height: 26px; width: 350px;">
-			<option value="-1">请选择</option>
-			<option selected="selected" value="478698">中国民生银行-6226220705449832</option>
+<!--                                 <tr>
+    <td class="textfield_text">
+        <span id="BaseMainContent_MainContent_MemberMainContent_lblSDWithdrawalAccList" align="left">大额快速提款账户列表</span>
+    </td>
+    <td>
+        :
+    </td>
+    <td>
+        <select name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$ddlSDWithdrawalAccountList" id="BaseMainContent_MainContent_MemberMainContent_ddlSDWithdrawalAccountList" class="signup_input" style="height: 26px; width: 350px;">
+            <option value="-1">请选择</option>
+            <option selected="selected" value="478698">中国民生银行-6226220705449832</option>
 
-		</select>
-                                    </td>
-                                    <td style="padding-left: 10px;">
-                                        <a id="BaseMainContent_MainContent_MemberMainContent_LinkButton1" class="Btn Btn_floatLeft_special" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$LinkButton1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                                                <div class="blueMedBtn">
-                                                    设置默认
-                                                </div>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a id="BaseMainContent_MainContent_MemberMainContent_btnViewSDWithdrawal" class="Btn Btn_floatLeft_special" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$btnViewSDWithdrawal&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                                                <div class="whiteMedBtn">
-                                                    查看
-                                                </div>
-                                        </a>
-                                    </td>
-                                </tr>
+        </select>
+    </td>
+    <td style="padding-left: 10px;">
+        <a id="BaseMainContent_MainContent_MemberMainContent_LinkButton1" class="Btn Btn_floatLeft_special" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$LinkButton1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                <div class="blueMedBtn">
+                    设置默认
+                </div>
+        </a>
+    </td>
+    <td>
+        <a id="BaseMainContent_MainContent_MemberMainContent_btnViewSDWithdrawal" class="Btn Btn_floatLeft_special" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$btnViewSDWithdrawal&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                <div class="whiteMedBtn">
+                    查看
+                </div>
+        </a>
+    </td>
+</tr> -->
                             </tbody></table>
                         </div>
                     </div>
@@ -1982,421 +1490,11 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     </div>
 <!-- 自我限制 -->
 
-        <div id="SelfExclusion" class="acc_manage_content" style="display: none;">
-		<div id="BaseMainContent_MainContent_MemberMainContent_UpdateSelfExclusionUpdatePanel">
-    
-            <div id="BaseMainContent_MainContent_MemberMainContent_divSearchLoading" class="searchLoadingImg">
-                <img alt="" src="../lib/images/loading.gif" width="32" height="32">
-            </div>
-            <div class="cl">
-                &nbsp;</div>
-            <div class="blue_bar">
-                <div class="text_bluebar">
-                    自我限制</div>
-                <a class="Btn" id="liveChatBtn" href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp',
-1020); return false;">
-                    <div class="liveChatMedBtn">
-                        在线客服
-                    </div>
-                </a>
-            </div>
-            <div class="cl">
-                &nbsp;</div>
-            <div id="divMsg">
-                <span id="currentMsg"></span>
-            </div>
-            <div class="content">
-                <div style="padding: 20px 19%;">
-                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                        <tbody><tr>
-                            <td class="textfield_text" width="20%">
-                                <span id="BaseMainContent_MainContent_MemberMainContent_lblStatus">状态</span>
-                            </td>
-                            <td width="4%">
-                                :
-                            </td>
-                            <td width="70%">
-                                <div class="ckSelfExl">
-                                    <input id="BaseMainContent_MainContent_MemberMainContent_chkStatus" name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$chkStatus" onclick="ToggleEnabled  ();" type="checkbox">
-                                </div>
-                            </td>
-                            <td width="10%">
-                                <div class="qMsg">
-                                    <span>&nbsp;&nbsp;</span>
-                                </div>
-                            </td>
-                            <td width="27%">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="textfield_text">
-                                <span id="BaseMainContent_MainContent_MemberMainContent_lblBetLimit">转账限制</span>
-                            </td>
-                            <td>
-                                :
-                            </td>
-                            <td>
-                                <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtBetLimit" maxlength="6" id="txtBetLimit" class="aspNetDisabled" autocomplete="off" style="height: 25px; width: 318px;" disabled="disabled" type="text">
-                            </td>
-                            <td>
-                                <div class="qMsg">
-                                    <span>&nbsp;&nbsp;</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="popup" style="display:block; background: transparent url(&quot;images/bluebox.png&quot;) no-repeat scroll 0px 0px; top: 346px;">
-                                    <div class="divTitleLiveHelp">注意</div>
-                                    <span id="Label1" class="popup_tip" style="display: block;">请输入您要转账的金额。</span>
-                                    <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="textfield_text">
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                <div class="divborder">
-                                    注：此限定将在7日内，将全部金额转至产品账户内.
-                                </div>
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="textfield_text">
-                                <span id="BaseMainContent_MainContent_MemberMainContent_lblSelfExclusion">行为限定设置</span>
-                            </td>
-                            <td>
-                                :
-                            </td>
-                            <td>
-                                <table id="rdlSelfExclusion" class="aspNetDisabled">
-        <tbody><tr>
-            <td><span class="aspNetDisabled"><input id="rdlSelfExclusion_0" name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$rdlSelfExclusion" value="1" disabled="disabled" type="radio"><label for="rdlSelfExclusion_0">请勿让我在未来7天内登录</label></span></td>
-        </tr><tr>
-            <td><span class="aspNetDisabled"><input id="rdlSelfExclusion_1" name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$rdlSelfExclusion" value="2" disabled="disabled" type="radio"><label for="rdlSelfExclusion_1">请勿让我在未来90天内登录</label></span></td>
-        </tr>
-    </tbody></table>
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                <div class="popup" style="display: block;">
-                                  
-                                    <span id="Label2" class="popup_tip" style="display: none;">您也可以联系在线客服寻求建议与帮助。</span>
-                                    <div class="divLiveHelp">
-                                    <a href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="textfield_text">
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                <div class="divborder">
-                                    注：如果您无法控制个人的投注行为， 我们可以协助您在未来的 7 日或是 3个 月时间内启用登入限制。<br>此外，您也可以联系我们的客服专员寻求建议与帮助。
-                                </div>
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                <div id="BaseMainContent_MainContent_MemberMainContent_divSubmit">
-                                <a id="BtnSubmit" class="Btn Btn_floatLeft" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$BtnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                                    <div class="blueMedBtn">
-                                        更新
-                                    </div>
-                                </a>
-                                </div>
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                            </td>
-                        </tr>
-                    </tbody></table>
-                </div>
-            </div>
-    
-</div> 
-		</div>
-
-   <!-- 反水查询 -->
- <div id="RebateCalculator" class="acc_manage_content" style="display: none;">
-    <div id="BaseMainContent_MainContent_MemberMainContent_divSearchLoading" class="searchLoadingImg">
-        <img alt="" src="../lib/images/loading.gif" width="32" height="32">
-    </div>
-    <div class="cl">&nbsp;</div>
-    <div class="blue_bar">
-        <div class="text_bluebar">
-            返水查询
-        </div>
-        <a class="Btn" id="liveChatBtn" href="#" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp',1020); return false;">
-            <div class="liveChatMedBtn">
-                在线客服
-            </div>
-        </a>
-    </div>
-    <div class="cl">&nbsp;</div>
-    <div class="content">
-        <div style="padding: 25px 35px;">
-            <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                <tbody>
-                    <tr>
-                        <td>
-                            <span>乐天堂会员可在此查询您的有效流水和所获返水，若想查询关于某优惠的详情，您只须根据体提示进行操作选择即可.</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <div class="blue_Header">
-        <div class="text_blueHeader">
-            流水总计
-        </div>
-    </div>
-
-    <div style="padding: 25px 35px;">
-        <table width="500px" cellspacing="0" cellpadding="0" border="0">
-            <tbody>
-                <tr>
-                    
-                    <td>
-                        开始日期
-                    </td>
-                    
-                    <td>
-                     
-					<input type="text" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}'})" id="logmin" class="input-text Wdate" style="width:150px;">	
-
-                    </td>
-                    
-                    <td>
-                        至
-                    </td>
-                    
-                    <td>
-					<input type="text" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d'})" id="logmax" class="input-text Wdate" style="width:150px;">
-                    </td>
-                    <td>
-                        <div id="WaterBtnSearch" class="Btn Btn_floatLeft blueMedBtn">查询</div>
-                    </td>
-                    
-                   
-                    <td style="position: relative;">
-                        <div class="InfoButton"></div>
-                        <div class="InfoSummary" style="display: none;">
-                            
-                                    <table class="RebateSummary">
-                                        <tbody><tr>
-                                            <td class="FirstChildTR">游戏类型</td>
-                                            <td colspan="11" class="FirstChildTR" style="text-align: center;">所含平台/游戏</td>
-                                        </tr>
-                                
-                                    <tr>
-                                        <td class="FirstChildTR" rowspan="2">真人娱乐场</td>
-                                        
-                                                
-                                                <td>
-                                                    至尊堂(AG)
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    北方堂真人(GD)
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    东方堂(EA)
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    波音堂(波音)
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    隆运堂(AB)
-                                                </td>
-                                            
-                                                </tr><tr>
-                                                <td>
-                                                    凯旋堂(OPUS)
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    南方堂(CP)
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    百乐城真人(PT)
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    沙龙厅(SAG)
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    太阳厅(申博)
-                                                </td>
-                                            
-                                        
-                                    </tr>
-                                
-                                    <tr>
-                                        <td class="FirstChildTR" rowspan="1">老虎机</td>
-                                        
-                                                
-                                                <td>
-                                                    乐游戏
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    百乐城老虎机(PT)
-                                                </td>
-                                            
-                                        
-                                    </tr>
-                                
-                                    <tr>
-                                        <td class="FirstChildTR" rowspan="1">彩票</td>
-                                        
-                                                
-                                                <td>
-                                                    IM欢乐彩
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    LB 优乐彩
-                                                </td>
-                                            
-                                        
-                                    </tr>
-                                
-                                    <tr>
-                                        <td class="FirstChildTR" rowspan="1">体育</td>
-                                        
-                                                
-                                                <td>
-                                                    体育博彩
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    IM体育
-                                                </td>
-                                            
-                                                
-                                                <td>
-                                                    必发交易
-                                                </td>
-                                            
-                                        
-                                    </tr>
-                                
-                                    </tbody></table><br>
-                                
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-        <div class="summary_container">
-        <div class="RebateSummaryContainer" style="padding: 0px 23px 25px;">
-        </div>
-    
-        <div class="selfCheck_girl">
-        </div>
-        <style>.selfCheck_girl { background: transparent url("images/self-girl.png") no-repeat scroll 0px -4px; width: 235px; height: 259px; position:relative; float: right;top:-60px;}</style>
-    </div>
-
-    <div style="padding: 23px;">
-        *所有返水仅按有效流水计算,返水派彩账户详情请查询具体优惠规则与条款<br>
-*为避免重复计算,所有数据为每4小时统一更新一次,若有任何疑问请咨询乐天堂24小时<a onclick="javascript:popUpWindowManager('#', 'LiveHelp',1020); return false;">在线客服</a>
-<br>
-*若会员意查询某特定优惠的所获返水,请使用下方"返水详情查询"
-    </div>
-
-    <div class="blue_Header">
-        <div class="text_blueHeader">
-            返水详情查询
-        </div>
-    </div>
-    
-    <div style="padding: 25px 35px;">
-    
-        <div class="detailsDate">
-                选择您想要查询的优惠活动后，点击查询按钮
-        </div>
-        <br>
-        <table width="886px" cellspacing="0" cellpadding="0" border="0">
-            <tbody>
-                <tr>
-                    <td>
-                        <select name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$ddlRebate" id="ddlRebate" tabindex="16" class="signup_input" style="height: 25px; width: 750px;">
-    <option value="327">【非钻石会员】真人娱乐每日返水，最高可达0.38%，2888元</option>
-    <option value="329">【非钻石会员】真人娱乐每周返水0.18%,最高可达1688元</option>
-    <option value="335">彩票每日返水，最高0.58%，3888元!</option>
-    <option value="337">【老虎机】乐游戏每日返水,最高可达0.38%,8888元</option>
-
-</select>
-                    </td>
-                    <td>
-                        <div id="BtnSearch" class="Btn Btn_floatLeft blueMedBtn">查询</div>
-                    </td>
-
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="RebateDetailsContainer">
-        </div>
-
-        <div class="detailsDate">
-            *尊敬的会员,这里将仅显示最新的记录:
-例:若会员在8月10日选择查询"娱乐场每日返水"这项优惠的详情,系统将显示"上期返水额"(8月9日),及"本期返水额"(8月10日)的数据信息. <br>
-*若需获取关于本优惠更详细的详情,请访问我们的促销版块
-        </div>
-    </div>
-</div>
-    
-
-
-
-
-
 
 <script>	   //导航按钮切换
 	     
     $('.acc_manage_menu td').click(function(){
+         $("#LookbankDetails").hide();
         $(this).addClass('selected').siblings().removeClass('selected')
         
     })
@@ -2404,6 +1502,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
     //内容切换
     $('.acc_manage_menu td').click(function(){
+        $("#LookbankDetails").hide();
         var cur = $(this).index();
         $('.container_manageAcc .acc_manage_content').eq(cur).show().siblings('.acc_manage_content').hide();
     })
@@ -2495,12 +1594,12 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                     'ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtCurrentPassword': {
                         required: true,
                         regex: "^[a-zA-Z0-9]+$",
-                        minlength: 6
+                        
                     },
                     'ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtNewPassword': {
                         required: true,
                         regex: "^[a-zA-Z0-9]+$",
-                        minlength: 6
+                        
                     },
                     'ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtConfirmPassword': {
                         required: true,
@@ -2516,11 +1615,11 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                             if (txtCPW.length == 0) 
                                 validationMessageCPW = "当前密码不能为空。";
                             else 
-                                validationMessageCPW = "密码必须包含6-12个字符，字符只限于使用字母或数字,不允许使用标点符号、空格、或下划线。";
+                                validationMessageCPW = "密码必须包含4-12个字符，字符只限于使用字母或数字,不允许使用标点符号、空格、或下划线。";
                             return validationMessageCPW;
                         },
-                        regex: "密码必须包含6-12个字符，字符只限于使用字母或数字,不允许使用标点符号、空格、或下划线。",
-                        minlength: "密码必须包含6-12个字符，字符只限于使用字母或数字,不允许使用标点符号、空格、或下划线。"
+                        regex: "只限于使用字母或数字,不允许使用标点符号、空格、或下划线。",
+                        minlength: "只限于使用字母或数字,不允许使用标点符号、空格、或下划线。"
                     },
                     'ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtNewPassword': {
                         required: function(error) {
@@ -2530,11 +1629,11 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                             if (txtNPW.length == 0) 
                                 validationMessageNPW = "新密码不能为空。";
                             else 
-                                validationMessageNPW = "密码必须包含6-12个字符，字符只限于使用字母或数字,不允许使用标点符号、空格、或下划线。";
+                                validationMessageNPW = "只限于使用字母或数字,不允许使用标点符号、空格、或下划线。";
                             return validationMessageNPW;
                         },
-                        regex: "密码必须包含6-12个字符，字符只限于使用字母或数字,不允许使用标点符号、空格、或下划线。",
-                        minlength: "密码必须包含6-12个字符，字符只限于使用字母或数字,不允许使用标点符号、空格、或下划线。"
+                        regex: "只限于使用字母或数字,不允许使用标点符号、空格、或下划线。",
+                        minlength: "只限于使用字母或数字,不允许使用标点符号、空格、或下划线。"
                     },
                     'ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtConfirmPassword': {
                         required: "请再次确认您的新密码。",
@@ -3175,5 +2274,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         }
     </script>
  <script type="text/javascript" src="../lib/js/scrollAd.js"> </script>
+ <script type="text/javascript" src="../lib/js/cookie.js"> </script>
 </body>
 </html>

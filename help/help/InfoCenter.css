@@ -133,7 +133,7 @@ table.tftable td.Subject { font-size: 12px; border-width: 1px; padding: 8px; bor
 table.tftable td.SubjectDataColumn { font-size: 12px; border-width: 1px; padding: 8px; border-style: solid; border-color: rgb(114, 158, 165); font-weight: bold; color: rgb(0, 63, 127); width: 100px; }
 table.tftable td.Span { font-size: 12px; border-width: 1px; padding: 8px; border-style: solid; border-color: rgb(114, 158, 165); text-align: center; width: 150px; }
 .menu_b { margin-left: 5px; padding-top: 8px; width: 223px; border: 1px solid rgb(219, 219, 219); margin-bottom: 8px; }
-.aff_icon1_cn span { height: 21px; background: transparent url("logo_qq.png") no-repeat scroll 0px 0px; line-height: 16px; }
+.aff_icon1_cn span { height: 21px; line-height: 16px; }
 .aff_icon1_cn span:hover { background-position: 0px -22px; }
 .aff_icon1_th span { height: 20px; background: transparent url("logo_line.png") no-repeat scroll 0px 0px; line-height: 20px; }
 .aff_icon1_th span:hover { background-position: 0px -20px; }

@@ -1,4 +1,4 @@
-
+<script type="text/javascript" src="../lib/js/floatgetimg.js"> </script>
 <div id="Menu" style="width:145px;">
 
     <script type="text/javascript" language="javascript">
@@ -78,7 +78,7 @@
 
             $("#BtnWCSubmit").click(function () {
                 
-                EnsureLogin(window.location.href);
+              /*  EnsureLogin(window.location.href);*/
                 
             });
 
@@ -279,36 +279,7 @@
         </div>
     </div>
     <!--End: Quick WechatPay OnlineAlipay-->
-    
-    <!--Start: Fun88 APK Download-->
-    <div>            
-        <div>
-            <a href="javascript:void(0)" id="fun88APK_OpenMenu" class="dy-unit" onclick="genereteApkQr(); $('#fun88APK_Container').show(); $('#fun88APK_OpenMenu').hide(); $('#quickContactContainer').hide(); $('#quickContact_OpenMenu').show();$('#WCP_Container').hide(); $('#OpenWCP').show()">
-                <div class="button_layout fun88APK_OpenMenu_zh"></div>
-            </a>
-        </div>     
-        <div id="fun88APK_Container" style="display: none;">
-            <a href="javascript:void(0)" id="fun88APK_CloseMenu" class="dy-unit" onclick="$('#fun88APK_Container').hide(); $('#fun88APK_OpenMenu').show();">
-                <div class="button_layout fun88APK_CloseMenu"></div>
-            </a>
-            <div style="margin-top: 13px;">
-                <div id="qr_generator">
-                    <img id="fun88apk_QR" src="../lib/images/QR.png" style="margin: 10px 15px 10px 18px" width="110" height="110" alt="apkQrCode">
-                </div>
-            </div>
-            <div id="fun88apk_dl_btn" style="margin-top: 144px;">
-                <div>
-                    <a id="fun88apk_dl_zh" style="margin: -5px auto 5px auto;display:block; width: 135px; height: 32px; cursor: pointer;" onclick="sendAndroidApkGA('Mobile APK','Desktop'); window.open(this.href, 'newwindow', 'width=420, height=250'); return false;"> </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <!--END: Fun88 APK Download-->
-
-    
-
-   
+  
 
     <!--Start: Quick Contact-->
     <div> 
@@ -317,38 +288,19 @@
                 <div class="button_layout quickContact_OpenMenu"></div>
             </a>
         </div> 
-        <div id="quickContactContainer" style="display: none;">
+        <div id="quickContactContainer" style="display: none;height:300px;">
             <a href="javascript:void(0);" id="quickContact_CloseMenu" onclick="$('#quickContact_OpenMenu').show(); $('#quickContactContainer').hide();" class="dy-unit">
                 <div class="button_layout"></div>
             </a>
-            <img src="../lib/images/girl.png" style="width: 124px; height: 203px; margin: 10px 10px 0px 10px;"  id="imgLiveChatGirl">
+            <img src="" style="width: 124px; height: 203px; margin: 10px 10px 0px 10px;"  id="imgLiveChatGirl">
 
-            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('#', 'newwindow', 'width=420, height=250'); return false;" href="#/">
+            <a id="quickContactOnline" class="dy-unit" href="#/">
                 <div class="quickcontactbtn quickcontactbtn1">
                 </div>
             </a>
 
-            <a id="quickContactDownload" class="dy-unit" target="_blank" href="http://www.10010388.com/zh-CN/LiveChat" onclick="sendQuickContactGA('QuickContactDownload');">
-                <div class="quickcontactbtn quickcontactbtn2">
-                </div>
-            </a>
+         
 
-            <div class="quickcontacttext" style="padding-bottom: 4px;">
-                
-                <b>客服热线</b>
-                
-                <br>
-                +86 400 890 0398
-            </div>
-            <div class="quickcontacttext" id="quickContactSelId">
-                
-                <b>客服邮箱</b>
-                <br>
-                
-                <a id="quickContactMail" class="quickcontactemailtext dy-unit" href="mailto:cs@fun88.com" onclick="sendQuickContactGA('QuickContactMail');">
-                    cs@fun88.com
-                </a>
-            </div>
         </div>
     </div>
     <!--END: Quick Contact-->

@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!-- saved from url=(0034)http://www.10010388.com/zh-CN/Keno -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb" data-livestyle-extension="available" class="yui3-js-enabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb" data-livestyle-extension="available" class="yui3-js-enabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
 	
 </title>
     <link href="../lib/css/bundleCss.css" rel="stylesheet" type="text/css">
@@ -695,7 +696,19 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         }
     };
     $(document).ready(function () {  
+/*Title*/
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getWebsitesetting',
+         data: {},
+         success: function(data) {
+            var titlename = data.data.title;
+            $("title").html(titlename);
+         },
+         error: function() {
 
+         }
+     });
 
         //银行菜单
         var uiUN = $("#UserName");
@@ -798,12 +811,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     <div id="container" style="margin-top:40px">
         <!-- Main -->
         <div id="main">
-            
-            <div id="divVideoButtonContainer">
-                <div id="divVideoButton"><a href="Keno/VideoTeaching/index.html" id="BaseMainContent_MainContent_btnVideoKenoTutorial" target="_self"><span id="imgKenoVideo" title="点击观看快乐彩教学视频"></span></a></div>
-            </div>
-            
-
+  
             <div id="header">
 
               
@@ -813,10 +821,6 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
     <div class="swiper-wrapper" >
 
-        <div class="swiper-slide"><img src="Keno/banner_keno_01.jpg" /></div>
-        <div class="swiper-slide"><img src="Keno/banner_keno_02.jpg" /></div>
-        <div class="swiper-slide"><img src="Keno/banner_keno_03.jpg" /></div>
-        <div class="swiper-slide"><img src="Keno/banner_keno_04.jpg" /></div>
     </div>
 
     
@@ -835,98 +839,104 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 
  $(document).ready(function () {
         
-/*        getswiperpic();
-        
-        function getswiperpic(){
-        $.ajax({
-        dataType:'json',
-        type:'GET',
-        data:{},        
-        url: AjaxURL+'',
-        success:function(data) {
-                //
-        for (var i = 0;i<data.data.length; i++) {
-                                            
-            var swiperpic ='<div class="swiper-slide"><img src="'+data.data[i].imgurl+'"/></div>'
-                
-            $(".swiper-wrapper").append(swiperpic);
-        }
-        
-        }
-        });
-        };                 
-   */
+    var AjaxUrl = 'http://59.110.10.115';
 
-     /*   <!-- 实例化轮播图 -->*/
-  var mySwiper = new Swiper ('.swiper-container', {
-    direction: 'horizontal',
-    loop: true,
-    autoplay: 3000,//可选选项，自动滑动
-   
-    height: 420,//你的slide高度
-    
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    // 如果需要分页器
-    pagination: '.pagination',
-    paginationClickable :true,
-    grabCursor:true,
-/*    paginationElement : 'li',*/
+      $.ajax({
+         type: "GET",
+         url: AjaxUrl+'/fun/websiteInfo/getImgAdList?key=快乐彩轮播图',
+         data: {},
+         success: function(data) {             
+            for (var i = 0; i < data.data.adList.length ;i++) {
+                  var PicSrc = AjaxUrl+data.data.adList[i].imgUrl;
+                  var PicJul = data.data.adList[i].jmpUrl
+                  var FunkenoPic = '<div class="swiper-slide"><a herf="'+PicJul+'"><img src="'+PicSrc+'"/></a></div>'
+                  $(".swiper-wrapper").append(FunkenoPic);
+            }
+
+
+                /*   <!-- 实例化轮播图 -->*/
+               var mySwiper = new Swiper ('.swiper-container', {
+                   direction: 'horizontal',
+                   loop: true,
+                   autoplay: 3000,//可选选项，自动滑动
+                  
+                   height: 100,//你的slide高度
+                   
+                   nextButton: '.swiper-button-next',
+                   prevButton: '.swiper-button-prev',
+                   // 如果需要分页器
+                   pagination: '.pagination',
+                   paginationClickable :true,
+                   grabCursor:true,
+                  /*paginationElement : 'li',*/
         
-  })
+                });
+
+         },
+         error: function() {
+
+         }
+     });            
+
+
+
+
+      $.ajax({
+         type: "GET",
+         url: AjaxUrl+'/fun/websiteInfo/getImgAdList?key=欢乐彩按钮图',
+         data: {},
+         success: function(data) {             
+       
+                  var PicSrc = AjaxUrl+data.data.adList[0].imgUrl;
+                  $("#IMKenoA").attr("href",data.data.adList[0].jmpUrl);
+                 $("#imgIMKenoTitle").attr("src",PicSrc);
+         },
+         error: function() {
+
+         }
+     });  
+
+
+      $.ajax({
+         type: "GET",
+         url: AjaxUrl+'/fun/websiteInfo/getImgAdList?key=优乐彩按钮图',
+         data: {},
+         success: function(data) {             
+                  var PicSrc = AjaxUrl+data.data.adList[0].imgUrl;
+                  $("#LBKenoA").attr("href",data.data.adList[0].jmpUrl);
+                 $("#imgLBKenoTitle").attr("src",PicSrc);
+
+         },
+         error: function() {
+
+         }
+     });           
 
 }); 
  
   </script>
                 
                 <!-- START: IM Keno -->
-                <div class="rowButton" style="width: 50%; float: left; text-align:center;">
-                    <img id="imgIMKenoTitle" class="imageTitle" src="Keno/keno.png" width="205" height="47" alt="IM Keno">
-                    <a class="Btn zh-CNkenoBtn" href="javascript:void(0);" onclick="javascript:return EnterGameKeno('771', 0, memberCode, 0);">
-                        <span class="btnKeno">
-                            立刻下注</span>
-                    </a>
+                <div id="IMKeno" class="rowButton" style="width: 50%; float: left; text-align:center;">
+                    <a id="IMKenoA" href=""><img id="imgIMKenoTitle" class="imageTitle" src="Keno/keno.png" width="205" height="47" ></a>
+
                 </div>
                 <!-- END: IM Keno -->
 
                 <!-- START: LB Keno -->
-                <div class="rowButton" style="width: 50%; float: left; text-align:center;">
-                    <img id="imgLBKenoTitle" class="imageTitle" src="Keno/lbkeno.png" width="205" height="47" alt="LB Keno">
-                    <a class="Btn zh-CNkenoBtn" href="javascript:void(0);" onclick="javascript:return EnterGameLBKeno('1333', 0, memberCode, 0);">
-                        <span class="btnKeno">
-                            立刻下注</span>
-                    </a>
+                <div id="LBKeno" class="rowButton" style="width: 50%; float: left; text-align:center;">
+                    <a id="LBKenoA" href=""><img id="imgLBKenoTitle" class="imageTitle" src="Keno/lbkeno.png" width="205" height="47" ></a>
+
                 </div>
                 <!-- END: LB Keno -->
                 
             </div>
     
-
-            <div id="trendmap_box">
-                <div id="trendmap_header">
-                    <div id="header_left">
-                        <div id="trendmap_logo">
-                            <img src="Keno/trendmap_logo.png">
-                        </div>
-                        <div id="trendmap_label">
-                            <div class="bluefont_keno_en">
-                                <span id="BaseMainContent_MainContent_lblTrendsMap">走势图</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="trendmap_button">
-                        <a href="javascript: popUpTrendsMap('http://keno.10010388.com/trendsMap/keno.jsp?market=BJ&language=zh_CN&size=20');">
-                            <span id="BaseMainContent_MainContent_lblMoreDetails" class="Keno Button Text">走势详情</span></a>
-                    </div>
-
-                </div>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <div id="iframeContainer">
-                    <iframe id="frameTrendsMap" name="frameTrendsMap" src="../404/index.html"></iframe>
-                </div>
-            </div>
+<style>
+    .imageTitle{
+        cursor: pointer;
+    }
+</style>
         </div>
         <!-- END Main -->
         <div class="kenofooter_spacing"></div>
@@ -1417,7 +1427,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
             
         });
     </script>
-
+<script type="text/javascript" src="../lib/js/cookie.js"> </script>
 
    
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb" class="yui3-js-enabled">
 <head><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
-	忘记密码 | 在线体育博彩及足球赔率 - 乐天堂FUN88体育博彩与真人娱乐场
+	忘记密码
 </title>
     <link href="../lib/css/bundleCss.css" rel="stylesheet" type="text/css">
     
@@ -36,6 +36,7 @@
     <script type="text/javascript" src="master.js" async=""></script>
     <script type="text/javascript" src="../lib/js/master.payment.crawler.js" async=""></script>
     <script type="text/javascript" src="../lib/js/login.js"> </script>
+    <script type="text/javascript" src="forget.js"></script>
  <script>
 
     $(document).ready(function(){
@@ -548,10 +549,10 @@
                     }
                 },
                 messages: {
-                    'ctl00$ctl00$BaseMainContent$MainContent$txtEmail': {
+   /*                 'ctl00$ctl00$BaseMainContent$MainContent$txtEmail': {
                         required: "电子邮件地址不能为空。",
                         email: "电子邮箱格式无效。"
-                    },
+                    },*/
                     'ctl00$ctl00$BaseMainContent$MainContent$txtSecurityAnswer': {
                         required: "安全问题的答案不得为空。"
                     }
@@ -830,20 +831,13 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         
  
 
-    <div class="container_manageAcc borderEffect" style="margin-top:30px">
+    <div class="container_manageAcc borderEffect" style="margin-top:30px" id="savequestion">
         <div class="cl">
             &nbsp;</div>
         <div class="blue_bar">
             <div class="text_bluebar">
                 忘记密码</div>
-            <div class=" btn-bluebar">
-                <a class="Btn" id="liveChatBtn" href="#" onclick=" javascript:popUpWindowManager(this.href, 'LiveHelp',
-1020); return false;">
-                    <div class="liveChatMedBtn">
-                        在线客服
-                    </div>
-                </a>
-            </div>
+
         </div>
         <div class="cl">
             &nbsp;</div>
@@ -852,7 +846,8 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
         </div>
         <div class="table">
             <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                <tbody><tr>
+                <tbody>
+<!--                 <tr>
                     <td class="textfield_text" width="18%">
                         <span id="BaseMainContent_MainContent_lblEmail">您的电子邮箱:</span>
                     </td>
@@ -872,11 +867,27 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                             <div class="divTitleLiveHelp">注意</div>
                             <span id="Label1" class="popup_tip" style="display: none;">请输入您注册时填写的电子邮件地址。</span>
                             <div class="divLiveHelp">
-                                    <a href="http://helpcn.fun585.com/" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a></div>
+                            </div>
                         </div>
                     </td>
-                </tr>
+                </tr> -->
+                <tr>
+                    <td class="textfield_text">
+                        <span id="BaseMainContent_MainContent_lblSecurityQuestion">用户名：</span>
+                    </td>
+                    <td class="redtext_normal">
+                        *
+                    </td>
+                    <td>
+                    <input name="ctl00$ctl00$BaseMainContent$MainContent$txtSecurityAnswer" maxlength="50" id="username" class="signup_input" type="text">
+                    </td>
+                    <td>
+                        <div class="qMsg">
+                            <span>&nbsp;&nbsp;</span>
+                        </div>
+                    </td>
+
+                </tr>                
                 <tr>
                     <td class="textfield_text">
                         <span id="BaseMainContent_MainContent_lblSecurityQuestion">安全提问:</span>
@@ -885,32 +896,16 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         *
                     </td>
                     <td>
-                        <select name="ctl00$ctl00$BaseMainContent$MainContent$ddlSecurityQuestion" id="ddlSecurityQuestion" class="signup_input" style="height: 26px; width: 324px;">
-	<option value="-1">请选择</option>
-	<option value="1">母亲的名字？</option>
-	<option value="2">您最喜欢的书是？</option>
-	<option value="3">您最喜欢的宠物名字是？</option>
-	<option value="4">您最喜欢的电影是？</option>
-	<option value="5">您的爱好是？</option>
-	<option value="6">您最喜欢的体育队伍是？</option>
-	<option value="7">我的密码?</option>
+                      <select name="ctl00$ctl00$BaseMainContent$MainContent$ddlSecurityQuestion" id="ddlSecurityQuestion" class="signup_input" style="height: 26px; width: 324px;">
 
-</select>
+                        </select>
                     </td>
                     <td>
                         <div class="qMsg">
                             <span>&nbsp;&nbsp;</span>
                         </div>
                     </td>
-                    <td>
-                        <div class="popup" style="display: block; background: transparent url(&quot;bluebox.png&quot;) no-repeat scroll 0px 0px; top: 313px;">
-                            <div class="divTitleLiveHelp">注意</div>
-                            <span id="Label4" class="popup_tip" style="display: block;">请选择您的安全问题。安全问题和答案将被用来验证您的身份。</span>
-                            <div class="divLiveHelp">
-                                    <a href="http://helpcn.fun585.com/" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a></div>
-                        </div>
-                    </td>
+
                 </tr>
                 <tr>
                     <td class="textfield_text">
@@ -927,16 +922,43 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                             <span>&nbsp;&nbsp;</span>
                         </div>
                     </td>
-                    <td>
-                        <div class="popup" style="display: none; background: transparent url(&quot;bluebox.png&quot;) no-repeat scroll 0px 0px; top: 352px;">
-                            <div class="divTitleLiveHelp">注意</div>
-                            <span id="Label5" class="popup_tip" style="display: block;">请输入您的答案。</span>
-                            <div class="divLiveHelp">
-                                    <a href="http://helpcn.fun585.com/" onclick="javascript:popUpWindowManager(this.href, 'LiveHelp', 1020); return false;">
-                                        需要帮助吗？</a></div>
-                        </div>
-                    </td>
+
                 </tr>
+                    <tr>
+                        <td class="textfield_text">
+                            <span id="BNewPassword">新的密码:</span>
+                        </td>
+                        <td class="redtext_normal">
+                            *
+                        </td>
+                        <td class="splForChrome">
+                            <input name="ctl00$ctl00$ctl00$BaseMainContent$MainContent$MemberMainContent$txtNewPassword" maxlength="20" id="txtNewPassword" tabindex="2" class="signup_input" type="password">
+                        </td>
+                        <td>
+                            <div class="qMsg">
+                                <span>&nbsp;&nbsp;</span>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="textfield_text">
+                            <span id="ConfirmPassword">确认密码:</span>
+                        </td>
+                        <td class="redtext_normal">
+                            *
+                        </td>
+                        <td class="splForChrome">
+                            <input name="$txtConfirmPassword" maxlength="20" id="txtConfirmPassword" tabindex="3" class="signup_input" type="password">
+                        </td>
+                        <td>
+                            <div class="qMsg">
+                                <span>&nbsp;&nbsp;</span>
+                            </div>
+                        </td>
+
+                    </tr>
+
                 <tr>
                     <td>
                         &nbsp;
@@ -945,17 +967,17 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
                         &nbsp;
                     </td>
                     <td>
-                        <button id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" >提交</button>
+                        <button id="forgetPasswordBtn" class="Btn Btn_floatLeft blueMedBtn" type="button" onclick="forgetPasswordBtn1()">提交</button>
                     </td>
                 </tr>
             </tbody></table>
+
         </div>
         <div class="requiredInfo">
             <span class="redtext_normal">*</span>更改密码所必须的信息
         </div>
     </div>
 
-        
         <!-- Footer -->
         
 <div id="footer">

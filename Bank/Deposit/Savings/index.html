@@ -11,6 +11,8 @@
     <script  src="../../jquery.numeric.js" type="text/javascript"> </script>
     <script  src="../../jquery.validate.js " type="text/javascript"> </script>
     <script  src="../../../lib/js/jquery-migrate.js " type="text/javascript"> </script>
+    <script  src="Savings.js " type="text/javascript"> </script>
+  
 </head>
 <body topmargin="0" onload="parent.document.getElementById('rightBox2').height = document.body.scrollHeight > 500 ?document.body.scrollHeight+10:700;">
 
@@ -33,26 +35,10 @@
                 </td>
                 <td width="65%">
                     <div class="inputError">
-                        <select name="ctl00$ctl00$BaseMainContent$TransferMainContent$ddlAccFrom" id="ddlAccFrom" class="dllAcc" style="height:26px;width:240px;">
-	<option selected="selected" value="MAIN" class="walletMAIN">主账户</option>
-	<option value="SP" class="walletSP">体育博彩</option>
-	<option value="IPSB" class="walletIPSB">IM 体育</option>
-	<option value="BFR" class="walletBFR">必发交易</option>
-	<option value="GD" class="walletGD">北方堂 (GD)</option>
-	<option value="AG" class="walletAG">至尊堂 (AG)</option>
-	<option value="SAG" class="walletSAG">沙龙厅 (SAG)</option>
-	<option value="AB" class="walletAB">隆运堂 (欧博)</option>
-	<option value="SUN" class="walletSUN">太阳厅(申博太阳)</option>
-	<option value="EA" class="walletEA">东方堂 (EA)</option>
-	<option value="OPUS" class="walletOPUS">凯旋堂 (OPUS)</option>
-	<option value="BOY2" class="walletBOY2">波音堂 (波音)</option>
-	<option value="CP" class="walletCP">南方堂 (CP)</option>
-	<option value="PT" class="walletPT">百乐城 (PT)</option>
-	<option value="SLOT" class="walletSLOT">乐游戏</option>
-	<option value="PK" class="walletPK">欢乐彩 (IM)</option>
-	<option value="LBK" class="walletLBK">优乐彩 (LB)</option>
+                        <select name="ddlAccFrom" id="AccFrom" class="Acc" style="height:26px;width:240px;">
+            <option selected="selected" value="1" class="walletMAIN">主账户</option>
 
-</select>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -65,24 +51,9 @@
                 </td>
                 <td>
                     <div class="inputError">
-                        <select name="ctl00$ctl00$BaseMainContent$TransferMainContent$ddlAccTo" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$BaseMainContent$TransferMainContent$ddlAccTo\',\'\')', 0)" id="ddlAccTo" class="dllAcc" style="height:26px;width:240px;">
-	<option selected="selected" value="MAIN" class="walletMAIN">主账户</option>
-	<option value="SP" class="walletSP">体育博彩</option>
-	<option value="IPSB" class="walletIPSB">IM 体育</option>
-	<option value="BFR" class="walletBFR">必发交易</option>
-	<option value="GD" class="walletGD">北方堂 (GD)</option>
-	<option value="AG" class="walletAG">至尊堂 (AG)</option>
-	<option value="SAG" class="walletSAG">沙龙厅 (SAG)</option>
-	<option value="AB" class="walletAB">隆运堂 (欧博)</option>
-	<option value="SUN" class="walletSUN">太阳厅(申博太阳)</option>
-	<option value="EA" class="walletEA">东方堂 (EA)</option>
-	<option value="OPUS" class="walletOPUS">凯旋堂 (OPUS)</option>
-	<option value="BOY2" class="walletBOY2">波音堂 (波音)</option>
-	<option value="CP" class="walletCP">南方堂 (CP)</option>
-	<option value="PT" class="walletPT">百乐城 (PT)</option>
-	<option value="SLOT" class="walletSLOT">乐游戏</option>
-	<option value="PK" class="walletPK">欢乐彩 (IM)</option>
-	<option value="LBK" class="walletLBK">优乐彩 (LB)</option>
+<select name="AccTo" id="AccTo" class="dllAcc" style="height:26px;width:240px;">
+	<option selected="selected" value="1" class="walletMAIN">主账户</option>
+
 
 </select>
                     </div>
@@ -97,7 +68,7 @@
                 </td>
                 <td>
                     <div class="inputError">
-                        <input name="ctl00$ctl00$BaseMainContent$TransferMainContent$txtAmount" maxlength="10" id="txtAmount" class="signup_input" oncopy="return false;" onpaste="return false" style="width:238px;" placeholder="建议输入1至1,000,000间任意整数金额" type="text">
+                        <input name="txtAmount" maxlength="10" id="txtAmount" class="signup_input" oncopy="return false;" onpaste="return false" style="width:238px;" placeholder="建议输入1至1,000,000间任意整数金额" type="text">
                     </div>
                 </td>
             </tr>
@@ -110,11 +81,11 @@
 </div></div>
         
         <div>
-            <input name="ctl00$ctl00$BaseMainContent$TransferMainContent$btnCheckCoupon" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$TransferMainContent$btnCheckCoupon&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnCheckCoupon" style="display:none" type="submit">
+            <input name="btnCheckCoupon" value=""  id="btnCheckCoupon" style="display:none" type="submit">
         </div>
         <div id="upBonus">
 	
-                <input name="ctl00$ctl00$BaseMainContent$TransferMainContent$btnReload" id="btnReload" src="/Images/loading_search.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$TransferMainContent$btnReload&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height:20px;width:20px;display:none" type="image">
+                <input name="btnReload" id="btnReload" src="/Images/loading_search.gif" style="height:20px;width:20px;display:none" type="image">
                 <div style="text-align:center;">
                 <div id="BaseMainContent_TransferMainContent_upProgress" style="display:none;" role="status" aria-hidden="true">
 		
@@ -141,20 +112,12 @@
             <table>
                 <tbody><tr>
                     <td>
-                        <a id="BtnSubmit" class="Btn Btn_floatLeft blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$TransferMainContent$BtnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">提交</a>
-                    </td>
-                    <td>
-                        <a id="BtnCancel" class="Btn whiteMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$TransferMainContent$BtnCancel&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">取消</a>
+                        <div id="SavingBtnSubmit" class="Btn Btn_floatLeft blueMedBtn" onclick="SendSaving()">提交</div>
                     </td>
                 </tr>
             </tbody></table>
         </div>
-        <div class="DivSkrill">
-            <span id="BaseMainContent_TransferMainContent_lblNote" style="font-weight:bold;">* 会员须转账最低投注额到指定账户方可进行游戏。<br>
-			* 提款必须通过主账户方可进行。<br>
-			* 老虎机及其他游戏为“乐游戏”账户。<br>
-			* 请使用整数金额进行转账至波音堂。</span>
-        </div>
+
     
 
 <br><br><br>
@@ -169,44 +132,13 @@
             </div>
             
 
-<script type="text/javascript" language="javascript">
-    $(function () {
-        $("#ddlYear").change(function () {
-            setDate();
-        });
 
-        $("#ddlMonth").change(function () {
-            setDate();
-        });
-
-        $("#btnSearch").click(function () {
-            getHistoryLoading();
-        });
-
-        $("#gvResult a").click(function () {
-            getHistoryLoading();
-        });
-
-        //IE8 only
-        if ($.browser.msie && $.browser.version <= '8.0') {
-            $("#ddlWalletFrom,#ddlWalletTo").mousedown(function () {
-                $(this).css("width", "auto");
-            }).select(function () {
-                $(this).width(108);
-            }).change(function () {
-                $(this).width(108);
-            }).blur(function () {
-                $(this).width(108);
-            });
-        }
-    });
-</script>
 <div class="history_nav">
     <table width="100%" cellspacing="0" cellpadding="0" border="0">
         <tbody><tr>
             <td>
                 <span class="history_dateheader history_font">
-                    <span id="lblPeriod">25/11/2016 - 2/12/2016</span>
+                    
                 </span>
             </td>
             <td>
@@ -235,6 +167,14 @@
                     <span id="BaseMainContent_TransactionHistory_lblYear">年: </span>
                     <select name="ctl00$ctl00$BaseMainContent$TransactionHistory$ddlYear" id="ddlYear" class="signup_input3 history_ddlShorter">
 	<option selected="selected" value="">-</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+    <option value="2019">2019</option>
+    <option value="2018">2018</option>
+    <option value="2017">2017</option>
 	<option value="2016">2016</option>
 	<option value="2015">2015</option>
 	<option value="2014">2014</option>
@@ -254,22 +194,7 @@
                     <select name="ctl00$ctl00$BaseMainContent$TransactionHistory$ddlWalletFrom" id="ddlWalletFrom" class="signup_input3 history_ddlLong">
 	<option selected="selected" value="">全部账户</option>
 	<option value="MAIN" class="walletMAIN">主账户</option>
-	<option value="SP" class="walletSP">体育博彩</option>
-	<option value="IPSB" class="walletIPSB">IM 体育</option>
-	<option value="BFR" class="walletBFR">必发交易</option>
-	<option value="GD" class="walletGD">北方堂 (GD)</option>
-	<option value="AG" class="walletAG">至尊堂 (AG)</option>
-	<option value="SAG" class="walletSAG">沙龙厅 (SAG)</option>
-	<option value="AB" class="walletAB">隆运堂 (欧博)</option>
-	<option value="SUN" class="walletSUN">太阳厅(申博太阳)</option>
-	<option value="EA" class="walletEA">东方堂 (EA)</option>
-	<option value="OPUS" class="walletOPUS">凯旋堂 (OPUS)</option>
-	<option value="BOY2" class="walletBOY2">波音堂 (波音)</option>
-	<option value="CP" class="walletCP">南方堂 (CP)</option>
-	<option value="PT" class="walletPT">百乐城 (PT)</option>
-	<option value="SLOT" class="walletSLOT">乐游戏</option>
-	<option value="PK" class="walletPK">欢乐彩 (IM)</option>
-	<option value="LBK" class="walletLBK">优乐彩 (LB)</option>
+
 
 </select>
                 </span>
@@ -280,28 +205,13 @@
                     <select name="ctl00$ctl00$BaseMainContent$TransactionHistory$ddlWalletTo" id="ddlWalletTo" class="signup_input3 history_ddlLong">
 	<option selected="selected" value="">全部账户</option>
 	<option value="MAIN" class="walletMAIN">主账户</option>
-	<option value="SP" class="walletSP">体育博彩</option>
-	<option value="IPSB" class="walletIPSB">IM 体育</option>
-	<option value="BFR" class="walletBFR">必发交易</option>
-	<option value="GD" class="walletGD">北方堂 (GD)</option>
-	<option value="AG" class="walletAG">至尊堂 (AG)</option>
-	<option value="SAG" class="walletSAG">沙龙厅 (SAG)</option>
-	<option value="AB" class="walletAB">隆运堂 (欧博)</option>
-	<option value="SUN" class="walletSUN">太阳厅(申博太阳)</option>
-	<option value="EA" class="walletEA">东方堂 (EA)</option>
-	<option value="OPUS" class="walletOPUS">凯旋堂 (OPUS)</option>
-	<option value="BOY2" class="walletBOY2">波音堂 (波音)</option>
-	<option value="CP" class="walletCP">南方堂 (CP)</option>
-	<option value="PT" class="walletPT">百乐城 (PT)</option>
-	<option value="SLOT" class="walletSLOT">乐游戏</option>
-	<option value="PK" class="walletPK">欢乐彩 (IM)</option>
-	<option value="LBK" class="walletLBK">优乐彩 (LB)</option>
+
 
 </select>
                 </span>
             </td>
             <td>
-                <a id="btnSearch" class="Btn blueMedBtn" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$BaseMainContent$TransactionHistory$btnSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">查找</a>
+                <div id="btnSearch" class="Btn blueMedBtn" onclick="searchzhuanzhang()" >查找</div>
             </td>
         </tr>
     </tbody></table>
@@ -315,40 +225,15 @@
             <div id="BaseMainContent_TransactionHistory_divLog" class="history_content" style="Display:block;">
                 <div>
 		<table class="mGrid" border-collapse="inherit" id="gvResult" cellspacing="3">
-			<tbody><tr>
-				<th scope="col">交易日期</th><th scope="col">交易号码</th><th scope="col">转账详情</th><th scope="col">状况</th><th scope="col">交易数额</th>
-			</tr><tr>
-				<td align="center">2016-12-01 06:10:57</td><td align="center">
-                                <span id="lblTransferId">T00058484236</span>
-                            </td><td align="center">
-                                <span id="lblWalletsInfo">会员红利账户 至 红利</span>
-                            </td><td align="center">
-                                <span id="lblRemark">取消红利(参考编码：658275)，RMB 50.00款项回收!</span>
-                            </td><td align="center">
-                                <span id="lblCurrencyAndAmount">RMB 50.00</span>
-                            </td>
-			</tr><tr>
-				<td align="center">2016-12-01 06:10:52</td><td align="center">
-                                <span id="lblTransferId">T00058484221</span>
-                            </td><td align="center">
-                                <span id="lblWalletsInfo">会员红利账户 至 红利</span>
-                            </td><td align="center">
-                                <span id="lblRemark">取消红利(参考编码：658228)，RMB 100.00款项回收!</span>
-                            </td><td align="center">
-                                <span id="lblCurrencyAndAmount">RMB 100.00</span>
-                            </td>
-			</tr><tr>
-				<td align="center">2016-11-29 06:10:43</td><td align="center">
-                                <span id="lblTransferId">T00058323340</span>
-                            </td><td align="center">
-                                <span id="lblWalletsInfo">会员红利账户 至 红利</span>
-                            </td><td align="center">
-                                <span id="lblRemark">取消红利(参考编码：657238)，RMB 50.00款项回收!</span>
-                            </td><td align="center">
-                                <span id="lblCurrencyAndAmount">RMB 50.00</span>
-                            </td>
-			</tr>
-		</tbody></table>
+			<thead>            <tr>
+                <th scope="col">交易日期</th><th scope="col">交易号码</th><th scope="col">转账详情</th><th scope="col">备注</th><th scope="col">交易数额</th>
+            </tr></thead>
+            <tbody id="zhuanzhanglishi">
+
+
+
+		</tbody>
+        </table>
 	</div>
             </div>
             <div id="BaseMainContent_TransactionHistory_divNoFoundMsg" class="noFoundMsg" style="Display:none;">

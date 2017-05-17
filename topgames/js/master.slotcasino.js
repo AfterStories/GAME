@@ -1,4 +1,26 @@
-﻿var Category = "HotGames";
+﻿function getCookie(c_name) {
+  var c_value = document.cookie;
+  var c_start = c_value.indexOf(" " + c_name + "=");
+  if (c_start == -1) {
+      c_start = c_value.indexOf(c_name + "=");
+  }
+  if (c_start == -1) {
+      c_value = null;
+  }
+  else {
+      c_start = c_value.indexOf("=", c_start) + 1;
+      var c_end = c_value.indexOf(";", c_start);
+      if (c_end == -1) {
+          c_end = c_value.length;
+      }
+      c_value = unescape(c_value.substring(c_start, c_end));
+  }
+  return c_value;
+}
+
+
+
+var Category = "HotGames";
 var Vendor = "AllVendor";
 var Theme = "AllTheme";
 var newGame = false;
@@ -8,42 +30,6 @@ var SortView = 0;
 var IsChangeSort = 0;
 
 //New Items
-$(document).ready(function () {
-
-
-
-
-       $.ajax({
-       dataType:'json',
-       type:'GET',
-       data:{},
-       url:AjaxURL+'fun/game/getgamelist?districtId=1',//topgame接口
-       success:function(data) {
-
-        
-            var gametypeClass
-
-            for (var i = 0;i<data.data.length;i++) {
-            
-                var gametype = data.data[i].gameGroup                
-
-                var gametypeClass = gametype.join(" ");
-
-                if ($.inArray("新游戏",gametype)==-1) {
-                    var newgame = 'none'
-                }else{
-                    var newgame = 'block'
-                }            
-
-
-var gamebox = '<li class="cggamedata '+gametypeClass+'" data-dbid='+data.data[i].id+' data-sort="'+data.data[i].name_en+'" data-vendor='+data.data[i].platformName+' data-theme='+data.data[i].subtitle+' data-i='+data.data[i].sortWeight+' data-demo="1" data-i0='+data.data[i].gameAttrib.axis+' data-i1='+data.data[i].gameAttrib.sumBonusPool+' data-i2='+data.data[i].gameAttrib.autoGame+' data-i3='+data.data[i].gameAttrib.payLine+' data-i4='+data.data[i].gameAttrib.picture+' data-i5='+data.data[i].gameAttrib.multipleCompensate+' data-i6='+data.data[i].gameAttrib.bonusGame+' data-i7='+data.data[i].gameAttrib.scatterPicture+' data-ca='+data.data[i].gameRating.picture+' data-cb='+data.data[i].gameRating.music+' data-cc='+data.data[i].gameRating.originality+' data-cd='+data.data[i].gameRating.bonus+' data-ce='+data.data[i].gameRating.bigBonusPercent+' data-cf='+data.data[i].gameRating.playability+' data-miphone="0" data-mandroid="0" style="background-color: rgb(255, 255, 255);"><div class="cgdesc">'+data.data[i].describe+'</div><div class="cgbox" style="display: block;"><div class="cgboxhover" style="display: none;"><a id="cgbox'+data.data[i].id+'" onclick="javascript:return EnterGame(this, memberCode, isGameLock);" class="btnPlayReal" style="opacity: 1;">开始游戏</a><a class="btnGameInfo">游戏信息</a></div><div class="cgboxven"><img src="images/'+data.data[i].platformName+'.png"></div><div class="cgimg"><img class="lazy" data-original="'+data.data[i].gameImgUrl+'" src="'+data.data[i].gameImgUrl+'" style="display: inline;"></div><div class="cgjackpot"><span class="cgjackpotcur">¥</span><span class="cgjackpotamt MGSQF" id="cgjp'+data.data[i].id+'"></span></div><div class="cgboxheader"><div class="cgboxfav"><img src="images/favourite-star-before.png" alt="Fav"></div><div class="cgboxtitle"><div class="cgboxlocalname" style="font-size: 1.2em;">'+data.data[i].name_ch+'</div><div class="cgboxenname">'+data.data[i].name_en+'</div><div class="cgboxcat">热门游戏</div></div><div class="cgboxnew" style="display:'+newgame+'">NEW</div></div></div><div class="cglist" style="display: none;"><div class="cglisthover" style="display: none;"><a id="cglist'+data.data[i].id+'" onclick="javascript:return EnterGame(this, memberCode, isGameLock);" class="btnPlayReal" style="opacity: 1;">开始游戏</a>&nbsp; <a id="cglist'+data.data[i].id+'demo" href="../Details/index.html?id='+data.data[i].id+'" class="btnPlayDemo">游戏介绍</a></div><div class="cglistfav"><img src="images/favourite-star-before.png" alt="Fav"></div><div class="cglisttitle"><div class="cglistlocalname" style="font-size: 1.2em;">'+data.data[i].name_ch+'</div><div class="cglistenname">'+data.data[i].name_en+'</div></div><div class="cglistven"><img src="images/'+data.data[i].platformName+'.png"></div><div class="cglistcat">热门游戏</div></div><div class="cginfoempty" style="display: none; height: 329px;"><div>&nbsp;</div></div></li>'
-
-
-
-
-              $('.cggamelist').append(gamebox);
-
-          }
 
 /*
 游戏信息
@@ -70,6 +56,74 @@ data-miphone="1"  不支持iphone手机
 data-miphone="0"  支持iphone手机
 
 */
+function popUpWindowManager(defaultUrl) {
+    var pathname = window.location.pathname;
+    var pathInSplit = pathname.split("/");
+    var lastElement = pathInSplit.length - 1;
+    if (pathInSplit[lastElement] == "" && defaultUrl.indexOf("..") != -1) defaultUrl = defaultUrl.split("..").join("");
+    var getHeight = screen.availHeight;
+    var curHeight = getHeight - 70;
+    window.open(defaultUrl)
+}
+
+
+function OpenGame(a){
+     var Mys = getCookie("s"); 
+          
+
+             $.ajax({
+                    type: "GET",
+                    url: 'http://59.110.10.115/fun/game/launchGame',
+                    data: {gameId:a,s:Mys},
+                    success: function (data) {
+                        var GameSrc = data.data.launchUrl;
+                       
+                        
+                        popUpWindowManager(GameSrc)
+
+                        },
+                    error: function () {
+                       alert(data.data.errMsg);
+                         }
+                    });
+
+
+
+}
+
+$(document).ready(function () {
+
+       $.ajax({
+       dataType:'json',
+       type:'GET',
+       data:{},
+       url:AjaxURL+'fun/game/getgamelist?districtId=1',//topgame接口
+       success:function(data) {
+
+        
+            var gametypeClass
+
+            for (var i = 0;i<data.data.length;i++) {
+            
+                var gametype = data.data[i].gameGroup                
+
+                var gametypeClass = gametype.join(" ");
+
+                if ($.inArray("新游戏",gametype)==-1) {
+                    var newgame = 'none'
+                }else{
+                    var newgame = 'block'
+                }            
+
+
+var gamebox = '<li class="cggamedata '+gametypeClass+'" data-dbid='+data.data[i].id+' data-sort="'+data.data[i].name_en+'" data-vendor='+data.data[i].platformName+' data-theme='+data.data[i].subtitle+' data-i='+data.data[i].sortWeight+' data-demo="1" data-i0='+data.data[i].gameAttrib.axis+' data-i1='+data.data[i].gameAttrib.sumBonusPool+' data-i2='+data.data[i].gameAttrib.autoGame+' data-i3='+data.data[i].gameAttrib.payLine+' data-i4='+data.data[i].gameAttrib.picture+' data-i5='+data.data[i].gameAttrib.multipleCompensate+' data-i6='+data.data[i].gameAttrib.bonusGame+' data-i7='+data.data[i].gameAttrib.scatterPicture+' data-ca='+data.data[i].gameRating.picture+' data-cb='+data.data[i].gameRating.music+' data-cc='+data.data[i].gameRating.originality+' data-cd='+data.data[i].gameRating.bonus+' data-ce='+data.data[i].gameRating.bigBonusPercent+' data-cf='+data.data[i].gameRating.playability+' data-miphone="0" data-mandroid="0" style="background-color: rgb(255, 255, 255);"><div class="cgdesc">'+data.data[i].describe+'</div><div class="cgbox" style="display: block;"><div class="cgboxhover" style="display: none;"><a id="cgbox'+data.data[i].id+'"  onclick="OpenGame('+data.data[i].id+');" class="btnPlayReal '+data.data[i].id+'" style="opacity: 1;">开始游戏</a><a class="btnGameInfo">游戏信息</a></div><div class="cgboxven"><img src="http://59.110.10.115'+data.data[i].platformImg+'"></div><div class="cgimg"><img class="lazy" data-original="http://59.110.10.115'+data.data[i].gameImgUrl+'" src="http://59.110.10.115'+data.data[i].gameImgUrl+'" style="display: inline;"></div><div class="cgjackpot"><span class="cgjackpotcur">¥</span><span class="cgjackpotamt MGSQF" id="cgjp'+data.data[i].id+'"></span></div><div class="cgboxheader"><div class="cgboxfav"><img src="images/favourite-star-before.png" alt="Fav"></div><div class="cgboxtitle"><div class="cgboxlocalname" style="font-size: 1.2em;">'+data.data[i].name_ch+'</div><div class="cgboxenname">'+data.data[i].name_en+'</div><div class="cgboxcat">热门游戏</div></div><div class="cgboxnew" style="display:'+newgame+'">NEW</div></div></div><div class="cglist" style="display: none;"><div class="cglisthover" style="display: none;"><a id="cglist'+data.data[i].id+'" onclick="OpenGame();" class="btnPlayReal '+data.data[i].id+'" style="opacity: 1;">开始游戏</a>&nbsp; <a id="cglist'+data.data[i].id+'demo"' + ' href="../Details/index.html?id='+data.data[i].id+'" class="btnPlayDemo">游戏介绍</a></div><div class="cglistfav"><img src="images/favourite-star-before.png" alt="Fav"></div><div class="cglisttitle"><div class="cglistlocalname" style="font-size: 1.2em;">'+data.data[i].name_ch+'</div><div class="cglistenname">'+data.data[i].name_en+'</div></div><div class="cglistven"><img src="http://59.110.10.115'+data.data[i].platformImg+'"></div><div class="cglistcat">热门游戏</div></div><div class="cginfoempty" style="display: none; height: 329px;"><div>&nbsp;</div></div></li>'
+
+
+              $('.cggamelist').append(gamebox);
+
+          }
+
+
 
     CGInitEvents();
     CGInitData();
@@ -78,13 +132,13 @@ data-miphone="0"  支持iphone手机
   
     CGUpdateFilter();
 
-    var catObj = $("#" + Category).parent();
-    var imgSrc = catObj.find("img").attr("src");
-    catObj.addClass("tdCategoryBtnChecked");
-    catObj.find("img").attr("src", imgSrc.replace("arrow-blue", "arrow-white"));
+    //var catObj = $("#" + Category).parent();
+    //var imgSrc = catObj.find("img").attr("src");
+    //catObj.addClass("tdCategoryBtnChecked");
+    //catObj.find("img").attr("src", imgSrc.replace("arrow-blue", "arrow-white"));
 
-    $("#AllTheme").addClass("ThemeBtnChecked");
-    $("#AllVendor").addClass("VendorBtnChecked");
+    //$("#AllTheme").addClass("ThemeBtnChecked");
+    //$("#AllVendor").addClass("VendorBtnChecked");
 
     // Hide LX Journey to the west game
     $("#cgbox396").parent().parent().parent().hide();
@@ -95,28 +149,94 @@ data-miphone="0"  支持iphone手机
 
 
 
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+var Gametype = GetQueryString("i");
 
 
+if (Gametype) {
+     //var a = $("#BaseMainContent_MainContent_CasinoMainContent_CategoryTable").find("td").get(Gametype)
+     //alert(a.innerHTML);
 
+     //$(a).trigger("click");
+     //$("#haha").trigger("click");
 
+     setTimeout(function(){
+     var a = $("#BaseMainContent_MainContent_CasinoMainContent_CategoryTable").find("td").get(Gametype)
+     //alert(a.innerHTML);
 
+     $(a).trigger("click");
 
+     }, 100);
 
-
-
-
-
-
-
-
-
-
-
+     //setTimeout(function(){haha(Gametype);}, 100);
+ }
+ //alert(a.innerHTML)
 
 
 });
 
 
+function haha(i){
+        var _this = $("#BaseMainContent_MainContent_CasinoMainContent_CategoryTable").find("td").get(i);
+        //var _this = $(_this1).find("td");
+
+        //alert(_this.innerHTML);
+        //$(_this).trigger("click");
+
+        
+        $(".tdCategoryBtn.tdCategoryBtnChecked").each(function () {
+            //alert(this.innerHTML);
+            $(this).removeClass("tdCategoryBtnChecked");
+            var imgCtrl = $(this).find("img");
+            imgCtrl.attr("src", imgCtrl.attr("src").replace("arrow-white", "arrow-blue").replace("_white", "_blue"));
+        });
+
+        $(_this).addClass("tdCategoryBtnChecked");
+
+        var imgCtrl = $(_this).find("img");
+        imgCtrl.attr("src", imgCtrl.attr("src").replace("arrow-blue", "arrow-white").replace("_blue", "_white"));
+
+        var id = $(_this).children("p").attr("id");
+
+        $(".Theme").removeClass("ThemeBtnChecked");
+        $(".Vendor").removeClass("VendorBtnChecked");
+        
+        Category = id;
+        Vendor = "AllVendor";
+        Theme = "AllTheme";
+        $("#AllTheme").addClass("ThemeBtnChecked");
+        $("#AllVendor").addClass("VendorBtnChecked");
+
+        CGCatFilter();
+        CGUpdateFilter();
+
+}
+
+
+
+
+
+
+
+
+
+function test1(){
+
+alert();
+         var a = $("#BaseMainContent_MainContent_CasinoMainContent_CategoryTable").find("tr").get(5)
+         //alert(a.innerHTML);
+
+         //$(a).trigger("click");
+         $("#haha").trigger("click");
+
+
+};
 
 function CGInitData() {  
     $(window).scroll(sticky_relocate);
@@ -365,7 +485,10 @@ function CGInitEvents() {
         //preRowId = 0;
         //$(".Vendor").removeClass("VendorBtnChecked");
 
+        //alert(this.innerHTML);
+
         $(".tdCategoryBtn.tdCategoryBtnChecked").each(function () {
+            //alert(this.innerHTML);
             $(this).removeClass("tdCategoryBtnChecked");
             var imgCtrl = $(this).find("img");
             imgCtrl.attr("src", imgCtrl.attr("src").replace("arrow-white", "arrow-blue").replace("_white", "_blue"));
@@ -597,6 +720,9 @@ function CGDisplayGameInfo(ctrl) {
     cginfo.find(".cginfoheaderven > img").attr("src", "images/"+gameven + ".png").attr("alt", gameven);
     cginfo.find(".cginfodetaildesc").text(ctrl.find(".cgdesc").html());
     cginfo.find(".cginfodetailbtmbtn > a.btnPlayReal").attr("id", "cginfo" + ctrl.attr("data-dbid") + "play");
+
+    cginfo.find(".cginfodetailbtmbtn > a.btnPlayReal").attr("onclick",'OpenGame('+ctrl.attr("data-dbid")+')');    
+
     cginfo.find(".cginfodetailbtmbtn > a.btnPlayDemo").attr("id", "cginfo" + ctrl.attr("data-dbid") + "demo");
 
     if (ctrl.attr("data-demo") == "0") {

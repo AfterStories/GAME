@@ -1081,7 +1081,7 @@ div#top {
         float: right;
         display: inline;
         width: 107px;
-        height: 36px;
+        height: 34px;
         font-size: 9pt;
         line-height: 2.5em;
         font-weight: bold;
@@ -1152,6 +1152,8 @@ Player = ../images/header/logo.png, ../images/header/logo-cn.png
 }
 
 #logofun88 .logocn {
+    position: relative;
+    top: 20px;    
     display: block;
     height: 83px;
     text-indent: -4000px;

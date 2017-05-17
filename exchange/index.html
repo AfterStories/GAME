@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb" class="yui3-js-enabled">
 <head><meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>必发交易</title>
+<title></title>
     <link href="../lib/css/bundleCss.css" rel="stylesheet" type="text/css">
     
 <meta name="description" content="必发交易。">
@@ -22,13 +22,48 @@
     <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"> </script>
     <script type="text/javascript" src="../lib/js/login.js"> </script>
     <script type="text/javascript" src="../lib/js/scrollAD.js" ></script>
-    <script type="text/javascript" src="Exchange/js/jquery-qrcode-0.js" async=""></script>
+    <script type="text/javascript" src="Exchange/js/jquery-qrcode-0.js" ></script>
     <script src="Exchange/js/jQuery.migrateMute.js" type="text/javascript"></script>
-    <script type="text/javascript" src="Exchange/js/master.js" async=""></script>
+    <script type="text/javascript" src="Exchange/js/master.js" ></script>
+    <script type="text/javascript" src="Exchange/js/getTabImg.js" ></script>
+
 
     <script>
 
     $(document).ready(function(){
+AjaxUrl = 'http://59.110.10.115'
+/*Title*/
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getWebsitesetting',
+         data: {},
+         success: function(data) {
+            var titlename = data.data.title;
+            $("title").html(titlename);
+         },
+         error: function() {
+
+         }
+     });
+
+      $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getImgAdList?key=必发交易投注按钮',
+         data: {},
+         success: function(data) {        
+              var Picurl =AjaxUrl+data.data.adList[0].imgUrl;
+             $("#BetNow").attr("src",Picurl);
+             $("#BetNowA").attr("src",data.data.adList[0].jmpUrl);
+  
+
+
+         },
+         error: function() {
+
+         }
+     });  
+
+
         $("#floatmenu").load("../lib/Publicdoms/quickMenu.html")
 
         $("#footer").load("../lib/Publicdoms/footer.html",function(){
@@ -327,7 +362,6 @@
         }
     };
     $(document).ready(function () {  
-
 
         //银行菜单
         var uiUN = $("#UserName");
@@ -1357,10 +1391,10 @@ div#top{margin-top:80px;}
 一页浏览所有注单状态、投注盈利和账户信息。
                 </div>
                 <div id="buttons">
-                    <a href="http://www.10010388.com/zh-CN/Exchange?from=intro" onclick="javascript:EnterGame(this.href, memberCode, isGameLock); return false;">
-                        <div id="BetNowBtn">立即投注</div>
+                    <a id="BetNowA" href="">
+                        <img id="BetNow" src=""></img>
                     </a>
-                    <a href="http://www.10010388.com/zh-CN/Info-Center/How-To-Play/Exchange?from=intro" onclick="javascript:popUpWindowManager(this.href, 'InfoExchange', 1020); return false;">
+                    <a href="../help/How-To-Play/index.html">
                         <div id="InfoBtn">投注指南</div>
                     </a>
                 </div>
@@ -1369,6 +1403,20 @@ div#top{margin-top:80px;}
 
         </div>
     </div>
+    <style>
+    #BetNow{
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 13px;
+    height: 33px;
+    line-height: 35px;
+    margin-bottom: 1px;
+    text-align: center;
+    text-indent: 10px;
+    width: 130px;
+    } 
+
+    </style>
 
     <script type="text/javascript">
         var ids = new Array("bettype", "layout", "push", "bettrade");
@@ -1954,6 +2002,6 @@ div#top{margin-top:80px;}
         }
         </script>
    
-
+<script type="text/javascript" src="../lib/js/cookie.js"> </script>
 </body>
 </html>

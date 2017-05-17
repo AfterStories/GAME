@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="sportsbook">
 
-<title>sportsbook</title>
+<title></title>
 
 
     <link rel="icon" href="../lib/images/favicon.ico" type="image/x-icon">
@@ -18,6 +18,8 @@
     </noscript>
 
     <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
  
 </head>
 
@@ -154,7 +156,19 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
 <script>
 
     $(document).ready(function(){
+/*Title*/
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getWebsitesetting',
+         data: {},
+         success: function(data) {
+            var titlename = data.data.title;
+            $("title").html(titlename);
+         },
+         error: function() {
 
+         }
+     });
     $("#header").load("../lib/Publicdoms/header.html", function(){
             createDropDown();
             $("#target dt").removeClass().addClass('zh-CN');
@@ -785,44 +799,7 @@ table.tblMemberRewardLvl td { padding-left: 5px; }
     </div>
 </div>
 
-        <a id="BetRadarID" href="http://stats.betradar.com/s4/?clientid=662&amp;language=zh" target="_blank" onclick="sendSiteBannerGA('Betradar');"></a>
-        
-            <a id="SBTutorialPopup_btn" onclick="javascript:SBTutorialPopup();"></a>
-        
-        <div id="quickcontact" class="quickcontactcontainerbeforehoverSP">
-            <a href="javascript:void(0);" onclick="quickchatopencloseSP()" id="quickContactButton" class="dy-unit">
-                <div id="quickButton" style="height: 41px; width: 153px; margin: auto auto 4px; display: block;"></div>
-            </a>
 
-            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('#', 'newwindow', 'width=420, height=250'); return false;" href="#/">
-                <div class="quickcontactbtnSP quickcontactbtn1SP">
-        
-                </div>
-            </a>
-
-            <a id="quickContactDownload" class="dy-unit" target="_blank" href="http://www.10010388.com/zh-CN/LiveChat" onclick="sendQuickContactGA('QuickContactDownload');">
-                <div class="quickcontactbtnSP quickcontactbtn2SP">
-
-                </div>
-            </a>
-
-            <div class="quickcontacttextSP" style="padding-bottom: 4px;">
-                
-                <b>客服热线</b>
-                
-                <br>
-                +86 400 890 0398
-            </div>
-            <div class="quickcontacttextSP">
-                
-                <b>客服邮箱</b>
-                <br>
-                
-                <a id="quickContactMail" class="quickcontactemailtextSP dy-unit" href="mailto:cs@fun88.com" onclick="sendQuickContactGA('QuickContactMail');">
-                    cs@fun88.com
-                </a>
-            </div>
-        </div>
         
     </div>
 
@@ -1413,6 +1390,6 @@ document.getElementById('ctl05_PasswordPopupValidator').dispose = function() {
    
   
 
- 
+ <script type="text/javascript" src="../lib/js/cookie.js"> </script>
 </body>
 </html>

@@ -99,7 +99,7 @@ div#outer_top_header { margin:0 atuo;top: 0px; position: absolute; background-co
 #login .button { background: transparent url('../../lib/images/btn_login_.gif') no-repeat scroll 0px 3px; border: 0px none; }
 #login .button:hover { background: transparent url('../../lib/images/btn_login_.gif') no-repeat scroll 0px -33px; }
 #logofun88InZh { float: left; display: inline; font-size: 0px; line-height: 0; }
-#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; background-image: url('../../lib/images/logo-cn.png'); background-repeat: no-repeat; margin-left: 15px; }
+#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; /* background-image: url('../../lib/images/logo-cn.png'); */ background-repeat: no-repeat; margin-left: 15px; }
 #header_right { float: right; display: inline; margin-right: 15px; padding: 10px 0px 0px; }
 #header_right > div { display: block; float: left; }
 #header_right a { display: block; font-size: 15px; }

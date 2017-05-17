@@ -2,13 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb" class="yui3-js-enabled responsejs ">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
-	领先全球的IM体育平台—虚拟足球|足球角球|虚拟篮球|美式足球|高尔夫球|虚拟运动|IM投注|投注攻略|赛事数据|
+	
 </title>
     <link href="../lib/css/bundleCss.css" rel="stylesheet" type="text/css">
      
 <script type="text/javascript" src="../lib/js/jquery-1.12.2.min.js">
 </script>
 <script type="text/javascript" src="../lib/js/login.js"> </script>
+<script type="text/javascript" src="index.js"></script>
 
        
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -398,7 +399,20 @@
     };
     $(document).ready(function () {  
 
+/*Title*/
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getWebsitesetting',
+         data: {},
+         success: function(data) {
+            var titlename = data.data.title;
+            $("title").html(titlename);
+         },
+         error: function() {
 
+         }
+     });
+    
         //银行菜单
         var uiUN = $("#UserName");
 
@@ -1077,7 +1091,7 @@
         <!-- Six Column Content -->
         <div id="sp" style="padding-top: 0px; height:926px;">
             <div id="sp_content">
-                
+      <iframe id="iframeContent" name="iframeContent" src="www.baidu.com" class="myframe" style="border: medium none;" ;="" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>          
     <div class="BetradarSiteButton">
 
 <div id="divbg_container">
@@ -1096,46 +1110,7 @@
     </div>
 </div>
 
-        <a id="BetRadarID" href="http://stats.betradar.com/s4/?clientid=662&amp;language=zh" target="_blank" onclick="sendSiteBannerGA('Betradar');"></a>
 
-
-        
-        <div id="quickcontact" class="quickcontactcontainerbeforehoverSP">
-            <a href="javascript:void(0);" onclick="quickchatopencloseSP()" id="quickContactButton" class="dy-unit">
-                <div id="quickButton" style="height: 41px;width: 153px;margin: auto; display:block; margin-bottom:4px;"></div>
-            </a>
-
-            <a id="quickContactOnline" class="dy-unit" onclick="sendQuickContactGA('QuickContactOnline'); window.open('#', 'newwindow', 'width=420, height=250'); return false;" href="#/">
-                <div class="quickcontactbtnSP quickcontactbtn1SP">
-        
-                </div>
-            </a>
-
-            <a id="quickContactDownload" class="dy-unit" target="_blank" href="http://www.10010388.com/zh-CN/LiveChat" onclick="sendQuickContactGA('QuickContactDownload');">
-                <div class="quickcontactbtnSP quickcontactbtn2SP">
-
-                </div>
-            </a>
-
-            <div class="quickcontacttextSP" style="padding-bottom: 4px;">
-                
-                <b>客服热线</b>
-                
-                <br>
-                +86 400 890 0398
-            </div>
-            <div class="quickcontacttextSP">
-                
-                <b>客服邮箱</b>
-                <br>
-                
-                <a id="quickContactMail" class="quickcontactemailtextSP dy-unit" href="mailto:cs@fun88.com" onclick="sendQuickContactGA('QuickContactMail');">
-                    cs@fun88.com
-                </a>
-            </div>
-        </div>
-        
-    </div>
 
     <div class="IMSBbannerPopup" style="display: none;">
         <!-- Slider -->
@@ -1726,6 +1701,6 @@
             document.cookie = c_name + "=" + c_value + "; path=" + path;
         }
     </script>
-
+<script type="text/javascript" src="../lib/js/cookie.js"> </script>
 </body>
 </html>

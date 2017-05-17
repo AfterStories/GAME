@@ -7,23 +7,34 @@
     <meta name="description" content="代理合作申请表 - 加入乐天堂FUN88投注代理合作计划，让您梦想成真。加入联盟，走上成功之路。乐天堂FUN88体育博彩与真人娱乐场。Fun122.com">
 
     <link href="mainStyleCS.css" rel="stylesheet" type="text/css">
-
-    <script type="text/javascript" src="jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="agentsRegister.js"></script>    
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="Iovation.js"></script>
+
     <link href="P3TableStyles.css" rel="stylesheet">
 
-    <style type="text/css">
+<style type="text/css">
 
 .style1 { width: 98%; }
+#btnNext2{
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 36px;
+    border: 1px solid #bcbcbc;
+    cursor: pointer;     
+}
 </style>
     <script type="text/javascript">
         function loadBody() {
-            var $jParent = window.parent.jQuery.noConflict(); var splashbox = $jParent('#splashbox'); splashbox.hide(1);
+   
+           
             parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ? document.body.scrollHeight + 3 : 700;
         }
     </script>
-<script language="javascript" type="text/javascript" src="logo.js"></script><style id="style-1-cropbar-clipper">
+<style id="style-1-cropbar-clipper">
 
 .en-markup-crop-options { top: 18px ! important; left: 50% ! important; margin-left: -100px ! important; width: 200px ! important; border: 2px solid rgba(255, 255, 255, 0.38) ! important; border-radius: 4px ! important; }
 .en-markup-crop-options div div:first-of-type { margin-left: 0px ! important; }
@@ -61,7 +72,7 @@
 		<td>
                                             <table style="width: 98%;" cellspacing="2" cellpadding="3">
                                                 <tbody><tr>
-                                                    <td style="width: 149px;" align="right">
+                                                    <td style="width:149px;" align="right">
                                                         姓名：
                                                     </td>
                                                     <td align="left">
@@ -88,7 +99,14 @@
                                                                 <td>
                                                                     <table id="rblGender" style="width: 120px;">
 			<tbody><tr>
-				<td><input id="rblGender_0" name="rblGender" value="0" type="radio"><label for="rblGender_0">男</label></td><td><input id="rblGender_1" name="rblGender" value="1" type="radio"><label for="rblGender_1">女</label></td>
+				<td>
+                <input id="rblGender_0" name="rblGender" value="1" type="radio">
+                <label for="rblGender_0">男</label>
+                </td>
+                <td>
+                <input id="rblGender_1" name="rblGender" value="2" type="radio">
+                <label for="rblGender_1">女</label>
+                </td>
 			</tr>
 		</tbody></table>
                                                                 </td>
@@ -128,8 +146,9 @@
                                                         <div id="webFrom" style="display: inline;">
                                                             <input name="txtWebUrl" id="txtWebUrl" style="width: 450px;" class="P2TextField txtWebUrls" maxlength="100" onblur="CheckUrl(this)" value="http://" type="text">
                                                         </div>
-                                                        <img alt="plus" src="sizeplus.gif" onclick="AddInputUrl()" style="vertical-align: middle; cursor: pointer;">
+<!--                                                         <img alt="plus" src="sizeplus.gif" onclick="AddInputUrl()" style="vertical-align: middle; cursor: pointer;">
                                                         <img alt="minus" src="sizeminus.gif" onclick="MinusInputUrl()" style="vertical-align: middle; cursor: pointer;">
+-->
                                                         <div id="webTo" style="width: 300px;"></div>
                                                     </td>
                                                 </tr>
@@ -138,17 +157,16 @@
                                                         网站类型：
                                                     </td>
                                                     <td>
-                                                        <select name="WebTypeDDL" id="WebTypeDDL">
-			<option value="3">体育资讯网</option>
-			<option value="4">即时比分网</option>
-			<option value="5">赔率网</option>
-			<option value="6">体育论坛网</option>
-			<option value="7">体育博彩评论网</option>
-			<option value="8">娱乐场评论网</option>
-			<option value="9">娱乐网</option>
-			<option value="10">其它</option>
-
-		</select>
+                                                    <select name="WebTypeDDL" id="WebTypeDDL">
+		                                              	<option value="1">体育资讯网</option>
+		                                              	<option value="2">即时比分网</option>
+		                                              	<option value="3">赔率网</option>
+		                                              	<option value="4">体育论坛网</option>
+		                                              	<option value="5">体育博彩评论网</option>
+		                                              	<option value="6">娱乐场评论网</option>
+		                                              	<option value="7">娱乐网</option>
+		                                              	<option value="8">其它</option>                             
+		                                            </select>
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -185,16 +203,13 @@
                                                 <tr>
                                                     <td valign="top" align="right">&nbsp;
                                                     </td>
-                                                    <td colspan="2" style="height: 30px;" valign="top" align="left">
-                                                        <span id="PwdNoteTxt2">任何帐号若在六个月内没有任何的活动或者我们无法联系，我们将会冻结您的代理帐号。</span>
-                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td align="right">
                                                         密码：</td>
                                                     <td align="left">
                                                         <input name="txtPwd" maxlength="30" id="txtPwd" autocomplete="off" type="password">
-                                                        <span id="Label11" style="color: Red;">*</span></td>
+                                                        <span id="Label11" style="color:Red;">*</span></td>
                                                     <td align="left">&nbsp;
                                                     </td>
                                                 </tr>
@@ -208,33 +223,10 @@
                                                     <td align="left">&nbsp;
                                                     </td>
                                                 </tr>
-                                                <tr id="secret">
-			<td align="right">
-                                                        安全提问：
-                                                    </td>
-			<td colspan="4" align="left">
-                                                        <select name="ddlSecret" id="ddlSecret">
-				<option value="">请选择</option>
-				<option value="1">母亲的名字？</option>
-				<option value="2">您最喜欢的书是？</option>
-				<option value="3">您最喜欢的宠物名字是？</option>
-				<option value="4">您最喜欢的电影是？</option>
-				<option value="5">您的爱好是？</option>
-				<option value="6">您喜欢的体育队伍是？</option>
-
-			</select>
-                                                        <input name="txtSecretAnswer" maxlength="50" id="txtSecretAnswer" style="width: 160px;" type="text">
-                                                        <span id="Label13" style="color: Red;">*</span></td>
-			<td align="left">&nbsp;
-                                                    </td>
-		</tr>
-		
                                                 <tr>
                                                     <td valign="top" align="right">&nbsp;
                                                     </td>
-                                                    <td colspan="2" style="height: 30px;" valign="top" align="left">
-                                                        <span id="SecretHelpTxt">※安全提问及答案将用来核对您的身份</span>
-                                                    </td>
+
                                                 </tr>
                                                 <tr>
                                                     <td align="right">
@@ -242,23 +234,23 @@
                                                     </td>
                                                     <td align="left">
                                                         <select name="ddlBirthMonth" id="ddlBirthMonth">
-			<option value="">请选择</option>
-			<option value="1">一月</option>
-			<option value="2">二月</option>
-			<option value="3">三月</option>
-			<option value="4">四月</option>
-			<option value="5">五月</option>
-			<option value="6">六月</option>
-			<option value="7">七月</option>
-			<option value="8">八月</option>
-			<option value="9">九月</option>
-			<option value="10">十月</option>
-			<option value="11">十一月</option>
-			<option value="12">十二月</option>
+			                                                 <option value="">请选择</option>
+			                                                 <option value="1">一月</option>
+			                                                 <option value="2">二月</option>
+			                                                 <option value="3">三月</option>
+			                                                 <option value="4">四月</option>
+			                                                 <option value="5">五月</option>
+			                                                 <option value="6">六月</option>
+			                                                 <option value="7">七月</option>
+			                                                 <option value="8">八月</option>
+			                                                 <option value="9">九月</option>
+			                                                 <option value="10">十月</option>
+			                                                 <option value="11">十一月</option>
+			                                                 <option value="12">十二月</option>
 
-		</select>
-                                                        <select name="txtBirthDay" id="txtBirthDay" maxlength="2" style="width: 50px;">
-			<option value=""></option>
+		                                                </select>-
+        <select name="txtBirthDay" id="txtBirthDay" maxlength="2" style="width: 50px;">
+			<option value="">请选择</option>
 			<option value="1">1</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -291,8 +283,8 @@
 			<option value="30">30</option>
 			<option value="31">31</option>
 
-		</select>,
-                                                        <select name="ddlBirthYear" id="ddlBirthYear">
+		</select>-
+        <select name="ddlBirthYear" id="ddlBirthYear">
 			<option value="">请选择</option>
 			<option value="1998">1998</option>
 			<option value="1997">1997</option>
@@ -414,9 +406,7 @@
                                                 <tr>
                                                     <td valign="top" align="right">&nbsp;
                                                     </td>
-                                                    <td colspan="2" style="height: 30px;" valign="top" align="left">
-                                                        <span id="BirthdayHelpTxt">（举例. 1月,12,1970）</span>
-                                                    </td>
+
                                                 </tr>
                                                 <tr id="parentreffer">
 			<td align="right">
@@ -426,172 +416,20 @@
                                                     </td>
 			<td align="left"></td>
 		</tr>
-		
-                                                <tr>
-                                                    <td width="24%" align="right">
-                                                        首选语言：
-                                                    </td>
-                                                    <td width="72%" align="left">
-                                                        <select name="ddlLanguage" id="ddlLanguage">
-			<option value="en">English</option>
-			<option value="th">ภาษาไทย</option>
-			<option selected="selected" value="cs">中文</option>
-			<option value="id">Indonesia</option>
-			<option value="vi">Tiếng Việt</option>
-			<option value="ja">Japan</option>
 
-		</select>
-                                                    </td>
-                                                    <td width="4%" align="left"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td valign="top" align="right">
-                                                        货币：
-                                                    </td>
-                                                    <td valign="top" align="left">
-                                                        <select name="ddlCurrency" id="ddlCurrency">
-			<option value="CNY">CNY</option>
-			<option value="EUR">EUR</option>
-			<option value="GBP">GBP</option>
-			<option value="IDR">IDR</option>
-			<option value="THB">THB</option>
-			<option value="USD">USD</option>
-			<option value="VND">VND</option>
-
-		</select>
-                                                    </td>
-                                                    <td align="left">&nbsp;
-                                                    </td>
-                                                </tr>
                                                 <tr>
                                                     <td valign="top" align="right">&nbsp;
                                                     </td>
-                                                    <td colspan="2" style="height: 30px;" valign="top" align="left">
-                                                        <span id="CurrencyNoteTxt">请注意，一旦您注册成为Fun88合作计划会员，您将不能更改此货币种类。 </span></td>
+
                                                 </tr>
                                             </tbody></table>
                                         </td>
 	</tr>
-	<tr>
-		<td style="height: 30px; background-image: url(&quot;registerBG.gif&quot;); background-repeat: repeat-x;" class="titleBlue14" align="left">&nbsp;&nbsp;其它信息
-                                        </td>
-	</tr>
+
 	<tr>
 		<td>
                                             <table style="width: 98%;" cellspacing="2" cellpadding="3">
-                                                <tbody><tr>
-                                                    <td style="width: 149px;" valign="top" align="right">
-                                                        目标市场-国家：</td>
-                                                    <td align="left">
-                                                        <table style="width: 305px;">
-                                                            <tbody><tr>
-                                                                <td>
-                                                                    <select size="4" name="ddlNation" multiple="multiple" id="ddlNation" onchange="ChangeNation(this)" style="height: 90px; width: 282px;">
-			<option value="CN">中国</option>
-			<option value="HK">中国香港</option>
-			<option value="JP">日本</option>
-			<option value="KR">韩国</option>
-			<option value="ID">印度尼西亚</option>
-			<option value="IN">印度</option>
-			<option value="BN">文莱</option>
-			<option value="LA">老挝</option>
-			<option value="VN">越南</option>
-			<option value="KH">柬埔寨</option>
-			<option value="TH">泰国</option>
-			<option value="OT">其他国家</option>
-
-		</select>
-                                                                    <span id="Label2" style="color: Red;">*</span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody></table>
-                                                    </td>
-                                                    <td valign="top" align="left">&nbsp;
-                                                    </td>
-                                                </tr>
-                                                <tr id="trProvince" style="display: none;">
-			<td style="width: 149px;" valign="top" align="right">
-                                                        目标市场-省份：</td>
-			<td align="left">
-                                                        <table>
-                                                            <tbody><tr>
-                                                                <td>
-                                                                    <select size="4" name="ddlProvince" multiple="multiple" id="ddlProvince" style="height: 90px; width: 282px;">
-				<option value="北京市">北京市</option>
-				<option value="上海市">上海市</option>
-				<option value="广东省">广东省</option>
-				<option value="安徽省">安徽省</option>
-				<option value="重庆市">重庆市</option>
-				<option value="福建省">福建省</option>
-				<option value="甘肃省">甘肃省</option>
-				<option value="广西自治区">广西自治区</option>
-				<option value="贵州省">贵州省</option>
-				<option value="海南省">海南省</option>
-				<option value="河北省">河北省</option>
-				<option value="河南省">河南省</option>
-				<option value="黑龙江省">黑龙江省</option>
-				<option value="湖北省">湖北省</option>
-				<option value="湖南省">湖南省</option>
-				<option value="江苏省">江苏省</option>
-				<option value="江西省">江西省</option>
-				<option value="吉林省">吉林省</option>
-				<option value="辽宁省">辽宁省</option>
-				<option value="内蒙古自治区">内蒙古自治区</option>
-				<option value="宁夏自治区">宁夏自治区</option>
-				<option value="青海省">青海省</option>
-				<option value="山东省">山东省</option>
-				<option value="山西省">山西省</option>
-				<option value="陕西省">陕西省</option>
-				<option value="四川省">四川省</option>
-				<option value="天津市">天津市</option>
-				<option value="新疆自治区">新疆自治区</option>
-				<option value="西藏自治区">西藏自治区</option>
-				<option value="云南省">云南省</option>
-				<option value="浙江省">浙江省</option>
-
-			</select>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody></table>
-                                                    </td>
-			<td valign="top" align="left">&nbsp;
-                                                    </td>
-		</tr>
-		
-                                                <tr>
-                                                    <td style="width: 149px;" valign="top" align="right">
-                                                        备注：
-                                                    </td>
-                                                    <td style="width: 258px;" align="left">
-                                                        <textarea name="txtRemark" rows="2" cols="20" id="txtRemark" style="height: 77px; width: 261px;"></textarea>
-                                                    </td>
-                                                    <td valign="top" align="left"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 149px;" valign="top" align="right">&nbsp;
-                                                    </td>
-                                                    <td colspan="2" style="height: 30px;" valign="top" align="left">
-                                                        <span id="RemarkNoteTxt">请您添加一些额外的注释，例如：行业经验谈、目前网站流量统计信息或是您推广方式的计划</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 149px;" valign="top" align="right">
-                                                        乐天堂玩家账户名<br>(如果有的话）：
-                                                    </td>
-                                                    <td align="left">
-                                                        <input name="txtPlayerAcctName" id="txtPlayerAcctName" type="text">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 149px;" valign="top" align="right">
-                                                        验证码：
-                                                    </td>
-                                                    <td style="width: 258px;" align="left">
-                                                        <img src="Code.aspx" style="height: 18px; width: 74px; border: 0px none; vertical-align: middle;" id="SafeCode" onclick="reloadcode()" alt="">
-                                                        <input name="txtLoginValidCode" maxlength="4" id="txtLoginValidCode" onfocus="this.value=''" style="color: rgb(119, 119, 119); width: 65px;" type="text">
-                                                    </td>
-                                                    <td valign="top" align="left"></td>
-                                                </tr>
+                                                <tbody>
                                                 <tr>
                                                     <td colspan="3" align="center">
                                                         <br>
@@ -602,7 +440,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3" align="center">&nbsp;<input name="btnNext2" value="提交" onclick="return ValidateInput2();" id="btnNext2" style="width: 71px;" type="submit">
+                                                    <td colspan="3" align="center">&nbsp;<div name="btnNext2"  onclick="agentsRegister();" id="btnNext2">提交</div>
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -644,421 +482,6 @@
             </tr>
         </tbody></table>
     </form>
-
-    <script type="text/javascript">
-        function AddInputUrl() {   /*添加网址*/
-            var divTo = document.getElementById("webTo"),
-                divFrom = document.getElementById("webFrom");
-            var childs = divFrom.childNodes;
-            for (i = 0; i < childs.length; i++) {
-                if (childs[i].nodeType == 1) {
-                    if (validateWebsite(childs[i])) {
-                        divTo.appendChild(childs[i].cloneNode(true));
-                        childs[i].value = "http://";
-                    }
-                }
-            }
-            ResetHeight();
-        }
-        function NumericTextBox(event) {
-            // CharCode
-            var charCode = (event.which) ? event.which : event.keyCode
-
-            if (charCode > 31 && (charCode < 48 || charCode > 57))
-                return false;
-
-            return true;
-        }
-
-        function MinusInputUrl() {
-            var objTDWeb = document.getElementById("webTo");
-            var childs = objTDWeb.childNodes;
-            if (childs.length != 0) {
-                objTDWeb.removeChild(childs[childs.length - 1]);
-                ResetHeight();
-            }
-        }
-        function isEmpty(a) {
-            if ((a == '') || (a == null))
-                return true;
-            else
-                return false;
-        }
-
-        function isEmail(email) {
-            var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-            return re.test(email);
-        }
-
-        function ResetHeight() {
-            try {
-                parent.document.getElementById('mainFrame').height = document.body.scrollHeight > 693 ? document.body.scrollHeight + 10 : 700;
-            }
-            catch (e) {
-            }
-        }
-        function validateWebsite(obj) {
-            if (!isURL(obj.value)) {
-                alert(document.getElementById("WebTxtOuter").innerText + " " + "格式错误.");
-                obj.style.borderColor = "Red";
-                obj.focus();
-                return false;
-            }
-            else {
-                obj.style.borderColor = "";
-                return true;
-            }
-        }
-
-        function ValidateInput2() {
-            var objName = document.getElementById("txtName");
-            var objEMail = document.getElementById("txtEMail");
-            var objWeb = document.getElementById("WebTypeDDL");
-            var objTel = document.getElementById("txtTel");
-
-            var objUserName = document.getElementById("txtUserName");
-            var objPwd = document.getElementById("txtPwd");
-            var objPwd2 = document.getElementById("txtPwd2");
-            
-            var ohjSecret = document.getElementById("ddlSecret");
-            var ohjSecretAnswer = document.getElementById("txtSecretAnswer");
-
-             
-
-            var objLoginValidCode = document.getElementById("txtLoginValidCode");
-            var objAgree = document.getElementById("cbReadAgree");
-
-            var objBirthYear = document.getElementById("ddlBirthYear");
-            var objBirthMonth = document.getElementById("ddlBirthMonth");
-            var objBirthDay = document.getElementById("txtBirthDay");
-            var objNation = document.getElementById("ddlNation");
-            
-
-            if (isEmpty(objName.value)) {
-                alert('姓名 未输入请确认!');
-                objName.style.borderColor = "Red";
-                objName.focus();
-                return false;
-            }
-            else {
-                objName.style.borderColor = "";
-            }
-
-            if (!((document.getElementById("rblGender_0").checked) || (document.getElementById("rblGender_1").checked))) {
-                alert('性別 未选取请确认!');
-                document.getElementById("rblGender").focus();
-                return false;
-            }
-
-            if (isEmpty(objEMail.value)) {
-                alert('电子邮箱地址 未输入请确认!');
-                objEMail.style.borderColor = "Red";
-                objEMail.focus();
-                return false;
-            }
-            else {
-                objEMail.style.borderColor = "";
-            }
-
-            if (!isEMail(objEMail.value)) {
-                alert('电子邮箱地址 错误格式请确认!');
-                objEMail.style.borderColor = "Red";
-                objEMail.focus();
-                return false;
-            }
-            else {
-                objEMail.style.borderColor = "";
-            }
-
-            if (isEmpty(objTel.value)) {
-                alert('联系电话  未输入请确认!');
-                objTel.style.borderColor = "Red";
-                objTel.focus();
-                return false;
-            }
-            else {
-                objTel.style.borderColor = "";
-            }
-
-            if (!isTelephone(objTel.value)) {
-                alert('联系电话  错误格式请确认!');
-                objTel.style.borderColor = "Red";
-                objTel.focus();
-                return false;
-            }
-            else {
-                objTel.style.borderColor = "";
-            }
-
-            if (isEmpty(objUserName.value)) {
-                alert('用户名 未输入请确认!');
-                objUserName.style.borderColor = "Red";
-                objUserName.focus();
-                return false;
-            }
-            else {
-                objUserName.style.borderColor = "";
-            }
-
-            if (!isUserName(objUserName.value)) {
-                alert('仅可使用6-20字符的字母，数字和下划线组成。');
-                objUserName.style.borderColor = "Red";
-                objUserName.focus();
-                return false;
-            }
-            else {
-                objUserName.style.borderColor = "";
-            }
-
-            if (isEmpty(objPwd.value)) {
-                alert('输入您的新密码  未输入请确认!');
-                objPwd.style.borderColor = "Red";
-                objPwd.focus();
-                return false;
-            }
-            else {
-                objPwd.style.borderColor = "";
-            }
-
-            if (isEmpty(objPwd2.value)) {
-                alert('输入您的新密码  未输入请确认!');
-                objPwd2.style.borderColor = "Red";
-                objPwd2.focus();
-                return false;
-            }
-            else {
-                objPwd2.style.borderColor = "";
-            }
-
-            if (objPwd.value != objPwd2.value) {
-                alert('输入您的新密码 和 再次输入您的新密码 不相同 请确认');
-                objPwd2.style.borderColor = "Red";
-                objPwd2.focus();
-                return false;
-            }
-            else {
-                objPwd2.style.borderColor = "";
-            }
-
-            if (!isPwd(objPwd.value)) {
-                alert('数字和字母混合密码，必须至少要有６位并区分大小写!');
-                objPwd.style.borderColor = "Red";
-                objPwd.focus();
-                return false;
-            }
-            else {
-                objPwd.style.borderColor = "";
-            }
-
-            if (ohjSecret.value == "") {
-                alert('安全提问 未输入请确认!');
-                ohjSecret.style.borderColor = "Red";
-                ohjSecret.focus();
-                return false;
-            }
-            else {
-                ohjSecret.style.borderColor = "";
-            }
-
-            if (isEmpty(ohjSecretAnswer.value)) {
-                alert('安全问题答案 未输入请确认!');
-                ohjSecretAnswer.style.borderColor = "Red";
-                ohjSecretAnswer.focus();
-                return false;
-            }
-            else {
-                ohjSecretAnswer.style.borderColor = "";
-            }
-
-            if (objBirthYear.value == "") {
-                alert('出生年 未选取请确认!');
-                objBirthYear.style.borderColor = "Red";
-                objBirthYear.focus();
-                return false;
-            }
-            else {
-                objBirthYear.style.borderColor = "";
-            }
-
-            if (objBirthMonth.value == "") {
-                alert('出生月 未选取请确认!');
-                objBirthMonth.style.borderColor = "Red";
-                objBirthMonth.focus();
-                return false;
-            }
-            else {
-                objBirthMonth.style.borderColor = "";
-            }
-
-            if (isEmpty(objBirthDay.value)) {
-                alert('出生日期 未输入请确认!');
-                objBirthDay.style.borderColor = "Red";
-                objBirthDay.focus();
-                return false;
-            }
-            else {
-                objBirthDay.style.borderColor = "";
-            }
-
-            if (!isNum(objBirthDay.value) || objBirthDay.value < 1 || objBirthDay.value > 31) {
-                alert('格式错误.');
-                objBirthDay.style.borderColor = "Red";
-                objBirthDay.focus();
-                return false;
-            }
-            else {
-                objBirthDay.style.borderColor = "";
-            }
-
-            if (isEmpty(objLoginValidCode.value)) {
-                alert('验证码  未输入请确认!');
-                objLoginValidCode.style.borderColor = "Red";
-                objLoginValidCode.focus();
-                return false;
-            }
-            else {
-                objLoginValidCode.style.borderColor = "";
-            }
-
-            if (objAgree.checked == false) {
-                alert('规则及规定 未勾选无法视为同意请确认!');
-                objAgree.style.borderColor = "Red";
-                objAgree.focus();
-                return false;
-            }
-            else {
-                objAgree.style.borderColor = "";
-            }
-
-            if (objNation.value == "") {
-                alert('请选择您的国家!');
-                objNation.style.borderColor = "Red";
-                objNation.focus();
-                return false;
-            }
-            else {
-                objNation.style.borderColor = "";
-            }
-
-            var objWebUrl = document.getElementsByName("txtWebUrl");
-            var objWeb = document.getElementById("txtWeb");
-            var strTemp = '';
-            for (var i = 0; i < objWebUrl.length; i++) {
-                if (!isEmpty(objWebUrl[i].value) && objWebUrl[i].value.toUpperCase() != "HTTP://") {
-                    if (!isURL(objWebUrl[i].value)) {
-                        alert('格式错误.');
-                        objWebUrl[i].style.borderColor = "Red";
-                        objWebUrl[i].focus();
-                        return false;
-                    }
-                    else {
-                        objWebUrl[i].style.borderColor = "";
-                    }
-                    strTemp += objWebUrl[i].value;
-                    strTemp += "||";
-                }
-            }
-            strTemp = strTemp.substr(0, strTemp.length - 2);
-            objWeb.value = strTemp;
-            return true;
-
-            function  fromsubmit(objName,objEMail,objWeb,objTel,objUserName,objPwd,objPwd2,ohjSecret,ohjSecretAnswer,objLoginValidCode,objAgree,objBirthYear,objBirthMonth,objBirthDay,objNation)
-
-
-
-
-
-
-
-        function CheckUser(obj) {
-            if (isEmpty(obj.value)) return true;
-            if (GetAjaxText("UserControl/AjaxService.aspx?ctype=1&ctext=" + obj.value + "&vid=" + (new Date().getTime())) == "1") {
-                alert('用户名已经注册请选择其它名称！');
-                obj.style.borderColor = "Red";
-            }
-            else {
-                obj.style.borderColor = "";
-            }
-        }
-        function CheckAffCode(obj) {
-            if (isEmpty(obj.value)) return true;
-            if (GetAjaxText("UserControl/AjaxService.aspx?ctype=2&ctext=" + obj.value + "&vid=" + (new Date().getTime())) == "0") {
-                alert('推荐人编号不存在,请重新填写.');
-                obj.style.borderColor = "Red";
-            }
-            else {
-                obj.style.borderColor = "";
-            }
-        }
-        function CheckEMail(obj) {
-            if (isEmpty(obj.value)) return true;
-            if (GetAjaxText("UserControl/AjaxService.aspx?ctype=3&ctext=" + obj.value + "&vid=" + (new Date().getTime())) == "1") {
-                alert('Email已经存在！');
-                obj.style.borderColor = "Red";
-            }
-            else {
-                obj.style.borderColor = "";
-            }
-        }
-        function CheckUrl(obj) {
-            if (isEmpty(obj.value) || obj.value.toUpperCase() == "HTTP://") return true;
-            if (GetAjaxText("UserControl/AjaxService.aspx?ctype=4&ctext=" + obj.value + "&vid=" + (new Date().getTime())) != "0") {
-                alert('网址已经存在！');
-                obj.style.borderColor = "Red";
-            }
-            else {
-                obj.style.borderColor = "";
-            }
-        }
-        function ChangeNation(obj) {
-            for (var i = 0; i < obj.length; i++) {
-                if (obj.options[i].selected) {
-
-                    if (obj.options[i].value == 'CN') {
-                        document.getElementById("trProvince").style.display = '';
-                        ResetHeight();
-                        return true;
-                    }
-                }
-            }
-            document.getElementById("trProvince").style.display = 'none';
-            ResetHeight();
-            return false;
-        }
-        function reloadcode() {
-            document.getElementById('SafeCode').src = 'UserControl/code.aspx?rType=1&rnd=' + Math.random();
-        }
-        try {
-            ChangeNation(document.getElementById("ddlNation").value);
-            ResetHeight();
-        }
-        catch (e) {
-        }
-
-
-
-
-         $.ajax({
-                dataType:'json',
-                type:'post',
-                data:{idList:idList},
-                url:'',
-
-
-                success:function(data) {
-                    if (data.errCode == 0){
-                        alert("提交成功 !");
-                        
-                    }else{
-                        alert(data.errMsg);
-                    }
-
-                }
-            });
-
-
-
-    </script>
 
 </body>
 </html>

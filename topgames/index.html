@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
 <head><meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>
-	top-game
+
 </title>
 <link href="../lib/css/bundleCss.css" rel="stylesheet" type="text/css">
 <link href="css/master.slotcasino.css" rel="stylesheet" type="text/css">
@@ -324,7 +324,19 @@
         }
     };
     $(document).ready(function () {  
+/*Title*/
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getWebsitesetting',
+         data: {},
+         success: function(data) {
+            var titlename = data.data.title;
+            $("title").html(titlename);
+         },
+         error: function() {
 
+         }
+     });
 
         //银行菜单
         var uiUN = $("#UserName");
@@ -511,9 +523,28 @@
    <!--  轮播图 -->
     <script type="text/javascript">
         var bannerNumber = 1;
-        $(document).ready(function () {
-            // Start CMS
-            var banner = JSON.parse('["images/fun88-banner8_WG_CN.jpg","images/fun88-slotbanner.jpg","images/fun88-4.jpg","images/fun88-BikiniParty.jpg",null,null,null,null,null,null]');
+$(document).ready(function () {
+
+
+    var lunbotuArry = [];
+    $.ajax({
+         type: "GET",
+         url: 'http://59.110.10.115/fun/websiteInfo/getImgAdList?key=乐游戏轮播图',
+         data: {},
+         success: function(data) {    
+            
+           
+            for (var i = 0; i < data.data.adList.length ;i++) {
+                var topGamePic = 'http://59.110.10.115'+data.data.adList[i].imgUrl;
+                lunbotuArry[i] = topGamePic;
+            }
+
+            console.log(lunbotuArry)
+
+
+            var banner = lunbotuArry          
+
+
             //  set slots banner Images
             var container = "";
             for (var i = 0; i < banner.length; i++) {
@@ -530,10 +561,8 @@
             if (container != "") {
                 $("#slotsBanner").html(container);
             }
-            // End CMS
-        });
+           
 
-        $(function () {
             $(".bannertop").slides({
                 preload: true,
                 container: 'bannercontainer',
@@ -544,8 +573,28 @@
             }).on('click', function(){});
 
             $(".bannertop > .prev").html('<img src="../lib/images/left.png" />');
-            $(".bannertop > .next").html('<img src="../lib/images/right.png" />');
+            $(".bannertop > .next").html('<img src="../lib/images/right.png" />');           
+
+
+
+         },
+         error: function() {
+
+         }
+     });            
+
+
+
+
+
+            // Start CMS
+        /*    var banner = JSON.parse('["images/fun88-banner8_WG_CN.jpg","images/fun88-slotbanner.jpg","images/fun88-4.jpg","images/fun88-BikiniParty.jpg"]');*/
+
         });
+
+       
+
+      
 
 
     </script>
@@ -667,229 +716,203 @@
 
 </script>
 
-    <div class="lowerBannerContainer">
-        <div id="slider02">
-            <table width="50%" cellspacing="0px" cellpadding="0px">
-                <tbody><tr>
-                    <td class="testtdLeft02">
-                        <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody><tr>
-                                <td style="width: 191px; display: block;">
-                                    <img src="images/title.gif" alt="Concurrent Jackpot Prize">
-                                </td>
-                                <td style="width: 556px; vertical-align: top; position: relative;">
-                                    
+<!--     <div class="lowerBannerContainer">
+    <div id="slider02">
+        <table width="50%" cellspacing="0px" cellpadding="0px">
+            <tbody><tr>
+                <td class="testtdLeft02">
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                            <td style="width: 191px; display: block;">
+                                <img src="images/title.gif" alt="Concurrent Jackpot Prize">
+                            </td>
+                            <td style="width: 556px; vertical-align: top; position: relative;">
+                                
 
 <script type="text/javascript">
-    /* Total Jackpot */ 
-    /*滚动数字 总奖金*/
+/* Total Jackpot */ 
+/*滚动数字 总奖金*/
 
-    function UpdateSlotJackpot() {
-        var totalJackpotAmount = 0;
-        var totalJackpotAmountStr = "";
-        var jackpotMaxLength = 12;
-        var totalJAStr = "";
-        var tempTotalJStr = "";
-        var tempTotalJDec = "";
+function UpdateSlotJackpot() {
+    var totalJackpotAmount = 0;
+    var totalJackpotAmountStr = "";
+    var jackpotMaxLength = 12;
+    var totalJAStr = "";
+    var tempTotalJStr = "";
+    var tempTotalJDec = "";
 /* 获取每个游戏的奖金数额，刨除掉LX类的游戏*/
-        $(".cgjackpotamt:not(.LX)").each(function () {
+    $(".cgjackpotamt:not(.LX)").each(function () {
 
-            var amount = $(this).text();
+        var amount = $(this).text();
 
-            if (amount != "") {
-                amount = amount.replace(/\,/g, ''); /* remove comma when adding*/
+        if (amount != "") {
+            amount = amount.replace(/\,/g, ''); /* remove comma when adding*/
 
-                if (!isNaN(amount)) {
-                	totalJackpotAmount =959284796   //这里为了显示效果先填写数字
-                    /*totalJackpotAmount += parseFloat(amount); */    //正常计算时，在这里获取各个游戏奖金值 
-                }
-            }
-        });
-
-        // Add Lx into jackpot
-        var LX_Jackpot = 0;
-
-        $(".cgjackpotamt.LX").each(function () {
-            var amount = $(this).text().replace(/\,/g, '');
-
-            if (!isNaN(amount) && amount != "") {
-                LX_Jackpot = parseFloat(amount);
-            }
-        });
-
-        totalJackpotAmount += LX_Jackpot;
-
-        if (totalJackpotAmount == "0" || totalJackpotAmount == "") {
-            totalJackpotAmount = 244734;
-        }
-
-        if ($("#hdnCurrCode").val() == "IDR" || $("#hdnCurrCode").val() == "THB" || $("#hdnCurrCode").val() == "KRW" || $("#hdnCurrCode").val() == "VND") {
-            totalJAStr = totalJackpotAmount.toFixed(0); //to digit
-        }
-        else {
-            totalJAStr = totalJackpotAmount.toFixed(2); //to 2 decimal
-            totalJAStr = totalJAStr.toString().replace(".", "");
-        }
-
-        if (totalJAStr.length == jackpotMaxLength) {
-            totalJackpotAmountStr = totalJAStr;
-        }
-        else if (totalJAStr.length > jackpotMaxLength) {
-            totalJackpotAmount = totalJAStr.substring(totalJAStr.length - jackpotMaxLength, totalJAStr.length);
-            totalJackpotAmountStr = totalJackpotAmount;
-        }
-        else {
-            var emptyspace = "";
-            for (var i = totalJAStr.length; i < jackpotMaxLength; i++) {
-                emptyspace += "0";
-            }
-            totalJackpotAmountStr = emptyspace + totalJAStr;
-        }
-
-        if ($("#hdnCurrCode").val() == "IDR" || $("#hdnCurrCode").val() == "THB" || $("#hdnCurrCode").val() == "KRW" || $("#hdnCurrCode").val() == "VND") {
-            totalJackpotAmountStr = totalJackpotAmountStr.toString();
-        }
-        else if ($("#hdnCurrCode").val() == "CNY") {
-            tempTotalJStr = totalJackpotAmountStr.toString().substring(1, 10);
-            tempTotalJDec = totalJackpotAmountStr.toString().substring(10, 12);
-            totalJackpotAmountStr = tempTotalJStr + "." + tempTotalJDec;
-        }
-        else {
-            tempTotalJStr = totalJackpotAmountStr.toString().substring(0, 10);
-            tempTotalJDec = totalJackpotAmountStr.toString().substring(10, 12);
-            totalJackpotAmountStr = tempTotalJStr + "." + tempTotalJDec;
-        }
-
-        // Split segments (3 chars per segment)
-        var jackpotFrame = "";
-        var counter = 0;
-
-        if ($("#hdnCurrCode").val() == "IDR" || $("#hdnCurrCode").val() == "THB" || $("#hdnCurrCode").val() == "KRW" || $("#hdnCurrCode").val() == "VND") {
-            var incrementNum = 1;
-            var jackpotSegments = addCommas(totalJackpotAmountStr).split(",");
-
-            for (var i = jackpotSegments.length - 1; i >= 0; i--) {
-                for (var j = 0; j < jackpotSegments[i].length; j++) {
-                    jackpotFrame += "<div class='SlotJackpotFrame'>";
-                    jackpotFrame += "</div>";
-                    counter++;
-                    if (counter == jackpotMaxLength) { break; }
-                }
-
-                if (counter == jackpotMaxLength) { break; }
-
-                if (typeof jackpotSegments[i - 1] != "undefined") {
-                    jackpotFrame += "<div class='JackpotComma" + i + "'></div>";
-                }
+            if (!isNaN(amount)) {
+                totalJackpotAmount =959284796   //这里为了显示效果先填写数字
+                /*totalJackpotAmount += parseFloat(amount); */    //正常计算时，在这里获取各个游戏奖金值 
             }
         }
-        else {
-            var incrementNum = 0.01;
-            var intJackpot = totalJackpotAmountStr.toString().split(".");
-            var jackpotSegments = addCommas(intJackpot[0]).split(",");
+    });
 
-            if (typeof intJackpot[1] != "undefined") {
-                for (var j = 0; j < intJackpot[1].length; j++) {
-                    jackpotFrame += "<div class='SlotJackpotFrame'>";
-                    jackpotFrame += "</div>";
-                }
-                jackpotFrame += "<div class='JackpotDot'></div>";
-            }
+    // Add Lx into jackpot
+    var LX_Jackpot = 0;
 
-            for (var i = jackpotSegments.length - 1; i >= 0; i--) {
-                for (var j = 0; j < jackpotSegments[i].length; j++) {
-                    jackpotFrame += "<div class='SlotJackpotFrame'>";
-                    jackpotFrame += "</div>";
-                    counter++;
-                    if (counter == jackpotMaxLength) { break; }
-                }
+    $(".cgjackpotamt.LX").each(function () {
+        var amount = $(this).text().replace(/\,/g, '');
 
-                if (counter == jackpotMaxLength) { break; }
-
-                if (typeof jackpotSegments[i - 1] != "undefined") {
-                    jackpotFrame += "<div class='JackpotComma" + i + "'></div>";
-                }
-            }
+        if (!isNaN(amount) && amount != "") {
+            LX_Jackpot = parseFloat(amount);
         }
+    });
 
-        $(".SlotMainJackpot").hide();
-        $(".SlotMainJackpot").html(jackpotFrame).fadeIn("fast");
+    totalJackpotAmount += LX_Jackpot;
 
-        $(".SlotMainAmountzh").jOdometer({
-            increment: incrementNum,
-            counterStart: totalJackpotAmountStr,
-            numbersImage: 'Images/jodometer-numbers.png',
-            formatNumber: true,
-            spaceNumbers: 2.3,
-            widthNumber: 38,
-            widthDot: 7,
-            heightNumber: 81.5
-        });
+    if (totalJackpotAmount == "0" || totalJackpotAmount == "") {
+        totalJackpotAmount = 244734;
     }
+
+    if ($("#hdnCurrCode").val() == "IDR" || $("#hdnCurrCode").val() == "THB" || $("#hdnCurrCode").val() == "KRW" || $("#hdnCurrCode").val() == "VND") {
+        totalJAStr = totalJackpotAmount.toFixed(0); //to digit
+    }
+    else {
+        totalJAStr = totalJackpotAmount.toFixed(2); //to 2 decimal
+        totalJAStr = totalJAStr.toString().replace(".", "");
+    }
+
+    if (totalJAStr.length == jackpotMaxLength) {
+        totalJackpotAmountStr = totalJAStr;
+    }
+    else if (totalJAStr.length > jackpotMaxLength) {
+        totalJackpotAmount = totalJAStr.substring(totalJAStr.length - jackpotMaxLength, totalJAStr.length);
+        totalJackpotAmountStr = totalJackpotAmount;
+    }
+    else {
+        var emptyspace = "";
+        for (var i = totalJAStr.length; i < jackpotMaxLength; i++) {
+            emptyspace += "0";
+        }
+        totalJackpotAmountStr = emptyspace + totalJAStr;
+    }
+
+    if ($("#hdnCurrCode").val() == "IDR" || $("#hdnCurrCode").val() == "THB" || $("#hdnCurrCode").val() == "KRW" || $("#hdnCurrCode").val() == "VND") {
+        totalJackpotAmountStr = totalJackpotAmountStr.toString();
+    }
+    else if ($("#hdnCurrCode").val() == "CNY") {
+        tempTotalJStr = totalJackpotAmountStr.toString().substring(1, 10);
+        tempTotalJDec = totalJackpotAmountStr.toString().substring(10, 12);
+        totalJackpotAmountStr = tempTotalJStr + "." + tempTotalJDec;
+    }
+    else {
+        tempTotalJStr = totalJackpotAmountStr.toString().substring(0, 10);
+        tempTotalJDec = totalJackpotAmountStr.toString().substring(10, 12);
+        totalJackpotAmountStr = tempTotalJStr + "." + tempTotalJDec;
+    }
+
+    // Split segments (3 chars per segment)
+    var jackpotFrame = "";
+    var counter = 0;
+
+    if ($("#hdnCurrCode").val() == "IDR" || $("#hdnCurrCode").val() == "THB" || $("#hdnCurrCode").val() == "KRW" || $("#hdnCurrCode").val() == "VND") {
+        var incrementNum = 1;
+        var jackpotSegments = addCommas(totalJackpotAmountStr).split(",");
+
+        for (var i = jackpotSegments.length - 1; i >= 0; i--) {
+            for (var j = 0; j < jackpotSegments[i].length; j++) {
+                jackpotFrame += "<div class='SlotJackpotFrame'>";
+                jackpotFrame += "</div>";
+                counter++;
+                if (counter == jackpotMaxLength) { break; }
+            }
+
+            if (counter == jackpotMaxLength) { break; }
+
+            if (typeof jackpotSegments[i - 1] != "undefined") {
+                jackpotFrame += "<div class='JackpotComma" + i + "'></div>";
+            }
+        }
+    }
+    else {
+        var incrementNum = 0.01;
+        var intJackpot = totalJackpotAmountStr.toString().split(".");
+        var jackpotSegments = addCommas(intJackpot[0]).split(",");
+
+        if (typeof intJackpot[1] != "undefined") {
+            for (var j = 0; j < intJackpot[1].length; j++) {
+                jackpotFrame += "<div class='SlotJackpotFrame'>";
+                jackpotFrame += "</div>";
+            }
+            jackpotFrame += "<div class='JackpotDot'></div>";
+        }
+
+        for (var i = jackpotSegments.length - 1; i >= 0; i--) {
+            for (var j = 0; j < jackpotSegments[i].length; j++) {
+                jackpotFrame += "<div class='SlotJackpotFrame'>";
+                jackpotFrame += "</div>";
+                counter++;
+                if (counter == jackpotMaxLength) { break; }
+            }
+
+            if (counter == jackpotMaxLength) { break; }
+
+            if (typeof jackpotSegments[i - 1] != "undefined") {
+                jackpotFrame += "<div class='JackpotComma" + i + "'></div>";
+            }
+        }
+    }
+
+    $(".SlotMainJackpot").hide();
+    $(".SlotMainJackpot").html(jackpotFrame).fadeIn("fast");
+
+    $(".SlotMainAmountzh").jOdometer({
+        increment: incrementNum,
+        counterStart: totalJackpotAmountStr,
+        numbersImage: 'Images/jodometer-numbers.png',
+        formatNumber: true,
+        spaceNumbers: 2.3,
+        widthNumber: 38,
+        widthDot: 7,
+        heightNumber: 81.5
+    });
+}
 </script>
 <div class="SlotMainJackpot" style="display: block;"><div class="SlotJackpotFrame"></div><div class="SlotJackpotFrame"></div><div class="JackpotDot"></div><div class="SlotJackpotFrame"></div><div class="SlotJackpotFrame"></div><div class="SlotJackpotFrame"></div><div class="JackpotComma2"></div><div class="SlotJackpotFrame"></div><div class="SlotJackpotFrame"></div><div class="SlotJackpotFrame"></div><div class="JackpotComma1"></div><div class="SlotJackpotFrame"></div><div class="SlotJackpotFrame"></div><div class="SlotJackpotFrame"></div></div>
 
-<!-- 滚动数字 -->
+滚动数字
 <div class="SlotMainAmountzh">
 
 </div>
-<!-- <style>
-	.jodometer_decimal_1{position: absolute; right: 0px; top: -489px}
-	.jodometer_dot{position: absolute; width: 7px; height: 81.5px; background: transparent url(&quot;images/jodometer-numbers.png&quot;) no-repeat scroll center -1059.5px; right: 80.6px;}
-	.jodometer_integer_0{position: absolute;position: absolute;right: 89.9px; top: -733.5px;}
-	.jodometer_integer_1{position: absolute;right: 130.2px; top: -815px;}
-	.jodometer_integer_2{position: absolute;right: 170.5px; top: -326px}
-	.jodometer_integer_3{position: absolute;right: 210.1px; top: -733.5px}
-	.jodometer_integer_4{position: absolute;right: 260.4px; top: -489px;}
-	.jodometer_integer_5{position: absolute;right: 300.7px; top: -815px}
-	.jodometer_integer_6{position: absolute;right: 340.3px; top: -326px}
-	.jodometer_integer_7{position: absolute;right: 390.6px; top: -489px;}
-	.jodometer_integer_8{position: absolute;right: 430.9px; top: -81.5px;}
+<style>
+    .jodometer_decimal_1{position: absolute; right: 0px; top: -489px}
+    .jodometer_dot{position: absolute; width: 7px; height: 81.5px; background: transparent url(&quot;images/jodometer-numbers.png&quot;) no-repeat scroll center -1059.5px; right: 80.6px;}
+    .jodometer_integer_0{position: absolute;position: absolute;right: 89.9px; top: -733.5px;}
+    .jodometer_integer_1{position: absolute;right: 130.2px; top: -815px;}
+    .jodometer_integer_2{position: absolute;right: 170.5px; top: -326px}
+    .jodometer_integer_3{position: absolute;right: 210.1px; top: -733.5px}
+    .jodometer_integer_4{position: absolute;right: 260.4px; top: -489px;}
+    .jodometer_integer_5{position: absolute;right: 300.7px; top: -815px}
+    .jodometer_integer_6{position: absolute;right: 340.3px; top: -326px}
+    .jodometer_integer_7{position: absolute;right: 390.6px; top: -489px;}
+    .jodometer_integer_8{position: absolute;right: 430.9px; top: -81.5px;}
 
-</style> -->
-    </td>
-    </tr>
+</style>
+</td>
+</tr>
 </tbody>
 </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="testtdLeft03">
-                        
-                        <img src="images/banner-small.jpg" style="cursor: pointer; width: 747px; height: 78px;" alt="Banner" onclick="javascript:PopupIMSlotClub(); return false;">
-                        
-                    </td>
-                </tr>
-            </tbody></table>
-        </div>
-        <div id="slider03" class="unselectable">
-            <table width="50%" cellspacing="0px" cellpadding="0px">
-                <tbody><tr>
-                    <td class="TdLuckyBtn">
-                        <div onhover="试试手气" class="ui-corner-all IFeelLucky_zh-CN" id="LuckyBtn" onclick="javascript:SlotGameIFeelLucky(); return false;">
-                            <span>幸运游戏</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="TdSlotCulb">
-                        
-                        <div onhover="老虎机锦标赛" class="ui-corner-all SlotClubBtn" id="SlotClubBtnCN" onclick="javascript:showSlotLeaderboard('1'); return false;">
-                            <span>打虎英雄榜</span>
-                        </div>
-                        
-                    </td>
-                </tr>
-                <tr>
-                    <td class="Td_TGDL_Btn">
-                        <div onhover="快速加载 一键启动" class="ui-corner-all TGDownloadBtn_zh-CN" id="topgame_download" onclick="window.location.href='http://download.pragmaticplay.net/gs2c/fun88/download/';">
-                            <span>下载PRG老虎机</span>
-                        </div>
-                    </td>
-                </tr>
-            </tbody></table>
-        </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="testtdLeft03">
+                    
+                    <img src="images/banner-small.jpg" style="cursor: pointer; width: 747px; height: 78px;" alt="Banner" onclick="javascript:PopupIMSlotClub(); return false;">
+                    
+                </td>
+            </tr>
+        </tbody></table>
     </div>
+
+</div> -->
     <div id="sticky-anchor"></div>
     <div id="slider04-hidden"></div>
     <div id="slider04" class="unselectable">
@@ -989,6 +1012,7 @@
             </div>
         </div>
     </div>
+
     <div id="slider05">
     </div>
     <div id="slider06">
@@ -1006,16 +1030,16 @@
 	<tr>
 		<td style="height: 3px;"></td>
 	</tr>
-	<tr>
-		<td class="tdCategoryBtn cattop ui-corner-all">
-                                    <img src="images/arrow-blue.png" alt=">"><p class="CategoryName" id="NewGames">新游戏</p>
+	<tr >
+		<td  class="tdCategoryBtn cattop ui-corner-all">
+                                    <img  src="images/arrow-blue.png" alt=">"><p class="CategoryName" id="NewGames">新游戏</p>
                                 </td>
 	</tr>
 	<tr>
 		<td style="height: 3px;"></td>
 	</tr>
 	<tr>
-		<td class="tdCategoryBtn cattop ui-corner-all">
+		<td  id="haha" class="tdCategoryBtn cattop ui-corner-all">
                                     <img src="images/arrow-blue.png" alt=">"><p class="CategoryName" id="VideoSlot">视频老虎机</p>
                                 </td>
 	</tr>
@@ -1200,8 +1224,8 @@
                                 <div class="cginfodetaildesc">Message</div>
                                 <div class="cginfodetailbtm">
                                     <div class="cginfodetailbtmbtn">
-                                        <a href="" class="btnPlayReal" style="margin-right: 5px;">开始游戏</a>
-                                        <a href="" class="btnPlayDemo">游戏介绍</a>
+                                        <a href="#" class="btnPlayReal" style="margin-right: 5px;">开始游戏</a>
+                                        <a href="#" class="btnPlayDemo">游戏介绍</a>
                                     </div>
                                     <div class="cginfodetailbtmmobile">
                                         同时支持&nbsp;
@@ -1505,7 +1529,7 @@
         <div class="PL_header">
             <div class="PL_header_text">
                 <label class="PopupTitlecn" id="lblPopupTitle">
-                    请您登入或者注册乐天堂账号</label>
+                    请您登入或者注册账号</label>
             </div>
             <div class="PL_exit_btn">
                 
@@ -1940,7 +1964,7 @@ if (typeof(ValidatorOnLoad) == "function") {
     <script type="text/javascript" src="js/bundleJquery.js"></script>
     <script type="text/javascript" src="js/master.js" ></script>
     <script type="text/javascript" src="../lib/js/master.payment.crawler.js" ></script>
-    <script type="text/javascript" src="../lib/js/generateQCcodeApk.js" ></script>
+<!--     <script type="text/javascript" src="../lib/js/generateQCcodeApk.js" ></script> -->
     <script type="text/javascript" src="../lib/js/jquery.validate.js"></script><!-- 表单验证 -->
     <script type="text/javascript" src="../lib/js/jquery.numeric.js"  > </script><!--  jQuery Numeric只允许在文本框中输入0到9数字的jQuery插件。 -->
     <script type="text/javascript" src="../lib/js/onlinepay.js" ></script>

@@ -1,4 +1,206 @@
-﻿function getPreviousURL() {
+﻿  function test1()
+  {
+
+var ShowgameplatId = GetQueryString("plat");
+
+var a = $("#"+ShowgameplatId);
+
+$(a).trigger("click")
+  }
+
+
+  $(document).ready(function(){
+
+   /* 获取Live-casino-game列表*/
+var AjaxUrl = 'http://59.110.10.115';
+
+    $.ajax({
+         type: "GET",
+         url: AjaxUrl+'/fun/game/getgamelist',
+         data: {
+                districtId:"1"
+         },
+         success: function(data) {
+
+                var gameTypes = [];
+
+                for (var i = 0; i < data.data.length; i++) {
+
+
+                        var gameType = data.data[i].platformName;
+
+                        if(!gameTypes[gameType]){
+                            gameTypes[gameType] = [];
+                        }
+                        gameTypes[gameType].push(data.data[i]);
+
+                }
+                for (var o in gameTypes){
+    /*游戏中文*/     var GamenameCH = gameTypes[o][0].platformNameCh;
+    /*游戏英文*/     var platName = "dvUC" + o;
+ 
+    /*导航栏*/        var navtab = '<li class="menu-provider"><span id="'+o+'" class="media02 imgProv">'+GamenameCH+'</span></li>'
+                      $("#navProv").append(navtab); 
+
+    /*游戏容器*/     var GameBox = '<div id="' + platName + '" class="uc Show" style="display:none;"><div style="margin: 10px 0px 30px -20px;"><div id='+o+'"imgTitle" class="imgTitle" alt="Game Title" style="width: auto; height: auto;">'+GamenameCH+'</div></div><div class="gameSlotProvider" id="'+o+'" style="margin: 0px 0px 10px -45px;" align="left"></div></div>'
+                     $("#dvUC").append(GameBox);
+
+
+
+    /*填入游戏*/
+                    for(var i = 0; i < gameTypes[o].length; i ++){
+
+                        var gameid = data.data[i].id;
+                        var gameImg =AjaxUrl+data.data[i].gameImgUrl;
+                        var gamename = data.data[i].name_ch;
+
+                        var GameCard = '<table class="dy-unit GameCardBox" id=GameCard'+gameid+' width="175px" border="0" align="center"><tbody><tr><td class="gamelist" style="width: 135px;" align="center"><a href="../Details/index.html?gameid='+gameid+'" class="LinkImgGame" id=""><img id="" src="'+gameImg+'" alt="" width="100" height="101"></a><br><a href="../Details/index.html?gameid='+gameid+'" id="" class="lnkProdName" style="color: rgb(37, 170, 225);">'+gamename+'</a><br><a href="../Details/index.html?gameid='+gameid+'" class="lnkProdName" id="">游戏介绍</a><a onclick="OpenGame('+gameid+');" class="btnPlayLiveCasino" id="'+gameid+'" style="display: inline-block; width: 122px;">马上开始</a><br><br><br><br></td></tr></tbody></table>'
+                         $("#" + platName + " .gameSlotProvider").append(GameCard);                                                        
+
+                    }
+
+                }
+
+
+
+
+
+/*第一个游戏容器显示*/
+            $("#dvUC").children("div:first-child").css("display","block");
+
+
+/*tab切换控制*/
+
+        $(".imgProv").click(function () {
+            var objId = $(this).attr('id');
+            showGameListTable(objId);
+            $(".imgProv").removeClass("clicked");
+            $(this).addClass("clicked");
+        } );        
+
+
+
+         },
+         error: function(data){
+            
+         }
+     });
+     /*AJAX结束*/
+
+
+     setTimeout(function(){
+        test1();
+     }, 150)
+
+
+
+/*        $(a).click(function () {
+            var objId = $(this).attr('id');
+            showGameListTable(objId);
+            $(".imgProv").removeClass("clicked");
+            $(this).addClass("clicked");
+        } );  */
+
+
+
+  })//ready function结束
+
+
+
+function showGameListTable(gameProvider) {
+       
+            $('#navProv #' + gameProvider).addClass("clicked");
+            $(".uc").hide();
+            $("#dvUC div").removeClass("Show");
+            $("#dvUC" + gameProvider).show();
+            $("#dvUC" + gameProvider).addClass("Show");
+        }
+
+
+
+
+
+function getCookie(c_name) {
+  var c_value = document.cookie;
+  var c_start = c_value.indexOf(" " + c_name + "=");
+  if (c_start == -1) {
+      c_start = c_value.indexOf(c_name + "=");
+  }
+  if (c_start == -1) {
+      c_value = null;
+  }
+  else {
+      c_start = c_value.indexOf("=", c_start) + 1;
+      var c_end = c_value.indexOf(";", c_start);
+      if (c_end == -1) {
+          c_end = c_value.length;
+      }
+      c_value = unescape(c_value.substring(c_start, c_end));
+  }
+  return c_value;
+}
+
+
+
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+
+
+function popUpWindowManager(defaultUrl) {
+    var pathname = window.location.pathname;
+    var pathInSplit = pathname.split("/");
+    var lastElement = pathInSplit.length - 1;
+    if (pathInSplit[lastElement] == "" && defaultUrl.indexOf("..") != -1) defaultUrl = defaultUrl.split("..").join("");
+    var getHeight = screen.availHeight;
+    var curHeight = getHeight - 70;
+    window.open(defaultUrl)
+}
+
+
+
+function OpenGame(a){
+     var Mys = getCookie("s"); 
+          
+
+             $.ajax({
+                    type: "GET",
+                    url: 'http://59.110.10.115/fun/game/launchGame',
+                    data: {gameId:a,s:Mys},
+                    success: function (data) {
+                        if (data.errCode!==0) {
+                            alert(data.errMsg);
+                        }                        
+                        var GameSrc = data.data.launchUrl;                                              
+                        popUpWindowManager(GameSrc)
+                        },
+                    error: function () {
+                       alert(data.errMsg);
+                         }
+                    });
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getPreviousURL() {
     var getUrl = window.location.pathname;
     var pathUrl = getUrl.replace(getUrl.substring(getUrl.lastIndexOf('/')), '');
     window.location = pathUrl;

@@ -570,7 +570,7 @@ div#outer_top_header { top: 0px; position: fixed; background-color: rgb(37, 170,
 #logofun88 { float: left; display: inline; font-size: 0px; line-height: 0; }
 #logofun88InZh { float: left; display: inline; font-size: 0px; line-height: 0; }
 #logofun88 .logo { display: block; height: 67px; text-indent: -4000px; background: transparent url("../images/logo.png") no-repeat scroll 0px 0px; }
-#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; background-image: url("../images/logo-cn.png"); background-repeat: no-repeat; margin-left: 15px; }
+#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; /* background-image: url("../images/logo-cn.png");  */background-repeat: no-repeat; margin-left: 15px; }
 #logofun88JP .logo { display: block; height: 67px; text-indent: -4000px; background-image: url("../images/logo-jp.png"); background-repeat: no-repeat; margin-left: 15px; }
 #logofun88 span { display: block; height: 67px; text-indent: -4000px; }
 #logofun88InZh span { display: block; height: 45px; text-indent: -4000px; background-image: url("slogan_cn.gif"); background-repeat: no-repeat; margin-top: 10px; margin-left: 15px; }
@@ -608,7 +608,7 @@ div#outer_top_header { top: 0px; position: fixed; background-color: rgb(37, 170,
 #dvRewardL006 { background-position: -156px 3px; width: 37px; }
 .media a { outline: medium none; }
 .media01 { width: 30px; height: 19px; margin-top: -2px; margin-right: 2px; }
-.media02 { width: 25px; height: 19px; margin-top: -2px; margin-right: 2px; display: block; }
+.media02 {  height: 19px; margin-top: -2px; margin-right: 2px; display: block; }
 .mediaCN, .mediaAll { width: 25px; height: 19px; margin-top: -2px; margin-right: 2px; display: none; }
 .media01 a { outline: medium none; }
 .media02 a { outline: medium none; }
@@ -1177,7 +1177,7 @@ div#outer_top_header { margin:0 atuo;top: 0px; position: absolute; background-co
 #login .button { background: transparent url('../../lib/images/btn_login_.gif') no-repeat scroll 0px 3px; border: 0px none; }
 #login .button:hover { background: transparent url('../../lib/images/btn_login_.gif') no-repeat scroll 0px -33px; }
 #logofun88InZh { float: left; display: inline; font-size: 0px; line-height: 0; }
-#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; background-image: url('../../lib/images/logo-cn.png'); background-repeat: no-repeat; margin-left: 15px; }
+#logofun88InZh .logo { display: block; height: 67px; text-indent: -4000px; /* background-image: url('../../lib/images/logo-cn.png');  */background-repeat: no-repeat; margin-left: 15px; }
 #header_right { float: right; display: inline; margin-right: 15px; padding: 10px 0px 0px; }
 #header_right > div { display: block; float: left; }
 #header_right a { display: block; font-size: 15px; }
@@ -1189,7 +1189,7 @@ div#outer_top_header { margin:0 atuo;top: 0px; position: absolute; background-co
 #dvMedia04:hover { background: transparent url('../../lib/images/footerlogo-combine.png') no-repeat scroll -201px -43px; cursor: pointer; margin-top: 0px; }
 #dvMedia08 { background: transparent url('../../lib/images/footerlogo-combine.png') no-repeat scroll -420px -1px; width: 37px; height: 38px; margin-top: 0px; margin-right: 7px; }
 #dvMedia08:hover { background: transparent url('../../lib/images/footerlogo-combine.png') no-repeat scroll -420px -47px; cursor: pointer; margin-top: 0px; margin-right: 7px; }
-.media02 { width: 25px; height: 19px; margin-top: -2px; margin-right: 2px; display: block; }
+.media02 { height: 19px; margin-top: -2px; margin-right: 2px; display: block;color: rgb(193, 171, 53);font-size: 24px;}
 #footer { float: left; position: relative; z-index: -1; margin-top: 30px; width: 960px; }
 .footer_middle { margin: 0px auto; text-align: center; font-size: 15px; font-weight: bold; color: rgb(37, 170, 225); }
 .footer_middle1 { text-align: center; font-size: 11px; color: rgb(78, 78, 78); margin: 0px auto; padding-top: 10px; padding-bottom: 10px; }

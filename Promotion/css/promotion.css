@@ -27,13 +27,16 @@ p { padding-bottom: 18px; }
 .table_none5 { border-spacing: 0px; width: 60%; border-top: thin solid rgb(214, 214, 214); border-right: thin solid rgb(214, 214, 214); }
 .table_none5 th { color: white; padding: 7px; border-bottom: thin solid rgb(195, 195, 195); border-left: thin solid rgb(195, 195, 195); border-style: none none solid solid; text-align: center; }
 .table_none5 td { padding: 5px 1px; border-bottom: thin solid rgb(195, 195, 195); border-left: thin solid rgb(195, 195, 195); text-align: center; }
-.myContent { padding-left: 8px; width: 952px; position: relative; top: -35px; }
+.myContent { padding-left: 8px; width: 952px; position: relative; top: 348px; }
 .myContent h1 { color: rgb(11, 82, 140); font-size: 1.2em; font-weight: bold; margin-top: 10px; text-transform: uppercase; }
 .myContent h2 { color: rgb(11, 82, 140); font-size: 1em; font-weight: bold; margin-top: 10px; text-transform: capitalize; }
 .myContent h3 { color: rgb(11, 82, 140); font-size: 2em; font-weight: bold; margin: 0px; padding: 0px; text-transform: uppercase; }
 .myContent ul.a { background-color: White; background-repeat: repeat-y; list-style: outside none none; text-decoration: none; border: thin solid rgb(204, 204, 204); padding-top: 30px; }
 .deco { margin-top: 55px; }
-.myContent ul li { background: transparent none repeat scroll 0% 0%; margin: 0px 0px 5px; padding: 5px; }
+.myContent ul li { background: transparent none repeat scroll 0% 0%; margin: 0px 0px 5px; padding: 5px;list-style-type: none; }
+.chuxiao-page{
+	display:block;    list-style-type: none;
+}
 .a > li:last-child:hover { background: transparent none repeat scroll 0% 0%; }
 .myContent ul li li { background: transparent none repeat scroll 0% 0%; }
 .myContent ul li li.nostyle { list-style-type: none; }
@@ -42,6 +45,7 @@ p { padding-bottom: 18px; }
 .myContent ul li > div + div { background: transparent none repeat scroll 0% 0%; display: none; padding: 5px; overflow: hidden; }
 .promo { height: auto; width: 940px; }
 .promoicon { float: left; width: 194px; height: 160px; }
+.promoicon img{ width: 100%;height: 100% }
 .promoline { float: left; width: 13px; }
 .promoline02 { width: 13px; }
 .infoTxt { float: left; padding-top: 44px; width: 360px; }
@@ -57,14 +61,24 @@ p { padding-bottom: 18px; }
 #banner_random { float: left; margin-top: 9px; width: 150px; }
 .terms { font-size: 12px; margin: 10px 18px 0px; background: transparent none repeat scroll 0% 0% ! important; }
 .terms:hover { background: transparent none repeat scroll 0% 0% ! important; }
+
+.terms  table{font-size: 14px;border-collapse:collapse;border-spacing:0;border-right:1px solid #bcbcbc;border-bottom:1px solid #bcbcbc;border-width: 1px; border-bottom-width: thin;text-align: center;vertical-align:middle;line-height: 25px} 
+.terms  td{border-left:1px solid #bcbcbc;border-top:1px solid #bcbcbc;height: 25px;border-width: 1px; border-left-width: thin;text-align: center;}
+
+.terms .firstRow{border-right:1px solid #bcbcbc;border-bottom:1px solid #bcbcbc;background-color:#23a9e1;color:#fff;} 
+
+
+
+
+
 .termsTitle { color: rgb(37, 170, 226); font-size: 24px; font-weight: bold; margin-top: 20px; text-transform: uppercase; }
 .infotime { float: left; padding-left: 30px; padding-top: 55px; width: 178px; }
 .infotime .cssPromoCountdownData { visibility: collapse; }
 .S15 { height: 44px; width: 100px; }
-body.lang-zh-CN #MainForm { background-image: url("../images/promo_banner_bg_.jpg"); }
+
 #MainForm { background-position: center top; background-repeat: no-repeat; }
 #header { position: relative; z-index: 99;margin-top:60px }
-#sub-nav-pro { float: left; height: 30px; padding-bottom: 5px; padding-right: 0px; position: relative; top:40px;text-align: center; width: 952px; margin-left: 8px; z-index: 24; }
+#sub-nav-pro { float: left; height: 30px; padding-bottom: 5px; padding-right: 0px; position: relative; top:400px;text-align: center; width: 952px; margin-left: 8px; z-index: 24; }
 .spacing0 { clear: both; height: 50px; }
 .spacing { clear: both; height: 10px; }
 .spacing2 { height: 36px; }
